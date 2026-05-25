@@ -37,6 +37,13 @@ _ = _argparser.add_argument(
     help="Generate HTMl and exit.",
 )
 
+_ = _argparser.add_argument(
+    "--xooxle",
+    action="store_true",
+    default=False,
+    help="Generate the Xooxle index and exit.",
+)
+
 
 def _print_next_key(keys: abc.Container[str]) -> None:
     print(next(i for i in itertools.count(1) if str(i) not in keys))
@@ -101,54 +108,26 @@ def _scan_index() -> abc.Generator[Page]:
         last = cur
 
 
-def _write_html(obj: deck.Note | crum.IndexIndex) -> None:
+def _write_one(obj: deck.Note | crum.IndexIndex) -> None:
     obj.write(paths.LEXICON_DIR)
 
 
-def _headword_index() -> dict[str, str]:
-    # Write the headword-to-page map.
-    headword_to_page: dict[str, str] = {}
-    for w in wiki.wikis():
-        for headword in w.headword_variants():
-            # Entries are processed in order, so the first occurrence has the
-            # smallest page. In case there are duplicate headwords, we want to
-            # retain the first Crum page encountered. Use `setdefault` to insert
-            # only if the entry doesn't exist already.
-            _ = headword_to_page.setdefault(headword, str(w.crum))
-    return headword_to_page
-
-
-def main():
-    args = _argparser.parse_args()
-    if args.root_key:
-        _print_next_key({r.key for r in crum.Crum.roots.values()})
-        return
-    if args.drv_key:
-        _print_next_key(
-            {d.key for r in crum.Crum.roots.values() for d in r.derivations},
-        )
-        return
-
-    # Write the HTML.
+def _write_html() -> None:
     with concur.thread_pool_executor() as executor:
         _ = [
-            *executor.map(_write_html, crum.notes_aux()),
-            *executor.map(_write_html, crum.indexer().generate_indexes()),
+            *executor.map(_write_one, crum.notes_aux()),
+            *executor.map(_write_one, crum.indexer().generate_indexes()),
         ]
     log.wrote(paths.LEXICON_DIR)
 
-    if args.html:
-        return
 
-    # Write the Xooxle index.
-    crum.XOOXLE.build()
-
-    # Write the Crum scan index.
+def _write_page_index() -> None:
     df: pd.DataFrame = pd.DataFrame(p.entry() for p in _scan_index())
     assert len(df) == constants.CRUM_LAST_PAGE
     file.to_tsv(df, paths.file(paths.CRUM_SCAN_DIR, "coptic.tsv"))
 
-    # Write the sheet row number mappings.
+
+def _write_sheet_index() -> None:
     _write_row_nums(
         ((root.num, root.row_num) for root in crum.Crum.roots.values()),
         paths.CRUM_ROOTS_ROW_NUMS,
@@ -164,8 +143,45 @@ def main():
         paths.CRUM_DERIVATIONS_ROW_NUMS,
     )
 
-    # Write the headword index.
-    file.write(str(_headword_index()), paths.CRUM_HEADWORD_PAGE_MAP)
+
+def _write_headword_index() -> None:
+    headword_to_page: dict[str, str] = {}
+    for w in wiki.wikis():
+        for headword in w.headword_variants():
+            # Entries are processed in order, so the first occurrence has the
+            # smallest page. In case there are duplicate headwords, we want to
+            # retain the first Crum page encountered. Use `setdefault` to insert
+            # only if the entry doesn't exist already.
+            _ = headword_to_page.setdefault(headword, str(w.crum))
+    file.write(str(headword_to_page), paths.CRUM_HEADWORD_PAGE_MAP)
+
+
+def main():
+    args = _argparser.parse_args()
+
+    if args.root_key:
+        _print_next_key({r.key for r in crum.Crum.roots.values()})
+        return
+
+    if args.drv_key:
+        _print_next_key(
+            {d.key for r in crum.Crum.roots.values() for d in r.derivations},
+        )
+        return
+
+    if args.xooxle:
+        crum.XOOXLE.build()
+        return
+
+    if args.html:
+        _write_html()
+        return
+
+    _write_html()
+    crum.XOOXLE.build()
+    _write_page_index()
+    _write_sheet_index()
+    _write_headword_index()
 
 
 if __name__ == "__main__":
