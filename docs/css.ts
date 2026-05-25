@@ -2,12 +2,11 @@
 
 /**
  *
- * @param classes
- * @param sep
+ * @param cls
  * @returns
  */
-function join(classes: string[], sep: string): string {
-  return classes.map((c: string): string => `.${c}`).join(sep);
+export function c(cls: string): string {
+  return `.${cls}`;
 }
 
 /**
@@ -16,7 +15,7 @@ function join(classes: string[], sep: string): string {
  * classes.
  */
 export function disjunction(...classes: string[]): string {
-  return join(classes, ', ');
+  return classes.map(c).join(', ');
 }
 
 /**
@@ -25,7 +24,7 @@ export function disjunction(...classes: string[]): string {
  * classes.
  */
 export function conjunction(...classes: string[]): string {
-  return join(classes, '');
+  return classes.map(c).join('');
 }
 
 /**
@@ -34,5 +33,5 @@ export function conjunction(...classes: string[]): string {
  * @returns
  */
 export function nested(...classes: string[]): string {
-  return join(classes, ' ');
+  return classes.map(c).join(' ');
 }
