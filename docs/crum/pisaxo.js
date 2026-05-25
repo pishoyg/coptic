@@ -75,7 +75,7 @@ export const DATA = [
   {
     "title": "H. Almkvist, Kleine Beitr. z. Lexikographie d. vulg. Arabischen, 8th Or. Congr., 1891",
     "description": [
-      "Almkvist, H. (1891). <em><a href=\"https://www.google.co.uk/books/edition/Kleine_Beitr%C3%A4ge_zur_Lexikographie_des_V/KiYUAAAAYAAJ?hl=en&amp;gbpv=1\">Kleine Beiträge zur Lexikographie des Vulgärarabischen</a></em>. I. Tiré des Actes du 8e Congrès International des Orientalistes, tenu en 1889 à Stockholm et à Christiania. Leide: E. J. Brill."
+      "Almkvist, H. (1891). <em><a href=\"https://www.google.co.uk/books/edition/Kleine_Beitr%C3%A4ge_zur_Lexikographie_des_V/KiYUAAAAYAAJ?hl=en&gbpv=1\">Kleine Beiträge zur Lexikographie des Vulgärarabischen</a></em>. I. Tiré des Actes du 8e Congrès International des Orientalistes, tenu en 1889 à Stockholm et à Christiania. Leide: E. J. Brill."
     ],
     "variants": [
       "Almk 1"
@@ -84,7 +84,7 @@ export const DATA = [
   {
     "title": "<em>continuation of</em> <em>H. Almkvist, Kleine Beitr. z. Lexikographie d. vulg. Arabischen, 8th Or. Congr., 1891</em>; ed. K. V. Zetterstéen, in Le Monde Oriental, 1925",
     "description": [
-      "<em><a href=\"https://www.google.co.uk/books/edition/Le_Monde_oriental/r9IbAAAAMAAJ?hl=en&amp;gbpv=1&amp;pg=PA293&amp;printsec=frontcover\">Le Monde Oriental</a></em>. (1925). Vol. XIX. Uppsala."
+      "<em><a href=\"https://www.google.co.uk/books/edition/Le_Monde_oriental/r9IbAAAAMAAJ?hl=en&gbpv=1&pg=PA293&printsec=frontcover\">Le Monde Oriental</a></em>. (1925). Vol. XIX. Uppsala."
     ],
     "variants": [
       "Almk 2"
@@ -93,7 +93,7 @@ export const DATA = [
   {
     "title": "Accademia dei Lincei, Rendiconti",
     "description": [
-      "<em>Atti della Reale Accademia dei Lincei, Rendiconti</em> began in 1884 and continued until 1929. All volumes are digitised and available on <a href=\"http://periodici.librari.beniculturali.it/PeriodicoScheda.aspx?id_testata=30&amp;Start=0\">BiASA Periodici Italiani Digitalizzati</a>."
+      "<em>Atti della Reale Accademia dei Lincei, Rendiconti</em> began in 1884 and continued until 1929. All volumes are digitised and available on <a href=\"http://periodici.librari.beniculturali.it/PeriodicoScheda.aspx?id_testata=30&Start=0\">BiASA Periodici Italiani Digitalizzati</a>."
     ],
     "variants": [
       "ALR",
@@ -115,7 +115,7 @@ export const DATA = [
   {
     "title": "Annales du Service Antiquités, Cairo",
     "description": [
-      "The <em>Annales du service des antiquités de l’Égypte</em> (ASAE) began in 1900. From 1988-97 it was called <em>Annales du service des antiquités Égyptiennes</em>. There are a selection of digitised volumes, including all up to 1939, on <a href=\"https://ancientworldonline.blogspot.com/2021/12/annales-du-service-des-antiquites-de.html\">The Ancient World Online</a>. Further volumes available on <a href=\"https://catalog.hathitrust.org/Record/007151043?type%5B%5D=title&amp;lookfor%5B%5D=Annales%20du%20service%20des%20antiquit%C3%A9s%20de%20l%27%C3%89gypte&amp;ft=ft#viewability\">HathiTrust</a> via US access."
+      "The <em>Annales du service des antiquités de l’Égypte</em> (ASAE) began in 1900. From 1988-97 it was called <em>Annales du service des antiquités Égyptiennes</em>. There are a selection of digitised volumes, including all up to 1939, on <a href=\"https://ancientworldonline.blogspot.com/2021/12/annales-du-service-des-antiquites-de.html\">The Ancient World Online</a>. Further volumes available on <a href=\"https://catalog.hathitrust.org/Record/007151043?type%5B%5D=title&lookfor%5B%5D=Annales%20du%20service%20des%20antiquit%C3%A9s%20de%20l%27%C3%89gypte&ft=ft#viewability\">HathiTrust</a> via US access."
     ],
     "variants": [
       "Ann"
@@ -142,7 +142,7 @@ export const DATA = [
   {
     "title": "Zeitschr. f. Aegyptische Sprache, acc. to vols",
     "description": [
-      "<em>Zeitschrift für Ägyptische Sprache und Altertumskunde</em> (ZÄS; previously ZÄ) began in 1863. The following (volumes 1-59, 72) are available on Internet Archive: <a href=\"https://archive.org/details/zeitschriftfr01brug/page/n7/mode/2up\">1 (1863)</a>; <a href=\"https://archive.org/details/zeitschriftfr02brug/page/n1/mode/2up\">2 (1864)</a>; <a href=\"https://archive.org/details/zeitschriftfr03brug/page/n7/mode/2up\">3 (1865)</a>; <a href=\"https://archive.org/details/zeitschriftfr04brug/page/n7/mode/2up\">4 (1866)</a>; <a href=\"https://archive.org/details/zeitschriftfr05brug/page/n1/mode/2up\">5 (1867)</a>; <a href=\"https://archive.org/details/zeitschriftfr06brug/page/n1/mode/2up\">6 (1868)</a>; <a href=\"https://archive.org/details/zeitschriftfr07brug/page/n1/mode/2up\">7 (1869)</a>; <a href=\"https://archive.org/details/zeitschriftfr08brug/page/n1/mode/2up\">8 (1870)</a>; <a href=\"https://archive.org/details/zeitschriftfr09brug/page/n1/mode/2up\">9 (1871)</a>; <a href=\"https://archive.org/details/zeitschriftfr10brug/page/n7/mode/2up\">10 (1872)</a>; <a href=\"https://archive.org/details/zeitschriftfr11brug/page/n5/mode/2up\">11 (1873)</a>; <a href=\"https://archive.org/details/zeitschriftfr12brug/page/n7/mode/2up\">12 (1874)</a>; <a href=\"https://archive.org/details/zeitschriftfr13brug/page/n1/mode/2up\">13 (1875)</a>; <a href=\"https://archive.org/details/zeitschriftfr14brug/page/n1/mode/2up\">14 (1876)</a>; <a href=\"https://archive.org/details/zeitschriftfr15brug/page/n5/mode/2up\">15 (1877)</a>; <a href=\"https://archive.org/details/zeitschriftfr16brug\">16 (1878)</a>; <a href=\"https://archive.org/details/zeitschriftfr17brug\">17 (1879)</a>; <a href=\"https://archive.org/details/zeitschriftfr18brug\">18 (1880)</a>; <a href=\"https://archive.org/details/zeitschriftfr19brug/page/n5/mode/2up\">19 (1881)</a>; <a href=\"https://archive.org/details/zeitschriftfr20brug/page/n5/mode/2up\">20 (1882)</a>; <a href=\"https://archive.org/details/zeitschriftfr21brug/page/n5/mode/2up\">21 (1883)</a>; <a href=\"https://archive.org/details/zeitschriftfr22brug\">22 (1884)</a>; <a href=\"https://archive.org/details/zeitschriftfr23brug\">23 (1885)</a>; <a href=\"https://archive.org/details/zeitschriftfr2427deutuoft/page/n5/mode/2up\">24 (1886)</a>; <a href=\"https://archive.org/details/zeitschriftfr2427deutuoft/page/n145/mode/2up\">25 (1887)</a>; <a href=\"https://archive.org/details/zeitschriftfr2427deutuoft/page/140/mode/2up\">26 (1888)</a>; <a href=\"https://archive.org/details/zeitschriftfr27brug/page/n1/mode/2up\">27 (1889)</a>; <a href=\"https://archive.org/details/zeitschriftfr2831deutuoft/page/n3/mode/2up\">28 (1890)</a>; <a href=\"https://archive.org/details/zeitschriftfr2831deutuoft/page/n135/mode/2up\">29 (1891)</a>; <a href=\"https://archive.org/details/zeitschriftfr2831deutuoft/page/n267/mode/2up\">30 (1892)</a>; <a href=\"https://archive.org/details/zeitschriftfr2831deutuoft/page/n407/mode/2up\">31 (1893)</a>; <a href=\"https://archive.org/details/zeitschriftfr32brug\">32 (1894)</a>; <a href=\"https://archive.org/details/zeitschriftfr33brug\">33 (1895)</a>; <a href=\"https://archive.org/details/zeitschriftfr34brug\">34 (1896)</a>; <a href=\"https://archive.org/details/zeitschriftfr35brug\">35 (1897)</a>; <a href=\"https://archive.org/details/zeitschriftfr36brug/page/n5/mode/2up\">36 (1898)</a>; <a href=\"https://archive.org/details/zeitschriftfr3639deutuoft/page/n199/mode/2up\">37 (1899)</a>; <a href=\"https://archive.org/details/zeitschriftfr38brug\">38 (1900)</a>; <a href=\"https://archive.org/details/zeitschriftfr39brug\">39 (1901)</a>; <a href=\"https://archive.org/details/zeitschriftfr40brug/page/n1/mode/2up\">40 (1902-03)</a>; <a href=\"https://archive.org/details/zeitschriftfr41brug/page/n1/mode/2up\">41 (1904)</a>; <a href=\"https://archive.org/details/zeitschriftfr42brug\">42 (1905)</a>; <a href=\"https://archive.org/details/zeitschriftfr43brug\">43 (1906)</a>; <a href=\"https://archive.org/details/zeitschriftfr44brug\">44 (1907-08)</a>; <a href=\"https://archive.org/details/zeitschriftfr45brug\">45 (1908-09)</a>; <a href=\"https://archive.org/details/zeitschriftfr46brug\">46 (1909-10)</a>; <a href=\"https://archive.org/details/zeitschriftfr47brug\">47 (1910)</a>; <a href=\"https://archive.org/details/zeitschriftfr48brug/page/n5/mode/2up\">48 (1911)</a>; <a href=\"https://archive.org/details/zeitschriftfr49brug/page/n1/mode/2up\">49 (1911)</a>; <a href=\"https://archive.org/details/zeitschriftfr50brug/page/n1/mode/2up\">50 (1912)</a>; <a href=\"https://archive.org/details/zeitschriftfr51brug/page/n5/mode/2up\">51 (1914)</a>; <a href=\"https://archive.org/details/zeitschriftfr52brug/page/n1/mode/2up\">52 (1915)</a>; <a href=\"https://archive.org/details/zeitschriftfr53brug/page/n1/mode/2up\">53 (1917)</a>; <a href=\"https://archive.org/details/zeitschriftfr54brug\">54 (1918)</a>; <a href=\"https://archive.org/details/zeitschriftfr55brug\">55 (1918)</a>; <a href=\"https://archive.org/details/zeitschriftfr56brug\">56 (1920)</a>; <a href=\"https://archive.org/details/zeitschriftfr5659deutuoft/page/n135/mode/2up\">57 (1922)</a>; <a href=\"https://archive.org/details/zeitschriftfr5659deutuoft/page/n367/mode/2up\">58 (1923)</a>; <a href=\"https://archive.org/details/zeitschriftfr5659deutuoft/page/n555/mode/2up\">59 (1924)</a>; <a href=\"https://archive.org/details/zeitschriftfr72brug/mode/2up\">72 (1936)</a>. All volumes are available digitised on the <a href=\"https://www.degruyterbrill.com/journal/key/zaes/html?lang=de&amp;srsltid=AfmBOoqiSSk9kY_a9NjC6ibeiaR2VogjEP1ERFmu2oCf4X7gyI9u82om#issues\">De Gruyter Brill website</a> (with login credentials)."
+      "<em>Zeitschrift für Ägyptische Sprache und Altertumskunde</em> (ZÄS; previously ZÄ) began in 1863. The following (volumes 1-59, 72) are available on Internet Archive: <a href=\"https://archive.org/details/zeitschriftfr01brug/page/n7/mode/2up\">1 (1863)</a>; <a href=\"https://archive.org/details/zeitschriftfr02brug/page/n1/mode/2up\">2 (1864)</a>; <a href=\"https://archive.org/details/zeitschriftfr03brug/page/n7/mode/2up\">3 (1865)</a>; <a href=\"https://archive.org/details/zeitschriftfr04brug/page/n7/mode/2up\">4 (1866)</a>; <a href=\"https://archive.org/details/zeitschriftfr05brug/page/n1/mode/2up\">5 (1867)</a>; <a href=\"https://archive.org/details/zeitschriftfr06brug/page/n1/mode/2up\">6 (1868)</a>; <a href=\"https://archive.org/details/zeitschriftfr07brug/page/n1/mode/2up\">7 (1869)</a>; <a href=\"https://archive.org/details/zeitschriftfr08brug/page/n1/mode/2up\">8 (1870)</a>; <a href=\"https://archive.org/details/zeitschriftfr09brug/page/n1/mode/2up\">9 (1871)</a>; <a href=\"https://archive.org/details/zeitschriftfr10brug/page/n7/mode/2up\">10 (1872)</a>; <a href=\"https://archive.org/details/zeitschriftfr11brug/page/n5/mode/2up\">11 (1873)</a>; <a href=\"https://archive.org/details/zeitschriftfr12brug/page/n7/mode/2up\">12 (1874)</a>; <a href=\"https://archive.org/details/zeitschriftfr13brug/page/n1/mode/2up\">13 (1875)</a>; <a href=\"https://archive.org/details/zeitschriftfr14brug/page/n1/mode/2up\">14 (1876)</a>; <a href=\"https://archive.org/details/zeitschriftfr15brug/page/n5/mode/2up\">15 (1877)</a>; <a href=\"https://archive.org/details/zeitschriftfr16brug\">16 (1878)</a>; <a href=\"https://archive.org/details/zeitschriftfr17brug\">17 (1879)</a>; <a href=\"https://archive.org/details/zeitschriftfr18brug\">18 (1880)</a>; <a href=\"https://archive.org/details/zeitschriftfr19brug/page/n5/mode/2up\">19 (1881)</a>; <a href=\"https://archive.org/details/zeitschriftfr20brug/page/n5/mode/2up\">20 (1882)</a>; <a href=\"https://archive.org/details/zeitschriftfr21brug/page/n5/mode/2up\">21 (1883)</a>; <a href=\"https://archive.org/details/zeitschriftfr22brug\">22 (1884)</a>; <a href=\"https://archive.org/details/zeitschriftfr23brug\">23 (1885)</a>; <a href=\"https://archive.org/details/zeitschriftfr2427deutuoft/page/n5/mode/2up\">24 (1886)</a>; <a href=\"https://archive.org/details/zeitschriftfr2427deutuoft/page/n145/mode/2up\">25 (1887)</a>; <a href=\"https://archive.org/details/zeitschriftfr2427deutuoft/page/140/mode/2up\">26 (1888)</a>; <a href=\"https://archive.org/details/zeitschriftfr27brug/page/n1/mode/2up\">27 (1889)</a>; <a href=\"https://archive.org/details/zeitschriftfr2831deutuoft/page/n3/mode/2up\">28 (1890)</a>; <a href=\"https://archive.org/details/zeitschriftfr2831deutuoft/page/n135/mode/2up\">29 (1891)</a>; <a href=\"https://archive.org/details/zeitschriftfr2831deutuoft/page/n267/mode/2up\">30 (1892)</a>; <a href=\"https://archive.org/details/zeitschriftfr2831deutuoft/page/n407/mode/2up\">31 (1893)</a>; <a href=\"https://archive.org/details/zeitschriftfr32brug\">32 (1894)</a>; <a href=\"https://archive.org/details/zeitschriftfr33brug\">33 (1895)</a>; <a href=\"https://archive.org/details/zeitschriftfr34brug\">34 (1896)</a>; <a href=\"https://archive.org/details/zeitschriftfr35brug\">35 (1897)</a>; <a href=\"https://archive.org/details/zeitschriftfr36brug/page/n5/mode/2up\">36 (1898)</a>; <a href=\"https://archive.org/details/zeitschriftfr3639deutuoft/page/n199/mode/2up\">37 (1899)</a>; <a href=\"https://archive.org/details/zeitschriftfr38brug\">38 (1900)</a>; <a href=\"https://archive.org/details/zeitschriftfr39brug\">39 (1901)</a>; <a href=\"https://archive.org/details/zeitschriftfr40brug/page/n1/mode/2up\">40 (1902-03)</a>; <a href=\"https://archive.org/details/zeitschriftfr41brug/page/n1/mode/2up\">41 (1904)</a>; <a href=\"https://archive.org/details/zeitschriftfr42brug\">42 (1905)</a>; <a href=\"https://archive.org/details/zeitschriftfr43brug\">43 (1906)</a>; <a href=\"https://archive.org/details/zeitschriftfr44brug\">44 (1907-08)</a>; <a href=\"https://archive.org/details/zeitschriftfr45brug\">45 (1908-09)</a>; <a href=\"https://archive.org/details/zeitschriftfr46brug\">46 (1909-10)</a>; <a href=\"https://archive.org/details/zeitschriftfr47brug\">47 (1910)</a>; <a href=\"https://archive.org/details/zeitschriftfr48brug/page/n5/mode/2up\">48 (1911)</a>; <a href=\"https://archive.org/details/zeitschriftfr49brug/page/n1/mode/2up\">49 (1911)</a>; <a href=\"https://archive.org/details/zeitschriftfr50brug/page/n1/mode/2up\">50 (1912)</a>; <a href=\"https://archive.org/details/zeitschriftfr51brug/page/n5/mode/2up\">51 (1914)</a>; <a href=\"https://archive.org/details/zeitschriftfr52brug/page/n1/mode/2up\">52 (1915)</a>; <a href=\"https://archive.org/details/zeitschriftfr53brug/page/n1/mode/2up\">53 (1917)</a>; <a href=\"https://archive.org/details/zeitschriftfr54brug\">54 (1918)</a>; <a href=\"https://archive.org/details/zeitschriftfr55brug\">55 (1918)</a>; <a href=\"https://archive.org/details/zeitschriftfr56brug\">56 (1920)</a>; <a href=\"https://archive.org/details/zeitschriftfr5659deutuoft/page/n135/mode/2up\">57 (1922)</a>; <a href=\"https://archive.org/details/zeitschriftfr5659deutuoft/page/n367/mode/2up\">58 (1923)</a>; <a href=\"https://archive.org/details/zeitschriftfr5659deutuoft/page/n555/mode/2up\">59 (1924)</a>; <a href=\"https://archive.org/details/zeitschriftfr72brug/mode/2up\">72 (1936)</a>. All volumes are available digitised on the <a href=\"https://www.degruyterbrill.com/journal/key/zaes/html?lang=de&srsltid=AfmBOoqiSSk9kY_a9NjC6ibeiaR2VogjEP1ERFmu2oCf4X7gyI9u82om#issues\">De Gruyter Brill website</a> (with login credentials)."
     ],
     "variants": [
       "AZ"
@@ -337,7 +337,7 @@ export const DATA = [
   {
     "title": "Gnostische Schr. in Kopt. Sprache (Pap. Bruce), ed. C. Schmidt, 1892",
     "description": [
-      "Schmidt, C. (1892). <em><a href=\"https://www.google.co.uk/books/edition/Gnostische_Schriften_in_koptischer_Sprac/esVQJzTZIpgC?hl=en&amp;gbpv=1\">Gnostische Schriften in koptischer Sprache aus dem Codex Brucianus</a></em>. (Texte und Untersuchungen zur Geschichte der altchristlichen Literatur, Vol. 8). Leipzig: J. C. Hinrichs’sche Buchhandlung."
+      "Schmidt, C. (1892). <em><a href=\"https://www.google.co.uk/books/edition/Gnostische_Schriften_in_koptischer_Sprac/esVQJzTZIpgC?hl=en&gbpv=1\">Gnostische Schriften in koptischer Sprache aus dem Codex Brucianus</a></em>. (Texte und Untersuchungen zur Geschichte der altchristlichen Literatur, Vol. 8). Leipzig: J. C. Hinrichs’sche Buchhandlung."
     ],
     "variants": [
       "Br",
@@ -440,7 +440,7 @@ export const DATA = [
   {
     "title": "M. Chaîne, Eléments de gram. dialectale copte, 1933",
     "description": [
-      "Chaîne, M. (1933). <em><a href=\"https://catalog.hathitrust.org/Record/001231946?type%5B%5D=all&amp;lookfor%5B%5D=%C3%89l%C3%A9ments%20de%20grammaire%20dialectale%20copte&amp;ft=\">Éléments de grammaire dialectale copte: Bohairique, Sahidique, Achmimique, Fayoumique</a></em>. Paris: P. Geuthner. [via US access only]"
+      "Chaîne, M. (1933). <em><a href=\"https://catalog.hathitrust.org/Record/001231946?type%5B%5D=all&lookfor%5B%5D=%C3%89l%C3%A9ments%20de%20grammaire%20dialectale%20copte&ft=\">Éléments de grammaire dialectale copte: Bohairique, Sahidique, Achmimique, Fayoumique</a></em>. Paris: P. Geuthner. [via US access only]"
     ],
     "variants": [
       "Chaîne"
@@ -585,7 +585,7 @@ export const DATA = [
   {
     "title": "Études… dédiées à C. Leemans, 1885",
     "description": [
-      "<em><a href=\"https://www.google.co.uk/books/edition/%C3%89tudes_arch%C3%A9ologiques/ByowAAAAYAAJ?hl=en&amp;gbpv=1\">Études archéologiques, linguistiques et historiques dédiées à Mr. le Dr. C. Leemans, à l’occasion du cinquantième anniversaire de sa nomination aux fonctions de Directeur du Musée archéologique des Pays-Bas</a></em>. (1885). Leide: E. J. Brill."
+      "<em><a href=\"https://www.google.co.uk/books/edition/%C3%89tudes_arch%C3%A9ologiques/ByowAAAAYAAJ?hl=en&gbpv=1\">Études archéologiques, linguistiques et historiques dédiées à Mr. le Dr. C. Leemans, à l’occasion du cinquantième anniversaire de sa nomination aux fonctions de Directeur du Musée archéologique des Pays-Bas</a></em>. (1885). Leide: E. J. Brill."
     ],
     "variants": [
       "Et Leem"
@@ -623,7 +623,7 @@ export const DATA = [
   {
     "title": "Georgi, Fragm. Evang. S. Iohannis, 1789",
     "description": [
-      "Georgi, A. A. (1789). <em><a href=\"https://www.google.co.uk/books/edition/Fragmentum_Evangelii_S_Iohannis_Graeco_C/tomXmGIDwOgC?hl=en&amp;gbpv=1\">Fragmentum Evangelii S. Iohannis graeco-copto-thebaicum saeculi IV. Additamentum ex vetustissimis membranis lectionum Evangelicarum divinae missae cod. diaconici reliquiae et liturgica alia fragmenta veteris thebaidensium ecclesiae ante Dioscorum, ex Veliterno museo borgiano, nunc prodeunt in latinum versa et notis illustrata</a></em>. Romae: apud A. Fulgonium."
+      "Georgi, A. A. (1789). <em><a href=\"https://www.google.co.uk/books/edition/Fragmentum_Evangelii_S_Iohannis_Graeco_C/tomXmGIDwOgC?hl=en&gbpv=1\">Fragmentum Evangelii S. Iohannis graeco-copto-thebaicum saeculi IV. Additamentum ex vetustissimis membranis lectionum Evangelicarum divinae missae cod. diaconici reliquiae et liturgica alia fragmenta veteris thebaidensium ecclesiae ante Dioscorum, ex Veliterno museo borgiano, nunc prodeunt in latinum versa et notis illustrata</a></em>. Romae: apud A. Fulgonium."
     ],
     "variants": [
       "G Fr"
@@ -632,7 +632,7 @@ export const DATA = [
   {
     "title": "Greek-Coptic Glossary, ed. Bell &amp; Crum, in Aegyptus vi 179, acc. to lines",
     "description": [
-      "Bell, H. I., &amp; Crum, W. E. (1925). <a href=\"https://www.jstor.org/stable/41201189?read-now=1&amp;seq=1#page_scan_tab_contents\">A Greek-Coptic Glossary</a>. <em>Aegyptus</em>, 6, 177-226."
+      "Bell, H. I., &amp; Crum, W. E. (1925). <a href=\"https://www.jstor.org/stable/41201189?read-now=1&seq=1#page_scan_tab_contents\">A Greek-Coptic Glossary</a>. <em>Aegyptus</em>, 6, 177-226."
     ],
     "variants": [
       "Glos",
@@ -710,7 +710,7 @@ export const DATA = [
   {
     "title": "G. Horner’s text of N.T., 1898-1924",
     "description": [
-      "Horner, G. (1898-1905). <em> The Coptic Version of the New Testament in the Northern Dialect, Otherwise Called Memphitic and Bohairic, with Introduction, Critical Apparatus, and Literal English Translation</em> (4 vols.). Oxford: Clarendon Press. <ul><li><a href=\"https://archive.org/details/copticversionofn01horn/page/n5/mode/2up\">Volume I</a>: The Gospels of S. Matthew and S. Mark, edited from Ms. Huntingdon 17 in the Bodleian Library </li><li><a href=\"https://archive.org/details/copticversionofn02horn/page/n7/mode/2up\">Volume II</a>: The Gospels of S. Luke and S. John, edited from Ms. Huntingdon 17 in the Bodleian Library </li><li><a href=\"https://archive.org/details/copticversionofn03horn/page/n5/mode/2up\">Volume III</a>: The Epistles of S. Paul, edited from Ms. Oriental 424 in the British Museum </li><li><a href=\"https://archive.org/details/copticversionofn04horn/page/n7/mode/2up\">Volume IV</a>: The Catholic Epistles and the Acts of the Apostles, edited from Ms. Oriental 424 in the British Museum; and The Apocalypse, edited from Ms. Curzon 128 in the care of the British Museum </li></ul>",
+      "Horner, G. (1898-1905). <em>The Coptic Version of the New Testament in the Northern Dialect, Otherwise Called Memphitic and Bohairic, with Introduction, Critical Apparatus, and Literal English Translation</em> (4 vols.). Oxford: Clarendon Press. <ul><li><a href=\"https://archive.org/details/copticversionofn01horn/page/n5/mode/2up\">Volume I</a>: The Gospels of S. Matthew and S. Mark, edited from Ms. Huntingdon 17 in the Bodleian Library </li><li><a href=\"https://archive.org/details/copticversionofn02horn/page/n7/mode/2up\">Volume II</a>: The Gospels of S. Luke and S. John, edited from Ms. Huntingdon 17 in the Bodleian Library </li><li><a href=\"https://archive.org/details/copticversionofn03horn/page/n5/mode/2up\">Volume III</a>: The Epistles of S. Paul, edited from Ms. Oriental 424 in the British Museum </li><li><a href=\"https://archive.org/details/copticversionofn04horn/page/n7/mode/2up\">Volume IV</a>: The Catholic Epistles and the Acts of the Apostles, edited from Ms. Oriental 424 in the British Museum; and The Apocalypse, edited from Ms. Curzon 128 in the care of the British Museum </li></ul>",
       "Horner, G. (1911-1924). <em>The Coptic Version of the New Testament in the Southern Dialect, Otherwise Called Sahidic and Thebaic, with Critical Apparatus, Literal English Translation, Register of Fragments and Estimate of the Version</em> (7 vols.). Oxford: Clarendon Press. <ul><li><a href=\"https://archive.org/details/copticversionofn01unse/page/n7/mode/2up\">Volume I</a>: The Gospels of S. Matthew and S. Mark </li><li><a href=\"https://archive.org/details/copticversionofn02unse/page/n5/mode/2up\">Volume II</a>: The Gospel of S. Luke </li><li><a href=\"https://archive.org/details/copticversionofn03unse/page/n5/mode/2up\">Volume III</a>: The Gospel of S. John, register of fragments, etc., facsimiles </li><li><a href=\"https://archive.org/details/copticversionofn04hornuoft/page/n3/mode/2up\">Volume IV</a>: The Epistles of S. Paul </li><li><a href=\"https://archive.org/details/copticversionofn05unse/page/n3/mode/2up\">Volume V</a>: The Episles of S. Paul (continued), register of fragments, etc. </li><li><a href=\"https://archive.org/details/copticversionofn06hornuoft/page/n3/mode/2up\">Volume VI</a>: The Acts of the Apostles </li><li><a href=\"https://archive.org/details/copticversionofn07hornuoft/page/n5/mode/2up\">Volume VII</a>: The Catholic Epistles and the Apocalypse </li></ul>"
     ],
     "variants": [
@@ -891,7 +891,7 @@ export const DATA = [
   {
     "title": "A. Kircher, the Scalæ in Lingua Aegyptiaca Restituta, variants from Loret in Ann. I and other MSS",
     "description": [
-      "Kircher, A. (1644). <em><a href=\"https://www.google.co.uk/books/edition/Athanasii_Kircheri_Lingua_Aegyptiaca_res/qEtB1x0frAIC?hl=en&amp;gbpv=1\">Lingua Aegyptiaca Restituta. Opus Tripartium</a></em>. Rome: Hermann Scheus.",
+      "Kircher, A. (1644). <em><a href=\"https://www.google.co.uk/books/edition/Athanasii_Kircheri_Lingua_Aegyptiaca_res/qEtB1x0frAIC?hl=en&gbpv=1\">Lingua Aegyptiaca Restituta. Opus Tripartium</a></em>. Rome: Hermann Scheus.",
       "Loret, V. (1900). <a href=\"https://archive.org/details/AnnalesDuServiceDesAntiquitsDeLegyptevolume1/page/n63/mode/2up\">Les livres III et IV (animaux et végétaux) de la Scala Magna de Schams-Ar-Riâsah</a>. <em>Annales du Service des antiquités de l’Egypte</em>, 1, 48-63 (edition), 215-229 (indices).",
       "Macomber, F. (2020). <em>The Scala Magna of Shams al-Riʾāsah Abū al-Barakāt.</em><ul><li><a href=\"https://drive.google.com/file/d/1T3Nmg6asUsj7C156txX4jm2iLHZlKHyx/view\">Volume I: Introduction, Text, Translation, and Notes.</a></li><li><a href=\"https://drive.google.com/file/d/1T8F7HFolW1FNyU6bqeza5qzyRrr9OAVr/view\">Volume II: Apparatus of Variant Readings and Indexes.</a></li></ul>"
     ],
@@ -911,7 +911,7 @@ export const DATA = [
   {
     "title": "O. von Lemm, Kleine Kopt. Studien, acc. to continuous pagination",
     "description": [
-      "Parts 1-58 published in the <em>Bulletin de l’Académie Impériale des Sciences de St.-Pétersbourg</em>, 1899-1909. Parts I-IX, X-XX, XXI-XXV, XXVI-XLV, XXVI-XLV (Schluss) are available on <a href=\"https://www.mathnet.ru/php/archive.phtml?wshow=paper&amp;jrnid=im&amp;paperid=4650&amp;option_lang=eng\">Mathnet.ru</a>. Part XLVI-L are available on <a href=\"https://www.orientalstudies.ru/rus/index.php?option=com_publications&amp;Itemid=75&amp;pub=8369\">OrientalStudies.ru</a>. Parts LI-LV and LVI-LVIII are outstanding."
+      "Parts 1-58 published in the <em>Bulletin de l’Académie Impériale des Sciences de St.-Pétersbourg</em>, 1899-1909. Parts I-IX, X-XX, XXI-XXV, XXVI-XLV, XXVI-XLV (Schluss) are available on <a href=\"https://www.mathnet.ru/php/archive.phtml?wshow=paper&jrnid=im&paperid=4650&option_lang=eng\">Mathnet.ru</a>. Part XLVI-L are available on <a href=\"https://www.orientalstudies.ru/rus/index.php?option=com_publications&Itemid=75&pub=8369\">OrientalStudies.ru</a>. Parts LI-LV and LVI-LVIII are outstanding."
     ],
     "variants": [
       "KKS"
@@ -920,7 +920,7 @@ export const DATA = [
   {
     "title": "J. Krall, Kopt. Texte (Rainer Corpus II), acc. to numbers",
     "description": [
-      "Krall, J. (1895). <em><a href=\"https://www.google.co.uk/books/edition/Koptische_Texte_Bd_Rechtsurkunden/VlcPAQAAMAAJ?hl=en&amp;gbpv=1&amp;pg=PR3&amp;printsec=frontcover\">Corpus papyrorum Raineri archiducis Austriae. Band II: Koptische Texte</a></em>. Wien: Verlag der Kaiserlich-Königlichen Hof- und Staatsdruckerei."
+      "Krall, J. (1895). <em><a href=\"https://www.google.co.uk/books/edition/Koptische_Texte_Bd_Rechtsurkunden/VlcPAQAAMAAJ?hl=en&gbpv=1&pg=PR3&printsec=frontcover\">Corpus papyrorum Raineri archiducis Austriae. Band II: Koptische Texte</a></em>. Wien: Verlag der Kaiserlich-Königlichen Hof- und Staatsdruckerei."
     ],
     "variants": [
       "Kr"
@@ -1023,7 +1023,7 @@ export const DATA = [
   {
     "title": "Lemm, Apokryphe Apostelacten",
     "description": [
-      "Lemm, O. von. (1890). <em><a href=\"https://www.google.co.uk/books/edition/Koptische_Apokryphe_Apostelacten/7hJik4M60hoC?hl=en&amp;gbpv=1\">Koptische Apokryphe Apostelacten</a></em>. St. Petersburg: Académie Impériale des Sciences."
+      "Lemm, O. von. (1890). <em><a href=\"https://www.google.co.uk/books/edition/Koptische_Apokryphe_Apostelacten/7hJik4M60hoC?hl=en&gbpv=1\">Koptische Apokryphe Apostelacten</a></em>. St. Petersburg: Académie Impériale des Sciences."
     ],
     "variants": [
       "L Ap"
@@ -1166,7 +1166,7 @@ export const DATA = [
   {
     "title": "Lightfoot, Ignatius¹, ii 1 865 ff",
     "description": [
-      "Lightfoot, J. B. (1899). <em><a href=\"https://babel.hathitrust.org/cgi/pt?id=uc1.l0051084895&amp;seq=289\">The Apostolic Fathers, Part II: S. Ignatius, S. Polycarp. Revised Texts with Introductions, Notes, Dissertations, and Translations</a></em>, 2nd ed., Vol. III, pp. 275–298. London: Macmillan and Co. [Crum’s page numbering seems to refer to the 1st edition.]"
+      "Lightfoot, J. B. (1899). <em><a href=\"https://babel.hathitrust.org/cgi/pt?id=uc1.l0051084895&seq=289\">The Apostolic Fathers, Part II: S. Ignatius, S. Polycarp. Revised Texts with Introductions, Notes, Dissertations, and Translations</a></em>, 2nd ed., Vol. III, pp. 275–298. London: Macmillan and Co. [Crum’s page numbering seems to refer to the 1st edition.]"
     ],
     "variants": [
       "Mart Ign"
@@ -1277,7 +1277,7 @@ export const DATA = [
   {
     "title": "Le Muséon (periodical), acc. to vols",
     "description": [
-      "<em>Le Muséon</em> began in 1882. Many early volumes are available digitised through <a href=\"https://catalog.hathitrust.org/Record/000640676?type%5B%5D=all&amp;lookfor%5B%5D=%20Le%20Muse%CC%81on&amp;ft=#viewability\">HathiTrust</a> with some additional volumes via US access."
+      "<em>Le Muséon</em> began in 1882. Many early volumes are available digitised through <a href=\"https://catalog.hathitrust.org/Record/000640676?type%5B%5D=all&lookfor%5B%5D=%20Le%20Muse%CC%81on&ft=#viewability\">HathiTrust</a> with some additional volumes via US access."
     ],
     "variants": [
       "Mus"
@@ -1668,7 +1668,7 @@ export const DATA = [
     "title": "I Papiri Copti… di Torino, ed. F. Rossi, acc. to volume, fascicule &amp; page",
     "description": [
       "Rossi, F. (1887). <em>I Papiri Copti del Museo Egizio di Torino</em>, Vol. I (five fascicles). Torino: Ermanno Loescher. The five fascicles of this volume available on <a href=\"https://alinsuciu.com/2012/01/27/rossis-edition-of-the-coptic-papyrus-codices-in-the-egyptian-museum-in-turin-1/\">Alin Suciu’s blog</a>.",
-      "Rossi, F. (1892). <em><a href=\"https://www.google.co.uk/books/edition/I_papiri_copti_del_Museo_egizio_di_Torin/lxEZAAAAYAAJ?hl=en&amp;gbpv=1&amp;pg=PP9&amp;printsec=frontcover\">I Papiri Copti del Museo Egizio di Torino</a></em>. Vol. II (four fascicles). Torino: Ermanno Loescher."
+      "Rossi, F. (1892). <em><a href=\"https://www.google.co.uk/books/edition/I_papiri_copti_del_Museo_egizio_di_Torin/lxEZAAAAYAAJ?hl=en&gbpv=1&pg=PP9&printsec=frontcover\">I Papiri Copti del Museo Egizio di Torino</a></em>. Vol. II (four fascicles). Torino: Ermanno Loescher."
     ],
     "variants": [
       "R"
@@ -1686,7 +1686,7 @@ export const DATA = [
   {
     "title": "F. Rossi, Alcuni MSS. Copti… di Torino (= Memorie… Torino, ser. ii, tom. xliii), acc. to pp. of separate publication",
     "description": [
-      "Rossi, F. (1893). <em><a href=\"https://babel.hathitrust.org/cgi/pt?id=mdp.39015024258538&amp;seq=7\">Di alcuni manoscritti copti che si conservano nella Biblioteca Nazionale di Torino</a></em>. (Estratto dalle <em>Memorie della Reale Accademia delle Scienze di Torino</em>, Ser. II, Vol. 44). Torino: Carlo Clausen."
+      "Rossi, F. (1893). <em><a href=\"https://babel.hathitrust.org/cgi/pt?id=mdp.39015024258538&seq=7\">Di alcuni manoscritti copti che si conservano nella Biblioteca Nazionale di Torino</a></em>. (Estratto dalle <em>Memorie della Reale Accademia delle Scienze di Torino</em>, Ser. II, Vol. 44). Torino: Carlo Clausen."
     ],
     "variants": [
       "R Al"
@@ -1732,7 +1732,7 @@ export const DATA = [
   {
     "title": "F. Rossi, Un Nuovo Cod. Copto (Memorie Accad. Lincei, 1893), acc. to pp. of separate publication",
     "description": [
-      "Rossi, F. (1893). <em><a href=\"https://www.google.co.uk/books/edition/Un_nuovo_codice_copto_del_Museo_Egizio_d/64GEtkCSqXkC?hl=en&amp;gbpv=1&amp;pg=PA1&amp;printsec=frontcover\">Un nuovo codice copto del Museo Egizio di Torino contenente la vita di S. Epifanio ed i martiri di S. Pantaleone, di Ascla, di Apollonio, di Filemone, di Ariano e di Dios con versetti di vari capitoli del “Libro di Giobbe”</a> (Reale Accademia dei Lincei)</em>. Roma: Accademia dei Lincei."
+      "Rossi, F. (1893). <em><a href=\"https://www.google.co.uk/books/edition/Un_nuovo_codice_copto_del_Museo_Egizio_d/64GEtkCSqXkC?hl=en&gbpv=1&pg=PA1&printsec=frontcover\">Un nuovo codice copto del Museo Egizio di Torino contenente la vita di S. Epifanio ed i martiri di S. Pantaleone, di Ascla, di Apollonio, di Filemone, di Ariano e di Dios con versetti di vari capitoli del “Libro di Giobbe”</a> (Reale Accademia dei Lincei)</em>. Roma: Accademia dei Lincei."
     ],
     "variants": [
       "RNC",
@@ -1766,7 +1766,7 @@ export const DATA = [
       "Ryl"
     ],
     "postfixes": {
-      "Suppl": "MSS. acquired since publication of catalogue (cf Ryl Bull. 5)<ul><li>Crum, W. E. (1918–1920). <a href=\"https://luna.manchester.ac.uk/luna/servlet/detail/Manchester~25~25~702~196480:New-Coptic-manuscripts-in-the-John-?sort=image_number%2Cimage_sequence_number&amp;qvq=q:escholar005294.pdf;sort:image_number%2Cimage_sequence_number;lc:Manchester~25~25&amp;mi=0&amp;trs=1\">New Coptic Manuscripts in the John Rylands Library</a>. <em>Bulletin of the John Rylands Library</em>, 5, pp. 497–503.</li></ul>"
+      "Suppl": "MSS. acquired since publication of catalogue (cf Ryl Bull. 5)<ul><li>Crum, W. E. (1918–1920). <a href=\"https://luna.manchester.ac.uk/luna/servlet/detail/Manchester~25~25~702~196480:New-Coptic-manuscripts-in-the-John-?sort=image_number%2Cimage_sequence_number&qvq=q:escholar005294.pdf;sort:image_number%2Cimage_sequence_number;lc:Manchester~25~25&mi=0&trs=1\">New Coptic Manuscripts in the John Rylands Library</a>. <em>Bulletin of the John Rylands Library</em>, 5, pp. 497–503.</li></ul>"
     }
   },
   {
@@ -2005,8 +2005,8 @@ export const DATA = [
   {
     "title": "I. Guidi, Testo copto del Testam. di Abramo &amp;c. (= ALR, 1900)",
     "description": [
-      "Guidi, I. (1900). <a href=\"http://periodici.librari.beniculturali.it/visualizzatore.aspx?anno=1900&amp;ID_testata=30&amp;ID_periodico=9057\">Il testo copto del testamento di Abramo</a>. <em>Rendiconti della Reale Accademia dei Lincei. Classe di Scienze Morali, Storiche e Filologiche</em>, Ser. 5, 9(3–4), pp. 157–180.",
-      "Guidi, I. (1900). <a href=\"http://periodici.librari.beniculturali.it/visualizzatore.aspx?anno=1900&amp;ID_testata=30&amp;ID_periodico=9057\">Il testamento di Isacco e il testamento di Giacobbe</a>. <em>Rendiconti della Reale Accademia dei Lincei. Classe di Scienze Morali, Storiche e Filologiche</em>, Ser. 5, 9(3–4), pp. 223-264."
+      "Guidi, I. (1900). <a href=\"http://periodici.librari.beniculturali.it/visualizzatore.aspx?anno=1900&ID_testata=30&ID_periodico=9057\">Il testo copto del testamento di Abramo</a>. <em>Rendiconti della Reale Accademia dei Lincei. Classe di Scienze Morali, Storiche e Filologiche</em>, Ser. 5, 9(3–4), pp. 157–180.",
+      "Guidi, I. (1900). <a href=\"http://periodici.librari.beniculturali.it/visualizzatore.aspx?anno=1900&ID_testata=30&ID_periodico=9057\">Il testamento di Isacco e il testamento di Giacobbe</a>. <em>Rendiconti della Reale Accademia dei Lincei. Classe di Scienze Morali, Storiche e Filologiche</em>, Ser. 5, 9(3–4), pp. 223-264."
     ],
     "variants": [
       "Tst Ab"
@@ -2051,7 +2051,7 @@ export const DATA = [
   {
     "title": "B. Turaief, Materiali &amp;c. (v AZ 40 150, Orient. Bibliographie xv, no. 111 a), acc. to numbers",
     "description": [
-      "Turayev, B. A. (1902). <a href=\"https://babel.hathitrust.org/cgi/pt?id=chi.102555010&amp;seq=389\">Коптскіе тексты, пріобрѣтенные экспедиціей пок. В. Г. Бока въ Египтѣ</a> [Coptic texts, acquired by the expedition of the late V. G. Bok in Egypt]. In <em>Труды одиннадцатаго Археологическаго Съѣзда въ Кіевѣ</em> (1899), т. II, pp. 225–246. Москва."
+      "Turayev, B. A. (1902). <a href=\"https://babel.hathitrust.org/cgi/pt?id=chi.102555010&seq=389\">Коптскіе тексты, пріобрѣтенные экспедиціей пок. В. Г. Бока въ Египтѣ</a> [Coptic texts, acquired by the expedition of the late V. G. Bok in Egypt]. In <em>Труды одиннадцатаго Археологическаго Съѣзда въ Кіевѣ</em> (1899), т. II, pp. 225–246. Москва."
     ],
     "variants": [
       "Tur M",
@@ -2169,7 +2169,7 @@ export const DATA = [
   {
     "title": "Zeitsch. f. d. Neutestamentl. Wissenschaft",
     "description": [
-      "<em>Zeitschrift für die neutestamentliche Wissenschaft und die Kunde der älteren Kirche</em> began in 1900. Early digitised volumes are linked on <a href=\"https://de.wikisource.org/wiki/Zeitschriften_(Theologie)#Z\">de.WikiSource.org</a>. Further volumes available <a href=\"https://catalog.hathitrust.org/Record/000494825?type%5B%5D=all&amp;lookfor%5B%5D=Zeitschrift%20f%C3%BCr%20die%20neutestamentliche%20Wissenschaft%20und%20die%20Kunde%20der%20%C3%A4lteren%20Kirche&amp;ft=#viewability\">HathiTrust</a> (via US access only)."
+      "<em>Zeitschrift für die neutestamentliche Wissenschaft und die Kunde der älteren Kirche</em> began in 1900. Early digitised volumes are linked on <a href=\"https://de.wikisource.org/wiki/Zeitschriften_(Theologie)#Z\">de.WikiSource.org</a>. Further volumes available <a href=\"https://catalog.hathitrust.org/Record/000494825?type%5B%5D=all&lookfor%5B%5D=Zeitschrift%20f%C3%BCr%20die%20neutestamentliche%20Wissenschaft%20und%20die%20Kunde%20der%20%C3%A4lteren%20Kirche&ft=#viewability\">HathiTrust</a> (via US access only)."
     ],
     "variants": [
       "ZNTW"
