@@ -33,13 +33,13 @@ Biology:
     Covers general biology-related terms not fitting into more precise
     categories. Includes diseases and life functions (breathe, eat).
 
-"Physics & Chemistry":
+Physics & Chemistry:
   # Food substances (milk, wine, oil, flesh, honey, ...) should be marked as
   # "food" (and/or "anatomy" where appropriate).
   substance: >
     Includes elements and compounds, as well as more generic substances
     like stone, water, and dirt.
-  "proper nouns": >
+  proper nouns: >
     Proper nouns, such as place names, ethnicities, ...
   earth: >
     Describes natural earthly phenomena that are not man-made and
@@ -55,7 +55,7 @@ Biology:
     categories, including astronomical terms and physical phenomena (e.g.,
     energy, light, heat).
 
-"Man-made":
+Man-made:
   # Some nouns (such as canal) can be either natural or man-made. In this case,
   # it can be included in both the "geography" and "construction" categories.
   construction: >
