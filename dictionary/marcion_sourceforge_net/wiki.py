@@ -405,7 +405,7 @@ class Wiki:
         yield from _SUBSTITUTIONS
 
         yield Substitution(
-            r"{{(.*?)}}",
+            r"{([^{}]*)}{{(.*?)}}",
             self.replace_footnote,
             # NOTE: Footnotes are omitted from the text version.
             text_repl="",
@@ -522,10 +522,15 @@ class Wiki:
         return html
 
     def replace_footnote(self, match: re.Match[str]) -> str:
-        self.footnotes.append(match.group(1))
+        self.footnotes.append(match.group(2))
         num: int = len(self.footnotes)
         return (
-            f'<a class="mark" id="mark{num}" href="#footnote{num}">[{num}]</a>'
+            '<span class="footnoted">'
+            + match.group(1)
+            + f'<a class="mark" id="mark{num}" href="#footnote{num}">'
+            + f"[{num}]"
+            + "</a>"
+            + "</span>"
         )
 
     def _html_aux(self) -> abc.Generator[str]:
