@@ -26,8 +26,6 @@
  *   (This is probably the right option because our data has single quotes, but
  *   if we get rid of HTML (see below) then we won't have any double quotes
  *   left.)
- * TODO: (#712) Use Markdown at the source instead of HTML. This script should
- * convert back from Markdown to HTML.
  */
 
 import * as fs from 'node:fs';
@@ -98,7 +96,11 @@ function markdownToHTML(markdown: string): string {
   const html: string = marked
     .parse(markdown, { async: false })
     .trim()
-    .replace(/^<p>|<\/p>$/g, '');
+    // TODO: (#0) Consider retaining paragraphs. They should be harmless.
+    .replace(/<\/?p>/g, '')
+    // Normalize space in the generated HTML, in order to minimize the `diff`
+    // resulting from users changing the spacing of the source data.
+    .replaceAll('\n', ' ');
 
   // Ensure that all tags are known.
   TAG_REGEX.lastIndex = 0;
