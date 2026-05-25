@@ -368,7 +368,7 @@ figcaption {
 :target.drv .marcion,
 :target.drv .meaning,
 :target.footnote,
-:target.mark {
+.footnoted:has(:target.mark) {
   background-color: var(--anchor-highlight) !important;
 }
 
