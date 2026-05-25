@@ -198,19 +198,14 @@ function* textContentAux(
  *
  * @param keys
  * @param bound
- * @param knownDuplicates
  * @returns
  */
-export function regex(
-  keys: string[],
-  bound = true,
-  knownDuplicates?: string[]
-): string {
+export function regex(keys: string[], bound = true): string {
   dev.play(() => {
     // Log a warning about duplicate keys.
     keys = keys.sort();
     for (const [idx, key] of keys.entries()) {
-      if (idx && keys[idx - 1] === key && !knownDuplicates?.includes(key)) {
+      if (keys[idx - 1] === key) {
         log.warn('Regex has duplicate keys:', key);
       }
     }
