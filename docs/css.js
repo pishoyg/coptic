@@ -1,2 +1,2 @@
-"use strict";function t(n,r){return n.map(i=>`.${i}`).join(r)}export function disjunction(...n){return t(n,", ")}export function conjunction(...n){return t(n,"")}export function nested(...n){return t(n," ")}
+"use strict";export function c(n){return`.${n}`}export function disjunction(...n){return n.map(c).join(", ")}export function conjunction(...n){return n.map(c).join("")}export function nested(...n){return n.map(c).join(" ")}
 //# sourceMappingURL=css.js.map
