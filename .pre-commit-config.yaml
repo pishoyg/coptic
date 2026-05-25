@@ -85,7 +85,7 @@ repos:
       - id: tsc
         name: tsc
         types: [ts]
-        entry: npx tsc -p "tsconfig.json"
+        entry: npx tsc -p "tsconfig_docs.json"
         language: system
         pass_filenames: false
   - repo: https://github.com/pre-commit/mirrors-eslint

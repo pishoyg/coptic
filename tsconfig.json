@@ -1,7 +1,21 @@
-// See https://www.typescriptlang.org/tsconfig/ for documentation.
+// Solution-style tsconfig: lists referenced projects so the TypeScript
+// language server[1] can map any file to the right project. See:
+// https://www.typescriptlang.org/docs/handbook/project-references.html
+//
+// `compilerOptions` here are inherited by the referenced projects via
+// `extends`. `files: []` means this config itself compiles nothing.
+//
+// [1] Not committed in this repository, but used by some developers in their
+// local development environments.
 {
-  "include": [
-    "./docs/**/*.ts"
+  "files": [],
+  "references": [
+    {
+      "path": "./tsconfig_docs.json"
+    },
+    {
+      "path": "./tsconfig_node.json"
+    }
   ],
   "compilerOptions": {
     "target": "ES2024",

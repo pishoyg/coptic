@@ -1,11 +1,10 @@
 {
   "extends": "./tsconfig.json",
   "include": [
-    "./test/**/*.ts",
-    "playwright.config.ts",
-    "eslint.config.ts",
-    "bun.ts",
-    "dictionary/marcion_sourceforge_net/pisaxo.ts"
+    "./**/*.ts"
+  ],
+  "exclude": [
+    "./docs/*.ts"
   ],
   "compilerOptions": {
     "module": "NodeNext"
