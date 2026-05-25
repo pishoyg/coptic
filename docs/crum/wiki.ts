@@ -220,37 +220,6 @@ let formSuperscripts = new Map<string, string>();
 
 /**
  *
- * @param book
- * @param chapter
- * @returns
- */
-function bookHasChapter(book: bib.Book, chapter: string): boolean {
-  // TODO: (#0) Add a developer-mode check that the list of chapters is sorted
-  // in lexicographical order.
-  let left = 0;
-  let right = book.chapters.length - 1;
-
-  while (left <= right) {
-    // Find the middle index
-    const mid: number = Math.floor((left + right) / 2);
-    const midChapter: string = book.chapters[mid]!;
-
-    if (midChapter === chapter) {
-      return true;
-    }
-
-    if (midChapter < chapter) {
-      left = mid + 1; // Search the right half.
-    } else {
-      right = mid - 1; // Search the left half.
-    }
-  }
-
-  return false; // Chapter not found
-}
-
-/**
- *
  * @param wiki
  * @returns
  */
@@ -567,6 +536,41 @@ class Citation {
   }
 
   /**
+   * If the chapter is undefined, we return false.
+   *
+   * @returns
+   */
+  private knownChapter(): boolean {
+    // TODO: (#0) Add a developer-mode check that the list of chapters is sorted
+    // in lexicographical order.
+
+    if (this.chapter === undefined) {
+      return false;
+    }
+
+    let left = 0;
+    let right = this.book.chapters.length - 1;
+
+    while (left <= right) {
+      // Find the middle index
+      const mid: number = Math.floor((left + right) / 2);
+      const midChapter: string = this.book.chapters[mid]!;
+
+      if (midChapter === this.chapter) {
+        return true;
+      }
+
+      if (midChapter < this.chapter) {
+        left = mid + 1; // Search the right half.
+      } else {
+        right = mid - 1; // Search the left half.
+      }
+    }
+
+    return false; // Chapter not found
+  }
+
+  /**
    * @param ibidem
    * @param content
    * @returns
@@ -577,7 +581,9 @@ class Citation {
     }
 
     let elem: HTMLElement;
-    if (this.chapter && !bookHasChapter(this.book, this.chapter)) {
+    // The `this.chapter` guard is required because we want to hyperlink
+    // chapter-less citations normally.
+    if (this.chapter && !this.knownChapter()) {
       // If the chapter is missing from our Bible index, fall back to a plain
       // <span>: we still annotate with a tooltip, but skip the hyperlink (which
       // would point to a non-existent page).
@@ -647,13 +653,23 @@ class Citation {
    * @returns
    */
   public valid(): boolean {
-    // NOTE: We deliberately don't reject citations whose chapter is missing
-    // from the Bible index — `anchor()` handles that case by annotating with
-    // a tooltip but no hyperlink, and logging a warning.
+    // NOTE: In most cases, we deliberately don't reject citations whose chapter
+    // is missing from the Bible index — `anchor()` handles that case by
+    // annotating with a tooltip but no hyperlink, and logging a warning.
+    // However, in some cases, strictness is necessary.
+    // See #705 and #709.
 
-    if (this.book.abb === 'AP' && !this.verse) {
-      // This is a citation of Acta Pauli, not Apocalypse.
-      return false;
+    // NOTE: We don't verify any verification of verse numbers. But in some
+    // cases the absence of a verse is used to detect false positives.
+
+    if (this.book.abb === 'AP') {
+      // Distinguish between citations of Acta Pauli and Apocalypse.
+      return this.knownChapter() && !!this.verse;
+    }
+
+    if (this.book.abb === 'PS') {
+      // Distinguish between citations of Pistis Sophia and Psalms.
+      return this.knownChapter() && !!this.verse;
     }
 
     // Am (for Amos) and AM (for Actes des Martyrs) were unfortunately used
@@ -663,15 +679,11 @@ class Citation {
     // while the latter was only followed by one number represented the page.
     // See #705.
     if (['Am', 'AM'].includes(this.book.abb)) {
-      if (this.chapter && !this.verse) {
-        // Only one number follows.
-        return false;
-      }
-      if (this.book.abb === 'AM' && !this.chapter) {
+      if (!this.chapter) {
         // If zero numbers follow, then Am is Amos and AM is Actes des Martyrs.
-        return false;
+        return this.book.abb === 'Am';
       }
-      return true;
+      return this.knownChapter() && !!this.verse;
     }
 
     return true;
@@ -805,6 +817,10 @@ function replaceBible(
  * might turn up in the text that violate these rules.
  * See:
  * https://remnqymi.com/crum/?query=%28He%7CIs%7CGen%29%28%3F%21+%5Cd%2B%29&kellia=false&andreas=false&case=true&regex=true&wiki=true&full=true
+ *
+ * TODO: (#0) Include this logic in `Citation.valid`. They have the
+ * same purpose and get called together. Just expand the parameters of
+ * `Citation.valid`.
  *
  * @param key
  * @param match - The chapter-verse match object.
@@ -1032,18 +1048,34 @@ function replaceMatch(
   context: html.ReplaceNodesContext
 ): html.ReplaceNodesResult {
   const key: string = context.match[0];
-  // 'Am' and 'AM' are ambiguous.
-  // The former usually refers to Amos, but occasionally refers to Actes des
-  // Martyrs.
-  // The latter usually refers to Actes des Martyrs, but occasionally refers to
-  // Amos.
-  // 'AP' is ambiguous. It usually refers to Acta Pauli, but occasionally refers
-  // to the Apocalypse.
-  // 'Ap' is not ambiguous, as it consistently refers to Apocalypse.
+
+  // NOTE: The text contains frequent errors, especially regarding
+  // capitalization of abbreviations.
   // The Bible parsing logic has more intelligent validation that can detect
-  // false positives. Try to parse the match as a Bible citation first,
-  // falling back to parsing it as a Reference.
-  if (['Am', 'AM', 'AP'].includes(key)) {
+  // false positives. For ambiguous cases, we try to parse the match as a Bible
+  // citation first, falling back to parsing it as a Reference.
+  //
+  // The following cases are resolved using this heuristics:
+  //
+  // - 'Am' and 'AM' are ambiguous.
+  //   The former usually refers to Amos, but occasionally refers to Actes des
+  //   Martyrs.
+  //   The latter usually refers to Actes des Martyrs, but occasionally refers
+  //   to Amos.
+  //
+  // - 'AP' is ambiguous. It usually refers to Acta Pauli, but occasionally
+  //   refers to the Apocalypse.
+  //   'Ap' usually refers to Apocalypse, but occasionally refers to Acta
+  //   Pauli. We resolve such errors manually, as they can't be easily caught
+  //   with a heuristic.
+  //
+  // - 'PS' is ambiguous. It usually refers to Pistis Sophia, but occasionally
+  //   refers to the Psalms.
+  //   'Ps' almost always refers to the Psalms. Instances where 'Ps' refers to
+  //   Pistis Sophia are rare, and can't be easily detected with a heuristic, so
+  //   we opted for marking them manually whenever we come across one.
+
+  if (['Am', 'AM', 'AP', 'PS'].includes(key)) {
     return replaceBible(key, context) ?? replaceReference(key, context) ?? {};
   }
 
