@@ -1552,6 +1552,7 @@
   description:
   variants:
     - 'P Chass'
+    - 'P Chas'
 
 - title: 'Papyruscodex saec. vi-vii… Cheltenham, ed. Crum, 1915, acc to pp. of printed
     book'
@@ -1572,6 +1573,7 @@
   description:
   variants:
     - 'Pcod Mor'
+    - 'PCod Mor'
 
 - title: 'Papyri at Columbia University, New York (A. Schiller’s copies)'
   description:
@@ -1646,6 +1648,7 @@
       Vol. V. London: British Museum.'
   variants:
     - 'P Lond'
+    - 'P Lon'
   postfixes:
     V: null
 
@@ -2126,39 +2129,58 @@
   variants:
     - Tuki
 
-# TODO: (#522) Merge the 'Tur*' entries below using postfixes. This would be
-# helpful in such cases as ⲧⲁ- (p 390 a)[1].
-#
-# [1] https://remnqymi.com/crum/1554.html
-- title: 'B. Turaief, Materiali &c. (v AZ 40 150, Orient. Bibliographie xv, no. 111
-    a), acc. to numbers'
+# NOTE: 'TurM' and 'TurO' occur as separate entries in Crum's list. We merge
+# them in order to be able to handle occurrences of a bare 'Tur', as in
+# ⲧⲁ- (p 390 a):
+#   https://remnqymi.com/crum/1554.html
+# Keep in mind that 'Tur' conflicts 'Turin', so we omit 'Tur' as a variant of
+# 'Turin'.
+- title: 'B. Turaief'
   description:
-    - 'Turayev, B. A. (1902). [Коптскіе тексты, пріобрѣтенные экспедиціей пок. В.
-      Г. Бока въ Египтѣ](https://babel.hathitrust.org/cgi/pt?id=chi.102555010&seq=389)
-      [Coptic texts, acquired by the expedition of the late V. G. Bok in Egypt]. In
-      *Труды одиннадцатаго Археологическаго Съѣзда въ Кіевѣ* (1899), т. II, pp. 225–246.
-      Москва.'
   variants:
-    - 'Tur M'
-    - 'Tur Mat'
+    - Tur
+  postfixes:
+    # NOTE: The interpretations of `M` and `Mat` are identical. We are forced to
+    # duplicate them because we don't have a way to specify several postfix keys
+    # with the same interpretation.
+    M: |-
+      Materiali &c. (v AZ 40 150, Orient. Bibliographie xv, no. 111 a), acc. to numbers
+      - Turayev, B. A. (1902). [Коптскіе тексты, пріобрѣтенные экспедиціей пок. В. Г. Бока въ Египтѣ](https://babel.hathitrust.org/cgi/pt?id=chi.102555010&seq=389) [Coptic texts, acquired by the expedition of the late V. G. Bok in Egypt]. In *Труды одиннадцатаго Археологическаго Съѣзда въ Кіевѣ* (1899), т. II, pp. 225–246. Москва.
+    Mat: |-
+      Materiali &c. (v AZ 40 150, Orient. Bibliographie xv, no. 111 a), acc. to numbers
+      - Turayev, B. A. (1902). [Коптскіе тексты, пріобрѣтенные экспедиціей пок. В. Г. Бока въ Египтѣ](https://babel.hathitrust.org/cgi/pt?id=chi.102555010&seq=389) [Coptic texts, acquired by the expedition of the late V. G. Bok in Egypt]. In *Труды одиннадцатаго Археологическаго Съѣзда въ Кіевѣ* (1899), т. II, pp. 225–246. Москва.
+    O: |-
+      Koptskia Ostraka… Golenishtshef (= Bull. Acad. Imp. x, no. 5, 1899)
+      - Turayev, B. A. (1899). [Коптскія ostraca коллекціи В. С. Голенищева](https://www.biodiversitylibrary.org/item/94351#page/503/mode/1up) [Coptic ostraca from the collection of V. S. Golenishchev]. *Bulletin de l’ Académie Impériale des Sciences de St.-Pétersbourg*, 5e série, T. X, no. 5, pp. 435–449.
 
-- title: 'B. Turaief, Materiali &c. (v AZ 40 150, Orient. Bibliographie xv, no. 111
-    a), acc. to numbers; Koptskia Ostraka… Golenishtshef (= Bull. Acad. Imp. x, no.
-    5, 1899)'
-  description:
-    - 'Turayev, B. A. (1899). [Коптскія ostraca коллекціи В. С. Голенищева](https://www.biodiversitylibrary.org/item/94351#page/503/mode/1up)
-      [Coptic ostraca from the collection of V. S. Golenishchev]. *Bulletin de l’
-      Académie Impériale des Sciences de St.-Pétersbourg*, 5e série, T. X, no. 5,
-      pp. 435–449.'
-  variants:
-    - 'Tur O'
-
+# NOTE: Below are three different entries for Turin.
+# `Turin` occurs on its own, so it must have an entry.
+# Only the first (Turin ostr) is in Crum's list of abbreviations, and we
+# retain it for this reason, instead of simply letting `ostr` come as a suffix
+# or postfix of `Turin`. We also retain it because the variant `Tur ostr` must
+# be spelled out to avoid conflict with `Tur`.
+# We also have a standalone entry for `PTurin` because, while we have mechanisms
+# to process suffixes and postfixes, `P` occurs here as a prefix.
 - title: 'ostraca in Museo Archeol., Turin (Crum’s copies)'
   description:
-  # TODO: (#522) "Turin" occurs on its own. Maybe "ostr" should simply be
-  # treated as a suffix?
   variants:
     - 'Turin ostr'
+    - 'Tur ostr'
+
+- title: 'Museo Archeol., Turin'
+  description:
+  variants:
+    - Turin
+
+- title: 'Papyri in Museo Archeol., Turin'
+  description:
+  variants:
+    - PTurin
+
+- title: 'Atti della Reale Accademia delle Scienze di Torino'
+  description:
+  variants:
+    - Turin Atti
 
 - title: 'MSS. in Vatican Library, acc. to photographs or to copies by H. De Vis'
   description:
