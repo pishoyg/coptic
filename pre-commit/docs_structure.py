@@ -104,8 +104,6 @@ PATTERNS: list[Pattern] = [
     # Manually-written code files:
     Pattern(["index.html"]),  # Home
     Pattern(["crum/index.html"]),  # Lexicon
-    Pattern(["dawoud/index.html"]),  # TODO: (#0) Delete.
-    Pattern(["crum/crum/index.html"]),  # TODO: (#0) Delete.
     Pattern(["keyboard.html"]),
     Pattern(["**.ts"]),
     Pattern(["**.css"]),
