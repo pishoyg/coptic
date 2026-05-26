@@ -4,6 +4,7 @@
 # NOTE: As a general convention, methods ending with _aux return generators,
 # rather than string literals.
 import collections
+import functools
 import html
 import json
 import os
@@ -113,6 +114,7 @@ def _normalize(lang: Language, text: str) -> str:
     return text
 
 
+@functools.total_ordering
 class ColorRange:
     """A colored range in a verse."""
 
@@ -126,6 +128,9 @@ class ColorRange:
 
     def overlap(self, other: typing.Self) -> bool:
         return self.start < other.end and self.end > other.start
+
+    def __le__(self, other: typing.Self) -> bool:
+        return (self.start, self.end) < (other.start, other.end)
 
     def winner(self, other: typing.Self):
         """Given two ranges, return whichever one contains the other.
@@ -188,18 +193,17 @@ class Verse:
             return
         ranges: list[ColorRange] = []
         for d in verse["coloredWords"]:
+            # We intentionally ignore the dark mode color. As of
+            # the time of writing, we don't support dark mode.
             word: str = d["word"]
             color: str = d["light"]
             if not word or not color:
                 continue
             ranges.extend(
-                [
-                    ColorRange(idx, idx + len(word), color)
-                    for idx in self.__find_all(v, word)
-                ],
+                ColorRange(m.start(), m.end(), color)
+                for m in re.finditer(re.escape(word), v)
             )
-        ranges = sorted(ranges, key=self.__compare_range_color)
-        ranges = self.__remove_overlap(ranges)
+        ranges = self.__remove_overlap(sorted(ranges))
         last: int = 0
         for rc in ranges:
             assert rc.start != rc.end
@@ -226,9 +230,6 @@ class Verse:
             num = ""
         return num
 
-    def __compare_range_color(self, rc: ColorRange) -> tuple[int, int]:
-        return (rc.start, rc.end)
-
     def __remove_overlap(self, ranges: list[ColorRange]) -> list[ColorRange]:
         if not ranges:
             return []
@@ -241,12 +242,6 @@ class Verse:
                 continue
             out[-1] = cur.winner(prev)
         return out
-
-    def __find_all(self, s: str, p: str):
-        i: int = s.find(p)
-        while i != -1:
-            yield i
-            i = s.find(p, i + 1)
 
     @typing.override
     def __str__(self) -> str:
