@@ -1570,7 +1570,8 @@ function entryText(entry: Element): string {
 }
 
 /**
- *
+ * TODO: (#588) Share the copy-button pattern (icon + yank handler + tooltip)
+ * with `addCellCopies` in `bible/main.ts`.
  * @param root
  */
 function addEntryCopyShortcuts(root: HTMLElement): void {

@@ -85,6 +85,10 @@ em {
   color: gray;
 }
 
+.small-text {
+  font-size: 0.65rem;
+}
+
 figure {
   display: inline-block;
   margin: 0;

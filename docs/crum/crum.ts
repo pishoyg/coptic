@@ -150,6 +150,8 @@ function handleDrvKey(root: HTMLElement): void {
 
       // Create a second anchor pointing to this row in the HTML. This is useful
       // for users to share links to specific derivations.
+      // TODO: (#588) Share the row-anchor pattern (🔗 fragment anchor +
+      // click-to-yank URL) with `addRowLinks` in `bible/main.ts`.
       const frag = `#drv${key.textContent.trim()}`;
       const a: HTMLAnchorElement = document.createElement('a');
       a.href = frag;

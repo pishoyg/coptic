@@ -36,6 +36,39 @@ td {
   padding: 1em 0.5em;
   font-size: 1.1rem;
   line-height: 1.7;
+  position: relative;
+}
+
+/* The link and copy buttons sit out of flow on top of the cell, so they
+ * don't shrink the area available for the text. */
+.verse-link,
+.language-copy {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  cursor: pointer;
+  user-select: none;
+  text-decoration: none;
+  font-size: 0.65rem;
+  line-height: 1;
+}
+
+.verse-link {
+  left: 0.15em;
+  top: 0.4em;
+}
+
+.language-copy {
+  right: 0.15em;
+  top: 0.4em;
+}
+
+tr.verse:hover .verse-link {
+  opacity: 1;
+}
+
+td:hover .language-copy {
+  opacity: 1;
 }
 
 tr:last-child td {
