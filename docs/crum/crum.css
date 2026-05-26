@@ -378,16 +378,11 @@ del {
   font-style: italic;
   opacity: 0.7;
   float: right;
+  visibility: hidden;
 }
 
-@media (hover: hover) {
-  .drv-link {
-    visibility: hidden;
-  }
-
-  .drv:hover .drv-link {
-    visibility: visible;
-  }
+.drv:hover .drv-link {
+  visibility: visible;
 }
 
 .sister-view {
