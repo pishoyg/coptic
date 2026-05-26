@@ -1,7 +1,7 @@
 {
   "version": 3,
   "sources": ["cls.ts"],
-  "sourcesContent": ["/** This package stores common classes. */\n\n/** LINK makes elements look like links. */\nexport const LINK = 'link';\n\n/** HOVER_LINK makes an element look like a link when hovered over. */\nexport const HOVER_LINK = 'hover-link';\n\n/** HOVER_ACTION makes an element look like a link when hovered over, without\n * changing the element's color. */\nexport const HOVER_ACTION = 'hover-action';\n"],
-  "mappings": "aAGO,aAAM,KAAO,OAGP,WAAa,aAIb,aAAe",
+  "sourcesContent": ["/** This package stores common classes. */\n\n/** LINK makes elements look like links. */\nexport const LINK = 'link';\n\n/** HOVER_LINK makes an element look like a link when hovered over. */\nexport const HOVER_LINK = 'hover-link';\n\n/** HOVER_ACTION makes an element look like a link when hovered over, without\n * changing the element's color. */\nexport const HOVER_ACTION = 'hover-action';\n\nexport const SMALL_TEXT = 'small-text';\n"],
+  "mappings": "aAGO,aAAM,KAAO,OAGP,WAAa,aAIb,aAAe,eAEf,WAAa",
   "names": []
 }
