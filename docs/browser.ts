@@ -129,7 +129,7 @@ export function preventDefault(event: Event): void {
  * @param id
  */
 export function scroll(id: string): void {
-  document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+  document.getElementById(id)?.scrollIntoView();
 }
 
 /**
@@ -202,8 +202,7 @@ export function scrollToNextElement(
   query: string,
   target: 'next' | 'prev' | 'cur'
 ): void {
-  const elem = findNextElement(query, target);
-  elem?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  findNextElement(query, target)?.scrollIntoView({ block: 'start' });
 }
 
 /**

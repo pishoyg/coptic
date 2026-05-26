@@ -4,6 +4,10 @@
  *   ./pre-commit/docs_structure.py -c
  */
 
+html {
+  scroll-behavior: smooth;
+}
+
 body.dev .developer {
   color: firebrick !important;
   border: 1px solid firebrick;
