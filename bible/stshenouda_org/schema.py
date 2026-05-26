@@ -26,7 +26,7 @@ class Verse(typing.TypedDict):
     English: str
     Sahidic: str
     verseNumber: str
-    coloredWords: list[ColoredWord]
+    coloredWords: typing.NotRequired[list[ColoredWord]]
     italicWords: list[str]
 
 

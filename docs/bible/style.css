@@ -39,6 +39,15 @@ td {
   position: relative;
 }
 
+/* Recolored words in a verse. See the HTML generation pipeline. */
+.blue {
+  color: #05537d;
+}
+
+.red {
+  color: #b00e23;
+}
+
 /* The link and copy buttons sit out of flow on top of the cell, so they
  * don't shrink the area available for the text. */
 .verse-link,

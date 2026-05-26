@@ -93,6 +93,16 @@ _NORMALIZATION: dict[Language, dict[str, str]] = {
     },
 }
 
+# Recolored words in a verse are only allowed to use these colors. Keep this
+# mapping in sync with the classes used in the CSS.
+_COLOR_CLASSES: dict[str, str | None] = {
+    "#000000": None,
+    "#05537d": "blue",
+    "#812d2d": "red",
+    "#b00e23": "red",
+    "#ff0000": "red",
+}
+
 
 def _normalize(lang: Language, text: str) -> str:
     substitutions: dict[str, str] = _NORMALIZATION.get(lang, {})
@@ -111,15 +121,13 @@ class ColorRange:
         self.end: int = end
         self.color: str = color
 
-    def within(self, other: object) -> bool:
-        assert isinstance(other, ColorRange)
+    def within(self, other: typing.Self) -> bool:
         return self.start >= other.start and self.end <= other.end
 
-    def overlap(self, other: object) -> bool:
-        assert isinstance(other, ColorRange)
+    def overlap(self, other: typing.Self) -> bool:
         return self.start < other.end and self.end > other.start
 
-    def winner(self, other: object):
+    def winner(self, other: typing.Self):
         """Given two ranges, return whichever one contains the other.
 
         If neither contains the other, crash!
@@ -131,7 +139,6 @@ class ColorRange:
             The larger range.
 
         """
-        assert isinstance(other, ColorRange)
         if self.within(other):
             return other
         if other.within(self):
@@ -192,17 +199,18 @@ class Verse:
                 ],
             )
         ranges = sorted(ranges, key=self.__compare_range_color)
-        if not ranges:
-            yield v
-            return
         ranges = self.__remove_overlap(ranges)
-        assert ranges
         last: int = 0
         for rc in ranges:
             assert rc.start != rc.end
             yield v[last : rc.start]
-            yield f'<span style="color:{rc.color}">{v[rc.start:rc.end]}</span>'
             last = rc.end
+            cls: str | None = _COLOR_CLASSES[rc.color]
+            txt: str = v[rc.start : rc.end]
+            if cls is None:
+                yield txt
+                continue
+            yield f'<span class="{cls}">{txt}</span>'
         yield v[last:]
 
     def __recolor(self, v: str, verse: schema.Verse) -> str:
