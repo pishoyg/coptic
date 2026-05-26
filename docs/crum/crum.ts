@@ -332,8 +332,6 @@ export function addGreekLookups(root: HTMLElement): void {
       greek,
       /\S+/g,
       (match: RegExpExecArray): string | null =>
-        // TODO: (#694) Can we add links to look up the full word, if it can be
-        // inferred, instead of just returning null?
         GREEK_WORD_RE.test(match[0]) ? paths.greekLookup(match[0]) : null,
       [cls.GREEK]
     );
