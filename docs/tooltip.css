@@ -29,22 +29,31 @@
  * attribute on the element. */
 .tooltip[popover] {
   /* Reset the UA popover defaults so anchor positioning controls placement. */
-  inset: auto;
   margin: 0;
   border: 0;
 
   /* Default placement: directly below the parent, aligned with its left edge. */
   position: fixed;
-  top: anchor(bottom);
-  left: anchor(left);
+  inset: anchor(bottom) 0 8px anchor(left);
 
-  /* Stretch the positioning area to the viewport's right edge. */
-  right: 0;
+  /* Stretch the positioning area to the viewport's edges (with a small
+   * bottom gutter). Combined with `align-self: start` and `max-height: stretch`
+   * below, this lets the tooltip size to its content but cap at the
+   * available space between the anchor's bottom and the viewport's bottom. */
 
   /* Align to the anchor's left edge by default.
    * If the tooltip is too wide, this triggers the "smart shift" behavior
    * to slide it leftwards rather than overflowing. */
-  justify-self: start;
+  place-self: start start;
+
+  /* Same idea for the block axis: align to the top of the positioning area
+   * (the anchor's bottom edge) and let the tooltip size to its content.
+   * `max-height: stretch` clamps to the area's height; if the content needs
+   * more, the tooltip itself scrolls instead of being clipped by the
+   * viewport. (`100%` would resolve against the viewport, not the
+   * inset-modified area, so it wouldn't actually clamp.) */
+  max-height: stretch;
+  overflow-y: auto;
 
   /* The tip has an opaque background to hide content behind it. */
   background-color: white;
@@ -82,8 +91,12 @@
 
   /* .above causes tooltips to render above their parent element. */
   &.above {
-    top: auto;
+    /* Mirror of the default: the positioning area runs from a small top
+     * gutter down to the anchor's top edge, and we align to the bottom of
+     * it so the tooltip sits flush against the anchor and grows upward. */
+    top: 8px;
     bottom: anchor(top);
+    align-self: end;
 
     /* Move the box shadow to prevent it from hiding the parent. */
     box-shadow: 0 -8px 16px rgb(0 0 0 / 20%);
