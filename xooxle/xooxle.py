@@ -73,7 +73,6 @@ Concurrency
     still limited.
 """
 
-import os
 import pathlib
 import re
 import typing
@@ -89,8 +88,6 @@ from xooxle import constants as const
 # _KEY is the name of the key field in the output. This must match the name
 # expected by the Xooxle search logic.
 _KEY: str = "KEY"
-# _EXTENSION is the extension of the files that we are building an index for.
-_EXTENSION: str = ".html"
 _TAG_RE: re.Pattern[str] = re.compile("<.*?>")
 
 
@@ -430,7 +427,7 @@ class Xooxle:
 
     def __init__(
         self,
-        source: str | typing.Callable[[], Generator[deck.Note]],
+        source: typing.Callable[[], Generator[deck.Note]],
         extract: list[Selector],
         captures: list[Capture],
         output: str | pathlib.Path,
@@ -448,31 +445,13 @@ class Xooxle:
                 provided, will default to a single layer containing all
                 captures.
         """
-        self._source: str | typing.Callable[[], Generator[deck.Note]] = source
+        self._source: typing.Callable[[], Generator[deck.Note]] = source
         self._extract: list[Selector] = extract
         self._captures: list[Capture] = captures
         self._output: str | pathlib.Path = output
         self._layers: list[list[str]] = layers or [
             [cap.name for cap in self._captures],
         ]
-
-    def _iter_dir(self, source: str) -> Generator[tuple[str, str]]:
-        assert os.path.isdir(source)
-        # Recursively search for all HTML files.
-        for root, _, files in os.walk(source):
-            for f in files:
-                if not f.endswith(_EXTENSION):
-                    continue
-                path = os.path.join(root, f)
-                yield path, file.read(path)
-
-    def iter_input(self) -> Generator[tuple[str, str]]:
-        if isinstance(self._source, str):
-            yield from self._iter_dir(self._source)
-            return
-
-        for note in self._source():
-            yield note.key, note.html
 
     def _is_comment(self, elem: bs4.PageElement) -> bool:
         return isinstance(elem, bs4.element.Comment)
@@ -503,12 +482,6 @@ class Xooxle:
             for element in selector.find_all(entry):
                 _ = element.extract()
 
-        # Construct the entry for this file.
-        if isinstance(self._source, str):
-            key = os.path.relpath(path, self._source)[: -len(_EXTENSION)]
-        else:
-            key = path
-
         # NOTE: We no longer allow duplicate content in the output.
         # If an element has been selected once, it's no longer available in the
         # entry and can't be retrieved in the future.
@@ -524,13 +497,13 @@ class Xooxle:
             cap.name: self.field(cap.excise(entry)) for cap in self._captures
         }
         data = {k: v for k, v in data.items() if v}
-        return {_KEY: key} | data
+        return {_KEY: path} | data
 
     def build(self) -> None:
         with concur.thread_pool_executor() as executor:
             data: Iterable[dict[str, Field | str]] = executor.map(
                 self.process_file,
-                self.iter_input(),
+                ((note.key, note.html) for note in self._source()),
             )
         json: Index = {
             "data": list(data),
