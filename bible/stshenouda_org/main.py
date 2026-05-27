@@ -4,7 +4,6 @@
 # NOTE: As a general convention, methods ending with _aux return generators,
 # rather than string literals.
 import collections
-import functools
 import html
 import json
 import os
@@ -53,7 +52,7 @@ _LANGUAGES: list[Language] = [
     "Lycopolitan",
 ]
 
-_VERSE_PREFIX: re.Pattern[str] = re.compile(r"^\(([^)]+)\)")
+_VERSE_PREFIX: re.Pattern[str] = re.compile(r"^\((.*?)\)")
 
 
 class _CrumMapEntry(typing.TypedDict):
@@ -114,46 +113,6 @@ def _normalize(lang: Language, text: str) -> str:
     return text
 
 
-@functools.total_ordering
-class ColorRange:
-    """A colored range in a verse."""
-
-    def __init__(self, start: int, end: int, color: str) -> None:
-        self.start: int = start
-        self.end: int = end
-        self.color: str = color
-
-    def within(self, other: typing.Self) -> bool:
-        return self.start >= other.start and self.end <= other.end
-
-    def overlap(self, other: typing.Self) -> bool:
-        return self.start < other.end and self.end > other.start
-
-    def __le__(self, other: typing.Self) -> bool:
-        return (self.start, self.end) < (other.start, other.end)
-
-    def winner(self, other: typing.Self):
-        """Given two ranges, return whichever one contains the other.
-
-        If neither contains the other, crash!
-
-        Args:
-            other: The other color range to compare to this.
-
-        Returns:
-            The larger range.
-
-        """
-        if self.within(other):
-            return other
-        if other.within(self):
-            return self
-        log.fatal(
-            "Neither of the two ranges is within the other!",
-            [self, other],
-        )
-
-
 class Verse:
     """A Bible verse."""
 
@@ -188,29 +147,37 @@ class Verse:
         verse: schema.Verse,
     ) -> abc.Generator[str]:
         v = html.escape(v)
-        if "coloredWords" not in verse:
+
+        colored_words: dict[str, str] = (
+            {
+                # We intentionally ignore the dark mode color. As of
+                # the time of writing, we don't support dark mode.
+                d["word"]: d["light"]
+                for d in verse["coloredWords"]
+                if d["word"]
+            }
+            if "coloredWords" in verse
+            else {}
+        )
+
+        if not colored_words:
             yield v
             return
-        ranges: list[ColorRange] = []
-        for d in verse["coloredWords"]:
-            # We intentionally ignore the dark mode color. As of
-            # the time of writing, we don't support dark mode.
-            word: str = d["word"]
-            color: str = d["light"]
-            if not word or not color:
-                continue
-            ranges.extend(
-                ColorRange(m.start(), m.end(), color)
-                for m in re.finditer(re.escape(word), v)
-            )
-        ranges = self.__remove_overlap(sorted(ranges))
+
+        # Longest words first so the regex engine prefers them at each
+        # position; alternation tries left-to-right and finditer yields
+        # non-overlapping matches.
+        pattern: re.Pattern[str] = re.compile(
+            "|".join(
+                map(re.escape, sorted(colored_words, key=len, reverse=True)),
+            ),
+        )
         last: int = 0
-        for rc in ranges:
-            assert rc.start != rc.end
-            yield v[last : rc.start]
-            last = rc.end
-            cls: str | None = _COLOR_CLASSES[rc.color]
-            txt: str = v[rc.start : rc.end]
+        for m in pattern.finditer(v):
+            yield v[last : m.start()]
+            last = m.end()
+            txt: str = m.group()
+            cls: str | None = _COLOR_CLASSES[colored_words[txt]]
             if cls is None:
                 yield txt
                 continue
@@ -223,25 +190,11 @@ class Verse:
     def __num(self, verse: schema.Verse) -> str:
         t: str = verse["English"] or verse["Greek"]
         s: re.Match[str] | None = _VERSE_PREFIX.search(t)
-        num: str = s.groups()[0] if s else ""
-        if not num.isdigit():
-            # TODO: (#553) Handle invalid verse IDs!
-            log.error("Inferred a non-numerical verse number from", t)
-            num = ""
-        return num
-
-    def __remove_overlap(self, ranges: list[ColorRange]) -> list[ColorRange]:
-        if not ranges:
-            return []
-        out: list[ColorRange] = [ranges[0]]
-        for cur in ranges[1:]:
-            prev: ColorRange = out[-1]
-            if not cur.overlap(prev):
-                # No overlap.
-                out.append(cur)
-                continue
-            out[-1] = cur.winner(prev)
-        return out
+        if not s:
+            return ""
+        num: str = s.group(1)
+        # TODO: (#553) Handle invalid verse IDs!
+        return num if num.isdigit() else ""
 
     @typing.override
     def __str__(self) -> str:
