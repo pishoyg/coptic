@@ -1502,7 +1502,7 @@ _CRUM_RETAIN_CLASSES: set[str] = {
 _CRUM_RETAIN_ELEMENTS_FOR_CLASSES = {"comma"}
 
 XOOXLE: xooxle.Xooxle = xooxle.Xooxle(
-    source=notes_aux,
+    source=((note.key, note.html) for note in notes_aux()),
     extract=[
         xooxle.Selector({"name": "title"}, force=False),
         xooxle.Selector({"id": "header"}, force=False),

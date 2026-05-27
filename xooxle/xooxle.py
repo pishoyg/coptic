@@ -6,14 +6,14 @@ Index Content:
     (parameters) about a searchable corpus of HTML documents.
     Our index builder will read a list of documents, and for each document, an
     entry will be added to the data field of the produced index. The entry is a
-    key-value store bearing information about the document, including the
-    document path and its content.
+    key-value store bearing information about the document, including its key,
+    text content, and part of HTML structure.
 
     The Xooxle search engine can then use the built index to:
     - Search the content of each entry.
-    - Create a URL from the path to point the user to how to view the document
+    - Create a URL from the key to point the user to how to view the document
       that this content was extracted from.
-    The path is plain text, but the content fields are HTML.
+    - Render (potentially enriched) HTML.
 
 HTML Reduction:
 
@@ -80,7 +80,6 @@ from collections.abc import Generator, Iterable
 
 import bs4
 
-from flashcards import deck
 from utils import concur, ensure, file, orth, page
 from xooxle import clean
 from xooxle import constants as const
@@ -427,7 +426,7 @@ class Xooxle:
 
     def __init__(
         self,
-        source: typing.Callable[[], Generator[deck.Note]],
+        source: Iterable[tuple[str, str]],
         extract: list[Selector],
         captures: list[Capture],
         output: str | pathlib.Path,
@@ -435,8 +434,7 @@ class Xooxle:
     ) -> None:
         """
         Args:
-            source: Input path - a directory to search for HTML files, or a
-                generator of [key, content] pairs.
+            source: An iterable of [key, html] pairs.
             extract: List of selectors of elements to remove from the soup
                 during preprocessing.
             captures: List of selectors of elements to capture in the output.
@@ -445,7 +443,7 @@ class Xooxle:
                 provided, will default to a single layer containing all
                 captures.
         """
-        self._source: typing.Callable[[], Generator[deck.Note]] = source
+        self._source: Iterable[tuple[str, str]] = source
         self._extract: list[Selector] = extract
         self._captures: list[Capture] = captures
         self._output: str | pathlib.Path = output
@@ -470,7 +468,7 @@ class Xooxle:
         return list(map(self.unit, html.split(const.UNIT_DELIMITER)))
 
     def process_file(self, pair: tuple[str, str]) -> dict[str, Field | str]:
-        path, content = pair
+        key, content = pair
         del pair
         entry = bs4.BeautifulSoup(content, "html.parser")
         # Extract all comments.
@@ -497,13 +495,13 @@ class Xooxle:
             cap.name: self.field(cap.excise(entry)) for cap in self._captures
         }
         data = {k: v for k, v in data.items() if v}
-        return {_KEY: path} | data
+        return {_KEY: key} | data
 
     def build(self) -> None:
         with concur.thread_pool_executor() as executor:
             data: Iterable[dict[str, Field | str]] = executor.map(
                 self.process_file,
-                ((note.key, note.html) for note in self._source()),
+                self._source,
             )
         json: Index = {
             "data": list(data),

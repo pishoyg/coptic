@@ -468,7 +468,7 @@ def notes_aux() -> abc.Generator[deck.Note]:
 
 
 XOOXLE = xooxle.Xooxle(
-    source=notes_aux,
+    source=((note.key, note.html) for note in notes_aux()),
     extract=[],
     captures=[
         xooxle.Capture(

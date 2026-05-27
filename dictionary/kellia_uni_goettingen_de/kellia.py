@@ -990,7 +990,7 @@ _KELLIA_RETAIN_CLASSES = {
 } | set(GEOS)
 
 XOOXLE: xooxle.Xooxle = xooxle.Xooxle(
-    source=lambda: notes_aux(comprehensive()),
+    source=((note.key, note.html) for note in notes_aux(comprehensive())),
     extract=[
         xooxle.Selector({"name": "footer"}, force=False),
         xooxle.Selector({"class_": "bibl"}, force=False),
