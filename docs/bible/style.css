@@ -1,9 +1,9 @@
 /* Styling for a Bible chapter. */
 
 .title {
-  /* The title shows in the middle. */
-  text-align: center;
+  /* The title shows on the left, with the language tray on the right. */
   font-size: 140%;
+  float: left;
 }
 
 table {
@@ -88,38 +88,17 @@ tr:last-child td {
 /* We use a class for the tray because it uses a tooltip, which ends up getting
  * detached from its parent and rendered as a popover. We give both the parent
  * and the tooltip the same class so they can share styling. */
-#bar,
 .tray {
   font-style: italic;
   color: var(--midnight-blue);
 }
 
-#bar {
-  display: flex;
-  margin: 1rem auto 2rem;
-  padding: 1rem;
-  background-color: #f8f9fa;
-  border-radius: 12px;
-  box-shadow: inset 0 1px 3px rgb(0 0 0 / 5%);
-}
-
-#bar label {
-  flex: 1;
-  text-align: center;
-  cursor: pointer;
-  font-weight: 500;
-  padding: 0.2rem 0.5rem;
-  border-radius: 6px;
-  transition: background-color 0.2s;
-}
-
-#bar label:hover {
-  background-color: #e9ecef;
-}
-
 #tray {
-  /* By default, the tray is hidden and the bar is visible. */
-  display: none;
+  float: right;
+  padding: 0.5rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  cursor: pointer;
 }
 
 :target.verse {
@@ -127,26 +106,6 @@ tr:last-child td {
 }
 
 @media (width <= 500px) {
-  /* Hide the language bar. */
-  #bar {
-    display: none;
-  }
-
-  /* Show the language tray instead. */
-  #tray {
-    display: block;
-    float: right;
-    padding: 0.5rem;
-    background: #f8f9fa;
-    border-radius: 8px;
-    cursor: pointer;
-  }
-
-  /* Push the title to the left, so it will show next to the language tray. */
-  .title {
-    float: left;
-  }
-
   /* Reduce the cell padding. */
   td {
     padding: 0.25em 0.125em;

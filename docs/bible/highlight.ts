@@ -23,6 +23,13 @@ export class Highlighter extends high.DialectHighlighter<dial.DIALECT> {
   /**
    * @returns
    */
+  public partial(): boolean {
+    return !!this.rule();
+  }
+
+  /**
+   * @returns
+   */
   private rule(): string | undefined {
     const active: dial.DIALECT[] | undefined = this.manager.active();
     const inactive: dial.DIALECT[] = dial.DIALECTS.filter(

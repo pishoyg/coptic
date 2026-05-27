@@ -10,7 +10,6 @@ import * as css from '../css.js';
 import * as ccls from '../cls.js';
 
 enum ID {
-  BAR = 'bar',
   TRAY = 'tray',
 }
 
@@ -107,47 +106,45 @@ function main(): void {
   html.normalize();
 
   const boxes: HTMLInputElement[] = [];
-  const labels = (): HTMLLabelElement[] => {
-    return dial.DIALECTS.map((dialect: dial.Dialect): HTMLLabelElement => {
+  const labels: HTMLLabelElement[] = dial.DIALECTS.map(
+    (dialect: dial.Dialect): HTMLLabelElement => {
       const label: HTMLLabelElement = document.createElement('label');
       const box: HTMLInputElement = dialect.checkbox();
       boxes.push(box);
       label.append(box, dialect.name);
       return label;
-    });
-  };
-
-  // We will have two sets of checkboxes – one living in a bar (that shows on
-  // large screens) and one in a tray (for smaller screens) in a tooltip
-  // element.
-  const bar: HTMLDivElement = document.createElement('div');
-  bar.append(...labels());
-  bar.id = ID.BAR;
+    }
+  );
 
   const tray: HTMLDivElement = document.createElement('div');
-  tray.append(...labels());
+  tray.append(...labels);
   const holder: HTMLSpanElement = document.createElement('span');
   holder.textContent = 'Languages ▾';
   holder.id = ID.TRAY;
   holder.classList.add(cls.TRAY);
   tool.addTooltip(holder, [tray], [cls.TRAY], 'click');
 
-  // Construct the highlighter.
-  const highlighter: high.Highlighter = new high.Highlighter(
-    new dial.Manager(),
-    [...boxes]
-  );
+  const manager: dial.Manager = new dial.Manager();
+  const highlighter: high.Highlighter = new high.Highlighter(manager, boxes);
 
   addEventListeners(highlighter);
 
   const title: HTMLElement = document.querySelector(`.${cls.TITLE}`)!;
-  title.insertAdjacentElement('afterend', bar);
   title.insertAdjacentElement('afterend', holder);
 
   // Capture cell text before prepending the row link, so the link emoji
   // does not leak into the copied content.
   addCellCopies();
   addRowLinks();
+
+  // Open the tray on first load only when some dialects on this page are
+  // currently hidden — otherwise the toggles have nothing to reveal.
+  // Mirrors the "nothing to do" check in `highlight.ts`: if every dialect is
+  // selected or none is, no `display: none` rule is emitted, so the page
+  // already shows every dialect.
+  if (highlighter.partial()) {
+    holder.click();
+  }
 }
 
 main();
