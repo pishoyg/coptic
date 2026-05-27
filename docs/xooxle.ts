@@ -912,16 +912,14 @@ export class SearchResult extends AggregateResult {
  *   1 if a > b
  */
 function searchResultCompare(a: SearchResult, b: SearchResult): number {
-  const aKey: number[] = a.compareKey();
-  const bKey: number[] = b.compareKey();
+  const ak: number[] = a.compareKey();
+  const bk: number[] = b.compareKey();
 
   // The two arrays are guaranteed to be of equal length, but we use the minimum
   // for protectionism.
-  const len: number = Math.min(aKey.length, bKey.length);
-  for (let i = 0; i < len; ++i) {
-    const diff = aKey[i]! - bKey[i]!;
-    if (diff !== 0) {
-      return Math.sign(diff);
+  for (let i = 0; i < ak.length && i < bk.length; ++i) {
+    if (ak[i] !== bk[i]) {
+      return ak[i]! - bk[i]!;
     }
   }
 
