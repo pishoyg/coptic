@@ -1,6 +1,6 @@
 /** Package dialect defines Bible dialects. */
 import * as dial from '../dialect.js';
-import * as cls from './cls.js';
+import * as css from '../css.js';
 
 export type DIALECT =
   | 'Bohairic'
@@ -24,10 +24,10 @@ export class Dialect extends dial.Dialect<DIALECT, DIALECT, DialectKey> {
    *
    * @param name
    * @param article
-   * @param code
+   * @param key
    */
-  public constructor(name: DIALECT, article: dial.Article, code: DialectKey) {
-    super(name, name, article, code);
+  public constructor(name: DIALECT, article: dial.Article, key: DialectKey) {
+    super(name, name, article, key);
   }
 }
 
@@ -47,16 +47,8 @@ const ALL_DIALECTS: Dialect[] = [
 // DIALECTS bears the dialects present in this page.
 // Each page has a subset of the dialects. For highlighting purposes, only this
 // subset is of interest.
-// Any verse should contain all the languages in this page.
-export const DIALECTS: Dialect[] = Array.from(
-  document
-    .querySelector(`.${cls.VERSE}`)!
-    .querySelectorAll<HTMLTableCellElement>(`.${cls.LANGUAGE}`)
-).map(
-  (td: HTMLTableCellElement): Dialect =>
-    ALL_DIALECTS.find((dialect: Dialect) =>
-      td.classList.contains(dialect.name)
-    )!
+export const DIALECTS: Dialect[] = ALL_DIALECTS.filter(
+  (d: Dialect): boolean => !!document.querySelector(css.c(d.code))
 );
 
 /**
