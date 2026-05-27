@@ -30,26 +30,27 @@ _COVER: pathlib.Path = _SCRIPT_DIR / "data/img/stauros.jpeg"
 Language: typing.TypeAlias = typing.Literal[
     "Bohairic",
     "Sahidic",
-    "English",
-    "Greek",
     "Fayyumic",
     "Akhmimic",
-    "OldBohairic",
+    "Lycopolitan",
     "Mesokemic",
     "DialectP",
-    "Lycopolitan",
+    "OldBohairic",
+    "English",
+    "Greek",
 ]
+
 _LANGUAGES: list[Language] = [
     "Bohairic",
     "Sahidic",
-    "English",
-    "Greek",
     "Fayyumic",
     "Akhmimic",
-    "OldBohairic",
+    "Lycopolitan",
     "Mesokemic",
     "DialectP",
-    "Lycopolitan",
+    "OldBohairic",
+    "English",
+    "Greek",
 ]
 
 _VERSE_PREFIX: re.Pattern[str] = re.compile(r"^\((.*?)\)")
