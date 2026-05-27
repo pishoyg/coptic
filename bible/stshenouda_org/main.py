@@ -17,6 +17,7 @@ from ebooklib import epub  # type: ignore[import-untyped]
 
 from bible.stshenouda_org import schema
 from utils import concur, ensure, file, log, page, paths
+from xooxle import xooxle
 
 # Input parameters
 
@@ -75,6 +76,7 @@ _INDEX_CSS: list[str] = ["bible.css", "../collapse.css"]  # CSS for the index.
 for artifact in [_CHAPTER_JS, _INDEX_JS, _CHAPTER_CSS, *_INDEX_CSS]:
     assert (paths.BIBLE_DIR / artifact).is_file()
 
+_XOOXLE: pathlib.Path = paths.BIBLE_DIR / "bible.json"
 
 _INDEX: str = "index.html"
 _CHAPTER_CLASS: str = "chapter"
@@ -94,14 +96,17 @@ _NORMALIZATION: dict[Language, dict[str, str]] = {
     },
 }
 
+RED: str = "red"
+BLUE: str = "blue"
+
 # Recolored words in a verse are only allowed to use these colors. Keep this
 # mapping in sync with the classes used in the CSS.
 _COLOR_CLASSES: dict[str, str | None] = {
     "#000000": None,
-    "#05537d": "blue",
-    "#812d2d": "red",
-    "#b00e23": "red",
-    "#ff0000": "red",
+    "#05537d": BLUE,
+    "#812d2d": RED,
+    "#b00e23": RED,
+    "#ff0000": RED,
 }
 
 
@@ -179,10 +184,7 @@ class Verse:
             last = m.end()
             txt: str = m.group()
             cls: str | None = _COLOR_CLASSES[colored_words[txt]]
-            if cls is None:
-                yield txt
-                continue
-            yield f'<span class="{cls}">{txt}</span>'
+            yield f'<span class="{cls}">{txt}</span>' if cls else txt
         yield v[last:]
 
     def __recolor(self, v: str, verse: schema.Verse) -> str:
@@ -353,7 +355,6 @@ class Book(Item):
     def _load(self, book_name: str) -> list[schema.Chapter]:
         try:
             t: str = file.read(os.path.join(_INPUT_DIR, f"{book_name}.json"))
-            log.info("Loaded book:", book_name)
         except FileNotFoundError:
             log.warn("Book not found:", book_name)
             return []
@@ -510,6 +511,26 @@ class HTMLBuilder:
     def lang_end(self, lang: Language) -> abc.Generator[str]:
         raise NotImplementedError
 
+    # __verse_body_aux builds the HTML for a single verse.
+    def __verse_body_aux(
+        self,
+        verse: Verse,
+        langs: list[Language],
+    ) -> abc.Generator[str]:
+        yield from self.verse_begin(verse)
+        for lang in langs:
+            yield from self.lang_begin(lang)
+            yield from verse.recolored[lang]
+            yield from self.lang_end(lang)
+        yield from self.verse_end(verse)
+
+    def verse_html(
+        self,
+        verse: Verse,
+        langs: list[Language],
+    ) -> str:
+        return "".join(self.__verse_body_aux(verse, langs))
+
     # __chapter_body_aux builds the contents of the <body> element of a chapter.
     def __chapter_body_aux(
         self,
@@ -522,12 +543,7 @@ class HTMLBuilder:
             return
         yield from self.chapter_begin(chapter)
         for verse in chapter.verses:
-            yield from self.verse_begin(verse)
-            for lang in langs:
-                yield from self.lang_begin(lang)
-                yield from verse.recolored[lang]
-                yield from self.lang_end(lang)
-            yield from self.verse_end(verse)
+            yield from self.__verse_body_aux(verse, langs)
         yield from self.chapter_end(chapter)
 
     # __book_body_aux builds the contents of the <body> element of a book.
@@ -632,7 +648,7 @@ class HTMLBuilder:
             self.__write_html_chapter(chapter, langs)
 
         with concur.thread_pool_executor() as executor:
-            list(executor.map(write_chapter, bible.chain_chapters()))
+            _ = list(executor.map(write_chapter, bible.chain_chapters()))
 
         toc = self.__html_aux(
             self.__toc_body_aux(bible, is_epub=False),
@@ -667,6 +683,7 @@ class HTMLBuilder:
             out,
             paths.BIBLE_DIR / chapter.path(is_epub=False),
             make_dir=True,
+            report=False,
         )
 
     def write_epub(
@@ -846,27 +863,36 @@ class TableBuilder(HTMLBuilder):
 
 
 def main():
-    bible = Bible()
-    flow_builder = FlowBuilder()
+    bible: Bible = Bible()
+    flow_builder: FlowBuilder = FlowBuilder()
+    table_builder: TableBuilder = TableBuilder()
 
-    table_builder = TableBuilder()
+    flow_builder.write("epub", bible, ["Bohairic", "English"], "1")
+    table_builder.write("epub", bible, ["Bohairic", "English"], "2")
+    table_builder.write("html", bible, _LANGUAGES, "")
 
-    tasks: list[
-        tuple[
-            HTMLBuilder,
-            typing.Literal["html", "epub"],
-            Bible,
-            list[Language],
-            str,
-        ]
-    ] = [
-        (flow_builder, "epub", bible, ["Bohairic", "English"], "1"),
-        (table_builder, "epub", bible, ["Bohairic", "English"], "2"),
-        (table_builder, "html", bible, _LANGUAGES, ""),
-    ]
+    # TODO: (#0) Verse HTML gets generated twice. Consider deduplicating it,
+    # somehow, to slightly speed up the code.
+    def verse_source() -> abc.Generator[tuple[str, str]]:
+        for chapter in bible.chain_chapters():
+            path: str = chapter.path(is_epub=False)
+            for verse in chapter.verses:
+                key: str = f"{path}#v{verse.num}" if verse.num else path
+                yield key, table_builder.verse_html(verse, _LANGUAGES)
 
-    with concur.thread_pool_executor() as executor:
-        _ = list(executor.map(lambda args: HTMLBuilder.write(*args), tasks))
+    xooxle.Xooxle(
+        verse_source(),
+        [],
+        [
+            xooxle.Capture(
+                lang,
+                xooxle.Selector({"class_": lang}, False),
+                {RED, BLUE},
+            )
+            for lang in _LANGUAGES
+        ],
+        _XOOXLE,
+    ).build()
 
 
 if __name__ == "__main__":

@@ -128,6 +128,7 @@ PATTERNS: list[Pattern] = [
     Pattern(["crum/anki/*"], required=False),  # Anki is not tracked in Git.
     # Auto-generated (bible):
     Pattern(["bible/index.html"]),
+    Pattern(["bible/bible.json"]),
     Pattern(["bible/*.html"]),
     Pattern(
         ["bible/epub/*"],
