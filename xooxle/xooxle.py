@@ -73,6 +73,7 @@ Concurrency
     still limited.
 """
 
+import html
 import pathlib
 import re
 import typing
@@ -416,7 +417,12 @@ class Capture:
             return
         if raw[0].isspace():
             yield " "
-        yield " ".join(raw.split())
+        # Re-escape entities. BeautifulSoup decodes them when reading text,
+        # so the raw string may contain literal '<' / '>' / '&'. Downstream
+        # tokenization uses `startswith("<")` to detect tags, so a text
+        # token beginning with '<' would be misread as an opening tag and
+        # corrupt the tag-balancing pass.
+        yield html.escape(" ".join(raw.split()), quote=False)
         if raw[-1].isspace():
             yield " "
 
