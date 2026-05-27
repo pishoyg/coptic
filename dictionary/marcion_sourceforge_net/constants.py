@@ -1,6 +1,7 @@
 """Crum dictionary and parsing constants."""
 
 import dataclasses
+import itertools
 import pathlib
 import re
 
@@ -427,5 +428,5 @@ COLUMN_RANGES: list[Column] = [
     Column("xxivb", "787b"),
 ]
 
-for idx, col in enumerate(COLUMN_RANGES[1:], 1):
-    assert col.end > COLUMN_RANGES[idx - 1].end
+for a, b in itertools.pairwise(COLUMN_RANGES):
+    assert a.end < b.end
