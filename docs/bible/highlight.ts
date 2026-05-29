@@ -54,11 +54,9 @@ export class Highlighter extends high.DialectHighlighter<dial.DIALECT> {
     return dial.DIALECTS.map((dialect: dial.Dialect): help.Shortcut => {
       const span: HTMLSpanElement = document.createElement('span');
       span.append(...dialect.anchoredName());
-      return new help.Shortcut(
-        span,
-        ['bible', 'chapter'],
-        this.toggle.bind(this, dialect.code)
-      );
+      return new help.Shortcut(span, ['bible', 'chapter'], () => {
+        this.toggle(dialect.code);
+      });
     });
   }
 }

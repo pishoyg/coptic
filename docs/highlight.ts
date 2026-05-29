@@ -208,10 +208,9 @@ export abstract class DialectHighlighter<C extends string> extends Highlighter {
     super.addEventListeners();
     // A click on a checkbox triggers a dialect display update.
     this.checkboxes.forEach((checkbox: HTMLInputElement): void => {
-      checkbox.addEventListener(
-        'click',
-        this.toggle.bind(this, checkbox.name as C)
-      );
+      checkbox.addEventListener('click', () => {
+        this.toggle(checkbox.name as C);
+      });
     });
   }
 
@@ -227,9 +226,10 @@ export abstract class DialectHighlighter<C extends string> extends Highlighter {
    * Toggle the state of the given dialect, and update display.
    *
    * @param dialect - A dialect code.
+   * @param force
    */
-  public toggle(dialect: C): void {
-    this.manager.toggle(dialect);
+  public toggle(dialect: C, force?: boolean): void {
+    this.manager.toggle(dialect, force);
     this.update();
   }
 }

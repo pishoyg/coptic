@@ -4,6 +4,8 @@ import * as html from './html.js';
 
 const SEPARATOR = ',';
 
+export const EVENT = 'set_dialects';
+
 export enum CLS {
   // SIGLUM is the class of a prettified dialect siglum.
   SIGLUM = 'siglum',
@@ -150,6 +152,7 @@ export class Manager<C extends string> {
    */
   protected setActive(dialects: C[]): void {
     localStorage.setItem(this.localKey, dialects.join(SEPARATOR));
+    document.dispatchEvent(new CustomEvent<string>(EVENT));
   }
 
   /**
@@ -165,14 +168,15 @@ export class Manager<C extends string> {
   /**
    * Toggles the active state of a single dialect.
    * @param dialect - The dialect to toggle.
+   * @param force
    */
-  public toggle(dialect: C): void {
+  public toggle(dialect: C, force?: boolean): void {
     const active = new Set<C>(this.active() ?? []);
 
-    if (active.has(dialect)) {
-      active.delete(dialect);
-    } else {
+    if (force ?? !active.has(dialect)) {
       active.add(dialect);
+    } else {
+      active.delete(dialect);
     }
 
     this.setActive(Array.from(active));
