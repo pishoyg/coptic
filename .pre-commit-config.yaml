@@ -41,14 +41,13 @@ repos:
         entry: tidy -config tidy_config.txt
         language: system
         files: .*\.html
-        exclude: ^docs/(crum|crum/crum|dawoud)/index.html$
-      # See #317 for why
-      # `site/crum.html` needs the --warn-proprietary-attributes flag.
-      - id: crum-tidy-html
-        name: crum-tidy-html
+        exclude: ^docs/(crum|bible)/index.html$
+      # See #317 for why some HTML files need the `--warn-proprietary-attributes no`.
+      - id: search-tidy-html
+        name: search-tidy-html
         entry: tidy -config tidy_config.txt --warn-proprietary-attributes no
         language: system
-        files: ^docs/(crum|crum/crum|dawoud)/index.html$
+        files: ^docs/(crum|bible)/index.html$
 
   # Language-agnostic
   - repo: meta
