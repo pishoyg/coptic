@@ -472,12 +472,12 @@ XOOXLE = xooxle.Xooxle(
     extract=[],
     captures=[
         xooxle.Capture(
-            "front",
+            "FRONT",
             xooxle.Selector({"id": "front"}),
             retain_classes={"word", "B"},
         ),
         xooxle.Capture(
-            "back",
+            "BACK",
             xooxle.Selector({"id": "back"}),
             # We need the Arabic for styling. We don't need any other classes.
             retain_classes={"arabic"},

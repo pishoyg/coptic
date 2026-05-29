@@ -488,7 +488,7 @@ export class Candidate {
       (layer: string[]): Field[] =>
         layer.map(
           (field: string): Field =>
-            new Field(record[field] as FieldRaw | undefined)
+            new Field(field, record[field] as FieldRaw | undefined)
         )
     );
   }
@@ -933,9 +933,13 @@ function searchResultCompare(a: SearchResult, b: SearchResult): number {
 class Field {
   public readonly units: Unit[];
   /**
+   * @param name
    * @param field
    */
-  public constructor(field?: FieldRaw) {
+  public constructor(
+    public readonly name: string,
+    field?: FieldRaw
+  ) {
     this.units = field?.map((unit: UnitRaw): Unit => new Unit(unit)) ?? [];
   }
 
@@ -955,6 +959,7 @@ class Field {
 class FieldSearchResult extends AggregateResult {
   protected readonly results: UnitSearchResult[];
   public readonly cropped: boolean;
+  public readonly name: string;
 
   /**
    * @param field
@@ -963,6 +968,7 @@ class FieldSearchResult extends AggregateResult {
    */
   public constructor(field: Field, regex: RegExp, unitsLimit: number) {
     super();
+    this.name = field.name;
     const results = field.units.map((unit) => unit.search(regex));
     // If there are no matches, we limit the number of units in the output.
     // If there are matches:
@@ -990,6 +996,7 @@ class FieldSearchResult extends AggregateResult {
       .map((r: UnitSearchResult): string => r.html())
       .join(UNIT_DELIMITER);
     td.colSpan = colSpan;
+    td.classList.add(this.name);
     return td;
   }
 }

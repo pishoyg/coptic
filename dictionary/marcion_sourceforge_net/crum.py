@@ -1518,7 +1518,7 @@ XOOXLE: xooxle.Xooxle = xooxle.Xooxle(
     ],
     captures=[
         xooxle.Capture(
-            "wiki",
+            "WIKI",
             xooxle.Selector({"id": "wiki"}, force=False),
             # The following classes are used for styling. While we may be able
             # to style the languages in JavaScript without retaining classes in
@@ -1561,7 +1561,7 @@ XOOXLE: xooxle.Xooxle = xooxle.Xooxle(
             retain_attributes={"data-key", "data-page", "data-footnote"},
         ),
         xooxle.Capture(
-            "marcion",
+            "MARCION",
             xooxle.Selector({"id": "pretty"}),
             # This is the list of classes needed for highlighting. If the
             # highlighting rules change, you might have to add new classes!
@@ -1569,13 +1569,13 @@ XOOXLE: xooxle.Xooxle = xooxle.Xooxle(
             retain_elements_for_classes=_CRUM_RETAIN_ELEMENTS_FOR_CLASSES,
         ),
         xooxle.Capture(
-            "meaning",
+            "MEANING",
             xooxle.Selector({"id": "root-type-meaning"}, force=False),
             retain_classes=_CRUM_RETAIN_CLASSES,
             retain_elements_for_classes=_CRUM_RETAIN_ELEMENTS_FOR_CLASSES,
         ),
         xooxle.Capture(
-            "appendix",
+            "APPENDIX",
             xooxle.Selector(
                 {"name": "body"},
             ),
@@ -1597,6 +1597,6 @@ XOOXLE: xooxle.Xooxle = xooxle.Xooxle(
             block_classes={"part-of-speech"},
         ),
     ],
-    layers=[["marcion", "meaning", "appendix"], ["wiki"]],
+    layers=[["MARCION", "MEANING", "APPENDIX"], ["WIKI"]],
     output=paths.LEXICON_DIR / "crum.json",
 )

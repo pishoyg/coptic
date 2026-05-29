@@ -999,17 +999,17 @@ XOOXLE: xooxle.Xooxle = xooxle.Xooxle(
     ],
     captures=[
         xooxle.Capture(
-            "orths",
+            "ORTHS",
             xooxle.Selector({"id": "orths"}),
             retain_classes=_KELLIA_RETAIN_CLASSES,
         ),
         xooxle.Capture(
-            "senses",
+            "SENSES",
             xooxle.Selector({"id": "senses"}),
             retain_classes=_KELLIA_RETAIN_CLASSES,
         ),
         xooxle.Capture(
-            "text",
+            "TEXT",
             xooxle.Selector(
                 {"name": "body"},
             ),
