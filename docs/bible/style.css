@@ -1,4 +1,20 @@
-/* Styling for a Bible chapter. */
+/* Styling for a Bible chapter (and index). */
+
+.blue {
+  color: #05537d;
+}
+
+.red {
+  color: #b00e23;
+}
+
+/* The language tray's tooltip is detached from its parent and rendered as
+ * a popover (appended to body, outside `.chapter`), so this class must
+ * stay global to style both the parent and the popover. */
+.tray {
+  font-style: italic;
+  color: var(--midnight-blue);
+}
 
 .title {
   /* The title shows on the left, with the language tray on the right. */
@@ -6,7 +22,7 @@
   float: left;
 }
 
-table {
+table.verses {
   /* Break long words. */
   overflow-wrap: break-word;
   word-break: break-word;
@@ -15,37 +31,41 @@ table {
   box-shadow: 0 4px 6px rgb(0 0 0 / 5%);
   border-radius: 8px;
   overflow: hidden;
-}
 
-tr {
-  transition: background-color 0.2s ease;
-}
+  & tr {
+    transition: background-color 0.2s ease;
+  }
 
-tr:hover {
-  background-color: #f1f5f9;
-}
+  & tr:hover {
+    background-color: #f1f5f9;
+  }
 
-td {
-  /* The content of the cell aligns towards the top. */
-  vertical-align: top;
+  & td {
+    /* The content of the cell aligns towards the top. */
+    vertical-align: top;
 
-  /* A very light, thin border */
-  border-bottom: 1px solid #eaeaea;
+    /* A very light, thin border */
+    border-bottom: 1px solid #eaeaea;
 
-  /* Add padding to give the text room to breathe. */
-  padding: 1em 0.5em;
-  font-size: 1.1rem;
-  line-height: 1.7;
-  position: relative;
-}
+    /* Add padding to give the text room to breathe. */
+    padding: 1em 0.5em;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    position: relative;
+  }
 
-/* Recolored words in a verse. See the HTML generation pipeline. */
-.blue {
-  color: #05537d;
-}
+  & @media (width <= 500px) {
+    /* Reduce the cell padding. */
+    & td {
+      padding: 0.25em 0.125em;
+      font-size: 1rem;
+    }
+  }
 
-.red {
-  color: #b00e23;
+  tr:last-child td {
+    /* Remove the border from the very last row. */
+    border-bottom: none;
+  }
 }
 
 /* The link and copy buttons sit out of flow on top of the cell, so they
@@ -80,19 +100,6 @@ td:hover .language-copy {
   opacity: 1;
 }
 
-tr:last-child td {
-  /* Remove the border from the very last row. */
-  border-bottom: none;
-}
-
-/* We use a class for the tray because it uses a tooltip, which ends up getting
- * detached from its parent and rendered as a popover. We give both the parent
- * and the tooltip the same class so they can share styling. */
-.tray {
-  font-style: italic;
-  color: var(--midnight-blue);
-}
-
 #tray {
   float: right;
   padding: 0.5rem;
@@ -103,12 +110,4 @@ tr:last-child td {
 
 :target.verse {
   background-color: var(--anchor-highlight);
-}
-
-@media (width <= 500px) {
-  /* Reduce the cell padding. */
-  td {
-    padding: 0.25em 0.125em;
-    font-size: 1rem;
-  }
 }
