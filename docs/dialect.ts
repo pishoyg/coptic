@@ -4,7 +4,7 @@ import * as html from './html.js';
 
 const SEPARATOR = ',';
 
-export const EVENT = 'set_dialects';
+export const EVENT = 'setdialects';
 
 export enum CLS {
   // SIGLUM is the class of a prettified dialect siglum.
