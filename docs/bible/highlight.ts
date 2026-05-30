@@ -9,7 +9,7 @@ import * as high from '../highlight.js';
 /**
  *
  */
-export class Highlighter extends high.DialectHighlighter<dial.DIALECT> {
+export class Highlighter extends high.DialectHighlighter<dial.Code> {
   /**
    * @param manager
    * @param checkboxes - The full list of checkboxes. Each checkbox should have
@@ -31,17 +31,17 @@ export class Highlighter extends high.DialectHighlighter<dial.DIALECT> {
    * @returns
    */
   private rule(): string | undefined {
-    const active: dial.DIALECT[] | undefined = this.manager.active();
-    const inactive: dial.DIALECT[] = dial.DIALECTS.filter(
-      (dialect: dial.Dialect): boolean => !active?.includes(dialect.name)
-    ).map((dialect: dial.Dialect): dial.DIALECT => dialect.name);
-
-    if (inactive.length === 0 || inactive.length === dial.DIALECTS.length) {
-      // Dialects are all off or all on. Again, nothing to do!
+    const active: dial.Code[] | undefined = this.manager.active();
+    if (!active?.length || active.length === dial.DIALECTS.length) {
+      // Dialects are all off or all on. Nothing to do!
       // Notice that this check is based on the list of dialects available on
       // this page, rather than on the list of all dialects.
       return undefined;
     }
+
+    const inactive: dial.Code[] = dial.DIALECTS.map(
+      (d: dial.Dialect): dial.Code => d.code
+    ).filter((code: dial.Code): boolean => !active.includes(code));
 
     return `${css.disjunction(...inactive)} { display: none; }`;
   }

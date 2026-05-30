@@ -5,43 +5,43 @@ import * as css from '../css.js';
 export type DIALECT =
   | 'Bohairic'
   | 'Sahidic'
-  | 'English'
-  | 'Greek'
   | 'Fayyumic'
   | 'Akhmimic'
-  | 'OldBohairic'
+  | 'Lycopolitan'
   | 'Mesokemic'
   | 'DialectP'
-  | 'Lycopolitan';
+  | 'OldBohairic'
+  | 'English'
+  | 'Greek';
 
-type DialectKey = 'B' | 'S' | 'E' | 'G' | 'F' | 'A' | 'O' | 'M' | 'P' | 'L';
+export type Code = 'B' | 'S' | 'F' | 'A' | 'L' | 'M' | 'P' | 'O' | 'E' | 'G';
 
 /**
  *
  */
-export class Dialect extends dial.Dialect<DIALECT, DIALECT, DialectKey> {
+export class Dialect extends dial.Dialect<Code, DIALECT, Code> {
   /**
    *
+   * @param code
    * @param name
    * @param article
-   * @param key
    */
-  public constructor(name: DIALECT, article: dial.Article, key: DialectKey) {
-    super(name, name, article, key);
+  public constructor(code: Code, name: DIALECT, article: dial.Article) {
+    super(code, name, article, code);
   }
 }
 
 const ALL_DIALECTS: Dialect[] = [
-  new Dialect('Bohairic', dial.Article.BOHAIRIC, 'B'),
-  new Dialect('Sahidic', dial.Article.SAHIDIC, 'S'),
-  new Dialect('English', dial.Article.ENGLISH, 'E'),
-  new Dialect('Greek', dial.Article.GREEK, 'G'),
-  new Dialect('Fayyumic', dial.Article.FAYYUMIC, 'F'),
-  new Dialect('Akhmimic', dial.Article.AKHMIMIC, 'A'),
-  new Dialect('OldBohairic', dial.Article.OLD_COPTIC, 'O'),
-  new Dialect('Mesokemic', dial.Article.MESOKEMIC, 'M'),
-  new Dialect('DialectP', dial.Article.PROTO_THEBAN, 'P'),
-  new Dialect('Lycopolitan', dial.Article.LYCOPOLITAN, 'L'),
+  new Dialect('B', 'Bohairic', dial.Article.BOHAIRIC),
+  new Dialect('S', 'Sahidic', dial.Article.SAHIDIC),
+  new Dialect('F', 'Fayyumic', dial.Article.FAYYUMIC),
+  new Dialect('A', 'Akhmimic', dial.Article.AKHMIMIC),
+  new Dialect('L', 'Lycopolitan', dial.Article.LYCOPOLITAN),
+  new Dialect('M', 'Mesokemic', dial.Article.MESOKEMIC),
+  new Dialect('P', 'DialectP', dial.Article.PROTO_THEBAN),
+  new Dialect('O', 'OldBohairic', dial.Article.OLD_COPTIC),
+  new Dialect('E', 'English', dial.Article.ENGLISH),
+  new Dialect('G', 'Greek', dial.Article.GREEK),
 ];
 
 // DIALECTS bears the dialects present in this page.
@@ -54,7 +54,7 @@ export const DIALECTS: Dialect[] = ALL_DIALECTS.filter(
 /**
  *
  */
-export class Manager extends dial.Manager<DIALECT> {
+export class Manager extends dial.Manager<Code> {
   /**
    *
    */

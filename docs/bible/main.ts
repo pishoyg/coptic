@@ -6,6 +6,7 @@ import * as html from '../html.js';
 import * as tool from '../tooltip.js';
 import * as cls from './cls.js';
 import * as dial from './dialect.js';
+import type * as ddial from '../dialect.js';
 import * as css from '../css.js';
 import * as ccls from '../cls.js';
 
@@ -105,19 +106,12 @@ function main(): void {
   // correctly.
   html.normalize();
 
-  const boxes: HTMLInputElement[] = [];
-  const labels: HTMLLabelElement[] = dial.DIALECTS.map(
-    (dialect: dial.Dialect): HTMLLabelElement => {
-      const label: HTMLLabelElement = document.createElement('label');
-      const box: HTMLInputElement = dialect.checkbox();
-      boxes.push(box);
-      label.append(box, dialect.name);
-      return label;
-    }
+  const controls: ddial.Control[] = dial.DIALECTS.map(
+    (d: dial.Dialect): ddial.Control => d.control()
   );
 
   const tray: HTMLDivElement = document.createElement('div');
-  tray.append(...labels);
+  tray.append(...controls.map((d: ddial.Control): HTMLLabelElement => d.label));
   const holder: HTMLSpanElement = document.createElement('span');
   holder.textContent = 'Languages ▾';
   holder.id = ID.TRAY;
@@ -125,7 +119,10 @@ function main(): void {
   tool.addTooltip(holder, [tray], [cls.TRAY], 'click');
 
   const manager: dial.Manager = new dial.Manager();
-  const highlighter: high.Highlighter = new high.Highlighter(manager, boxes);
+  const highlighter: high.Highlighter = new high.Highlighter(
+    manager,
+    controls.map((d: ddial.Control): HTMLInputElement => d.checkbox)
+  );
 
   addEventListeners(highlighter);
 
