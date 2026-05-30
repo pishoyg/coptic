@@ -339,12 +339,13 @@ class Capture:
         # phase of the index generation. In order to make sure that these phases
         # conclude successfully, we add checks here to ensure that all tags
         # match it, and that text never does.
-        # This means that if the input text contains substrings that look like a
-        # tag, the pipeline will crash. This is not ideal. However, we don't
-        # have such input at the moment, so we don't bother to fix this bug.
-        # That being said, the fix is easy. Just html-escape the text during
+        # This means that the pipeline will crash if the input text contains
+        # substrings that look like a tag, or if a retained attribute has a
+        # value containing a double quote (TAG_RE accepts neither). This is not
+        # ideal. However, we don't have such input at the moment, so we don't
+        # bother to fix this. The fix is easy: html-escape the text during
         # processing, and unescape it during text extraction at the end.
-        # TODO: (#0) Allow tag-like text in the input.
+        # TODO: (#0) Allow tag-like text and arbitrary attribute values.
         if child.name in self._unit_tags:
             yield const.UNIT_DELIMITER
         elif child.name in self._block_elements:
@@ -386,12 +387,20 @@ class Capture:
                 f' {k}="{v}"' for k, v in sorted(attrs.items())
                 )
             }>'
-            assert const.TAG_RE.fullmatch(opening)
+            ensure.ensure(
+                const.TAG_RE.fullmatch(opening),
+                "Generated opening tag does not match TAG_RE:",
+                opening,
+            )
             yield opening
             del attrs
             yield from self._get_children_simplified_html(child)
             closing: str = f"</{name}>"
-            assert const.TAG_RE.fullmatch(closing)
+            ensure.ensure(
+                const.TAG_RE.fullmatch(closing),
+                "Generated closing tag does not match TAG_RE:",
+                closing,
+            )
             yield closing
         else:
             # Neither the tag name nor any of its classes need retention, we
@@ -428,8 +437,17 @@ class Capture:
             return
         if raw[0].isspace():
             yield " "
+        # NOTE: To simplify the pipeline, we intentionally avoid escaping
+        # special characters in the text to make it HTML-safe. As of the time of
+        # writing, this is not problematic, because no input text looks like a
+        # tag. See the note in _get_tag_html. If that ever changes, the ensure
+        # below will catch it loudly. TODO: (#0) Allow tag-like text.
         text: str = " ".join(raw.split())
-        assert not const.TAG_RE.search(text)
+        ensure.ensure(
+            not const.TAG_RE.search(text),
+            "Input text looks like a tag and would corrupt the index:",
+            text,
+        )
         yield text
         if raw[-1].isspace():
             yield " "
@@ -468,8 +486,13 @@ class Xooxle:
     def _is_comment(self, elem: bs4.PageElement) -> bool:
         return isinstance(elem, bs4.element.Comment)
 
+    def _diacritic_free_text(self, html: str) -> str:
+        # NOTE: The HTML doesn't escape its special characters, so we don't need
+        # to un-escape them during text extraction.
+        return orth.clean_diacritics(const.TAG_RE.sub("", html))
+
     def line(self, html: str) -> Line:
-        return (html, orth.clean_diacritics(const.TAG_RE.sub("", html)))
+        return html, self._diacritic_free_text(html)
 
     def unit(self, html: str) -> Unit:
         if not html:

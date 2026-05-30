@@ -39,7 +39,7 @@ def clean(tokens: Iterable[str]) -> Generator[str]:
 def _strip_field_start(tokens: Iterable[str]) -> Generator[str]:
     found_text: bool = False
     for token in tokens:
-        if not token.startswith("<") and not token.isspace():
+        if not _is_tag(token) and not token.isspace():
             # This is a non-space text token.
             found_text = True
         if found_text:
@@ -93,7 +93,7 @@ def _clean_line(line: Iterable[str]) -> Generator[str]:
 def _strip_line_start(line: Iterable[str]) -> Generator[str]:
     found_non_space = False
     for token in line:
-        if token.startswith("<"):
+        if _is_tag(token):
             # This is a tag. Yield as is.
             yield token
             continue
@@ -113,16 +113,16 @@ def _strip_line_start(line: Iterable[str]) -> Generator[str]:
         assert token.isspace() and not found_non_space
 
 
-def _tag(token: str) -> bool:
+def _is_tag(token: str) -> bool:
     return bool(const.TAG_RE.fullmatch(token))
 
 
 def opening_tag(token: str) -> bool:
-    return _tag(token) and not token[1] == "/"
+    return _is_tag(token) and token[1] != "/"
 
 
 def closing_tag(token: str) -> bool:
-    return _tag(token) and token[1] == "/"
+    return _is_tag(token) and token[1] == "/"
 
 
 def tag_name(token: str) -> str:
