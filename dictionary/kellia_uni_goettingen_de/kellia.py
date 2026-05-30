@@ -950,9 +950,16 @@ def _join(*parts: str) -> str:
 
 
 def notes_aux(
-    words: dict[str, Word],
+    words: dict[str, Word] | None = None,
     dialects: abc.Iterable[str] | None = None,
 ) -> abc.Generator[deck.Note]:
+    # Default to the comprehensive set, loaded lazily.
+    # This allows callers to invoke `notes_aux(comprehensive())` without
+    # invoking `comprehensive()` which is expensive.
+    # As of the time of writing, it's used by `XOOXLE`, which is defined in the
+    # global scope and gets executed at load time.
+    if words is None:
+        words = comprehensive()
     for key, word in words.items():
         front: str = word.orthstring.table()
         back: str = _join(
@@ -990,7 +997,7 @@ _KELLIA_RETAIN_CLASSES = {
 } | set(GEOS)
 
 XOOXLE: xooxle.Xooxle = xooxle.Xooxle(
-    source=((note.key, note.html) for note in notes_aux(comprehensive())),
+    source=((note.key, note.html) for note in notes_aux()),
     extract=[
         xooxle.Selector({"name": "footer"}, force=False),
         xooxle.Selector({"class_": "bibl"}, force=False),
