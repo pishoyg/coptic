@@ -1710,7 +1710,6 @@ export class Xooxle {
       this.currentPage = page;
       void this.searchAux();
       this.form.scrollTarget.scrollIntoView({
-        behavior: 'smooth',
         block: 'start',
       });
     });
