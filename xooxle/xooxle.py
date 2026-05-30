@@ -74,7 +74,6 @@ Concurrency
 """
 
 import pathlib
-import re
 import typing
 from collections.abc import Generator, Iterable
 
@@ -87,7 +86,6 @@ from xooxle import constants as const
 # _KEY is the name of the key field in the output. This must match the name
 # expected by the Xooxle search logic.
 _KEY: str = "KEY"
-_TAG_RE: re.Pattern[str] = re.compile("<.*?>")
 
 
 BLOCK_ELEMENTS_DEFAULT: set[str] = {
@@ -326,7 +324,7 @@ class Capture:
             yield token
 
             if clean.closing_tag(token):
-                clean.verify_balanced(stack.pop(), token)
+                clean.ensure_same_name(stack.pop(), token)
             elif clean.opening_tag(token):
                 stack.append(token)
 
@@ -337,6 +335,16 @@ class Capture:
         )
 
     def _get_tag_html(self, child: bs4.Tag) -> Generator[str]:
+        # NOTE: The TAG_RE regex is used in the rebalancing and text extraction
+        # phase of the index generation. In order to make sure that these phases
+        # conclude successfully, we add checks here to ensure that all tags
+        # match it, and that text never does.
+        # This means that if the input text contains substrings that look like a
+        # tag, the pipeline will crash. This is not ideal. However, we don't
+        # have such input at the moment, so we don't bother to fix this bug.
+        # That being said, the fix is easy. Just html-escape the text during
+        # processing, and unescape it during text extraction at the end.
+        # TODO: (#0) Allow tag-like text in the input.
         if child.name in self._unit_tags:
             yield const.UNIT_DELIMITER
         elif child.name in self._block_elements:
@@ -373,14 +381,18 @@ class Capture:
             name: str = (
                 child.name if child.name in self._retain_tags else "span"
             )
-            yield f'<{name}{
+            opening: str = f'<{name}{
                 "".join(
                 f' {k}="{v}"' for k, v in sorted(attrs.items())
                 )
             }>'
+            assert const.TAG_RE.fullmatch(opening)
+            yield opening
             del attrs
             yield from self._get_children_simplified_html(child)
-            yield f"</{name}>"
+            closing: str = f"</{name}>"
+            assert const.TAG_RE.fullmatch(closing)
+            yield closing
         else:
             # Neither the tag name nor any of its classes need retention, we
             # simply process the children.
@@ -416,7 +428,9 @@ class Capture:
             return
         if raw[0].isspace():
             yield " "
-        yield " ".join(raw.split())
+        text: str = " ".join(raw.split())
+        assert not const.TAG_RE.search(text)
+        yield text
         if raw[-1].isspace():
             yield " "
 
@@ -455,7 +469,7 @@ class Xooxle:
         return isinstance(elem, bs4.element.Comment)
 
     def line(self, html: str) -> Line:
-        return (html, orth.clean_diacritics(_TAG_RE.sub("", html)))
+        return (html, orth.clean_diacritics(const.TAG_RE.sub("", html)))
 
     def unit(self, html: str) -> Unit:
         if not html:

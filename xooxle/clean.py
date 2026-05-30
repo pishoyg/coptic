@@ -113,21 +113,25 @@ def _strip_line_start(line: Iterable[str]) -> Generator[str]:
         assert token.isspace() and not found_non_space
 
 
+def _tag(token: str) -> bool:
+    return bool(const.TAG_RE.fullmatch(token))
+
+
 def opening_tag(token: str) -> bool:
-    return token.startswith("<") and not closing_tag(token)
+    return _tag(token) and not token[1] == "/"
 
 
 def closing_tag(token: str) -> bool:
-    return token.startswith("</")
+    return _tag(token) and token[1] == "/"
 
 
 def tag_name(token: str) -> str:
-    match: re.Match[str] | None = page.TAG_RE.fullmatch(token)
+    match: re.Match[str] | None = const.TAG_RE.fullmatch(token)
     assert match, token
     return match.group(1)
 
 
-def verify_balanced(opening: str, closing: str) -> None:
+def ensure_same_name(opening: str, closing: str) -> None:
     ensure.ensure(
         tag_name(opening) == tag_name(closing),
         "Unbalanced tags!",
@@ -170,7 +174,7 @@ def _filter_empty_tags(line: Iterable[str]) -> list[str]:
         # An opening tag is immediately followed by the corresponding
         # closing tag. Remove the opening tag from the stack, and skip adding
         # the current token.
-        verify_balanced(top, token)
+        ensure_same_name(top, token)
         _ = stack.pop()
 
     return stack

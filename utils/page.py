@@ -36,7 +36,6 @@ _GOOGLE_TAG: str = """
 LINE_BREAK: str = "<br>"
 HORIZONTAL_RULE: str = "<hr>"
 
-TAG_RE: re.Pattern[str] = re.compile(r"^</?(\w+)(?: [^>]+)?>")
 HTML_ID_RE: re.Pattern[str] = re.compile(r'\bid=".*?"')
 
 
