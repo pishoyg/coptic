@@ -8,6 +8,10 @@
   color: #b00e23;
 }
 
+.siglum {
+  font-style: italic;
+}
+
 /* The language tray's tooltip is detached from its parent and rendered as
  * a popover (appended to body, outside `.chapter`), so this class must
  * stay global to style both the parent and the popover. */

@@ -1,14 +1,14 @@
 /* Styling for the Bible index. */
-table {
+.book-index {
   table-layout: fixed; /* Equal-width columns. */
 }
 
-td {
+.book-index td {
   vertical-align: top;
   padding: 10px 30px;
 }
 
-td:first-child {
+.book-index td:first-child {
   /* Adds a border to the right side of the first cell. */
   border-right: 1px solid var(--light-gray);
 }
@@ -89,11 +89,33 @@ hr {
 
 /* Mobile responsive layout */
 @media (width <= 800px) {
-  td {
+  .book-index td {
     padding: 10px;
   }
 
-  td:first-child {
+  .book-index td:first-child {
     border-right: none;
+  }
+}
+
+#results {
+  /* Hide dialect columns in the search table if they're empty.
+   * NOTE: As of the time of writing, we only have 6 language columns in the
+   * table (columns 2 through 7). While our source data contains placeholders
+   * for 10 languages, 4 are excluded because they are empty. We still account
+   * for the absent languages in the rule below, in case they're used in the
+   * future.
+   * */
+  &:not(:has(tbody td:nth-child(2):not(:empty))) :is(td, th):nth-child(2),
+  &:not(:has(tbody td:nth-child(3):not(:empty))) :is(td, th):nth-child(3),
+  &:not(:has(tbody td:nth-child(4):not(:empty))) :is(td, th):nth-child(4),
+  &:not(:has(tbody td:nth-child(5):not(:empty))) :is(td, th):nth-child(5),
+  &:not(:has(tbody td:nth-child(6):not(:empty))) :is(td, th):nth-child(6),
+  &:not(:has(tbody td:nth-child(7):not(:empty))) :is(td, th):nth-child(7),
+  &:not(:has(tbody td:nth-child(8):not(:empty))) :is(td, th):nth-child(8),
+  &:not(:has(tbody td:nth-child(9):not(:empty))) :is(td, th):nth-child(9),
+  &:not(:has(tbody td:nth-child(10):not(:empty))) :is(td, th):nth-child(10),
+  &:not(:has(tbody td:nth-child(11):not(:empty))) :is(td, th):nth-child(11) {
+    display: none;
   }
 }
