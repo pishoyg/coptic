@@ -562,10 +562,18 @@ export class SearchResult extends AggregateResult {
 
     const view: HTMLAnchorElement = document.createElement('a');
     view.classList.add(cls.LINK, CLS.VIEW_VIEW);
-    view.textContent = 'view';
+    view.textContent = this.view();
     td.prepend(view);
 
     return td;
+  }
+
+  /**
+   * Return the text used in the `view` cell.
+   * @returns
+   */
+  protected view(): string {
+    return 'view';
   }
 
   /**
