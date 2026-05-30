@@ -51,7 +51,6 @@ export const CHECKBOXES = 'checkboxes';
 export const MARCION_CHECKBOX = 'marcion-checkbox';
 export const WIKI_CHECKBOX = 'wiki-checkbox';
 export const REPORTS = 'reports';
-export const FORM = 'form';
 
 export const CRUM_SCAN = 'crum-scan';
 export const DAWOUD_SCAN = 'dawoud-scan';

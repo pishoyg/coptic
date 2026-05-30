@@ -85,11 +85,6 @@ export function init(): void {
     browser.stopPropagation(e);
   });
 
-  // Prevent submit on Enter — would otherwise clear the form.
-  document
-    .getElementById(id.FORM)!
-    .addEventListener('submit', browser.preventDefault);
-
   box.focus();
 }
 

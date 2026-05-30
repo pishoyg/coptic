@@ -474,7 +474,7 @@ export async function init(): Promise<void> {
   SearchResult.init(manager, highlighter);
 
   // Initialize searchers. Ownership of the search box, `?query=` URL
-  // parameter, form submit, and search-box keyboard propagation lives in
+  // parameter, and search-box keyboard propagation lives in
   // `docs/crum/query.ts`; each `Xooxle` listens there for `querychange`
   // events rather than wiring its own input listener.
   await Promise.all(
