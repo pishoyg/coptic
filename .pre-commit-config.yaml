@@ -385,7 +385,7 @@ repos:
         verbose: true
         types: [text]
         require_serial: true
-        exclude: CLAUDE.md
+        exclude: CLAUDE.md|.claude
       # Site tests
       # These are intentionally left to the very end because they're heavy.
       # Given that we enabled fail-fast, having them last prevents them from
