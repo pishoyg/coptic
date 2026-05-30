@@ -297,12 +297,27 @@ export function setParam(
   name: string,
   value: string | boolean | undefined | null
 ): void {
+  setParams({ [name]: value });
+}
+
+/**
+ * Update the given URL parameter.
+ *
+ * @param params
+ */
+export function setParams(
+  params: Record<string, string | boolean | undefined | null>
+): void {
   const url = new URL(window.location.href);
-  if (!value) {
-    url.searchParams.delete(name);
-  } else {
-    url.searchParams.set(name, String(value));
+
+  for (const [name, value] of Object.entries(params)) {
+    if (!value) {
+      url.searchParams.delete(name);
+    } else {
+      url.searchParams.set(name, String(value));
+    }
   }
+
   window.history.replaceState('', '', url.toString());
 }
 
