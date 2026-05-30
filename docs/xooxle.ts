@@ -215,7 +215,7 @@ export class Form {
     this.tbody = this.table.querySelector('tbody')!;
     this.numColumns = this.table
       .querySelector('thead')!
-      .querySelectorAll('td').length;
+      .querySelectorAll('th').length;
 
     this.scrollTarget = form.scrollTargetID
       ? document.getElementById(form.scrollTargetID)!

@@ -1,66 +1,16 @@
-/* Use italic for the checkbox labels. */
+.explain-checkbox {
+  /* .explain-checkbox applies to tooltips, which have a smaller font by
+   * default. In this case, we want to retain their original size. Use
+   * `!important` to force the browser to adopt this rule. */
+  font-size: 100% !important;
+}
+
 #wiki-checkbox-td,
 #marcion-checkbox-td,
-#full-word-checkbox-td,
-#case-sensitive-checkbox-td,
-#regex-checkbox-td,
 .explain-checkbox {
-  font-size: 100% !important;
   text-align: center;
   font-style: italic;
   color: gray;
-}
-
-/* Add padding to all cells in the form tables. */
-#xooxle td {
-  padding: 8px 5px;
-}
-
-#checkboxes label {
-  margin: 1.5px;
-}
-
-td.view a {
-  display: block;
-}
-
-input#search-box {
-  width: 100%;
-  padding: 10px 16px;
-  border: 1px solid #ccc;
-  border-radius: 20px;
-  font-size: 1.1rem;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 4px rgb(0 0 0 / 5%) inset;
-  background-color: #fafafa;
-}
-
-input#search-box:focus {
-  outline: none;
-  border-color: #3498db;
-  box-shadow: 0 0 8px rgb(52 152 219 / 30%);
-  background-color: #fff;
-}
-
-/* Wide screen rules: */
-@media (width > 700px) {
-  /* Hide the tooltip menu, and the keyboard. */
-
-  /* TODO: (#453) Show the keyboard on desktop once you have instructions for how
-   * to install a keyboard on desktop. */
-  #dialects-button,
-  td#keyboard-td {
-    display: none;
-  }
-
-  /* Widen the search box cell a little bit. */
-  td#search-box-td {
-    width: 67%;
-  }
-
-  td#dialects {
-    width: 70%;
-  }
 }
 
 /* Narrow screen rules: */
@@ -75,36 +25,9 @@ input#search-box:focus {
     display: none;
   }
 
-  /* Shrink the search box cell. */
-  td#search-box-td {
-    width: 50%;
-  }
-
   /* Control the size of the Wiki checkbox cell. */
   td#wiki-checkbox-td {
     width: 20%;
-  }
-
-  /* Right-align the keyboard cell. */
-  td#keyboard-td {
-    text-align: right;
-  }
-
-  /* Hide the spelled-out checkboxes. */
-  span#checkboxes {
-    display: none;
-  }
-
-  /* Shrink the space between the form and the results. */
-  hr#lexicon-form-separator {
-    margin-top: 5px;
-    margin-bottom: 0;
-  }
-
-  /* Shrink the space around the error message. */
-  p#message {
-    margin-top: 0;
-    margin-bottom: 0;
   }
 }
 

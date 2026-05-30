@@ -12,13 +12,15 @@
   background-color: #f8f9fa;
 }
 
-.results td {
+.results td,
+.results th {
   padding: 5px;
   border-left: 1px solid var(--light-gray);
 }
 
-.results thead tr td {
+.results th {
   border-bottom: 1px solid #f0f0f0;
+  font-style: italic;
 }
 
 .results td:not(:first-child) {
@@ -26,6 +28,19 @@
   overflow-wrap: break-word; /* modern standard */
   word-break: break-word; /* fallback for older browsers */
   white-space: normal; /* allow wrapping */
+}
+
+.view:hover {
+  cursor: pointer;
+}
+
+.view:hover .link,
+.view:hover a {
+  text-decoration: underline;
+}
+
+.results td.view a {
+  display: block;
 }
 
 .match {
@@ -88,15 +103,6 @@
   background-color: #f8f9fa;
 }
 
-.view:hover {
-  cursor: pointer;
-}
-
-.view:hover .link,
-.view:hover a {
-  text-decoration: underline;
-}
-
 body:not(.dev) {
   & .key {
     display: none;
@@ -121,4 +127,79 @@ body.dev {
 .error {
   color: darkred;
   font-style: italic;
+}
+
+input#search-box {
+  width: 100%;
+  padding: 10px 16px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 5%) inset;
+  background-color: #fafafa;
+
+  &:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 8px rgb(52 152 219 / 30%);
+    background-color: #fff;
+  }
+}
+
+#full-word-checkbox-td,
+#case-sensitive-checkbox-td,
+#regex-checkbox-td {
+  text-align: center;
+  font-style: italic;
+  color: gray;
+}
+
+#checkboxes label {
+  margin: 1.5px;
+}
+
+@media (width > 700px) {
+  /* TODO: (#453) Show the keyboard on desktop once you have instructions
+   * for how to install a keyboard on desktop. */
+  #dialects-button,
+  td#keyboard-td {
+    display: none;
+  }
+
+  td#search-box-td {
+    width: 67%;
+  }
+
+  td#dialects {
+    width: 70%;
+  }
+}
+
+@media (width <= 700px) {
+  td#search-box-td {
+    width: 50%;
+  }
+
+  td#keyboard-td {
+    text-align: right;
+  }
+
+  span#checkboxes {
+    display: none;
+  }
+
+  hr#form-separator {
+    margin-top: 5px;
+    margin-bottom: 0;
+  }
+
+  p#message {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+#xooxle td {
+  padding: 8px 5px;
 }
