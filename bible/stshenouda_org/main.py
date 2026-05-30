@@ -54,6 +54,16 @@ _LANGUAGES: list[Language] = [
     "Greek",
 ]
 
+
+# Single-letter key per language, used as the column header in the search
+# results table. Ideally, you should keep in sync with the dialect keys in the
+# TypeScript. The keys are fairly static, so this will likely never change.
+def _lang_key(lang: Language) -> str:
+    return "P" if lang == "DialectP" else lang[0]
+
+
+ensure.unique(map(_lang_key, _LANGUAGES))
+
 _VERSE_PREFIX: re.Pattern[str] = re.compile(r"^\((.*?)\)")
 
 
@@ -72,7 +82,13 @@ _SEARCH: str = "./"
 _CHAPTER_JS: str = "main.js"  # JavaScript for a chapter.
 _INDEX_JS: str = "bible.js"  # JavaScript for the index.
 _CHAPTER_CSS: str = "style.css"  # CSS for a chapter.
-_INDEX_CSS: list[str] = ["bible.css", "../collapse.css"]  # CSS for the index.
+_INDEX_CSS: list[str] = [
+    _CHAPTER_CSS,
+    "bible.css",
+    "../collapse.css",
+    "../xooxle.css",  # Styles the search results.
+    "../tooltip.css",  # Styles the dialect tooltips.
+]  # CSS for the index.
 for artifact in [_CHAPTER_JS, _INDEX_JS, _CHAPTER_CSS, *_INDEX_CSS]:
     assert (paths.BIBLE_DIR / artifact).is_file()
 
@@ -82,7 +98,8 @@ _INDEX: str = "index.html"
 _CHAPTER_CLASS: str = "chapter"
 _INDEX_CLASS: str = "bible"
 
-_BOOK_TITLE: str = "ⲡⲓϪⲱⲙ ⲉⲑⲞⲩⲁⲃ | Coptic Bible"
+_TITLE_COP: str = "ⲡⲓϪⲱⲙ ⲉⲑⲞⲩⲁⲃ"
+_TITLE_COP_EN: str = f"{_TITLE_COP} | Coptic Bible"
 _AUTHOR: str = "Saint Shenouda The Archimandrite Coptic Society"
 _LANG: str = "cop"
 
@@ -490,6 +507,48 @@ class Bible:
             yield from book.chapters
 
 
+# The static part of the Bible search interface.
+# The (empty) results table that follows it is built separately because its
+# columns are generated per language and so cannot be a constant.
+#
+# This is kept as a single literal block so it reads like the HTML it produces
+# and can be diffed directly against the hand-written Lexicon index.
+#
+# NOTE: This markup is partially duplicated in the Lexicon index
+# (`docs/crum/index.html`), which is hand-written. Keep the two structurally in
+# sync: when changing any of these IDs, classes, or controls here, assess
+# whether the Lexicon index needs the corresponding change -- and vice versa.
+_SEARCH_FORM: str = """\
+<table id="xooxle">
+  <tbody>
+    <tr>
+      <td id="search-box-td"><input id="search-box" autocapitalize="off"
+        autocomplete="off" autocorrect="off" placeholder="Search"
+        spellcheck="false" type="text"></td>
+      <td id="keyboard-td"><a id="keyboard" href="/keyboard.html"
+        target="_blank">⌨️ Keyboard</a></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+<table>
+  <tr>
+    <td id="dialects">
+      <div id="dialects-button">Languages ▾</div>
+      <span id="checkboxes">Highlight Languages:&nbsp;\
+<!--Dialect checkboxes go here.--></span>
+    </td>
+    <td id="full-word-checkbox-td"><label for="full-word-checkbox">\
+<input id="full-word-checkbox" type="checkbox"> Full-Word</label></td>
+    <td id="case-sensitive-checkbox-td"><label for="case-sensitive-checkbox">\
+<input id="case-sensitive-checkbox" type="checkbox"> Case</label></td>
+    <td id="regex-checkbox-td"><label for="regex-checkbox">\
+<input id="regex-checkbox" type="checkbox">RegEx</label></td>
+  </tr>
+</table>
+<p id="message"><!--Placeholder for warnings and messages.--></p>"""
+
+
 class HTMLBuilder:
     """An Bible HTML formatter and builder."""
 
@@ -595,6 +654,17 @@ class HTMLBuilder:
             "".join(body),
         )
 
+    # __search_form_aux builds the search form HTML.
+    def __search_form_aux(self) -> abc.Generator[str]:
+        yield _SEARCH_FORM
+        yield '<table id="results" class="results"><thead><tr>'
+        yield '<th style="width: 10%;"></th>'
+        for lang in _LANGUAGES:
+            yield f'<th class="{lang}">{_lang_key(lang)}</th>'
+        yield "</tr></thead>"
+        yield "<tbody><!-- Search results will be appended here. --></tbody>"
+        yield "</table>"
+
     # _build_toc_body_aux builds the contents of the <body> element for the
     # table of contents.
     def __toc_body_aux(
@@ -604,7 +674,7 @@ class HTMLBuilder:
     ) -> abc.Generator[str]:
         # Yield the title.
         yield "<h1>"
-        yield _BOOK_TITLE
+        yield _TITLE_COP
         yield "</h1>"
 
         if is_epub:
@@ -616,8 +686,12 @@ class HTMLBuilder:
             return
 
         assert not is_epub
-        # For HTML, we list the testaments, sections, books, and chapters.
-        yield "<table>"
+        # For HTML, we render the search form, followed by the book index.
+        yield from self.__search_form_aux()
+
+        # The book index: testaments side by side, each a column of books with
+        # their (collapsible) chapter lists.
+        yield '<table class="book-index">'
         yield "<tr>"
         for testament in bible.testaments:
             yield "<td>"
@@ -652,7 +726,7 @@ class HTMLBuilder:
 
         toc = self.__html_aux(
             self.__toc_body_aux(bible, is_epub=False),
-            title=_BOOK_TITLE,
+            title=_TITLE_COP_EN,
             page_class=_INDEX_CLASS,
             scripts=[_INDEX_JS],
             css=_INDEX_CSS,
@@ -696,7 +770,7 @@ class HTMLBuilder:
         identifier: str = " ".join(langs)
         kindle.set_identifier(identifier)
         kindle.set_language(_LANG)
-        kindle.set_title(_BOOK_TITLE)
+        kindle.set_title(_TITLE_COP_EN)
         kindle.add_author(_AUTHOR)
         cover_file_name: str = os.path.basename(_COVER)
         cover: epub.EpubCover = epub.EpubCover(file_name=cover_file_name)
@@ -718,7 +792,7 @@ class HTMLBuilder:
             "".join(
                 self.__html_aux(
                     self.__toc_body_aux(bible, is_epub=True),
-                    title=_BOOK_TITLE,
+                    title=_TITLE_COP_EN,
                     is_epub=True,
                 ),
             ),
