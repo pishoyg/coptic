@@ -561,7 +561,9 @@
       Strassburg: Schlesier & Schweikhardt."
   variants:
     - "Cl"
-    - "Cl Rösch"
+  postfixes:
+    Rösch:
+    (Strassb):
 
 - title: "Woide’s MSS. belonging to the Clarendon Press (Crum’s copies & photographs)"
   description:
@@ -2441,6 +2443,11 @@
 - title:
   description:
   variants:
+    - "K. al-Tagnîz"
+
+- title:
+  description:
+  variants:
     - "Klio"
 
 - title:
@@ -2511,6 +2518,12 @@
   description:
   variants:
     - "Pliny"
+
+- title: "Preisigke, F. (1922). Wörterbuch der griechischen Papyrusurkunden: mit Einschluss
+    der griechischen Inschriften, Ausschriften, Ostraka, Mumienschilder usw. aus Ägypten"
+  description:
+  variants:
+    - "Preisigke W.buch"
 
 - title:
   description:
