@@ -295,7 +295,7 @@ export const DATA: Abbreviation[] = [
   // NOTE: 'init' is a source of false positives. It occasionally means
   // 'initial'.
   { fullForm: 'initio', variants: ['init'] },
-  { fullForm: 'inventory', variants: ['inv'], suffix: true },
+  { fullForm: 'inventory', variants: ['inv', 'invent'], suffix: true },
   { fullForm: 'loco citato', variants: ['l c', 'll c'], suffix: true },
   { fullForm: 'loci citati', variants: ['ll cc'], suffix: true },
   { fullForm: 'loquitur', variants: ['loq'] },
