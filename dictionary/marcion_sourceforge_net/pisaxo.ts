@@ -27,6 +27,7 @@ import * as yaml from 'js-yaml';
 import type * as zod from 'zod';
 import { z } from 'zod';
 import * as log from '../../docs/logger.js';
+import * as orth from '../../docs/orth.js';
 import { marked } from 'marked';
 import type * as sax from '../../docs/crum/pisaxo.js';
 
@@ -125,6 +126,25 @@ type Mutable<T> = {
 };
 
 /**
+ * Ensure all reference keys are normalized. Variants, typos, and postfix
+ * names become keys in the front-end's reference MAPPING, where lookups
+ * assume normalized input.
+ *
+ * @param sources
+ */
+function ensureNormalized(sources: sax.Source[]): void {
+  for (const entry of sources) {
+    for (const key of [
+      ...entry.variants,
+      ...(entry.typos ?? []),
+      ...Object.keys(entry.postfixes ?? {}),
+    ]) {
+      log.ensure(orth.normalize(key) === key, 'Key is not normalized:', key);
+    }
+  }
+}
+
+/**
  *
  */
 function main(): void {
@@ -149,6 +169,8 @@ function main(): void {
   if (!parsed.success) {
     log.fatal('Error parsing bibliography:', z.prettifyError(parsed.error));
   }
+
+  ensureNormalized(parsed.data as sax.Source[]);
 
   // Convert Markdown to HTML
   for (const entry of parsed.data as Mutable<sax.Source>[]) {
