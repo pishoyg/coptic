@@ -264,8 +264,7 @@ export const DATA = [
       "Note: The manuscripts have since been moved to the <a href=\"https://bl.libguides.com/reference-services/asian-and-african-studies/introduction/oriental-manuscripts\">British Library</a>."
     ],
     "variants": [
-      "BM",
-      "Bm"
+      "BM"
     ],
     "postfixes": {
       "Or": "Oriental",
@@ -340,8 +339,7 @@ export const DATA = [
       "Schmidt, C. (1892). <em><a href=\"https://www.google.co.uk/books/edition/Gnostische_Schriften_in_koptischer_Sprac/esVQJzTZIpgC?hl=en&gbpv=1\">Gnostische Schriften in koptischer Sprache aus dem Codex Brucianus</a></em>. (Texte und Untersuchungen zur Geschichte der altchristlichen Literatur, Vol. 8). Leipzig: J. C. Hinrichs’sche Buchhandlung."
     ],
     "variants": [
-      "Br",
-      "B"
+      "Br"
     ]
   },
   {
