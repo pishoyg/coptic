@@ -353,10 +353,6 @@
     - "Blake"
 
 - title: "British Museum, Catalogue of Coptic MSS., 1905, acc. to numbers"
-  # NOTE: 'Bm' can only be found once, as of the time of writing, under
-  # ⲥⲱⲗⲉⲡ (898)[1].
-  #
-  # [1] https://remnqymi.com/crum/898.html
   description:
     - "Crum, W. E. (1905). *[Catalogue of the Coptic Manuscripts in the British Museum](https://archive.org/details/catalogueofcopti00brituoft/page/ii/mode/2up)*.
       London: British Museum."
@@ -366,7 +362,6 @@
     - "Note: The manuscripts have since been moved to the [British Library](https://bl.libguides.com/reference-services/asian-and-african-studies/introduction/oriental-manuscripts)."
   variants:
     - "BM"
-    - "Bm"
   postfixes:
     Or: "Oriental"
     or: "oriental"
@@ -424,10 +419,6 @@
     - "PB"
 
 - title: "Gnostische Schr. in Kopt. Sprache (Pap. Bruce), ed. C. Schmidt, 1892"
-  # NOTE: The 'B' variant is not in Crum's list of abbreviations, and it was
-  # encountered only once under ⲉⲛⲉϩ[1] on 'p 57 a'.
-  #
-  # [1] https://remnqymi.com/crum/25.html
   description:
     - "Schmidt, C. (1892). *[Gnostische Schriften in koptischer Sprache aus dem Codex
       Brucianus](https://www.google.co.uk/books/edition/Gnostische_Schriften_in_koptischer_Sprac/esVQJzTZIpgC?hl=en&gbpv=1)*.
@@ -435,7 +426,6 @@
       8). Leipzig: J. C. Hinrichs’sche Buchhandlung."
   variants:
     - "Br"
-    - "B"
 
 - title: "Budge, Martyrdom & Miracles of St. George, 1888"
   description:
