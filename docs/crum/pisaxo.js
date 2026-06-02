@@ -453,9 +453,12 @@ export const DATA = [
       "Rösch, F. (1910). <em><a href=\"https://archive.org/details/bruchstckedese00clemuoft/bruchstckedese00clemuoft/page/n5/mode/2up\">Bruchstücke des ersten Clemensbriefes nach dem achmimischen Papyrus der Strassburger Universitäts- und Landesbibliothek mit biblischen Texten derselben Handschrift</a></em>. Strassburg: Schlesier &amp; Schweikhardt."
     ],
     "variants": [
-      "Cl",
-      "Cl Rösch"
-    ]
+      "Cl"
+    ],
+    "postfixes": {
+      "Rösch": null,
+      "(Strassb)": null
+    }
   },
   {
     "title": "Woide’s MSS. belonging to the Clarendon Press (Crum’s copies &amp; photographs)",
@@ -2386,6 +2389,13 @@ export const DATA = [
     "title": null,
     "description": null,
     "variants": [
+      "K. al-Tagnîz"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
       "Klio"
     ]
   },
@@ -2482,6 +2492,13 @@ export const DATA = [
     "description": null,
     "variants": [
       "Pliny"
+    ]
+  },
+  {
+    "title": "Preisigke, F. (1922). Wörterbuch der griechischen Papyrusurkunden: mit Einschluss der griechischen Inschriften, Ausschriften, Ostraka, Mumienschilder usw. aus Ägypten",
+    "description": null,
+    "variants": [
+      "Preisigke W.buch"
     ]
   },
   {
