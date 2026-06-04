@@ -26,7 +26,7 @@ DIALECTS: list[str] = [
 ]
 
 MIN_KEY: int = 1
-MAX_KEY: int = 3416
+MAX_KEY: int = 3418
 
 # Total number of entries in Crum.
 # NOTE: As of Dec. 6th, 2025, we have 3414 entries. Add an expansion margin. We
