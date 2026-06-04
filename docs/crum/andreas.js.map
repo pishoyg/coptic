@@ -1,7 +1,7 @@
 {
   "version": 3,
   "sources": ["andreas.ts"],
-  "sourcesContent": ["import * as crum from './crum.js';\n\n/**\n *\n * @param root\n */\nexport function handle(root: HTMLElement): void {\n  crum.addGreekLookups(root);\n}\n"],
-  "mappings": "aAAA,UAAYA,MAAU,YAMf,gBAAS,OAAOC,EAAyB,CAC9CD,EAAK,gBAAgBC,CAAI,CAC3B",
-  "names": ["crum", "root"]
+  "sourcesContent": ["import * as html from '../html.js';\nimport * as paths from '../paths.js';\nimport * as cls from './cls.js';\n\nconst GREEK_WORD_RE = /[\\p{Script=Greek}][\\p{Script=Greek}\\p{Mark}]*/u;\n\n/**\n *\n * @param root\n */\nexport function handle(root: HTMLElement): void {\n  html.linkifyText(\n    root,\n    GREEK_WORD_RE,\n    (match: RegExpExecArray): string => paths.greekLookup(match[0]),\n    [cls.GREEK]\n  );\n}\n"],
+  "mappings": "aAAA,UAAYA,MAAU,aACtB,UAAYC,MAAW,cACvB,UAAYC,MAAS,WAErB,MAAMC,EAAgB,iDAMf,gBAAS,OAAOC,EAAyB,CAC9CJ,EAAK,YACHI,EACAD,EACCE,GAAmCJ,EAAM,YAAYI,EAAM,CAAC,CAAC,EAC9D,CAACH,EAAI,KAAK,CACZ,CACF",
+  "names": ["html", "paths", "cls", "GREEK_WORD_RE", "root", "match"]
 }
