@@ -325,6 +325,14 @@ class Wiki:
         self.vide = bool(vide)
         del vide
 
+        if len(self.keys) != 1:
+            ensure.ensure(
+                self.vide,
+                self,
+                "is non-vide but has several keys:",
+                self.keys,
+            )
+
         self.footnotes: int = 0
 
         wip: str = record["WIP"]
