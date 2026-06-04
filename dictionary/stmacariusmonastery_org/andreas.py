@@ -1,6 +1,5 @@
 """Convert Andreas's Dictionary Data to Unicode."""
 
-import collections
 import functools
 import itertools
 import os
@@ -16,10 +15,6 @@ from dictionary.stmacariusmonastery_org.constants import Language
 from flashcards import deck
 from utils import ensure, file, lang, log, page, paths
 from xooxle import xooxle
-
-# TODO: (#589) Once the Hebrew encoding is populated, this won't be needed
-# anymore.
-hebrew_freq: collections.Counter[str] = collections.Counter()
 
 POSTPROCESSING: list[tuple[str | re.Pattern[str], str]] = [
     ("``", "`"),
@@ -71,14 +66,11 @@ class Span:
             # Arabic and Latin text is not encoded.
             return
 
-        # TODO: (#589) Stop giving Hebrew special treatment.
         if self.language == Language.HEBREW:
-            # We don't have the Hebrew encoding yet.
-            # Add text to the Hebrew letter frequency tracker.
-            hebrew_freq.update(self.text)
-            # In the original text, Hebrew is written in reverse.
+            # In the original data, Hebrew is written in reverse. Reverse it
+            # before translating so that each vowel point follows its
+            # consonant, as Unicode expects.
             self.text = self.text[::-1]
-            return
 
         # This is an encoded language.
         # TODO: (#590) This ignores characters not present in the mapping. You
@@ -131,18 +123,23 @@ class Span:
             "Can't retrieve content from a span with an unknown language:",
             self,
         )
-        # Only Arabic has classes, because it needs to be styled. For other
-        # languages, we prefer omitting the language so we can prettify the text
-        # (e.g. by removing superfluous space).
+        ensure.ensure(self.text, self, "has no text!")
+
+        # Arabic and Hebrew have classes, because they need to be styled. For
+        # other languages, we prefer omitting the language so we can prettify
+        # the text (e.g. by removing superfluous space).
         # TODO: (#595) HTML classes will no longer be necessary if Greek is
         # extracted and the remainder is determined to be entirely
         # right-to-left. The "arabic" class would then be inserted on a
         # per-entry basis rather than on a per-span basis.
-        if html and self.language == Language.ARABIC:
+        span: bool = html and self.language in [
+            Language.ARABIC,
+            Language.HEBREW,
+        ]
+        if span:
             yield f'<span class="{self.language.value.lower()}">'
-        ensure.ensure(self.text, self, "has no text!")
         yield self.text
-        if html and self.language == Language.ARABIC:
+        if span:
             yield "</span>"
 
     @typing.override
@@ -248,10 +245,6 @@ class Paragraph:
         spans: list[Span] | None = None,
     ) -> abc.Generator[str]:
         for s in (self.spans if spans is None else spans):
-            if s.language == Language.HEBREW:
-                # We don't support Hebrew yet.
-                # TODO: (#589) Extend support for Hebrew.
-                continue
             yield from s.content(html)
 
     def content(self, html: bool, spans: list[Span] | None = None) -> str:
@@ -265,7 +258,7 @@ class Paragraph:
         # Greek victims.
         # It's also true for Arabic, unfortunately.
         # Here is a list of candidates:
-        # - https://remnqymi.com/crum/?regex=true&query=%5Cp%7BScript%3DCoptic%7D+%5Cp%7BScript%3DCoptic%7D # pylint: disable=line-too-long
+        # - https://remnqymi.com/crum/?regex=true&query=%5Cp%7BScript%3DCoptic%7D+%5Cp%7BScript%3DCoptic%7D+&crum=false&kellia=false#%20pylint:%20disable=line-too-long # pylint: disable=line-too-long
         # - https://remnqymi.com/crum/?query=%5Cp%7BScript%3DGreek%7D+%5Cp%7BScript%3DGreek%7D&regex=true # pylint: disable=line-too-long
         # The equivalent Arabic query returns most of the dictionary, so we
         # might have to go over the whole dictionary to find Arabic spacing
@@ -480,7 +473,10 @@ XOOXLE = xooxle.Xooxle(
             "BACK",
             xooxle.Selector({"id": "back"}),
             # We need the Arabic for styling. We don't need any other classes.
-            retain_classes={"arabic"},
+            retain_classes={
+                language.value.lower()
+                for language in [Language.ARABIC, Language.HEBREW]
+            },
         ),
     ],
     output=os.path.join(paths.LEXICON_DIR, "andreas.json"),

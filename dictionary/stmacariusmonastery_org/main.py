@@ -7,16 +7,9 @@ import functools
 import gspread
 
 from dictionary.stmacariusmonastery_org import andreas
-from utils import gcp, log
+from utils import gcp
 
 argparser = argparse.ArgumentParser()
-
-_ = argparser.add_argument(
-    "--hebrew",
-    action="store_true",
-    default=False,
-    help="Print unknown Hebrew letters.",
-)
 
 _ = argparser.add_argument(
     "--sheet",
@@ -57,12 +50,6 @@ def main():
             "Arabic",
             [w.back(html=False) for w in words],
         )
-
-    if args.hebrew:
-        log.warn("Unknown Hebrew characters:", len(andreas.hebrew_freq))
-        for char, count in andreas.hebrew_freq.most_common():
-            log.warn(f"{char}\t", count, level=False)
-        return
 
 
 if __name__ == "__main__":

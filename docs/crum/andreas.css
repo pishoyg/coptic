@@ -2,8 +2,11 @@
  * below to only apply to Andreas notes, so we make it more specific.
  * It only applies in the Andreas Flashcards (`.card`), or in the Lexicon under
  * `#andreas`. */
-.card .arabic,
-body.lexicon #andreas .arabic {
-  float: right;
-  direction: rtl;
+.card,
+body.lexicon #andreas {
+  .arabic,
+  .hebrew {
+    direction: rtl;
+    display: block;
+  }
 }

@@ -237,7 +237,74 @@ GREEK_ENCODING: dict[str, str] = {
 }
 
 HEBREW_ENCODING: dict[str, str] = {
-    # TODO: (#589) Fill this table
+    # The `rhebrew` font is an ASCII transliteration font (akin to the
+    # Michigan-Claremont encoding): each keystroke renders a Hebrew consonant
+    # or vowel point (niqqud). The text is stored in visual (reversed) order,
+    # so it is reversed before being translated; once reversed, each vowel
+    # point follows its consonant, exactly as Unicode expects.
+    # Consonants (lowercase, undotted).
+    ")": "א",
+    "b": "ב",
+    "g": "ג",
+    "d": "ד",
+    "h": "ה",
+    "w": "ו",
+    "z": "ז",
+    "x": "ח",
+    "+": "ט",
+    "y": "י",
+    "k": "כ",
+    "l": "ל",
+    "m": "מ",
+    "n": "נ",
+    "s": "ס",
+    "(": "ע",
+    "p": "פ",
+    "c": "צ",
+    "q": "ק",
+    "r": "ר",
+    "t": "ת",
+    # Shin (with the right dot) and sin (with the left dot).
+    "#": "שׁ",
+    "$": "שׁ",
+    "<": "שּׁ",  # Shin with a dagesh.
+    "&": "שׂ",
+    # Final forms.
+    "{": "ם",  # Final mem.
+    "}": "ן",  # Final nun.
+    "|": "ך",  # Final kaf.
+    "v": "ף",  # Final pe.
+    # Uppercase consonants carry a dagesh.
+    "B": "בּ",
+    "G": "גּ",
+    "D": "דּ",
+    "K": "כּ",
+    "P": "פּ",
+    "T": "תּ",
+    "M": "מּ",
+    "N": "נּ",
+    "Q": "קּ",
+    "Y": "יּ",
+    "H": "הּ",  # He with a mapiq.
+    # Vowel points (niqqud), which combine with the preceding consonant.
+    "f": "ָ",  # Qamatz.
+    "a": "ַ",  # Patach.
+    "e": "ֶ",  # Segol.
+    '"': "ֵ",  # Tsere.
+    "i": "ִ",  # Hiriq.
+    "o": "ֹ",  # Holam (defective).
+    "O": "וֹ",  # Holam male (holam written with a vav).
+    "u": "ֻ",  # Qibbuts.
+    "U": "וּ",  # Shuruq (vav with a dagesh); also a consonantal vav + dagesh.
+    ":": "ְ",  # Sheva.
+    "A": "ֲ",  # Hataf patach.
+    "E": "ֱ",  # Hataf segol.
+    # Punctuation and spacing.
+    " ": " ",
+    ",": ",",
+    # Stray marks in the source that don't correspond to any letter.
+    "ñ": "",
+    "à": "",
 }
 
 UNKNOWN_ENCODING: dict[str, str] = {
