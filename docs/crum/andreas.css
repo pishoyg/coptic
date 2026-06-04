@@ -4,8 +4,13 @@
  * `#andreas`. */
 .card,
 body.lexicon #andreas {
-  .arabic,
-  .hebrew {
+  & .arabic {
+    direction: rtl;
+    display: block;
+  }
+
+  & .hebrew {
+    color: brown;
     direction: rtl;
     display: block;
   }
