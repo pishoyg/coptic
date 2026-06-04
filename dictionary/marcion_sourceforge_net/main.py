@@ -128,10 +128,18 @@ def _write_page_index() -> None:
 
 
 def _write_sheet_index() -> None:
+    # As of the time of writing, the root row number mapping is trivial. It's
+    # simply:
+    #   {x: x for x in range(1, MAX)}
+    # We still store an explicit mapping so it will continue to work correctly
+    # in case this variant no longer holds in the future.
+    # The derivations mapping is larger, and it must be maintained as it's
+    # non-trivial. We won't gain much from omitting the root row mapping.
     _write_row_nums(
         ((root.num, root.row_num) for root in crum.Crum.roots.values()),
         paths.CRUM_ROOTS_ROW_NUMS,
     )
+
     # For derivations, we only record the row number of the first derivations.
     # The rest can be inferred.
     _write_row_nums(
