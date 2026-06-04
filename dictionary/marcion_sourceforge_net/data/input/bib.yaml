@@ -2,57 +2,57 @@
 # This file is largely based on ⲡⲓⲥⲁϧⲟ's bibliography:
 #   https://www.coptist.com/2025/07/30/digitised-bibliography-crum/
 
-# Section 1 lists the sources from Crum's list of abbreviations.
+# NOTE: Where there is inconsistency in spacing, the stored abbreviated form
+# should contain spaces. Our algorithm should then be capable of processing
+# space variants.
+# For example, storing 'Cai Copt Mus' as a variant results in our algorithm
+# generating the following variants for the entry:
+# - 'Cai Copt Mus'
+# - 'CaiCopt Mus'
+# - 'Cai CoptMus'
+# - 'CaiCoptMus'
+# Storing both 'Cai Copt Mus' and 'CaiCoptMus' would be considered an error,
+# because the former implicitly includes the latter, and redundancy is
+# forbidden.
+
+# NOTE: Notice the following regarding the structure of the file:
+# 1. Use consistent indentation.
+# 2. The `title`, `description`, and `variants` fields are required for each
+#    entry. The first two can be left empty, but `variants` must have at least
+#    one item.
+# 3. `title` is a scalar. The data can follow on the same line.
+# 4. `description` is a list. The `description:` key must reside on its own line,
+#    and each item in the description must follow on a line starting with `- ` (a
+#    hyphen followed by a space).
+# 5. Use Markdown syntax, specifically:
+#    - Single asterisks for emphasis (italic text):
+#        *italicized*
+#    - Double asterisks for bold text:
+#        **bold**
+#    - The bracket notation for hyperlinks:
+#        [name](https://example.com/)
+# 6. Double-quote all values.
+# 7. Don't double-quote any keys (such as `title`, `description`, etc., and
+#    postfix keys).
+# 8. If a description entry needs to contain a list nested within it, then do
+#    the following:
+#    - Write `description:` on a separate line.
+#    - Begin the entry with `- |-` (a hyphen and a space, followed by a vertical
+#      bar and a hyphen).
+#    - The description can follow afterwards, on the next indented lines, and it
+#      should NOT be surrounded by double quotes.
+#    - Use Markdown notation for lists. Each item should be preceded by `- `.
+# For all of the above, see examples throughout the files.
+
+# TODO: (#522) Populate missing references, variants, postfixes, descriptions,
+# ...etc.
+
+################################################################################
+##### Section 1 lists the sources from Crum's list of abbreviations.
+################################################################################
 
 # NOTE: To make manual verification convenient, keep this in the same order
 # used by Crum.
-
-# NOTE: This list, while largely dependent on Crum's List of Abbreviations,
-# intentionally excludes the following:
-# - Non-reference annotations (such as grammatical annotations or remarks).
-#   Those are handled in a separate module.
-# - Biblical references are handled by other modules.
-# - Cross references (when one abbreviation simply references another) are
-#   treated as variants, and do not have corresponding entries in this map.
-# All other cases must be included.
-
-# NOTE: Crum often used abbreviated forms inconsistently, which complicates
-# our parsing. In cases where there is inconsistency with spacing, the stored
-# abbreviated form should contain the spaces. Our algorithm should then
-# automatically search for both the stored form, and a number of generated
-# forms that have fewer spaces.
-# There is no need to store the variants, as this will be handled
-# automatically.
-# Variants that differ in non-space characters should, however, be explicitly
-# mentioned.
-# For example, if both `B Hom` and `BHome` are used for Budge's Homilies, store
-# only the former as a variant.
-# P.S. We have encountered numerous space variants, so we opted for
-# preemptively inserting spaces wherever they may be expected to show, even
-# if we haven't encountered such space variants in the text.
-
-# NOTE: Notice the following regarding the structure of the file:
-# - The `title`, `description`, and `variants` fields are required for each
-#   entry. The first two can be left empty, but `variants` must have at least
-#   one item.
-# - `title` is a scalar. The data can follow on the same line.
-# - `description` is a list. The `description:` key must be on its own line, and
-#    each item in the description must follow on a line starting with `- ` (a
-#    hyphen followed by a space).
-# - Use Markdown syntax, specifically:
-#   - Single asterisks for emphasis (italic text):
-#       *italicized*
-#   - Double asterisks for bold text:
-#       **bold**
-#   - The bracket notation for hyperlinks:
-#       [name](https://example.com/)
-# - Double-quote all values. Don't double-quote any keys (such as `title`,
-#   `description`, etc., and postfix keys).
-# - You will rarely need this. But if a description entry needs to contain a
-#    list nested with it, then syntax is a bit tricky. Search for the sequence
-#    `|-` (vertical bar followed by a hyphen) to see how it's done. Keep in mind
-#    that in such instances, the text is not quoted.
-# See examples throughout the files.
 
 - title: "E. Amélineau, Œuvres de Schenoudi, 1907 ff"
   # NOTE: 'A' rarely occurs on its own. It almost always occurs as a postfix
@@ -2287,10 +2287,13 @@
   variants:
     - "ZNTW"
 
-# Section 2 stores references not mentioned by crum in the list of
-# abbreviations, but encountered throughout the text.
+################################################################################
+##### Section 2 stores references not mentioned by Crum in the list of
+##### abbreviations, but encountered throughout the text.
+################################################################################
 
-# TODO: (#522) Add the missing entries to this section.
+# NOTE: Keep this alphabetically ordered by the lexicographically smallest
+# variant.
 
 - title:
   description:
