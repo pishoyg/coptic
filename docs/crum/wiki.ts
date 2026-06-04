@@ -117,14 +117,30 @@ const ENRICHMENT_RE = new RegExp(
   'gu'
 );
 
+// Bible book abbreviations that begin with a number — e.g. "2 Cor". A Bible
+// followup is a bare chapter/verse number, so the "2" in
+// "Job 3 18, 2 Cor 4 18" could be misread as a followup verse, splitting off
+// the "2 Cor" book name. This negative lookahead — built only from numbered
+// books, the only abbreviations a numeric followup can be confused with —
+// prevents that. Non-numbered books can't be mistaken for a followup, so
+// including them would only bloat the lookahead.
+const NOT_NUMBERED_BIBLE_BOOK = `(?!${str.regex(
+  Object.keys(bib.MAPPING).filter((key: string): boolean => /^\d/.test(key)),
+  false
+)}${str.ASSERT_NON_WORD.source})`;
+
 /**
  * BIBLE_FOLLOWUP catches followups, such as:
  * - Is 27 11, 56 9, 10
  * - Sa 15 7–9
  * - Si 34 29 (31 26)
+ *
+ * The NOT_NUMBERED_BIBLE_BOOK lookahead keeps a new numbered citation (e.g.
+ * the "2 Cor" in "Job 3 18, 2 Cor 4 18") from being swallowed as a followup.
+ * See its definition above.
  */
 const BIBLE_FOLLOWUP = new RegExp(
-  `^(?:(?:, |–)(${NUMS})${str.ASSERT_NON_WORD.source}| ?\\((${NUMS})\\))`,
+  `^(?:(?:, |–)${NOT_NUMBERED_BIBLE_BOOK}(${NUMS})${str.ASSERT_NON_WORD.source}| ?\\(${NOT_NUMBERED_BIBLE_BOOK}(${NUMS})\\))`,
   'u'
 );
 
@@ -189,21 +205,42 @@ const NUMBERS = [
   ),
 ];
 
+// Single-letter reference abbreviations (e.g. K, P, H) are indistinguishable
+// by shape from the single-letter `[a-zA-Z]` suffix token. Without care, the
+// "K" in "P 44 66, K 179" would be swallowed as a suffix of the "P" reference
+// instead of being recognized as its own reference. This negative lookahead
+// keeps a standalone single-letter reference from being mistaken for the start
+// of a followup.
+//
+// The guard applies only to the FIRST token of each followup (the token right
+// after the "," / " =" / " &" separator), which is where a new reference would
+// begin. It is intentionally not applied elsewhere:
+// - Not to the leading suffix: a single letter directly after a reference (as
+//   in "P K 179") is still read as a suffix.
+// - Not to later tokens within a followup: a mid-followup letter (as the "K" in
+//   "P 44, 56 K 179") is intentionally treated as a suffix token, not a new
+//   reference.
+//
+// Only single-letter keys are included: multi-letter abbreviations can't be
+// confused with the single-letter suffix token, so including them would only
+// bloat the lookahead.
+const NOT_SINGLE_LETTER_REFERENCE = `(?! [${Object.keys(ref.MAPPING)
+  .filter((key: string): boolean => key.length === 1)
+  .join('')}]${str.ASSERT_NON_WORD.source})`;
+
 const NUMBER = `(?:${NUMBERS.join('|')})`;
-// Some suffix parts are parenthesized.
-// The space before the parenthesis is optional.
+// A suffix never ends with 'v' or 'l'. As of the time of writing, no such
+// suffix is known to exist. Following a reference, these are annotations for
+// 'vide' or 'legendum', rather than part of the suffix. (The rule applies to
+// the suffix only, matching the historical behavior; followups are unaffected.)
 const NUMBER_GROUP = `(?: ${NUMBER}| ?\\(${NUMBER}(?: ${NUMBER})*\\))`;
 
-// A suffix never ends with 'v' or 'l'. As of the time of writing, no such
-// suffix is known to exist.
-// Following a reference, these are annotations for 'vide' or 'legendum', rather
-// than part of the suffix.
+// SUFFIX matches a reference suffix together with any followups that trail it,
+// e.g. the whole " 44 66, 179" in "P 44 66, 179".
+const NOT_VL = '(?<!\\b[vl])';
+
 const SUFFIX = new RegExp(
-  `^\\.?${NUMBER_GROUP}+(?<!\\b[vl])${str.ASSERT_NON_WORD.source}`,
-  'u'
-);
-const REFERENCE_FOLLOWUP = new RegExp(
-  `^(?:(?:,| [=&])${NUMBER_GROUP}+)+${str.ASSERT_NON_WORD.source}`,
+  `^\\.?${NUMBER_GROUP}+${NOT_VL}(?:(?:,| [=&])${NOT_SINGLE_LETTER_REFERENCE + NUMBER_GROUP}+${NOT_VL})*${str.ASSERT_NON_WORD.source}`,
   'u'
 );
 
@@ -263,37 +300,6 @@ function handleAux(wiki: HTMLElement, full: boolean): void {
   formSuperscripts = collectFormSuperscripts(wiki);
 
   enrich(wiki);
-
-  // Comma handling searches for occurrences of:
-  //   <reference>, <suffix>, <suffix>, ...
-  // Merge such "followups" into the preceding reference.
-  //
-  // NOTE: This needs to happen in a second post-enrichment pass, to avoid
-  // mistakenly interpreting a reference as a suffix.
-  // For example, consider the following piece of text[1]:
-  //   P 44 66, K 179
-  // If the first run were to consider suffixes after commas, we may be
-  // tempted to interpret "K 179" as a second suffix for the P reference.
-  // However, processing all references first guarantees that this K
-  // reference gets caught, thus it won't be mistaken for a suffix of the P
-  // reference.
-  //
-  // [1] https://remnqymi.com/crum/510.html#:~:text=P%2044%2066,%20K%20179
-  handleReferenceFollowups(wiki);
-
-  // Consider the following case[1]:
-  //   Job 3 18, 2 Cor 4 18
-  // If we were to greedily parse Bible followups in the first enrichment
-  // pass, this would capture "Job 3 18, 2", resulting in
-  // the following:
-  // - A Bible citation to Job 3 18
-  // - A Bible citation to Job 3 2
-  // - "Cor 4 18" wouldn't be interpreted!
-  // It's therefore important to defer Bible followup handling until all
-  // Bible citations have been processed.
-  //
-  // [1] https://remnqymi.com/crum/25.html
-  handleBibleFollowups(wiki);
 
   handleAddenda(wiki);
 
@@ -773,16 +779,20 @@ function parseBibleCitation(
 }
 
 /**
+ * Parse the Bible followups that trail a citation, updating `cit` in place as
+ * it goes.
  *
- * @param cit
- * @param remainder
- * @returns
+ * @param cit - The antecedent citation, mutated to reflect each followup.
+ * @param remainder - The text following the citation.
+ * @returns The replacement `nodes` for the consumed followups and the number of
+ *   characters (`munch`) consumed from `remainder`.
  */
 function parseBibleFollowups(
   cit: Citation,
   remainder: string
-): DocumentFragment {
-  const fragment: DocumentFragment = document.createDocumentFragment();
+): { nodes: (Node | string)[]; munch: number } {
+  const nodes: (Node | string)[] = [];
+  let munch = 0;
   // Create anchors for any following citations in the remaining text.
   while (remainder) {
     const match: RegExpExecArray | null = BIBLE_FOLLOWUP.exec(remainder);
@@ -813,15 +823,16 @@ function parseBibleFollowups(
     // Within `match[0]`, the `raw` text will be enriched, while the text before
     // and after `raw` will be passed as is.
     const rawIdx: number = match[0].indexOf(raw);
-    fragment.append(match[0].slice(0, rawIdx));
-    fragment.append(cit.anchor());
-    fragment.append(match[0].slice(rawIdx + raw.length));
+    nodes.push(
+      match[0].slice(0, rawIdx),
+      cit.anchor(),
+      match[0].slice(rawIdx + raw.length)
+    );
 
     remainder = remainder.slice(match[0].length);
+    munch += match[0].length;
   }
-  fragment.append(remainder);
-  fragment.normalize();
-  return fragment;
+  return { nodes, munch };
 }
 
 /**
@@ -840,26 +851,21 @@ function replaceBible(
     return undefined;
   }
 
-  return { replacement: [cit.anchor(false)], munch };
-}
+  // Build this citation's anchor before parsing followups, since followup
+  // parsing mutates `cit` in place.
+  const anchor: HTMLElement = cit.anchor(false);
 
-/**
- * @param root
- */
-export function handleBibleFollowups(root: HTMLElement): void {
-  root
-    .querySelectorAll<HTMLElement>(`.${cls.BIBLE}`)
-    .forEach((bible: HTMLElement): void => {
-      const cit: Citation = Citation.fromAnchor(bible);
+  // Resolve any followups (e.g. the ", 56 9" in "Is 27 11, 56 9") in the same
+  // pass. This used to be deferred to a second pass to avoid splitting a
+  // numbered book like the "2 Cor" in "Job 3 18, 2 Cor 4 18"; a negative
+  // lookahead in BIBLE_FOLLOWUP now guards against that instead.
+  const followups: { nodes: (Node | string)[]; munch: number } =
+    parseBibleFollowups(cit, context.remainder.slice(munch ?? 0));
 
-      if (!bible.nextSibling?.nodeValue) {
-        return;
-      }
-
-      bible.nextSibling.replaceWith(
-        parseBibleFollowups(cit, bible.nextSibling.nodeValue)
-      );
-    });
+  return {
+    replacement: [anchor, ...followups.nodes],
+    munch: (munch ?? 0) + followups.munch,
+  };
 }
 
 /**
@@ -1214,42 +1220,6 @@ function semicolon(): HTMLSpanElement {
     [cls.SEMICOLON]
   );
   return span;
-}
-
-/**
- *
- * @param root
- */
-export function handleReferenceFollowups(root: HTMLElement): void {
-  root
-    .querySelectorAll<HTMLSpanElement>(`.${cls.REFERENCE}`)
-    .forEach((reference: HTMLSpanElement): void => {
-      const nextSibling: ChildNode | null = reference.nextSibling;
-      if (!nextSibling) {
-        return;
-      }
-      if (reference.nextSibling?.nodeType !== Node.TEXT_NODE) {
-        return;
-      }
-      const text: string | null = nextSibling.nodeValue;
-      if (!text) {
-        return;
-      }
-      const match = REFERENCE_FOLLOWUP.exec(text);
-      if (!match) {
-        return;
-      }
-      nextSibling.nodeValue = text.slice(match[0].length);
-
-      // TODO: (#676) Suffix annotations in followups don't get added to the
-      // tooltip. Fix once you can implement enrichment in a single pass, in
-      // which case the tooltip will only need to be constructed once, and can
-      // be readily constructed with all annotations from the first place.
-      reference.append(
-        match[0],
-        ...suffixFollowups(nextSibling.nextSibling, nextSibling.nodeValue)
-      );
-    });
 }
 
 const DATA_KEY = 'key';
