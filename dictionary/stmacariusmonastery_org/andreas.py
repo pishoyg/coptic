@@ -13,7 +13,7 @@ import bs4
 from dictionary.stmacariusmonastery_org import constants
 from dictionary.stmacariusmonastery_org.constants import Language
 from flashcards import deck
-from utils import ensure, file, lang, log, page, paths
+from utils import ensure, file, lang, log, paths
 from xooxle import xooxle
 
 POSTPROCESSING: list[tuple[str | re.Pattern[str], str]] = [
@@ -369,8 +369,8 @@ class DictionaryEntry:
                 return
 
     def back(self, html: bool) -> str:
-        back: str = (page.LINE_BREAK if html else "\n").join(
-            self.back_aux(html),
+        back: str = "\n".join(
+            f"<p>{b}</p>" if html else b for b in self.back_aux(html)
         )
         # TODO: (#591) Handle the errors below, and switch the error message to
         # an assertion if the check has no false positives.
