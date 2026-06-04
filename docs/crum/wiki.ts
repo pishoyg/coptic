@@ -64,31 +64,6 @@ const EXCLUDE: string = css.disjunction(
 );
 
 /**
- * CHAPTER_VERSE defines the regex used to parse the chapter and verse numbers
- * in a Bible citation.
- *
- * Some books, such as the Book of Esther, have special chapters called labeled
- * A through F (though, as of the time of writing, our Bible version only has A,
- * C, D, and F). This is why we allow the chapter number to be one of those
- * characters.
- * In some cases, only one number follows the book name, so we allow one of the
- * two numbers to be omitted.
- *
- * In a singleton known occurrence (in ⲁⲙⲟⲩ – 442), the book abbreviation was
- * followed by a period, so we account for that. Though we only pick up the
- * period if a chapter number is present.
- *
- * In another singleton occurrence (in ⲁⲥⲕ – 503), the chapter and verse numbers
- * are parenthesized, so we account for that.
- */
-const NUMS = '(\\d+|[A-F])(?: (\\d+))?';
-// CHAPTER_VERSE matches "NUMS" OR "(NUMS)".
-// NOTE:
-// 1. This creates two sets of capture groups.
-// 2. This is a sticky regex.
-const CHAPTER_VERSE = new RegExp(`\\.? (?:${NUMS}|\\(${NUMS}\\))\\b`, 'uy');
-
-/**
  * DAN_OVERRIDE defines special Book names used by Crum to refer to chapters in
  * the Book of Daniel.
  * - 'Su' refers to the chapter that St. Shenouda refers to as A.
@@ -116,42 +91,6 @@ const ENRICHMENT_RE = new RegExp(
   ]),
   'gu'
 );
-
-// Bible book abbreviations that begin with a number — e.g. "2 Cor". A Bible
-// followup is a bare chapter/verse number, so the "2" in
-// "Job 3 18, 2 Cor 4 18" could be misread as a followup verse, splitting off
-// the "2 Cor" book name. This negative lookahead — built only from numbered
-// books, the only abbreviations a numeric followup can be confused with —
-// prevents that. Non-numbered books can't be mistaken for a followup, so
-// including them would only bloat the lookahead.
-const NOT_NUMBERED_BIBLE_BOOK = `(?!${str.regex(
-  Object.keys(bib.MAPPING).filter((key: string): boolean => /^\d/.test(key)),
-  false
-)}${str.ASSERT_NON_WORD.source})`;
-
-/**
- * BIBLE_FOLLOWUP catches followups, such as:
- * - Is 27 11, 56 9, 10
- * - Sa 15 7–9
- * - Si 34 29 (31 26)
- *
- * The NOT_NUMBERED_BIBLE_BOOK lookahead keeps a new numbered citation (e.g.
- * the "2 Cor" in "Job 3 18, 2 Cor 4 18") from being swallowed as a followup.
- * See its definition above.
- */
-const BIBLE_FOLLOWUP = new RegExp(
-  `^(?:(?:, |–)${NOT_NUMBERED_BIBLE_BOOK}(${NUMS})${str.ASSERT_NON_WORD.source}| ?\\(${NOT_NUMBERED_BIBLE_BOOK}(${NUMS})\\))`,
-  'u'
-);
-
-const PAGE_RE = /^p{1,2} ([0-9]+)(?: ([ab]))?\b/;
-const PAGE_FOLLOWUP_RE = /^(, )([0-9]+)(?: ([ab]))?\b/;
-
-// Roman-numeral pages of the Preface and the List of Abbreviations in the
-// Crum book scan. The `Index` override table in `crum/book.ts` resolves
-// these to logical page numbers.
-const PREFACE_PAGE = 'v';
-const LIST_OF_ABBREVIATIONS_PAGE = 'xi';
 
 // Pay attention to the following:
 // - Diacritics:
@@ -243,6 +182,79 @@ const SUFFIX = new RegExp(
   `^\\.?${NUMBER_GROUP}+${NOT_VL}(?:(?:,| [=&])${NOT_SINGLE_LETTER_REFERENCE + NUMBER_GROUP}+${NOT_VL})*${str.ASSERT_NON_WORD.source}`,
   'u'
 );
+
+/**
+ * CHAPTER_VERSE defines the regex used to parse the chapter and verse numbers
+ * in a Bible citation.
+ *
+ * Some books, such as the Book of Esther, have special chapters called labeled
+ * A through F (though, as of the time of writing, our Bible version only has A,
+ * C, D, and F). This is why we allow the chapter number to be one of those
+ * characters.
+ * In some cases, only one number follows the book name, so we allow one of the
+ * two numbers to be omitted.
+ *
+ * In a singleton known occurrence (in ⲁⲙⲟⲩ – 442), the book abbreviation was
+ * followed by a period, so we account for that. Though we only pick up the
+ * period if a chapter number is present.
+ *
+ * In another singleton occurrence (in ⲁⲥⲕ – 503), the chapter and verse numbers
+ * are parenthesized, so we account for that.
+ */
+const NUMS = '(\\d+|[A-F])(?: (\\d+))?';
+// CHAPTER_VERSE matches "NUMS" OR "(NUMS)".
+// NOTE:
+// 1. This creates two sets of capture groups.
+// 2. This is a sticky regex.
+const CHAPTER_VERSE = new RegExp(`\\.? (?:${NUMS}|\\(${NUMS}\\))\\b`, 'uy');
+
+// Bible book abbreviations that begin with a number — e.g. "2 Cor". A Bible
+// followup is a bare chapter/verse number, so the "2" in
+// "Job 3 18, 2 Cor 4 18" could be misread as a followup verse, splitting off
+// the "2 Cor" book name. This negative lookahead — built only from numbered
+// books, the only abbreviations a numeric followup can be confused with —
+// prevents that. Non-numbered books can't be mistaken for a followup, so
+// including them would only bloat the lookahead.
+const NOT_NUMBERED_BIBLE_BOOK = `(?!${str.regex(
+  Object.keys(bib.MAPPING).filter((key: string): boolean => /^\d/.test(key)),
+  false
+)}${str.ASSERT_NON_WORD.source})`;
+
+/**
+ * BIBLE_FOLLOWUP catches followups, such as:
+ * - Is 27 11, 56 9, 10
+ * - Sa 15 7–9
+ * - Si 34 29 (31 26)
+ *
+ * The NOT_NUMBERED_BIBLE_BOOK lookahead keeps a new numbered citation (e.g.
+ * the "2 Cor" in "Job 3 18, 2 Cor 4 18") from being swallowed as a followup.
+ * See its definition above.
+ *
+ * The NOT_SINGLE_LETTER_REFERENCE assertion prevents matching a single-letter
+ * reference as a followup (e.g. in "Jer 52 16, C 41 42"). It guards only the
+ * comma branch; the en-dash branch always introduces a numeric range, where a
+ * single-letter reference can't appear.
+ *
+ * NOTE: 'A' and 'C' are both single-letter references and special chapter
+ * labels (see CHAPTER_VERSE below; e.g. the Book of Esther). The assertion thus
+ * makes a genuine comma-followup to chapter A or C (such as a hypothetical
+ * "Esth A 1, C 5") unrepresentable — it would be read as a reference instead.
+ * No such followup has been encountered in the data, so we accept the trade-off
+ * in favor of catching the single-letter reference case.
+ */
+const BIBLE_FOLLOWUP = new RegExp(
+  `^(?:(?:,${NOT_SINGLE_LETTER_REFERENCE} |–)${NOT_NUMBERED_BIBLE_BOOK}(${NUMS})${str.ASSERT_NON_WORD.source}| ?\\((${NUMS})\\))`,
+  'u'
+);
+
+const PAGE_RE = /^p{1,2} ([0-9]+)(?: ([ab]))?\b/;
+const PAGE_FOLLOWUP_RE = /^(, )([0-9]+)(?: ([ab]))?\b/;
+
+// Roman-numeral pages of the Preface and the List of Abbreviations in the
+// Crum book scan. The `Index` override table in `crum/book.ts` resolves
+// these to logical page numbers.
+const PREFACE_PAGE = 'v';
+const LIST_OF_ABBREVIATIONS_PAGE = 'xi';
 
 const REFERENCE_RE = new RegExp(str.regex(Object.keys(ref.MAPPING)), 'gu');
 
