@@ -169,7 +169,9 @@ const NUMBERS = [
   'scala',
   'Scala',
   'stele',
-  // NOTE: Treating single letters as suffixes causes a lot of false positives.
+  'plate',
+  // TODO: (#709) Treating single letters as suffixes causes a lot of false
+  // positives.
   // Elsewhere, our code uses heuristics to exclude common false positives.
   // In most cases, we have to manually mark references to prevent inclusion of
   // false positive suffixes.
