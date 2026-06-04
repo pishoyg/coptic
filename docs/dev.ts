@@ -28,6 +28,20 @@ enum CLS {
 }
 
 /**
+ * @returns Whether we are running on Node.js (as opposed to in a browser).
+ */
+export function node(): boolean {
+  return typeof process !== 'undefined' && !!process.versions.node;
+}
+
+/**
+ * @returns Whether we are running in a browser (as opposed to on Node.js).
+ */
+export function browser(): boolean {
+  return !node();
+}
+
+/**
  * @returns Whether developer mode is active.
  */
 export function get(): boolean {
@@ -98,5 +112,5 @@ export class Highlighter extends high.Highlighter {
  *
  */
 export function play<T>(f: () => T): T | undefined {
-  return window.isPlaywright || get() ? f() : undefined;
+  return node() || get() || window.isPlaywright ? f() : undefined;
 }
