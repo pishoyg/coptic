@@ -57,6 +57,17 @@
   },
   "agentPushNotifEnabled": true,
   "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "command -v caffeinate >/dev/null 2>&1 || exit 0; sid=$(jq -r '.session_id // \"default\"'); pf=\"/tmp/claude-caffeinate-$sid.pid\"; if ! { [ -f \"$pf\" ] && kill -0 \"$(cat \"$pf\")\" 2>/dev/null; }; then caffeinate -dimsu -w $PPID >/dev/null 2>&1 & echo $! > \"$pf\"; fi",
+            "async": true
+          }
+        ]
+      }
+    ],
     "Stop": [
       {
         "hooks": [
@@ -64,6 +75,14 @@
             "type": "command",
             "command": "make yo 2>/dev/null || true",
             "async": true
+          }
+        ]
+      },
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "sid=$(jq -r '.session_id // \"default\"'); pf=\"/tmp/claude-caffeinate-$sid.pid\"; [ -f \"$pf\" ] && kill \"$(cat \"$pf\")\" 2>/dev/null; rm -f \"$pf\""
           }
         ]
       }
