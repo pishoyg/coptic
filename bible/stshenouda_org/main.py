@@ -58,11 +58,11 @@ _LANGUAGES: list[Language] = [
 # Single-letter key per language, used as the column header in the search
 # results table. Ideally, you should keep in sync with the dialect keys in the
 # TypeScript. The keys are fairly static, so this will likely never change.
-def _lang_key(lang: Language) -> str:
+def _key(lang: Language) -> str:
     return "P" if lang == "DialectP" else lang[0]
 
 
-ensure.unique(map(_lang_key, _LANGUAGES))
+ensure.unique(map(_key, _LANGUAGES))
 
 _VERSE_PREFIX: re.Pattern[str] = re.compile(r"^\((.*?)\)")
 
@@ -660,7 +660,8 @@ class HTMLBuilder:
         yield '<table id="results" class="results"><thead><tr>'
         yield '<th style="width: 10%;"></th>'
         for lang in _LANGUAGES:
-            yield f'<th class="{lang}">{_lang_key(lang)}</th>'
+            k: str = _key(lang)
+            yield f'<th class="{k}">{k}</th>'
         yield "</tr></thead>"
         yield "<tbody><!-- Search results will be appended here. --></tbody>"
         yield "</table>"
@@ -929,7 +930,7 @@ class TableBuilder(HTMLBuilder):
         self,
         lang: Language,
     ) -> abc.Generator[str]:
-        yield f'<td class="language {lang}">'
+        yield f'<td class="language {_key(lang)}">'
 
     @typing.override
     def lang_end(self, lang: Language) -> abc.Generator[str]:  # dead: disable
@@ -959,8 +960,8 @@ def main():
         [],
         [
             xooxle.Capture(
-                lang,
-                xooxle.Selector({"class_": lang}, False),
+                _key(lang),
+                xooxle.Selector({"class_": _key(lang)}, False),
                 {RED, BLUE},
             )
             for lang in _LANGUAGES
