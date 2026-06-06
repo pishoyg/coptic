@@ -5,8 +5,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noimageindex">
+  <link href="style.css" rel="stylesheet" type="text/css">
   <link href="bible.css" rel="stylesheet" type="text/css">
   <link href="../collapse.css" rel="stylesheet" type="text/css">
+  <link href="../xooxle.css" rel="stylesheet" type="text/css">
+  <link href="../tooltip.css" rel="stylesheet" type="text/css">
   <link href="/style.css" rel="stylesheet" type="text/css">
   <link href="/img/icon/icon-circle.png" rel="icon" type="image/x-icon">
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-VCVZFDFZR3"></script>
@@ -20,9 +23,62 @@
   <script src="bible.js" type="module"></script>
 </head>
 <body class="bible">
-  <h1>ⲡⲓϪⲱⲙ ⲉⲑⲞⲩⲁⲃ | Coptic Bible</h1>
+  <h1>ⲡⲓϪⲱⲙ ⲉⲑⲞⲩⲁⲃ</h1>
+
+  <table id="xooxle">
+    <tbody>
+      <tr>
+        <td id="search-box-td"><input id="search-box" autocapitalize="off" autocomplete="off" autocorrect="off" placeholder="Search" spellcheck="false" type="text">
+        </td>
+        <td id="keyboard-td">
+          <a id="keyboard" href="/keyboard.html" target="_blank">⌨️ Keyboard</a>
+        </td>
+        <td>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 
   <table>
+    <tr>
+      <td id="dialects">
+        <div id="dialects-button">
+          Languages ▾
+        </div>
+        <span id="checkboxes">Highlight Languages:&nbsp;<!--Dialect checkboxes go here.--></span>
+      </td>
+      <td id="full-word-checkbox-td"><label for="full-word-checkbox"><input id="full-word-checkbox" type="checkbox"> Full-Word</label>
+      </td>
+      <td id="case-sensitive-checkbox-td"><label for="case-sensitive-checkbox"><input id="case-sensitive-checkbox" type="checkbox"> Case</label>
+      </td>
+      <td id="regex-checkbox-td"><label for="regex-checkbox"><input id="regex-checkbox" type="checkbox">RegEx</label>
+      </td>
+    </tr>
+  </table>
+
+  <p id="message"><!--Placeholder for warnings and messages.-->
+  </p>
+
+  <table id="results" class="results">
+    <thead>
+      <tr>
+        <th style="width: 10%;">
+        </th>
+        <th class="B">B</th>
+        <th class="S">S</th>
+        <th class="F">F</th>
+        <th class="A">A</th>
+        <th class="E">E</th>
+        <th class="G">G</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <!-- Search results will be appended here. -->
+    </tbody>
+  </table>
+
+  <table class="book-index">
     <tr>
       <td>
         <h4 id="genesis" class="collapse index-book-name">Genesis</h4>
