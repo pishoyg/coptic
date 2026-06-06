@@ -1,6 +1,7 @@
 /** Package dialect defines dialect handling logic. */
 import * as str from './str.js';
 import * as html from './html.js';
+import * as tool from './tooltip.js';
 
 const SEPARATOR = ',';
 
@@ -26,6 +27,11 @@ export enum Article {
   // Not Coptic dialects, but added for completion.
   ENGLISH = 'https://en.wikipedia.org/wiki/English_language',
   GREEK = 'https://en.wikipedia.org/wiki/Koine_Greek',
+}
+
+export interface Control {
+  label: HTMLLabelElement;
+  checkbox: HTMLInputElement;
 }
 
 /**
@@ -58,6 +64,32 @@ export class Dialect<C extends string, N extends string, K extends string> {
     checkbox.type = 'checkbox';
     checkbox.name = this.code; // The code is used for state control.
     return checkbox;
+  }
+
+  /**
+   * @param verbose - Selects the flavor of label to build:
+   * - `true`: A checkbox followed by the full title: `(code) Dialect Name`.
+   *   Suited for roomy layouts. No tooltip is attached.
+   * - `false`: A checkbox followed by the compact siglum, with the dialect's
+   *   anchored name attached as a tooltip.
+   * - `null`: A checkbox followed by the dialect name, with a link to the
+   *   article if available. No tooltip is attached.
+   * @returns The `<label>` wrapping a fresh state-control checkbox for this
+   * dialect, along with that checkbox.
+   */
+  public control(verbose?: boolean): Control {
+    const label: HTMLLabelElement = document.createElement('label');
+    const checkbox: HTMLInputElement = this.checkbox();
+    label.append(checkbox);
+    if (verbose === true) {
+      label.append(...this.title());
+    } else if (verbose === false) {
+      label.append(this.siglum());
+      tool.addTooltip(label, Array.from(this.anchoredName()));
+    } else {
+      label.append(...this.anchoredName());
+    }
+    return { label, checkbox };
   }
 
   /**

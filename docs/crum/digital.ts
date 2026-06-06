@@ -25,6 +25,7 @@ import * as cls from './cls.js';
 import * as html from '../html.js';
 import * as query from './query.js';
 import * as mode from './mode.js';
+import type * as ddial from '../dialect.js';
 
 // NOTE: The terms "roman" and "italic" below are used to distinguish pieces of
 // text surrounded by <span> tags with the "roman" class from those that are
@@ -366,22 +367,16 @@ function addTooltipDialects(): {
   checkboxes: HTMLInputElement[];
 } {
   const button: HTMLElement = document.getElementById(id.DIALECTS_BUTTON)!;
-  const checkboxes: HTMLInputElement[] = [];
+  const controls = Object.values(dial.DIALECTS).map(
+    (d: dial.Dialect): ddial.Control => d.control(true)
+  );
   tool.addTooltip(
     button,
-    Object.values(dial.DIALECTS).map(
-      (dialect: dial.Dialect): HTMLLabelElement => {
-        const label: HTMLLabelElement = document.createElement('label');
-        const checkbox: HTMLInputElement = dialect.checkbox();
-        checkboxes.push(checkbox);
-        label.append(checkbox, ...dialect.title());
-        return label;
-      }
-    ),
+    controls.map((d: ddial.Control): HTMLLabelElement => d.label),
     [],
     'click'
   );
-  return { button, checkboxes };
+  return { button, checkboxes: controls.map((d) => d.checkbox) };
 }
 
 /**
@@ -421,20 +416,15 @@ function addCheckboxTooltips(): void {
  * @returns
  */
 function addListDialects(): HTMLInputElement[] {
-  const checkboxes: HTMLInputElement[] = [];
-  document.querySelector(`#${id.DIALECTS} #${id.CHECKBOXES}`)!.append(
-    ...Object.values(dial.DIALECTS).map(
-      (dialect: dial.Dialect): HTMLElement => {
-        const label: HTMLLabelElement = document.createElement('label');
-        const checkbox: HTMLInputElement = dialect.checkbox();
-        checkboxes.push(checkbox);
-        label.append(checkbox, dialect.siglum());
-        tool.addTooltip(label, Array.from(dialect.anchoredName()));
-        return label;
-      }
-    )
+  const controls: ddial.Control[] = Object.values(dial.DIALECTS).map(
+    (d: dial.Dialect): ddial.Control => d.control(false)
   );
-  return checkboxes;
+
+  document
+    .querySelector(`#${id.DIALECTS} #${id.CHECKBOXES}`)!
+    .append(...controls.map((d: ddial.Control): HTMLLabelElement => d.label));
+
+  return controls.map((d: ddial.Control): HTMLInputElement => d.checkbox);
 }
 
 /**
