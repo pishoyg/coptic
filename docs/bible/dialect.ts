@@ -51,6 +51,19 @@ export const DIALECTS: Dialect[] = ALL_DIALECTS.filter(
   (d: Dialect): boolean => !!document.querySelector(css.c(d.code))
 );
 
+const CODES: Set<Code> = new Set<Code>(
+  DIALECTS.map((d: Dialect): Code => d.code)
+);
+
+/**
+ *
+ * @param codes
+ * @returns
+ */
+function filter(codes?: Code[]): Code[] | undefined {
+  return codes?.filter((c: Code): boolean => CODES.has(c));
+}
+
 /**
  *
  */
@@ -61,4 +74,33 @@ export class Manager extends dial.Manager<Code> {
   public constructor() {
     super('bd');
   }
+
+  /**
+   * @returns
+   */
+  public partial(): boolean {
+    return partial(this.active());
+  }
+
+  /**
+   * @returns
+   */
+  public inactive(): Code[] | undefined {
+    const active: Code[] | undefined = filter(this.active());
+    if (!active?.length) {
+      return undefined;
+    }
+    return Array.from(CODES).filter((c: Code): boolean => !active.includes(c));
+  }
+}
+
+/**
+ * Determine whether the languages on a given page are partially active.
+ *
+ * @param active
+ * @returns
+ */
+export function partial(active: Code[] | undefined): active is Code[] {
+  active = filter(active);
+  return !!active?.length && active.length !== DIALECTS.length;
 }

@@ -76,11 +76,12 @@ class SearchResult extends xoox.SearchResult {
     // string) on every candidate. Since `filter` runs once per candidate, this
     // repeats ~31k times per search. Cache the active set once per search pass.
     const active: dial.Code[] | undefined = SearchResult.manager.active();
-    if (!active?.length || active.length === dial.DIALECTS.length) {
+    if (!dial.partial(active)) {
       return true;
     }
     return this.results.some(
-      (r) => r.match && active.includes(r.name as dial.Code)
+      (r: xoox.FieldSearchResult): boolean =>
+        r.match && active.includes(r.name as dial.Code)
     );
   }
 
@@ -134,7 +135,9 @@ class SearchResult extends xoox.SearchResult {
  */
 function addTooltipDialects(): HTMLInputElement[] {
   const button: HTMLElement = document.getElementById(ID.DIALECTS_BUTTON)!;
-  const controls: ddial.Control[] = dial.DIALECTS.map((d) => d.control(true));
+  const controls: ddial.Control[] = dial.DIALECTS.map(
+    (d: dial.Dialect): ddial.Control => d.control(true)
+  );
   tool.addTooltip(
     button,
     controls.map((d: ddial.Control): HTMLLabelElement => d.label),
@@ -152,7 +155,9 @@ function addTooltipDialects(): HTMLInputElement[] {
  * @returns The list of created checkboxes.
  */
 function addListDialects(): HTMLInputElement[] {
-  const controls: ddial.Control[] = dial.DIALECTS.map((d) => d.control(false));
+  const controls: ddial.Control[] = dial.DIALECTS.map(
+    (d: dial.Dialect): ddial.Control => d.control(false)
+  );
   document
     .querySelector(`#${ID.DIALECTS} #${ID.CHECKBOXES}`)!
     .append(...controls.map((d: ddial.Control): HTMLLabelElement => d.label));
@@ -189,9 +194,14 @@ function maybeGoToBook(): void {
  * form.
  *
  * @param x - The Xooxle search engine to drive.
+ * @param manager
  * @param highlighter
  */
-function wireSearchBox(x: xoox.Xooxle, highlighter: high.Highlighter): void {
+function wireSearchBox(
+  x: xoox.Xooxle,
+  manager: dial.Manager,
+  highlighter: high.Highlighter
+): void {
   const box: HTMLInputElement = document.getElementById(
     ID.SEARCH_BOX
   ) as HTMLInputElement;
@@ -208,7 +218,7 @@ function wireSearchBox(x: xoox.Xooxle, highlighter: high.Highlighter): void {
     // NOTE: Setting dialects triggers a search (see below), in which case this
     // listener would be triggering search twice. This is OK since calls get
     // debounced and deduplicated by Xooxle.
-    if (highlighter.partial()) {
+    if (manager.partial()) {
       if (/\p{Script=Greek}/u.exec(box.value)) {
         highlighter.toggle('G', true);
       }
@@ -269,7 +279,7 @@ async function main(): Promise<void> {
   });
 
   const x: xoox.Xooxle = new xoox.Xooxle(json, form, SearchResult);
-  wireSearchBox(x, highlighter);
+  wireSearchBox(x, manager, highlighter);
 }
 
 await main();

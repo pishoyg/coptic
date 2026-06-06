@@ -16,32 +16,22 @@ export class Highlighter extends high.DialectHighlighter<dial.Code> {
    * a name representing a dialect. An n-to-1 mapping (multiple boxes per
    * dialect) is permitted.
    */
-  public constructor(manager: dial.Manager, checkboxes: HTMLInputElement[]) {
+  public constructor(
+    protected override readonly manager: dial.Manager,
+    checkboxes: HTMLInputElement[]
+  ) {
     super(new high.CSSStyler(() => this.rule()), manager, checkboxes);
   }
 
   /**
    * @returns
    */
-  public partial(): boolean {
-    return !!this.rule();
-  }
-
-  /**
-   * @returns
-   */
   private rule(): string | undefined {
-    const active: dial.Code[] | undefined = this.manager.active();
-    if (!active?.length || active.length === dial.DIALECTS.length) {
-      // Dialects are all off or all on. Nothing to do!
-      // Notice that this check is based on the list of dialects available on
-      // this page, rather than on the list of all dialects.
+    const inactive: dial.Code[] | undefined = this.manager.inactive();
+
+    if (!inactive?.length) {
       return undefined;
     }
-
-    const inactive: dial.Code[] = dial.DIALECTS.map(
-      (d: dial.Dialect): dial.Code => d.code
-    ).filter((code: dial.Code): boolean => !active.includes(code));
 
     return `${css.disjunction(...inactive)} { display: none; }`;
   }

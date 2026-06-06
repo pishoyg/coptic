@@ -961,6 +961,8 @@ class Field {
   }
 }
 
+export type { FieldSearchResult };
+
 /**
  * FieldSearchResult represents the search result of one field.
  */

@@ -139,7 +139,7 @@ function main(): void {
   // Mirrors the "nothing to do" check in `highlight.ts`: if every dialect is
   // selected or none is, no `display: none` rule is emitted, so the page
   // already shows every dialect.
-  if (highlighter.partial()) {
+  if (manager.partial()) {
     holder.click();
   }
 }
