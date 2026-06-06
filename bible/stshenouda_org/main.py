@@ -54,6 +54,17 @@ _LANGUAGES: list[Language] = [
     "Greek",
 ]
 
+_EMPTY_LANGUAGES: list[Language] = [
+    "Lycopolitan",
+    "Mesokemic",
+    "DialectP",
+    "OldBohairic",
+]
+
+_NONEMPTY_LANGUAGES: list[Language] = [
+    lang for lang in _LANGUAGES if lang not in _EMPTY_LANGUAGES
+]
+
 
 # Single-letter key per language, used as the column header in the search
 # results table. Ideally, you should keep in sync with the dialect keys in the
@@ -358,6 +369,14 @@ class Chapter(Item):
         yield self.title()
         yield "</h4>"
 
+    @typing.override
+    def __str__(self) -> str:
+        return f"{self.book} {self.num}"
+
+    @typing.override
+    def __repr__(self) -> str:
+        return self.__str__()
+
 
 class Book(Item):
     """A Bible book."""
@@ -417,6 +436,14 @@ class Book(Item):
         yield f'<h3 id="{self.id()}">'
         yield self.title()
         yield "</h3>"
+
+    @typing.override
+    def __str__(self) -> str:
+        return self.name
+
+    @typing.override
+    def __repr__(self) -> str:
+        return self.__str__()
 
 
 class Section(Item):
@@ -597,6 +624,13 @@ class HTMLBuilder:
         langs: list[Language],
     ) -> abc.Generator[str]:
         langs = [lang for lang in langs if chapter.has_lang(lang)]
+        # TODO: (#0) As of the time of writing, Psalms 134 has a verse where the
+        # English text was mistakenly populated in the Lycopolitan field,
+        # causing the error below to print exactly once. Fix the source data,
+        # and change this error into an assertion.
+        for lang in langs:
+            if lang in _EMPTY_LANGUAGES:
+                log.error(lang, "is marked as empty but has text in", chapter)
         yield from chapter.header()
         if not langs:
             return
@@ -659,7 +693,7 @@ class HTMLBuilder:
         yield _SEARCH_FORM
         yield '<table id="results" class="results"><thead><tr>'
         yield '<th style="width: 10%;"></th>'
-        for lang in _LANGUAGES:
+        for lang in _NONEMPTY_LANGUAGES:
             k: str = _key(lang)
             yield f'<th class="{k}">{k}</th>'
         yield "</tr></thead>"
@@ -964,7 +998,7 @@ def main():
                 xooxle.Selector({"class_": _key(lang)}, False),
                 {RED, BLUE},
             )
-            for lang in _LANGUAGES
+            for lang in _NONEMPTY_LANGUAGES
         ],
         _XOOXLE,
     ).build()
