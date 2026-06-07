@@ -396,4 +396,8 @@ repos:
         language: system
         types: [file]
         files: ^(docs|test)/.*
+        # Playwright uses JavaScript, and TypeScript changes are irrelevant for
+        # Playwright tests. We exclude them to speed up the pre-commit run
+        # during TypeScript development.
+        exclude: .*\.ts$
         pass_filenames: false
