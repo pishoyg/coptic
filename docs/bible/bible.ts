@@ -48,6 +48,28 @@ const ID = {
 const FRAGMENT_CONTEXT = 4;
 
 /**
+ * When the user types a character whose script matches `re` while all `codes`
+ * are inactive, toggle `code ?? codes[0]` so its text becomes visible.
+ */
+interface ScriptToggle {
+  codes: dial.Code[];
+  code?: dial.Code;
+  re: RegExp;
+}
+
+const SCRIPT_TOGGLES: ScriptToggle[] = [
+  { codes: ['E'], re: /\p{Script=Latin}/u },
+  { codes: ['G'], re: /\p{Script=Greek}/u },
+  {
+    // If all Coptic dialects are inactive and the user types a Coptic
+    // character, toggle our favorite Coptic dialect.
+    codes: dial.DIALECTS.filter((d) => d.coptic).map((d) => d.code),
+    code: dial.DEFAULT,
+    re: /\p{Script=Coptic}/u,
+  },
+];
+
+/**
  * Bible-specific search result. The candidate key is a relative URL
  * (e.g. `genesis_1.html#v1`).
  */
@@ -115,16 +137,16 @@ class SearchResult extends xoox.SearchResult {
   }
 
   /**
-   * @returns A one-element bucket key: 0 if the verse has visible Coptic text,
+   * @returns A one-element key: 0 if the verse has visible Coptic text,
    * else 1. Equal keys compare equal, so the stable sort preserves scriptural
    * (book/chapter/verse) order within each bucket — what we want for the Bible.
    */
-  public override compareKeyAux(): number[] {
+  protected override compareKeyAux(): number[] {
     return [
       this.results.find(
-        (r: xoox.FieldSearchResult): boolean =>
+        (r: xoox.FieldSearchResult) =>
           r.textLength > 0 &&
-          dial.isCoptic(r.name as dial.Code) &&
+          dial.find(r.name as dial.Code)?.coptic &&
           !SearchResult.inactive?.includes(r.name as dial.Code)
       )
         ? 0
@@ -221,18 +243,32 @@ function wireSearchBox(
     // query and book parameter wouldn't render properly.
     browser.setParams({ [paths.QUERY_PARAM]: box.value, [BOOK_PARAM]: null });
 
+    x.search();
+  });
+
+  box.addEventListener('keydown', (e: KeyboardEvent) => {
+    if (e.ctrlKey || e.metaKey || e.key.length !== 1) {
+      // This is a special key.
+      return;
+    }
+
+    const inactive: dial.Code[] | undefined = manager.inactive();
+    if (!inactive?.length) {
+      // All languages are active.
+      return;
+    }
+
     // NOTE: Setting dialects triggers a search (see below), in which case this
     // listener would be triggering search twice. This is OK since calls get
     // debounced and deduplicated by Xooxle.
-    const inactive: dial.Code[] | undefined = manager.inactive();
-    if (inactive?.includes('G') && /\p{Script=Greek}/u.exec(box.value)) {
-      highlighter.toggle('G', true);
+    for (const toggle of SCRIPT_TOGGLES) {
+      if (
+        toggle.re.test(e.key) &&
+        toggle.codes.every((c: dial.Code): boolean => inactive.includes(c))
+      ) {
+        highlighter.toggle(toggle.code ?? toggle.codes[0]!, true);
+      }
     }
-    if (inactive?.includes('E') && /\p{Script=Latin}/u.exec(box.value)) {
-      highlighter.toggle('E', true);
-    }
-
-    x.search();
   });
 
   document.addEventListener(ddial.EVENT, () => {

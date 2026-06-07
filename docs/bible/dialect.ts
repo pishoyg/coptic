@@ -16,6 +16,8 @@ export type DIALECT =
 
 export type Code = 'B' | 'S' | 'F' | 'A' | 'L' | 'M' | 'P' | 'O' | 'E' | 'G';
 
+export const DEFAULT: Code = 'B';
+
 /**
  *
  */
@@ -62,12 +64,14 @@ const CODES: Set<Code> = new Set<Code>(
 );
 
 /**
+ * NOTE: We intentionally restrict search to dialects within this page. Other
+ * dialects are always irrelevant.
  *
  * @param code
  * @returns
  */
-export function isCoptic(code: Code): boolean {
-  return !!ALL_DIALECTS.find((d: Dialect): boolean => d.code === code)?.coptic;
+export function find(code: Code): Dialect | undefined {
+  return DIALECTS.find((d) => d.code === code);
 }
 
 /**
