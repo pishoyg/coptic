@@ -3,6 +3,11 @@
   table-layout: fixed; /* Equal-width columns. */
 }
 
+h1 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 .book-index td {
   vertical-align: top;
   padding: 10px 30px;
