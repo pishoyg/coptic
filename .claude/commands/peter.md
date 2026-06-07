@@ -1,6 +1,6 @@
 ---
 description: Review changes the way Peter would — correctness, elegance, design
-argument-hint: "[commit range | SHA | nothing for working tree]"
+argument-hint: "[commit range | SHA | nothing for origin/master..master]"
 allowed-tools: Bash(git status), Bash(git diff *), Bash(git log *), Bash(git show *), Bash(git branch *), Read, Glob, Grep
 ---
 
@@ -23,9 +23,9 @@ precise explanation of why and how to fix it.
 Determine the diff from `$ARGUMENTS`:
 - **A commit or range** (e.g. `HEAD~3..HEAD`, a SHA) → review `git show` /
   `git diff` for that range.
-- **Empty** → review the uncommitted and staged changes: start with
-  `git status`, then `git diff` and `git diff --staged`. If the working tree
-  is clean, fall back to reviewing the most recent commit (`git show HEAD`).
+- **Empty** → review `origin/master..master`: the commits on the local
+  branch that are not yet on the remote (`git log origin/master..master` and
+  `git diff origin/master..master`).
 
 First gather the full diff. Then **read the surrounding code** — Peter never
 reviews a diff in isolation. He reads the functions the change touches, the
