@@ -768,19 +768,17 @@ export class SearchResult extends AggregateResult {
   }
 
   /**
-   * Construct a key used to compare search results.
-   *
    * TODO: (#0) This heuristic was conceived by experimentation. Its optimality
    * is unproven, and we should perhaps revisit it.
    *
-   * @returns the comparison key.
+   * @returns
    */
-  public compareKey(): number[] {
+  protected compareKeyAux(): number[] {
     const boundaries: Boundary[] = this.results.map(
       (r: FieldSearchResult): Boundary => r.boundary()
     );
     const boundary: Boundary = AggregateResult.boundary(...boundaries);
-    return (this.compareKeyMemo ??= [
+    return [
       this.layer,
       // Results are sorted based on the boundary type.
       // See the Boundary enum for the order.
@@ -825,7 +823,16 @@ export class SearchResult extends AggregateResult {
           (r) => r.matches[0]?.start ?? Number.MAX_SAFE_INTEGER
         )
       ),
-    ]);
+    ];
+  }
+
+  /**
+   * Construct a key used to compare search results.
+   *
+   * @returns the comparison key.
+   */
+  public compareKey(): number[] {
+    return (this.compareKeyMemo ??= this.compareKeyAux());
   }
 
   /**

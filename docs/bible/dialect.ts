@@ -25,23 +25,29 @@ export class Dialect extends dial.Dialect<Code, DIALECT, Code> {
    * @param code
    * @param name
    * @param article
+   * @param coptic
    */
-  public constructor(code: Code, name: DIALECT, article: dial.Article) {
+  public constructor(
+    code: Code,
+    name: DIALECT,
+    article: dial.Article,
+    public readonly coptic: boolean
+  ) {
     super(code, name, article, code);
   }
 }
 
 const ALL_DIALECTS: Dialect[] = [
-  new Dialect('B', 'Bohairic', dial.Article.BOHAIRIC),
-  new Dialect('S', 'Sahidic', dial.Article.SAHIDIC),
-  new Dialect('F', 'Fayyumic', dial.Article.FAYYUMIC),
-  new Dialect('A', 'Akhmimic', dial.Article.AKHMIMIC),
-  new Dialect('L', 'Lycopolitan', dial.Article.LYCOPOLITAN),
-  new Dialect('M', 'Mesokemic', dial.Article.MESOKEMIC),
-  new Dialect('P', 'DialectP', dial.Article.PROTO_THEBAN),
-  new Dialect('O', 'OldBohairic', dial.Article.OLD_COPTIC),
-  new Dialect('E', 'English', dial.Article.ENGLISH),
-  new Dialect('G', 'Greek', dial.Article.GREEK),
+  new Dialect('B', 'Bohairic', dial.Article.BOHAIRIC, true),
+  new Dialect('S', 'Sahidic', dial.Article.SAHIDIC, true),
+  new Dialect('F', 'Fayyumic', dial.Article.FAYYUMIC, true),
+  new Dialect('A', 'Akhmimic', dial.Article.AKHMIMIC, true),
+  new Dialect('L', 'Lycopolitan', dial.Article.LYCOPOLITAN, true),
+  new Dialect('M', 'Mesokemic', dial.Article.MESOKEMIC, true),
+  new Dialect('P', 'DialectP', dial.Article.PROTO_THEBAN, true),
+  new Dialect('O', 'OldBohairic', dial.Article.OLD_COPTIC, true),
+  new Dialect('E', 'English', dial.Article.ENGLISH, false),
+  new Dialect('G', 'Greek', dial.Article.GREEK, false),
 ];
 
 // DIALECTS bears the dialects present in this page.
@@ -57,11 +63,11 @@ const CODES: Set<Code> = new Set<Code>(
 
 /**
  *
- * @param codes
+ * @param code
  * @returns
  */
-function filter(codes?: Code[]): Code[] | undefined {
-  return codes?.filter((c: Code): boolean => CODES.has(c));
+export function isCoptic(code: Code): boolean {
+  return !!ALL_DIALECTS.find((d: Dialect): boolean => d.code === code)?.coptic;
 }
 
 /**
@@ -77,30 +83,24 @@ export class Manager extends dial.Manager<Code> {
 
   /**
    * @returns
-   */
-  public partial(): boolean {
-    return partial(this.active());
-  }
-
-  /**
-   * @returns
+   * NOTE: Unlike the `active` method, this method returns the list of inactive
+   * languages that are actually present on this page. Languages that are absent
+   * from this page are excluded.
+   * Another distinction is that an empty or undefined array implies that no
+   * languages are inactive, while an empty or undefined `active` array
+   * implies that all languages are active.
+   *
+   * TODO: (#0) Try to privatize or omit the `active` method somehow, as it
+   * includes languages that are absent from the page, which could be
+   * problematic.
    */
   public inactive(): Code[] | undefined {
-    const active: Code[] | undefined = filter(this.active());
-    if (!active?.length) {
-      return undefined;
-    }
-    return Array.from(CODES).filter((c: Code): boolean => !active.includes(c));
+    const active: Code[] | undefined = this.active();
+    const inactive: Code[] = Array.from(CODES).filter(
+      (c: Code): boolean => !active?.includes(c)
+    );
+    return inactive.length && inactive.length !== DIALECTS.length
+      ? inactive
+      : undefined;
   }
-}
-
-/**
- * Determine whether the languages on a given page are partially active.
- *
- * @param active
- * @returns
- */
-export function partial(active: Code[] | undefined): active is Code[] {
-  active = filter(active);
-  return !!active?.length && active.length !== DIALECTS.length;
 }

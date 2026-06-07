@@ -52,12 +52,8 @@ const FRAGMENT_CONTEXT = 4;
  * (e.g. `genesis_1.html#v1`).
  */
 class SearchResult extends xoox.SearchResult {
-  // The active dialect set and whether it's a partial selection are computed
-  // once per search and cached.
-  // `active` re-reads localStorage (and splits the stored string), so computing
-  // it for every candidate would repeat the work ~31k times per search.
-  private static active: dial.Code[] | undefined;
-  private static partial = false;
+  // The inactive dialect set is computed once per search and cached.
+  private static inactive: dial.Code[] | undefined;
 
   /**
    * @param manager - The dialect manager whose active dialect set drives
@@ -65,8 +61,7 @@ class SearchResult extends xoox.SearchResult {
    */
   public static init(manager: dial.Manager): void {
     document.addEventListener(xoox.EVENT, (): void => {
-      SearchResult.active = manager.active();
-      SearchResult.partial = dial.partial(SearchResult.active);
+      SearchResult.inactive = manager.inactive();
     });
   }
 
@@ -81,13 +76,9 @@ class SearchResult extends xoox.SearchResult {
    * @returns
    */
   public override filter(): boolean {
-    if (!SearchResult.partial) {
-      // All dialects are on. No filtering.
-      return true;
-    }
     return this.results.some(
       (r: xoox.FieldSearchResult): boolean =>
-        r.match && SearchResult.active!.includes(r.name as dial.Code)
+        r.match && !SearchResult.inactive?.includes(r.name as dial.Code)
     );
   }
 
@@ -124,12 +115,21 @@ class SearchResult extends xoox.SearchResult {
   }
 
   /**
-   * @returns - Empty key => all results compare equal => the stable sort
-   * preserves the candidates' scriptural (book/chapter/verse) order, which is
-   * what we want for the Bible rather than relevance ranking.
+   * @returns A one-element bucket key: 0 if the verse has visible Coptic text,
+   * else 1. Equal keys compare equal, so the stable sort preserves scriptural
+   * (book/chapter/verse) order within each bucket — what we want for the Bible.
    */
-  public override compareKey(): number[] {
-    return [];
+  public override compareKeyAux(): number[] {
+    return [
+      this.results.find(
+        (r: xoox.FieldSearchResult): boolean =>
+          r.textLength > 0 &&
+          dial.isCoptic(r.name as dial.Code) &&
+          !SearchResult.inactive?.includes(r.name as dial.Code)
+      )
+        ? 0
+        : 1,
+    ];
   }
 }
 
@@ -224,13 +224,12 @@ function wireSearchBox(
     // NOTE: Setting dialects triggers a search (see below), in which case this
     // listener would be triggering search twice. This is OK since calls get
     // debounced and deduplicated by Xooxle.
-    if (manager.partial()) {
-      if (/\p{Script=Greek}/u.exec(box.value)) {
-        highlighter.toggle('G', true);
-      }
-      if (/\p{Script=Latin}/u.exec(box.value)) {
-        highlighter.toggle('E', true);
-      }
+    const inactive: dial.Code[] | undefined = manager.inactive();
+    if (inactive?.includes('G') && /\p{Script=Greek}/u.exec(box.value)) {
+      highlighter.toggle('G', true);
+    }
+    if (inactive?.includes('E') && /\p{Script=Latin}/u.exec(box.value)) {
+      highlighter.toggle('E', true);
     }
 
     x.search();
