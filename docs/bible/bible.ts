@@ -95,9 +95,9 @@ class SearchResult extends xoox.SearchResult {
    * @returns
    */
   public override fragment(): string | undefined {
-    return this.key.includes('#')
-      ? undefined
-      : super.fragment(FRAGMENT_CONTEXT);
+    // NOTE: The link usually contains a verse anchor. It's harmless next to the
+    // fragment.
+    return super.fragment(FRAGMENT_CONTEXT);
   }
 
   /**
