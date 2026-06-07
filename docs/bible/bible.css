@@ -104,6 +104,10 @@ hr {
 }
 
 #results {
+  &:not(:has(tbody tr)) {
+    display: none;
+  }
+
   /* Hide dialect columns in the search table if they're empty.
    * NOTE: As of the time of writing, we only have 6 language columns in the
    * table (columns 2 through 7). While our source data contains placeholders
