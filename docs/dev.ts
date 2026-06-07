@@ -42,6 +42,16 @@ export function browser(): boolean {
 }
 
 /**
+ * @returns Whether we are running under a test harness: either directly on
+ * Node.js (unit tests) or in a Playwright-controlled browser (E2E tests).
+ *
+ * Playwright sets `navigator.webdriver` to true in the browsers it drives.
+ */
+export function test(): boolean {
+  return node() || (typeof navigator !== 'undefined' && navigator.webdriver);
+}
+
+/**
  * @returns Whether developer mode is active.
  */
 export function get(): boolean {
@@ -104,13 +114,13 @@ export class Highlighter extends high.Highlighter {
 }
 
 /**
- * If running in Playwright or developer mode, execute the given function.
- * Otherwise, do nothing and return undefined.
+ * If running under a test harness (see `test`) or in developer mode, execute
+ * the given function. Otherwise, do nothing and return undefined.
  *
  * @param f
  * @returns
  *
  */
 export function play<T>(f: () => T): T | undefined {
-  return node() || get() || window.isPlaywright ? f() : undefined;
+  return test() || get() ? f() : undefined;
 }

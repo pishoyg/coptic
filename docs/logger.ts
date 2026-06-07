@@ -73,21 +73,21 @@ export function warn(...message: unknown[]): void {
 // Cheaper validations are OK to execute outside developer mode.
 
 /**
- * Log an error message, or throw an exception if under Playwright.
+ * Log an error message, or throw an exception if under test.
  *
- * - If this is a Playwright test, throw an exception.
+ * - If this is a test (unit or Playwright; see `dev.test`), throw an exception.
  * - If this is a user session, simply log an error message to the console.
  *
  * Use the `error` method to report errors, and add graceful recovery logic
  * following the error message. In a production environment, the function would
  * log the message, and the recovery code would be executed.
- * However, in a Playwright test, an exception would be thrown, alerting us to
- * the error and giving us an opportunity to fix it.
+ * However, under test, an exception would be thrown, alerting us to the error
+ * and giving us an opportunity to fix it.
  *
  * @param {...any} message - Message to log.
  */
 export function error(...message: unknown[]): void {
-  print(Colors.RED, Colors.PURPLE, 'error', window.isPlaywright, ...message);
+  print(Colors.RED, Colors.PURPLE, 'error', dev.test(), ...message);
 }
 
 /**

@@ -5,7 +5,6 @@ import * as play from '@playwright/test';
 import * as cls from '../docs/crum/cls.js';
 import * as paths from '../docs/paths.js';
 import * as css from '../docs/css.js';
-import * as base from './base.js';
 
 const TEST_CASES: {
   key: string;
@@ -170,9 +169,9 @@ const TEST_CASES: {
   },
 ];
 
-base.test.describe('Wiki Enrichment', () => {
+play.test.describe('Wiki Enrichment', () => {
   for (const testCase of TEST_CASES) {
-    base.test(
+    play.test(
       `Inserts the correct number of objects on '${testCase.key}'.`,
       async ({ page }: { page: play.Page }): Promise<void> => {
         await page.goto(paths.crum(testCase.key), {
@@ -191,8 +190,8 @@ base.test.describe('Wiki Enrichment', () => {
   }
 });
 
-base.test.describe('Copy Wiki Entry Text', () => {
-  base.test(
+play.test.describe('Copy Wiki Entry Text', () => {
+  play.test(
     "Copies the entry text to the clipboard on '28'.",
     async ({
       page,

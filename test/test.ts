@@ -2,8 +2,7 @@
  * Ensure website pages load correctly.
  */
 
-import type * as play from '@playwright/test';
-import * as base from './base.js';
+import * as play from '@playwright/test';
 
 /**
  * PAGES_TO_TEST defines the list of site pages to test.
@@ -25,8 +24,21 @@ const PAGES_TO_TEST: string[] = [
   '/crum?mode=dawoud&query=18', // Dawoud scan, landed on a page
 ];
 
+// Our test-environment detection relies on `navigator.webdriver` being true
+// under Playwright. If Playwright ever stopped setting it, detection would
+// silently evaluate to false in E2E runs, disabling many sanity checks and the
+// error-throwing behavior. This test guards against that regression.
+play.test(
+  'navigator.webdriver is set under Playwright',
+  async ({ page }: { page: play.Page }): Promise<void> => {
+    await page.goto('/');
+    const webdriver = await page.evaluate((): boolean => navigator.webdriver);
+    play.expect(webdriver).toBe(true);
+  }
+);
+
 PAGES_TO_TEST.forEach((path: string): void => {
-  base.test(
+  play.test(
     `loads ${path} without errors`,
     async ({ page }: { page: play.Page }): Promise<void> => {
       // Block known trackers to prevent them from triggering listeners
