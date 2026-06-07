@@ -52,13 +52,22 @@ const FRAGMENT_CONTEXT = 4;
  * (e.g. `genesis_1.html#v1`).
  */
 class SearchResult extends xoox.SearchResult {
-  private static manager: dial.Manager;
+  // The active dialect set and whether it's a partial selection are computed
+  // once per search and cached.
+  // `active` re-reads localStorage (and splits the stored string), so computing
+  // it for every candidate would repeat the work ~31k times per search.
+  private static active: dial.Code[] | undefined;
+  private static partial = false;
 
   /**
-   * @param manager - The dialect manager used by bucket sorting.
+   * @param manager - The dialect manager whose active dialect set drives
+   * filtering.
    */
   public static init(manager: dial.Manager): void {
-    SearchResult.manager = manager;
+    document.addEventListener(xoox.EVENT, (): void => {
+      SearchResult.active = manager.active();
+      SearchResult.partial = dial.partial(SearchResult.active);
+    });
   }
 
   /**
@@ -72,16 +81,13 @@ class SearchResult extends xoox.SearchResult {
    * @returns
    */
   public override filter(): boolean {
-    // TODO: (#445) `active()` re-reads localStorage (and splits the stored
-    // string) on every candidate. Since `filter` runs once per candidate, this
-    // repeats ~31k times per search. Cache the active set once per search pass.
-    const active: dial.Code[] | undefined = SearchResult.manager.active();
-    if (!dial.partial(active)) {
+    if (!SearchResult.partial) {
+      // All dialects are on. No filtering.
       return true;
     }
     return this.results.some(
       (r: xoox.FieldSearchResult): boolean =>
-        r.match && active.includes(r.name as dial.Code)
+        r.match && SearchResult.active!.includes(r.name as dial.Code)
     );
   }
 

@@ -62,6 +62,12 @@ const RESULTS_TO_UPDATE_DISPLAY = 20;
 const INPUT_DEBOUNCE_TIMEOUT = 200;
 
 /**
+ * EVENT is the name of the event that Xooxle dispatches on `document` whenever
+ * a new search starts. Consumers can listen for it to perform per-search setup.
+ */
+export const EVENT = 'xooxle-search';
+
+/**
  * PER_PAGE is the maximum number of results to display per page.
  */
 const PER_PAGE: number = ((): number => {
@@ -1477,6 +1483,9 @@ export class Xooxle {
    * Handle the search query, aborting any ongoing search.
    */
   private async searchAux(): Promise<void> {
+    // Announce that a new search is starting.
+    document.dispatchEvent(new Event(EVENT));
+
     // If there is an ongoing search, abort it.
     this.currentAbortController?.abort();
     const abortController: AbortController = new AbortController();
