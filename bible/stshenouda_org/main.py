@@ -3,7 +3,6 @@
 
 # NOTE: As a general convention, methods ending with _aux return generators,
 # rather than string literals.
-import collections
 import html
 import json
 import os
@@ -76,6 +75,30 @@ def _key(lang: Language) -> str:
 ensure.unique(map(_key, _LANGUAGES))
 
 _VERSE_PREFIX: re.Pattern[str] = re.compile(r"^\((.*?)\)")
+
+# The `verseNumber` field generally has the format:
+#   "${BOOK} ${CHAPTER}:${VERSE}".
+# Some single-chapter books omit the "${CHAPTER}:" component.
+# Many verse-like entries don't strictly follow this format, such as chapter
+# titles and psalm titles, which are often treated as verses.
+# NOTE: Verse numbers often have a trailing lower-case character. We ignore it,
+# which results in duplicates in the output. It's preferable to have one verse
+# with a numeric number than several with an alphabetical suffix. This allows
+# standard citation formats (which exclude the suffix) to resolve.
+# The current pipeline would assign the numeric ID to the first verse, and drop
+# it from all the following ones, in order to prevent several verses from
+# possessing the same ID.
+# TODO: (#553) Stop ignoring the trailing letter.
+# TODO: (#553) Where errors are caused by typos in the raw data, change the
+# input data to fix the issue.
+_VERSE_NUMBER_RE: re.Pattern[str] = re.compile(
+    r"^(?:\d )?[A-Za-z ]+(?: (\d+[ab]?|[A-F])(?::(\d+[a-z]?)(?:-(\d+))?)?)?$",
+)
+_SHORT_VERSE_NUMBER_RE: re.Pattern[str] = re.compile(
+    # Use an empty capture group for the absent chapter number, to force the
+    # verse number to match at group 2, thus aligning with the general regex.
+    r"^(?:\d )?[A-Za-z ]+()(?: (\d+))?$",
+)
 
 
 class _CrumMapEntry(typing.TypedDict):
@@ -150,17 +173,8 @@ def _normalize(lang: Language, text: str) -> str:
 class Verse:
     """A Bible verse."""
 
-    def __init__(self, data: schema.Verse, first: bool) -> None:
+    def __init__(self, data: schema.Verse, short_vn: bool) -> None:
         self._raw: schema.Verse = data
-        self.num: str = self.__num(data)
-        if not self.num:
-            # It's often the case that a chapter contains a title
-            # at the very beginning. In such cases, there is no verse number.
-            # TODO: (#553) Handle invalid verse IDs!
-            (log.warn if first else log.error)(
-                "Unable to infer number for verse:",
-                self,
-            )
         # NOTE: Normalization must take place after recoloring, because
         # recoloring uses the original text.
         self.recolored: dict[Language, str] = {
@@ -171,9 +185,24 @@ class Verse:
             lang: _normalize(lang, _VERSE_PREFIX.sub("", data[lang]).strip())
             for lang in _LANGUAGES
         }
+        # TODO: (#553) Retain the terminating letter, and group verses with
+        # the same number together.
+        self.num: str = self._num(
+            data,
+            _SHORT_VERSE_NUMBER_RE if short_vn else _VERSE_NUMBER_RE,
+        )
+        self.num = re.sub("[a-z]$", "", self.num)
 
     def has_lang(self, lang: Language) -> bool:
         return bool(self.unnumbered[lang])
+
+    def _num(self, data: schema.Verse, regex: re.Pattern[str]) -> str:
+        if not data["verseNumber"]:
+            return ""
+        match: re.Match[str] | None = regex.fullmatch(data["verseNumber"])
+        ensure.ensure(match, "Invalid verseNumber format:", data)
+        assert match
+        return match.group(2) or ""
 
     def _recolor_aux(
         self,
@@ -217,15 +246,6 @@ class Verse:
 
     def __recolor(self, v: str, verse: schema.Verse) -> str:
         return "".join(self._recolor_aux(v, verse))
-
-    def __num(self, verse: schema.Verse) -> str:
-        t: str = verse["English"] or verse["Greek"]
-        s: re.Match[str] | None = _VERSE_PREFIX.search(t)
-        if not s:
-            return ""
-        num: str = s.group(1)
-        # TODO: (#553) Handle invalid verse IDs!
-        return num if num.isdigit() else ""
 
     @typing.override
     def __str__(self) -> str:
@@ -274,37 +294,46 @@ class Item:
 class Chapter(Item):
     """A Bible chapter."""
 
-    def __init__(self, data: schema.Chapter, book: "Book") -> None:
+    def __init__(
+        self,
+        data: schema.Chapter,
+        book: "Book",
+        short_vn: bool,
+    ) -> None:
         self.num: str = self._num(data)
-        self.verses: list[Verse] = [
-            Verse(v, i == 0) for i, v in enumerate(data["data"])
-        ]
+        self.verses: list[Verse] = [Verse(v, short_vn) for v in data["data"]]
         self._prev: Chapter | None = None
         self._next: Chapter | None = None
         self._is_first: bool = False
         self._is_last: bool = False
         self.book: Book = book
 
-        dupes: list[str] = [
-            item
-            for item, count in collections.Counter(
-                v.num for v in self.verses
-            ).items()
-            if count > 1
-        ]
+        seen: set[str] = set()
+        dupes: set[str] = set()
+        boundaries: tuple[int, int] = (0, len(self.verses) - 1)
+        for idx, v in enumerate(self.verses):
+            if not v.num:
+                (
+                    log.warn
+                    if idx in boundaries or self.id() == "psalms_118"
+                    else log.error
+                )(
+                    f"{self.book} {self.num}",
+                    "has verse with unknown number:",
+                    v,
+                )
+                continue
+            if v.num in seen:
+                dupes.add(v.num)
+                # Reset the verse number, in order to prevent duplicate IDs in
+                # the output.
+                # TODO: (#553) Reconsider handling of duplicate verse IDs.
+                v.num = ""
+                continue
+            seen.add(v.num)
+
         if dupes:
-            # TODO: (#553) Handle duplicate verse IDs!
-            log.error(
-                "Chapter",
-                self.num,
-                "in Book",
-                self.book.name,
-                "has verses with duplicate IDs",
-                dupes,
-            )
-            for v in self.verses:
-                if v.num and v.num in dupes:
-                    v.num = ""
+            log.error(self.id(), "has duplicate verse IDs:", dupes)
 
     def _num(self, data: schema.Chapter) -> str:
         return data["sectionNameEnglish"] or "1"
@@ -386,7 +415,12 @@ class Book(Item):
         self.crum: list[str] = book_info["crum"]
 
         data: list[schema.Chapter] = self._load(self.name)
-        self.chapters: list[Chapter] = [Chapter(c, self) for c in data]
+        short_vn: bool = len(data) == 1 and all(
+            ":" not in v["verseNumber"] for v in data[0]["data"]
+        )
+        self.chapters: list[Chapter] = [
+            Chapter(c, self, short_vn) for c in data
+        ]
 
     def _load(self, book_name: str) -> list[schema.Chapter]:
         try:
@@ -624,8 +658,8 @@ class HTMLBuilder:
         langs: list[Language],
     ) -> abc.Generator[str]:
         langs = [lang for lang in langs if chapter.has_lang(lang)]
-        # TODO: (#0) As of the time of writing, Psalms 134 has a verse where the
-        # English text was mistakenly populated in the Lycopolitan field,
+        # TODO: (#553) As of the time of writing, Psalms 134 has a verse where
+        # the English text was mistakenly populated in the Lycopolitan field,
         # causing the error below to print exactly once. Fix the source data,
         # and change this error into an assertion.
         for lang in langs:
@@ -973,6 +1007,7 @@ class TableBuilder(HTMLBuilder):
 
 def main():
     bible: Bible = Bible()
+
     flow_builder: FlowBuilder = FlowBuilder()
     table_builder: TableBuilder = TableBuilder()
 
