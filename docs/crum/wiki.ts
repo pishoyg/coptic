@@ -68,8 +68,14 @@ const EXCLUDE: string = css.disjunction(
  * the Book of Daniel.
  * - 'Su' refers to the chapter that St. Shenouda refers to as A.
  * - 'Bel' refers to the chapter that St. Shenouda refers to as C.
+ * - 'Dan Vis 14' refers to the chapter that St. Shenouda refers to as D.
  */
-const DAN_OVERRIDE: Record<string, string> = { Su: 'A', Bel: 'C' };
+const DAN_OVERRIDE: Record<string, string> = {
+  Su: 'A',
+  Bel: 'C',
+  'Dan Vis 14': 'D',
+  'Dan vis 14': 'D',
+};
 
 const ENRICHMENT_RE = new RegExp(
   str.regex([
