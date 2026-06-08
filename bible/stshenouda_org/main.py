@@ -79,16 +79,9 @@ _VERSE_PREFIX: re.Pattern[str] = re.compile(r"^\((.*?)\)")
 # The `verseNumber` field generally has the format:
 #   "${BOOK} ${CHAPTER}:${VERSE}".
 # Some single-chapter books omit the "${CHAPTER}:" component.
-# Many verse-like entries don't strictly follow this format, such as chapter
-# titles and psalm titles, which are often treated as verses.
-# NOTE: Verse numbers often have a trailing lower-case character. We ignore it,
-# which results in duplicates in the output. It's preferable to have one verse
-# with a numeric number than several with an alphabetical suffix. This allows
-# standard citation formats (which exclude the suffix) to resolve.
-# The current pipeline would assign the numeric ID to the first verse, and drop
-# it from all the following ones, in order to prevent several verses from
-# possessing the same ID.
-# TODO: (#553) Stop ignoring the trailing letter.
+# Many verse entries, particularly titles (specially psalm titles), which are
+# simply treated as verses, either have an empty `verseNumber` field, or have a
+# field value with a subset of the regex fields.
 # TODO: (#553) Where errors are caused by typos in the raw data, change the
 # input data to fix the issue.
 _VERSE_NUMBER_RE: re.Pattern[str] = re.compile(
@@ -185,24 +178,32 @@ class Verse:
             lang: _normalize(lang, _VERSE_PREFIX.sub("", data[lang]).strip())
             for lang in _LANGUAGES
         }
-        # TODO: (#553) Retain the terminating letter, and group verses with
-        # the same number together.
-        self.num: str = self._num(
-            data,
-            _SHORT_VERSE_NUMBER_RE if short_vn else _VERSE_NUMBER_RE,
-        )
-        self.num = re.sub("[a-z]$", "", self.num)
 
-    def has_lang(self, lang: Language) -> bool:
-        return bool(self.unnumbered[lang])
-
-    def _num(self, data: schema.Verse, regex: re.Pattern[str]) -> str:
+        self.num: str = ""
+        self.chapter: str = ""
         if not data["verseNumber"]:
-            return ""
+            return
+        regex: re.Pattern[str] = (
+            _SHORT_VERSE_NUMBER_RE if short_vn else _VERSE_NUMBER_RE
+        )
         match: re.Match[str] | None = regex.fullmatch(data["verseNumber"])
         ensure.ensure(match, "Invalid verseNumber format:", data)
         assert match
-        return match.group(2) or ""
+        self.num = match.group(2) or ""
+        # NOTE: Verse numbers often have a trailing lower-case character. We
+        # ignore it, which results in duplicates in the output. It's preferable
+        # to have one verse with a numeric number than several with an
+        # alphabetical suffix. This allows standard citation formats (which
+        # exclude the suffix) to resolve. The current pipeline would assign the
+        # numeric ID to the first verse, and drop it from all the following
+        # ones, in order to prevent several verses from possessing the same ID.
+        # TODO: (#553) Retain the terminating letter, and group verses with
+        # the same number together.
+        self.num = re.sub("[a-z]$", "", self.num)
+        self.chapter = match.group(1) or ""
+
+    def has_lang(self, lang: Language) -> bool:
+        return bool(self.unnumbered[lang])
 
     def _recolor_aux(
         self,
@@ -308,6 +309,42 @@ class Chapter(Item):
         self._is_last: bool = False
         self.book: Book = book
 
+        # Make sure we're aware of all special cases. See #524.
+        if self.num.isalpha():
+            assert self.book.name in ["Daniel", "Esther"]
+        elif self.num[-1].isalpha():
+            assert any(
+                self.id().startswith(prefix)
+                for prefix in ("jeremiah_51", "psalms_115")
+            )
+        else:
+            assert self.num.isdigit()
+
+        # NOTE: Daniel 3, in our data, hosts both Daniel 3 and Daniel B. We
+        # override the numbers to form a single sequence.
+        # P.S. This is how the book happens to be cited in Crum, although the
+        # resulting sequence seems to be aligned with Crum's up to 52 or 53,
+        # then it starts being off by 1 from 53 or 54 onward, and then being off
+        # by 2 from the late 50s or early 60s and all the way to the end!
+        # TODO: (#524) Implement this override in a cleaner, more visible
+        # location.
+        # TODO: (#524) Handle other oddly-numbered or interleaved chapters.
+        if self.id() == "daniel_3":
+            for idx, v in enumerate(self.verses[1:], 1):
+                v.num = str(idx)
+        else:
+            foreign: set[str] = {
+                v.chapter
+                for v in self.verses
+                if v.chapter and v.chapter != self.num
+            }
+            if foreign:
+                log.error(
+                    self,
+                    "contains verses from a foreign chapter:",
+                    foreign,
+                )
+
         seen: set[str] = set()
         dupes: set[str] = set()
         boundaries: tuple[int, int] = (0, len(self.verses) - 1)
@@ -327,7 +364,7 @@ class Chapter(Item):
                 dupes.add(v.num)
                 # Reset the verse number, in order to prevent duplicate IDs in
                 # the output.
-                # TODO: (#553) Reconsider handling of duplicate verse IDs.
+                # TODO: (#553) Group verses with duplicate IDs together.
                 v.num = ""
                 continue
             seen.add(v.num)
@@ -658,7 +695,7 @@ class HTMLBuilder:
         langs: list[Language],
     ) -> abc.Generator[str]:
         langs = [lang for lang in langs if chapter.has_lang(lang)]
-        # TODO: (#553) As of the time of writing, Psalms 134 has a verse where
+        # TODO: (#524) As of the time of writing, Psalms 134 has a verse where
         # the English text was mistakenly populated in the Lycopolitan field,
         # causing the error below to print exactly once. Fix the source data,
         # and change this error into an assertion.
