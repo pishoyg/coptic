@@ -1,37 +1,53 @@
 """Concurrency helpers."""
 
+import argparse
+import sys
 import types
 import typing
 from collections import abc
 from concurrent import futures
 
-from utils import env, log
+from utils import log
 
 # The following types provide executors that execute sequentially if the
-# environment variable SEQUENTIAL is set to True.
+# `--sequential` command-line flag is passed.
 # This is useful in the following situations:
 # - Comparing the latencies of sequential and concurrent execution.
 # - Profiling to find the bottlenecks, as cProfile is unable to profile child
 #   tasks.
-# NOTE: When you set the SEQUENTIAL environment variable to force sequential
-# execution for the purpose of profiling, be careful as the analysis may not
-# misleading, and may deviate substantially from the behavior observed when
-# executing concurrently.
+# NOTE: When you pass `--sequential` to force sequential execution for the
+# purpose of profiling, be careful as the analysis may be misleading, and may
+# deviate substantially from the behavior observed when executing concurrently.
 # This was found to be the case when the use of ProcessPoolExecutor in Xooxle,
 # as opposed to ThreadPoolExecutor, resulted in a degradation in performance by
 # a factor of roughly 20! Profiling was misleading, as the bottleneck could
 # only be observed when executing concurrently, and when using
 # ProcessPoolExecutor!
 # TODO: (#0) Prevent the use of futures.ProcessPoolExecutor and
-# futures.ThreadPoolExecutor directly in the code, in order for the SEQUENTIAL
-# environment variable to be respected everywhere.
+# futures.ThreadPoolExecutor directly in the code, in order for the
+# `--sequential` flag to be respected everywhere.
 
-SEQUENTIAL = env.boolean("SEQUENTIAL")
+
+def _sequential_from_argv() -> bool:
+    parser: argparse.ArgumentParser = argparse.ArgumentParser(add_help=False)
+    _ = parser.add_argument(
+        "--sequential",
+        action="store_true",
+        help="Force sequential (non-concurrent) execution.",
+    )
+    # Consume `--sequential` so importing scripts don't see (and reject) it
+    # via their own strict `parse_args`. Everything else is left untouched.
+    args, remaining = parser.parse_known_args()
+    sys.argv[1:] = remaining
+    return args.sequential
+
+
+SEQUENTIAL = _sequential_from_argv()
 if SEQUENTIAL:
     log.info(
         "Sequential execution forced by the",
-        "SEQUENTIAL",
-        "environment variable",
+        "--sequential",
+        "flag",
     )
 
 

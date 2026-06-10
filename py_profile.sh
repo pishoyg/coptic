@@ -7,10 +7,10 @@
 #
 # NOTE: While we don't take the liberty to do that for you, if your program uses
 # concurrent execution, and you want to profile the spawned tasks as well, you
-# should set the SEQUENTIAL environment variable to force sequential execution,
-# as cProfile is unable to profile concurrent code.
+# should pass the `--sequential` flag to force sequential execution, as cProfile
+# is unable to profile concurrent code.
 # This is assuming that your script uses our concurrency primitives, which
-# respect this environment variable.
+# respect this flag.
 
 set -o errexit  # Exit upon encountering a failure.
 set -o nounset  # Consider an undefined variable to be an error.
