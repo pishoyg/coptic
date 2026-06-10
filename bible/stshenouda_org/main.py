@@ -1005,6 +1005,7 @@ class TableBuilder(HTMLBuilder):
     ) -> abc.Generator[str]:
         del chapter
         yield '<table class="verses">'
+        yield "<tbody>"
 
     @typing.override
     def chapter_end(
@@ -1012,6 +1013,7 @@ class TableBuilder(HTMLBuilder):
         chapter: Chapter,  # dead: disable
     ) -> abc.Generator[str]:
         del chapter
+        yield "</tbody>"
         yield "</table>"
 
     @typing.override
