@@ -3,6 +3,7 @@
 
 # NOTE: As a general convention, methods ending with _aux return generators,
 # rather than string literals.
+import argparse
 import html
 import json
 import os
@@ -547,9 +548,8 @@ class Bible:
             Testament(name, data) for name, data in bible_data.items()
         ]
         self.__link_chapters()
-        self.__write_crum_map()
 
-    def __write_crum_map(self) -> None:
+    def write_crum_map(self) -> None:
         # NOTE: Crum didn't explicitly list all Biblical book abbreviations.
         # Particularly:
         # - Joel and Jude are not listed, perhaps because he uses their full
@@ -1043,14 +1043,29 @@ class TableBuilder(HTMLBuilder):
 
 
 def main():
+    parser: argparse.ArgumentParser = argparse.ArgumentParser(
+        description=__doc__,
+    )
+    _ = parser.add_argument(
+        "--validate",
+        action="store_true",
+        help="Exit after building the Bible without writing any artifacts.",
+    )
+    args: argparse.Namespace = parser.parse_args()
+
     bible: Bible = Bible()
 
     flow_builder: FlowBuilder = FlowBuilder()
     table_builder: TableBuilder = TableBuilder()
 
+    if args.validate:
+        return
+
     flow_builder.write("epub", bible, ["Bohairic", "English"], "1")
     table_builder.write("epub", bible, ["Bohairic", "English"], "2")
     table_builder.write("html", bible, _LANGUAGES, "")
+
+    bible.write_crum_map()
 
     # TODO: (#0) Verse HTML gets generated twice. Consider deduplicating it,
     # somehow, to slightly speed up the code.
