@@ -1,10 +1,47 @@
 """Logging and error checking / reporting helpers."""
 
+import argparse
+import enum
 import os
 import pathlib
+import sys
 import typing
 
 import colorama
+
+
+class Level(enum.IntEnum):
+    """Logging severity levels, ordered from least to most severe."""
+
+    INFO = 0
+    WARN = 1
+    ERROR = 2
+    FATAL = 3  # dead: disable
+
+
+def _level_from_argv() -> Level:
+    parser: argparse.ArgumentParser = argparse.ArgumentParser(add_help=False)
+    _ = parser.add_argument(
+        "--log",
+        type=lambda name: Level[name.upper()],
+        default=Level.INFO,
+        metavar="LEVEL",
+        help="Minimum severity to log; one of: "
+        + ", ".join(level.name.lower() for level in Level),
+    )
+    # Consume `--log` so importing scripts don't see (and reject) it via
+    # their own strict `parse_args`. Everything else is left untouched.
+    args, remaining = parser.parse_known_args()
+    sys.argv[1:] = remaining
+    return args.log
+
+
+# The minimum severity that gets logged. Messages below this level are
+# silently dropped. Shared by all scripts importing this package.
+#
+# Controlled by the `--log` command-line flag (e.g. `--log error`), read from
+# any importing script's command line.
+_LEVEL: Level = _level_from_argv()
 
 
 def _print(
@@ -42,6 +79,8 @@ def info(*args: object, level: bool = True):
         level: Whether to prepend the level to the message.
 
     """
+    if _LEVEL > Level.INFO:
+        return
     _print(
         colorama.Fore.GREEN,
         colorama.Fore.BLUE,
@@ -58,6 +97,8 @@ def warn(*args: object, level: bool = True):
         level: Whether to prepend the level to the message.
 
     """
+    if _LEVEL > Level.WARN:
+        return
     _print(
         colorama.Fore.YELLOW,
         colorama.Fore.CYAN,
@@ -74,6 +115,8 @@ def error(*args: object, level: bool = True):
         level: Whether to prepend the level to the message.
 
     """
+    if _LEVEL > Level.ERROR:
+        return
     _print(
         colorama.Fore.RED,
         colorama.Fore.MAGENTA,
