@@ -112,6 +112,9 @@ td:hover .language-copy {
   cursor: pointer;
 }
 
-:target.verse {
-  background-color: var(--anchor-highlight);
+.verse,
+.verse-group {
+  &:target {
+    background-color: var(--anchor-highlight);
+  }
 }

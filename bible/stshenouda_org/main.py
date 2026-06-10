@@ -5,6 +5,7 @@
 # rather than string literals.
 import argparse
 import html
+import itertools
 import json
 import os
 import pathlib
@@ -83,8 +84,6 @@ _VERSE_PREFIX: re.Pattern[str] = re.compile(r"^\((.*?)\)")
 # Many verse entries, particularly titles (specially psalm titles), which are
 # simply treated as verses, either have an empty `verseNumber` field, or have a
 # field value with a subset of the regex fields.
-# TODO: (#553) Where errors are caused by typos in the raw data, change the
-# input data to fix the issue.
 _VERSE_NUMBER_RE: re.Pattern[str] = re.compile(
     r"^(?:\d )?[A-Za-z ]+(?: (\d+[ab]?|[A-F])(?::(\d+[a-z]?)(?:-(\d+))?)?)?$",
 )
@@ -191,17 +190,19 @@ class Verse:
         ensure.ensure(match, "Invalid verseNumber format:", data)
         assert match
         self.num = match.group(2) or ""
-        # NOTE: Verse numbers often have a trailing lower-case character. We
-        # ignore it, which results in duplicates in the output. It's preferable
-        # to have one verse with a numeric number than several with an
-        # alphabetical suffix. This allows standard citation formats (which
-        # exclude the suffix) to resolve. The current pipeline would assign the
-        # numeric ID to the first verse, and drop it from all the following
-        # ones, in order to prevent several verses from possessing the same ID.
-        # TODO: (#553) Retain the terminating letter, and group verses with
-        # the same number together.
-        self.num = re.sub("[a-z]$", "", self.num)
         self.chapter = match.group(1) or ""
+
+    def number(self) -> str:
+        """
+        Returns:
+            Verse number, stripping any trailing letters.
+        """
+        if not self.num:
+            return ""
+        num: str = self.num
+        if num[-1].isalpha():
+            num = num[:-1]
+        return num
 
     def has_lang(self, lang: Language) -> bool:
         return bool(self.unnumbered[lang])
@@ -339,6 +340,7 @@ class Chapter(Item):
                 for v in self.verses
                 if v.chapter and v.chapter != self.num
             }
+            # TODO: (#524,#131) Change the following error to an assertion.
             if foreign:
                 log.error(
                     self,
@@ -346,32 +348,53 @@ class Chapter(Item):
                     foreign,
                 )
 
+        if len(self.verses) <= 1:
+            return
+
+        # Perform some verse number validation.
         seen: set[str] = set()
         dupes: set[str] = set()
-        boundaries: tuple[int, int] = (0, len(self.verses) - 1)
+        non_consec: set[str] = set()
+
+        # Determine the boundaries to minimize noisy error logging.
+        # Chapters often include a few entries at the beginning or the end,
+        # which are not part of the chapter text and possess no verse numbers,
+        # but are stored in our dataset as verses.
+        # We allow boundaries to omit verse numbers.
+        boundaries: list[int] = [0, len(self.verses) - 1]
+        if not self.verses[0].num and not self.verses[1].num:
+            boundaries.append(1)
+        if not self.verses[-1].num and not self.verses[-2].num:
+            boundaries.append(len(self.verses) - 2)
+
         for idx, v in enumerate(self.verses):
             if not v.num:
                 (
                     log.warn
                     if idx in boundaries or self.id() == "psalms_118"
-                    else log.error
-                )(
-                    f"{self.book} {self.num}",
-                    "has verse with unknown number:",
-                    v,
-                )
+                    else log.fatal
+                )(self, "has verse with unknown number:", v)
                 continue
             if v.num in seen:
                 dupes.add(v.num)
-                # Reset the verse number, in order to prevent duplicate IDs in
-                # the output.
-                # TODO: (#553) Group verses with duplicate IDs together.
-                v.num = ""
+                if self.verses[idx - 1].num != v.num:
+                    non_consec.add(v.num)
                 continue
             seen.add(v.num)
 
+        if non_consec:
+            # TODO: (#131) If possible, change the following error to an
+            # assertion.
+            log.error(
+                self,
+                "has non-consecutive identical verse numbers:",
+                non_consec,
+            )
+
         if dupes:
-            log.error(self.id(), "has duplicate verse IDs:", dupes)
+            # TODO: (#131) If possible, change the following error to an
+            # assertion.
+            log.error(self, "has duplicate verse IDs:", dupes)
 
     def _num(self, data: schema.Chapter) -> str:
         return data["sectionNameEnglish"] or "1"
@@ -656,10 +679,24 @@ class HTMLBuilder:
     def chapter_end(self, chapter: Chapter) -> abc.Generator[str]:
         raise NotImplementedError
 
-    def verse_begin(self, verse: Verse) -> abc.Generator[str]:
+    def verse_begin(
+        self,
+        verse: Verse,
+        num: str | None = None,
+    ) -> abc.Generator[str]:
         raise NotImplementedError
 
-    def verse_end(self, verse: Verse) -> abc.Generator[str]:
+    def verse_end(
+        self,
+        verse: Verse,
+        num: str | None = None,
+    ) -> abc.Generator[str]:
+        raise NotImplementedError
+
+    def verse_group_begin(self, num: str) -> abc.Generator[str]:
+        raise NotImplementedError
+
+    def verse_group_end(self, num: str) -> abc.Generator[str]:
         raise NotImplementedError
 
     def lang_begin(self, lang: Language) -> abc.Generator[str]:
@@ -668,25 +705,27 @@ class HTMLBuilder:
     def lang_end(self, lang: Language) -> abc.Generator[str]:
         raise NotImplementedError
 
-    # __verse_body_aux builds the HTML for a single verse.
-    def __verse_body_aux(
+    # _verse_body_aux builds the HTML for a single verse.
+    def _verse_body_aux(
         self,
         verse: Verse,
         langs: list[Language],
+        num_override: str | None,
     ) -> abc.Generator[str]:
-        yield from self.verse_begin(verse)
+        yield from self.verse_begin(verse, num_override)
         for lang in langs:
             yield from self.lang_begin(lang)
             yield from verse.recolored[lang]
             yield from self.lang_end(lang)
-        yield from self.verse_end(verse)
+        yield from self.verse_end(verse, num_override)
 
     def verse_html(
         self,
         verse: Verse,
         langs: list[Language],
+        num_override: str | None = None,
     ) -> str:
-        return "".join(self.__verse_body_aux(verse, langs))
+        return "".join(self._verse_body_aux(verse, langs, num_override))
 
     # __chapter_body_aux builds the contents of the <body> element of a chapter.
     def __chapter_body_aux(
@@ -695,7 +734,7 @@ class HTMLBuilder:
         langs: list[Language],
     ) -> abc.Generator[str]:
         langs = [lang for lang in langs if chapter.has_lang(lang)]
-        # TODO: (#524) As of the time of writing, Psalms 134 has a verse where
+        # TODO: (#131) As of the time of writing, Psalms 134 has a verse where
         # the English text was mistakenly populated in the Lycopolitan field,
         # causing the error below to print exactly once. Fix the source data,
         # and change this error into an assertion.
@@ -706,8 +745,49 @@ class HTMLBuilder:
         if not langs:
             return
         yield from self.chapter_begin(chapter)
-        for verse in chapter.verses:
-            yield from self.__verse_body_aux(verse, langs)
+
+        # Track all IDs used for verses and verse groups, so that duplicates
+        # (which would otherwise collide in the output) get a `_${COUNTER}`
+        # suffix.
+        seen: dict[str, int] = {}
+
+        def dedupe(num: str) -> str:
+            if not num:
+                return num
+            count: int = seen.get(num, 0)
+            seen[num] = count + 1
+            return num if not count else f"{num}_{count}"
+
+        def emit_group(group: abc.Iterable[Verse]) -> abc.Generator[str]:
+            for verse in group:
+                yield from self._verse_body_aux(
+                    verse,
+                    langs,
+                    dedupe(verse.num),
+                )
+
+        group: abc.Iterable[Verse]
+        for num, group in itertools.groupby(chapter.verses, key=Verse.number):
+            # Sanity check! This assertion must hold given the regex.
+            assert not num or num.isdigit()
+            group = list(group)
+            # Avoid grouping the verses if:
+            # - The group verses have no number (`verse.num` is the empty
+            # string). These are non-verses.
+            # - The group has a single verse that contains a numeric number.
+            #   If, otherwise, the group has an alphabetical suffix, we wrap it
+            #   in a group that has a numerical number, in order for lookups
+            #   that use the non-suffixed number to resolve correctly.
+            if not num or (len(group) == 1 and group[0].num.isdigit()):
+                yield from emit_group(group)
+                continue
+
+            # Otherwise, create a group.
+            num = dedupe(num)
+            yield from self.verse_group_begin(num)
+            yield from emit_group(group)
+            yield from self.verse_group_end(num)
+
         yield from self.chapter_end(chapter)
 
     # __book_body_aux builds the contents of the <body> element of a book.
@@ -974,14 +1054,35 @@ class FlowBuilder(HTMLBuilder):
         yield from []
 
     @typing.override
-    def verse_begin(self, verse: Verse) -> abc.Generator[str]:  # dead: disable
-        del verse
+    def verse_begin(
+        self,
+        verse: Verse,  # dead: disable
+        num: str | None = None,  # dead: disable
+    ) -> abc.Generator[str]:
+        del verse, num
         yield from []
 
     @typing.override
-    def verse_end(self, verse: Verse) -> abc.Generator[str]:  # dead: disable
-        del verse
+    def verse_end(
+        self,
+        verse: Verse,  # dead: disable
+        num: str | None = None,  # dead: disable
+    ) -> abc.Generator[str]:
+        del verse, num
         yield page.LINE_BREAK
+
+    @typing.override
+    def verse_group_begin(
+        self,
+        num: str,  # dead: disable
+    ) -> abc.Generator[str]:
+        del num
+        yield from []
+
+    @typing.override
+    def verse_group_end(self, num: str) -> abc.Generator[str]:  # dead: disable
+        del num
+        yield from []
 
     @typing.override
     def lang_begin(
@@ -997,6 +1098,10 @@ class FlowBuilder(HTMLBuilder):
 
 class TableBuilder(HTMLBuilder):
     """TableBuilder provides a table format for the Bible."""
+
+    # NOTE: This table builder could potentially emit empty `<tbody></tbody>`
+    # elements in the output. This is benign, and is intentionally left to
+    # simplify the code.
 
     @typing.override
     def chapter_begin(
@@ -1017,20 +1122,41 @@ class TableBuilder(HTMLBuilder):
         yield "</table>"
 
     @typing.override
-    def verse_begin(self, verse: Verse) -> abc.Generator[str]:
-        if not verse.num:
+    def verse_begin(
+        self,
+        verse: Verse,
+        num: str | None = None,
+    ) -> abc.Generator[str]:
+        if num is None:
+            num = verse.num
+        if not num:
             yield '<tr class="verse">'
             return
         # TODO: (#0) If several chapters were to be placed in the same document
         # (as is the case with the generated EPUBs), this would result in verses
         # from different chapters having the same ID! Verse ID should either be
         # distinct across chapters, or should be omitted in the EPUB!
-        yield f'<tr class="verse" id="v{verse.num}">'
+        yield f'<tr class="verse" id="v{num}">'
 
     @typing.override
-    def verse_end(self, verse: Verse) -> abc.Generator[str]:  # dead: disable
-        del verse
+    def verse_end(
+        self,
+        verse: Verse,  # dead: disable
+        num: str | None = None,  # dead: disable
+    ) -> abc.Generator[str]:
+        del verse, num
         yield "</tr>"
+
+    @typing.override
+    def verse_group_begin(self, num: str) -> abc.Generator[str]:
+        yield "</tbody>"
+        yield f'<tbody class="verse-group" id="v{num}">'
+
+    @typing.override
+    def verse_group_end(self, num: str) -> abc.Generator[str]:  # dead: disable
+        del num
+        yield "</tbody>"
+        yield "<tbody>"
 
     @typing.override
     def lang_begin(
@@ -1076,7 +1202,11 @@ def main():
             path: str = chapter.path(is_epub=False)
             for verse in chapter.verses:
                 key: str = f"{path}#v{verse.num}" if verse.num else path
-                yield key, table_builder.verse_html(verse, _LANGUAGES)
+                # In Xooxle, we use the raw verse numbers, even if duplicate or
+                # suffixed numbers are present. Duplicate keys are acceptable in
+                # Xooxle. The complex verse number deduplication / grouping
+                # logic is irrelevant in Xooxle's case.
+                yield key, table_builder.verse_html(verse, _LANGUAGES, None)
 
     xooxle.Xooxle(
         verse_source(),

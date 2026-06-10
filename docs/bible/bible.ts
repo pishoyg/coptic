@@ -27,7 +27,7 @@ const MAPPING: Record<string, string> = Object.values(map.MAPPING).reduce<
   return acc;
 }, {});
 
-const KEY_RE = /^(.*?)_(\d+[ab]?|[a-f])\.html(?:#v(\d+))?$/;
+const KEY_RE = /^(.*?)_(\d+[ab]?|[a-f])\.html(?:#v(\d+)[a-z]?)?$/;
 
 const ID = {
   SEARCH_BOX: 'search-box',
