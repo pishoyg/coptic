@@ -519,21 +519,26 @@ export class SearchResult extends AggregateResult {
   private compareKeyMemo: number[] | null = null;
 
   /**
-   * @param key
-   * @param fields
-   * @param regex
-   * @param layer
+   * @param candidate - The candidate this result represents.
+   * @param regex - The query being searched.
+   * @param layer - The index of the matched layer within the candidate.
    */
   public constructor(
-    public readonly key: string,
-    fields: Field[],
-    regex: RegExp,
+    private readonly candidate: Candidate,
+    private readonly regex: RegExp,
     public readonly layer: number
   ) {
     super();
-    this.results = fields.map(
-      (f: Field): FieldSearchResult => f.search(regex, this.unitsLimit())
+    this.results = candidate.layers[layer]!.map(
+      (f: Field): FieldSearchResult => f.search(this.regex, this.unitsLimit())
     );
+  }
+
+  /**
+   * @returns The key of the candidate this result represents.
+   */
+  public get key(): string {
+    return this.candidate.key;
   }
 
   /**
@@ -871,6 +876,34 @@ export class SearchResult extends AggregateResult {
       return link;
     }
     return `${link}#:~:text=${fragments.join('&text=')}`;
+  }
+
+  /**
+   * Build text fragments for every match on this result's destination page,
+   * which renders all of the candidate's layers from the matched one onward
+   * (earlier layers didn't match, so they contribute nothing).
+   *
+   * The matched layer is already searched in `this.results`; the unit crop only
+   * ever drops non-matching units, which carry no fragments, so those results
+   * yield every fragment and we reuse them via `super.fragment`. They come
+   * first, so the matched layer's leading match anchors the browser's scroll.
+   * The following layers aren't displayed, hence not yet searched, so we search
+   * them on demand — the same crop keeps every match either way.
+   *
+   * @param context - Words of surrounding context per fragment.
+   * @returns The text fragments, in page order.
+   */
+  public override fragment(context: number): string[] {
+    return [
+      ...super.fragment(context),
+      ...this.candidate.layers
+        .slice(this.layer + 1)
+        .flatMap((layer: Field[]): string[] =>
+          layer.flatMap((field: Field): string[] =>
+            field.search(this.regex, this.unitsLimit()).fragment(context)
+          )
+        ),
+    ];
   }
 
   /**
@@ -1564,13 +1597,8 @@ export class Xooxle {
     return (
       this.candidates
         .flatMap((can: Candidate): SearchResult[] => {
-          for (const [idx, layer] of can.layers.entries()) {
-            const result = new this.searchResultType(
-              can.key,
-              layer,
-              regex,
-              idx
-            );
+          for (const idx of can.layers.keys()) {
+            const result = new this.searchResultType(can, regex, idx);
             if (result.match && result.filter()) {
               // This layer has a match. Return a result representing this
               // layer.
