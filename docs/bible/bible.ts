@@ -41,12 +41,6 @@ const ID = {
   CHECKBOXES: 'checkboxes',
 } as const;
 
-/*
- * Reduce the likelihood of collision by including four words on each side of
- * the match in the text fragment.
- */
-const FRAGMENT_CONTEXT = 4;
-
 /**
  * When the user types a character whose script matches `re` while all `codes`
  * are inactive, toggle `code ?? codes[0]` so its text becomes visible.
@@ -102,15 +96,6 @@ class SearchResult extends xoox.SearchResult {
       (r: xoox.FieldSearchResult): boolean =>
         r.match && !SearchResult.inactive?.includes(r.name as dial.Code)
     );
-  }
-
-  /**
-   * @returns
-   */
-  public override fragment(): string | undefined {
-    // NOTE: The link usually contains a verse anchor. It's harmless next to the
-    // fragment.
-    return super.fragment(FRAGMENT_CONTEXT);
   }
 
   /**

@@ -62,6 +62,16 @@ const RESULTS_TO_UPDATE_DISPLAY = 20;
 const INPUT_DEBOUNCE_TIMEOUT = 200;
 
 /**
+ * FRAGMENT_CONTEXT is the default number of context words we include in the
+ * prefix and suffix of a text fragment.
+ * Some context is necessary to disambiguate matches: a text fragment directive
+ * with no prefix or suffix highlights only the first occurrence of its text in
+ * the page, so repeated identical matches would otherwise all collapse onto the
+ * same spot.
+ */
+const FRAGMENT_CONTEXT = 4;
+
+/**
  * EVENT is the name of the event that Xooxle dispatches on `document` whenever
  * a new search starts. Consumers can listen for it to perform per-search setup.
  */
@@ -372,7 +382,7 @@ interface Result {
   matches: Match[];
   boundary(): Boundary;
   match: boolean;
-  fragment(context: number): string | undefined;
+  fragment(context: number): string[];
   distance(): number;
 }
 
@@ -449,13 +459,13 @@ abstract class AggregateResult implements Result {
 
   /**
    * @param context
-   * @returns
+   * @returns The text fragments for all matches, in document order.
    *
    * NOTE: As of the time of writing, the fragment needs to be computed only
    * once, so we don't memorize it.
    */
-  public fragment(context: number): string | undefined {
-    return this.results.find((r: Result) => r.match)?.fragment(context);
+  public fragment(context: number): string[] {
+    return this.results.flatMap((r: Result): string[] => r.fragment(context));
   }
 
   /**
@@ -851,16 +861,16 @@ export class SearchResult extends AggregateResult {
    * @param context
    * @returns
    */
-  private href(context = 0): string | undefined {
+  private href(context: number = FRAGMENT_CONTEXT): string | undefined {
     const link: string | undefined = this.link();
     if (!link) {
       return undefined;
     }
-    const fragment: string | undefined = this.fragment(context);
-    if (!fragment) {
+    const fragments: string[] = this.fragment(context);
+    if (!fragments.length) {
       return link;
     }
-    return `${link}#:~:text=${fragment}`;
+    return `${link}#:~:text=${fragments.join('&text=')}`;
   }
 
   /**
@@ -1099,6 +1109,14 @@ enum Boundary {
 }
 
 /**
+ * Range is a half-open character range [start, end) within a line's text.
+ */
+interface Range {
+  start: number;
+  end: number;
+}
+
+/**
  *
  */
 class Match {
@@ -1273,28 +1291,33 @@ class LineSearchResult implements Result {
    * @param context
    * @returns
    */
-  public fragment(context = 0): string | undefined {
-    const match: Match | undefined = this.matches[0];
-    if (!match) {
-      return undefined;
+  public fragment(context: number = FRAGMENT_CONTEXT): string[] {
+    // Expand each match to full words, merging overlapping ranges as we go.
+    // Word expansion can make the ranges of distinct matches overlap (for
+    // example, two matches that fall within the same word), and we want a
+    // single fragment to cover each merged span rather than emitting redundant,
+    // overlapping fragments. The matches are sorted ascending, so the ranges
+    // are too, and a linear merge suffices.
+    const ranges: Range[] = [];
+    for (const match of this.matches) {
+      const range: Range = {
+        start: this.scan(match.start, -1, orth.isWordCharInChrome),
+        end: this.scan(match.end, 1, orth.isWordCharInChrome),
+      };
+      const last = ranges[ranges.length - 1];
+      if (last && range.start <= last.end) {
+        last.end = Math.max(last.end, range.end);
+      } else {
+        ranges.push(range);
+      }
     }
 
-    // 1. Expand match to full words
-    const start: number = this.scan(match.start, -1, (c) =>
-      orth.isWordCharInChrome(c)
-    );
-    const end: number = this.scan(match.end, 1, (c) =>
-      orth.isWordCharInChrome(c)
-    );
-
-    // 2. Calculate Context
-    const prefixIdx: number = this.traverseContext(start, context, -1);
-    const suffixIdx: number = this.traverseContext(end, context, 1);
-
-    return browser.fragment(
-      this.text.substring(start, end),
-      this.text.substring(prefixIdx, start),
-      this.text.substring(end, suffixIdx)
+    return ranges.map(({ start, end }: Range): string =>
+      browser.fragment(
+        this.text.substring(start, end),
+        this.text.substring(this.traverseContext(start, context, -1), start),
+        this.text.substring(end, this.traverseContext(end, context, 1))
+      )
     );
   }
 

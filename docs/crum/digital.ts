@@ -79,13 +79,6 @@ enum Bucket {
 }
 
 /**
- * WIKI_FRAGMENT_CONTEXT is the number of words we use in the prefix and suffix
- * of the text fragment of a Wiki search result, to increase the likelihood that
- * our text fragment lands on the right place.
- */
-const WIKI_FRAGMENT_CONTEXT = 4;
-
-/**
  * WIKI_UNITS_LIMIT is the maximum number of units to display per field for
  * Wiki search results.
  */
@@ -283,19 +276,6 @@ class CrumSearchResult extends SearchResult {
       return this.wiki();
     }
     log.fatal('This is impossible!');
-  }
-
-  /**
-   *
-   * @param _
-   * @returns
-   */
-  public override fragment(_: number): string | undefined {
-    // Marcion shows first in the page, so a URL with a text fragment that uses
-    // no context is still expected to land on the correct word.
-    // Wiki shows later in the page, so we add some context to the URL text
-    // fragment to increase the likelihood that we will land on the right place.
-    return super.fragment(this.wiki() ? WIKI_FRAGMENT_CONTEXT : 0);
   }
 
   /**
