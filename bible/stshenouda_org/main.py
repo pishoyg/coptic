@@ -849,7 +849,7 @@ class HTMLBuilder:
 
         out = self.__html_aux(
             self.__chapter_body_aux(chapter, langs),
-            title=chapter.book.name,
+            title=chapter.title(),
             page_class=_CHAPTER_CLASS,
             nxt=nxt.href(is_epub=False) if nxt else "",
             prv=prv.href(is_epub=False) if prv else "",
