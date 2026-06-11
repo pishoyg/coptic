@@ -1207,7 +1207,7 @@ class Line {
    */
   public matches(regex: RegExp): Match[] {
     // Collect raw match ranges, merging contiguous ones.
-    const ranges: [number, number][] = [];
+    const ranges: Range[] = [];
     for (const match of this.text.matchAll(regex)) {
       // NOTE: We need to filter out the empty string, because it could cause
       // trouble during highlighting.
@@ -1217,14 +1217,14 @@ class Line {
       const start: number = match.index;
       const end: number = start + match[0].length;
       const last = ranges[ranges.length - 1];
-      if (last?.[1] === start) {
-        last[1] = end;
+      if (last?.end === start) {
+        last.end = end;
       } else {
-        ranges.push([start, end]);
+        ranges.push({ start, end });
       }
     }
 
-    return ranges.map(([start, end]: [number, number]): Match => {
+    return ranges.map(({ start, end }: Range): Match => {
       const before = !orth.isWordChar(this.text[start - 1]);
       const after = !orth.isWordChar(this.text[end]);
       const boundary: Boundary =
