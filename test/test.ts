@@ -16,7 +16,7 @@ const PAGES_TO_TEST: string[] = [
   '/crum', // Lexicon
   '/crum?wiki=true', // Lexicon with Wiki
   '/crum?query=light&full=true&regex=true', // Lexicon with a query
-  '/crum/1.html', // A Crum note (sample)
+  '/crum/2.html', // A Crum note (sample). (We skip 1 because of #701.)
   '/bible', // Bible
   '/bible/genesis_1.html', // A Bible chapter (sample)
   '/crum?mode=book', // Crum scan
