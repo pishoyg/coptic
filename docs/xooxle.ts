@@ -1247,13 +1247,17 @@ class Line {
       if (!match[0]) {
         continue;
       }
-      const start: number = match.index;
-      const end: number = start + match[0].length;
-      const last = ranges[ranges.length - 1];
-      if (last?.end === start) {
-        last.end = end;
+
+      const cur: Range = {
+        start: match.index,
+        end: match.index + match[0].length,
+      };
+
+      const last: Range | undefined = ranges[ranges.length - 1];
+      if (last?.end === cur.start) {
+        last.end = cur.end;
       } else {
-        ranges.push({ start, end });
+        ranges.push(cur);
       }
     }
 
