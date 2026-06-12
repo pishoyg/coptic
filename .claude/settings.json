@@ -1,9 +1,4 @@
 {
-  "enableAllProjectMcpServers": true,
-  "enabledMcpjsonServers": [
-    "playwright"
-  ],
-  "model": "opus",
   "permissions": {
     "allow": [
       "Edit",
@@ -55,7 +50,11 @@
       "Skill"
     ]
   },
-  "agentPushNotifEnabled": true,
+  "model": "opus",
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": [
+    "playwright"
+  ],
   "hooks": {
     "UserPromptSubmit": [
       {
@@ -98,5 +97,9 @@
         ]
       }
     ]
+  },
+  "agentPushNotifEnabled": true,
+  "enabledPlugins": {
+    "remember@claude-plugins-official": true
   }
 }
