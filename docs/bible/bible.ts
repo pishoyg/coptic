@@ -264,6 +264,11 @@ function wireSearchBox(
 
   // Run a first search to honour an initial query restored from the URL.
   x.search();
+
+  if (!browser.getParam(BOOK_PARAM)) {
+    // If we're not scrolling to a book, focus on the search box.
+    box.focus();
+  }
 }
 
 /**
