@@ -4,7 +4,7 @@
 
 import * as iam from '../iam.js';
 
-import * as browser from '../browser.js';
+import * as clip from '../clip.js';
 import * as html from '../html.js';
 import * as scan from '../scan.js';
 import * as paths from '../paths.js';
@@ -150,12 +150,9 @@ function handleDrvKey(root: HTMLElement): void {
 
       // Create a second anchor pointing to this row in the HTML. This is useful
       // for users to share links to specific derivations.
-      // TODO: (#588) Share the row-anchor pattern (🔗 fragment anchor +
-      // click-to-yank URL) with `addRowLinks` in `bible/main.ts`.
-      const frag = `#drv${key.textContent.trim()}`;
-      const a: HTMLAnchorElement = document.createElement('a');
-      a.href = frag;
-      a.textContent = '🔗';
+      const a: HTMLAnchorElement = clip.fragmentLink(
+        `#drv${key.textContent.trim()}`
+      );
 
       // Store the key parent.
       const parent: ParentNode = key.parentNode!;
@@ -167,18 +164,6 @@ function handleDrvKey(root: HTMLElement): void {
 
       // Add the new span as a child to the original parent.
       parent.appendChild(span);
-
-      if (iam.amI('card')) {
-        // Yanking is not straightforward on Anki, for what it seems!
-        return;
-      }
-
-      // Clicking on the anchor also copies the URL.
-      a.addEventListener('click', (): void => {
-        const url: URL = new URL(window.location.href);
-        url.hash = frag;
-        browser.yank(url.toString());
-      });
     });
 }
 

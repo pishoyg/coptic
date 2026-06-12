@@ -5,6 +5,7 @@
 
 import * as html from '../html.js';
 import * as browser from '../browser.js';
+import * as clip from '../clip.js';
 import * as paths from '../paths.js';
 import * as css from '../css.js';
 import * as cls from './cls.js';
@@ -1560,20 +1561,12 @@ function entryText(entry: Element): string {
 }
 
 /**
- * TODO: (#588) Share the copy-button pattern (icon + yank handler + tooltip)
- * with `addCellCopies` in `bible/main.ts`.
+ *
  * @param root
  */
 function addEntryCopyShortcuts(root: HTMLElement): void {
   root.querySelectorAll(`.${cls.ENTRY}`).forEach((entry: Element): void => {
-    const copy: HTMLSpanElement = document.createElement('span');
-    copy.textContent = '📃';
-    copy.addEventListener('click', () => {
-      browser.yank(entryText(entry));
-    });
-    copy.classList.add(cls.COPY);
-    tool.addTooltip(copy, ['copy text']);
-    entry.prepend(copy);
+    entry.prepend(clip.copyButton(() => entryText(entry), [cls.COPY]));
   });
 }
 

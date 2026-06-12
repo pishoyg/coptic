@@ -4,11 +4,11 @@ import * as high from './highlight.js';
 import * as browser from '../browser.js';
 import * as html from '../html.js';
 import * as tool from '../tooltip.js';
+import * as clip from '../clip.js';
 import * as cls from './cls.js';
 import * as dial from './dialect.js';
 import type * as ddial from '../dialect.js';
 import * as css from '../css.js';
-import * as ccls from '../cls.js';
 
 enum ID {
   TRAY = 'tray',
@@ -48,49 +48,32 @@ function addEventListeners(highlighter: high.Highlighter): void {
 
 /**
  * Append a copy button to each language cell.
- * TODO: (#588) Share the copy-button pattern (icon + yank handler + tooltip)
- * with `addEntryCopyShortcuts` in `crum/wiki.ts`.
  */
 function addCellCopies(): void {
   document
     .querySelectorAll<HTMLTableCellElement>(css.c(cls.LANGUAGE))
     .forEach((td: HTMLTableCellElement): void => {
+      // Capture the cell text now: the row link is prepended afterwards, so a
+      // lazy read at click time would leak the link emoji into the copy.
       const text: string = td.textContent.trim();
       if (!text) {
         return;
       }
-      const copy: HTMLSpanElement = document.createElement('span');
-      copy.classList.add(CLS.LANGUAGE_COPY);
-      copy.textContent = '📃';
-      copy.addEventListener('click', (): void => {
-        browser.yank(text);
-      });
-      tool.addTooltip(copy, ['copy'], [ccls.SMALL_TEXT]);
-      td.appendChild(copy);
+      td.appendChild(clip.copyButton(() => text, [CLS.LANGUAGE_COPY]));
     });
 }
 
 /**
  * Prepend an anchor link to each verse row. Clicking it navigates to the row
  * (via the row's `id`) and copies the full URL with the fragment.
- * TODO: (#588) Share the row-anchor pattern (🔗 fragment anchor + click-to-yank
- * URL) with the equivalent block in `handleDrvKey` in `crum/crum.ts`.
  */
 function addRowLinks(): void {
   document
     .querySelectorAll<HTMLTableRowElement>(`.${cls.VERSE}[id]`)
     .forEach((tr: HTMLTableRowElement): void => {
-      const frag = `#${tr.id}`;
-      const a: HTMLAnchorElement = document.createElement('a');
-      a.classList.add(CLS.VERSE_LINK);
-      a.href = frag;
-      a.textContent = '🔗';
-      a.addEventListener('click', (): void => {
-        const url: URL = new URL(window.location.href);
-        url.hash = frag;
-        browser.yank(url.toString());
-      });
-      tool.addTooltip(a, ['copy link'], ['small-text']);
+      const a: HTMLAnchorElement = clip.fragmentLink(`#${tr.id}`, [
+        CLS.VERSE_LINK,
+      ]);
       tr.querySelector('td')?.prepend(a);
     });
 }
