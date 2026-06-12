@@ -4,6 +4,7 @@
 # NOTE: As a general convention, methods ending with _aux return generators,
 # rather than string literals.
 import argparse
+import functools
 import html
 import itertools
 import json
@@ -14,6 +15,7 @@ import typing
 from collections import abc
 
 import json5
+import regex
 from ebooklib import epub  # type: ignore[import-untyped]
 
 from bible.stshenouda_org import schema
@@ -25,8 +27,12 @@ from xooxle import xooxle
 _SCRIPT_DIR = pathlib.Path(__file__).parent
 _JSON: pathlib.Path = _SCRIPT_DIR / "data/input/bible.json"
 _INPUT_DIR: pathlib.Path = _SCRIPT_DIR / "data/input/"
-# TODO: (#432) Include the sources in the output.
-_SOURCES_DIR: pathlib.Path = _INPUT_DIR / "Sources/"  # dead: disable
+# TODO: (#432) Include sources in the output.
+# TODO: (#432) Store a whitelist of known sources, and verify that all sources
+# belong to the whitelist.
+# TODO: (#432) Add hyperlinks pointing to the online copies of all cited
+# sources.
+_SOURCES_DIR: pathlib.Path = _INPUT_DIR / "Sources/"
 _COVER: pathlib.Path = _SCRIPT_DIR / "data/img/stauros.jpeg"
 
 Language: typing.TypeAlias = typing.Literal[
@@ -91,6 +97,20 @@ _SHORT_VERSE_NUMBER_RE: re.Pattern[str] = re.compile(
     # Use an empty capture group for the absent chapter number, to force the
     # verse number to match at group 2, thus aligning with the general regex.
     r"^(?:\d )?[A-Za-z ]+()(?: (\d+))?$",
+)
+
+_UNAVAILABLE_RE: re.Pattern[str] = re.compile("There is no available .+ text")
+# We use the third-party `regex` module rather than the standard library `re`
+# here because we rely on `Match.captures` to retrieve every match of the
+# repeated `Source:` group; `re` only retains the last capture of a repeated
+# group.
+_AVAILABLE_RE: regex.Pattern[str] = regex.compile(
+    # pylint: disable-next=line-too-long
+    r"(?:Text )?Availability:[^\n]+(?:\n\nSource(?: \d)?:([^\n]+(?:\n[^\n]+footnotes\.)?))+(\n\nEditing:[^\n]+)?(?:\n\nNote:[^\n]+)?",
+)
+_PAGE_RANGE_RE: re.Pattern[str] = re.compile(
+    r"\bpp\.? (\d+)-(\d+)",
+    re.IGNORECASE,
 )
 
 
@@ -183,10 +203,10 @@ class Verse:
         self.chapter: str = ""
         if not data["verseNumber"]:
             return
-        regex: re.Pattern[str] = (
+        pattern: re.Pattern[str] = (
             _SHORT_VERSE_NUMBER_RE if short_vn else _VERSE_NUMBER_RE
         )
-        match: re.Match[str] | None = regex.fullmatch(data["verseNumber"])
+        match: re.Match[str] | None = pattern.fullmatch(data["verseNumber"])
         ensure.ensure(match, "Invalid verseNumber format:", data)
         assert match
         self.num = match.group(2) or ""
@@ -392,13 +412,15 @@ class Chapter(Item):
             )
 
         if dupes:
-            # TODO: (#131) If possible, change the following error to an
+            # TODO: (#131) If possible, change the following warning to an
             # assertion.
-            log.error(self, "has duplicate verse IDs:", dupes)
+            log.warn(self, "has duplicate verse IDs:", dupes)
 
     def _num(self, data: schema.Chapter) -> str:
         return data["sectionNameEnglish"] or "1"
 
+    # pylint: disable-next=method-cache-max-size-none
+    @functools.cache
     def has_lang(self, lang: Language) -> bool:
         return any(v.has_lang(lang) for v in self.verses)
 
@@ -475,19 +497,87 @@ class Book(Item):
         self.name: str = book_info["title"]
         self.crum: list[str] = book_info["crum"]
 
-        data: list[schema.Chapter] = self._load(self.name)
+        data: list[schema.Chapter] = self._load()
         short_vn: bool = len(data) == 1 and all(
             ":" not in v["verseNumber"] for v in data[0]["data"]
         )
         self.chapters: list[Chapter] = [
             Chapter(c, self, short_vn) for c in data
         ]
+        self.sources: dict[Language, list[str]] = self._sources()
 
-    def _load(self, book_name: str) -> list[schema.Chapter]:
+    def _sources(self) -> dict[Language, list[str]]:
+        raw: schema.Sources = json.loads(
+            file.read(_SOURCES_DIR / f"{self.name}_Sources.json"),
+        )
+        sources: dict[Language, list[str]] = {}
+        for lang in _LANGUAGES:
+            if _UNAVAILABLE_RE.fullmatch(raw[lang]):
+                if self.has_lang(lang):
+                    # TODO: (#131) Populate all sources.
+                    log.error(self, "has", lang, "text but no sources!")
+                continue
+
+            ensure.ensure(
+                self.has_lang(lang),
+                self,
+                "has",
+                lang,
+                "sources but no text",
+            )
+
+            match: regex.Match[str] | None = _AVAILABLE_RE.fullmatch(
+                raw[lang],
+            )
+            ensure.ensure(
+                match,
+                "sources for",
+                lang,
+                self,
+                "have unknown format",
+            )
+            assert match
+
+            # The 'Editing:' part of the description, which is represented by
+            # the second capture group, is required for the Coptic dialects
+            # (i.e. neither English nor Greek), but optional for the rest.
+            if lang not in ["English", "Greek"]:
+                ensure.ensure(
+                    match.group(2),
+                    "Sources for",
+                    lang,
+                    "don't provide Editing information!",
+                )
+
+            sources[lang] = match.captures(1)
+
+        self._validate_page_ranges(sources)
+        return sources
+
+    def _validate_page_ranges(
+        self,
+        by_lang: dict[Language, list[str]],
+    ) -> None:
+        for lang, sources in by_lang.items():
+            for source in sources:
+                for match in _PAGE_RANGE_RE.finditer(source):
+                    start: int = int(match.group(1))
+                    end: int = int(match.group(2))
+                    ensure.ensure(
+                        end > start,
+                        lang,
+                        "sources",
+                        "for",
+                        self,
+                        "have invalid page range:",
+                        match.group(),
+                    )
+
+    def _load(self) -> list[schema.Chapter]:
         try:
-            t: str = file.read(os.path.join(_INPUT_DIR, f"{book_name}.json"))
+            t: str = file.read(os.path.join(_INPUT_DIR, f"{self.name}.json"))
         except FileNotFoundError:
-            log.warn("Book not found:", book_name)
+            log.warn("Book not found:", self)
             return []
 
         try:
@@ -497,6 +587,11 @@ class Book(Item):
 
     def chapter_names(self) -> list[str]:
         return [c.num for c in self.chapters]
+
+    # pylint: disable-next=method-cache-max-size-none
+    @functools.cache
+    def has_lang(self, lang: Language) -> bool:
+        return any(c.has_lang(lang) for c in self.chapters)
 
     @typing.override
     def id(self) -> str:
@@ -734,13 +829,12 @@ class HTMLBuilder:
         langs: list[Language],
     ) -> abc.Generator[str]:
         langs = [lang for lang in langs if chapter.has_lang(lang)]
-        # TODO: (#131) As of the time of writing, Psalms 134 has a verse where
-        # the English text was mistakenly populated in the Lycopolitan field,
-        # causing the error below to print exactly once. Fix the source data,
-        # and change this error into an assertion.
-        for lang in langs:
-            if lang in _EMPTY_LANGUAGES:
-                log.error(lang, "is marked as empty but has text in", chapter)
+        ensure.members(
+            langs,
+            _NONEMPTY_LANGUAGES,
+            chapter,
+            "has text in a language that is marked as empty",
+        )
         yield from chapter.header()
         if not langs:
             return

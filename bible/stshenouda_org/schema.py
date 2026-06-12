@@ -41,6 +41,23 @@ class Chapter(typing.TypedDict):
     data: list[Verse]
 
 
+class Sources(typing.TypedDict):
+    """Sources represent source information for a given book."""
+
+    Bohairic: str
+    Akhmimic: str
+    Fayyumic: str
+    OldBohairic: str
+    Mesokemic: str
+    DialectP: str
+    Lycopolitan: str
+    Greek: str
+    English: str
+    Sahidic: str
+    coloredWords: list[ColoredWord]
+    italicWords: list[str]
+
+
 # The types below define the schema of the index.
 class BookInfo(typing.TypedDict):
     title: str
@@ -50,5 +67,3 @@ class BookInfo(typing.TypedDict):
 SectionInfo: typing.TypeAlias = list[BookInfo]
 TestamentInfo: typing.TypeAlias = dict[str, SectionInfo]
 BibleInfo: typing.TypeAlias = dict[str, TestamentInfo]
-
-# pylint: enable=invalid-name
