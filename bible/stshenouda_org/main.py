@@ -24,9 +24,9 @@ from xooxle import xooxle
 
 _SCRIPT_DIR = pathlib.Path(__file__).parent
 _JSON: pathlib.Path = _SCRIPT_DIR / "data/input/bible.json"
-_INPUT_DIR: pathlib.Path = _SCRIPT_DIR / "data/raw/"
+_INPUT_DIR: pathlib.Path = _SCRIPT_DIR / "data/input/"
 # TODO: (#432) Include the sources in the output.
-_SOURCES_DIR: pathlib.Path = _SCRIPT_DIR / "data/raw/Sources/"  # dead: disable
+_SOURCES_DIR: pathlib.Path = _INPUT_DIR / "Sources/"  # dead: disable
 _COVER: pathlib.Path = _SCRIPT_DIR / "data/img/stauros.jpeg"
 
 Language: typing.TypeAlias = typing.Literal[
