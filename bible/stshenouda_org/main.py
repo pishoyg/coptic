@@ -768,7 +768,11 @@ _SEARCH_FORM: str = """\
 class HTMLBuilder:
     """An Bible HTML formatter and builder."""
 
-    def chapter_begin(self, chapter: Chapter) -> abc.Generator[str]:
+    def chapter_begin(
+        self,
+        chapter: Chapter,
+        langs: list[Language],
+    ) -> abc.Generator[str]:
         raise NotImplementedError
 
     def chapter_end(self, chapter: Chapter) -> abc.Generator[str]:
@@ -838,7 +842,7 @@ class HTMLBuilder:
         yield from chapter.header()
         if not langs:
             return
-        yield from self.chapter_begin(chapter)
+        yield from self.chapter_begin(chapter, langs)
 
         # Track all IDs used for verses and verse groups, so that duplicates
         # (which would otherwise collide in the output) get a `_${COUNTER}`
@@ -1135,8 +1139,9 @@ class FlowBuilder(HTMLBuilder):
     def chapter_begin(
         self,
         chapter: Chapter,  # dead: disable
+        langs: list[Language],  # dead: disable
     ) -> abc.Generator[str]:
-        del chapter
+        del chapter, langs
         yield from []
 
     @typing.override
@@ -1201,9 +1206,16 @@ class TableBuilder(HTMLBuilder):
     def chapter_begin(
         self,
         chapter: Chapter,  # dead: disable
+        langs: list[Language],
     ) -> abc.Generator[str]:
         del chapter
         yield '<table class="verses">'
+        yield "<thead>"
+        yield "<tr>"
+        for lang in langs:
+            yield f'<th class="{_key(lang)}">{lang}</th>'
+        yield "</tr>"
+        yield "</thead>"
         yield "<tbody>"
 
     @typing.override
