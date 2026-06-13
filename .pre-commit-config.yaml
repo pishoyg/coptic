@@ -357,6 +357,15 @@ repos:
 
   - repo: local
     hooks:
+      # Raw Data
+      # Raw data are unmodified copies from external sources, and should not be
+      # changed. When a change is intentional, skip this check by setting the
+      # `SKIP=check-raw-data` environment variable.
+      - id: check-raw-data
+        name: check-raw-data
+        entry: pre-commit/check-raw-data.sh
+        language: system
+        files: data/raw/
       # DO-NOT-SUBMIT
       - id: check-do-not-submit
         name: check-do-not-submit
