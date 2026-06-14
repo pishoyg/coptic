@@ -22,6 +22,7 @@ enum CLS {
   LANGUAGE_COPY = 'language-copy',
   VERSES = 'verses',
   SOURCES = 'sources',
+  CITATION = 'citation',
 }
 
 const BIBLIOGRAPHY = 'bibliography.json';
@@ -103,16 +104,15 @@ async function handleSources(): Promise<void> {
         if (!source.startsWith(variant)) {
           continue;
         }
+
         // Found it!
-        if (!resource.url) {
-          // No URL available, so we can't hyperlink the citation!
-          // TODO: (#0) Do your best to store URLs for all resources.
-          return [source];
-        }
-        return [
-          html.anchor(resource.url, variant),
-          source.slice(variant.length),
-        ];
+        // TODO: (#0) Do your best to store URLs for all resources.
+        const title: HTMLElement = resource.url
+          ? html.anchor(resource.url, variant)
+          : html.span(variant);
+        title.classList.add(CLS.CITATION);
+        const remainder: string = source.slice(variant.length);
+        return [title, remainder];
       }
     }
     log.error('Unable to find a resource for', source);

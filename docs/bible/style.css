@@ -125,4 +125,8 @@ td:hover .language-copy {
   padding-left: 0;
   padding-right: 0;
   list-style-position: inside;
+
+  & .citation {
+    font-style: italic;
+  }
 }

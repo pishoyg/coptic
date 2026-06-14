@@ -27,6 +27,16 @@ export function anchor(
 }
 
 /**
+ * @param children
+ * @returns
+ */
+export function span(...children: (Node | string)[]): HTMLSpanElement {
+  const s: HTMLSpanElement = document.createElement('span');
+  s.append(...children);
+  return s;
+}
+
+/**
  *
  * @param content
  * @param flag
