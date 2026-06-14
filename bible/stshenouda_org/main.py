@@ -449,8 +449,11 @@ class Chapter(Item):
 
     # pylint: disable-next=method-cache-max-size-none
     @functools.cache
-    def has_lang(self, lang: Language) -> bool:
-        return any(v.has_lang(lang) for v in self.verses)
+    def has_lang(self, lang: Language, boundary_counts: bool = True) -> bool:
+        return any(
+            v.has_lang(lang)
+            for v in (self.verses if boundary_counts else self.verses[1:-1])
+        )
 
     def prev(self):
         if self._is_first:
@@ -548,19 +551,17 @@ class Book(Item):
         )
         sources: dict[Language, list[str]] = {}
         for lang in _LANGUAGES:
-            if _UNAVAILABLE_RE.fullmatch(raw[lang]):
-                if self.has_lang(lang):
-                    # TODO: (#432) Populate all sources.
-                    log.error(self, "has", lang, "text but no sources!")
+            if not self.has_lang(lang, boundary_counts=False):
+                ensure.ensure(
+                    _UNAVAILABLE_RE.fullmatch(raw[lang]),
+                    "no",
+                    lang,
+                    "text available in",
+                    self,
+                    "but source doesn't match format:",
+                    raw[lang],
+                )
                 continue
-
-            ensure.ensure(
-                self.has_lang(lang),
-                self,
-                "has",
-                lang,
-                "sources but no text",
-            )
 
             match: regex.Match[str] | None = _AVAILABLE_RE.fullmatch(
                 raw[lang],
@@ -618,8 +619,8 @@ class Book(Item):
 
     # pylint: disable-next=method-cache-max-size-none
     @functools.cache
-    def has_lang(self, lang: Language) -> bool:
-        return any(c.has_lang(lang) for c in self.chapters)
+    def has_lang(self, lang: Language, boundary_counts: bool = True) -> bool:
+        return any(c.has_lang(lang, boundary_counts) for c in self.chapters)
 
     @typing.override
     def id(self) -> str:

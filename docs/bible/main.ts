@@ -106,7 +106,7 @@ async function handleSources(): Promise<void> {
         // Found it!
         if (!resource.url) {
           // No URL available, so we can't hyperlink the citation!
-          // TODO: (#432) If possible, store URLs for all resources.
+          // TODO: (#0) Do your best to store URLs for all resources.
           return [source];
         }
         return [
