@@ -16,7 +16,6 @@ import * as ddial from '../dialect.js';
 import * as map from '../crum/bible.js';
 
 const BOOK_PARAM = 'book';
-const CLICK_DELAY_MS = 500;
 // TODO: (#0) It's probably cleaner to export a separate mapping for this use
 // case, instead of reusing Crum's mapping.
 const MAPPING: Record<string, string> = Object.values(map.MAPPING).reduce<
@@ -191,13 +190,13 @@ function maybeGoToBook(): void {
     log.error(book, 'not found!');
     return;
   }
+  // Scroll to the book, then expand it once the scroll settles.
+  // NOTE: We rely on the assumption that the book is never already at the top,
+  // so `scrollIntoView` always triggers a scroll (and hence a `scrollend`).
+  document.addEventListener('scrollend', elem.click.bind(elem), {
+    once: true,
+  });
   elem.scrollIntoView();
-  // Scroll first, wait a bit, then click.
-  // TODO: (#0) Scrolling takes time, because it's smooth by default for the
-  // whole website (see the shared CSS). Ideally, the timeout used here should
-  // be the time it takes for the browser to scroll to the element. We should be
-  // able to retrieve this value from the CSS.
-  setTimeout(elem.click.bind(elem), CLICK_DELAY_MS);
 }
 
 /**
