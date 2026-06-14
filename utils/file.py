@@ -8,6 +8,7 @@ import typing
 from collections import abc
 
 import pandas as pd
+import typeguard
 import yaml
 
 from utils import log, orth
@@ -93,6 +94,32 @@ def stem(path: str | pathlib.Path) -> str:
 
 def ext(path: str | pathlib.Path) -> str:
     return splitext(path)[1]
+
+
+def json_loads(
+    path: str | pathlib.Path,
+    schema: typing.Any = None,
+) -> typing.Any:
+    """Read and parse the JSON file at `path`.
+
+    Args:
+        path: The path to the JSON file to read.
+        schema: An optional schema (a `TypedDict` class or a type alias) to
+            validate the parsed value against. A mismatch raises a
+            `typeguard.TypeCheckError`. If `None`, no validation is performed.
+
+    Returns:
+        The parsed JSON value.
+    """
+    value: typing.Any = json.loads(read(path))
+    if schema is None:
+        return value
+    return typeguard.check_type(
+        value,
+        schema,
+        # pylint: disable-next=line-too-long
+        collection_check_strategy=typeguard.CollectionCheckStrategy.ALL_ITEMS,
+    )
 
 
 def json_dumps(j: object, **kwargs: typing.Any) -> str:

@@ -15,7 +15,6 @@ import typing
 import urllib.parse
 from collections import abc
 
-import json5
 import regex
 from ebooklib import epub  # type: ignore[import-untyped]
 
@@ -68,8 +67,9 @@ _NONEMPTY_LANGUAGES: list[Language] = [
     lang for lang in _LANGUAGES if lang not in _EMPTY_LANGUAGES
 ]
 
-_RESOURCES: list[schema.Source] = json.loads(
-    file.read(paths.BIBLE_DIR / "bibliography.json"),
+_RESOURCES: list[schema.Source] = file.json_loads(
+    paths.BIBLE_DIR / "bibliography.json",
+    list[schema.Source],
 )
 
 
@@ -97,6 +97,7 @@ def _verify_resource_urls() -> None:
     for resource in _RESOURCES:
         url: str | None = resource.get("url", None)
         if not url:
+            log.error("No URL set for", resource["variants"][0])
             continue
         _verify_url(url)
 
@@ -541,8 +542,9 @@ class Book(Item):
         self.sources: dict[Language, list[str]] = self._sources()
 
     def _sources(self) -> dict[Language, list[str]]:
-        raw: schema.Sources = json.loads(
-            file.read(_SOURCES_DIR / f"{self.name}_Sources.json"),
+        raw: schema.Sources = file.json_loads(
+            _SOURCES_DIR / f"{self.name}_Sources.json",
+            schema.Sources,
         )
         sources: dict[Language, list[str]] = {}
         for lang in _LANGUAGES:
@@ -605,16 +607,11 @@ class Book(Item):
         return sources
 
     def _load(self) -> list[schema.Chapter]:
-        try:
-            t: str = file.read(os.path.join(_INPUT_DIR, f"{self.name}.json"))
-        except FileNotFoundError:
-            log.warn("Book not found:", self)
+        path: str = os.path.join(_INPUT_DIR, f"{self.name}.json")
+        if not os.path.exists(path):
+            log.error("Book not found:", self)
             return []
-
-        try:
-            return json.loads(t)
-        except json.JSONDecodeError:
-            return json5.loads(t)
+        return file.json_loads(path, list[schema.Chapter])
 
     def chapter_names(self) -> list[str]:
         return [c.num for c in self.chapters]
@@ -691,7 +688,7 @@ class Bible:
     """The Bible."""
 
     def __init__(self) -> None:
-        bible_data: schema.BibleInfo = json.loads(file.read(_JSON))
+        bible_data: schema.BibleInfo = file.json_loads(_JSON, schema.BibleInfo)
 
         self.testaments: list[Testament] = [
             Testament(name, data) for name, data in bible_data.items()

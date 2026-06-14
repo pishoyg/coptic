@@ -1,4 +1,7 @@
-"""This package defines the structure of the input JSON."""
+"""This package defines the structure of the input JSON.
+
+Parse and validate files against these schemas with `utils.file.json_loads`.
+"""
 
 # pylint: disable=invalid-name
 import typing
@@ -27,7 +30,7 @@ class Verse(typing.TypedDict):
     Sahidic: str
     verseNumber: str
     coloredWords: typing.NotRequired[list[ColoredWord]]
-    italicWords: list[str]
+    italicWords: typing.NotRequired[list[str]]
 
 
 class Chapter(typing.TypedDict):
