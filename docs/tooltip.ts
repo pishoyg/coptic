@@ -129,14 +129,8 @@ export function addTooltip(
   invocation: Invocation = 'hover',
   position: Position = 'below'
 ): void {
-  const tooltip: HTMLElement = ((): HTMLElement => {
-    if (content.length === 1 && content[0] instanceof HTMLElement) {
-      return content[0];
-    }
-    const container: HTMLSpanElement = document.createElement('span');
-    container.append(...content);
-    return container;
-  })();
+  const tooltip: HTMLDivElement = document.createElement('div');
+  tooltip.append(...content);
 
   tooltip.classList.add(CLS.TOOLTIP, ...classes);
   if (position === 'above') {
