@@ -118,3 +118,10 @@ td:hover .language-copy {
     background-color: var(--anchor-highlight);
   }
 }
+
+.sources {
+  margin: 0;
+  padding-left: 0;
+  padding-right: 0;
+  list-style-position: inside;
+}
