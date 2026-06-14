@@ -19,7 +19,7 @@ class Level(enum.IntEnum):
     FATAL = 3  # dead: disable
 
 
-def _level_from_argv() -> Level:
+def _parse_args() -> tuple[Level, bool]:
     parser: argparse.ArgumentParser = argparse.ArgumentParser(add_help=False)
     _ = parser.add_argument(
         "--log",
@@ -29,11 +29,17 @@ def _level_from_argv() -> Level:
         help="Minimum severity to log; one of: "
         + ", ".join(level.name.lower() for level in Level),
     )
-    # Consume `--log` so importing scripts don't see (and reject) it via
+    _ = parser.add_argument(
+        "--color",
+        action=argparse.BooleanOptionalAction,
+        default=True,
+        help="Whether to colorize log output (use --no-color to disable).",
+    )
+    # Consume our flags so importing scripts don't see (and reject) them via
     # their own strict `parse_args`. Everything else is left untouched.
     args, remaining = parser.parse_known_args()
     sys.argv[1:] = remaining
-    return args.log
+    return args.log, args.color
 
 
 # The minimum severity that gets logged. Messages below this level are
@@ -41,7 +47,12 @@ def _level_from_argv() -> Level:
 #
 # Controlled by the `--log` command-line flag (e.g. `--log error`), read from
 # any importing script's command line.
-_LEVEL: Level = _level_from_argv()
+_LEVEL: Level
+
+# `_COLOR` controls whether log output is colorized, via the `--color` /
+# `--no-color` flag.
+_COLOR: bool
+_LEVEL, _COLOR = _parse_args()
 
 
 def _print(
@@ -51,18 +62,22 @@ def _print(
     severity: typing.Literal["", "info", "warn", "error", "fatal"] = "",
     exception: bool = False,
 ):
+    prefix: str = severity.capitalize() + ": " if severity else ""
+    colors: list[str] = [color, recolor]
+
     message: str = (
-        colorama.Style.DIM
-        + color
-        + (severity.capitalize() + ": " if severity else "")
-        + colorama.Style.NORMAL
-        + " ".join(
-            [
-                (recolor if idx % 2 else color) + str(arg)
-                for idx, arg in enumerate(args)
-            ],
+        (
+            colorama.Style.DIM
+            + color
+            + prefix
+            + colorama.Style.NORMAL
+            + " ".join(
+                colors[idx % 2] + str(arg) for idx, arg in enumerate(args)
+            )
+            + colorama.Style.RESET_ALL
         )
-        + colorama.Style.RESET_ALL
+        if _COLOR
+        else prefix + " ".join(map(str, args))
     )
 
     if exception:
