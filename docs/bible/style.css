@@ -40,7 +40,7 @@ table.verses {
     transition: background-color 0.2s ease;
   }
 
-  & tr:hover {
+  & tbody tr:hover {
     background-color: #f1f5f9;
   }
 
