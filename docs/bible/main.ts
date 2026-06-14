@@ -9,14 +9,25 @@ import * as cls from './cls.js';
 import * as dial from './dialect.js';
 import type * as ddial from '../dialect.js';
 import * as css from '../css.js';
+import * as log from '../logger.js';
 
 enum ID {
   TRAY = 'tray',
 }
 
+const DATA_SOURCES = 'sources';
+
 enum CLS {
   VERSE_LINK = 'verse-link',
   LANGUAGE_COPY = 'language-copy',
+  VERSES = 'verses',
+  SOURCES = 'sources',
+}
+
+const BIBLIOGRAPHY = 'bibliography.json';
+interface Resource {
+  variants: string[];
+  url?: string;
 }
 
 /**
@@ -79,12 +90,64 @@ function addRowLinks(): void {
 }
 
 /**
+ *
+ */
+async function handleSources(): Promise<void> {
+  const resources: Resource[] = (await fetch(BIBLIOGRAPHY).then(
+    (raw: Response) => raw.json()
+  )) as Resource[];
+
+  const hyperlink = (source: string): (Node | string)[] => {
+    for (const resource of resources) {
+      for (const variant of resource.variants) {
+        if (!source.startsWith(variant)) {
+          continue;
+        }
+        // Found it!
+        if (!resource.url) {
+          // No URL available, so we can't hyperlink the citation!
+          // TODO: (#432) If possible, store URLs for all resources.
+          return [source];
+        }
+        return [
+          html.anchor(resource.url, variant),
+          source.slice(variant.length),
+        ];
+      }
+    }
+    log.error('Unable to find a resource for', source);
+    return [source];
+  };
+
+  document
+    .querySelector(`.${CLS.VERSES}`)!
+    .querySelector('thead')!
+    .querySelectorAll('th')
+    .forEach((th: HTMLTableCellElement): void => {
+      const sources: string[] = JSON.parse(
+        th.dataset[DATA_SOURCES]!
+      ) as string[];
+      if (!sources.length) {
+        return;
+      }
+      const ul: HTMLUListElement = document.createElement('ul');
+      ul.classList.add(CLS.SOURCES);
+      for (const source of sources) {
+        const li = document.createElement('li');
+        li.append(...hyperlink(source));
+        ul.append(li);
+      }
+      tool.addTooltip(th, [ul]);
+    });
+}
+
+/**
  * @returns
  */
 /**
  *
  */
-function main(): void {
+async function main(): Promise<void> {
   // Normalizing the tree is necessary for some of our text search logic to work
   // correctly.
   html.normalize();
@@ -125,6 +188,8 @@ function main(): void {
   if (manager.inactive()?.length) {
     holder.click();
   }
+
+  await handleSources();
 }
 
-main();
+await main();
