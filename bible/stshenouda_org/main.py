@@ -71,6 +71,20 @@ _RESOURCES: list[schema.Source] = json.loads(
     file.read(paths.BIBLE_DIR / "bibliography.json"),
 )
 
+# Verify that all URLs are fully qualified. Otherwise, they could be resolved as
+# relative rather than absolute!
+# TODO: (#0) Find a better solution. Should the TypeScript be smart enough to
+# add the protocol?
+# Also, this forces us to use a fully qualified URL, even for resources hosted
+# on our servers, which is inconvenient.
+# TODO: (#432) Use a stricter check. Use a URL parser to ensure that this URL is
+# well-formed.
+for resource in _RESOURCES:
+    url: str | None = resource.get("url", None)
+    if not url:
+        continue
+    ensure.ensure(url.startswith("http"), "URL not fully qualified:", url)
+
 
 # Single-letter key per language, used as the column header in the search
 # results table. Ideally, you should keep in sync with the dialect keys in the
