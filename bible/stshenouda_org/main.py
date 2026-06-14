@@ -27,11 +27,6 @@ from xooxle import xooxle
 _SCRIPT_DIR = pathlib.Path(__file__).parent
 _JSON: pathlib.Path = _SCRIPT_DIR / "data/input/bible.json"
 _INPUT_DIR: pathlib.Path = _SCRIPT_DIR / "data/input/"
-# TODO: (#432) Include sources in the output.
-# TODO: (#432) Store a whitelist of known sources, and verify that all sources
-# belong to the whitelist.
-# TODO: (#432) Add hyperlinks pointing to the online copies of all cited
-# sources.
 _SOURCES_DIR: pathlib.Path = _INPUT_DIR / "Sources/"
 _COVER: pathlib.Path = _SCRIPT_DIR / "data/img/stauros.jpeg"
 
@@ -72,6 +67,10 @@ _NONEMPTY_LANGUAGES: list[Language] = [
     lang for lang in _LANGUAGES if lang not in _EMPTY_LANGUAGES
 ]
 
+_RESOURCES: list[schema.Source] = json.loads(
+    file.read(paths.BIBLE_DIR / "bibliography.json"),
+)
+
 
 # Single-letter key per language, used as the column header in the search
 # results table. Ideally, you should keep in sync with the dialect keys in the
@@ -106,11 +105,7 @@ _UNAVAILABLE_RE: re.Pattern[str] = re.compile("There is no available .+ text")
 # group.
 _AVAILABLE_RE: regex.Pattern[str] = regex.compile(
     # pylint: disable-next=line-too-long
-    r"(?:Text )?Availability:[^\n]+(?:\n\nSource(?: \d)?:([^\n]+(?:\n[^\n]+footnotes\.)?))+(\n\nEditing:[^\n]+)?(?:\n\nNote:[^\n]+)?",
-)
-_PAGE_RANGE_RE: re.Pattern[str] = re.compile(
-    r"\bpp\.? (\d+)-(\d+)",
-    re.IGNORECASE,
+    r"(?:Text )?Availability:[^\n]+(?:\n\nSource(?: \d)?:([^\n]+)(?:\n[^\n]+footnotes\.)?)+(\n\nEditing:[^\n]+)?(?:\n\nNote:[^\n]+)?",
 )
 
 
@@ -360,7 +355,7 @@ class Chapter(Item):
                 for v in self.verses
                 if v.chapter and v.chapter != self.num
             }
-            # TODO: (#524,#131) Change the following error to an assertion.
+            # TODO: (#524) Change the following error to an assertion.
             if foreign:
                 log.error(
                     self,
@@ -403,7 +398,7 @@ class Chapter(Item):
             seen.add(v.num)
 
         if non_consec:
-            # TODO: (#131) If possible, change the following error to an
+            # TODO: (#524) If possible, change the following error to an
             # assertion.
             log.error(
                 self,
@@ -412,7 +407,7 @@ class Chapter(Item):
             )
 
         if dupes:
-            # TODO: (#131) If possible, change the following warning to an
+            # TODO: (#524) If possible, change the following warning to an
             # assertion.
             log.warn(self, "has duplicate verse IDs:", dupes)
 
@@ -490,6 +485,13 @@ class Chapter(Item):
         return self.__str__()
 
 
+def _normalize_source(source: str) -> str:
+    source = source.replace("“", '"').replace("”", '"')
+    source = re.sub(r",\s*", ", ", source)
+    source = re.sub(r"\s+", " ", source)
+    return source.strip()
+
+
 class Book(Item):
     """A Bible book."""
 
@@ -514,7 +516,7 @@ class Book(Item):
         for lang in _LANGUAGES:
             if _UNAVAILABLE_RE.fullmatch(raw[lang]):
                 if self.has_lang(lang):
-                    # TODO: (#131) Populate all sources.
+                    # TODO: (#432) Populate all sources.
                     log.error(self, "has", lang, "text but no sources!")
                 continue
 
@@ -544,34 +546,31 @@ class Book(Item):
             if lang not in ["English", "Greek"]:
                 ensure.ensure(
                     match.group(2),
-                    "Sources for",
+                    "sources for",
                     lang,
                     "don't provide Editing information!",
                 )
 
-            sources[lang] = match.captures(1)
+            sources[lang] = [_normalize_source(s) for s in match.captures(1)]
 
-        self._validate_page_ranges(sources)
+        if sources.get("English", []) == [
+            "Horner facing page translation (Bohairic)",
+        ]:
+            assert len(sources["Bohairic"]) == 1
+            assert "Horner" in sources["Bohairic"][0]
+            sources["English"] = list(sources["Bohairic"])
+
+        for source in itertools.chain(*sources.values()):
+            ensure.ensure(
+                any(
+                    source.startswith(var)
+                    for resource in _RESOURCES
+                    for var in resource["variants"]
+                ),
+                "unknown source:",
+                source,
+            )
         return sources
-
-    def _validate_page_ranges(
-        self,
-        by_lang: dict[Language, list[str]],
-    ) -> None:
-        for lang, sources in by_lang.items():
-            for source in sources:
-                for match in _PAGE_RANGE_RE.finditer(source):
-                    start: int = int(match.group(1))
-                    end: int = int(match.group(2))
-                    ensure.ensure(
-                        end > start,
-                        lang,
-                        "sources",
-                        "for",
-                        self,
-                        "have invalid page range:",
-                        match.group(),
-                    )
 
     def _load(self) -> list[schema.Chapter]:
         try:
@@ -1205,15 +1204,21 @@ class TableBuilder(HTMLBuilder):
     @typing.override
     def chapter_begin(
         self,
-        chapter: Chapter,  # dead: disable
+        chapter: Chapter,
         langs: list[Language],
     ) -> abc.Generator[str]:
-        del chapter
         yield '<table class="verses">'
         yield "<thead>"
         yield "<tr>"
         for lang in langs:
-            yield f'<th class="{_key(lang)}">{lang}</th>'
+            sources: list[str] = chapter.book.sources.get(lang, [])
+            assert all("\n" not in s for s in sources)
+            yield "<th"
+            yield f' class="{_key(lang)}"'
+            yield f' data-sources="{html.escape(json.dumps(sources))}"'
+            yield ">"
+            yield lang
+            yield "</th>"
         yield "</tr>"
         yield "</thead>"
         yield "<tbody>"

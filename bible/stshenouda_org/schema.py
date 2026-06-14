@@ -64,6 +64,11 @@ class BookInfo(typing.TypedDict):
     crum: list[str]
 
 
+class Source(typing.TypedDict):
+    variants: list[str]
+    url: typing.NotRequired[str]
+
+
 SectionInfo: typing.TypeAlias = list[BookInfo]
 TestamentInfo: typing.TypeAlias = dict[str, SectionInfo]
 BibleInfo: typing.TypeAlias = dict[str, TestamentInfo]
