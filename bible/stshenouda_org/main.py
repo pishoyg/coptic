@@ -12,6 +12,7 @@ import os
 import pathlib
 import re
 import typing
+import urllib.parse
 from collections import abc
 
 import json5
@@ -71,19 +72,36 @@ _RESOURCES: list[schema.Source] = json.loads(
     file.read(paths.BIBLE_DIR / "bibliography.json"),
 )
 
-# Verify that all URLs are fully qualified. Otherwise, they could be resolved as
-# relative rather than absolute!
+
+# Verify that all URLs are fully qualified and well-formed. A non-absolute URL
+# could be resolved as relative rather than absolute!
 # TODO: (#0) Find a better solution. Should the TypeScript be smart enough to
 # add the protocol?
 # Also, this forces us to use a fully qualified URL, even for resources hosted
 # on our servers, which is inconvenient.
-# TODO: (#432) Use a stricter check. Use a URL parser to ensure that this URL is
-# well-formed.
-for resource in _RESOURCES:
-    url: str | None = resource.get("url", None)
-    if not url:
-        continue
-    ensure.ensure(url.startswith("http"), "URL not fully qualified:", url)
+def _verify_url(url: str) -> None:
+    parsed: urllib.parse.ParseResult = urllib.parse.urlparse(url)
+    # An absolute, well-formed URL must use the HTTP(S) protocol and carry a
+    # network location (host). We also reject any leading or trailing
+    # whitespace, which `urlparse` would otherwise silently tolerate.
+    ensure.ensure(
+        parsed.scheme in ("http", "https"),
+        "URL scheme is not http(s):",
+        url,
+    )
+    ensure.ensure(parsed.netloc, "URL has no host:", url)
+    ensure.ensure(url == url.strip(), "URL has surrounding whitespace:", url)
+
+
+def _verify_resource_urls() -> None:
+    for resource in _RESOURCES:
+        url: str | None = resource.get("url", None)
+        if not url:
+            continue
+        _verify_url(url)
+
+
+_verify_resource_urls()
 
 
 # Single-letter key per language, used as the column header in the search
