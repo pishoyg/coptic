@@ -121,20 +121,46 @@ class SearchResult extends xoox.SearchResult {
   }
 
   /**
-   * @returns A one-element key: 0 if the verse has visible Coptic text,
-   * else 1. Equal keys compare equal, so the stable sort preserves scriptural
-   * (book/chapter/verse) order within each bucket — what we want for the Bible.
+   * @returns A comparison key ranking verses in the search results.
    */
   protected override compareKeyAux(): number[] {
+    const coptic: xoox.FieldSearchResult[] = this.results.filter(
+      (r: xoox.FieldSearchResult): boolean =>
+        !!dial.find(r.name as dial.Code)?.coptic
+    );
+
+    const active: xoox.FieldSearchResult[] = coptic.filter(
+      (r: xoox.FieldSearchResult): boolean =>
+        !SearchResult.inactive?.includes(r.name as dial.Code)
+    );
+
+    // "Filtered" means at least one Coptic dialect is deselected; English and
+    // Greek toggles don't count.
+    const filtered: boolean = coptic.length !== active.length;
+
+    // A match implies the dialect has text, so no textLength check is needed.
+    const matching: number = active.filter(
+      (r: xoox.FieldSearchResult): boolean => r.match
+    ).length;
+
+    const withText: number = active.filter(
+      (r: xoox.FieldSearchResult): boolean => r.textLength > 0
+    ).length;
+
     return [
-      this.results.find(
-        (r: xoox.FieldSearchResult) =>
-          r.textLength > 0 &&
-          dial.find(r.name as dial.Code)?.coptic &&
-          !SearchResult.inactive?.includes(r.name as dial.Code)
-      )
-        ? 0
-        : 1,
+      // The first element is the essential binary: 0 if the verse has visible
+      // Coptic text, else 1. This sinks verses with no Coptic translation
+      // (English/Greek-only) below those a Coptic learner can study. It always
+      // applies.
+      withText ? 0 : 1,
+      // When some Coptic dialects are deselected (English/Greek toggles are
+      // ignored), rank by the number of active Coptic dialects that match the
+      // query, then by the number that have any text. When no Coptic dialect is
+      // filtered, both are 0, so equal keys compare equal and the stable sort
+      // preserves scriptural (book/chapter/verse) order — what we want for the
+      // Bible by default.
+      filtered ? -matching : 0,
+      filtered ? -withText : 0,
     ];
   }
 }
