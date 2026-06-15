@@ -1328,7 +1328,7 @@ class LineSearchResult implements Result {
    * @param context
    * @returns
    */
-  public fragment(context: number = FRAGMENT_CONTEXT): string[] {
+  public fragment(context: number): string[] {
     // Expand each match to full words, merging overlapping ranges as we go.
     // Word expansion can make the ranges of distinct matches overlap (for
     // example, two matches that fall within the same word), and we want a
