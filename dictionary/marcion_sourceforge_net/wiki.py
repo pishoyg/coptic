@@ -9,7 +9,6 @@
 # - Use an actual newline character instead of the "\n" token.
 # - The headword notation is simply unnecessary.
 import functools
-import re
 import typing
 from collections import abc, defaultdict
 from html import escape
@@ -26,7 +25,7 @@ SHEET_TSV_URL: str = (
     "https://docs.google.com/spreadsheets/d/1lhjcnkHS-pA3p5Vys-6ohKu7Y4ZCJ5NO/export?format=tsv"
 )
 
-COMMA_OR_SPACE: re.Pattern[str] = re.compile(r"[ ,]")
+COMMA_OR_SPACE: regex.Pattern[str] = regex.compile(r"[ ,]")
 
 # RAW_RE should match a Wiki raw string.
 # All non-Latin text is expected to be surrounded by double square brackets.
@@ -89,8 +88,8 @@ class Substitution:
     def __init__(
         self,
         pattern: str,
-        repl: str | typing.Callable[[re.Match[str]], str],
-        text_repl: str | typing.Callable[[re.Match[str]], str] = r"\1",
+        repl: str | typing.Callable[[regex.Match[str]], str],
+        text_repl: str | typing.Callable[[regex.Match[str]], str] = r"\1",
         ban: list[str] | None = None,
     ):
         """Initializes a Substitution object.
@@ -104,9 +103,11 @@ class Substitution:
                 can't be present in the HTML post-processing. Use this optional
                 field to verify that all substitutions are well-formed.
         """
-        self.pattern: re.Pattern[str] = re.compile(pattern)
-        self.repl: str | typing.Callable[[re.Match[str]], str] = repl
-        self.text_repl: str | typing.Callable[[re.Match[str]], str] = text_repl
+        self.pattern: regex.Pattern[str] = regex.compile(pattern)
+        self.repl: str | typing.Callable[[regex.Match[str]], str] = repl
+        self.text_repl: str | typing.Callable[[regex.Match[str]], str] = (
+            text_repl
+        )
         self.ban: list[str] = ban or []
 
     def html(self, raw: str) -> str:
@@ -166,7 +167,7 @@ DEMOTIC_RE: regex.Pattern[str] = regex.compile(
 )
 
 
-def replace_bracketed(match: re.Match[str]) -> str:
+def replace_bracketed(match: regex.Match[str]) -> str:
     text: str = match.group(1)
     del match
 
@@ -191,7 +192,7 @@ def replace_bracketed(match: re.Match[str]) -> str:
     return f'<span class="{clas}">{text}</span>'
 
 
-def replace_manual(match: re.Match[str]) -> str:
+def replace_manual(match: regex.Match[str]) -> str:
     text, key = match.group(1, 2)
     if key is None:
         return rf'<span class="manual">{text}</span>'
@@ -434,10 +435,13 @@ class Wiki:
             ban=["//"],
         )
 
-    def replace_addendum(self, match: re.Match[str]) -> str:
+    def replace_addendum(self, match: regex.Match[str]) -> str:
         return "".join(self.replace_addendum_aux(match))
 
-    def replace_addendum_aux(self, match: re.Match[str]) -> abc.Generator[str]:
+    def replace_addendum_aux(
+        self,
+        match: regex.Match[str],
+    ) -> abc.Generator[str]:
         yield f'<span class="addendum" data-page="{self.addenda_page}">'
         g1, g2 = match.group(1), match.group(2)
         if g1:
@@ -448,7 +452,7 @@ class Wiki:
             yield f"<ins>{g2}</ins>"
         yield "</span>"
 
-    def replace_headword(self, match: re.Match[str]) -> str:
+    def replace_headword(self, match: regex.Match[str]) -> str:
         headword: str = match.group(1)
         ensure.ensure(
             _HEADWORD_RE.fullmatch(headword),
@@ -530,7 +534,7 @@ class Wiki:
             )
         return html
 
-    def replace_footnote(self, match: re.Match[str]) -> str:
+    def replace_footnote(self, match: regex.Match[str]) -> str:
         self.footnotes += 1
         # The footnote content is embedded in a `data-footnote` attribute on
         # the `.footnoted` wrapper. The rest is taken care of by JavaScript.
