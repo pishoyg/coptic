@@ -124,21 +124,13 @@ class SearchResult extends xoox.SearchResult {
    * @returns A comparison key ranking verses in the search results.
    */
   protected override compareKeyAux(): number[] {
-    const coptic: xoox.FieldSearchResult[] = this.results.filter(
+    // active is the list of Coptic fields that are currently active.
+    const active: xoox.FieldSearchResult[] = this.results.filter(
       (r: xoox.FieldSearchResult): boolean =>
-        !!dial.find(r.name as dial.Code)?.coptic
-    );
-
-    const active: xoox.FieldSearchResult[] = coptic.filter(
-      (r: xoox.FieldSearchResult): boolean =>
+        !!dial.find(r.name as dial.Code)?.coptic &&
         !SearchResult.inactive?.includes(r.name as dial.Code)
     );
 
-    // "Filtered" means at least one Coptic dialect is deselected; English and
-    // Greek toggles don't count.
-    const filtered: boolean = coptic.length !== active.length;
-
-    // A match implies the dialect has text, so no textLength check is needed.
     const matching: number = active.filter(
       (r: xoox.FieldSearchResult): boolean => r.match
     ).length;
@@ -147,20 +139,21 @@ class SearchResult extends xoox.SearchResult {
       (r: xoox.FieldSearchResult): boolean => r.textLength > 0
     ).length;
 
+    const subset = !!SearchResult.inactive?.length;
+
     return [
       // The first element is the essential binary: 0 if the verse has visible
       // Coptic text, else 1. This sinks verses with no Coptic translation
       // (English/Greek-only) below those a Coptic learner can study. It always
       // applies.
       withText ? 0 : 1,
-      // When some Coptic dialects are deselected (English/Greek toggles are
-      // ignored), rank by the number of active Coptic dialects that match the
-      // query, then by the number that have any text. When no Coptic dialect is
-      // filtered, both are 0, so equal keys compare equal and the stable sort
-      // preserves scriptural (book/chapter/verse) order — what we want for the
-      // Bible by default.
-      filtered ? -matching : 0,
-      filtered ? -withText : 0,
+      // When some languages are deselected, rank by the number of active Coptic
+      // dialects that match the query, then by the number that have any text.
+      // When language selection is off, both are 0, so equal keys compare equal
+      // and the stable sort preserves scriptural (book/chapter/verse) order —
+      // what we want for the Bible by default.
+      subset ? -matching : 0,
+      subset ? -withText : 0,
     ];
   }
 }
