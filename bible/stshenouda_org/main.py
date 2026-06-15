@@ -839,11 +839,13 @@ class HTMLBuilder:
         verse: Verse,
         langs: list[Language],
         num_override: str | None,
+        omit_empty: bool = False,
     ) -> abc.Generator[str]:
         yield from self.verse_begin(verse, num_override)
         for lang in langs:
             yield from self.lang_begin(lang)
-            yield from verse.recolored[lang]
+            if verse.has_lang(lang) or not omit_empty:
+                yield from verse.recolored[lang]
             yield from self.lang_end(lang)
         yield from self.verse_end(verse, num_override)
 
@@ -852,8 +854,11 @@ class HTMLBuilder:
         verse: Verse,
         langs: list[Language],
         num_override: str | None = None,
+        omit_empty: bool = False,
     ) -> str:
-        return "".join(self._verse_body_aux(verse, langs, num_override))
+        return "".join(
+            self._verse_body_aux(verse, langs, num_override, omit_empty),
+        )
 
     # __chapter_body_aux builds the contents of the <body> element of a chapter.
     def __chapter_body_aux(
@@ -1347,7 +1352,11 @@ def main():
                 # suffixed numbers are present. Duplicate keys are acceptable in
                 # Xooxle. The complex verse number deduplication / grouping
                 # logic is irrelevant in Xooxle's case.
-                yield key, table_builder.verse_html(verse, _LANGUAGES, None)
+                yield key, table_builder.verse_html(
+                    verse,
+                    _LANGUAGES,
+                    omit_empty=True,
+                )
 
     xooxle.Xooxle(
         verse_source(),
