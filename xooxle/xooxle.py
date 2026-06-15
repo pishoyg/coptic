@@ -504,7 +504,10 @@ class Xooxle:
             return []
         return list(map(self.unit, html.split(const.UNIT_DELIMITER)))
 
-    def process_file(self, pair: tuple[str, str]) -> dict[str, Field | str]:
+    def process_file(
+        self,
+        pair: tuple[str, str],
+    ) -> dict[str, Field | str] | None:
         key, content = pair
         del pair
         entry = bs4.BeautifulSoup(content, "html.parser")
@@ -532,13 +535,18 @@ class Xooxle:
             cap.name: self.field(cap.excise(entry)) for cap in self._captures
         }
         data = {k: v for k, v in data.items() if v}
+        if not data:
+            return None
         return {_KEY: key} | data
 
     def build(self) -> None:
         with concur.thread_pool_executor() as executor:
-            data: Iterable[dict[str, Field | str]] = executor.map(
-                self.process_file,
-                self._source,
+            data: Iterable[dict[str, Field | str]] = filter(
+                None,
+                executor.map(
+                    self.process_file,
+                    self._source,
+                ),
             )
         json: Index = {
             "data": list(data),
