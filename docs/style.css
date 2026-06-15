@@ -4,6 +4,11 @@
  *   ./pre-commit/docs_structure.py -c
  */
 
+/* Noto Sans is served directly by Google Fonts (rather than self-hosted).
+ * The `latin-ext` subset (U+A720-A7FF) covers the Latin Glottal characters
+ * (U+A7BC, U+A7BD) used in Demotic text. See the body font-family below. */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
 html {
   scroll-behavior: smooth;
 }
@@ -128,7 +133,7 @@ body {
  * */
 body:not(.android .card),
 input:not(.android .card) {
-  font-family: Antinoou, 'Noto Sans', monospace;
+  font-family: Antinoou, 'Noto Sans', sans-serif;
 }
 
 input[type='checkbox'] {
@@ -182,22 +187,6 @@ table {
 @font-face {
   font-family: Antinoou;
   src: url('fonts/AntinoouFont-1.0.6/_AntinoouItalic.woff2') format('woff2');
-  font-weight: normal;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Noto Sans';
-  src: url('fonts/NotoSans/_NotoSans-VariableFont_wdth,wght.woff2')
-    format('woff2');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Noto Sans';
-  src: url('fonts/NotoSans/_NotoSans-Italic-VariableFont_wdth,wght.woff2')
-    format('woff2');
   font-weight: normal;
   font-style: italic;
 }
