@@ -365,11 +365,8 @@ async function main(): Promise<void> {
     scrollTargetID: ID.RESULTS,
   });
 
-  const json: xoox.XooxleRaw = (await fetch('bible.json').then(
-    (raw: Response) => raw.json()
-  )) as xoox.XooxleRaw;
-  const xooxle: xoox.Xooxle = new xoox.Xooxle(json, form, SearchResult);
-
+  // NOTE: We scroll to the book *before* loading the index, because loading the
+  // index takes a lot of time.
   const book: string | null = browser.getParam(BOOK_PARAM);
   if (book) {
     goTo(book);
@@ -379,6 +376,11 @@ async function main(): Promise<void> {
 
   // TODO: (#445) Control the query parameter through the Xooxle module.
   form.searchBox.value = browser.getParam(paths.QUERY_PARAM) ?? '';
+
+  const json: xoox.XooxleRaw = (await fetch('bible.json').then(
+    (raw: Response) => raw.json()
+  )) as xoox.XooxleRaw;
+  const xooxle: xoox.Xooxle = new xoox.Xooxle(json, form, SearchResult);
 
   addEventListeners(form, xooxle, manager, highlighter);
 
