@@ -178,7 +178,7 @@ interface Checkbox {
  */
 export class Form {
   // Input fields:
-  private readonly searchBox: HTMLInputElement;
+  public readonly searchBox: HTMLInputElement;
 
   private readonly fullWordCheckbox: Checkbox;
   private readonly caseSensitiveCheckbox: Checkbox;
@@ -303,6 +303,13 @@ export class Form {
    */
   public get resultsTBody(): HTMLTableSectionElement {
     return this.tbody;
+  }
+
+  /**
+   * @returns
+   */
+  public get regexEnabled(): boolean {
+    return this.regexCheckbox.box.checked;
   }
 
   /**

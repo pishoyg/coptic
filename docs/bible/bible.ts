@@ -42,25 +42,63 @@ const ID = {
 } as const;
 
 /**
- * When the user types a character whose script matches `re` while all `codes`
- * are inactive, toggle `code ?? codes[0]` so its text becomes visible.
+ * A rule that reveals a hidden language when the user types its script: if the
+ * form matches `predicate` while all `codes` are inactive, we should enable
+ * `target` so its text becomes visible.
  */
-interface ScriptToggle {
-  codes: dial.Code[];
-  code?: dial.Code;
-  re: RegExp;
+class LanguageToggle {
+  /**
+   * @param codes - The dialect codes that must all be inactive for this toggle
+   * to fire.
+   * @param predicate - Whether the form's current state should trigger the
+   * toggle (e.g. the search box contains the language's script).
+   * @param target - The dialect to enable; defaults to the first of `codes`.
+   */
+  public constructor(
+    private readonly codes: dial.Code[],
+    private readonly predicate: (form: xoox.Form) => boolean,
+    public readonly target: dial.Code = codes[0]!
+  ) {}
+
+  /**
+   * @param form - The search form.
+   * @param inactive - The currently inactive dialect codes.
+   * @returns Whether `target` should be enabled: true when all `codes` are
+   * inactive and the form matches the predicate.
+   */
+  public shouldEnable(form: xoox.Form, inactive: dial.Code[]): boolean {
+    return (
+      this.codes.every((c: dial.Code): boolean => inactive.includes(c)) &&
+      this.predicate(form)
+    );
+  }
 }
 
-const SCRIPT_TOGGLES: ScriptToggle[] = [
-  { codes: ['E'], re: /\p{Script=Latin}/u },
-  { codes: ['G'], re: /\p{Script=Greek}/u },
-  {
-    // If all Coptic dialects are inactive and the user types a Coptic
-    // character, toggle our favorite Coptic dialect.
-    codes: dial.DIALECTS.filter((d) => d.coptic).map((d) => d.code),
-    code: dial.DEFAULT,
-    re: /\p{Script=Coptic}/u,
-  },
+const LANGUAGE_TOGGLES: LanguageToggle[] = [
+  // Enable English when the user types Latin letters, unless it's a regex
+  // query.
+  // A user who enables regex likely knows what they're doing, so we don't need
+  // to do anything for them.
+  new LanguageToggle(
+    ['E'],
+    (form: xoox.Form): boolean =>
+      // Skip this toggle when regex search is enabled. Regex syntax is composed
+      // of Latin characters, so typing one shouldn't be taken as intent to read
+      // the English text.
+      !form.regexEnabled && /\p{Script=Latin}/u.test(form.searchBox.value)
+  ),
+  // Enable Greek when the user types a Greek character.
+  new LanguageToggle(['G'], (form: xoox.Form): boolean =>
+    /\p{Script=Greek}/u.test(form.searchBox.value)
+  ),
+  // If the user types a Coptic letter and all Coptic dialects are disabled,
+  // enable our favorite Coptic dialect.
+  new LanguageToggle(
+    dial.DIALECTS.filter((d) => d.coptic).map((d) => d.code),
+    (form: xoox.Form): boolean =>
+      /\p{Script=Coptic}/u.test(form.searchBox.value),
+    dial.DEFAULT
+  ),
 ];
 
 /**
@@ -215,14 +253,10 @@ function addListDialects(): HTMLInputElement[] {
 }
 
 /**
- * If the URL has a `?book=` parameter, expand that book's collapsible and
- * scroll to it.
+ * Scroll to the book, then click the title to expand its collapsible.
+ * @param book
  */
-function maybeGoToBook(): void {
-  const book: string | null = browser.getParam(BOOK_PARAM);
-  if (!book) {
-    return;
-  }
+function goTo(book: string): void {
   const elem: HTMLElement | null = document.getElementById(book);
   if (!elem) {
     log.error(book, 'not found!');
@@ -238,80 +272,9 @@ function maybeGoToBook(): void {
 }
 
 /**
- * Wire the search box: restore its value from the `?query=` URL parameter,
- * mirror keystrokes back to the URL, trigger a fresh search on every
- * keystroke, and suppress form submit so pressing Enter doesn't clear the
- * form.
- *
- * @param x - The Xooxle search engine to drive.
- * @param manager
- * @param highlighter
- */
-function wireSearchBox(
-  x: xoox.Xooxle,
-  manager: dial.Manager,
-  highlighter: high.Highlighter
-): void {
-  const box: HTMLInputElement = document.getElementById(
-    ID.SEARCH_BOX
-  ) as HTMLInputElement;
-  const initial: string | null = browser.getParam(paths.QUERY_PARAM);
-  if (initial) {
-    box.value = initial;
-  }
-
-  box.addEventListener('input', (): void => {
-    // Delete the book parameter in case it's present. A URL with both the
-    // query and book parameter wouldn't render properly.
-    browser.setParams({ [paths.QUERY_PARAM]: box.value, [BOOK_PARAM]: null });
-
-    x.search();
-  });
-
-  box.addEventListener('keydown', (e: KeyboardEvent) => {
-    if (e.ctrlKey || e.metaKey || e.key.length !== 1) {
-      // This is a special key.
-      return;
-    }
-
-    const inactive: dial.Code[] | undefined = manager.inactive();
-    if (!inactive?.length) {
-      // All languages are active.
-      return;
-    }
-
-    // NOTE: Setting dialects triggers a search (see below), in which case this
-    // listener would be triggering search twice. This is OK since calls get
-    // debounced and deduplicated by Xooxle.
-    for (const toggle of SCRIPT_TOGGLES) {
-      if (
-        toggle.re.test(e.key) &&
-        toggle.codes.every((c: dial.Code): boolean => inactive.includes(c))
-      ) {
-        highlighter.toggle(toggle.code ?? toggle.codes[0]!, true);
-      }
-    }
-  });
-
-  document.addEventListener(ddial.EVENT, () => {
-    // Since dialect selection affects the subset of fields that gets searched,
-    // we need to rerun the search query whenever dialects are set.
-    x.search();
-  });
-
-  // Run a first search to honour an initial query restored from the URL.
-  x.search();
-
-  if (!browser.getParam(BOOK_PARAM)) {
-    // If we're not scrolling to a book, focus on the search box.
-    box.focus();
-  }
-}
-
-/**
  *
  */
-async function main(): Promise<void> {
+function handleBookTitles(): void {
   document
     .querySelectorAll<HTMLElement>(`.${cls.INDEX_BOOK_NAME}`)
     .forEach((collapse: HTMLElement): void => {
@@ -322,19 +285,74 @@ async function main(): Promise<void> {
         collapse.nextElementSibling as HTMLElement
       );
     });
+}
 
-  maybeGoToBook();
+/**
+ * Wire up the search box and dialect-selection event listeners.
+ *
+ * @param form
+ * @param xooxle
+ * @param manager
+ * @param highlighter
+ */
+function addEventListeners(
+  form: xoox.Form,
+  xooxle: xoox.Xooxle,
+  manager: dial.Manager,
+  highlighter: high.Highlighter
+): void {
+  // On input to the search box: update the URL parameters, auto-enable a
+  // language whose script the user just typed, and run a fresh search.
+  form.searchBox.addEventListener('input', (e: Event): void => {
+    // Delete the book parameter in case it's present. A URL with both the
+    // query and book parameter wouldn't render properly.
+    browser.setParams({
+      [paths.QUERY_PARAM]: form.searchBox.value,
+      [BOOK_PARAM]: null,
+    });
+
+    const inactive: dial.Code[] | undefined = manager.inactive();
+    // Only auto-enable a language when the user adds text (typing, pasting, or
+    // dropping), not when they remove it (e.g. Backspace, cut). The `insert`
+    // input types are exactly the additive ones.
+    if (
+      inactive?.length &&
+      e instanceof InputEvent &&
+      e.inputType.startsWith('insert')
+    ) {
+      // NOTE: Setting dialects triggers a search (see other listeners), in
+      // which case we would be triggering search twice. This is OK since calls
+      // get debounced and deduplicated by Xooxle.
+      for (const toggle of LANGUAGE_TOGGLES) {
+        if (toggle.shouldEnable(form, inactive)) {
+          highlighter.toggle(toggle.target, true);
+        }
+      }
+    }
+
+    xooxle.search();
+  });
+
+  // Since dialect selection affects the subset of fields that gets searched,
+  // we need to rerun the search query whenever dialects are set.
+  document.addEventListener(ddial.EVENT, () => {
+    xooxle.search();
+  });
+}
+
+/**
+ *
+ */
+async function main(): Promise<void> {
+  handleBookTitles();
 
   const manager: dial.Manager = new dial.Manager();
   const highlighter: high.Highlighter = new high.Highlighter(manager, [
     ...addTooltipDialects(),
     ...addListDialects(),
   ]);
-  SearchResult.init(manager);
 
-  const json: xoox.XooxleRaw = (await fetch('bible.json').then(
-    (raw: Response) => raw.json()
-  )) as xoox.XooxleRaw;
+  SearchResult.init(manager);
 
   const form: xoox.Form = new xoox.Form({
     searchBoxID: ID.SEARCH_BOX,
@@ -346,8 +364,28 @@ async function main(): Promise<void> {
     scrollTargetID: ID.RESULTS,
   });
 
-  const x: xoox.Xooxle = new xoox.Xooxle(json, form, SearchResult);
-  wireSearchBox(x, manager, highlighter);
+  const json: xoox.XooxleRaw = (await fetch('bible.json').then(
+    (raw: Response) => raw.json()
+  )) as xoox.XooxleRaw;
+  const xooxle: xoox.Xooxle = new xoox.Xooxle(json, form, SearchResult);
+
+  const book: string | null = browser.getParam(BOOK_PARAM);
+  if (book) {
+    goTo(book);
+  } else {
+    form.searchBox.focus();
+  }
+
+  // TODO: (#445) Control the query parameter through the Xooxle module.
+  form.searchBox.value = browser.getParam(paths.QUERY_PARAM) ?? '';
+
+  addEventListeners(form, xooxle, manager, highlighter);
+
+  // Run a first search to honour an initial query restored from the URL.
+  // NOTE: If the URL has both a `book` and a `query` parameter, we would both
+  // scroll to the book and execute a search, which would be confusing. We don't
+  // account for this case because we never construct such a URL.
+  xooxle.search();
 }
 
 await main();
