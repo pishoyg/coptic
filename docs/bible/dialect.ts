@@ -90,9 +90,6 @@ export class Manager extends dial.Manager<Code> {
    * NOTE: Unlike the `active` method, this method returns the list of inactive
    * languages that are actually present on this page. Languages that are absent
    * from this page are excluded.
-   * Another distinction is that an empty or undefined array implies that no
-   * languages are inactive, while an empty or undefined `active` array
-   * implies that all languages are active.
    *
    * TODO: (#0) Try to privatize or omit the `active` method somehow, as it
    * includes languages that are absent from the page, which could be
@@ -103,8 +100,17 @@ export class Manager extends dial.Manager<Code> {
     const inactive: Code[] = Array.from(CODES).filter(
       (c: Code): boolean => !active?.includes(c)
     );
-    return inactive.length && inactive.length !== DIALECTS.length
-      ? inactive
-      : undefined;
+    if (inactive.length === DIALECTS.length) {
+      // Every language is inactive because none is active — an all-hidden page
+      // is meaningless, so treat it as "no selection" and return undefined.
+      // `active?.includes(c) === false` for all languages.
+      return undefined;
+    }
+    if (inactive.length === 0) {
+      // No inactive languages because all languages are active.
+      // `active?.includes(c) === true` for all languages.
+      return [];
+    }
+    return inactive;
   }
 }

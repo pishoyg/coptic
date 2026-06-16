@@ -196,7 +196,7 @@ class SearchResult extends xoox.SearchResult {
       (r: xoox.FieldSearchResult): boolean => r.textLength > 0
     ).length;
 
-    const subset = !!SearchResult.inactive?.length;
+    const selection: boolean = SearchResult.inactive !== undefined;
 
     return [
       // The first element is the essential binary: 0 if the verse has visible
@@ -204,13 +204,14 @@ class SearchResult extends xoox.SearchResult {
       // (English/Greek-only) below those a Coptic learner can study. It always
       // applies.
       withText ? 0 : 1,
-      // When some languages are deselected, rank by the number of active Coptic
-      // dialects that match the query, then by the number that have any text.
-      // When language selection is off, both are 0, so equal keys compare equal
+      // When at least one language is selected, rank by the number of active
+      // Coptic dialects that match the query, then by the number that have any
+      // text.
+      // When nothing is selected, both are 0, so equal keys compare equal
       // and the stable sort preserves scriptural (book/chapter/verse) order —
       // what we want for the Bible by default.
-      subset ? -matching : 0,
-      subset ? -withText : 0,
+      selection ? -matching : 0,
+      selection ? -withText : 0,
     ];
   }
 }
