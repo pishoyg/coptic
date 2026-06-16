@@ -209,7 +209,6 @@ def _normalize(lang: Language, text: str) -> str:
     if not substitutions:
         return text
     for key, value in substitutions.items():
-        assert key == value
         text = text.replace(key, value)
     return text
 
