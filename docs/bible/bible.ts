@@ -372,8 +372,6 @@ async function main(): Promise<void> {
     scrollTargetID: ID.RESULTS,
   });
 
-  form.searchBox.focus();
-
   // TODO: (#445) Control the query parameter through the Xooxle module.
   form.searchBox.value = browser.getParam(paths.QUERY_PARAM) ?? '';
 
@@ -381,6 +379,10 @@ async function main(): Promise<void> {
     (raw: Response) => raw.json()
   )) as xoox.XooxleRaw;
   const xooxle: xoox.Xooxle = new xoox.Xooxle(json, form, SearchResult);
+
+  // Focus after reading the index, to give the user an indication that the page
+  // has loaded.
+  form.searchBox.focus();
 
   addEventListeners(form, xooxle, manager, highlighter);
 
