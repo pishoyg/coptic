@@ -262,14 +262,10 @@ function addListDialects(): HTMLInputElement[] {
 }
 
 /**
- * If the book parameter is available, scroll to the book, then click the title
- * to expand its collapsible.
+ * Scroll to the book, then click the title to expand its collapsible.
+ * @param book
  */
-function maybeGoToBook(): void {
-  const book: string | null = browser.getParam(BOOK_PARAM);
-  if (!book) {
-    return;
-  }
+function goTo(book: string): void {
   const elem: HTMLElement | null = document.getElementById(book);
   if (!elem) {
     log.error(book, 'not found!');
@@ -358,9 +354,13 @@ function addEventListeners(
  */
 async function main(): Promise<void> {
   handleBookTitles();
+
   // NOTE: We scroll to the book *before* loading the index, because loading the
   // index takes a lot of time.
-  maybeGoToBook();
+  const book: string | null = browser.getParam(BOOK_PARAM);
+  if (book) {
+    goTo(book);
+  }
 
   const manager: dial.Manager = new dial.Manager();
   const highlighter: high.Highlighter = new high.Highlighter(manager, [
@@ -390,7 +390,9 @@ async function main(): Promise<void> {
 
   // Focus after reading the index, to give the user an indication that the page
   // has loaded.
-  form.searchBox.focus();
+  if (!book) {
+    form.searchBox.focus();
+  }
 
   addEventListeners(form, xooxle, manager, highlighter);
 
