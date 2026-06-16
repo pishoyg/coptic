@@ -137,7 +137,7 @@ export const enum CLS {
 }
 
 /**
- * UNIT_DELIMITER is the string that separates a units field into units.
+ * UNIT_DELIMITER is the string that separates units.
  */
 const UNIT_DELIMITER = `<hr class="${CLS.MATCH_SEPARATOR}">`;
 
@@ -1111,8 +1111,6 @@ class UnitSearchResult extends AggregateResult {
    * @returns The HTML content of the unit, with matches highlighted.
    */
   public html(): string {
-    // The unit was split into lines using LINE_BREAK as a delimiter, so we
-    // rebuild it using LINE_BREAK.
     return this.results.map((r) => r.html).join(LINE_BREAK);
   }
 }
