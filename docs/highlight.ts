@@ -113,11 +113,20 @@ export abstract class Highlighter {
     // This is necessary because child classes may have overridden the
     // initialization logic with logic that uses fields that get populated by
     // their constructors.
-
-    // Update display once when the page loads.
-    setTimeout(this.update.bind(this), 0);
-    // Add event listeners.
-    setTimeout(this.addEventListeners.bind(this), 0);
+    //
+    // We use a microtask rather than a macrotask (scheduled by `setTimeout`) so
+    // the deferred logic runs after the child constructor returns, but *before*
+    // the browser yields to the event loop. A macrotask would yield to the
+    // event loop, letting the browser compute layout first and only then run
+    // `this.update()`, potentially invalidating that layout. In particular,
+    // this was noticed on URLs that had a text fragment: the browser computed
+    // the position of the fragment, and then `this.update()` altered the
+    // content of the page, shifting the fragment's Y coordinate and leaving the
+    // browser scrolled to the wrong place.
+    queueMicrotask((): void => {
+      this.update(); // Update display once when the page loads.
+      this.addEventListeners(); // Add event listeners.
+    });
   }
 
   /**
