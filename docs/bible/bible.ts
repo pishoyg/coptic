@@ -254,10 +254,14 @@ function addListDialects(): HTMLInputElement[] {
 }
 
 /**
- * Scroll to the book, then click the title to expand its collapsible.
- * @param book
+ * If the book parameter is available, scroll to the book, then click the title
+ * to expand its collapsible.
  */
-function goTo(book: string): void {
+function maybeGoToBook(): void {
+  const book: string | null = browser.getParam(BOOK_PARAM);
+  if (!book) {
+    return;
+  }
   const elem: HTMLElement | null = document.getElementById(book);
   if (!elem) {
     log.error(book, 'not found!');
@@ -346,6 +350,9 @@ function addEventListeners(
  */
 async function main(): Promise<void> {
   handleBookTitles();
+  // NOTE: We scroll to the book *before* loading the index, because loading the
+  // index takes a lot of time.
+  maybeGoToBook();
 
   const manager: dial.Manager = new dial.Manager();
   const highlighter: high.Highlighter = new high.Highlighter(manager, [
@@ -365,14 +372,7 @@ async function main(): Promise<void> {
     scrollTargetID: ID.RESULTS,
   });
 
-  // NOTE: We scroll to the book *before* loading the index, because loading the
-  // index takes a lot of time.
-  const book: string | null = browser.getParam(BOOK_PARAM);
-  if (book) {
-    goTo(book);
-  } else {
-    form.searchBox.focus();
-  }
+  form.searchBox.focus();
 
   // TODO: (#445) Control the query parameter through the Xooxle module.
   form.searchBox.value = browser.getParam(paths.QUERY_PARAM) ?? '';
