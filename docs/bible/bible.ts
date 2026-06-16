@@ -27,6 +27,7 @@ const MAPPING: Record<string, string> = Object.values(map.MAPPING).reduce<
 }, {});
 
 const KEY_RE = /^(.*?)_(\d+[ab]?|[a-f])\.html(?:#v(\d+)[a-z]?)?$/;
+const FRAGMENT_CONTEXT = 10;
 
 const ID = {
   SEARCH_BOX: 'search-box',
@@ -85,6 +86,24 @@ class SearchResult extends xoox.SearchResult {
    */
   protected override link(): string {
     return this.key;
+  }
+
+  /**
+   * The Bible index is single-layer, so unlike the base method we needn't
+   * walk subsequent layers. We also ignore the caller's context and use a
+   * larger fixed value (`FRAGMENT_CONTEXT`), to give text-fragment directives
+   * more disambiguating context. Inactive (hidden) dialect cells are omitted,
+   * so the browser doesn't scroll to or highlight text the reader can't see.
+   *
+   * @param _ - Context; ignored in favor of `FRAGMENT_CONTEXT`. See above.
+   * @returns The text fragments for matches in active dialects.
+   */
+  public override fragment(_: number): string[] {
+    return this.results.flatMap((r: xoox.FieldSearchResult): string[] =>
+      SearchResult.inactive?.includes(r.name as dial.Code)
+        ? []
+        : r.fragment(FRAGMENT_CONTEXT)
+    );
   }
 
   /**
