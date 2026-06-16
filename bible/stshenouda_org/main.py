@@ -25,7 +25,7 @@ from xooxle import xooxle
 # Input parameters
 
 _SCRIPT_DIR = pathlib.Path(__file__).parent
-_JSON: pathlib.Path = _SCRIPT_DIR / "data/input/bible.json"
+_JSON: pathlib.Path = _SCRIPT_DIR / "data/bible.json"
 _INPUT_DIR: pathlib.Path = _SCRIPT_DIR / "data/input/"
 _SOURCES_DIR: pathlib.Path = _INPUT_DIR / "Sources/"
 _COVER: pathlib.Path = _SCRIPT_DIR / "data/img/stauros.jpeg"
