@@ -204,6 +204,8 @@ _COLOR_CLASSES: dict[str, str | None] = {
 
 def _normalize(lang: Language, text: str) -> str:
     substitutions: dict[str, str] = _NORMALIZATION.get(lang, {})
+    # Get rid of zero-width space.
+    substitutions[chr(0x200B)] = ""
     if not substitutions:
         return text
     for key, value in substitutions.items():
