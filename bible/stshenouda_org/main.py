@@ -219,6 +219,38 @@ def _normalize(lang: Language, text: str) -> str:
     return text
 
 
+def _character_class(*components: str) -> str:
+    # Wrap the concatenated components in a character class.
+    return "".join(("[", *components, "]"))
+
+
+# Per-language character whitelists. Each entry compiles a regular expression
+# that every verse's (normalized) text must fully match, catching encoding
+# errors and stray characters that creep into the source data.
+# `_character_class` builds the bulk of such a pattern: a character class --
+# from literal characters, character ranges, or Unicode properties -- that
+# matches only whitelisted characters.
+# TODO: (#743) Exclude verse numbers from validated text, and restrict the
+# whitelists further.
+
+_TEXT_RE: dict[Language, regex.Pattern[str]] = {
+    "English": regex.compile(
+        _character_class(
+            " ",
+            r"\p{Script=Latin}",
+            "()",
+            "0-9",
+            ",.;:?!",
+            "‘’'\"",
+            r"\-",
+            "—",
+            "=",
+            r"\[\]",
+        ),
+    ),
+}
+
+
 class Verse:
     """A Bible verse."""
 
@@ -234,6 +266,7 @@ class Verse:
             lang: _normalize(lang, _VERSE_PREFIX.sub("", data[lang]).strip())
             for lang in _LANGUAGES
         }
+        self._validate_text()
 
         self.num: str = ""
         self.chapter: str = ""
@@ -247,6 +280,25 @@ class Verse:
         assert match
         self.num = match.group(2) or ""
         self.chapter = match.group(1) or ""
+
+    def _validate_text(self) -> None:
+        assert self.recolored
+        for lang, text in self.unnumbered.items():
+            # TODO: (#743) Force the whitelisting regex to be present for all
+            # languages.
+            pattern: regex.Pattern[str] | None = _TEXT_RE.get(lang, None)
+            if not pattern:
+                continue
+            # Remove all text that matches the validity regex.
+            text = pattern.sub("", text)
+            ensure.ensure(
+                not text,
+                self,
+                "has",
+                lang,
+                "text that does not match the expected pattern:",
+                text,
+            )
 
     def number(self) -> str:
         """
