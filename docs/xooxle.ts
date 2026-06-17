@@ -1193,16 +1193,14 @@ class Match {
    * @returns
    */
   public translate(translation: number[]): Match {
-    if (orth.idempotent(translation)) {
-      // No translation is needed. Match is immutable (all fields are
-      // readonly), so it's safe to return `this` directly.
+    const start: number = translation[this.start]!;
+    const end: number = translation[this.end]!;
+    if (start === this.start && end === this.end) {
+      // Match is immutable (all fields are readonly), so it's safe to return
+      // `this` directly.
       return this;
     }
-    return new Match(
-      translation[this.start]!,
-      translation[this.end]!,
-      this.boundary
-    );
+    return new Match(start, end, this.boundary);
   }
 }
 
