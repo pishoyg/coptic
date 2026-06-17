@@ -1576,8 +1576,6 @@ export class Xooxle {
     // Clear output fields in the form, since we're starting a new search.
     this.form.clearOutputFields();
 
-    // TODO: (#605) Consider passing searchAuxAux to a Web Worker to improve
-    // performance.
     try {
       const regex: RegExp | undefined = this.form.regex();
       if (!regex) {
