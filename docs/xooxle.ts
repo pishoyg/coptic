@@ -418,7 +418,11 @@ abstract class AggregateResult implements Result {
   }
 
   /**
-   * @returns
+   * @returns The matches, with offsets in the diacritic-free search-text space
+   * (the same space as `textLength`). Consumers that operate on the rendered
+   * DOM must translate these offsets into the rendered-DOM space via
+   * `orth.translation`, since the rendered HTML may
+   * contain diacritics that the search text does not.
    */
   public get matches(): Match[] {
     return (this.matchesMemo ??= this.matchesAux());
