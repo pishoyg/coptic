@@ -1434,7 +1434,7 @@ class LineSearchResult implements Result {
    * @returns The boundary type.
    */
   public boundary(): Boundary {
-    return Math.min(...this.matches.map((m) => m.boundary));
+    return AggregateResult.boundary(...this.matches.map((m) => m.boundary));
   }
 }
 
