@@ -182,7 +182,7 @@ class SearchResult extends xoox.SearchResult {
       return super.view();
     }
 
-    return `${abbreviation} ${chapter}${verse ? `:${verse}` : ''}`;
+    return `${abbreviation} ${chapter.toUpperCase()}${verse ? `:${verse}` : ''}`;
   }
 
   /**
