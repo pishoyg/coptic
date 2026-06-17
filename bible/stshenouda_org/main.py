@@ -203,12 +203,17 @@ _COLOR_CLASSES: dict[str, str | None] = {
 
 
 def _normalize(lang: Language, text: str) -> str:
-    substitutions: dict[str, str] = _NORMALIZATION.get(lang, {})
-    # Get rid of zero-width space.
-    substitutions[chr(0x200B)] = ""
-    if not substitutions:
-        return text
-    for key, value in substitutions.items():
+    for key, value in {
+        **_NORMALIZATION.get(lang, {}),
+        # Get rid of zero-width space, in all languages.
+        # NOTE: The zero-width space character is intentionally used in the
+        # input to distinguish identical words that should be colored
+        # differently, in which case some instances would have the character and
+        # some won't, with the `coloredWords` map assigning different colors to
+        # each version. We therefore retain the characters in the source data,
+        # but sanitize them in the output.
+        chr(0x200B): "",
+    }.items():
         assert key != value
         text = text.replace(key, value)
     return text
