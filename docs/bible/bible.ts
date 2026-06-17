@@ -127,20 +127,28 @@ class SearchResult extends xoox.SearchResult {
   }
 
   /**
-   * The Bible index is single-layer, so unlike the base method we needn't
-   * walk subsequent layers. We also ignore the caller's context and use a
-   * larger fixed value (`FRAGMENT_CONTEXT`), to give text-fragment directives
-   * more disambiguating context. Inactive (hidden) dialect cells are omitted,
-   * so the browser doesn't scroll to or highlight text the reader can't see.
+   * We use a larger context than the base default to give text-fragment
+   * directives more disambiguating context.
    *
-   * @param _ - Context; ignored in favor of `FRAGMENT_CONTEXT`. See above.
+   * @returns The number of context words per fragment.
+   */
+  protected override fragmentContext(): number {
+    return FRAGMENT_CONTEXT;
+  }
+
+  /**
+   * The Bible index is single-layer, so unlike the base method we needn't
+   * walk subsequent layers. Inactive (hidden) dialect cells are omitted, so the
+   * browser doesn't scroll to or highlight text the reader can't see.
+   *
+   * @param context - Words of surrounding context per fragment.
    * @returns The text fragments for matches in active dialects.
    */
-  public override fragment(_: number): string[] {
+  public override fragment(context: number): string[] {
     return this.results.flatMap((r: xoox.FieldSearchResult): string[] =>
       SearchResult.inactive?.includes(r.name as dial.Code)
         ? []
-        : r.fragment(FRAGMENT_CONTEXT)
+        : r.fragment(context)
     );
   }
 

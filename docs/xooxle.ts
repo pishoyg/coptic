@@ -869,16 +869,24 @@ export class SearchResult extends AggregateResult {
   }
 
   /**
+   * @returns The number of context words to include in the prefix and suffix
+   * of each text fragment. Override this method to customize the context (for
+   * example, to disable context entirely on pages whose HTML we don't own).
+   */
+  protected fragmentContext(): number {
+    return FRAGMENT_CONTEXT;
+  }
+
+  /**
    *
-   * @param context
    * @returns
    */
-  private href(context: number = FRAGMENT_CONTEXT): string | undefined {
+  private href(): string | undefined {
     const link: string | undefined = this.link();
     if (!link) {
       return undefined;
     }
-    const fragments: string[] = this.fragment(context);
+    const fragments: string[] = this.fragment(this.fragmentContext());
     if (!fragments.length) {
       return link;
     }

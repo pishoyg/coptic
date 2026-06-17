@@ -302,6 +302,21 @@ class KELLIASearchResult extends SearchResult {
   }
 
   /**
+   * KELLIA results link to Coptic Dictionary Online, whose HTML we don't own.
+   * A text fragment's prefix/suffix must appear verbatim and contiguously in
+   * the destination's rendered text for the fragment to match. Because we don't
+   * control that markup, any context words we add are likely to fail to line up
+   * with it, yielding an invalid text fragment that the browser silently
+   * discards (leaving the link unanchored). We therefore use no context and
+   * rely on the match text alone.
+   *
+   * @returns
+   */
+  protected override fragmentContext(): number {
+    return 0;
+  }
+
+  /**
    *
    * @param row
    */
