@@ -241,13 +241,45 @@ _TEXT_RE: dict[Language, regex.Pattern[str]] = {
             " ",
             r"\p{Script=Latin}",
             "()",
-            "0-9",
+            "0-9",  # Mainly Ps 118, and a handful of verses elsewhere.
             ",.;:?!",
             "‘’'\"",
             r"\-",
-            "—",
-            "=",
+            "—",  # em dash
+            "=",  # only Dan D:41
             r"\[\]",
+        ),
+    ),
+    "Greek": regex.compile(
+        _character_class(
+            " ",
+            r"\p{Script=Greek}",
+            # TODO: (#735) Most Greek letters with diacritics simply match
+            # \p{Script=Greek}. \p{Mark} seems to be needed rarely, so it may be
+            # a source error that needs to be fixed.
+            r"\p{Mark}",
+            "()",
+            # TODO: (#735) Are the following two both legitimate in Greek?
+            "·",  # U+0387 GREEK ANO TELEIA
+            "·",  # U+00B7 MIDDLE DOT (homoglyph; not Script=Greek)
+            # TODO: (#735) Are the following two both legitimate in Greek?
+            ";",  # U+003B SEMICOLON
+            ";",  # U+037E GREEK QUESTION MARK (homoglyph; not Script=Greek)
+            ".,:",
+            "a-z",  # TODO: (#735) Fix at the source.
+            r"\-",  # dash
+            "–—",  # en dash and em dash
+            # TODO: (#735) Are the following two both legitimate in Greek?
+            "’",  # Apostrophe
+            "ʼ",  # Modifier Letter Apostrophe
+            "⟦⟧",
+            r"\[\]",
+            "\n",  # TODO: (#735) Fix at the source.
+            # TODO: (#735) The following is the Micro Sign (U+00B5), rather than
+            # Greek Small Letter Mu (U+03BC). Fix at the source. (Or normalize
+            # in code?)
+            "µ",
+            "0-9",  # TODO: (#735) Fix at the source.
         ),
     ),
 }
