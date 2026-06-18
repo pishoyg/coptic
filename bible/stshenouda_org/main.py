@@ -114,7 +114,10 @@ def _key(lang: Language) -> str:
 
 ensure.unique(map(_key, _LANGUAGES))
 
-_VERSE_PREFIX: re.Pattern[str] = re.compile(r"^\((.*?)\)")
+# _VERSE_NUMBER matches verse numbers within verse text.
+_VERSE_NUMBER: regex.Pattern[str] = regex.compile(
+    r"\((?:(?:[BE]|\d+):)?(?:[0-9]|[\p{Script=Coptic}\p{Mark}])+[a-z]?\)",
+)
 
 # The `verseNumber` field generally has the format:
 #   "${BOOK} ${CHAPTER}:${VERSE}".
@@ -125,18 +128,20 @@ _VERSE_PREFIX: re.Pattern[str] = re.compile(r"^\((.*?)\)")
 _VERSE_NUMBER_RE: re.Pattern[str] = re.compile(
     r"^(?:\d )?[A-Za-z ]+(?: (\d+[ab]?|[A-F])(?::(\d+[a-z]?)(?:-(\d+))?)?)?$",
 )
-_SHORT_VERSE_NUMBER_RE: re.Pattern[str] = re.compile(
+_CHAPTERLESS_VERSE_NUMBER_RE: re.Pattern[str] = re.compile(
     # Use an empty capture group for the absent chapter number, to force the
     # verse number to match at group 2, thus aligning with the general regex.
     r"^(?:\d )?[A-Za-z ]+()(?: (\d+))?$",
 )
 
-_UNAVAILABLE_RE: re.Pattern[str] = re.compile("There is no available .+ text")
+_UNAVAILABLE_SOURCE_RE: re.Pattern[str] = re.compile(
+    "There is no available .+ text",
+)
 # We use the third-party `regex` module rather than the standard library `re`
 # here because we rely on `Match.captures` to retrieve every match of the
 # repeated `Source:` group; `re` only retains the last capture of a repeated
 # group.
-_AVAILABLE_RE: regex.Pattern[str] = regex.compile(
+_AVAILABLE_SOURCE_RE: regex.Pattern[str] = regex.compile(
     # pylint: disable-next=line-too-long
     r"(?:Text )?Availability:[^\n]+(?:\n\nSource(?: \d)?:([^\n]+)(?:\n[^\n]+footnotes\.)?)+(\n\nEditing:[^\n]+)?(?:\n\nNote:[^\n]+)?",
 )
@@ -230,9 +235,6 @@ def _character_class(*components: str) -> str:
 # `_character_class` builds the bulk of such a pattern: a character class --
 # from literal characters, character ranges, or Unicode properties -- that
 # matches only whitelisted characters.
-# TODO: (#743) Exclude verse numbers from validated text, and restrict the
-# whitelists further.
-
 _TEXT_RE: dict[Language, regex.Pattern[str]] = {
     "English": regex.compile(
         _character_class(
@@ -263,7 +265,7 @@ class Verse:
             for lang in _LANGUAGES
         }
         self.unnumbered: dict[Language, str] = {
-            lang: _normalize(lang, _VERSE_PREFIX.sub("", data[lang]).strip())
+            lang: _normalize(lang, _VERSE_NUMBER.sub("", data[lang]).strip())
             for lang in _LANGUAGES
         }
         self._validate_text()
@@ -273,7 +275,7 @@ class Verse:
         if not data["verseNumber"]:
             return
         pattern: re.Pattern[str] = (
-            _SHORT_VERSE_NUMBER_RE if short_vn else _VERSE_NUMBER_RE
+            _CHAPTERLESS_VERSE_NUMBER_RE if short_vn else _VERSE_NUMBER_RE
         )
         match: re.Match[str] | None = pattern.fullmatch(data["verseNumber"])
         ensure.ensure(match, "Invalid verseNumber format:", data)
@@ -613,7 +615,7 @@ class Book(Item):
         for lang in _LANGUAGES:
             if not self.has_lang(lang, boundary_counts=False):
                 ensure.ensure(
-                    _UNAVAILABLE_RE.fullmatch(raw[lang]),
+                    _UNAVAILABLE_SOURCE_RE.fullmatch(raw[lang]),
                     "no",
                     lang,
                     "text available in",
@@ -623,7 +625,7 @@ class Book(Item):
                 )
                 continue
 
-            match: regex.Match[str] | None = _AVAILABLE_RE.fullmatch(
+            match: regex.Match[str] | None = _AVAILABLE_SOURCE_RE.fullmatch(
                 raw[lang],
             )
             ensure.ensure(
