@@ -134,7 +134,8 @@ ensure.unique(map(_key, _LANGUAGES))
 
 # _VERSE_NUMBER matches verse numbers within verse text.
 _VERSE_NUMBER: regex.Pattern[str] = regex.compile(
-    r"\((?:(?:[BE]|\d+):)?(?:[0-9]|[\p{Script=Coptic}\p{Mark}])+[a-z]?\)",
+    # pylint: disable-next=line-too-long
+    r"(?<!\w)\((?:(?:[BE]|\d+):)?(?:[0-9]|[\p{Script=Coptic}\p{Mark}])+[a-z]?\)(?!\w)",
 )
 
 # The `verseNumber` field generally has the format:
@@ -314,30 +315,46 @@ class Verse:
             lang: _normalize(lang, self.__recolor(data[lang], data))
             for lang in _LANGUAGES
         }
-        self.unnumbered: dict[Language, str] = {
+        unnumbered: dict[Language, str] = {
             lang: _normalize(lang, _VERSE_NUMBER.sub("", data[lang]).strip())
             for lang in _LANGUAGES
         }
-        self._validate_text()
+        self._validate_character_set(unnumbered)
+        self._has: dict[Language, bool] = {
+            lang: bool(text) for lang, text in unnumbered.items()
+        }
 
         self.num: str = ""
         self.chapter: str = ""
-        if not data["verseNumber"]:
-            return
-        pattern: re.Pattern[str] = (
-            _CHAPTERLESS_VERSE_NUMBER_RE if short_vn else _VERSE_NUMBER_RE
-        )
-        match: re.Match[str] | None = pattern.fullmatch(data["verseNumber"])
-        ensure.ensure(match, "Invalid verseNumber format:", data)
-        assert match
-        self.num = match.group(2) or ""
-        self.chapter = match.group(1) or ""
+        if data["verseNumber"]:
+            pattern: re.Pattern[str] = (
+                _CHAPTERLESS_VERSE_NUMBER_RE if short_vn else _VERSE_NUMBER_RE
+            )
+            match: re.Match[str] | None = pattern.fullmatch(
+                data["verseNumber"],
+            )
+            ensure.ensure(match, "Invalid verseNumber format:", data)
+            assert match
+            self.num = match.group(2) or ""
+            self.chapter = match.group(1) or ""
+        if not self.num:
+            # If the `verseNumber` field provides no number, verify that the
+            # text doesn't carry a number either.
+            for lang in _LANGUAGES:
+                ensure.ensure(
+                    # NOTE: We intentionally use `match` instead of `search` to
+                    # only ban numbers at the start of a verse, but allow
+                    # numbers mid-verse.
+                    not _VERSE_NUMBER.match(data[lang]),
+                    self,
+                    "has no valid verse number, but has numbers in text!",
+                )
 
-    def _validate_text(self) -> None:
+    def _validate_character_set(self, unnumbered: dict[Language, str]) -> None:
         if args.fast:
             return
         assert self.recolored
-        for lang, text in self.unnumbered.items():
+        for lang, text in unnumbered.items():
             # TODO: (#743) Force the whitelisting regex to be present for all
             # languages.
             pattern: regex.Pattern[str] | None = _TEXT_RE.get(lang, None)
@@ -366,8 +383,8 @@ class Verse:
             num = num[:-1]
         return num
 
-    def has_lang(self, lang: Language) -> bool:
-        return bool(self.unnumbered[lang])
+    def has(self, lang: Language) -> bool:
+        return self._has[lang]
 
     def _recolor_aux(
         self,
@@ -518,24 +535,26 @@ class Chapter(Item):
         dupes: set[str] = set()
         non_consec: set[str] = set()
 
-        # Determine the boundaries to minimize noisy error logging.
         # Chapters often include a few entries at the beginning or the end,
         # which are not part of the chapter text and possess no verse numbers,
         # but are stored in our dataset as verses.
-        # We allow boundaries to omit verse numbers.
+        # We allow numbers to be omitted from the first and last verses. Such
+        # entries cluster at the start (titles, superscriptions), so we extend
+        # the grace to the second verse when the first is also numberless. We
+        # deliberately do NOT extend it symmetrically to the second-to-last
+        # verse: a single trailing numberless entry is tolerated, but no more.
         boundaries: list[int] = [0, len(self.verses) - 1]
         if not self.verses[0].num and not self.verses[1].num:
             boundaries.append(1)
-        if not self.verses[-1].num and not self.verses[-2].num:
-            boundaries.append(len(self.verses) - 2)
 
         for idx, v in enumerate(self.verses):
             if not v.num:
-                (
-                    log.warn
-                    if idx in boundaries or self.id() == "psalms_118"
-                    else log.fatal
-                )(self, "has verse with unknown number:", v)
+                ensure.ensure(
+                    idx in boundaries or self.id() == "psalms_118",
+                    self,
+                    "has verse with unknown number:",
+                    v,
+                )
                 continue
             if v.num in seen:
                 dupes.add(v.num)
@@ -565,7 +584,7 @@ class Chapter(Item):
     @functools.cache
     def has_lang(self, lang: Language, boundary_counts: bool = True) -> bool:
         return any(
-            v.has_lang(lang)
+            v.has(lang)
             for v in (self.verses if boundary_counts else self.verses[1:-1])
         )
 
@@ -958,7 +977,7 @@ class HTMLBuilder:
         yield from self.verse_begin(verse, num_override)
         for lang in langs:
             yield from self.lang_begin(lang)
-            if verse.has_lang(lang) or not omit_empty:
+            if verse.has(lang) or not omit_empty:
                 yield from verse.recolored[lang]
             yield from self.lang_end(lang)
         yield from self.verse_end(verse, num_override)
