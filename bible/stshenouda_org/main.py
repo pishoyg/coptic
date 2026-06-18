@@ -22,6 +22,24 @@ from bible.stshenouda_org import schema
 from utils import concur, ensure, file, log, page, paths
 from xooxle import xooxle
 
+parser: argparse.ArgumentParser = argparse.ArgumentParser(
+    description=__doc__,
+)
+_ = parser.add_argument(
+    "--validate",
+    action="store_true",
+    help="Exit after building the Bible without writing any artifacts.",
+)
+_ = parser.add_argument(
+    "--fast",
+    action="store_true",
+    help="Skip the per-language character whitelist validation, which "
+    "significantly speeds up the pipeline, at the cost of not catching "
+    "encoding errors and stray characters in the source data.",
+)
+args = parser.parse_args()
+del parser
+
 # Input parameters
 
 _SCRIPT_DIR = pathlib.Path(__file__).parent
@@ -316,6 +334,8 @@ class Verse:
         self.chapter = match.group(1) or ""
 
     def _validate_text(self) -> None:
+        if args.fast:
+            return
         assert self.recolored
         for lang, text in self.unnumbered.items():
             # TODO: (#743) Force the whitelisting regex to be present for all
@@ -1411,16 +1431,6 @@ class TableBuilder(HTMLBuilder):
 
 
 def main():
-    parser: argparse.ArgumentParser = argparse.ArgumentParser(
-        description=__doc__,
-    )
-    _ = parser.add_argument(
-        "--validate",
-        action="store_true",
-        help="Exit after building the Bible without writing any artifacts.",
-    )
-    args: argparse.Namespace = parser.parse_args()
-
     bible: Bible = Bible()
 
     flow_builder: FlowBuilder = FlowBuilder()
