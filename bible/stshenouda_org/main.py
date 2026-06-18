@@ -248,6 +248,27 @@ def _character_class(*components: str) -> str:
     return "".join(("[", *components, "]"))
 
 
+_COPTIC_TEXT_RE: list[str] = [
+    " ",
+    r"\p{Script=Coptic}",
+    r"\p{Mark}",
+    r"\(\)",
+    r"\[\]",
+    r"\.",
+    ":",
+    r"\-",
+    ",;",
+    "?",
+    # TODO: (#131) Revisit the Notation used for substitutions.
+    "<>{}",
+    # TODO: (#739) Ellipsis is mostly expressed using 3 periods. We should
+    # probably normalize it.
+    "…",
+    # TODO: (#739) Remove this character from the source data. Unlike the
+    # zero-width space character, this one is probably an error.
+    chr(0x00A0),
+]
+
 # Per-language character whitelists. Each entry compiles a regular expression
 # that every verse's (normalized) text must fully match, catching encoding
 # errors and stray characters that creep into the source data.
@@ -255,6 +276,25 @@ def _character_class(*components: str) -> str:
 # from literal characters, character ranges, or Unicode properties -- that
 # matches only whitelisted characters.
 _TEXT_RE: dict[Language, regex.Pattern[str]] = {
+    "Bohairic": regex.compile(_character_class(*_COPTIC_TEXT_RE)),
+    "Sahidic": regex.compile(
+        r"\(sic\)|lacuna|" + _character_class(*_COPTIC_TEXT_RE, "*"),
+    ),
+    "Fayyumic": regex.compile(
+        _character_class(
+            *_COPTIC_TEXT_RE,
+            "=",
+            "÷",
+            "*",
+        ),
+    ),
+    "Akhmimic": regex.compile(
+        r"\(sic\)|" + _character_class(*_COPTIC_TEXT_RE),
+    ),
+    "Lycopolitan": regex.compile(_character_class(*_COPTIC_TEXT_RE)),
+    "Mesokemic": regex.compile(_character_class(*_COPTIC_TEXT_RE)),
+    "DialectP": regex.compile(_character_class(*_COPTIC_TEXT_RE)),
+    "OldBohairic": regex.compile(_character_class(*_COPTIC_TEXT_RE)),
     "English": regex.compile(
         _character_class(
             " ",
@@ -353,22 +393,16 @@ class Verse:
     def _validate_character_set(self, unnumbered: dict[Language, str]) -> None:
         if args.fast:
             return
-        assert self.recolored
         for lang, text in unnumbered.items():
-            # TODO: (#743) Force the whitelisting regex to be present for all
-            # languages.
-            pattern: regex.Pattern[str] | None = _TEXT_RE.get(lang, None)
-            if not pattern:
-                continue
-            # Remove all text that matches the validity regex.
-            text = pattern.sub("", text)
+            # Remove all text that matches the whitelist regex.
+            text = _TEXT_RE[lang].sub("", text)
             ensure.ensure(
                 not text,
                 self,
                 "has",
                 lang,
                 "text that does not match the expected pattern:",
-                text,
+                repr(text),
             )
 
     def number(self) -> str:
