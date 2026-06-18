@@ -37,8 +37,6 @@ _ = parser.add_argument(
     "significantly speeds up the pipeline, at the cost of not catching "
     "encoding errors and stray characters in the source data.",
 )
-args = parser.parse_args()
-del parser
 
 # Input parameters
 
@@ -347,6 +345,8 @@ _TEXT_RE: dict[Language, regex.Pattern[str]] = {
 class Verse:
     """A Bible verse."""
 
+    fast: bool = False
+
     def __init__(self, data: schema.Verse, short_vn: bool) -> None:
         self._raw: schema.Verse = data
         # NOTE: Normalization must take place after recoloring, because
@@ -391,7 +391,7 @@ class Verse:
                 )
 
     def _validate_character_set(self, unnumbered: dict[Language, str]) -> None:
-        if args.fast:
+        if Verse.fast:
             return
         for lang, text in unnumbered.items():
             # Remove all text that matches the whitelist regex.
@@ -1484,6 +1484,9 @@ class TableBuilder(HTMLBuilder):
 
 
 def main():
+    args: argparse.Namespace = parser.parse_args()
+    Verse.fast = args.fast
+
     bible: Bible = Bible()
 
     flow_builder: FlowBuilder = FlowBuilder()
