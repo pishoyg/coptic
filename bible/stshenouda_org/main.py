@@ -262,9 +262,6 @@ _COPTIC_TEXT_RE: list[str] = [
     "?",
     # TODO: (#131) Revisit the Notation used for substitutions.
     "<>{}",
-    # TODO: (#739) Remove this character from the source data. Unlike the
-    # zero-width space character, this one is probably an error.
-    chr(0x00A0),
 ]
 
 # Per-language character whitelists. Each entry compiles a regular expression
@@ -284,6 +281,8 @@ _TEXT_RE: dict[Language, regex.Pattern[str]] = {
             "=",
             "÷",
             "*",
+            # The non-breaking space is used to represent textual gaps.
+            chr(0x00A0),
         ),
     ),
     "Akhmimic": regex.compile(
