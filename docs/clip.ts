@@ -34,7 +34,7 @@ export function copyButton(
   copy.addEventListener('click', (): void => {
     browser.yank(text());
   });
-  tool.addTooltip(copy, ['copy'], SMALL);
+  tool.addTooltip(copy, ['copy text'], SMALL);
   return copy;
 }
 

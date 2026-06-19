@@ -96,12 +96,11 @@ table.verses {
   top: 0.4em;
 }
 
-tr.verse:hover .verse-link {
-  opacity: 1;
-}
-
-td:hover .language-copy {
-  opacity: 1;
+td:hover {
+  & .verse-link,
+  .language-copy {
+    opacity: 1;
+  }
 }
 
 #tray {

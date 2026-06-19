@@ -76,17 +76,21 @@ function addCellCopies(): void {
 }
 
 /**
- * Prepend an anchor link to each verse row. Clicking it navigates to the row
- * (via the row's `id`) and copies the full URL with the fragment.
+ * Prepend an anchor link to every cell of each verse row. Clicking it navigates
+ * to the row (via the row's `id`) and copies the full URL with the fragment.
+ *
+ * The link lives in every cell, rather than just the first, so that it stays
+ * reachable when a column is hidden. Deselecting a dialect hides an entire
+ * column, which would otherwise take a link anchored to a single cell with it.
+ * Each cell carries its own identical link, so at least one is always visible.
  */
 function addRowLinks(): void {
   document
     .querySelectorAll<HTMLTableRowElement>(`.${cls.VERSE}[id]`)
     .forEach((tr: HTMLTableRowElement): void => {
-      const a: HTMLAnchorElement = clip.fragmentLink(`#${tr.id}`, [
-        CLS.VERSE_LINK,
-      ]);
-      tr.querySelector('td')?.prepend(a);
+      tr.querySelectorAll('td').forEach((td: HTMLTableCellElement): void => {
+        td.prepend(clip.fragmentLink(`#${tr.id}`, [CLS.VERSE_LINK]));
+      });
     });
 }
 
