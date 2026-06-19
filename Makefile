@@ -23,9 +23,9 @@ install: FORCE
 	# Install dependencies.
 	./install.sh
 
-update: FORCE
+upgrade: FORCE
 	# Upgrade dependencies.
-	./install.sh --update
+	./install.sh --upgrade
 
 # NOTE: Any igonred files that should be retained need to be excluded. See
 # `.gitignore` for all ignored files.

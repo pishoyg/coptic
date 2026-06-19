@@ -6,15 +6,15 @@
 set -o errexit  # Exit upon encountering a failure.
 set -o nounset  # Consider an undefined variable to be an error.
 
-UPDATE=false
+UPGRADE=false
 while [ $# -gt 0 ]; do
   case $1 in
-  --update)
-    UPDATE=true
+  --upgrade)
+    UPGRADE=true
     ;;
   --help)
     echo -e "${BLUE}Install dependencies.${RESET}"
-    echo -e "${BLUE}Pass ${GREEN}--update ${BLUE}to update instead of installing.${RESET}"
+    echo -e "${BLUE}Pass ${GREEN}--upgrade ${BLUE}to upgrade instead of installing.${RESET}"
     exit
     ;;
   *)
@@ -73,21 +73,21 @@ _install() {
   fi
 }
 
-_update() {
-  # Update pip packages.
+_upgrade() {
+  # Upgrade pip packages.
   pip-compile --upgrade
   pip-sync
 
-  # Update pre-commit hooks.
+  # Upgrade pre-commit hooks.
   pre-commit autoupdate
 
-  # Update npm packages.
+  # Upgrade npm packages.
   jq -r "(.dependencies // {}) | keys[]" "package.json" | xargs npm add
   jq -r "(.devDependencies // {}) | keys[]" "package.json" | xargs npm add --include=dev
 }
 
-if ${UPDATE}; then
-  _update
+if ${UPGRADE}; then
+  _upgrade
 else
   _install
 fi
