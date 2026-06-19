@@ -26,7 +26,10 @@ while [ $# -gt 0 ]; do
 done
 
 _install() {
-  pip install --upgrade pip
+  # TODO: (#0) Drop the `<26` cap once `pip-tools` supports pip 26. pip 26
+  # restructured `pip._internal`'s `DirectUrl` model (removed `.info`), which
+  # crashes `pip-sync` (pip-tools 7.5.3, the latest, still reads `.info`).
+  pip install --upgrade 'pip<26'
   pip install -r requirements.txt
   pip install -e .
   pre-commit install
@@ -75,8 +78,8 @@ _install() {
 _upgrade() {
   # Upgrade pip packages. `pip-sync` uninstalls anything absent from the
   # compiled requirements, including our editable local package, so reinstall
-  # it afterwards.
-  pip install --upgrade pip
+  # it afterwards. The `<26` cap is required: see the note in `_install`.
+  pip install --upgrade 'pip<26'
   pip-compile --upgrade
   pip-sync
   pip install -e .
