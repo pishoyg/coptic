@@ -7,6 +7,7 @@ import * as cls from './cls.js';
 import * as str from './str.js';
 import * as tool from './tooltip.js';
 import * as dev from './dev.js';
+import * as pagination from './pagination.js';
 
 // KEY is the name of the field that bears the word key. The key can be used to
 // generate an HREF to open the word page.
@@ -128,12 +129,6 @@ export const enum CLS {
   VIEW_FOR_MORE = 'view-for-more',
   // MATCH_SEPARATOR is the class of unit separators.
   MATCH_SEPARATOR = 'match-separator',
-  // PAGINATION is the class of the pagination row.
-  PAGINATION = 'pagination',
-  // PAGINATION_PREV is the class of the "previous page" cell.
-  PAGINATION_PREV = 'pagination-prev',
-  // PAGINATION_NEXT is the class of the "next page" cell.
-  PAGINATION_NEXT = 'pagination-next',
 }
 
 /**
@@ -239,7 +234,7 @@ export class Form {
 
     // Pagination renders outside the results table, as its sibling.
     this.paginationContainer = document.createElement('div');
-    this.paginationContainer.classList.add(CLS.PAGINATION);
+    this.paginationContainer.classList.add(pagination.CLS.CONTAINER);
     this.table.insertAdjacentElement('afterend', this.paginationContainer);
 
     this.otherCheckBoxes =
@@ -1494,6 +1489,12 @@ export class Xooxle {
   private currentPage = 0;
 
   /**
+   * pagination renders the navigation bar. Navigating re-runs the search for
+   * the target page and scrolls the scroll target into view.
+   */
+  private readonly pagination: pagination.Pagination;
+
+  /**
    * @param index - JSON index object.
    * @param form - Form containing HTML input and output elements.
    * @param searchResultType
@@ -1505,6 +1506,15 @@ export class Xooxle {
   ) {
     this.candidates = index.data.map(
       (record) => new Candidate(record, index.metadata.layers)
+    );
+    this.pagination = new pagination.Pagination(
+      this.form.paginationContainer,
+      PER_PAGE,
+      (page: number): void => {
+        this.currentPage = page;
+        void this.searchAux();
+        this.form.scrollTarget.scrollIntoView({ block: 'start' });
+      }
     );
     this.addEventListeners();
 
@@ -1735,11 +1745,7 @@ export class Xooxle {
       }
     }
 
-    const hasPrev: boolean = this.currentPage > 0;
-    const hasNext: boolean = results.length > end;
-    if (hasPrev || hasNext) {
-      this.renderPagination(hasPrev, hasNext, results.length);
-    }
+    this.pagination.render(this.currentPage, results.length);
 
     // Update the numbers in the view cell.
     // We couldn't have put the numbers there in the beginning, because, due to
@@ -1751,54 +1757,5 @@ export class Xooxle {
       .forEach((counter: Element) => {
         counter.textContent = `${(++i).toString()} / ${results.length.toString()}`;
       });
-  }
-
-  /**
-   * @param hasPrev - Whether a previous page is available.
-   * @param hasNext - Whether a next page is available.
-   * @param totalResults
-   */
-  private renderPagination(
-    hasPrev: boolean,
-    hasNext: boolean,
-    totalResults: number
-  ): void {
-    this.form.paginationContainer.append(
-      this.paginationItem(-1, totalResults, hasPrev),
-      this.paginationItem(1, totalResults, hasNext)
-    );
-  }
-
-  /**
-   * @param step - -1 for the previous-page item, 1 for the next-page item.
-   * @param totalResults
-   * @param enabled
-   * @returns
-   */
-  private paginationItem(
-    step: -1 | 1,
-    totalResults: number,
-    enabled: boolean
-  ): HTMLDivElement {
-    const isPrev: boolean = step < 0;
-    const div = document.createElement('div');
-    div.classList.add(isPrev ? CLS.PAGINATION_PREV : CLS.PAGINATION_NEXT);
-    if (!enabled) {
-      return div;
-    }
-    const page: number = this.currentPage + step;
-    const from: number = page * PER_PAGE + 1;
-    const to: number = Math.min((page + 1) * PER_PAGE, totalResults);
-    const range = `${from.toString()} - ${to.toString()}`;
-    div.textContent = isPrev ? `← ${range}` : `${range} →`;
-    div.addEventListener('click', (e: Event) => {
-      e.preventDefault();
-      this.currentPage = page;
-      void this.searchAux();
-      this.form.scrollTarget.scrollIntoView({
-        block: 'start',
-      });
-    });
-    return div;
   }
 }

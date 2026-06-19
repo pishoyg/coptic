@@ -72,11 +72,26 @@
   min-height: 5em;
   padding: 20px;
   opacity: 0.6;
+
+  /* The bar can sit inside a horizontally-scrolling region that is wider than
+   * the viewport (e.g. a wide results table). `Pagination.render` caps its
+   * width (border-box, so the padding is included) to the visible viewport, and
+   * `sticky; left: 0` keeps it pinned in view as that region scrolls — so its
+   * page links are never rendered off-screen. */
+  position: sticky;
+  left: 0;
+  box-sizing: border-box;
 }
 
 .pagination-prev,
 .pagination-next {
-  flex: 1;
+  /* Fixed width (not flex: 1): this gives `.pagination-pages` a stable,
+   * content-independent width, so its overflow can be measured reliably when
+   * fitting page links to the available space. Greedy arrows would size the
+   * middle to its own content, defeating the measurement. The width is
+   * reserved even when an arrow is empty (first/last page), keeping the page
+   * chips centered. */
+  flex: 0 0 3em;
   display: flex;
   align-items: center;
 }
@@ -93,6 +108,30 @@
 .pagination-next:not(:empty):hover {
   cursor: pointer;
   text-decoration: underline;
+}
+
+.pagination-pages {
+  display: flex;
+  flex: 1 1 auto;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75em;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.pagination-num,
+.pagination-current,
+.pagination-ellipsis {
+  padding: 0 0.25em;
+}
+
+.pagination-current {
+  font-weight: bold;
+}
+
+.pagination-ellipsis {
+  cursor: default;
 }
 
 .results tbody tr {
@@ -119,9 +158,12 @@ body.dev {
   }
 }
 
-.counter {
+/* Page/arrow tooltips should be styled to echo the faint result-count numbers
+ * so users read them as page/result numbers. */
+.counter,
+.pagination-tip {
   font-size: smaller;
-  opacity: 0.3;
+  color: rgb(0 0 0 / 30%);
 }
 
 .error {
