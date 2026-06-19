@@ -212,7 +212,7 @@ export default config.defineConfig(
     languageOptions: {
       parserOptions: {
         project: [
-          './tsconfig.json', // For browser code.
+          './tsconfig_docs.json', // For browser code.
           './tsconfig_node.json', // For Node artifacts.
         ],
       },
