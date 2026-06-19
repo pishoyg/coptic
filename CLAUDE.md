@@ -31,9 +31,9 @@ Running pipelines individually (scripts must be invoked from the repo root):
 
 TypeScript unit tests and E2E tests:
 ```sh
-bun test --preload ./bun.ts   # unit tests
-npx playwright test           # E2E tests (Chromium + Mobile Chrome)
-npx tsc                       # type check only
+npx bun test --preload ./bun.ts   # unit tests
+npx playwright test               # E2E tests (Chromium + Mobile Chrome)
+npx tsc                           # type check only
 ```
 
 ## Playwright MCP

@@ -78,7 +78,7 @@ repos:
       - id: typescript-unittest
         name: typescript-unittest
         types: [ts]
-        entry: bun test --preload ./bun.ts
+        entry: npx bun test --preload ./bun.ts
         language: system
         pass_filenames: false
       - id: tsc

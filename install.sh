@@ -40,7 +40,6 @@ _install() {
 
   if command -v npm &> /dev/null; then
     npm install
-    npm install --global bun
     npx playwright install
     npx playwright-cli install-browser
   fi
@@ -89,10 +88,9 @@ _upgrade() {
   jq -r "(.dependencies // {}) | keys[]" "package.json" | xargs npm add
   jq -r "(.devDependencies // {}) | keys[]" "package.json" | xargs npm add --include=dev
 
-  # Upgrade the global bun, and refresh the Playwright browser binaries, which
-  # are versioned to the (just-upgraded) Playwright packages. `playwright` and
-  # `playwright-cli` ship separate browser stacks, so refresh both.
-  npm install --global bun
+  # Refresh the Playwright browser binaries, which are versioned to the
+  # (just-upgraded) Playwright packages. `playwright` and `playwright-cli` ship
+  # separate browser stacks, so refresh both.
   npx playwright install
   npx playwright-cli install-browser
 }
