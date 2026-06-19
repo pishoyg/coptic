@@ -74,9 +74,13 @@ _install() {
 }
 
 _upgrade() {
-  # Upgrade pip packages.
+  # Upgrade pip packages. `pip-sync` uninstalls anything absent from the
+  # compiled requirements, including our editable local package, so reinstall
+  # it afterwards.
+  pip install --upgrade pip
   pip-compile --upgrade
   pip-sync
+  pip install -e .
 
   # Upgrade pre-commit hooks.
   pre-commit autoupdate
@@ -84,6 +88,13 @@ _upgrade() {
   # Upgrade npm packages.
   jq -r "(.dependencies // {}) | keys[]" "package.json" | xargs npm add
   jq -r "(.devDependencies // {}) | keys[]" "package.json" | xargs npm add --include=dev
+
+  # Upgrade the global bun, and refresh the Playwright browser binaries, which
+  # are versioned to the (just-upgraded) Playwright packages. `playwright` and
+  # `playwright-cli` ship separate browser stacks, so refresh both.
+  npm install --global bun
+  npx playwright install
+  npx playwright-cli install-browser
 }
 
 if ${UPGRADE}; then
