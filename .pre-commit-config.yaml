@@ -88,7 +88,7 @@ repos:
         language: system
         pass_filenames: false
   - repo: https://github.com/pre-commit/mirrors-eslint
-    rev: v10.2.1
+    rev: v10.5.0
     hooks:
       - id: eslint
         additional_dependencies:
@@ -139,13 +139,13 @@ repos:
         language: system
         types: [python]
   - repo: https://github.com/psf/black-pre-commit-mirror
-    rev: 26.3.1
+    rev: 26.5.1
     hooks:
       - id: black
         args: [--line-length, "79"]
 
   - repo: https://github.com/pycqa/isort
-    rev: 8.0.1
+    rev: 9.0.0a3
     hooks:
       - id: isort
 
@@ -167,7 +167,7 @@ repos:
       - id: pyupgrade
 
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.15.11
+    rev: v0.15.18
     hooks:
       - id: ruff
         args: [--fix]
@@ -191,7 +191,7 @@ repos:
       - id: setup-cfg-fmt
 
   - repo: https://github.com/pylint-dev/pylint
-    rev: v4.0.5
+    rev: v4.0.6
     hooks:
       - id: pylint
 
@@ -252,7 +252,7 @@ repos:
         args: [requirements.in]
 
   - repo: https://github.com/mxr/sync-pre-commit-deps
-    rev: v0.0.3
+    rev: v0.0.4
     hooks:
       - id: sync-pre-commit-deps
 
@@ -300,13 +300,13 @@ repos:
 
   # Markdown
   - repo: https://github.com/igorshubovych/markdownlint-cli
-    rev: v0.48.0
+    rev: v0.49.0
     hooks:
       - id: markdownlint-fix
         args: [--disable, MD033, MD036]
 
   - repo: https://github.com/thlorenz/doctoc
-    rev: v2.4.1
+    rev: v2.5.0
     hooks:
       - id: doctoc
         exclude: .claude|CLAUDE.md
@@ -333,7 +333,7 @@ repos:
 
   # Protobuf
   - repo: https://github.com/bufbuild/buf
-    rev: v1.68.3
+    rev: v1.71.0
     hooks:
       - id: buf-dep-prune
       - id: buf-dep-update
@@ -344,7 +344,7 @@ repos:
 
   # Lua
   - repo: https://github.com/JohnnyMorganz/StyLua
-    rev: v2.4.1
+    rev: v2.5.2
     hooks:
       - id: stylua
 

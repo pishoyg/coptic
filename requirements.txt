@@ -4,15 +4,17 @@
 #
 #    pip-compile
 #
-beautifulsoup4==4.14.3
+ast-serialize==0.5.0
+    # via mypy
+beautifulsoup4==4.15.0
     # via bs4
 bs4==0.0.2
     # via -r requirements.in
-build==1.4.3
+build==1.5.0
     # via pip-tools
 cached-property==2.0.1
     # via genanki
-certifi==2026.2.25
+certifi==2026.6.17
     # via requests
 cffi==2.0.0
     # via cryptography
@@ -22,41 +24,41 @@ charset-normalizer==3.4.7
     # via requests
 chevron==0.14.0
     # via genanki
-click==8.3.2
+click==8.4.1
     # via pip-tools
 colorama==0.4.6
     # via -r requirements.in
 contourpy==1.3.3
     # via matplotlib
-cryptography==46.0.7
+cryptography==49.0.0
     # via google-auth
 cycler==0.12.1
     # via matplotlib
 darglint==1.8.1
     # via -r requirements.in
-distlib==0.4.0
+distlib==0.4.3
     # via virtualenv
 ebooklib==0.20
     # via -r requirements.in
 et-xmlfile==2.0.0
     # via openpyxl
-filelock==3.29.0
+filelock==3.29.4
     # via
     #   python-discovery
     #   virtualenv
-fonttools==4.62.1
+fonttools==4.63.0
     # via matplotlib
 frozendict==2.4.7
     # via genanki
 genanki==0.13.1
     # via -r requirements.in
-google-auth==2.49.2
+google-auth==2.55.0
     # via
     #   -r requirements.in
     #   google-auth-oauthlib
     #   google-auth-stubs
     #   gspread
-google-auth-oauthlib==1.3.1
+google-auth-oauthlib==1.4.0
     # via gspread
 google-auth-stubs==0.3.0
     # via -r requirements.in
@@ -64,31 +66,31 @@ gprof2dot==2025.4.14
     # via -r requirements.in
 grpc-stubs==1.53.0.6
     # via google-auth-stubs
-grpcio==1.80.0
+grpcio==1.81.1
     # via grpc-stubs
 gspread==6.2.1
     # via -r requirements.in
 identify==2.6.19
     # via pre-commit
-idna==3.11
+idna==3.18
     # via requests
 json5==0.14.0
     # via -r requirements.in
 kiwisolver==1.5.0
     # via matplotlib
-librt==0.9.0
+librt==0.11.0
     # via mypy
-lxml==6.1.0
+lxml==6.1.1
     # via ebooklib
-matplotlib==3.10.8
+matplotlib==3.11.0
     # via -r requirements.in
-mypy==1.20.1
+mypy==2.1.0
     # via -r requirements.in
 mypy-extensions==1.1.0
     # via mypy
 nodeenv==1.10.0
     # via pre-commit
-numpy==2.4.4
+numpy==2.4.6
     # via
     #   contourpy
     #   matplotlib
@@ -98,26 +100,26 @@ oauthlib==3.3.1
     # via requests-oauthlib
 openpyxl==3.1.5
     # via -r requirements.in
-packaging==26.1
+packaging==26.2
     # via
     #   build
     #   matplotlib
     #   wheel
-pandas==3.0.2
+pandas==3.0.3
     # via -r requirements.in
-pandas-stubs==3.0.0.260204
+pandas-stubs==3.0.3.260530
     # via -r requirements.in
-pathspec==1.0.4
+pathspec==1.1.1
     # via mypy
 pillow==12.2.0
     # via matplotlib
 pip-tools==7.5.3
     # via -r requirements.in
-platformdirs==4.9.6
+platformdirs==4.10.0
     # via
     #   python-discovery
     #   virtualenv
-pre-commit==4.5.1
+pre-commit==4.6.0
     # via -r requirements.in
 pyasn1==0.6.3
     # via pyasn1-modules
@@ -135,16 +137,16 @@ python-dateutil==2.9.0.post0
     # via
     #   matplotlib
     #   pandas
-python-discovery==1.2.2
+python-discovery==1.4.2
     # via virtualenv
 pyyaml==6.0.3
     # via
     #   -r requirements.in
     #   genanki
     #   pre-commit
-regex==2026.4.4
+regex==2026.5.9
     # via -r requirements.in
-requests==2.33.1
+requests==2.34.2
     # via
     #   -r requirements.in
     #   requests-oauthlib
@@ -154,25 +156,25 @@ six==1.17.0
     # via
     #   ebooklib
     #   python-dateutil
-soupsieve==2.8.3
+soupsieve==2.8.4
     # via beautifulsoup4
 typeguard==4.5.2
     # via -r requirements.in
 types-beautifulsoup4==4.12.0.20250516
     # via -r requirements.in
-types-colorama==0.4.15.20260408
+types-colorama==0.4.15.20260508
     # via -r requirements.in
-types-html5lib==1.1.11.20260408
+types-html5lib==1.1.11.20260518
     # via types-beautifulsoup4
-types-pyyaml==6.0.12.20260408
+types-pyyaml==6.0.12.20260518
     # via -r requirements.in
-types-regex==2026.4.4.20260408
+types-regex==2026.5.9.20260518
     # via -r requirements.in
-types-requests==2.33.0.20260408
+types-requests==2.33.0.20260518
     # via
     #   -r requirements.in
     #   google-auth-stubs
-types-setuptools==82.0.0.20260408
+types-setuptools==82.0.0.20260518
     # via -r requirements.in
 types-webencodings==0.5.0.20260408
     # via types-html5lib
@@ -182,16 +184,16 @@ typing-extensions==4.15.0
     #   grpcio
     #   mypy
     #   typeguard
-urllib3==2.6.3
+urllib3==2.7.0
     # via
     #   -r requirements.in
     #   requests
     #   types-requests
-virtualenv==21.2.4
+virtualenv==21.5.1
     # via
     #   -r requirements.in
     #   pre-commit
-wheel==0.46.3
+wheel==0.47.0
     # via pip-tools
 
 # The following packages are considered to be unsafe in a requirements file:
