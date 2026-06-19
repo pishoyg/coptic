@@ -297,6 +297,33 @@ function handleBookTitles(): void {
 }
 
 /**
+ * Auto-enable any language whose script is present in the search box but whose
+ * dialect is currently hidden, so the matching text becomes visible.
+ *
+ * @param form - The search form.
+ * @param manager - The dialect manager, used to read the inactive dialects.
+ * @param highlighter - Used to enable a dialect when its toggle fires.
+ */
+function updateLanguageSelection(
+  form: xoox.Form,
+  manager: dial.Manager,
+  highlighter: high.Highlighter
+): void {
+  const inactive: dial.Code[] | undefined = manager.inactive();
+  if (!inactive?.length) {
+    return;
+  }
+  // NOTE: Setting dialects triggers a search (see other listeners), in which
+  // case we would be triggering search twice. This is OK since calls get
+  // debounced and deduplicated by Xooxle.
+  for (const toggle of LANGUAGE_TOGGLES) {
+    if (toggle.shouldEnable(form, inactive)) {
+      highlighter.toggle(toggle.target, true);
+    }
+  }
+}
+
+/**
  * Wire up the search box and dialect-selection event listeners.
  *
  * @param form
@@ -320,23 +347,11 @@ function addEventListeners(
       [BOOK_PARAM]: null,
     });
 
-    const inactive: dial.Code[] | undefined = manager.inactive();
     // Only auto-enable a language when the user adds text (typing, pasting, or
     // dropping), not when they remove it (e.g. Backspace, cut). The `insert`
     // input types are exactly the additive ones.
-    if (
-      inactive?.length &&
-      e instanceof InputEvent &&
-      e.inputType.startsWith('insert')
-    ) {
-      // NOTE: Setting dialects triggers a search (see other listeners), in
-      // which case we would be triggering search twice. This is OK since calls
-      // get debounced and deduplicated by Xooxle.
-      for (const toggle of LANGUAGE_TOGGLES) {
-        if (toggle.shouldEnable(form, inactive)) {
-          highlighter.toggle(toggle.target, true);
-        }
-      }
+    if (e instanceof InputEvent && e.inputType.startsWith('insert')) {
+      updateLanguageSelection(form, manager, highlighter);
     }
 
     xooxle.search();
@@ -382,6 +397,9 @@ async function main(): Promise<void> {
 
   // TODO: (#445) Control the query parameter through the Xooxle module.
   form.searchBox.value = browser.getParam(paths.QUERY_PARAM) ?? '';
+
+  // The form is now populated with query parameters. Update language selection.
+  updateLanguageSelection(form, manager, highlighter);
 
   const json: xoox.XooxleRaw = (await fetch('bible.json').then(
     (raw: Response) => raw.json()
