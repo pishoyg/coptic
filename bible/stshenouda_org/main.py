@@ -246,6 +246,9 @@ def _character_class(*components: str) -> str:
     return "".join(("[", *components, "]"))
 
 
+# TODO: (#131) Consider reintroducing the ellipsis (…). It was removed from a
+# handful of verses in #739 for uniformity, because ellipsis was predominantly
+# expressed with periods.
 _COPTIC_TEXT_RE: list[str] = [
     " ",
     r"\p{Script=Coptic}",
@@ -259,9 +262,6 @@ _COPTIC_TEXT_RE: list[str] = [
     "?",
     # TODO: (#131) Revisit the Notation used for substitutions.
     "<>{}",
-    # TODO: (#739) Ellipsis is mostly expressed using 3 periods. We should
-    # probably normalize it.
-    "…",
     # TODO: (#739) Remove this character from the source data. Unlike the
     # zero-width space character, this one is probably an error.
     chr(0x00A0),
