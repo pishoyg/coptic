@@ -1,4 +1,8 @@
-"""Coptic Numerals."""
+"""Coptic Numerals.
+
+NOTE: A TypeScript version of this file lives at `docs/numeral.ts`. The two
+should ideally stay in sync.
+"""
 
 from collections import abc
 
