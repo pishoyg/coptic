@@ -17,7 +17,8 @@ export const DATA = [
     ],
     "variants": [
       "Absal",
-      "Cai The"
+      "Cai The",
+      "Cai Th"
     ]
   },
   {
@@ -323,7 +324,10 @@ export const DATA = [
     "description": null,
     "variants": [
       "Bor"
-    ]
+    ],
+    "postfixes": {
+      "VitaSin": LOOKUP
+    }
   },
   {
     "title": "Papyri &amp; ostraca in Staatsmuseum, Berlin",
@@ -1017,7 +1021,6 @@ export const DATA = [
       "Van Lantschoot, A. (1929). <em><a href=\"https://archive.org/details/recueildescoloph0000lans/page/n5/mode/2up\">Colophons des manuscrits chrétiens d’Égypte. Tome I: Les colophons coptes des manuscrits sahidiques</a></em>. Louvain: J.-B. Istas."
     ],
     "variants": [
-      "Lant.",
       "Lant"
     ]
   },
@@ -2374,7 +2377,10 @@ export const DATA = [
     "description": null,
     "variants": [
       "J G Wilkinson"
-    ]
+    ],
+    "postfixes": {
+      "Bodl": LOOKUP
+    }
   },
   {
     "title": null,
