@@ -412,6 +412,9 @@
   description:
   variants:
     - "Bor"
+  postfixes:
+    # NOTE: Only in manual labels (#668).
+    VitaSin: !lookup
 
 - title: "Papyri & ostraca in Staatsmuseum, Berlin"
   description:
@@ -2427,6 +2430,9 @@
   description:
   variants:
     - "J G Wilkinson"
+  postfixes:
+    # NOTE: Only in manual labels (#668).
+    Bodl: !lookup
 
 - title:
   description:
