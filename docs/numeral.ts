@@ -9,7 +9,7 @@ import * as log from './logger.js';
 // Greek Numeral Sign (Lower Keraia) for thousands.
 const THOUSANDS_MARK = '͵';
 const COMBINING_OVERLINE = '̅';
-const MAX = 9999;
+const MAX = 999999;
 
 const UNITS_MAP: string[] = ['', 'ⲁ', 'ⲃ', 'ⲅ', 'ⲇ', 'ⲉ', 'ⲋ', 'ⲍ', 'ⲏ', 'ⲑ'];
 
@@ -42,6 +42,7 @@ function* digit(
   }
   if (thousands) {
     yield THOUSANDS_MARK;
+    yield COMBINING_OVERLINE;
   }
   yield letter;
   yield COMBINING_OVERLINE;
@@ -58,12 +59,17 @@ export function coptic(n: number): string {
     'Input must be between',
     1,
     'and',
-    MAX - 1
+    MAX
   );
 
   const num: string[] = [];
 
   /* eslint-disable no-magic-numbers */
+  // TODO: (#0) Can we write the code below more elegantly. In a loop?
+  num.push(...digit(HUNDREDS_MAP[Math.floor(n / 100000)], true));
+  n %= 100000;
+  num.push(...digit(TENS_MAP[Math.floor(n / 10000)], true));
+  n %= 10000;
   num.push(...digit(UNITS_MAP[Math.floor(n / 1000)], true));
   n %= 1000;
   num.push(...digit(HUNDREDS_MAP[Math.floor(n / 100)]));

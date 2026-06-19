@@ -11,7 +11,7 @@ from utils import ensure
 # Greek Numeral Sign (Lower Keraia) for thousands
 THOUSANDS_MARK: str = "\u0375"
 COMBINING_OVERLINE: str = "\u0305"
-MAX: int = 9999
+MAX: int = 999999
 
 UNITS_MAP: list[str] = [
     "",
@@ -72,10 +72,14 @@ def coptic(n: int) -> str:
     Returns:
         str: The Coptic numeral string.
     """
-    ensure.ensure(0 < n <= MAX, "Input must be between", 1, "and", 9999)
+    ensure.ensure(0 < n <= MAX, "Input must be between", 1, "and", MAX)
 
     num: list[str] = []
 
+    num.extend(digit(HUNDREDS_MAP[n // 100000], True))
+    n %= 100000
+    num.extend(digit(TENS_MAP[n // 10000], True))
+    n %= 10000
     num.extend(digit(UNITS_MAP[n // 1000], True))
     n %= 1000
     num.extend(digit(HUNDREDS_MAP[n // 100]))
