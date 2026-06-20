@@ -217,6 +217,7 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'third future', variants: ['3 fut'] },
 
   { fullForm: 'et cetera', variants: ['&c'] },
+  { fullForm: 'abbreviated', variants: ['abbrev'], noCaseVariant: true },
   { fullForm: 'Addenda', variants: ['Ad'], noCaseVariant: true, suffix: true },
   { fullForm: 'ad locum', variants: ['ad loc'], suffix: true },
   {
