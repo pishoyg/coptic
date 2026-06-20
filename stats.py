@@ -671,7 +671,7 @@ _CODE_BY_COMPONENT: list[Comp] = [
         "shared",
         "shared",
         prefixes=["env/", "utils/", "pre-commit/", ".claude/", ".github/"],
-        dirnames=[""],
+        dirnames=["", "dictionary"],
     ),
     # copticsite project was completely abandoned, and the code was deleted.
     # It's retain for backward-compatibility, because the data still contains a
