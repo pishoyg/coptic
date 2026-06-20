@@ -1570,6 +1570,9 @@ XOOXLE: xooxle.Xooxle = xooxle.Xooxle(
                 # the book. This is acceptable.
                 cls.MARK,
                 cls.FOOTNOTED,
+                cls.STACK,
+                cls.STACK_TOP,
+                cls.STACK_BOTTOM,
             },
             unit_tags={"p"},
             retain_tags=xooxle.RETAIN_TAGS_DEFAULT | {"p"},

@@ -283,6 +283,17 @@ _SUBSTITUTIONS: list[Substitution] = [
         ban=["[[", "]]", "^"],
     ),
     Substitution(
+        r"(\p{Letter})\^\^(\p{Letter})",
+        rf'<span class="{cls.STACK}">'
+        rf'<span class="{cls.STACK_TOP}">\1</span>'
+        rf'<span class="{cls.STACK_BOTTOM}">\2</span>'
+        r"</span>",
+        # The plain-text version separates the two pieces with a slash, mirroring
+        # how superscript degrades to `^(...)`.
+        text_repl=r"\1/\2",
+        ban=["^^"],
+    ),
+    Substitution(
         r"\^([-–—\w\p{Letter}]+)",
         r"<sup>\1</sup>",
         # This is not entirely plain text, but we have no other way to represent

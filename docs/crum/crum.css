@@ -186,6 +186,21 @@ del {
   font-weight: bold;
 }
 
+/* Stacked letters: pieces written on top of one another (e.g. a vertical
+ * ligature). Letters are full-size and horizontally centered, stacked within a
+ * single character's footprint on the line. */
+.stack {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 0.6;
+  vertical-align: middle;
+
+  & .stack-top {
+    font-size: small;
+  }
+}
+
 .semicolon {
   color: #6e260e; /* dark brown */
   font-weight: bold;
