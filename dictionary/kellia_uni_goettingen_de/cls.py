@@ -1,0 +1,11 @@
+"""KELLIA HTML class names."""
+
+BIBL: str = "bibl"
+ETYM: str = "etym"
+GEO: str = "geo"
+GRAM_GRP: str = "gram_grp"
+HINT: str = "hint"
+LANG: str = "lang"
+ORTH: str = "orth"
+REF: str = "ref"
+REF_XR: str = "ref_xr"

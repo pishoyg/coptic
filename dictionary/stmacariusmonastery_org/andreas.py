@@ -10,9 +10,10 @@ from collections import abc
 
 import bs4
 
+from dictionary import cls as dict_cls
 from dictionary.stmacariusmonastery_org import constants
 from dictionary.stmacariusmonastery_org.constants import Language
-from flashcards import deck
+from flashcards import deck, ids
 from utils import ensure, file, lang, log, paths
 from xooxle import xooxle
 
@@ -322,8 +323,8 @@ class DictionaryEntry:
 
     def _front_aux(self, html: bool) -> abc.Generator[str]:
         if html:
-            yield '<span class="word B">'
-            yield '<span class="spelling B">'
+            yield f'<span class="{dict_cls.WORD} B">'
+            yield f'<span class="{dict_cls.SPELLING} B">'
 
         # The front consists of the Coptic prefix of the data. This is an
         # (optional) sequence of paragraphs paragraphs that consist entirely of
@@ -466,12 +467,12 @@ XOOXLE = xooxle.Xooxle(
     captures=[
         xooxle.Capture(
             "FRONT",
-            xooxle.Selector({"id": "front"}),
-            retain_classes={"word", "B"},
+            xooxle.Selector({"id": ids.FRONT}),
+            retain_classes={dict_cls.WORD, "B"},
         ),
         xooxle.Capture(
             "BACK",
-            xooxle.Selector({"id": "back"}),
+            xooxle.Selector({"id": ids.BACK}),
             # We need the Arabic for styling. We don't need any other classes.
             retain_classes={
                 language.value.lower()

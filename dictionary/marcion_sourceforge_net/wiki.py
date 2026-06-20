@@ -15,7 +15,8 @@ from html import escape
 
 import regex
 
-from dictionary.marcion_sourceforge_net import constants
+from dictionary import cls as dict_cls
+from dictionary.marcion_sourceforge_net import cls, constants
 from dictionary.marcion_sourceforge_net import lexical as lex
 from utils import ensure, gcp, lang, log, orth
 
@@ -135,36 +136,32 @@ def bracketed(exp: str, repeat: int = 2) -> str:
     return r"(?<!\[)" + r"\[" * repeat + exp + r"\]" * repeat + r"(?!\])"
 
 
-# LANGS lists language names as they appear in the Unicode names of characters
-# belonging to the language.
+# LANGS maps language names, as they appear in the Unicode names of characters
+# belonging to the language, to a tuple containing:
+# - The HTML class used for the language.
+# - A validation regular expression for text marked as belonging to this
+# language.
 # NOTE: It's important for Greek to precede Coptic, and Hebrew Arabic. Some
 # Greek words contain Coptic letters, and Arabic words often use the Hebrew
 # geresh.
-LANGS: list[str] = [
-    "GREEK",
-    "COPTIC",
-    "ARABIC",
-    "HEBREW",
-    "SYRIAC",
-    "ETHIOPIC",
-    "HIEROGLYPH",
-    # NOTE: Demotic is not really detectable using a character's Unicode name,
-    # but it's included in the list for completion.
-    "DEMOTIC",
-]
-
-# LANG_CLASS lists names of language classes, where the class name differs from
-# the language name.
-LANG_CLASS: dict[str, str] = {
-    "SYRIAC": "ARAMAIC",
-    "ETHIOPIC": "AMHARIC",
-    "HIEROGLYPH": "HIEROGLYPHIC",
+# TODO: (#0) Populate validation regular expressions for other languages.
+LANGS: dict[str, tuple[str, regex.Pattern[str] | None]] = {
+    "GREEK": (cls.GREEK, None),
+    "COPTIC": (cls.COPTIC, None),
+    "ARABIC": (cls.ARABIC, None),
+    "HEBREW": (cls.HEBREW, None),
+    "SYRIAC": (cls.ARAMAIC, None),
+    "ETHIOPIC": (cls.AMHARIC, None),
+    "HIEROGLYPH": (cls.HIEROGLYPHIC, None),
+    # NOTE: Demotic is not detectable using a character's Unicode name.
+    "DEMOTIC": (
+        cls.DEMOTIC,
+        regex.compile(
+            r"^(?:[\p{Ll}ꜣꜥʾʿ]\p{M}*|[ '\-=\.])+$",
+            regex.IGNORECASE,
+        ),
+    ),
 }
-
-DEMOTIC_RE: regex.Pattern[str] = regex.compile(
-    r"^(?:[\p{Ll}ꜣꜥʾʿ]\p{M}*|[ '\-=\.])+$",
-    regex.IGNORECASE,
-)
 
 
 def replace_bracketed(match: regex.Match[str]) -> str:
@@ -177,29 +174,40 @@ def replace_bracketed(match: regex.Match[str]) -> str:
         # simply return the text itself.
         return text
 
-    language: str | None = next(
-        (language for language in LANGS if lang.has_lang(language, text)),
-        None,
+    language: str = (
+        next(
+            (language for language in LANGS if lang.has_lang(language, text)),
+            None,
+        )
+        or "DEMOTIC"
     )
 
-    if not language and DEMOTIC_RE.match(text):
-        language = "demotic"
+    klass: str
+    expression: regex.Pattern[str] | None
+    klass, expression = LANGS[language]
 
-    if not language:
-        log.fatal("Can't infer language of bracketed text:", text)
+    # TODO: (#0) This if statement won't be necessary once regexes are populated
+    # for all languages.
+    if expression:
+        ensure.ensure(
+            expression.fullmatch(text),
+            "invalid",
+            language,
+            "text:",
+            text,
+        )
 
-    clas: str = LANG_CLASS.get(language, language).lower()
-    return f'<span class="{clas}">{text}</span>'
+    return f'<span class="{klass}">{text}</span>'
 
 
 def replace_manual(match: regex.Match[str]) -> str:
     text, key = match.group(1, 2)
     if key is None:
-        return rf'<span class="manual">{text}</span>'
-    return rf'<span class="manual" data-key="{key}">{text}</span>'
+        return rf'<span class="{cls.MANUAL}">{text}</span>'
+    return rf'<span class="{cls.MANUAL}" data-key="{key}">{text}</span>'
 
 
-OPEN_SUBPARAGRAPH: str = '<span class="subparagraph">'
+OPEN_SUBPARAGRAPH: str = f'<span class="{cls.SUBPARAGRAPH}">'
 CLOSE_SUBPARAGRAPH: str = "</span>"
 OPEN_PARAGRAPH: str = "<p>"
 CLOSE_PARAGRAPH: str = "</p>"
@@ -234,20 +242,24 @@ _SUBSTITUTIONS: list[Substitution] = [
         text_repl="    ",
         ban=["\\"],
     ),
-    Substitution(r"__(.+?)__", r'<span class="gloss">\1</span>', ban=["_"]),
+    Substitution(
+        r"__(.+?)__",
+        rf'<span class="{cls.GLOSS}">\1</span>',
+        ban=["_"],
+    ),
     Substitution(
         # Bold text is simply bullets. We prefer using an explicit `bullet`
         # class to mark them, instead of relying on `<b>`.
         # We can use a stricter regex that only allows alphabetical characters
         # (optionally followed by a period).
         r"\*([a-zA-Z]+?\.?)\*",
-        r'<span class="bullet">\1</span>',
+        rf'<span class="{cls.BULLET}">\1</span>',
         ban=["*"],
     ),
     Substitution(r"_(.+?)_", r"<i>\1</i>", ban=["_"]),
     Substitution(
         bracketed("(S|B|A|F|O)"),
-        r'<span class="dialect \1">\1</span>',
+        rf'<span class="{dict_cls.DIALECT} \1">\1</span>',
         ban=["[[", "]]"],
     ),
     Substitution(
@@ -260,13 +272,13 @@ _SUBSTITUTIONS: list[Substitution] = [
         # For each of these, we add a non-standard dialect entry in TypeScript,
         # so they can render properly.
         bracketed(r"(S|F|B|O)\^(a|f|b|af)"),
-        r'<span class="dialect \1\2">\1\2</span>',
+        rf'<span class="{dict_cls.DIALECT} \1\2">\1\2</span>',
         text_repl=r"\1\2",
         ban=["[[", "]]", "^"],
     ),
     Substitution(
         bracketed(r"(A\^2)"),
-        r'<span class="dialect L">A2</span>',
+        rf'<span class="{dict_cls.DIALECT} L">A2</span>',
         text_repl="L",
         ban=["[[", "]]", "^"],
     ),
@@ -442,7 +454,7 @@ class Wiki:
         self,
         match: regex.Match[str],
     ) -> abc.Generator[str]:
-        yield f'<span class="addendum" data-page="{self.addenda_page}">'
+        yield f'<span class="{cls.ADDENDUM}" data-page="{self.addenda_page}">'
         g1, g2 = match.group(1), match.group(2)
         if g1:
             yield f"<del>{g1}</del>"
@@ -460,7 +472,7 @@ class Wiki:
             headword,
         )
         self._headwords.append(headword)
-        return f'<span class="headword coptic">{headword}</span>'
+        return f'<span class="{cls.HEADWORD} {cls.COPTIC}">{headword}</span>'
 
     def addendum(self) -> bool:
         """Determine whether this entry is an addendum.
@@ -547,18 +559,18 @@ class Wiki:
         # wasn't there in the first place.
         attr: str = escape(match.group(2), quote=True)
         return (
-            f'<span class="footnoted" data-footnote="{attr}">'
+            f'<span class="{cls.FOOTNOTED}" data-footnote="{attr}">'
             + match.group(1)
-            + '<span class="mark">'
+            + f'<span class="{cls.MARK}">'
             + f"[{self.footnotes}]"
             + "</span>"
             + "</span>"
         )
 
     def _html_aux(self) -> abc.Generator[str]:
-        classes: list[str] = ["entry"]
+        classes: list[str] = [cls.ENTRY]
         if self.vide:
-            classes.append("vide")
+            classes.append(cls.VIDE)
         yield f'<div class="{" ".join(classes)}">'
         yield OPEN_PARAGRAPH
         yield OPEN_SUBPARAGRAPH
@@ -645,8 +657,8 @@ class Column:
         return "".join(self.html_aux())
 
     def html_aux(self) -> abc.Generator[str]:
-        yield '<div class="folio">'
-        yield '<span class="crum-page">'
+        yield f'<div class="{cls.FOLIO}">'
+        yield f'<span class="{cls.CRUM_PAGE}">'
         yield str(self.crum)
         yield "</span>"
         html: str = "".join(w.html for w in self.wikis if w.complete)

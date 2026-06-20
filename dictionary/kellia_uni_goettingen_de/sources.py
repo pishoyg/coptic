@@ -2,6 +2,8 @@
 
 import re
 
+from dictionary.kellia_uni_goettingen_de import cls
+
 # pylint: disable=line-too-long
 _SOURCES: list[tuple[str, str]] = [
     (
@@ -119,7 +121,7 @@ _SOURCES: list[tuple[str, str]] = [
 SOURCES: list[tuple[re.Pattern[str], str]] = [
     (
         re.compile(rf"(?:{regex}(?: §)? ?[0-9A-Za-z:]+(?:, ?[0-9A-Za-z:]+)*)"),
-        rf'\g<0><a class="hint" data-tooltip="{repl}">?</a>',
+        rf'\g<0><a class="{cls.HINT}" data-tooltip="{repl}">?</a>',
     )
     for regex, repl in _SOURCES
 ]

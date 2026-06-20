@@ -7,7 +7,7 @@ import re
 
 import regex
 
-from dictionary.marcion_sourceforge_net import lexical
+from dictionary.marcion_sourceforge_net import cls, lexical
 from morphology import inflect
 from utils import page, paths
 
@@ -348,15 +348,15 @@ ENGLISH_PROCESSING: list[
     tuple[re.Pattern[str] | regex.Pattern[str] | str, str]
 ] = [
     # Curly brackets are used to indicate roman (non-italic) text.
-    ("{", '<span class="roman">'),
+    ("{", f'<span class="{cls.ROMAN}">'),
     ("}", "</span>"),
     # Mark paragraph headings.
     (
         re.compile(rf"(\b({"|".join(_HEADINGS)})( \([a-zA-Z? ]+\))?:)"),
-        r'<span class="heading">\1</span>',
+        rf'<span class="{cls.HEADING}">\1</span>',
     ),
     ("\n", page.LINE_BREAK),
-    (GREEK_WORD_RE, r'<span class="greek">\1</span>'),
+    (GREEK_WORD_RE, rf'<span class="{cls.GREEK}">\1</span>'),
 ]
 
 QUALITY: list[str] = [

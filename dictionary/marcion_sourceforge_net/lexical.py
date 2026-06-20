@@ -5,7 +5,8 @@ import functools
 import re
 import typing
 
-from dictionary.marcion_sourceforge_net import constants
+from dictionary import cls as dict_cls
+from dictionary.marcion_sourceforge_net import cls, constants
 from morphology import inflect
 from utils import ensure, log, page
 
@@ -225,11 +226,13 @@ class Line:
 
         d = ""
         if include_dialects and self._dialects:
-            d = "".join(_span(d, ["dialect", d]) for d in self._dialects)
+            d = "".join(
+                _span(d, [dict_cls.DIALECT, d]) for d in self._dialects
+            )
         # For historical reasons, we use the class "spelling" to refer to forms.
         # TODO: (#0) Consider updating the class name.
-        f = _span(", ", ["comma"]).join(
-            _span(f, ["spelling"] + self._dialects)
+        f = _span(", ", [cls.COMMA]).join(
+            _span(f, [dict_cls.SPELLING] + self._dialects)
             for f in self.forms(parenthesize_assumed)
             if f
         )
@@ -243,15 +246,15 @@ class Line:
             assert self._root_type
             if not t and self._root_type.append():
                 t = self._root_type.coptic_symbol()
-        t = _span(t, ["type"] + self._dialects)
+        t = _span(t, [dict_cls.TYPE] + self._dialects)
         r = ""
         if include_references:
             r = page.LINE_BREAK.join("[" + r + "]" for r in self._references)
-            r = _span(r, ["nag-hammadi"])
+            r = _span(r, [cls.NAG_HAMMADI])
         word = " ".join(filter(None, [f, d, t, r]))
         # For historical reasons, we use the class "word" to refer to a line.
         # TODO: (#0) Consider updating the class name.
-        word = _span(word, ["word"] + self._dialects)
+        word = _span(word, [dict_cls.WORD] + self._dialects)
         return word
 
     def dialects(self) -> list[str] | None:

@@ -24,8 +24,9 @@ from collections import abc, defaultdict
 import gspread
 import yaml
 
+from dictionary import cls as dict_cls
 from dictionary.kellia_uni_goettingen_de import kellia
-from dictionary.marcion_sourceforge_net import constants
+from dictionary.marcion_sourceforge_net import cls, constants, ids
 from dictionary.marcion_sourceforge_net import lexical as lex
 from dictionary.marcion_sourceforge_net import parse, sheet, wiki
 from flashcards import deck
@@ -217,12 +218,14 @@ class Derivation(Row):
 
     @typing.override
     @classmethod
-    def worksheet(cls) -> gspread.worksheet.Worksheet:
+    def worksheet(class_) -> gspread.worksheet.Worksheet:  # dead: disable
+        del class_
         return sheet.derivations_sheet()
 
     @typing.override
     @classmethod
-    def worksheet_url(cls) -> str:
+    def worksheet_url(class_) -> str:  # dead: disable
+        del class_
         return sheet.DERIVATIONS_URL
 
     @functools.cached_property
@@ -367,12 +370,12 @@ class Image:
         return [self.src_path, self.dst_path, self.sources_path]
 
     def caption_aux(self, sense: str | None) -> abc.Generator[str]:
-        yield '<span hidden="" class="explanatory-key">'
+        yield f'<span hidden="" class="{cls.EXPLANATORY_KEY}">'
         yield self.stem
         yield "</span>"
         if not sense:
             return
-        yield f' <span class="explanatory-caption">{sense}</span>'
+        yield f' <span class="{cls.EXPLANATORY_CAPTION}">{sense}</span>'
 
     def caption(self, sense: str | None) -> str:
         return "".join(self.caption_aux(sense))
@@ -397,12 +400,14 @@ class Root(Row):
 
     @typing.override
     @classmethod
-    def worksheet(cls) -> gspread.worksheet.Worksheet:
+    def worksheet(class_) -> gspread.worksheet.Worksheet:  # dead: disable
+        del class_
         return sheet.roots_sheet()
 
     @typing.override
     @classmethod
-    def worksheet_url(cls) -> str:
+    def worksheet_url(class_) -> str:  # dead: disable
+        del class_
         return sheet.ROOTS_URL
 
     @functools.cached_property
@@ -637,7 +642,7 @@ class Root(Row):
         if not self.derivations:
             return
 
-        yield '<table class="derivations" id="derivations">'
+        yield f'<table class="{cls.DERIVATIONS}" id="{ids.DERIVATIONS}">'
         yield "<colgroup>"
         for _ in range(_NUM_DRV_COLS):
             yield f'<col style="width: {_HUNDRED/_NUM_DRV_COLS}%;">'
@@ -661,23 +666,26 @@ class Root(Row):
                 # Skip the English.
                 meaning_width = 0
             assert word_width or meaning_width
-            key: str = f'<span class="drv-key">{d.key}</span>'
+            key: str = f'<span class="{cls.DRV_KEY}">{d.key}</span>'
             # New row.
-            yield f'<tr id="drv{d.key}" class="drv">'
+            yield f'<tr id="{cls.DRV}{d.key}" class="{cls.DRV}">'
             # Margin.
             yield f'<td colspan="{d.depth}"></td>' if d.depth else ""
             # Word.
             if word_width:
-                yield f'<td colspan="{word_width}" class="marcion">'
+                yield f'<td colspan="{word_width}" class="{cls.MARCION}">'
                 yield word
                 if not meaning_width:
                     yield key
                 yield "</td>"
             # Meaning.
             if meaning_width:
-                yield f'<td colspan="{meaning_width}" class="meaning">'
+                yield (
+                    f'<td colspan="{meaning_width}" '
+                    f'class="{dict_cls.MEANING}">'
+                )
                 if d.type_name not in ["-", "HEADER"]:
-                    yield '<span class="part-of-speech">'
+                    yield f'<span class="{cls.PART_OF_SPEECH}">'
                     yield "(<b>"
                     yield d.type_name
                     yield "</b>)"
@@ -686,8 +694,8 @@ class Root(Row):
                 yield key
                 yield "</td>"
             if crum_span:
-                yield f'<td rowspan="{crum_span}" class="dictionary">'
-                yield f'<span class="crum-page">{crum}</span>'
+                yield f'<td rowspan="{crum_span}" class="{cls.DICTIONARY}">'
+                yield f'<span class="{cls.CRUM_PAGE}">{crum}</span>'
                 yield "</td>"
 
             # End row.
@@ -762,13 +770,13 @@ class Root(Row):
         # TODO: (#203) The header should be mostly implemented in TypeScript,
         # rather than hardcoded in the HTML.
         # Open the table.
-        yield '<table id="header">'
+        yield f'<table id="{ids.HEADER}">'
         yield "<tr>"
         # Home
-        yield '<td><a class="navigate" href="../">Home</a></td>'
+        yield f'<td><a class="{cls.NAVIGATE}" href="../">Home</a></td>'
         # Contact
         yield "<td>"
-        yield '<span id="reports">'
+        yield f'<span id="{ids.REPORTS}">'
         yield "Reports"
         yield "</span>"
         yield "</td>"
@@ -776,12 +784,15 @@ class Root(Row):
         yield "<td>"
         prev = Crum.prev_key(self)
         if prev:
-            yield f'<a class="navigate" href="{prev}.html">⇐</a>'
+            yield f'<a class="{cls.NAVIGATE}" href="{prev}.html">⇐</a>'
         del prev
         yield "</td>"
         # Key.
         yield "<td>"
-        yield f'<a class="navigate" id="key" href="{self.key}.html">'
+        yield (
+            f'<a class="{cls.NAVIGATE}" id="{ids.KEY}" '
+            f'href="{self.key}.html">'
+        )
         yield numeral.coptic(self.num)
         yield "</a>"
         yield "</td>"
@@ -789,23 +800,23 @@ class Root(Row):
         yield "<td>"
         nxt = Crum.next_key(self)
         if nxt:
-            yield f'<a class="navigate" href="{nxt}.html">⇒</a>'
+            yield f'<a class="{cls.NAVIGATE}" href="{nxt}.html">⇒</a>'
         del nxt
         yield "</td>"
         # Reset.
         yield "<td>"
-        yield '<span class="reset">Reset</span>'
+        yield f'<span class="{cls.RESET}">Reset</span>'
         yield "</td>"
         # Dev.
         yield "<td>"
-        yield '<span class="developer">Dev</span>'
+        yield f'<span class="{cls.DEVELOPER}">Dev</span>'
         yield "</td>"
         # Close the table.
         yield "</tr>"
         yield "</table>"
 
         # The word.
-        yield '<div id="pretty" class="pretty">'
+        yield f'<div id="{ids.PRETTY}" class="{cls.PRETTY}">'
         # TODO: (#338) Parentheses should be used at the source. This is not a
         # clean way to do it.
         yield self.word_parsed_prettify().replace("{", "(").replace("}", ")")
@@ -817,30 +828,36 @@ class Root(Row):
 
     def _back_aux(self) -> abc.Generator[str]:
         # Meaning
-        yield '<div id="root-type-meaning" class="root-type-meaning">'
-        yield '<span id="root-part-of-speech" class="part-of-speech">'
+        yield (
+            f'<div id="{ids.ROOT_TYPE_MEANING}" '
+            f'class="{cls.ROOT_TYPE_MEANING}">'
+        )
+        yield (
+            f'<span id="{ids.ROOT_PART_OF_SPEECH}" '
+            f'class="{cls.PART_OF_SPEECH}">'
+        )
         yield "(<b>"
         yield self.type_name
         yield "</b>)"
         yield "</span>"
 
         if self.categories:
-            yield '<div id="categories" class="categories">'
+            yield f'<div id="{ids.CATEGORIES}" class="{cls.CATEGORIES}">'
             yield ", ".join(self.categories)
             yield "</div>"
         if self.meaning:
-            yield '<div id="meaning" class="meaning">'
+            yield f'<div id="{ids.MEANING}" class="{dict_cls.MEANING}">'
             yield self.meaning
             yield "</div>"
         yield "</div>"
 
         # Images.
         if self.images:
-            yield '<div id="images" class="images">'
+            yield f'<div id="{ids.IMAGES}" class="{cls.IMAGES}">'
             for img in self.images:
                 yield from _img_aux(
-                    id_=f"explanatory{img.stem}",
-                    cls="explanatory",
+                    id_=f"{cls.EXPLANATORY}{img.stem}",
+                    class_=cls.EXPLANATORY,
                     alt=img.alt,
                     path=relpath(img.dst_path),
                     caption=img.caption(self.sense(img)),
@@ -849,16 +866,16 @@ class Root(Row):
 
         # Editor's notes.
         if self.notes:
-            yield '<div id="notes" class="notes">'
+            yield f'<div id="{ids.NOTES}" class="{cls.NOTES}">'
             yield "<i>Editor's note: </i>"
             yield self.notes
             yield "</div>"
 
         # Senses.
         if self.senses:
-            yield '<div id="senses" class="senses">'
+            yield f'<div id="{ids.SENSES}" class="{cls.SENSES}">'
             yield ", ".join(
-                f'<span class="sense" id="sense{k}">'
+                f'<span class="{cls.SENSE}" id="{cls.SENSE}{k}">'
                 + f"{k}: {self.senses[k]}"
                 + "</span>"
                 for k in sorted(self.senses.keys(), key=int)
@@ -866,7 +883,7 @@ class Root(Row):
             yield "</div>"
 
         # Quality.
-        yield '<div id="quality" class="quality">'
+        yield f'<div id="{ids.QUALITY}" class="{cls.QUALITY}">'
         yield self.quality
         yield "</div>"
 
@@ -877,7 +894,7 @@ class Root(Row):
 
         # Wiki.
         if self.has_wiki_canonical_entries():
-            yield '<div class="wiki" id="wiki">'
+            yield f'<div class="{cls.WIKI}" id="{ids.WIKI}">'
             yield self.wiki_html
             yield "</div>"
 
@@ -888,11 +905,11 @@ class Root(Row):
             or self.antonyms
             or self.homonyms
         ):
-            yield '<div id="sisters" class="sisters">'
+            yield f'<div id="{ids.SISTERS}" class="{cls.SISTERS}">'
             before: bool = False
             if self.sisters:
                 yield "<i>See also: </i>"
-                yield '<table class="sisters-table">'
+                yield f'<table class="{cls.SISTERS_TABLE}">'
                 yield from _mother().gather_aux(self.sisters)
                 yield "</table>"
                 before = True
@@ -900,7 +917,7 @@ class Root(Row):
                 if before:
                     yield page.LINE_BREAK
                 yield "<i>Greek: </i>"
-                yield '<table class="sisters-table">'
+                yield f'<table class="{cls.SISTERS_TABLE}">'
                 yield from _stepmother().gather_aux(self.greek_sisters)
                 yield "</table>"
                 before = True
@@ -908,7 +925,7 @@ class Root(Row):
                 if before:
                     yield page.LINE_BREAK
                 yield "<i>Opposite: </i>"
-                yield '<table class="sisters-table">'
+                yield f'<table class="{cls.SISTERS_TABLE}">'
                 yield from _mother().gather_aux(self.antonyms)
                 yield "</table>"
                 before = True
@@ -916,7 +933,7 @@ class Root(Row):
                 if before:
                     yield page.LINE_BREAK
                 yield "<i>Homonyms: </i>"
-                yield '<table class="sisters-table">'
+                yield f'<table class="{cls.SISTERS_TABLE}">'
                 yield from _mother().gather_aux(self.homonyms)
                 yield "</table>"
                 before = True
@@ -1112,17 +1129,17 @@ def _verify_wiki_keys() -> None:
 
 def _img_aux(
     id_: str,
-    cls: str,
+    class_: str,
     path: str,
     alt: str,
     caption: str | None = None,
     line_br: bool = False,
 ) -> abc.Generator[str]:
-    yield f'<figure id="{id_}" class="{cls}">'
+    yield f'<figure id="{id_}" class="{class_}">'
     # NOTE: Anki requires basenames. The string `src="{path}"` gets updated
     # while the Anki flashcards are being generated, using regular
     # expressions. So retaining the format `src="{path}"` is important.
-    yield f'<img src="{path}" alt="{alt}" class="{cls}-img">'
+    yield f'<img src="{path}" alt="{alt}" class="{class_}-img">'
     if caption:
         yield f"<figcaption>{caption}</figcaption>"
     yield "</figure>"
@@ -1160,23 +1177,23 @@ class SisterWithFrag:
         return f"#:~:text={self.fragment.replace(" ", "%20")}"
 
     def html_aux(self) -> abc.Generator[str]:
-        yield f'<tr id="sister{self.sister.key}" class="sister">'
-        yield '<td class="sister-view">'
+        yield f'<tr id="{cls.SISTER}{self.sister.key}" class="{cls.SISTER}">'
+        yield f'<td class="{cls.SISTER_VIEW}">'
         href = self.HREF_FMT.format(key=self.sister.key) + self.frag()
-        yield f'<a class="navigate" href="{href}" target="_blank">'
+        yield f'<a class="{cls.NAVIGATE}" href="{href}" target="_blank">'
         yield "view"
         yield "</a>"
         yield "</td>"
-        yield '<td class="sister-title">'
+        yield f'<td class="{cls.SISTER_TITLE}">'
         yield self.sister.title
         yield "</td>"
-        yield '<td class="sister-meaning">'
+        yield f'<td class="{cls.SISTER_MEANING}">'
         if self.sister.type:
             yield "(<b>"
             yield self.sister.type
             yield "</b>) "
         yield self.sister.meaning
-        yield '<span hidden="" class="sister-key">'
+        yield f'<span hidden="" class="{cls.SISTER_KEY}">'
         yield self.sister.key
         yield "</span>"
         yield "</td>"
@@ -1220,7 +1237,7 @@ class HeaderCell:
 
     def td(self) -> abc.Generator[str]:
         yield "<td>"
-        yield f'<a class="navigate" href="{self.link}">{self.title}</a>'
+        yield f'<a class="{cls.NAVIGATE}" href="{self.link}">{self.title}</a>'
         yield "</td>"
 
 
@@ -1234,7 +1251,7 @@ class Headerer:
         return "".join(self.header_aux())
 
     def header_aux(self) -> abc.Generator[str]:
-        yield '<table id="header" class="header">'
+        yield f'<table id="{ids.HEADER}" class="{cls.HEADER}">'
         yield "<tr>"
         for cell in self.cells:
             yield from cell.td()
@@ -1358,14 +1375,14 @@ class IndexIndex:
 
     def _body_aux(self) -> abc.Generator[str]:
         yield f"<h1>{self.name}</h1>"
-        yield '<ol class="index-index-list">'
+        yield f'<ol class="{cls.INDEX_INDEX_LIST}">'
         for index in self.indexes:
-            yield '<li class="index-view">'
-            yield f'<a class="navigate" \
+            yield f'<li class="{cls.INDEX_VIEW}">'
+            yield f'<a class="{cls.NAVIGATE}" \
                     href="{index.basename()}">'
             yield index.title
             yield "</a>"
-            yield f' <span class="index-count">({index.count})</span>'
+            yield f' <span class="{cls.INDEX_COUNT}">({index.count})</span>'
             yield "</li>"
         yield "</ol>"
 
@@ -1380,7 +1397,7 @@ class Indexer(Mother):
         keys: list[str],
     ) -> abc.Generator[str]:
         yield f"<h1>{index_name}</h1>"
-        yield '<table class="index-table">'
+        yield f'<table class="{cls.INDEX_TABLE}">'
         for key in keys:
             sister = self.with_frag(self.key_to_sister[key], "")
             yield from sister.html_aux()
@@ -1490,36 +1507,36 @@ def notes_aux(dialects: set[str] | None = None) -> abc.Generator[deck.Note]:
 # the Xooxle search results pretty.
 
 _CRUM_RETAIN_CLASSES: set[str] = {
-    "word",
-    "dialect",
-    "spelling",
-    "type",
-    "roman",
-    "heading",
-    "greek",
+    dict_cls.WORD,
+    dict_cls.DIALECT,
+    dict_cls.SPELLING,
+    dict_cls.TYPE,
+    cls.ROMAN,
+    cls.HEADING,
+    cls.GREEK,
 } | set(constants.DIALECTS)
 
-_CRUM_RETAIN_ELEMENTS_FOR_CLASSES = {"comma"}
+_CRUM_RETAIN_ELEMENTS_FOR_CLASSES = {cls.COMMA}
 
 XOOXLE: xooxle.Xooxle = xooxle.Xooxle(
     source=((note.key, note.html) for note in notes_aux()),
     extract=[
         xooxle.Selector({"name": "title"}, force=False),
-        xooxle.Selector({"id": "header"}, force=False),
-        xooxle.Selector({"class_": "dictionary"}, force=False),
-        xooxle.Selector({"class_": "crum-page"}, force=False),
-        xooxle.Selector({"class_": "drv-key"}, force=False),
-        xooxle.Selector({"id": "images"}, force=False),
-        xooxle.Selector({"class_": "nag-hammadi"}, force=False),
-        xooxle.Selector({"class_": "sisters"}, force=False),
-        xooxle.Selector({"id": "categories"}, force=False),
-        xooxle.Selector({"id": "quality"}),
-        xooxle.Selector({"id": "senses"}, force=False),
+        xooxle.Selector({"id": ids.HEADER}, force=False),
+        xooxle.Selector({"class_": cls.DICTIONARY}, force=False),
+        xooxle.Selector({"class_": cls.CRUM_PAGE}, force=False),
+        xooxle.Selector({"class_": cls.DRV_KEY}, force=False),
+        xooxle.Selector({"id": ids.IMAGES}, force=False),
+        xooxle.Selector({"class_": cls.NAG_HAMMADI}, force=False),
+        xooxle.Selector({"class_": cls.SISTERS}, force=False),
+        xooxle.Selector({"id": ids.CATEGORIES}, force=False),
+        xooxle.Selector({"id": ids.QUALITY}),
+        xooxle.Selector({"id": ids.SENSES}, force=False),
     ],
     captures=[
         xooxle.Capture(
             "WIKI",
-            xooxle.Selector({"id": "wiki"}, force=False),
+            xooxle.Selector({"id": ids.WIKI}, force=False),
             # The following classes are used for styling. While we may be able
             # to style the languages in JavaScript without retaining classes in
             # the HTML, this approach is simpler, because it's inherited from
@@ -1529,32 +1546,30 @@ XOOXLE: xooxle.Xooxle = xooxle.Xooxle(
             # If we were to need the classes for Coptic or Greek, this would
             # increase the size of the index more significantly, so we shouldn't
             # do it.
-            # TODO: (#578) Import class names from Wiki, instead of duplicating
-            # them below.
             retain_classes={
-                "wiki",
-                "dialect",
-                "headword",
-                "bullet",
-                "coptic",
-                "greek",
-                "arabic",
-                "amharic",
-                "hebrew",
-                "aramaic",
-                "demotic",
-                "hieroglyphic",
-                "gloss",
-                "subparagraph",
-                "manual",
-                "addendum",
+                cls.WIKI,
+                dict_cls.DIALECT,
+                cls.HEADWORD,
+                cls.BULLET,
+                cls.COPTIC,
+                cls.GREEK,
+                cls.ARABIC,
+                cls.AMHARIC,
+                cls.HEBREW,
+                cls.ARAMAIC,
+                cls.DEMOTIC,
+                cls.HIEROGLYPHIC,
+                cls.GLOSS,
+                cls.SUBPARAGRAPH,
+                cls.MANUAL,
+                cls.ADDENDUM,
                 # We retain marks to alert the user that there is a footnote.
                 # More importantly, it keeps that Xooxle has identical to that
                 # in the target HTML, so text fragments work properly.
                 # The downside: The text visible in Xooxle is not identical to
                 # the book. This is acceptable.
-                "mark",
-                "footnoted",
+                cls.MARK,
+                cls.FOOTNOTED,
             },
             unit_tags={"p"},
             retain_tags=xooxle.RETAIN_TAGS_DEFAULT | {"p"},
@@ -1562,7 +1577,7 @@ XOOXLE: xooxle.Xooxle = xooxle.Xooxle(
         ),
         xooxle.Capture(
             "MARCION",
-            xooxle.Selector({"id": "pretty"}),
+            xooxle.Selector({"id": ids.PRETTY}),
             # This is the list of classes needed for highlighting. If the
             # highlighting rules change, you might have to add new classes!
             retain_classes=_CRUM_RETAIN_CLASSES,
@@ -1570,7 +1585,7 @@ XOOXLE: xooxle.Xooxle = xooxle.Xooxle(
         ),
         xooxle.Capture(
             "MEANING",
-            xooxle.Selector({"id": "root-type-meaning"}, force=False),
+            xooxle.Selector({"id": ids.ROOT_TYPE_MEANING}, force=False),
             retain_classes=_CRUM_RETAIN_CLASSES,
             retain_elements_for_classes=_CRUM_RETAIN_ELEMENTS_FOR_CLASSES,
         ),
@@ -1579,7 +1594,7 @@ XOOXLE: xooxle.Xooxle = xooxle.Xooxle(
             xooxle.Selector(
                 {"name": "body"},
             ),
-            retain_classes=_CRUM_RETAIN_CLASSES | {"part-of-speech"},
+            retain_classes=_CRUM_RETAIN_CLASSES | {cls.PART_OF_SPEECH},
             retain_attributes={"href", "target"},
             retain_tags=xooxle.RETAIN_TAGS_DEFAULT | {"a"},
             retain_elements_for_classes=_CRUM_RETAIN_ELEMENTS_FOR_CLASSES,

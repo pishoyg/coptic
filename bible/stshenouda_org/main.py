@@ -18,7 +18,7 @@ from collections import abc
 import regex
 from ebooklib import epub  # type: ignore[import-untyped]
 
-from bible.stshenouda_org import schema
+from bible.stshenouda_org import cls, ids, schema
 from utils import concur, ensure, file, log, page, paths
 from xooxle import xooxle
 
@@ -192,8 +192,6 @@ for artifact in [_CHAPTER_JS, _INDEX_JS, _CHAPTER_CSS, *_INDEX_CSS]:
 _XOOXLE: pathlib.Path = paths.BIBLE_DIR / "bible.json"
 
 _INDEX: str = "index.html"
-_CHAPTER_CLASS: str = "chapter"
-_INDEX_CLASS: str = "bible"
 
 _TITLE_COP: str = "ⲡⲓϪⲱⲙ ⲉⲑⲞⲩⲁⲃ"
 _TITLE_COP_EN: str = f"{_TITLE_COP} | Coptic Bible"
@@ -210,17 +208,14 @@ _NORMALIZATION: dict[Language, dict[str, str]] = {
     },
 }
 
-RED: str = "red"
-BLUE: str = "blue"
-
 # Recolored words in a verse are only allowed to use these colors. Keep this
 # mapping in sync with the classes used in the CSS.
 _COLOR_CLASSES: dict[str, str | None] = {
     "#000000": None,
-    "#05537d": BLUE,
-    "#812d2d": RED,
-    "#b00e23": RED,
-    "#ff0000": RED,
+    "#05537d": cls.BLUE,
+    "#812d2d": cls.RED,
+    "#b00e23": cls.RED,
+    "#ff0000": cls.RED,
 }
 
 
@@ -455,8 +450,8 @@ class Verse:
             yield v[last : m.start()]
             last = m.end()
             txt: str = m.group()
-            cls: str | None = _COLOR_CLASSES[colored_words[txt]]
-            yield f'<span class="{cls}">{txt}</span>' if cls else txt
+            class_: str | None = _COLOR_CLASSES[colored_words[txt]]
+            yield f'<span class="{class_}">{txt}</span>' if class_ else txt
         yield v[last:]
 
     def __recolor(self, v: str, verse: schema.Verse) -> str:
@@ -674,7 +669,7 @@ class Chapter(Item):
 
     @typing.override
     def header(self) -> abc.Generator[str]:
-        yield f'<h4 class="title" id="{self.id()}">'
+        yield f'<h4 class="{cls.TITLE}" id="{self.id()}">'
         yield self.title()
         yield "</h4>"
 
@@ -1140,7 +1135,7 @@ class HTMLBuilder:
     # __search_form_aux builds the search form HTML.
     def __search_form_aux(self) -> abc.Generator[str]:
         yield _SEARCH_FORM
-        yield '<table id="results" class="results"><thead><tr>'
+        yield f'<table id="{ids.RESULTS}" class="{cls.RESULTS}"><thead><tr>'
         yield '<th style="width: 10%;"></th>'
         for lang in _NONEMPTY_LANGUAGES:
             k: str = _key(lang)
@@ -1175,7 +1170,7 @@ class HTMLBuilder:
 
         # The book index: testaments side by side, each a column of books with
         # their (collapsible) chapter lists.
-        yield '<table class="book-index">'
+        yield f'<table class="{cls.BOOK_INDEX}">'
         yield "<tr>"
         for testament in bible.testaments:
             yield "<td>"
@@ -1183,11 +1178,12 @@ class HTMLBuilder:
                 if idx:
                     yield page.HORIZONTAL_RULE
                 for book in section.books:
-                    yield f'<h4 class="collapse index-book-name" \
+                    yield f'<h4 class="{cls.COLLAPSE} {cls.INDEX_BOOK_NAME}" \
                             id="{book.id()}">'
                     yield book.name
                     yield "</h4>"
-                    yield '<div class="collapsible index-book-chapter-list">'
+                    yield f'<div class="{cls.COLLAPSIBLE} \
+                            {cls.INDEX_BOOK_CHAPTER_LIST}">'
                     # The inner container is necessary for the grid layout to
                     # work.
                     yield "<div>"
@@ -1211,7 +1207,7 @@ class HTMLBuilder:
         toc = self.__html_aux(
             self.__toc_body_aux(bible, is_epub=False),
             title=_TITLE_COP_EN,
-            page_class=_INDEX_CLASS,
+            page_class=cls.BIBLE,
             scripts=[_INDEX_JS],
             css=_INDEX_CSS,
         )
@@ -1228,7 +1224,7 @@ class HTMLBuilder:
         out = self.__html_aux(
             self.__chapter_body_aux(chapter, langs),
             title=chapter.title(),
-            page_class=_CHAPTER_CLASS,
+            page_class=cls.CHAPTER,
             nxt=nxt.href(is_epub=False) if nxt else "",
             prv=prv.href(is_epub=False) if prv else "",
             scripts=[_CHAPTER_JS],
@@ -1408,7 +1404,7 @@ class TableBuilder(HTMLBuilder):
         chapter: Chapter,
         langs: list[Language],
     ) -> abc.Generator[str]:
-        yield '<table class="verses">'
+        yield f'<table class="{cls.VERSES}">'
         yield "<thead>"
         yield "<tr>"
         for lang in langs:
@@ -1442,13 +1438,13 @@ class TableBuilder(HTMLBuilder):
         if num is None:
             num = verse.num
         if not num:
-            yield '<tr class="verse">'
+            yield f'<tr class="{cls.VERSE}">'
             return
         # TODO: (#0) If several chapters were to be placed in the same document
         # (as is the case with the generated EPUBs), this would result in verses
         # from different chapters having the same ID! Verse ID should either be
         # distinct across chapters, or should be omitted in the EPUB!
-        yield f'<tr class="verse" id="v{num}">'
+        yield f'<tr class="{cls.VERSE}" id="v{num}">'
 
     @typing.override
     def verse_end(
@@ -1462,7 +1458,7 @@ class TableBuilder(HTMLBuilder):
     @typing.override
     def verse_group_begin(self, num: str) -> abc.Generator[str]:
         yield "</tbody>"
-        yield f'<tbody class="verse-group" id="v{num}">'
+        yield f'<tbody class="{cls.VERSE_GROUP}" id="v{num}">'
 
     @typing.override
     def verse_group_end(self, num: str) -> abc.Generator[str]:  # dead: disable
@@ -1475,7 +1471,7 @@ class TableBuilder(HTMLBuilder):
         self,
         lang: Language,
     ) -> abc.Generator[str]:
-        yield f'<td class="language {_key(lang)}">'
+        yield f'<td class="{cls.LANGUAGE} {_key(lang)}">'
 
     @typing.override
     def lang_end(self, lang: Language) -> abc.Generator[str]:  # dead: disable
@@ -1524,7 +1520,7 @@ def main():
             xooxle.Capture(
                 _key(lang),
                 xooxle.Selector({"class_": _key(lang)}, False),
-                {RED, BLUE},
+                {cls.RED, cls.BLUE},
             )
             for lang in _NONEMPTY_LANGUAGES
         ],

@@ -63,9 +63,8 @@ from collections import abc
 
 import genanki  # type: ignore[import-untyped]
 
+from flashcards import cls, ids
 from utils import ensure, file, page, paths, system
-
-NOTE_CLASS = "note"
 
 IMG_SRC_FMT: re.Pattern[str] = re.compile(r'<img src="([^"]+)"')
 FONT_SRC_RE: re.Pattern[str] = re.compile(r"src: url\('([^']*)'\)")
@@ -138,11 +137,11 @@ class Note:
     def __html_aux(self) -> abc.Generator[str]:
         return page.html_aux(
             self.head,
-            NOTE_CLASS,
-            '<div class="front" id="front">',
+            cls.NOTE,
+            f'<div class="{cls.FRONT}" id="{ids.FRONT}">',
             self.front,
             "</div>",
-            '<div class="back" id="back">',
+            f'<div class="{cls.BACK}" id="{ids.BACK}">',
             self.back,
             "</div>",
         )
@@ -320,10 +319,16 @@ class Deck:
             templates=[
                 {
                     "name": "template 1",
-                    "qfmt": '<div class="front"> {{Front}} </div>'
+                    "qfmt": '<div class="'
+                    + cls.FRONT
+                    + '"> {{Front}} </div>'
                     + f'<script type="text/javascript">{javascript}</script>',
-                    "afmt": '<div class="front"> {{Front}} </div>'
-                    + '<div class="back"> {{Back}} </div>'
+                    "afmt": '<div class="'
+                    + cls.FRONT
+                    + '"> {{Front}} </div>'
+                    + '<div class="'
+                    + cls.BACK
+                    + '"> {{Back}} </div>'
                     + f'<script type="text/javascript">{javascript}</script>',
                 },
             ],

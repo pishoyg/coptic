@@ -22,7 +22,8 @@ from collections import OrderedDict, abc, defaultdict
 
 import pandas as pd
 
-from dictionary.kellia_uni_goettingen_de import sources
+from dictionary import cls as dict_cls
+from dictionary.kellia_uni_goettingen_de import cls, ids, sources
 from flashcards import deck
 from utils import ensure, file, gcp, javascript, log, page, paths, text
 from xooxle import xooxle
@@ -119,10 +120,10 @@ class Form:
         Yields:
             A string representing the HTML of a <tr> element.
         """
-        yield f'<tr class="word {self.geo}">'
-        yield self._td(self.orth, "orth", "spelling")
-        yield self._td(self.geo, "geo", "dialect")
-        yield self._td(self.gram_grp or "", "gram_grp", "type")
+        yield f'<tr class="{dict_cls.WORD} {self.geo}">'
+        yield self._td(self.orth, cls.ORTH, dict_cls.SPELLING)
+        yield self._td(self.geo, cls.GEO, dict_cls.DIALECT)
+        yield self._td(self.gram_grp or "", cls.GRAM_GRP, dict_cls.TYPE)
         yield "</tr>"
 
 
@@ -167,7 +168,7 @@ class Orthography:
         return any(f.geo == geo for f in self.forms)
 
     def table_aux(self) -> abc.Generator[str]:
-        yield '<table id="orths">'
+        yield f'<table id="{ids.ORTHS}">'
         for line in self.forms:
             yield from line.tr_aux()
         yield "</table>"
@@ -262,7 +263,7 @@ class Etymology:
             word = re.sub(r"\)", r"\)", word)
             etym = re.sub(r"#" + word + "#", link, etym)
         etym = _gloss_bibl(etym)
-        return f'<span class="etym">{etym}</span>' if etym else ""
+        return f'<span class="{cls.ETYM}">{etym}</span>' if etym else ""
 
 
 class Sense:
@@ -292,19 +293,19 @@ class Sense:
     def _tr_aux(self) -> abc.Generator[str]:
         yield f"<!--sense_number:{self._sense_n}, sense_id:{self._sense_id}-->"
         yield "<tr>"
-        yield '<td class="meaning">'
+        yield f'<td class="{dict_cls.MEANING}">'
         yield page.LINE_BREAK.join(
             map(self.format, self.subset("quote", "definition")),
         )
         yield "</td>"
-        yield '<td class="bibl">'
+        yield f'<td class="{cls.BIBL}">'
         yield page.LINE_BREAK.join(map(self.format, self.subset("bibl")))
         yield "</td>"
         yield "</tr>"
         ref_xr = self.subset("ref", "xr")
         if ref_xr:
             yield "<tr>"
-            yield '<td class="ref_xr" colspan="2">'
+            yield f'<td class="{cls.REF_XR}" colspan="2">'
             yield page.LINE_BREAK.join(map(self.format, ref_xr))
             yield "</td>"
             yield "</tr>"
@@ -360,7 +361,7 @@ class Lang:
         return "".join(self.table_aux())
 
     def table_aux(self) -> abc.Generator[str]:
-        yield '<table id="senses">'
+        yield f'<table id="{ids.SENSES}">'
         yield "<colgroup>"
         yield "<col>"
         yield "<col>"
@@ -439,11 +440,11 @@ class Word:
         for d, e, f in zip(de.senses, en.senses, fr.senses):
             assert d.identify() == e.identify() == f.identify()
             merged.start_sense(*d.identify())
-            for row in e.explain('<span class="lang">(En.) </span>'):
+            for row in e.explain(f'<span class="{cls.LANG}">(En.) </span>'):
                 merged.add(*row)
-            for row in d.explain('<span class="lang">(De.) </span>'):
+            for row in d.explain(f'<span class="{cls.LANG}">(De.) </span>'):
                 merged.add(*row)
-            for row in f.explain('<span class="lang">(Fr.) </span>'):
+            for row in f.explain(f'<span class="{cls.LANG}">(Fr.) </span>'):
                 merged.add(*row)
             for row in d.give_references():
                 merged.add(*row)
@@ -987,32 +988,32 @@ def notes_aux(
 
 
 _KELLIA_RETAIN_CLASSES = {
-    "word",
-    "spelling",
-    "dialect",
-    "type",
-    "lang",
-    "geo",
-    "gram_grp",
+    dict_cls.WORD,
+    dict_cls.SPELLING,
+    dict_cls.DIALECT,
+    dict_cls.TYPE,
+    cls.LANG,
+    cls.GEO,
+    cls.GRAM_GRP,
 } | set(GEOS)
 
 XOOXLE: xooxle.Xooxle = xooxle.Xooxle(
     source=((note.key, note.html) for note in notes_aux()),
     extract=[
         xooxle.Selector({"name": "footer"}, force=False),
-        xooxle.Selector({"class_": "bibl"}, force=False),
-        xooxle.Selector({"class_": "ref_xr"}, force=False),
-        xooxle.Selector({"class_": "ref"}, force=False),
+        xooxle.Selector({"class_": cls.BIBL}, force=False),
+        xooxle.Selector({"class_": cls.REF_XR}, force=False),
+        xooxle.Selector({"class_": cls.REF}, force=False),
     ],
     captures=[
         xooxle.Capture(
             "ORTHS",
-            xooxle.Selector({"id": "orths"}),
+            xooxle.Selector({"id": ids.ORTHS}),
             retain_classes=_KELLIA_RETAIN_CLASSES,
         ),
         xooxle.Capture(
             "SENSES",
-            xooxle.Selector({"id": "senses"}),
+            xooxle.Selector({"id": ids.SENSES}),
             retain_classes=_KELLIA_RETAIN_CLASSES,
         ),
         xooxle.Capture(
