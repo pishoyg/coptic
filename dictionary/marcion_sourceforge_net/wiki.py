@@ -285,8 +285,8 @@ _SUBSTITUTIONS: list[Substitution] = [
     Substitution(
         r"(\p{Letter})\^\^(\p{Letter})",
         rf'<span class="{cls.STACK}">'
-        rf'<span class="{cls.STACK_TOP}">\1</span>'
-        rf'<span class="{cls.STACK_BOTTOM}">\2</span>'
+        rf'<span class="{cls.STACK_TOP}">\2</span>'
+        rf'<span class="{cls.STACK_BOTTOM}">\1</span>'
         r"</span>",
         # The plain-text version separates the two pieces with a slash, mirroring
         # how superscript degrades to `^(...)`.
