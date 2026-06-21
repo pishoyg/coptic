@@ -57,11 +57,6 @@ ANKI_DIR: pathlib.Path = LEXICON_DIR / "anki/coptic.apkg"
 
 ICON: pathlib.Path = file(SITE_DIR, "img/icon/icon-circle.png")
 
-ANTINOOU_FONT: pathlib.Path = file(
-    SITE_DIR,
-    "fonts/AntinoouFont-1.0.6/_Antinoou.woff2",
-)
-
 TOOLTIP_CSS: pathlib.Path = file(SITE_DIR, "tooltip.css")
 HELP_CSS: pathlib.Path = file(SITE_DIR, "help.css")
 HEADER_CSS: pathlib.Path = file(SITE_DIR, "header.css")

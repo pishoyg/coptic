@@ -22,15 +22,6 @@ _ICON_TAG: str = f"""
   <link rel="icon" type="image/x-icon" href="{paths.server(paths.ICON)}">
 """
 
-# Preload the Coptic font so it is fetched early, before layout would otherwise
-# discover it -- this avoids the fallback-to-Antinoou reflow that shifts anchor
-# scrolling. `crossorigin` is required even same-origin (fonts fetch in CORS
-# mode), else the font is fetched twice.
-_PRELOAD_FONT_TAG: str = f"""
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-  href="{paths.server(paths.ANTINOOU_FONT)}">
-"""
-
 _GOOGLE_TAG: str = """
   <script async src=
   "https://www.googletagmanager.com/gtag/js?id=G-VCVZFDFZR3"></script>
@@ -152,7 +143,6 @@ def html_head_aux(
     yield _CHARSET_TAG
     yield _VIEWPORT_TAG
     yield _NO_INDEX_TAG
-    yield _PRELOAD_FONT_TAG
     for path in css:
         yield f'<link href="{path}" rel="stylesheet" type="text/css">'
     yield _ICON_TAG
