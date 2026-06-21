@@ -123,6 +123,12 @@ function normalize(word: string): string {
  * in Crum's dictionary. */
 const ALWAYS_VOWELS: string[] = ['ⲁ', 'ⲉ', 'ⲏ', 'ⲉⲓ', 'ⲓ', 'ⲟ', 'ⲱ'];
 
+/* BACK_VOWELS are the vowels after which a following ⲟⲩ/ⲩ is realised as the
+ * consonant /w/ rather than the vowel /u/ (e.g. ⲁⲩⲱ). They exclude the front
+ * vowels ⲓ/ⲉⲓ, after which ⲟⲩ/ⲩ stays vocalic unless it is also followed by a
+ * vowel (the intervocalic case handled in `Letter.isVowel`). */
+const BACK_VOWELS: string[] = ['ⲁ', 'ⲉ', 'ⲏ', 'ⲟ', 'ⲱ'];
+
 /**
  * Letter represents a letter in a word in Crum's dictionary.
  */
@@ -162,40 +168,37 @@ class Letter {
   }
 
   /**
+   * Whether this letter behaves as a vowel in its surrounding context. The
+   * classification depends on the original neighbours, so it must be computed
+   * before any letters are stripped off the word.
    *
-   * @param prev
-   * @returns
+   * @param prev - The preceding letter, if any.
+   * @param next - The following letter, if any.
+   * @returns Whether this letter is a vowel.
    */
-  public isVowel(prev: Letter | undefined): boolean {
+  public isVowel(prev: Letter | undefined, next: Letter | undefined): boolean {
     if (ALWAYS_VOWELS.includes(this.text)) {
       return true;
     }
-    // Besides the always-vowels, the letters "ⲩ" or "ⲟⲩ" could be vowels,
-    // though this depends on the preceding letter.
+    // Besides the always-vowels, only "ⲩ" or "ⲟⲩ" are ambiguous; anything else
+    // is a consonant.
     if (this.text !== 'ⲟⲩ' && this.text !== 'ⲩ') {
-      // This letter is not an always-vowel, and is not ⲩ or ⲟⲩ either. Then
-      // it's a consonant.
       return false;
     }
     if (!prev) {
-      // ⲟⲩ at the start of a word is a vowel.
+      // At the start of a word, ⲟⲩ/ⲩ is the vowel /u/.
       return true;
     }
-    if (['ⲁ', 'ⲉ', 'ⲏ', 'ⲟ', 'ⲱ'].includes(prev.text)) {
-      // ⲟⲩ preceded by any of these letters is a consonant.
-      return false;
+    if (!ALWAYS_VOWELS.includes(prev.text)) {
+      // After a consonant, ⲟⲩ/ⲩ is the vowel /u/.
+      return true;
     }
-    // Otherwise, this ⲟⲩ is a vowel.
-    return true;
-  }
-
-  /**
-   *
-   * @param prev
-   * @returns
-   */
-  public isConsonant(prev: Letter | undefined): boolean {
-    return !this.isVowel(prev);
+    // `prev` is a vowel. ⲟⲩ/ⲩ is then the consonant /w/ when it follows a back
+    // vowel (e.g. ⲁⲩⲱ) or when it sits between two vowels (the intervocalic
+    // glide, e.g. ⲁⲗⲓⲟⲩⲓ, which Crum files under the skeleton ⲁⲗⲟⲩ alongside
+    // ⲁⲗⲁⲩ and ⲁⲗⲏⲟⲩ); otherwise it stays the vowel /u/.
+    const nextIsVowel = next && ALWAYS_VOWELS.includes(next.text);
+    return !(BACK_VOWELS.includes(prev.text) || nextIsVowel);
   }
 
   /**
@@ -229,7 +232,7 @@ class Sequence {
    *
    * @param letters
    */
-  public constructor(private readonly letters: Letter[]) {}
+  public constructor(private readonly letters: Letter[]) { }
 
   /**
    *
@@ -294,26 +297,26 @@ export class Word implements scan.Word {
     }
     this.start = start;
 
+    // Classify every letter as vowel or consonant up front, using its original
+    // neighbours. This must happen before any letters are stripped, since the
+    // ⲟⲩ/ⲩ rule depends on both the preceding and following letter.
+    const vowelFlags: boolean[] = letters.map((letter, idx) =>
+      letter.isVowel(letters[idx - 1], letters[idx + 1])
+    );
+
+    // Extract the trailing vowel suffix.
     const vowelSuffix: Letter[] = [];
-    let last: Letter | undefined = undefined;
-    // Extract the vowel suffix:
-    while (
-      letters.length > 1 &&
-      (last = letters.at(-1))?.isVowel(letters.at(-2))
-    ) {
-      vowelSuffix.push(last);
+    while (letters.length > 1 && vowelFlags[letters.length - 1]) {
+      vowelSuffix.push(letters[letters.length - 1]!);
       letters.pop();
     }
     this.vowelSuffix = new Sequence(vowelSuffix.reverse());
 
     const consonants: Letter[] = [];
     const vowels: Letter[] = [];
-    for (const [idx, letter] of letters.entries()) {
-      if (!idx) {
-        // We have already handled the first entry.
-        continue;
-      }
-      if (letter.isConsonant(letters[idx - 1])) {
+    for (let idx = 1; idx < letters.length; idx++) {
+      const letter: Letter = letters[idx]!;
+      if (!vowelFlags[idx]) {
         consonants.push(letter);
       } else if (!vowels.at(-1)?.eq(letter)) {
         // Collapse geminate vowels: a Coptic doubled vowel (e.g. ⲱⲱ, ⲟⲟ, ⲁⲁ)
