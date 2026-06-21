@@ -38,7 +38,13 @@
   border: 0;
 
   /* Default placement: directly below the parent, aligned with its left edge. */
-  position: fixed;
+
+  /* `absolute`, not `fixed`: Firefox resolves `anchor()` in document
+   * coordinates, while a `fixed` element's insets are viewport-relative, so on
+   * a scrolled page the tooltip lands off by the scroll offset. `absolute`
+   * insets are document-relative too, which matches `anchor()` and keeps the
+   * tooltip pinned to its trigger in both Firefox and Chromium. */
+  position: absolute;
   inset: anchor(bottom) 0 8px anchor(left);
 
   /* Stretch the positioning area to the viewport's edges (with a small
