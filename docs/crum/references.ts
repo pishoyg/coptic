@@ -194,7 +194,7 @@ export class Reference {
     // annotations have never been encountered yet, so this is deemed
     // acceptable.
     for (const node of suffix) {
-      const text = typeof node === 'string' ? node : (node.textContent ?? '');
+      const text: string = html.textContent(node);
       const italic = node instanceof Element && node.nodeName === 'I';
 
       ann.RE.lastIndex = 0;
@@ -202,7 +202,12 @@ export class Reference {
         const abb: string = match[0];
         const annot = ann.MAPPING[abb];
         if (!annot?.suffix) {
-          log.warn('Non-suffix annotation found in suffix:', abb);
+          log.warn(
+            'Non-suffix annotation',
+            abb,
+            'found in suffix',
+            suffix.map(html.textContent).join('')
+          );
           continue;
         }
         const div: HTMLDivElement = document.createElement('div');

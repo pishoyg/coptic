@@ -476,3 +476,12 @@ export function parse(html: string): NodeListOf<ChildNode> {
   template.innerHTML = html;
   return template.content.childNodes;
 }
+
+/**
+ *
+ * @param node
+ * @returns
+ */
+export function textContent(node: string | Node): string {
+  return typeof node === 'string' ? node : (node.textContent ?? '');
+}
