@@ -4,24 +4,29 @@
  * tooltip.ts). Each one carries an inline `position-anchor: --tooltip-N`
  * matched by an inline `anchor-name: --tooltip-N` on its trigger. */
 
+/* .miser is specific to click-invoked elements. */
+.miser {
+  cursor: pointer;
+}
+
 /* CSS for all parents of tooltips (hover-invoked or click-invoked). */
 .miser,
 .tipper {
   /* Since tooltips render right beneath their parents, the positioning would
    * look rather odd in cases where the parent lives on multiple lines.
    * Thankfully, such parents tend to be so short that we can usually afford to
-   * always display them on a single line and prevent wrapping on whitespace. */
-  white-space: nowrap;
+   * always display them on a single line and prevent wrapping on whitespace.
+   * We exclude <th> and <td> elements from the rule: cells still look fine
+   * when their whitespace wraps, and forcing nowrap on them causes rendering
+   * issues (#744). */
+  &:not(td, th) {
+    white-space: nowrap;
+  }
 }
 
 .tipper:hover {
   background-color: #f1f8ff;
   border-radius: 4px;
-}
-
-/* .miser is specific to click-invoked elements. */
-.miser {
-  cursor: pointer;
 }
 
 /* .tooltip represents either a click-invoked or hover-invoked tooltip.
