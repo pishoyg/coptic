@@ -184,6 +184,8 @@
       Leipzig: J. C. Hinrichs’sche Buchhandlung."
   variants:
     - "AP"
+  postfixes:
+    Einl: "Einleitung"
 
 - title: "H. Asmus, Über Fragmente im mitteläg. Dialekt (Dissert.), 1904, acc. to
     pp"
@@ -516,13 +518,14 @@
     - "Cat"
 
 - title: "Codices Coptici Vaticani &c., T.I, edd. Hebbelynck & Lantschoot, Rome, 1937"
-  # NOTE: No spaces added!
   description:
     - "Hebbelynck, A., & Van Lantschoot, A. (1937). *[Codices Coptici Vaticani, Barberiniani,
       Borgiani, Rossiani. Tomus I](https://archive.org/details/BiblotacheaTomIcomplete/page/n7/mode/2up)*.
       Vaticani: Bibliotheca Vaticana."
+  # NOTE: No spaces added!
   variants:
     - "CCVaI"
+    - "CCVa"
 
 - title: "L. Clugnet, Vie de l’Abbé Daniel, wherein Guidi’s Coptic text, acc. to pp.
     of this work"
@@ -765,23 +768,12 @@
       are available digitised on [Biodiversity Heritage Library](https://www.biodiversitylibrary.org/bibliography/51047)
       and some later volumes via [HathiTrust](https://catalog.hathitrust.org/Record/008602924)
       in the US."
-    - "*Nachrichten von der Königlichen Gesellschaft der Wissenschaften zu Göttingen,
-      Philologisch-Historische Klasse* began in 1894. Links to volumes from 1892-1923
-      available digitised on [The Online Books Page](https://onlinebooks.library.upenn.edu/webbin/serial?id=nachkongesgotph)
-      and some later volumes via [HathiTrust](https://catalog.hathitrust.org/Record/000517694)
-      in the US."
   variants:
     - "Gött A"
     - "Gött Abh"
 
 - title: "Göttinger Nachrichten"
-  # NOTE: In Crum's list, this appears as ‘do. Nachrichten’.
   description:
-    - "*Abhandlungen der Königlichen Gesellschaft der Wissenschaften zu Göttingen,
-      Philologisch-Historische Klasse* began in 1839. Links to volumes from 1839-1890
-      are available digitised on [Biodiversity Heritage Library](https://www.biodiversitylibrary.org/bibliography/51047)
-      and some later volumes via [HathiTrust](https://catalog.hathitrust.org/Record/008602924)
-      in the US."
     - "*Nachrichten von der Königlichen Gesellschaft der Wissenschaften zu Göttingen,
       Philologisch-Historische Klasse* began in 1894. Links to volumes from 1892-1923
       available digitised on [The Online Books Page](https://onlinebooks.library.upenn.edu/webbin/serial?id=nachkongesgotph)
