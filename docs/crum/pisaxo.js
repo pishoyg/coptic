@@ -129,7 +129,10 @@ export const DATA = [
     ],
     "variants": [
       "AP"
-    ]
+    ],
+    "postfixes": {
+      "Einl": "Einleitung"
+    }
   },
   {
     "title": "H. Asmus, Über Fragmente im mitteläg. Dialekt (Dissert.), 1904, acc. to pp",
@@ -427,7 +430,8 @@ export const DATA = [
       "Hebbelynck, A., &amp; Van Lantschoot, A. (1937). <em><a href=\"https://archive.org/details/BiblotacheaTomIcomplete/page/n7/mode/2up\">Codices Coptici Vaticani, Barberiniani, Borgiani, Rossiani. Tomus I</a></em>. Vaticani: Bibliotheca Vaticana."
     ],
     "variants": [
-      "CCVaI"
+      "CCVaI",
+      "CCVa"
     ]
   },
   {
@@ -656,8 +660,7 @@ export const DATA = [
   {
     "title": "Göttinger Abhandlungen",
     "description": [
-      "<em>Abhandlungen der Königlichen Gesellschaft der Wissenschaften zu Göttingen, Philologisch-Historische Klasse</em> began in 1839. Links to volumes from 1839-1890 are available digitised on <a href=\"https://www.biodiversitylibrary.org/bibliography/51047\">Biodiversity Heritage Library</a> and some later volumes via <a href=\"https://catalog.hathitrust.org/Record/008602924\">HathiTrust</a> in the US.",
-      "<em>Nachrichten von der Königlichen Gesellschaft der Wissenschaften zu Göttingen, Philologisch-Historische Klasse</em> began in 1894. Links to volumes from 1892-1923 available digitised on <a href=\"https://onlinebooks.library.upenn.edu/webbin/serial?id=nachkongesgotph\">The Online Books Page</a> and some later volumes via <a href=\"https://catalog.hathitrust.org/Record/000517694\">HathiTrust</a> in the US."
+      "<em>Abhandlungen der Königlichen Gesellschaft der Wissenschaften zu Göttingen, Philologisch-Historische Klasse</em> began in 1839. Links to volumes from 1839-1890 are available digitised on <a href=\"https://www.biodiversitylibrary.org/bibliography/51047\">Biodiversity Heritage Library</a> and some later volumes via <a href=\"https://catalog.hathitrust.org/Record/008602924\">HathiTrust</a> in the US."
     ],
     "variants": [
       "Gött A",
@@ -667,7 +670,6 @@ export const DATA = [
   {
     "title": "Göttinger Nachrichten",
     "description": [
-      "<em>Abhandlungen der Königlichen Gesellschaft der Wissenschaften zu Göttingen, Philologisch-Historische Klasse</em> began in 1839. Links to volumes from 1839-1890 are available digitised on <a href=\"https://www.biodiversitylibrary.org/bibliography/51047\">Biodiversity Heritage Library</a> and some later volumes via <a href=\"https://catalog.hathitrust.org/Record/008602924\">HathiTrust</a> in the US.",
       "<em>Nachrichten von der Königlichen Gesellschaft der Wissenschaften zu Göttingen, Philologisch-Historische Klasse</em> began in 1894. Links to volumes from 1892-1923 available digitised on <a href=\"https://onlinebooks.library.upenn.edu/webbin/serial?id=nachkongesgotph\">The Online Books Page</a> and some later volumes via <a href=\"https://catalog.hathitrust.org/Record/000517694\">HathiTrust</a> in the US."
     ],
     "variants": [
