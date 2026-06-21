@@ -37,6 +37,16 @@ _ = parser.add_argument(
     "significantly speeds up the pipeline, at the cost of not catching "
     "encoding errors and stray characters in the source data.",
 )
+_ = parser.add_argument(
+    "--html",
+    action="store_true",
+    help="Generate the HTML and exit.",
+)
+_ = parser.add_argument(
+    "--xooxle",
+    action="store_true",
+    help="Generate the Xooxle index and exit.",
+)
 
 # Input parameters
 
@@ -1478,24 +1488,7 @@ class TableBuilder(HTMLBuilder):
         yield "</td>"
 
 
-def main():
-    args: argparse.Namespace = parser.parse_args()
-    Verse.fast = args.fast
-
-    bible: Bible = Bible()
-
-    flow_builder: FlowBuilder = FlowBuilder()
-    table_builder: TableBuilder = TableBuilder()
-
-    if args.validate:
-        return
-
-    flow_builder.write("epub", bible, ["Bohairic", "English"], "1")
-    table_builder.write("epub", bible, ["Bohairic", "English"], "2")
-    table_builder.write("html", bible, _LANGUAGES, "")
-
-    bible.write_crum_map()
-
+def _build_xooxle(bible: Bible, table_builder: TableBuilder) -> None:
     # TODO: (#0) Verse HTML gets generated twice. Consider deduplicating it,
     # somehow, to slightly speed up the code.
     def verse_source() -> abc.Generator[tuple[str, str]]:
@@ -1526,6 +1519,35 @@ def main():
         ],
         _XOOXLE,
     ).build()
+
+
+def main():
+    args: argparse.Namespace = parser.parse_args()
+    Verse.fast = args.fast
+
+    bible: Bible = Bible()
+
+    flow_builder: FlowBuilder = FlowBuilder()
+    table_builder: TableBuilder = TableBuilder()
+
+    if args.validate:
+        return
+
+    if args.xooxle:
+        _build_xooxle(bible, table_builder)
+        return
+
+    if args.html:
+        table_builder.write("html", bible, _LANGUAGES, "")
+        return
+
+    flow_builder.write("epub", bible, ["Bohairic", "English"], "1")
+    table_builder.write("epub", bible, ["Bohairic", "English"], "2")
+    table_builder.write("html", bible, _LANGUAGES, "")
+
+    bible.write_crum_map()
+
+    _build_xooxle(bible, table_builder)
 
 
 if __name__ == "__main__":
