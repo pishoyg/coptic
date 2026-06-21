@@ -317,7 +317,11 @@ export class Word implements scan.Word {
       }
       if (letter.isConsonant(letters[idx - 1])) {
         consonants.push(letter);
-      } else {
+      } else if (!vowels.at(-1)?.eq(letter)) {
+        // Collapse geminate vowels: a Coptic doubled vowel (e.g. ⲱⲱ, ⲟⲟ, ⲁⲁ)
+        // writes a single long vowel and occupies the same grade in Crum, so
+        // forms like ⲕⲱⲗⲉ and ⲕⲱⲱⲗⲉ are interfiled rather than separated. Keep
+        // only the first letter of each run of equivalent interior vowels.
         vowels.push(letter);
       }
     }
