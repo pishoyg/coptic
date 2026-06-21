@@ -117,7 +117,7 @@ const LETTER_MAPPING: Record<string, string> = LETTERS.reduce<
 function normalize(word: string): string {
   // For all purposes, some pairs are identical in Crum and can be safely
   // normalized early on.
-  return word.replace('ⲯ', 'ⲡⲥ').replace('ⲝ', 'ⲕⲥ').replace('ϯ', 'ⲧⲓ');
+  return word.replaceAll('ⲯ', 'ⲡⲥ').replaceAll('ⲝ', 'ⲕⲥ').replaceAll('ϯ', 'ⲧⲓ');
 }
 
 /* ALWAYS_VOWELS defines a list of letters that are always considered vowels
