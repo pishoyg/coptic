@@ -4,11 +4,6 @@
  * NOTE: Keep the content of this file sorted in alphabetical order.
  */
 
-/**
- * ABBREVIATIONS is the class of the link to Crum's list of abbreviations
- * (a.k.a. digital bibliography).
- */
-export const ABBREVIATIONS = 'abbreviations';
 export const ABBREVIATION = 'abbreviation';
 
 export const AMHARIC = 'amharic';
