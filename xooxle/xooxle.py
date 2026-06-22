@@ -194,16 +194,16 @@ class Selector:
 class Capture:
     """Capture a field from an HTML."""
 
-    def __init__(  # pylint: disable=dangerous-default-value
+    def __init__(
         self,
         name: str,
         selector: Selector,
         retain_classes: set[str] | None = None,
-        retain_tags: set[str] = RETAIN_TAGS_DEFAULT,
+        retain_tags: set[str] | None = None,
         retain_elements_for_classes: set[str] | None = None,
         retain_attributes: set[str] | None = None,
-        block_elements: set[str] = BLOCK_ELEMENTS_DEFAULT,
-        space_elements: set[str] = SPACE_ELEMENTS_DEFAULT,
+        block_elements: set[str] | None = None,
+        space_elements: set[str] | None = None,
         block_classes: set[str] | None = None,
         unit_tags: set[str] | None = None,
     ) -> None:
@@ -215,7 +215,11 @@ class Capture:
         # _retain_classes is the HTML classes to retain in the output.
         self._retain_classes: set[str] = retain_classes or set()
         # _retain_tags is the list of HTML tags to retain in the output.
-        self._retain_tags: set[str] = retain_tags
+        # NOTE: We distinguish `None` (use the default) from an empty set
+        # (retain no tags).
+        self._retain_tags: set[str] = (
+            retain_tags if retain_tags is not None else RETAIN_TAGS_DEFAULT
+        )
         # _retain_attributes is the list of HTML tag attributes to retain.
         self._retain_attributes: set[str] = retain_attributes or set()
         ensure.ensure(
@@ -231,10 +235,18 @@ class Capture:
         )
         # _block_elements is the list of HTML tags that result in newlines in
         # the output.
-        self._block_elements: set[str] = block_elements
+        self._block_elements: set[str] = (
+            block_elements
+            if block_elements is not None
+            else BLOCK_ELEMENTS_DEFAULT
+        )
         # _space_elements is the list of HTML tags that result in spaces in
         # the output.
-        self._space_elements: set[str] = space_elements
+        self._space_elements: set[str] = (
+            space_elements
+            if space_elements is not None
+            else SPACE_ELEMENTS_DEFAULT
+        )
         self._block_classes: set[str] = block_classes or set()
         # _units is a list of HTML tags that produce `UNIT_DELIMITER` delimiters
         # in the output. You can use this delimiter to separate the text into

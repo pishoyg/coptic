@@ -35,8 +35,8 @@ from xooxle import xooxle
 # We can't put all imports on one line, because there is conflict between the
 # following pre-commit hooks: isort, add-trailing-comma, black
 # TODO: (#0) This is not ideal. Resolve hook conflicts.
-# pylint: disable=ungrouped-imports
 # isort: off
+# pylint: disable-next=ungrouped-imports
 from utils import cache, concur, ensure, file, gcp, log, page, paths, text
 from utils import javascript, numeral
 

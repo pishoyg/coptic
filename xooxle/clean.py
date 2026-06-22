@@ -15,7 +15,8 @@ from typing import Callable
 from utils import ensure, page
 from xooxle import constants as const
 
-IterOfIters = Iterable[Iterable[str]]  # pylint: disable=invalid-name
+# pylint: disable-next=invalid-name
+IterOfIters = Iterable[Iterable[str]]
 
 
 def clean(tokens: Iterable[str]) -> Generator[str]:

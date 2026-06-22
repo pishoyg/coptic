@@ -81,7 +81,8 @@ def _print(
     )
 
     if exception:
-        raise Exception(message)  # pylint: disable=broad-exception-raised
+        # pylint: disable-next=broad-exception-raised
+        raise Exception(message)
     else:
         print(message)
 

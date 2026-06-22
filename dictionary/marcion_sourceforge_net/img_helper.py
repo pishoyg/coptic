@@ -686,7 +686,8 @@ class _Prompter:
             # that have meaningful error messages.
             except AssertionError as e:
                 raise e
-            except Exception as e:  # pylint: disable=broad-exception-caught
+            # pylint: disable-next=broad-exception-caught
+            except Exception as e:
                 log.error(e)
 
     def prompt_for_command(self) -> bool:

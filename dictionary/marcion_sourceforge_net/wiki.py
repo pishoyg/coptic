@@ -26,9 +26,9 @@ DATA_FOOTNOTE: str = "data-footnote"
 DATA_KEY: str = "data-key"
 DATA_PAGE: str = "data-page"
 
-# pylint: disable=line-too-long
 # TODO: (#0) Move to `utils/paths.py`.
 SHEET_TSV_URL: str = (
+    # pylint: disable-next=line-too-long
     "https://docs.google.com/spreadsheets/d/1lhjcnkHS-pA3p5Vys-6ohKu7Y4ZCJ5NO/export?format=tsv"
 )
 
@@ -220,8 +220,9 @@ CLOSE_PARAGRAPH: str = "</p>"
 
 # Coptic Wiki substitutions:
 #
-# NOTE: This is based on a snapshot of the following file, taken on September 17,
-# 2025:
+# NOTE: This is based on a snapshot of the following file, taken on
+# September 17, 2025:
+# pylint: disable-next=line-too-long
 # - https://github.com/randykomforty/coptic/blob/main/scripts/dictionary_regexes.js
 # If the file were to be updated, this mapping should be updated accordingly.
 #
@@ -294,8 +295,8 @@ _SUBSTITUTIONS: list[Substitution] = [
         rf'<span class="{cls.STACK_TOP}">\2</span>'
         rf'<span class="{cls.STACK_BOTTOM}">\1</span>'
         r"</span>",
-        # The plain-text version separates the two pieces with a slash, mirroring
-        # how superscript degrades to `^(...)`.
+        # The plain-text version separates the two pieces with a slash,
+        # mirroring how superscript degrades to `^(...)`.
         text_repl=r"\1/\2",
         ban=["^^"],
     ),
@@ -318,7 +319,6 @@ _SUBSTITUTIONS: list[Substitution] = [
     ),
     Substitution(bracketed(r"(.*?)"), replace_bracketed, ban=["[[", "]]"]),
 ]
-# pylint: enable=line-too-long
 
 
 @typing.final
