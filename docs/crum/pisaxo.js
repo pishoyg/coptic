@@ -370,10 +370,10 @@ export const DATA = [
   {
     "title": "Corpus Scriptorum Christian. Oriental., acc. to the “numéros d’ ordre”",
     "description": [
-      "<strong>T. 41</strong> <em>Sinuthii Vita</em>, ed. J. Leipoldt, 1906. <ul> <li>Leipoldt, J. (1906). <em><a href=\"https://archive.org/details/sinuthiiarchiman0000shen_i0u5/page/n7/mode/2up\">Sinuthii archimandritae Vita et Opera omnia</a></em>. (Corpus Scriptorum Christianorum Orientalium, Vol. 41; Scriptores Coptici, Tom. 1). Paris: Imprimérie nationale. (Reprinted 1951, Louvain: L. Durbecq).</li> </ul>",
-      "<strong>42, 73</strong> <em>Sinuthii Opera</em>, do., 1908, 1913. <ul> <li>Leipoldt, J. (1908). <em><a href=\"https://archive.org/details/sinuthiiarchiman0000shen_z1m2/page/n7/mode/2up\">Sinuthii archimandritae Vita et Opera omnia, III</a></em>, with the assistance of W. E. Crum. (Corpus Scriptorum Christianorum Orientalium, Vol. 42; Scriptores Coptici, Tom. 2). Paris: Imprimérie nationale. (Reprinted 1955, Louvain: L. Durbecq).</li> <li>Leipoldt, J. (1913). <em><a href=\"https://archive.org/details/sinuthiiarchiman0000shen/page/n7/mode/2up\">Sinuthii archimandritae Vita et Opera omnia, IV</a></em>, with the assistance of W. E. Crum. (Corpus Scriptorum Christianorum Orientalium, Vol. 73; Scriptores Coptici, Tom. 5). Paris: Imprimérie nationale. (Reprinted 1954, Louvain: L. Durbecq).</li> </ul>",
-      "<strong>43, 86</strong> <em>Acta Martyrum</em>, edd. I. Balestri &amp; H. Hyvernat, 1907, 1924. <ul> <li>Balestri, J. &amp; Hyvernat, H. (1907). <em><a href=\"https://archive.org/details/actamartyrum0043bale/page/n7/mode/2up\">Acta martyrum, I</a></em>. (Corpus Scriptorum Christianorum Orientalium, Vol. 43; Scriptores Coptici, Tom. 3). Paris: Imprimérie nationale. (Reprinted 1955, Louvain: L. Durbecq).</li> <li>Balestri, J. &amp; Hyvernat, H. (1924). <em><a href=\"https://archive.org/details/actamartyrum0086bale/page/n7/mode/2up\">Acta martyrum, II</a></em>. (Corpus Scriptorum Christianorum Orientalium, Vol. 86; Scriptores Coptici, Tom. 6). Paris: Imprimérie nationale. (Reprinted 1953, Louvain: L. Durbecq).</li> </ul>",
-      "<strong>89, 99, 100</strong> S. <em>Pachomii Vitae</em>, ed. L. Th. Lefort, 1925, 1933. <ul> <li>Lefort, L. Th. (1925). <em><a href=\"https://archive.org/details/spachomiivitaboh0000unse/page/n7/mode/2up\">S. Pachomii vita bohairice scripta</a></em>. (Corpus Scriptorum Christianorum Orientalium, Vol. 89; Scriptores Coptici, Tom. 7). Paris: Imprimérie nationale. (Reprinted 1953, Louvain: L. Durbecq).</li> <li>Lefort, L. Th. (1933-1934). <em><a href=\"https://archive.org/details/spachomiivitaesa9910unse/page/n7/mode/2up\">S. Pachomii Vitae sahidice scriptae, fasc. 1-2</a></em>. (Corpus Scriptorum Christianorum Orientalium, Vol. 99-100; Scriptores Coptici, Tom. 9-10). Paris: Imprimérie nationale. (Reprinted 1952, Louvain: L. Durbecq).</li> </ul>"
+      "<strong>41</strong> <em>Sinuthii Vita</em>, ed. J. Leipoldt, 1906. <ul> <li>Leipoldt, J. (1906). <em><a href=\"https://archive.org/details/sinuthiiarchiman0000shen_i0u5/page/n7/mode/2up\">Sinuthii archimandritae Vita et Opera omnia</a></em>. (Corpus Scriptorum Christianorum Orientalium, Vol. 41; Scriptores Coptici, Tom. 1). Paris: Imprimérie nationale. (Reprinted 1951, Louvain: L. Durbecq).</li> </ul>",
+      "<strong>42</strong>, <strong>73</strong> <em>Sinuthii Opera</em>, do., 1908, 1913. <ul> <li>Leipoldt, J. (1908). <em><a href=\"https://archive.org/details/sinuthiiarchiman0000shen_z1m2/page/n7/mode/2up\">Sinuthii archimandritae Vita et Opera omnia, III</a></em>, with the assistance of W. E. Crum. (Corpus Scriptorum Christianorum Orientalium, Vol. 42; Scriptores Coptici, Tom. 2). Paris: Imprimérie nationale. (Reprinted 1955, Louvain: L. Durbecq).</li> <li>Leipoldt, J. (1913). <em><a href=\"https://archive.org/details/sinuthiiarchiman0000shen/page/n7/mode/2up\">Sinuthii archimandritae Vita et Opera omnia, IV</a></em>, with the assistance of W. E. Crum. (Corpus Scriptorum Christianorum Orientalium, Vol. 73; Scriptores Coptici, Tom. 5). Paris: Imprimérie nationale. (Reprinted 1954, Louvain: L. Durbecq).</li> </ul>",
+      "<strong>43</strong>, <strong>86</strong> <em>Acta Martyrum</em>, edd. I. Balestri &amp; H. Hyvernat, 1907, 1924. <ul> <li>Balestri, J. &amp; Hyvernat, H. (1907). <em><a href=\"https://archive.org/details/actamartyrum0043bale/page/n7/mode/2up\">Acta martyrum, I</a></em>. (Corpus Scriptorum Christianorum Orientalium, Vol. 43; Scriptores Coptici, Tom. 3). Paris: Imprimérie nationale. (Reprinted 1955, Louvain: L. Durbecq).</li> <li>Balestri, J. &amp; Hyvernat, H. (1924). <em><a href=\"https://archive.org/details/actamartyrum0086bale/page/n7/mode/2up\">Acta martyrum, II</a></em>. (Corpus Scriptorum Christianorum Orientalium, Vol. 86; Scriptores Coptici, Tom. 6). Paris: Imprimérie nationale. (Reprinted 1953, Louvain: L. Durbecq).</li> </ul>",
+      "<strong>89</strong>, <strong>99</strong>, <strong>100</strong> S. <em>Pachomii Vitae</em>, ed. L. Th. Lefort, 1925, 1933. <ul> <li>Lefort, L. Th. (1925). <em><a href=\"https://archive.org/details/spachomiivitaboh0000unse/page/n7/mode/2up\">S. Pachomii vita bohairice scripta</a></em>. (Corpus Scriptorum Christianorum Orientalium, Vol. 89; Scriptores Coptici, Tom. 7). Paris: Imprimérie nationale. (Reprinted 1953, Louvain: L. Durbecq).</li> <li>Lefort, L. Th. (1933-1934). <em><a href=\"https://archive.org/details/spachomiivitaesa9910unse/page/n7/mode/2up\">S. Pachomii Vitae sahidice scriptae, fasc. 1-2</a></em>. (Corpus Scriptorum Christianorum Orientalium, Vol. 99-100; Scriptores Coptici, Tom. 9-10). Paris: Imprimérie nationale. (Reprinted 1952, Louvain: L. Durbecq).</li> </ul>"
     ],
     "variants": [
       "C"
@@ -1155,17 +1155,23 @@ export const DATA = [
   },
   {
     "title": "Manichaean",
-    "description": null,
+    "description": [
+      "<strong>1</strong>: copies of Chester Beatty’s unpublished Manichaean papyri by H. J. Polotsky &amp; H. Thompson.",
+      "<strong>2</strong>: copies of sim. papyri at Berlin by Polotsky.",
+      "<strong>H</strong>: Manichäische Homilien, ed. Polotsky, 1934. <ul> <li>Polotsky, H. J. (1934). <em><a href=\"https://archive.org/details/manichaischehomi0000polo/page/n5/mode/2up\">Manichäische Homilien</a></em>. (Manichäische Handschriften der Sammlung A. Chester Beatty, Band I). Stuttgart: W. Kohlhammer.</li> </ul>",
+      "<strong>K</strong>: Kephalaia, edd. Polotsky &amp; A. Böhlig, 1934 ff. <ul> <li>Polotsky, H. J. (1940). <em><a href=\"https://archive.org/details/kephalaia0000mani/page/n1/mode/2up\">Kephalaia. 1. Hälfte (Lieferung 1-10)</a></em>. (Manichäische Handschriften der Staatslichen Museen Berlin, Band I). Stuttgart: W. Kohlhammer.</li> <li>Böhlig, A. (1966). <em><a href=\"https://archive.org/details/kephalaia0001staa/page/n5/mode/2up\">Kephalaia. 2. Hälfte (Lieferung 11-12)</a></em>. (Manichäische Handschriften der Staatslichen Museen Berlin, Band I). Stuttgart: W. Kohlhammer.</li> </ul>",
+      "<strong>P</strong>: A Manichaean Psalm-book, Pt. ii, ed. C. R. C. Allberry, 1938. <ul> <li>Allberry, C. R. C. (1938). <em><a href=\"https://archive.org/details/manichaeanpsalmb0000allb/page/n5/mode/2up\">A Manichean Psalm-Book, Part II</a></em>. (Manichean Manuscripts in the Chester Beatty Collection, Volume II). Stuttgart: W. Kohlhammer.</li> </ul>"
+    ],
     "variants": [
-      "Mani",
-      "Ma"
+      "Ma",
+      "Mani"
     ],
     "postfixes": {
-      "1": "copies of Chester Beatty’s unpublished Manichaean papyri by H. J. Polotsky &amp; H. Thompson",
-      "2": "copies of Chester Beatty’s unpublished Manichaean papyri by H. J. Polotsky &amp; H. Thompson; at Berlin",
-      "H": "Manichäische Homelien, ed. Polotsky, 1934 <ul> <li>Polotsky, H. J. (1934). <em><a href=\"https://archive.org/details/manichaischehomi0000polo/page/n5/mode/2up\">Manichäische Homilien</a></em>. (Manichäische Handschriften der Sammlung A. Chester Beatty, Band I). Stuttgart: W. Kohlhammer.</li> </ul>",
-      "K": "Kephalaia, edd. Polotsky &amp; A. Böhlig, 1934 ff <ul> <li>Polotsky, H. J. (1940). <em><a href=\"https://archive.org/details/kephalaia0000mani/page/n1/mode/2up\">Kephalaia. 1. Hälfte (Lieferung 1-10)</a></em>. (Manichäische Handschriften der Staatslichen Museen Berlin, Band I). Stuttgart: W. Kohlhammer.</li> <li>Böhlig, A. (1966). <em><a href=\"https://archive.org/details/kephalaia0001staa/page/n5/mode/2up\">Kephalaia. 2. Hälfte (Lieferung 11-12)</a></em>. (Manichäische Handschriften der Staatslichen Museen Berlin, Band I). Stuttgart: W. Kohlhammer.</li> </ul>",
-      "P": "A Manichaean Psalm-book, Pt. ii, ed. C. R. C. Allberry, 1938 <ul> <li>Allberry, C. R. C. (1938). <em><a href=\"https://archive.org/details/manichaeanpsalmb0000allb/page/n5/mode/2up\">A Manichean Psalm-Book, Part II</a></em>. (Manichean Manuscripts in the Chester Beatty Collection, Volume II). Stuttgart: W. Kohlhammer.</li> </ul>",
+      "1": null,
+      "2": null,
+      "H": null,
+      "K": null,
+      "P": null,
       "Berl Sitz": LOOKUP
     }
   },
