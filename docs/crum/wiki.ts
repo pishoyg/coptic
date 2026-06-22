@@ -294,7 +294,7 @@ function textContent(wiki: HTMLElement): string {
 }
 
 /**
- * Handle all Crum elements.
+ * Handle all Wiki elements.
  * @param root
  * @param full
  */
@@ -398,7 +398,7 @@ function annotation(tip: string, ...children: (Node | string)[]): Element {
  * @param context
  * @returns
  */
-function handleAnnotation(context: html.Context): void {
+function replaceAnnotation(context: html.Context): void {
   const key: string = context.match[0];
   const annot: ann.Annotation | undefined = ann.MAPPING[key];
   if (!annot) {
@@ -449,42 +449,33 @@ function handleAnnotation(context: html.Context): void {
  * @param context
  * @returns
  */
-function handlePage(context: html.Context): boolean {
-  const key: string = context.match[0];
+function replacePage(context: html.Context): boolean {
   // A page number has the format 'pp? [0-9]+ [ab]?'. The regex matches this
   // format, excluding the column, which is expected to live in the <i> tag that
   // is the next sibling.
-  let match: RegExpExecArray | null = PAGE_RE.exec(key + context.right);
+  let match: RegExpExecArray | null = PAGE_RE.exec(context.remainder);
   if (!match) {
     return false;
   }
 
-  const replacement: (Node | string)[] = [];
-  const nodes = context.munch(match[0].length);
-  const a = html.anchor(
+  const a: HTMLElement = html.anchor(
     paths.crumScan(`${match[1]!}${match[2] ?? ''}`),
-    ...nodes
+    ...context.munch(match[0].length)
   );
   a.classList.add(cls.PAGE);
-  replacement.push(a);
+  context.replace(a, 0);
 
-  for (
-    let remainder = context.right;
-    (match = PAGE_FOLLOWUP_RE.exec(remainder));
-    remainder = context.right
-  ) {
-    const comma = match[1]!;
-    replacement.push(...context.munch(comma.length));
-    const followupNodes = context.munch(match[0].length - comma.length);
-    const followupA = html.anchor(
+  while ((match = PAGE_FOLLOWUP_RE.exec(context.right))) {
+    const comma: string = match[1]!;
+    context.advance(comma.length);
+    const followup = html.anchor(
       paths.crumScan(`${match[2]!}${match[3] ?? ''}`),
-      ...followupNodes
+      ...context.munch(match[0].length - comma.length)
     );
-    followupA.classList.add(cls.PAGE);
-    replacement.push(followupA);
+    followup.classList.add(cls.PAGE);
+    context.replace(followup, 0);
   }
 
-  context.replace(replacement, 0);
   return true;
 }
 
@@ -1054,7 +1045,7 @@ function replaceMatch(context: html.Context): void {
   }
 
   if (key === 'p' || key === 'pp') {
-    if (handlePage(context)) {
+    if (replacePage(context)) {
       return;
     }
     // If this is not a Crum page, fall back to handling it as an annotation
@@ -1066,7 +1057,7 @@ function replaceMatch(context: html.Context): void {
   if (key in ann.MAPPING) {
     // 'p' and 'pp' are also annotations, so it's important for annotation
     // handling to have less priority than page handling.
-    handleAnnotation(context);
+    replaceAnnotation(context);
     return;
   }
 
@@ -1282,7 +1273,7 @@ function ibFallback(ib: HTMLElement): HTMLElement {
  * @param context
  * @returns
  */
-function handleReferenceIB(
+function replaceReferenceIB(
   ib: HTMLElement,
   antecedent: HTMLElement,
   context: html.Context
@@ -1302,7 +1293,7 @@ function handleReferenceIB(
  * @param context
  * @returns
  */
-function handleBibleIB(
+function replaceBibleIB(
   ib: HTMLElement,
   antecedent: HTMLElement,
   context: html.Context
@@ -1342,7 +1333,7 @@ function handleBibleIB(
  * @param antecedent
  * @returns
  */
-function handlePageIB(
+function replacePageIB(
   ib: HTMLElement,
   antecedent: HTMLAnchorElement
 ): HTMLElement {
@@ -1387,17 +1378,17 @@ function replaceIB(context: html.Context): void {
   }
 
   if (antecedent.classList.contains(cls.PAGE)) {
-    context.replace(handlePageIB(ib, antecedent as HTMLAnchorElement), 0);
+    context.replace(replacePageIB(ib, antecedent as HTMLAnchorElement), 0);
     return;
   }
 
   if (antecedent.classList.contains(cls.REFERENCE)) {
-    handleReferenceIB(ib, antecedent, context);
+    replaceReferenceIB(ib, antecedent, context);
     return;
   }
 
   if (antecedent.classList.contains(cls.BIBLE)) {
-    handleBibleIB(ib, antecedent, context);
+    replaceBibleIB(ib, antecedent, context);
     return;
   }
 
