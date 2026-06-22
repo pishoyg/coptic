@@ -358,7 +358,7 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'pages', variants: ['pp'], suffix: true },
   { fullForm: 'predicate', variants: ['predic'] },
   { fullForm: 'prepositions', variants: ['preps'] },
-  { fullForm: 'prepositional', variants: ['prepos'] }, // Encountered once (as of the time of writing).
+  { fullForm: 'prepositional', variants: ['prepos', 'preposit'] }, // Encountered once (as of the time of writing).
   { fullForm: 'preterite', variants: ['preter'] },
   { fullForm: 'prologue', variants: ['prol'], suffix: true },
   { fullForm: 'quid ?', variants: ['quid ?'] },
