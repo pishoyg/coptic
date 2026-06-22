@@ -1576,7 +1576,11 @@ XOOXLE: xooxle.Xooxle = xooxle.Xooxle(
             },
             unit_tags={"p"},
             retain_tags=xooxle.RETAIN_TAGS_DEFAULT | {"p"},
-            retain_attributes={"data-key", "data-page", "data-footnote"},
+            retain_attributes={
+                wiki.DATA_KEY,
+                wiki.DATA_PAGE,
+                wiki.DATA_FOOTNOTE,
+            },
         ),
         xooxle.Capture(
             "MARCION",
@@ -1612,7 +1616,7 @@ XOOXLE: xooxle.Xooxle = xooxle.Xooxle(
             # tag.
             # TODO: (#398) Handle this in a cleaner manner. The root and
             # derivations HTML should be uniform.
-            block_classes={"part-of-speech"},
+            block_classes={cls.PART_OF_SPEECH},
         ),
     ],
     layers=[["MARCION", "MEANING", "APPENDIX"], ["WIKI"]],

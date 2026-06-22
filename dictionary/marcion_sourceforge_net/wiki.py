@@ -20,6 +20,12 @@ from dictionary.marcion_sourceforge_net import cls, constants
 from dictionary.marcion_sourceforge_net import lexical as lex
 from utils import ensure, gcp, lang, log, orth
 
+# HTML data attribute names emitted in the Wiki HTML, and consumed by both the
+# TypeScript front-end and the Xooxle indexer.
+DATA_FOOTNOTE: str = "data-footnote"
+DATA_KEY: str = "data-key"
+DATA_PAGE: str = "data-page"
+
 # pylint: disable=line-too-long
 # TODO: (#0) Move to `utils/paths.py`.
 SHEET_TSV_URL: str = (
@@ -204,7 +210,7 @@ def replace_manual(match: regex.Match[str]) -> str:
     text, key = match.group(1, 2)
     if key is None:
         return rf'<span class="{cls.MANUAL}">{text}</span>'
-    return rf'<span class="{cls.MANUAL}" data-key="{key}">{text}</span>'
+    return rf'<span class="{cls.MANUAL}" {DATA_KEY}="{key}">{text}</span>'
 
 
 OPEN_SUBPARAGRAPH: str = f'<span class="{cls.SUBPARAGRAPH}">'
@@ -465,7 +471,7 @@ class Wiki:
         self,
         match: regex.Match[str],
     ) -> abc.Generator[str]:
-        yield f'<span class="{cls.ADDENDUM}" data-page="{self.addenda_page}">'
+        yield f'<span class="{cls.ADDENDUM}" {DATA_PAGE}="{self.addenda_page}">'
         g1, g2 = match.group(1), match.group(2)
         if g1:
             yield f"<del>{g1}</del>"
@@ -570,7 +576,7 @@ class Wiki:
         # wasn't there in the first place.
         attr: str = escape(match.group(2), quote=True)
         return (
-            f'<span class="{cls.FOOTNOTED}" data-footnote="{attr}">'
+            f'<span class="{cls.FOOTNOTED}" {DATA_FOOTNOTE}="{attr}">'
             + match.group(1)
             + f'<span class="{cls.MARK}">'
             + f"[{self.footnotes}]"
