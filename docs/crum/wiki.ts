@@ -1287,23 +1287,11 @@ function handleReferenceIB(
   antecedent: HTMLElement,
   context: html.Context
 ): void {
-  // Extract a suffix, if available.
   const suffix: string | undefined = SUFFIX.exec(context.right)?.[0];
-
-  // TODO: (#671) In some cases, the first token in the suffix is actually
-  // part of the reference key.
-  // For example:
-  //   1. Mani H ... ib K
-  //      The ibidem reference should be interpreted as "Mani K"
-  //      rather than "Mani H".
-  //   2. BM ... ib Or
-  //      The ibidem reference should be interpreted as "BMOr".he reference
-  //      abbreviation.
   const span: HTMLSpanElement = ref.Reference.fromSpan(antecedent).span(
     [ib],
     suffix ? [...context.munch(suffix.length), ...suffixFollowups(context)] : []
   );
-
   context.replace(span, 0);
 }
 
