@@ -1383,9 +1383,37 @@ const ANTECEDENT_QUERY: string = css.disjunction(
 
 /**
  *
+ * @param context
  * @param node
  */
-function* antecedentWalk(node: Element | null): Generator<Element> {
+function* antecedentWalk(
+  context: html.Context,
+  node: Element | null
+): Generator<Element> {
+  // Candidates are gathered from two roots, because the preceding elements are
+  // split across two trees at this point in enrichment:
+  // 1. The already-enriched elements of the CURRENT chain live in the
+  //    in-progress `fragment`, which is detached from the document until
+  //    `replaceNodes` splices it back at the very end. A DOM walk rooted at
+  //    `node` (the `ib` element, still in the live tree) therefore cannot see
+  //    them, so we take them directly: `elem` (the closest) and its
+  //    predecessors within the fragment.
+  // 2. Everything before this chain — earlier siblings, subparagraphs, and
+  //    paragraphs — is still in the live document and is reached by walking up
+  //    from `node`.
+  //
+  // The two walks cannot overlap: walk 1 ranges only over the detached
+  // fragment, walk 2 only over the live document, and a node belongs to exactly
+  // one of those trees. (The fragment's nodes were *moved*, not copied, out of
+  // the live tree as they were enriched.)
+  for (
+    let elem: Element | null = context.fragmentLastElementChild;
+    elem;
+    elem = elem.previousElementSibling
+  ) {
+    yield elem;
+  }
+
   // NOTE: The following while loop is implemented based on the current HTML
   // structure, which, as of the time of writing, looks as follows:
   //   <p>
@@ -1422,39 +1450,14 @@ function* antecedentWalk(node: Element | null): Generator<Element> {
  * a reference, a Bible citation, or a page.
  *
  * @param context
- * @param start
+ * @param node
  * @returns
  */
 function findAntecedent(
   context: html.Context,
-  start: HTMLElement
+  node: Element | null
 ): HTMLElement | null {
-  // Candidates are gathered from two roots, because the preceding elements are
-  // split across two trees at this point in enrichment:
-  // 1. The already-enriched elements of the CURRENT chain live in the
-  //    in-progress `fragment`, which is detached from the document until
-  //    `replaceNodes` splices it back at the very end. A DOM walk rooted at
-  //    `start` (the `ib` element, still in the live tree) therefore cannot see
-  //    them, so we take them directly: `nearest` (the closest) and its
-  //    predecessors within the fragment.
-  // 2. Everything before this chain — earlier siblings, subparagraphs, and
-  //    paragraphs — is still in the live document and is reached by walking up
-  //    from `start`.
-  //
-  // The two walks cannot overlap: walk 1 ranges only over the detached
-  // fragment, walk 2 only over the live document, and a node belongs to exactly
-  // one of those trees. (The fragment's nodes were *moved*, not copied, out of
-  // the live tree as they were enriched.)
-  const candidates = function* (): Generator<Element> {
-    const nearest: Element | null = context.matchPreviousElementSibling();
-    if (nearest) {
-      yield nearest;
-      yield* antecedentWalk(nearest);
-    }
-    yield* antecedentWalk(start);
-  };
-
-  for (const curr of candidates()) {
+  for (const curr of antecedentWalk(context, node)) {
     if (curr.matches(ANTECEDENT_QUERY)) {
       return curr as HTMLElement;
     }

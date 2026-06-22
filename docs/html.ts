@@ -343,7 +343,7 @@ export class Context {
    *
    * @returns
    */
-  public matchPreviousElementSibling(): Element | null {
+  public get fragmentLastElementChild(): Element | null {
     return this.fragment.lastElementChild;
   }
 
