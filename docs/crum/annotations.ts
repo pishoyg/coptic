@@ -263,6 +263,7 @@ export const DATA: Abbreviation[] = [
   },
   { fullForm: 'exempli gratia', variants: ['e g'] },
   { fullForm: 'exemplorum gratia', variants: ['ee g'] },
+  { fullForm: 'edited / edition', variants: ['ed'], suffix: true },
   { fullForm: 'ethical dative', variants: ['ethic dat', 'ethic dative'] },
   { fullForm: 'Ethiopic', variants: ['Ethiop'] },
   { fullForm: 'equivalent', variants: ['equiv'] },
