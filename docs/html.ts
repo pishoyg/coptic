@@ -351,38 +351,11 @@ export class Context {
   }
 
   /**
-   * Yields nodes preceding the current match, starting from the last node
-   * appended to the fragment, then continuing to the siblings preceding the
-   * first node of the chain.
    *
-   * @yields The preceding nodes.
+   * @returns
    */
-  public *matchPreviousSiblings(): Generator<Node> {
-    for (
-      let curr: Node | null = this.fragment.lastChild;
-      curr;
-      curr = curr.previousSibling
-    ) {
-      yield curr;
-    }
-    for (
-      let curr: Node | null = this.chain.previousSibling;
-      curr;
-      curr = curr.previousSibling
-    ) {
-      yield curr;
-    }
-  }
-
-  /**
-   *
-   */
-  public *matchPreviousElementSiblings(): Generator<Element> {
-    for (const node of this.matchPreviousSiblings()) {
-      if (node instanceof Element) {
-        yield node;
-      }
-    }
+  public matchPreviousElementSibling(): Element | null {
+    return this.fragment.lastElementChild;
   }
 
   /**

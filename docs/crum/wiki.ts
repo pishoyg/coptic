@@ -1199,6 +1199,11 @@ const DATA_KEY = 'key';
  * @returns
  */
 function handleManual(manual: HTMLElement): void {
+  // NOTE: Manual labels don't support suffix annotations. No manually-labeled
+  // references with suffix annotations are present in the data, as of the time
+  // of writing.
+  // Even if such cases were to be introduced, their frequency would be too low
+  // to be worth addressing.
   const key: string | undefined = manual.dataset[DATA_KEY];
 
   if (key === '') {
@@ -1381,17 +1386,10 @@ function replaceIB(context: html.Context): void {
     return;
   }
 
-  const antecedent: HTMLElement | null = findAntecedent(context);
+  const antecedent: HTMLElement | null = findAntecedent(context, ib);
 
   if (!antecedent) {
-    log.error(
-      'Unable to find antecedent reference for ib element',
-      ib,
-      'preceding:',
-      Array.from(context.matchPreviousSiblings())
-        .map((n) => n.textContent)
-        .join('|')
-    );
+    log.error('Unable to find antecedent reference for ib element', ib);
     ibFallback(ib);
     context.replace(ib, 0);
     return;
@@ -1423,17 +1421,9 @@ const ANTECEDENT_QUERY: string = css.disjunction(
 
 /**
  *
- * @param context
- * @yields
+ * @param node
  */
-function* previousElementSiblingsAcrossParagraphs(
-  context: html.Context
-): Generator<Element> {
-  let curr: Element | null = null;
-  // Loop over all the previous siblings of the match.
-  for (curr of context.matchPreviousElementSiblings()) {
-    yield curr;
-  }
+function* antecedentWalk(node: Element | null): Generator<Element> {
   // NOTE: The following while loop is implemented based on the current HTML
   // structure, which, as of the time of writing, looks as follows:
   //   <p>
@@ -1448,20 +1438,20 @@ function* previousElementSiblingsAcrossParagraphs(
   //   </p>
   //   ...
   while (
-    (curr =
+    (node =
       // Try the element's previous sibling.
-      curr?.previousElementSibling ??
+      node?.previousElementSibling ??
       // Move to the previous subparagraph. Use `previousElementSibling` to
       // skip the whitespace text node between adjacent `<span>`s.
-      curr?.parentElement?.previousElementSibling?.lastElementChild ??
+      node?.parentElement?.previousElementSibling?.lastElementChild ??
       // Move to the previous paragraph. Use `previousElementSibling` to skip
       // the whitespace between adjacent `<p>`s, and `lastElementChild` to
       // skip trailing whitespace inside that previous `<p>`.
-      curr?.parentElement?.parentElement?.previousElementSibling
+      node?.parentElement?.parentElement?.previousElementSibling
         ?.lastElementChild?.lastElementChild ??
       null)
   ) {
-    yield curr;
+    yield node;
   }
 }
 
@@ -1470,10 +1460,39 @@ function* previousElementSiblingsAcrossParagraphs(
  * a reference, a Bible citation, or a page.
  *
  * @param context
+ * @param start
  * @returns
  */
-function findAntecedent(context: html.Context): HTMLElement | null {
-  for (const curr of previousElementSiblingsAcrossParagraphs(context)) {
+function findAntecedent(
+  context: html.Context,
+  start: HTMLElement
+): HTMLElement | null {
+  // Candidates are gathered from two roots, because the preceding elements are
+  // split across two trees at this point in enrichment:
+  // 1. The already-enriched elements of the CURRENT chain live in the
+  //    in-progress `fragment`, which is detached from the document until
+  //    `replaceNodes` splices it back at the very end. A DOM walk rooted at
+  //    `start` (the `ib` element, still in the live tree) therefore cannot see
+  //    them, so we take them directly: `nearest` (the closest) and its
+  //    predecessors within the fragment.
+  // 2. Everything before this chain — earlier siblings, subparagraphs, and
+  //    paragraphs — is still in the live document and is reached by walking up
+  //    from `start`.
+  //
+  // The two walks cannot overlap: walk 1 ranges only over the detached
+  // fragment, walk 2 only over the live document, and a node belongs to exactly
+  // one of those trees. (The fragment's nodes were *moved*, not copied, out of
+  // the live tree as they were enriched.)
+  const candidates = function* (): Generator<Element> {
+    const nearest: Element | null = context.matchPreviousElementSibling();
+    if (nearest) {
+      yield nearest;
+      yield* antecedentWalk(nearest);
+    }
+    yield* antecedentWalk(start);
+  };
+
+  for (const curr of candidates()) {
     if (curr.matches(ANTECEDENT_QUERY)) {
       return curr as HTMLElement;
     }
