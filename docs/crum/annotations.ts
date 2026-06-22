@@ -336,7 +336,7 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'nomen nescio', variants: ['NN'], noCaseVariant: true },
   // NOTE: While we add an annotation for 'nos', we exclude 'no' because it
   // would introduce too many false positives!
-  { fullForm: 'numbers', variants: ['nos'], noCaseVariant: true },
+  { fullForm: 'numbers', variants: ['nos'], noCaseVariant: true, suffix: true },
   { fullForm: 'Old Testament', variants: ['OTest'], noCaseVariant: true },
   { fullForm: 'olim penes', variants: ['olim penes'] },
   { fullForm: 'optative', variants: ['optat'] },
