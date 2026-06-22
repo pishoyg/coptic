@@ -250,9 +250,12 @@ const NOT_NUMBERED_BIBLE_BOOK = `(?!${str.regex(
  * No such followup has been encountered in the data, so we accept the trade-off
  * in favor of catching the single-letter reference case.
  */
+// The `d` flag records each capture group's `[start, end]` span in
+// `match.indices`, which `parseBibleFollowups` uses to locate the enriched
+// citation text within the match without searching for it.
 const BIBLE_FOLLOWUP = new RegExp(
   `^(?:(?:,${NOT_SINGLE_LETTER_REFERENCE} |–)${NOT_NUMBERED_BIBLE_BOOK}(${NUMS})${str.ASSERT_NON_WORD.source}| ?\\((${NUMS})\\))`,
-  'u'
+  'du'
 );
 
 const PAGE_RE = /^p{1,2} ([0-9]+)(?: ([ab]))?\b/;
@@ -436,11 +439,11 @@ function replaceAnnotation(context: html.Context): void {
   ) {
     // This annotation can't show in styled text, and this node is
     // styled.
-    context.replace(nodes, 0);
+    context.insert(nodes);
     return;
   }
 
-  context.replace(annotation(annot.fullForm, ...nodes), 0);
+  context.insert(annotation(annot.fullForm, ...nodes));
 }
 
 /**
@@ -463,7 +466,7 @@ function replacePage(context: html.Context): boolean {
     ...context.munch(match[0].length)
   );
   a.classList.add(cls.PAGE);
-  context.replace(a, 0);
+  context.insert(a);
 
   while ((match = PAGE_FOLLOWUP_RE.exec(context.right))) {
     const comma: string = match[1]!;
@@ -473,7 +476,7 @@ function replacePage(context: html.Context): boolean {
       ...context.munch(match[0].length - comma.length)
     );
     followup.classList.add(cls.PAGE);
-    context.replace(followup, 0);
+    context.insert(followup);
   }
 
   return true;
@@ -500,13 +503,11 @@ class Citation {
   private readonly book: bib.Book;
   /**
    *
-   * @param raw
    * @param chapter
    * @param verse
    * @param key
    */
   public constructor(
-    private raw: string,
     private chapter: string | undefined,
     private verse: string | undefined,
     key: string
@@ -533,13 +534,10 @@ class Citation {
   /**
    * Update the citation with new numbers. The book is the same.
    *
-   * @param raw - Raw text containing the two numbers.
    * @param first - First number within the text.
    * @param second - (Optional) second number within the text.
    */
-  public update(raw: string, first?: string, second?: string): void {
-    this.raw = raw;
-
+  public update(first?: string, second?: string): void {
     if (!first) {
       // No numbers! Nothing to update!
       this.explicit = false; // Both numbers are inherited.
@@ -609,10 +607,6 @@ class Citation {
    * @returns
    */
   public anchor(ibidem = false, ...content: (Node | string)[]): HTMLElement {
-    if (!content.length) {
-      content.push(this.raw);
-    }
-
     let elem: HTMLElement;
     // The `this.chapter` guard is required because we want to hyperlink
     // chapter-less citations normally.
@@ -658,8 +652,6 @@ class Citation {
    */
   public static fromAnchor(node: HTMLElement): Citation {
     return new Citation(
-      // TODO: (#0) Consider saving the `raw` field as well, for completion.
-      '',
       /* eslint-disable @typescript-eslint/prefer-nullish-coalescing */
       node.dataset[Citation.DATA_CHAPTER] || undefined,
       node.dataset[Citation.DATA_VERSE] || undefined,
@@ -761,19 +753,15 @@ class Citation {
  * Parse the Bible followups that trail a citation, updating `cit` in place as
  * it goes.
  *
- * @param cit - The antecedent citation, mutated to reflect each followup.
- * @param remainder - The text following the citation.
- * @returns The replacement `nodes` for the consumed followups and the number of
- *   characters (`munch`) consumed from `remainder`.
+ * @param cit - The antecedent citation, which will get mutated to reflect each
+ * followup.
+ * @param context
  */
-function parseBibleFollowups(
-  cit: Citation,
-  remainder: string
-): (Node | string)[] {
-  const nodes: (Node | string)[] = [];
-  // Create anchors for any following citations in the remaining text.
-  while (remainder) {
-    const match: RegExpExecArray | null = BIBLE_FOLLOWUP.exec(remainder);
+function parseBibleFollowups(cit: Citation, context: html.Context): void {
+  for (;;) {
+    const match: RegExpExecArray | null = BIBLE_FOLLOWUP.exec(
+      context.remainder
+    );
     if (!match) {
       break;
     }
@@ -789,27 +777,26 @@ function parseBibleFollowups(
     //   Captures 4, 5, and 6 (belonging to be) must be undefined.
     // If B is present, then 4 and 5 are guaranteed to be defined, 6 may or may
     // not be defined, while 1, 2, and 3 are undefined.
-    const raw: string = (match[1] ?? match[4])!;
-    cit.update(raw, match[2] ?? match[5], match[3] ?? match[6]);
+    cit.update(match[2] ?? match[5], match[3] ?? match[6]);
     if (!cit.valid()) {
       // This citation is invalid.
       log.error('Bible followup contains invalid citation:', match[0]);
       break;
     }
 
-    // The part that of the remainder that is being replaced is `match[0]`.
-    // Within `match[0]`, the `raw` text will be enriched, while the text before
-    // and after `raw` will be passed as is.
-    const rawIdx: number = match[0].indexOf(raw);
-    nodes.push(
-      match[0].slice(0, rawIdx),
-      cit.anchor(),
-      match[0].slice(rawIdx + raw.length)
-    );
-
-    remainder = remainder.slice(match[0].length);
+    // The raw citation text is captured by group 1 or 4 (whichever branch
+    // matched); its `[start, end]` span within `match[0]` comes straight from
+    // the regex (see the `d` flag on BIBLE_FOLLOWUP). The text before and after
+    // it passes through unchanged. Munching reuses the chain's own nodes as the
+    // anchor's content.
+    const [start, end]: [number, number] = (match.indices![1] ??
+      match.indices![4])!;
+    context.insert([
+      ...context.munch(start),
+      cit.anchor(false, ...context.munch(end - start)),
+      ...context.munch(match[0].length - end),
+    ]);
   }
-  return nodes;
 }
 
 /**
@@ -826,7 +813,6 @@ function replaceBible(context: html.Context): boolean {
   right = right.slice(match?.[0].length ?? 0);
 
   const cit: Citation = new Citation(
-    key + (match?.[0] ?? ''),
     match?.[1] ?? match?.[3],
     match?.[2] ?? match?.[4],
     key
@@ -836,16 +822,18 @@ function replaceBible(context: html.Context): boolean {
     return false;
   }
 
-  context.replace([
-    // NOTE: This citation's anchor must be built before parsing followups,
-    // since followup parsing mutates `cit` in place.
-    cit.anchor(),
-    // Resolve any followups (e.g. the ", 56 9" in "Is 27 11, 56 9") in the same
-    // pass. This used to be deferred to a second pass to avoid splitting a
-    // numbered book like the "2 Cor" in "Job 3 18, 2 Cor 4 18"; a negative
-    // lookahead in BIBLE_FOLLOWUP now guards against that instead.
-    ...parseBibleFollowups(cit, right),
-  ]);
+  // NOTE: This citation's anchor must be built before parsing followups,
+  // since followup parsing mutates `cit` in place. The matched key and
+  // chapter/verse text are munched off the chain and reused as the anchor's
+  // content.
+  const len: number = key.length + (match?.[0].length ?? 0);
+  context.insert(cit.anchor(false, ...context.munch(len)));
+
+  // Resolve any followups (e.g. the ", 56 9" in "Is 27 11, 56 9") in the same
+  // pass. This used to be deferred to a second pass to avoid splitting a
+  // numbered book like the "2 Cor" in "Job 3 18, 2 Cor 4 18"; a negative
+  // lookahead in BIBLE_FOLLOWUP now guards against that instead.
+  parseBibleFollowups(cit, context);
   return true;
 }
 
@@ -921,7 +909,7 @@ function replaceReference(context: html.Context): void {
     suffix ? [...context.munch(suffix.length), ...suffixFollowups(context)] : []
   );
 
-  context.replace(span, 0);
+  context.insert(span);
 }
 
 /**
@@ -1062,7 +1050,7 @@ function replaceMatch(context: html.Context): void {
   }
 
   if (key === ';') {
-    context.replace(semicolon());
+    context.insert(semicolon(context));
     return;
   }
 
@@ -1172,12 +1160,13 @@ export function handleAddenda(root: HTMLElement): void {
 
 /**
  *
+ * @param context
  * @returns
  */
-function semicolon(): HTMLSpanElement {
+function semicolon(context: html.Context): HTMLSpanElement {
   const span = document.createElement('span');
   span.classList.add(cls.SEMICOLON);
-  span.textContent = ';';
+  span.append(...context.munch(1));
   tool.addTooltip(
     span,
     ['semicolons separate groups in meaning or usage'],
@@ -1283,7 +1272,7 @@ function replaceReferenceIB(
     [ib],
     suffix ? [...context.munch(suffix.length), ...suffixFollowups(context)] : []
   );
-  context.replace(span, 0);
+  context.insert(span);
 }
 
 /**
@@ -1308,42 +1297,33 @@ function replaceBibleIB(
   const match: RegExpMatchArray | null | undefined = CHAPTER_VERSE.exec(
     context.right
   );
-  cit.update(
-    match?.[0] ?? '',
-    match?.[1] ?? match?.[3],
-    match?.[2] ?? match?.[4]
-  );
+  cit.update(match?.[1] ?? match?.[3], match?.[2] ?? match?.[4]);
 
-  const anchor: HTMLElement = cit.anchor(
-    true,
-    ib,
-    ...context.munch(match?.[0].length ?? 0)
+  context.insert(
+    cit.anchor(true, ib, ...context.munch(match?.[0].length ?? 0))
   );
-
-  const followups: (Node | string)[] = parseBibleFollowups(
-    cit,
-    context.remainder
-  );
-  context.replace([anchor, ...followups], html.textLength(followups));
+  parseBibleFollowups(cit, context);
 }
 
 /**
  *
  * @param ib
  * @param antecedent
+ * @param context
  * @returns
  */
 function replacePageIB(
   ib: HTMLElement,
-  antecedent: HTMLAnchorElement
-): HTMLElement {
+  antecedent: HTMLAnchorElement,
+  context: html.Context
+): void {
   // This `ib` instances refers to a Crum page.
   // An example is 1730 (ⲟⲩⲱⲛⲅ):
   //   https://remnqymi.com/crum/1730.html
   // We don't expect a suffix to be present.
-  const a = html.anchor(antecedent.href, ib.cloneNode(true));
+  const a = html.anchor(antecedent.href, ib);
   tool.addTooltip(a, [ref.ibidem()]);
-  return a;
+  context.insert(a);
 }
 
 /**
@@ -1364,7 +1344,7 @@ function replaceIB(context: html.Context): void {
     ib = ibNodes[0] as HTMLElement;
   } else {
     log.error('ib element found in an unexpected node:');
-    context.replace(ibNodes, 0);
+    context.insert(ibNodes);
     return;
   }
 
@@ -1373,12 +1353,12 @@ function replaceIB(context: html.Context): void {
   if (!antecedent) {
     log.error('Unable to find antecedent reference for ib element', ib);
     ibFallback(ib);
-    context.replace(ib, 0);
+    context.insert(ib);
     return;
   }
 
   if (antecedent.classList.contains(cls.PAGE)) {
-    context.replace(replacePageIB(ib, antecedent as HTMLAnchorElement), 0);
+    replacePageIB(ib, antecedent as HTMLAnchorElement, context);
     return;
   }
 

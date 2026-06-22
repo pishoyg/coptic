@@ -332,22 +332,11 @@ export class Context {
   }
 
   /**
-   * Replaces the next `length` characters from the chain with the given
-   * replacement.
    *
    * @param replacement
-   * @param length
    */
-  public replace(replacement: Node | (Node | string)[], length?: number): void {
-    // If the length is not given, assume the intention is to substitute the
-    // same length of text.
-    if (!Array.isArray(replacement)) {
-      replacement = [replacement];
-    }
-    this.munch(length ?? textLength(replacement)).forEach((n: Node): void => {
-      (n as ChildNode).remove();
-    });
-    this.fragment.append(...replacement);
+  public insert(replacement: Node | (Node | string)[]): void {
+    this.fragment.append(...[replacement].flat());
   }
 
   /**
@@ -541,17 +530,4 @@ export function parse(html: string): NodeListOf<ChildNode> {
  */
 export function textContent(node: string | Node): string {
   return typeof node === 'string' ? node : (node.textContent ?? '');
-}
-
-/**
- *
- * @param nodes
- * @returns
- */
-export function textLength(nodes: (Node | string)[]): number {
-  return nodes
-    .map((n) =>
-      typeof n === 'string' ? n.length : (n.textContent?.length ?? 0)
-    )
-    .reduce((sum: number, cur: number): number => sum + cur, 0);
 }
