@@ -68,6 +68,11 @@ export class Source {
         li.innerHTML = innerHTML;
         ul.append(li);
       });
+      ul.querySelectorAll('strong').forEach((strong: HTMLElement): void => {
+        const span: HTMLSpanElement = html.span(...strong.childNodes);
+        span.classList.add(cls.ABBREVIATION);
+        strong.replaceWith(span);
+      });
       this.descriptionMemo = ul;
     }
     return this.descriptionMemo.cloneNode(true) as HTMLUListElement;

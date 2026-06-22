@@ -27,8 +27,12 @@
 # 5. Use Markdown syntax, specifically:
 #    - Single asterisks for emphasis (italic text):
 #        *italicized*
-#    - Double asterisks for bold text:
+#    - Double asterisks for bold text (rendered as `<strong>`):
 #        **bold**
+#      Use double asterisks exclusively for abbreviations, postfixes, or
+#      suffixes that occur within a description (e.g. the volume numbers or
+#      sigla a description introduces). Never use them to emphasize ordinary
+#      description text.
 #    - The bracket notation for hyperlinks:
 #        [name](https://example.com/)
 # 6. Double-quote all values.

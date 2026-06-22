@@ -50,6 +50,11 @@ del {
     font-size: 110%;
   }
 
+  li .abbreviation {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
   .ibidem {
     display: block;
     color: var(--reference-green);
