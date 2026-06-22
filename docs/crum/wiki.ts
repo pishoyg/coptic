@@ -505,19 +505,29 @@ class Citation {
    *    the antecedent citation, then the citation is no longer explicit.
    */
   private explicit = true;
+  private readonly book: bib.Book;
   /**
    *
    * @param raw
    * @param chapter
    * @param verse
-   * @param book
+   * @param key
    */
   public constructor(
     private raw: string,
     private chapter: string | undefined,
     private verse: string | undefined,
-    private readonly book: bib.Book
+    key: string
   ) {
+    if (key in DAN_OVERRIDE) {
+      this.verse = this.chapter;
+      this.chapter = DAN_OVERRIDE[key];
+      key = 'Dan';
+      this.explicit = false;
+    }
+
+    this.book = bib.MAPPING[key]!;
+
     if (this.chapter && !this.verse && this.book.chapters.length === 1) {
       // This is a one-chapter book. The number immediately following the book
       // abbreviation was interpreted as the chapter number, but it is actually
@@ -662,7 +672,7 @@ class Citation {
       node.dataset[Citation.DATA_CHAPTER] || undefined,
       node.dataset[Citation.DATA_VERSE] || undefined,
       /* eslint-enable @typescript-eslint/prefer-nullish-coalescing */
-      bib.MAPPING[node.dataset[Citation.DATA_BOOK]!]!
+      node.dataset[Citation.DATA_BOOK]!
     );
   }
 
@@ -817,35 +827,27 @@ function parseBibleFollowups(
  */
 function replaceBible(context: html.Context): boolean {
   // Parse the numbers following the book abbreviation.
-  CHAPTER_VERSE.lastIndex = 0;
-  let key: string = context.match[0];
+  const key: string = context.match[0];
   let right: string = context.right;
+  CHAPTER_VERSE.lastIndex = 0;
   const match: RegExpExecArray | null = CHAPTER_VERSE.exec(right);
-  let [chapter, verse] = [match?.[1] ?? match?.[3], match?.[2] ?? match?.[4]];
   right = right.slice(match?.[0].length ?? 0);
-  const raw: string = key + (match?.[0] ?? '');
 
-  if (key in DAN_OVERRIDE) {
-    // Given that this special book contains one chapter, the book
-    // abbreviation is followed by the verse number only. This number would've
-    // been mistakenly interpreted as the chapter number, but it's actually the
-    // verse number.
-    verse = chapter;
-    chapter = DAN_OVERRIDE[key];
-    key = 'Dan';
-  }
+  const cit: Citation = new Citation(
+    key + (match?.[0] ?? ''),
+    match?.[1] ?? match?.[3],
+    match?.[2] ?? match?.[4],
+    key
+  );
 
-  const cit: Citation = new Citation(raw, chapter, verse, bib.MAPPING[key]!);
   if (!cit.valid(right, context.chainNextSibling)) {
     return false;
   }
 
-  // NOTE: This citation's anchor must be built before parsing followups,
-  // since followup parsing mutates `cit` in place.
-  const anchor: HTMLElement = cit.anchor();
-
   context.replace([
-    anchor,
+    // NOTE: This citation's anchor must be built before parsing followups,
+    // since followup parsing mutates `cit` in place.
+    cit.anchor(),
     // Resolve any followups (e.g. the ", 56 9" in "Is 27 11, 56 9") in the same
     // pass. This used to be deferred to a second pass to avoid splitting a
     // numbered book like the "2 Cor" in "Job 3 18, 2 Cor 4 18"; a negative
