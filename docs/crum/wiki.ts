@@ -1117,7 +1117,7 @@ const DATA_FOOTNOTE = 'footnote';
  *
  * @param root
  */
-export function handleFootnotes(root: HTMLElement): void {
+function handleFootnotes(root: HTMLElement): void {
   root
     .querySelectorAll<HTMLElement>(`.${cls.FOOTNOTED}[data-${DATA_FOOTNOTE}]`)
     .forEach((footnoted: HTMLElement): void => {
@@ -1145,7 +1145,7 @@ export function handleFootnotes(root: HTMLElement): void {
  *
  * @param root
  */
-export function handleAddenda(root: HTMLElement): void {
+function handleAddenda(root: HTMLElement): void {
   root
     .querySelectorAll<HTMLElement>(`.${cls.ADDENDUM}`)
     .forEach((elem: HTMLElement): void => {
