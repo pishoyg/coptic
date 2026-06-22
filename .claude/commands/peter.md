@@ -23,8 +23,11 @@ clean.
 ## What to review
 
 Determine the diff from `$ARGUMENTS`:
-- **A commit or range** (e.g. `HEAD~3..HEAD`, a SHA) → review `git show` /
-  `git diff` for that range.
+- **A single commit** (no `..`, e.g. `HEAD~3` or a bare SHA) → review **only
+  that one commit** via `git show <commit>`. `/peter HEAD~3` means `HEAD~3`
+  alone — do NOT expand it to `HEAD~3..HEAD`.
+- **A range** (contains `..`, e.g. `HEAD~3..HEAD`) → review `git diff` /
+  `git log` for that range.
 - **Empty** → review `origin/master..master`: the commits on the local
   branch that are not yet on the remote (`git log origin/master..master` and
   `git diff origin/master..master`).
