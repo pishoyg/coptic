@@ -1262,27 +1262,31 @@
 
 - title: "Manichaean"
   description:
-  variants:
-    - "Mani"
-    - "Ma"
-  postfixes:
-    "1": "copies of Chester Beatty’s unpublished Manichaean papyri by H. J. Polotsky
-      & H. Thompson"
-    "2": "copies of Chester Beatty’s unpublished Manichaean papyri by H. J. Polotsky
-      & H. Thompson; at Berlin"
-    H: |-
-      Manichäische Homelien, ed. Polotsky, 1934
+    - "**1**: copies of Chester Beatty’s unpublished Manichaean papyri by H. J. Polotsky
+      & H. Thompson."
+    - "**2**: copies of sim. papyri at Berlin by Polotsky."
+    - |-
+      **H**: Manichäische Homilien, ed. Polotsky, 1934.
 
       - Polotsky, H. J. (1934). *[Manichäische Homilien](https://archive.org/details/manichaischehomi0000polo/page/n5/mode/2up)*. (Manichäische Handschriften der Sammlung A. Chester Beatty, Band I). Stuttgart: W. Kohlhammer.
-    K: |-
-      Kephalaia, edd. Polotsky & A. Böhlig, 1934 ff
+    - |-
+      **K**: Kephalaia, edd. Polotsky & A. Böhlig, 1934 ff.
 
       - Polotsky, H. J. (1940). *[Kephalaia. 1. Hälfte (Lieferung 1-10)](https://archive.org/details/kephalaia0000mani/page/n1/mode/2up)*. (Manichäische Handschriften der Staatslichen Museen Berlin, Band I). Stuttgart: W. Kohlhammer.
       - Böhlig, A. (1966). *[Kephalaia. 2. Hälfte (Lieferung 11-12)](https://archive.org/details/kephalaia0001staa/page/n5/mode/2up)*. (Manichäische Handschriften der Staatslichen Museen Berlin, Band I). Stuttgart: W. Kohlhammer.
-    P: |-
-      A Manichaean Psalm-book, Pt. ii, ed. C. R. C. Allberry, 1938
+    - |-
+      **P**: A Manichaean Psalm-book, Pt. ii, ed. C. R. C. Allberry, 1938.
 
       - Allberry, C. R. C. (1938). *[A Manichean Psalm-Book, Part II](https://archive.org/details/manichaeanpsalmb0000allb/page/n5/mode/2up)*. (Manichean Manuscripts in the Chester Beatty Collection, Volume II). Stuttgart: W. Kohlhammer.
+  variants:
+    - "Ma"
+    - "Mani"
+  postfixes:
+    1:
+    2:
+    H:
+    K:
+    P:
     Berl Sitz: !lookup
 
 - title: "Lightfoot, Ignatius¹, ii 1 865 ff"
