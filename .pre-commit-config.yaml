@@ -265,7 +265,7 @@ repos:
         # Other types of files are data files, not code files. We don't take
         # data updates lightly.
         exclude: ".*\\.(xml|html|xhtml|txt|tsv|csv|json|tab|msql|xsd)$|dictionary/kellia_uni_goettingen_de/(main.py|data/.*)|docs/crum/(pisaxo|annotations).(t|j)s|bib.yaml"
-        args: [-L, "afterAll,astroid,Cant,pres,serie,cange,doubleclick,Mor"]
+        args: [-L, "afterAll,astroid,Cant,pres,serie,cange,doubleclick,Mor,Thes"]
 
   # Git Commit Messages
   - repo: https://github.com/jorisroovers/gitlint
