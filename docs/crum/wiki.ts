@@ -216,6 +216,10 @@ const NUMS = '(\\d+|[A-F])(?: (\\d+))?';
 // 2. This is a sticky regex.
 const CHAPTER_VERSE = new RegExp(`\\.? (?:${NUMS}|\\(${NUMS}\\))\\b`, 'uy');
 
+// MANUAL_CHAPTER_VERSE parses a chapter/verse pair (e.g. "27 11") from the
+// text content of a manually-keyed or dangling Bible citation.
+const MANUAL_CHAPTER_VERSE = new RegExp(`\\b${NUMS}\\b`, 'u');
+
 // Bible book abbreviations that begin with a number — e.g. "2 Cor". A Bible
 // followup is a bare chapter/verse number, so the "2" in
 // "Job 3 18, 2 Cor 4 18" could be misread as a followup verse, splitting off
@@ -267,7 +271,11 @@ const PAGE_FOLLOWUP_RE = /^(, )([0-9]+)(?: ([ab]))?\b/;
 const PREFACE_PAGE = 'v';
 const LIST_OF_ABBREVIATIONS_PAGE = 'xi';
 
-const REFERENCE_RE = new RegExp(str.regex(Object.keys(ref.MAPPING)), 'gu');
+const REFERENCE_RE = new RegExp(`^${str.regex(Object.keys(ref.MAPPING))}`, 'u');
+const BIBLE_RE = new RegExp(
+  `^${str.regex([...Object.keys(bib.MAPPING), ...Object.keys(DAN_OVERRIDE)])}`,
+  'u'
+);
 
 /**
  * formSuperscripts maps the text content of a form-superscript element to the
@@ -1182,6 +1190,18 @@ const DATA_KEY = 'key';
  * @returns
  */
 function handleManual(manual: HTMLElement): void {
+  const replacement: Iterable<Node> | Node = handleManualAux(manual);
+  manual.replaceWith(
+    ...(replacement instanceof Node ? [replacement] : replacement)
+  );
+}
+
+/**
+ *
+ * @param manual
+ * @returns
+ */
+function handleManualAux(manual: HTMLElement): Iterable<Node> | Node {
   // NOTE: Manual labels don't support suffix annotations. No manually-labeled
   // references with suffix annotations are present in the data, as of the time
   // of writing.
@@ -1191,8 +1211,7 @@ function handleManual(manual: HTMLElement): void {
 
   if (key === '') {
     // An empty key indicates that this should not be annotated.
-    manual.replaceWith(...manual.childNodes);
-    return;
+    return manual.childNodes;
   }
 
   // NOTE: We don't split the suffix out of manually-labeled references, the
@@ -1204,44 +1223,70 @@ function handleManual(manual: HTMLElement): void {
   if (key) {
     // The key is explicit. The possibilities are:
     // 1. The key is a reference abbreviation.
-    // 2. The key is an annotation.
-    //
-    // The third possibility (the key being a Bible book abbreviation) has
-    // never been encountered, so it remains unimplemented.
-    //
-    // TODO: (#0) Consider supporting explicit Bible book keys for
-    // completion. This would require attempting to parse a chapter and
-    // verse number from the text.
+    // 2. The key is a Bible book abbreviation, potentially with overrides for
+    //    the chapter / verse numbers.
+    // 3. The key is an annotation.
     const reference: ref.Reference | undefined = ref.MAPPING[key];
     if (reference) {
-      // This represents a reference.
-      manual.replaceWith(reference.span([...manual.childNodes]));
-      return;
+      return reference.span(manual.childNodes);
     }
 
-    // The key represents an annotation.
-    manual.replaceWith(annotation(key, ...manual.childNodes));
-    return;
+    const match: RegExpExecArray | null = BIBLE_RE.exec(key);
+    if (match) {
+      // The key starts with the abbreviation of a Bible book.
+      // Try extracting the chapter and verse numbers from the key, falling back
+      // to extracting them from the manual element itself.
+      const cv: RegExpExecArray | null =
+        MANUAL_CHAPTER_VERSE.exec(key.slice(match[0].length)) ??
+        MANUAL_CHAPTER_VERSE.exec(manual.textContent);
+      return new Citation(cv?.[1], cv?.[2], match[0]).anchor(
+        false,
+        ...manual.childNodes
+      );
+    }
+
+    // Fall back to treating the key as an annotation.
+    return annotation(key, ...manual.childNodes);
   }
 
   log.ensure(key === undefined); // Sanity check.
 
-  // We need to infer the interpretation. If the text starts with a
-  // reference name, then it's a reference. Otherwise, it's a dangling
-  // suffix, and we need to find an antecedent.
-  REFERENCE_RE.lastIndex = 0;
+  // There is no provided key. We need to infer the interpretation. If the text
+  // starts with a reference name, then it's a reference. Otherwise, it's a
+  // dangling suffix, and we need to find an antecedent.
   const match: RegExpExecArray | null = REFERENCE_RE.exec(manual.textContent);
 
-  if (match?.index === 0) {
+  if (match) {
     // We can infer the reference from the text.
-    const reference: ref.Reference = ref.MAPPING[match[0]]!;
-    const span: HTMLSpanElement = reference.span([...manual.childNodes]);
-    manual.replaceWith(span);
-    return;
+    return ref.MAPPING[match[0]]!.span(manual.childNodes);
   }
 
-  // This is a dangling suffix. Find an antecedent.
-  // TODO: (#668) Complete the implementation.
+  // This is a dangling suffix.
+  // There are two possibilities:
+  // 1. The antecedent is a Bible citation.
+  // 2. The antecedent is a reference.
+  const antecedent: HTMLElement | null = findAntecedent(
+    manual,
+    css.disjunction(cls.REFERENCE, cls.BIBLE)
+  );
+
+  if (!antecedent) {
+    log.error('Unable to find antecedent for dangling manual suffix', manual);
+    return manual.childNodes;
+  }
+
+  if (antecedent.classList.contains(cls.REFERENCE)) {
+    return ref.Reference.fromSpan(antecedent).span(manual.childNodes);
+  }
+
+  log.ensure(antecedent.classList.contains(cls.BIBLE)); // Sanity check.
+
+  const cv: RegExpExecArray | null = MANUAL_CHAPTER_VERSE.exec(
+    manual.textContent
+  );
+  const cit: Citation = Citation.fromAnchor(antecedent);
+  cit.update(cv?.[1], cv?.[2]);
+  return cit.anchor(false, ...manual.childNodes);
 }
 
 /**
@@ -1348,7 +1393,11 @@ function replaceIB(context: html.Context): void {
     return;
   }
 
-  const antecedent: HTMLElement | null = findAntecedent(context, ib);
+  const antecedent: HTMLElement | null = findAntecedent(
+    ib,
+    css.disjunction(cls.BIBLE, cls.REFERENCE, cls.PAGE),
+    context
+  );
 
   if (!antecedent) {
     log.error('Unable to find antecedent reference for ib element', ib);
@@ -1375,20 +1424,49 @@ function replaceIB(context: html.Context): void {
   log.fatal('This is impossible!');
 }
 
-const ANTECEDENT_QUERY: string = css.disjunction(
-  cls.REFERENCE,
-  cls.BIBLE,
-  cls.PAGE
-);
+/**
+ * NOTE: This function assumes the following HTML structure:
+ *   <p>
+ *     <span class="subparagraph"> ...candidates </span>
+ *     ...
+ *     <span class="subparagraph"> ...candidates </span>
+ *   </p>
+ *   <p>
+ *     <span class="subparagraph"> ...candidates </span>
+ *     ...
+ *     <span class="subparagraph"> ...candidates </span>
+ *   </p>
+ *   ...
+ *
+ * P.S. Subparagraphs were introduced in #693.
+ *
+ * @param node
+ * @returns
+ */
+function previous(node: Element | null): Element | null {
+  // Try the element's previous sibling.
+  return (
+    node?.previousElementSibling ??
+    // Move to the previous subparagraph. Use `previousElementSibling` to
+    // skip the whitespace text node between adjacent `<span>`s.
+    node?.parentElement?.previousElementSibling?.lastElementChild ??
+    // Move to the previous paragraph. Use `previousElementSibling` to skip
+    // the whitespace between adjacent `<p>`s, and `lastElementChild` to
+    // skip trailing whitespace inside that previous `<p>`.
+    node?.parentElement?.parentElement?.previousElementSibling?.lastElementChild
+      ?.lastElementChild ??
+    null
+  );
+}
 
 /**
  *
- * @param context
  * @param node
+ * @param context
  */
-function* antecedentWalk(
-  context: html.Context,
-  node: Element | null
+function* backtrack(
+  node: Element | null,
+  context?: html.Context
 ): Generator<Element> {
   // Candidates are gathered from two roots, because the preceding elements are
   // split across two trees at this point in enrichment:
@@ -1398,6 +1476,10 @@ function* antecedentWalk(
   //    `node` (the `ib` element, still in the live tree) therefore cannot see
   //    them, so we take them directly: `elem` (the closest) and its
   //    predecessors within the fragment.
+  //    This walk only applies when a `context` is given. Manually-marked
+  //    elements are enriched outside the chain machinery, after all preceding
+  //    chains have been spliced back into the live tree, so they have no
+  //    in-progress fragment and pass none.
   // 2. Everything before this chain — earlier siblings, subparagraphs, and
   //    paragraphs — is still in the live document and is reached by walking up
   //    from `node`.
@@ -1407,58 +1489,32 @@ function* antecedentWalk(
   // one of those trees. (The fragment's nodes were *moved*, not copied, out of
   // the live tree as they were enriched.)
   for (
-    let elem: Element | null = context.fragmentLastElementChild;
+    let elem: Element | null | undefined = context?.fragmentLastElementChild;
     elem;
     elem = elem.previousElementSibling
   ) {
     yield elem;
   }
-
-  // NOTE: The following while loop is implemented based on the current HTML
-  // structure, which, as of the time of writing, looks as follows:
-  //   <p>
-  //     <span class="subparagraph"> ...candidates </span>
-  //     ...
-  //     <span class="subparagraph"> ...candidates </span>
-  //   </p>
-  //   <p>
-  //     <span class="subparagraph"> ...candidates </span>
-  //     ...
-  //     <span class="subparagraph"> ...candidates </span>
-  //   </p>
-  //   ...
-  while (
-    (node =
-      // Try the element's previous sibling.
-      node?.previousElementSibling ??
-      // Move to the previous subparagraph. Use `previousElementSibling` to
-      // skip the whitespace text node between adjacent `<span>`s.
-      node?.parentElement?.previousElementSibling?.lastElementChild ??
-      // Move to the previous paragraph. Use `previousElementSibling` to skip
-      // the whitespace between adjacent `<p>`s, and `lastElementChild` to
-      // skip trailing whitespace inside that previous `<p>`.
-      node?.parentElement?.parentElement?.previousElementSibling
-        ?.lastElementChild?.lastElementChild ??
-      null)
-  ) {
+  while ((node = previous(node))) {
     yield node;
   }
 }
 
 /**
- * Find the first preceding sibling to the given ibidem element that is either
- * a reference, a Bible citation, or a page.
+ * Find the first preceding sibling to the given element that matches the query.
  *
- * @param context
  * @param node
+ * @param query
+ * @param context
  * @returns
  */
 function findAntecedent(
-  context: html.Context,
-  node: Element | null
+  node: Element | null,
+  query: string,
+  context?: html.Context
 ): HTMLElement | null {
-  for (const curr of antecedentWalk(context, node)) {
-    if (curr.matches(ANTECEDENT_QUERY)) {
+  for (const curr of backtrack(node, context)) {
+    if (curr.matches(query)) {
       return curr as HTMLElement;
     }
   }

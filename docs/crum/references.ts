@@ -132,9 +132,11 @@ export class Reference {
    * @returns
    */
   public span(
-    content: (Node | string)[],
-    suffix: (Node | string)[] = []
+    content: Iterable<Node | string>,
+    suffix: Iterable<Node | string> = []
   ): HTMLSpanElement {
+    // We loop over `suffix` twice, so we make sure it's an array.
+    suffix = Array.from(suffix);
     const span: HTMLSpanElement = document.createElement('span');
     span.classList.add(cls.REFERENCE);
     span.dataset[Reference.DATA_REF] = this.raw();
@@ -191,7 +193,7 @@ export class Reference {
    * @returns
    */
   private static *suffixAnnotations(
-    suffix: (Node | string)[]
+    suffix: Iterable<Node | string>
   ): Generator<Node> {
     // NOTE: Ideally, this should consider the text as a whole, rather than
     // one node at a time.
@@ -211,7 +213,7 @@ export class Reference {
             'Non-suffix annotation',
             abb,
             'found in suffix',
-            suffix.map(html.textContent).join('')
+            Array.from(suffix).map(html.textContent).join('')
           );
           continue;
         }
