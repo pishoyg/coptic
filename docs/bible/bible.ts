@@ -262,22 +262,36 @@ function addListDialects(): HTMLInputElement[] {
 }
 
 /**
- * Scroll to the book, then click the title to expand its collapsible.
- * @param book
+ * Scroll to the first book, then click every book's title to expand its
+ * collapsible.
+ *
+ * `books` is a list of book element IDs: the page scrolls to the first one,
+ * and all of them are expanded.
+ * @param books
  */
-function goTo(book: string): void {
-  const elem: HTMLElement | null = document.getElementById(book);
-  if (!elem) {
-    log.error(book, 'not found!');
-    return;
-  }
-  // Scroll to the book, then expand it once the scroll settles.
+function goTo(books: string[]): void {
+  // We choose to fail silently when some book IDs are invalid, because such
+  // cases are not expected to occur in reality, and failures are benign.
+  const elems: HTMLElement[] = books
+    .map((book: string): HTMLElement | null => document.getElementById(book))
+    .filter((elem: HTMLElement | null): elem is HTMLElement => elem !== null);
+
+  // Scroll to the first book, then expand all of them once the scroll settles.
   // NOTE: We rely on the assumption that the book is never already at the top,
   // so `scrollIntoView` always triggers a scroll (and hence a `scrollend`).
-  document.addEventListener('scrollend', elem.click.bind(elem), {
-    once: true,
-  });
-  elem.scrollIntoView();
+  document.addEventListener(
+    'scrollend',
+    (): void => {
+      elems.forEach((elem: HTMLElement): void => {
+        elem.click();
+      });
+    },
+    { once: true }
+  );
+  // Ideally, we will scroll to the element with the lowest Y position. For now,
+  // we rely on the assumption that the URL is constructed with the books in
+  // the same order as that of the HTML.
+  elems[0]?.scrollIntoView();
 }
 
 /**
@@ -372,9 +386,9 @@ async function main(): Promise<void> {
 
   // NOTE: We scroll to the book *before* loading the index, because loading the
   // index takes a lot of time.
-  const book: string | null = browser.getParam(BOOK_PARAM);
-  if (book) {
-    goTo(book);
+  const books: string[] = browser.getParamAll(BOOK_PARAM);
+  if (books.length) {
+    goTo(books);
   }
 
   const manager: dial.Manager = new dial.Manager();
@@ -408,7 +422,7 @@ async function main(): Promise<void> {
 
   // Focus after reading the index, to give the user an indication that the page
   // has loaded.
-  if (!book) {
+  if (!books.length) {
     form.searchBox.focus();
   }
 

@@ -67,7 +67,14 @@ export function lexiconLookup(q: string, m?: Mode): string {
  * @param verse
  * @returns
  */
-export function bible(book: string, chapter?: string, verse?: string): string {
+export function bible(
+  book: string | string[],
+  chapter?: string,
+  verse?: string
+): string {
+  if (Array.isArray(book)) {
+    return `${BIBLE}?book=${book.join('&book=')}`;
+  }
   // Some chapters are called A, C, D, or F. But we always use lower case for
   // those.
   chapter = chapter?.toLowerCase();

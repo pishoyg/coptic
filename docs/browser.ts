@@ -288,6 +288,17 @@ export function getParam(name: string): string | null {
 }
 
 /**
+ * Retrieve all values of the given URL parameter, in case it is present
+ * several times.
+ *
+ * @param name
+ * @returns
+ */
+export function getParamAll(name: string): string[] {
+  return new URLSearchParams(window.location.search).getAll(name);
+}
+
+/**
  * Update the given URL parameter.
  *
  * @param name
