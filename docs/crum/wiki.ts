@@ -1285,19 +1285,17 @@ function handleManualAux(manual: HTMLElement): Iterable<Node> | Node {
     // 2. The key is a Bible book abbreviation, potentially with overrides for
     //    the chapter / verse numbers.
     // 3. The key is an annotation.
-    // NOTE: Some keys are ambiguous, as they could refer to either References
-    // or Bible citations. Elsewhere, we have disambiguation logic that
-    // prioritizes Bible citations over References.
-    // Priority is reversed in manual labels, because manual labels are
-    // primarily intended for references. Their use for Biblical citations is
-    // incidental and rare.
-    // Additionally, cases where a Reference abbreviation was used as a Bible
-    // abbreviation are more common than the other way around. Therefore
-    // `bib.MAPPING` contains more reference abbreviations than `ref.MAPPING`
-    // contains Bible abbreviations, hence the latter is a safer filter.
-    // As of the time of writing, the only potential victim is `Am`. A user
-    // granting an element a label of `Am` with the intention of resolving it to
-    // Amos would instead receive a resolution of Actes des Martyrs.
+    // NOTE: A few abbreviations are ambiguous: they exist in both `ref.MAPPING`
+    // and `bib.MAPPING`. Elsewhere we resolve such collisions in favour of
+    // Bible citations, but manual labels reverse that priority and resolve to
+    // the reference, because manual labels are primarily intended for
+    // references; their use for Bible citations is incidental and rare.
+    // As of the time of writing, the collisions are `Am` / `AM`, `AP`, and
+    // `PS`. `AP` and `PS` have Bible-only counterparts (`Ap` / `Apoc`,
+    // `Ps` / `Pss`) that a contributor can use to force the Bible reading, so
+    // the only real victim is Amos: its only abbreviations, `Am` and `AM`,
+    // both resolve to Actes des Martyrs, with no unambiguous alternative.
+    // The `log.error` below flags any such label at build / test time.
     const reference: ref.Reference | undefined = ref.MAPPING[key];
     if (reference) {
       if (key in bib.MAPPING) {
