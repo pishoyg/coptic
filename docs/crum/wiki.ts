@@ -1285,8 +1285,24 @@ function handleManualAux(manual: HTMLElement): Iterable<Node> | Node {
     // 2. The key is a Bible book abbreviation, potentially with overrides for
     //    the chapter / verse numbers.
     // 3. The key is an annotation.
+    // NOTE: Some keys are ambiguous, as they could refer to either References
+    // or Bible citations. Elsewhere, we have disambiguation logic that
+    // prioritizes Bible citations over References.
+    // Priority is reversed in manual labels, because manual labels are
+    // primarily intended for references. Their use for Biblical citations is
+    // incidental and rare.
+    // Additionally, cases where a Reference abbreviation was used as a Bible
+    // abbreviation are more common than the other way around. Therefore
+    // `bib.MAPPING` contains more reference abbreviations than `ref.MAPPING`
+    // contains Bible abbreviations, hence the latter is a safer filter.
+    // As of the time of writing, the only potential victim is `Am`. A user
+    // granting an element a label of `Am` with the intention of resolving it to
+    // Amos would instead receive a resolution of Actes des Martyrs.
     const reference: ref.Reference | undefined = ref.MAPPING[key];
     if (reference) {
+      if (key in bib.MAPPING) {
+        log.error(key, 'is an ambiguous manual label!');
+      }
       return reference.span(manual.childNodes);
     }
 
