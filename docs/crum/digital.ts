@@ -396,7 +396,7 @@ function addCheckboxTooltips(): void {
     ],
     [id.MARCION_CHECKBOX, ['Only search the summary']],
     // TODO: (#503) Drop the progress note once the wiki is fully populated.
-    [id.WIKI_CHECKBOX, ['Only search the full text (94% complete)']],
+    [id.WIKI_CHECKBOX, ['Only search the full text (95% complete)']],
   ];
 
   for (const [checkbox, content] of tooltips) {
