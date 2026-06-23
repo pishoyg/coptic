@@ -78,6 +78,32 @@ const DAN_OVERRIDE: Record<string, string> = {
   'Dan vis 14': 'D',
 };
 
+// UNNUMBERED_BIBLE_BOOK is a set of names of multi-part Bible books, with the
+// numbers removed.
+// As of the time of writing (at 95% complete), Crum omitted the number from a
+// numbered Bible book only two times:
+// - Citing 'Kg' under ⲙⲁϩ-[1].
+// - Citing 'Thes' under ⲛⲟⲩϯ[2].
+//
+// A third time ('Kg' under ⲑⲟⲩⲁⲓ[3]) is a typo.
+// As of the time of writing, due to similarity in the notations used for manual
+// labeling and footnotes, we can either footnote or manually label this typo.
+// Since it's footnoted, we cannot use a manual label to omit the erroneous
+// tooltip. Thus, this feature has a precision of 66%!
+//
+// [1] https://remnqymi.com/crum/1151.html#:~:text=Kg
+// [2] https://remnqymi.com/crum/31.html#:~:text=Thes
+// [3] https://remnqymi.com/crum/1666.html#:~:text=Kg
+const UNNUMBERED_BIBLE_BOOK: Set<string> = new Set<string>(
+  Object.keys(bib.MAPPING)
+    .filter((key: string): boolean => /^\d /.test(key))
+    .map((key: string): string => key.slice(2))
+    // There is '1 Jo', '2 Jo', and '3 Jo' for the Epistles. But there is also
+    // just 'Jo' for the Gospel of John. An unqualified 'Jo' refers to the
+    // Gospel, not the epistles.
+    .filter((key: string): boolean => !(key in bib.MAPPING))
+);
+
 const ENRICHMENT_RE = new RegExp(
   str.regex([
     // Bible:
@@ -95,6 +121,9 @@ const ENRICHMENT_RE = new RegExp(
     // Ibidem:
     'ib',
     'Ib',
+    // Bible book abbreviations that should be numbered, but occurred in the
+    // text without a number.
+    ...UNNUMBERED_BIBLE_BOOK,
   ]),
   'gu'
 );
@@ -758,6 +787,31 @@ class Citation {
 }
 
 /**
+ *
+ * @param context
+ */
+function replaceUnnumberedBibleBook(context: html.Context): void {
+  const key: string = context.match[0];
+  const regex = new RegExp(`^\\d ${key}$`);
+  const books: bib.Book[] = Object.entries(bib.MAPPING)
+    .filter(([abb, _]: [string, bib.Book]): boolean => regex.test(abb))
+    .map(([_, book]: [string, bib.Book]): bib.Book => book);
+  const anchor: HTMLAnchorElement = html.anchor(
+    paths.bible(books.map((book: bib.Book): string => book.path)),
+    ...context.munch(key.length)
+  );
+  anchor.classList.add(cls.BIBLE);
+  tool.addTooltip(
+    anchor,
+    Array.from(
+      html.parse(books.map((book: bib.Book): string => book.name).join('<br>'))
+    ),
+    [cls.BIBLE]
+  );
+  context.insert(anchor);
+}
+
+/**
  * Parse the Bible followups that trail a citation, updating `cit` in place as
  * it goes.
  *
@@ -1059,6 +1113,11 @@ function replaceMatch(context: html.Context): void {
 
   if (key === ';') {
     context.insert(semicolon(context));
+    return;
+  }
+
+  if (UNNUMBERED_BIBLE_BOOK.has(key)) {
+    replaceUnnumberedBibleBook(context);
     return;
   }
 
