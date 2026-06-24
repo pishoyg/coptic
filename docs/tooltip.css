@@ -24,9 +24,13 @@
   }
 }
 
-.tipper:hover {
-  background-color: #f1f8ff;
-  border-radius: 4px;
+/* Default hover highlight for every hover-invoked tipper. The neutral gray is a
+ * low-specificity default — written with :where() so the color-specific rules
+ * take precedence over it without needing any extra specificity of their own.
+ * */
+:where(.tipper):hover {
+  background-color: var(--tipper-gray);
+  border-radius: 2px;
 }
 
 /* .tooltip represents either a click-invoked or hover-invoked tooltip.

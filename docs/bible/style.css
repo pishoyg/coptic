@@ -109,6 +109,12 @@ td:hover {
   background: #f8f9fa;
   border-radius: 8px;
   cursor: pointer;
+
+  /* On hover, deepen the background into a light tint of the tray's
+   * midnight-blue text. */
+  &:hover {
+    background-color: #dfe2e5; /* light midnight-blue */
+  }
 }
 
 .verse,

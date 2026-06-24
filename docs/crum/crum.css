@@ -32,6 +32,9 @@ del {
 .wiki .gloss {
   font-style: italic;
   color: #ae841a; /* dark yellow */
+  &:hover {
+    background-color: #fdf8e6; /* light yellow */
+  }
 }
 
 .tooltip {
@@ -63,6 +66,10 @@ del {
 
 .reference {
   color: var(--reference-green);
+
+  &:hover {
+    background-color: #ddf5dd; /* light green */
+  }
 }
 
 .card {
@@ -137,6 +144,9 @@ del {
 
 .greek {
   color: #543976; /* Dark Purple */
+  &:hover {
+    background-color: #ece4f4; /* light purple */
+  }
 }
 
 .nag-hammadi {
@@ -155,7 +165,10 @@ del {
 }
 
 .bible {
-  color: #1873cc; /* Dark blue */
+  color: #1873cc; /* dark blue */
+  &:hover {
+    background-color: #e3eef9; /* light blue */
+  }
 }
 
 .type {
@@ -173,6 +186,9 @@ del {
 
 .dialect {
   color: #835f08; /* Dark gold */
+  &:hover {
+    background-color: #f3ebd5; /* light gold */
+  }
 }
 
 /* In the Wiki version of Crum, A^2 is used for Lycopolitan (while L is used
@@ -189,6 +205,10 @@ del {
 
 .wiki .coptic {
   font-weight: bold;
+
+  &:hover {
+    background-color: var(--tipper-gray);
+  }
 }
 
 /* Stacked letters: pieces written on top of one another (e.g. a vertical
@@ -211,11 +231,19 @@ del {
   font-weight: bold;
   margin-left: 0.2em;
   margin-right: 0.75em;
+
+  &:hover {
+    background-color: #efe4e0; /* light brown */
+  }
 }
 
 .wiki {
   margin-top: 2em;
   margin-bottom: 2em;
+
+  .demotic {
+    font-style: italic;
+  }
 
   & .arabic,
   .aramaic,
@@ -225,6 +253,10 @@ del {
   .hieroglyphic {
     color: brown;
 
+    &:hover {
+      background-color: #f5e3e3; /* light brown */
+    }
+
     /* Isolates the span from the surrounding context, ensuring that pieces of
      * HTML consisting of Arabic tokens render from left to right, which is the
      * general direction of the text in the book.
@@ -233,25 +265,6 @@ del {
      * doesn't need this rule, but it doesn't hurt to have it.
      * */
     unicode-bidi: isolate;
-  }
-
-  .demotic {
-    font-style: italic;
-  }
-
-  & .coptic,
-  .greek,
-  .arabic,
-  .aramaic,
-  .hebrew,
-  .amharic,
-  .demotic,
-  .hieroglyphic,
-  .gloss {
-    &:hover {
-      background-color: #f1f8ff;
-      border-radius: 4px;
-    }
   }
 
   & .bullet {
@@ -282,6 +295,45 @@ del {
  * other tooltips. They should have a distinct background color when hovered. */
 .addendum.tipper:hover {
   background-color: #fff4e6;
+}
+
+/* Several colored spans (and Coptic) carry a hover background but aren't tipper
+ * elements, so they don't pick up the shared highlight shape from
+ * `.tipper:hover` in tooltip.css. Give them the same rounded corners here.
+ * */
+:where(
+  .dialect,
+  .greek,
+  .reference,
+  .bible,
+  .semicolon,
+  .gloss,
+  .coptic,
+  .arabic,
+  .aramaic,
+  .hebrew,
+  .amharic,
+  .demotic,
+  .hieroglyphic,
+  .annotation
+) {
+  border-radius: 2px;
+
+  /* When one of these colored spans is hovered, its own hover background should
+   * take precedence over any highlights that would otherwise paint over it.
+   * So we override the color of all descendants, as well as text fragments.
+   *
+   * Making both transparent on hover lets the hovered element's background show
+   * through. :where() keeps the specificity low, it still outranks the rules
+   * that are meant to be overridden.
+   * */
+  &:hover * {
+    background-color: transparent;
+  }
+
+  &:hover::target-text {
+    background-color: transparent;
+  }
 }
 
 .fine-print {
