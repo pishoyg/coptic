@@ -268,28 +268,29 @@ export class Chain {
  * Context provided to the replacer function in replaceNodes.
  */
 export class Context {
+  // TODO: (#0) The public field can be overwritten by users of the class. Try
+  // to grant access through getters only if possible.
+
   /** The current match. */
   public match!: RegExpExecArray;
   /** The text from the start of the match to the end of the chain. */
   public remainder: string;
   /** The text to the left of the current match. */
   public left = '';
-  public matchOffset = 0;
+  /**
+   * The text to the right of the match, as captured when the match was found.
+   * This is a snapshot: it goes stale after any `munch`/`advance`. Use
+   * `remainder` once the cursor has moved.
+   */
+  public right = '';
+  private readonly fragment: DocumentFragment =
+    document.createDocumentFragment();
 
   /**
    * @param chain
-   * @param fragment
    */
-  public constructor(
-    private readonly chain: Chain,
-    private readonly fragment: DocumentFragment
-  ) {
+  public constructor(private readonly chain: Chain) {
     this.remainder = chain.text();
-  }
-
-  /** @returns The text to the right of the current match. */
-  public get right(): string {
-    return this.remainder.slice(this.matchOffset);
   }
 
   /**
@@ -313,9 +314,6 @@ export class Context {
     const nodes: Node[] = this.chain.munch(length);
     this.left += this.remainder.slice(0, length);
     this.remainder = this.remainder.slice(length);
-    // Decrease matchOffset by the amount consumed, but only up to the
-    // remaining matchOffset.
-    this.matchOffset -= Math.min(length, this.matchOffset);
     return nodes;
   }
 
@@ -338,59 +336,46 @@ export class Context {
   /**
    * @returns The next sibling of the last node in the chain, if it exists.
    */
-  public get chainNextSibling(): Node | null {
+  public get nextSibling(): Node | null {
     return this.chain.nextSibling;
   }
-}
 
-/**
- * Replaces text content across a chain of contiguous nodes (Text or Element).
- * This is useful when the text to be replaced spans multiple nodes.
- *
- * The function concatenates the text content of all nodes, searches for
- * matches, and then reconstructs the DOM by cloning nodes and applying
- * replacements.
- *
- * @param chain - A chain representing a list of contiguous sibling nodes.
- * @param regex - The regular expression to search for.
- * @param replaceMatch - A callback function that handles matches.
- */
-export function replaceNodes(
-  chain: Chain,
-  regex: RegExp,
-  replaceMatch: (context: Context) => void
-): void {
-  // The fragment holds the gradually constructed replacement of the chain.
-  const fragment: DocumentFragment = document.createDocumentFragment();
-  const context: Context = new Context(chain, fragment);
+  /**
+   *
+   * @param regex
+   * @param replaceMatch
+   */
+  public replaceNodes(
+    regex: RegExp,
+    replaceMatch: (context: Context) => void
+  ): void {
+    while (this.remainder) {
+      regex.lastIndex = 0;
+      const match: RegExpExecArray | null = regex.exec(this.remainder);
+      if (!match) {
+        // No matches left. Consume the remainder of the chain into the
+        // fragment, and break.
+        this.advance(this.remainder.length);
+        break;
+      }
 
-  while (context.remainder) {
-    regex.lastIndex = 0;
-    const match: RegExpExecArray | null = regex.exec(context.remainder);
-    if (!match) {
-      // No matches left. Consume the remainder of the chain into the fragment,
-      // and break.
-      context.advance(context.remainder.length);
-      break;
+      // Consume the portion prior to the match.
+      this.advance(match.index);
+
+      this.match = match;
+      this.right = this.remainder.slice(match[0].length);
+      const prevRemainder: number = this.remainder.length;
+      replaceMatch(this);
+
+      // Prevent an infinite loop. If the replacer hasn't advanced the cursor,
+      // skip this match altogether.
+      if (prevRemainder === this.remainder.length) {
+        this.advance(match[0].length);
+      }
     }
-
-    // Consume the portion prior to the match.
-    context.advance(match.index);
-
-    context.match = match;
-    context.matchOffset = match[0].length;
-    const prevRemainder: number = context.remainder.length;
-    replaceMatch(context);
-
-    // Prevent an infinite loop. If the replacer hasn't advanced the cursor,
-    // skip this match altogether.
-    if (prevRemainder === context.remainder.length) {
-      context.advance(match[0].length);
-    }
+    this.fragment.normalize();
+    this.chain.replace(this.fragment);
   }
-
-  fragment.normalize();
-  chain.replace(fragment);
 }
 
 /**

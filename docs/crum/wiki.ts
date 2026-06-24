@@ -521,7 +521,7 @@ function replacePage(context: html.Context): boolean {
   a.classList.add(cls.PAGE);
   context.insert(a);
 
-  while ((match = PAGE_FOLLOWUP_RE.exec(context.right))) {
+  while ((match = PAGE_FOLLOWUP_RE.exec(context.remainder))) {
     const comma: string = match[1]!;
     context.advance(comma.length);
     const followup = html.anchor(
@@ -896,7 +896,7 @@ function replaceBible(context: html.Context): boolean {
     key
   );
 
-  if (!cit.valid(right, context.chainNextSibling)) {
+  if (!cit.valid(right, context.nextSibling)) {
     return false;
   }
 
@@ -928,13 +928,13 @@ function* suffixFollowups(context: html.Context): Generator<Node | string> {
   // We have never encountered such a case in reality, so we dismiss this
   // possibility for the time being.
 
-  if (context.right) {
+  if (context.remainder) {
     // There is text before the superscript that is suspected to be part of the
     // suffix.
     return;
   }
 
-  const maybeSUP: Node | null = context.chainNextSibling;
+  const maybeSUP: Node | null = context.nextSibling;
   if (maybeSUP?.nodeName !== 'SUP') {
     // This is not a superscript.
     return;
@@ -1175,7 +1175,10 @@ export function enrich(root: HTMLElement): void {
   };
 
   for (const chain of chains()) {
-    html.replaceNodes(new html.Chain(chain), ENRICHMENT_RE, replaceMatch);
+    new html.Context(new html.Chain(chain)).replaceNodes(
+      ENRICHMENT_RE,
+      replaceMatch
+    );
   }
 }
 
@@ -1401,7 +1404,7 @@ function replaceReferenceIB(
   antecedent: HTMLElement,
   context: html.Context
 ): void {
-  const suffix: string | undefined = SUFFIX.exec(context.right)?.[0];
+  const suffix: string | undefined = SUFFIX.exec(context.remainder)?.[0];
   const span: HTMLSpanElement = ref.Reference.fromSpan(antecedent).span(
     [ib],
     suffix ? [...context.munch(suffix.length), ...suffixFollowups(context)] : []
@@ -1429,7 +1432,7 @@ function replaceBibleIB(
   // The regex is sticky. Last index needs to be reset.
   CHAPTER_VERSE.lastIndex = 0;
   const match: RegExpMatchArray | null | undefined = CHAPTER_VERSE.exec(
-    context.right
+    context.remainder
   );
   cit.update(match?.[1] ?? match?.[3], match?.[2] ?? match?.[4]);
 
