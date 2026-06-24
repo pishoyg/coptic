@@ -1,5 +1,6 @@
 /** Package html defines DOM manipulation helpers. */
 import * as css from './css.js';
+import * as log from './logger.js';
 
 /**
  * Creates an anchor element with the specified href and children.
@@ -165,50 +166,15 @@ function splitPrefix(node: Node, offset: number): Node {
 /**
  *
  */
-class Queue {
-  private readonly nodes: Node[];
-  /**
-   *
-   * @param nodes
-   */
-  public constructor(nodes: Node[]) {
-    // NOTE: `reverse` mutates the caller's array in place. This is OK for now
-    // because the only caller discards the array right after constructing us.
-    this.nodes = nodes.reverse();
-  }
-
-  /**
-   * @returns
-   */
-  public first(): Node {
-    return this.nodes.at(-1)!;
-  }
-
-  /**
-   * @returns
-   */
-  public shift(): Node {
-    return this.nodes.pop()!;
-  }
-
-  /**
-   *
-   * @param f
-   */
-  public forEach(f: (node: Node) => void): void {
-    this.nodes.forEach(f);
-  }
-}
-
-/**
- *
- */
 export class Chain {
-  public readonly previousSibling: Node | null;
-  public readonly nextSibling: Node | null;
+  // We store the nodes in reverse order to simplify our logic, which needs to
+  // pop elements from the front of the array.
+  // We use a name that is indicative of the content, to prevent accidental
+  // misuse.
+  private readonly reversed: Node[];
   private readonly parentNode: Node;
-  public readonly text: string;
-  private readonly nodes: Queue;
+  private readonly previousSibling: Node | null;
+  public readonly nextSibling: Node | null;
 
   /**
    * @param nodes
@@ -217,9 +183,33 @@ export class Chain {
     this.previousSibling = nodes[0]?.previousSibling ?? null;
     this.nextSibling = nodes[nodes.length - 1]?.nextSibling ?? null;
     this.parentNode = nodes[0]!.parentNode!;
-    // TODO: (#0) The `text` field is only read once. Try to eliminate it.
-    this.text = nodes.map((n: Node): string => n.textContent ?? '').join('');
-    this.nodes = new Queue(nodes);
+    // NOTE: `reverse` mutates the caller's array in place. This is OK for now
+    // because the only caller discards the array right after constructing us.
+    this.reversed = nodes.reverse();
+  }
+
+  /**
+   * @returns
+   */
+  private first(): Node {
+    return this.reversed.at(-1)!;
+  }
+
+  /**
+   * @returns
+   */
+  private shift(): Node {
+    return this.reversed.pop()!;
+  }
+
+  /**
+   * @returns
+   */
+  public text(): string {
+    return this.reversed
+      .map((n: Node): string => n.textContent ?? '')
+      .reverse()
+      .join('');
   }
 
   /**
@@ -233,12 +223,12 @@ export class Chain {
     const result: Node[] = [];
 
     while (length) {
-      const node: Node = this.nodes.first();
+      const node: Node = this.first();
       const text: string = node.textContent ?? '';
 
       if (text.length <= length) {
         // Consume the whole node.
-        result.push(this.nodes.shift());
+        result.push(this.shift());
         length -= text.length;
         continue;
       }
@@ -268,11 +258,9 @@ export class Chain {
         ? this.previousSibling.nextSibling
         : this.parentNode.firstChild
     );
-
-    // Remove any remaining nodes in the chain.
-    this.nodes.forEach((n: Node): void => {
-      (n as ChildNode).remove();
-    });
+    if (this.reversed.length) {
+      log.error('Chain still has nodes:', this.reversed);
+    }
   }
 }
 
@@ -296,7 +284,7 @@ export class Context {
     private readonly chain: Chain,
     private readonly fragment: DocumentFragment
   ) {
-    this.remainder = chain.text;
+    this.remainder = chain.text();
   }
 
   /** @returns The text to the right of the current match. */
