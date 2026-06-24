@@ -599,3 +599,17 @@ body.dev {
 .lang {
   color: gray;
 }
+
+/* Italic glyphs overhang their box; lifting italicized text onto its own
+ * stacking context keeps the overhang from being concealed by an adjacent
+ * element's background (e.g. `.match`, `::target-text`). */
+/* stylelint-disable selector-class-pattern, no-descending-specificity */
+i,
+.roman,
+.gram_grp,
+.wiki .gloss,
+.wiki .demotic {
+  position: relative;
+  z-index: 1;
+}
+/* stylelint-enable selector-class-pattern, no-descending-specificity */
