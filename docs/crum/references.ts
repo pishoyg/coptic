@@ -9,6 +9,16 @@ import * as sax from './pisaxo.js';
 export const MAPPING: Record<string, Reference> = {};
 
 /**
+ *
+ * @param text
+ * @param classify
+ * @returns
+ */
+export function maybeIbidem(text: string, classify = false): Node[] {
+  return /^ib\b/i.test(text) ? [ibidem(classify)] : [];
+}
+
+/**
  * @param classify
  * @returns
  */
@@ -142,7 +152,7 @@ export class Reference {
     span.dataset[Reference.DATA_REF] = this.raw();
     span.append(...content, ...suffix);
     const tooltip: (Node | string)[] = [
-      ...(/^ib\b/i.test(span.textContent) ? [ibidem(true)] : []),
+      ...maybeIbidem(span.textContent, true),
       ...(this.tooltip()?.childNodes ?? []),
       ...Reference.suffixAnnotations(suffix),
     ];

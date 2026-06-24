@@ -676,11 +676,10 @@ class Citation {
   }
 
   /**
-   * @param ibidem
    * @param content
    * @returns
    */
-  public anchor(ibidem = false, ...content: (Node | string)[]): HTMLElement {
+  public anchor(...content: (Node | string)[]): HTMLElement {
     let elem: HTMLElement;
     // The `this.chapter` guard is required because we want to hyperlink
     // chapter-less citations normally.
@@ -705,18 +704,20 @@ class Citation {
     elem.dataset[Citation.DATA_BOOK] = this.book.abb;
     elem.dataset[Citation.DATA_CHAPTER] = this.chapter ?? '';
     elem.dataset[Citation.DATA_VERSE] = this.verse ?? '';
-    const tooltip: (Node | string)[] = [];
-    if (ibidem) {
-      // TODO: (#0) The `ibidem` helper is not Reference-specific, since it's
-      // also used for Bible processing.
-      tooltip.push(ref.ibidem(), ': ');
-    }
-    // If this citation is explicit (all numbers are present in `raw`), then
-    // including them in the tooltip would be redundant.
-    // However, if some numbers are inherited, we include the numbers in the
-    // tooltip for readability.
-    tooltip.push(this.explicit ? this.book.name : this.name());
-    tool.addTooltip(elem, tooltip, [cls.BIBLE]);
+    tool.addTooltip(
+      elem,
+      [
+        // TODO: (#0) The `maybeIbidem` helper is not Reference-specific, since
+        // it's also used for Bible processing.
+        ...ref.maybeIbidem(elem.textContent),
+        // If this citation is explicit (all numbers are present in `raw`), then
+        // including them in the tooltip would be redundant.
+        // However, if some numbers are inherited, we include the numbers in the
+        // tooltip for readability.
+        this.explicit ? this.book.name : this.name(),
+      ],
+      [cls.BIBLE]
+    );
     return elem;
   }
 
@@ -923,7 +924,7 @@ function parseBibleFollowups(cit: Citation, context: html.Context): void {
       match.indices![4])!;
     context.insert([
       ...context.munch(start),
-      cit.anchor(false, ...context.munch(end - start)),
+      cit.anchor(...context.munch(end - start)),
       ...context.munch(match[0].length - end),
     ]);
   }
@@ -956,7 +957,7 @@ function replaceBible(context: html.Context): boolean {
   // chapter/verse text are munched off the chain and reused as the anchor's
   // content.
   const len: number = key.length + (match?.[0].length ?? 0);
-  context.insert(cit.anchor(false, ...context.munch(len)));
+  context.insert(cit.anchor(...context.munch(len)));
 
   // Resolve any followups (e.g. the ", 56 9" in "Is 27 11, 56 9") in the same
   // pass. This used to be deferred to a second pass to avoid splitting a
@@ -1392,7 +1393,6 @@ function handleManualAux(manual: HTMLElement): Iterable<Node> | Node {
         MANUAL_CHAPTER_VERSE.exec(key.slice(match[0].length)) ??
         MANUAL_CHAPTER_VERSE.exec(manual.textContent);
       return new Citation(cv?.[1], cv?.[2], match[0]).anchor(
-        false,
         ...manual.childNodes
       );
     }
@@ -1435,7 +1435,7 @@ function handleManualAux(manual: HTMLElement): Iterable<Node> | Node {
   );
   const cit: Citation = Citation.fromAnchor(antecedent);
   cit.update(cv?.[1], cv?.[2]);
-  return cit.anchor(false, ...manual.childNodes);
+  return cit.anchor(...manual.childNodes);
 }
 
 /**
@@ -1520,7 +1520,7 @@ function replaceAnaphor(
   );
   cit.update(match?.[1] ?? match?.[3], match?.[2] ?? match?.[4]);
 
-  context.insert(cit.anchor(true, ...prefix, ...munch(match)));
+  context.insert(cit.anchor(...prefix, ...munch(match)));
   parseBibleFollowups(cit, context);
 }
 
