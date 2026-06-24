@@ -704,20 +704,21 @@ class Citation {
     elem.dataset[Citation.DATA_BOOK] = this.book.abb;
     elem.dataset[Citation.DATA_CHAPTER] = this.chapter ?? '';
     elem.dataset[Citation.DATA_VERSE] = this.verse ?? '';
-    tool.addTooltip(
-      elem,
-      [
-        // TODO: (#0) The `maybeIbidem` helper is not Reference-specific, since
-        // it's also used for Bible processing.
-        ...ref.maybeIbidem(elem.textContent),
-        // If this citation is explicit (all numbers are present in `raw`), then
-        // including them in the tooltip would be redundant.
-        // However, if some numbers are inherited, we include the numbers in the
-        // tooltip for readability.
-        this.explicit ? this.book.name : this.name(),
-      ],
-      [cls.BIBLE]
+    const tooltip: (Node | string)[] = [];
+    // TODO: (#0) Ibidem helpers are not Reference-specific, since
+    // it's also used for Bible processing. They should live in a shared
+    // module.
+    if (ref.ib(elem.textContent)) {
+      tooltip.push(ref.ibidem(), ': ');
+    }
+    tooltip.push(
+      // If this citation is explicit (all numbers are present in `raw`), then
+      // including them in the tooltip would be redundant.
+      // However, if some numbers are inherited, we include the numbers in the
+      // tooltip for readability.
+      this.explicit ? this.book.name : this.name()
     );
+    tool.addTooltip(elem, tooltip, [cls.BIBLE]);
     return elem;
   }
 

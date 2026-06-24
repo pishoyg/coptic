@@ -9,13 +9,11 @@ import * as sax from './pisaxo.js';
 export const MAPPING: Record<string, Reference> = {};
 
 /**
- *
  * @param text
- * @param classify
  * @returns
  */
-export function maybeIbidem(text: string, classify = false): Node[] {
-  return /^ib\b/i.test(text) ? [ibidem(classify)] : [];
+export function ib(text: string): boolean {
+  return /^ib\b/i.test(text);
 }
 
 /**
@@ -151,11 +149,14 @@ export class Reference {
     span.classList.add(cls.REFERENCE);
     span.dataset[Reference.DATA_REF] = this.raw();
     span.append(...content, ...suffix);
-    const tooltip: (Node | string)[] = [
-      ...maybeIbidem(span.textContent, true),
+    const tooltip: (Node | string)[] = [];
+    if (ib(span.textContent)) {
+      tooltip.push(ibidem(true));
+    }
+    tooltip.push(
       ...(this.tooltip()?.childNodes ?? []),
-      ...Reference.suffixAnnotations(suffix),
-    ];
+      ...Reference.suffixAnnotations(suffix)
+    );
 
     // Make all hyperlinks in the tooltip external.
     tooltip
