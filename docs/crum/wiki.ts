@@ -1513,6 +1513,7 @@ function replaceIB(context: html.Context): void {
   log.fatal('This is impossible!');
 }
 
+/* eslint-disable complexity */
 /**
  * NOTE: This function assumes the following HTML structure:
  *   <p>
@@ -1527,6 +1528,46 @@ function replaceIB(context: html.Context): void {
  *   </p>
  *   ...
  *
+ * Addenda and footnoted spans are the exceptions to this flat structure: they
+ * nest. Both are wrappers that sit ON the flat chain while holding their
+ * content one (or more) levels BELOW it:
+ *   - A correction `//removed//added//` is emitted (by `replace_addendum` in
+ *     `dictionary/marcion_sourceforge_net/wiki.py`) as
+ *       <span class="addendum"><del>removed</del> <ins>added</ins></span>
+ *   - Text carrying a footnote is emitted (by `replace_footnote`) as
+ *       <span class="footnoted" data-footnote="…">text<span class="mark">[N]
+ *       </span></span>
+ * so an element produced inside either wrapper sits below the flat chain rather
+ * than on it. The second branch below accounts for both, giving two behaviors:
+ *   - An element that ORIGINATES inside a wrapper (e.g. an `ib`) first
+ *     backtracks among its siblings within that wrapper — its antecedent may
+ *     have been written alongside it — and only then resumes from the wrapper's
+ *     own predecessors on the flat chain. For an addendum it additionally never
+ *     crosses into the other half: a `<del>` element stays within `<del>`, an
+ *     `<ins>` element within `<ins>`.
+ *   - A wrapper merely ENCOUNTERED along the walk is yielded whole (its own
+ *     class never matches an antecedent query) and stepped over; we never
+ *     descend into its contents. For an addendum this is deliberate: an `ib`
+ *     outside it was written against the original, uncorrected text, so the
+ *     corrected text in the `<ins>` half must be ignored during this pass.
+ *     Ideally we would still look inside the `<del>` half, which holds that
+ *     original text and could therefore contain the `ib`'s true antecedent —
+ *     but a case where an `ib`'s antecedent lives in obsolete (deleted) text
+ *     has never been encountered in real data, so we skip the whole addendum
+ *     for simplicity. A footnoted span is skipped the same way, but its
+ *     content is real, current text rather than corrected/obsolete text, so a
+ *     citation buried in it could legitimately be a later `ib`'s antecedent.
+ *     We guard against that editorially: when adding footnotes to the data, we
+ *     are careful not to wrap text that serves as the antecedent of a
+ *     following `ib`, so a footnote never conceals a true antecedent.
+ *
+ * Termination: every branch returns either null or a node that strictly
+ * precedes `node` in document order. In particular the wrapper branch searches
+ * from `parentElement`, so it can only return a STRICT ancestor — never `node`
+ * itself. (`closest` includes the element it is called on, so searching from
+ * `node` would let a wrapper span return itself and spin `backtrack`'s walk
+ * forever.) The strictly-decreasing position guarantees the walk halts.
+ *
  * P.S. Subparagraphs were introduced in #693.
  *
  * @param node
@@ -1536,6 +1577,16 @@ function previous(node: Element | null): Element | null {
   // Try the element's previous sibling.
   return (
     node?.previousElementSibling ??
+    // Step out of a nesting wrapper — an addendum's <del>/<ins> or a footnoted
+    // span — once the sibling walk above has exhausted the content inside it.
+    // Resume from the wrapper span itself, which is the element that lives on
+    // the flat chain. Searching from `parentElement` (not `node`) finds only an
+    // enclosing wrapper, so this returns the wrapper for an element nested
+    // inside one, and nothing for a plain flat element (whose parent is the
+    // subparagraph). See the note above on why this must be a strict ancestor.
+    node?.parentElement?.closest(
+      css.disjunction(cls.ADDENDUM, cls.FOOTNOTED)
+    ) ??
     // Move to the previous subparagraph. Use `previousElementSibling` to
     // skip the whitespace text node between adjacent `<span>`s.
     node?.parentElement?.previousElementSibling?.lastElementChild ??
@@ -1552,6 +1603,7 @@ function previous(node: Element | null): Element | null {
     null
   );
 }
+/* eslint-enable complexity */
 
 /**
  *
@@ -1582,6 +1634,18 @@ function* backtrack(
   // fragment, walk 2 only over the live document, and a node belongs to exactly
   // one of those trees. (The fragment's nodes were *moved*, not copied, out of
   // the live tree as they were enriched.)
+  //
+  // Note the asymmetry: walk 1 is a plain `previousElementSibling` loop with
+  // none of the addendum/footnoted wrapper handling that `previous` applies in
+  // walk 2. It needs none, because the fragment is flat by construction.
+  // `enrich`'s `walk` descends INTO wrappers and only ever chains their leaf
+  // contents (text and `<i>` atoms), never the wrapper elements themselves, and
+  // chains are contiguous siblings, so they never cross a wrapper boundary. A
+  // wrapper is therefore never munched into a fragment: walk 1 can never
+  // encounter one, and an `ib` originating inside a wrapper has its same-chain
+  // antecedents (the wrapper's interior is its own chain) sitting at the
+  // fragment's top level. Wrappers stay intact only in the live tree, which is
+  // why only walk 2 has to climb out of and step over them.
   for (
     let elem: Element | null | undefined = context?.fragmentLastElementChild;
     elem;
@@ -1589,6 +1653,7 @@ function* backtrack(
   ) {
     yield elem;
   }
+
   while ((node = previous(node))) {
     yield node;
   }
