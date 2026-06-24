@@ -318,6 +318,21 @@ const BIBLE_RE = new RegExp(
 let formSuperscripts = new Map<string, string>();
 
 /**
+ * crossParagraphs controls whether antecedent search (for `ib` elements and
+ * dangling manual suffixes) is allowed to walk past the boundary of the
+ * enclosing paragraph into the preceding one.
+ *
+ * On the full Crum page the entire entry is rendered, so the paragraph that
+ * precedes a citation in the DOM is genuinely its textual antecedent. In the
+ * Xooxle search view, however, the entry is truncated to a handful of matching
+ * units and whole paragraphs may be dropped, so the paragraph that happens to
+ * precede a citation in the (incomplete) DOM may not be its real antecedent.
+ * Crossing the boundary there risks binding a citation to an unrelated
+ * antecedent; we would rather fail to resolve it than resolve it incorrectly.
+ */
+let crossParagraphs = true;
+
+/**
  *
  * @param wiki
  * @returns
@@ -352,6 +367,7 @@ export function handle(root: HTMLElement, full = true): void {
  * @param full
  */
 function handleAux(wiki: HTMLElement, full: boolean): void {
+  crossParagraphs = full;
   const startText: string | undefined = dev.play(() => textContent(wiki));
 
   // Identify form superscripts before enrichment so that reference suffix
@@ -1526,8 +1542,13 @@ function previous(node: Element | null): Element | null {
     // Move to the previous paragraph. Use `previousElementSibling` to skip
     // the whitespace between adjacent `<p>`s, and `lastElementChild` to
     // skip trailing whitespace inside that previous `<p>`.
-    node?.parentElement?.parentElement?.previousElementSibling?.lastElementChild
-      ?.lastElementChild ??
+    // This cross-paragraph hop is suppressed when `crossParagraphs` is false.
+    // This can be used on views where some paragraphs are dropped, making the
+    // preceding `<p>` an unreliable antecedent.
+    (crossParagraphs
+      ? node?.parentElement?.parentElement?.previousElementSibling
+          ?.lastElementChild?.lastElementChild
+      : null) ??
     null
   );
 }
