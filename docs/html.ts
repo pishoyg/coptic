@@ -190,7 +190,7 @@ export class Chain {
   /**
    * @returns
    */
-  private first(): Node {
+  public first(): Node {
     return this.reversed.at(-1)!;
   }
 
@@ -293,23 +293,33 @@ export class Context {
   }
 
   /**
+   * @returns
+   */
+  public first(): Node {
+    return this.chain.first();
+  }
+
+  /**
    * Consumes `length` characters from the chain and appends them to the
    * fragment.
    *
-   * @param length
+   * @param length - Number of characters to skip. If none given, advance to the
+   * end of the current match.
    */
-  public advance(length: number): void {
+  public advance(length?: number): void {
     this.fragment.append(...this.munch(length));
   }
 
   /**
    * Consumes `length` characters from the chain and returns them as nodes.
    * These nodes are NOT appended to the fragment automatically.
+   * If the length is not specified, munch to the end of the current match.
    *
    * @param length
    * @returns
    */
-  public munch(length: number): Node[] {
+  public munch(length?: number): Node[] {
+    length ??= this.remainder.length - this.right.length;
     const nodes: Node[] = this.chain.munch(length);
     this.left += this.remainder.slice(0, length);
     this.remainder = this.remainder.slice(length);

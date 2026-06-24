@@ -104,6 +104,26 @@ const UNNUMBERED_BIBLE_BOOK: Set<string> = new Set<string>(
     .filter((key: string): boolean => !(key in bib.MAPPING))
 );
 
+// DANGLING_SUFFIX_MARKERS are tokens that precede dangling suffixes. The
+// boolean value indicates confidence levels. A value of true means that we can
+// safely assume that whenever this token is followed by a number, that number
+// is a dangling suffix. False indicates that we should exercise some caution.
+const DANGLING_SUFFIX_MARKERS: Record<string, boolean> = {
+  cf: true,
+  v: true,
+  also: true,
+  paral: true,
+  var: true,
+  varr: true,
+  'e g': true,
+  for: false,
+  ':': false,
+  ',': false,
+  ';': false,
+  '=': false,
+  '&': false,
+};
+
 const ENRICHMENT_RE = new RegExp(
   str.regex([
     // Bible:
@@ -124,6 +144,7 @@ const ENRICHMENT_RE = new RegExp(
     // Bible book abbreviations that should be numbered, but occurred in the
     // text without a number.
     ...UNNUMBERED_BIBLE_BOOK,
+    ...Object.keys(DANGLING_SUFFIX_MARKERS),
   ]),
   'u'
 );
@@ -319,7 +340,7 @@ let formSuperscripts = new Map<string, string>();
 
 /**
  * crossParagraphs controls whether antecedent search (for `ib` elements and
- * dangling manual suffixes) is allowed to walk past the boundary of the
+ * dangling suffixes) is allowed to walk past the boundary of the
  * enclosing paragraph into the preceding one.
  *
  * On the full Crum page the entire entry is rendered, so the paragraph that
@@ -484,7 +505,7 @@ function replaceAnnotation(context: html.Context): void {
   }
 
   // We consume the key-length nodes first so we can inspect them.
-  const nodes = context.munch(key.length);
+  const nodes: Node[] = context.munch(key.length);
 
   if (
     annot.noStyledParent &&
@@ -806,15 +827,46 @@ class Citation {
  *
  * @param context
  */
+function replaceDanglingSuffix(context: html.Context): void {
+  context.advance(); // Skip the match (if it's not skipped already).
+
+  const confident = !!DANGLING_SUFFIX_MARKERS[context.match[0]];
+  // If we're confident that this marker precedes dangling suffixes, a single
+  // number suffices. Otherwise, we only treat it as a dangling suffix if two
+  // numbers follow.
+  const regex = new RegExp(`^(?: \\d+(?!/\\d)){${confident ? 1 : 2}}\\b`);
+  if (!regex.test(context.remainder)) {
+    // Not a dangling suffix!
+    return;
+  }
+  if (ENRICHMENT_RE.exec(context.remainder)?.index === 1) {
+    // Not a dangling suffix! The number is part of some other enrichment key.
+    return;
+  }
+
+  const antecedent: HTMLElement | null = findAntecedent(context);
+  if (!antecedent) {
+    log.error(
+      'Unable to find antecedent for the dangling suffix at',
+      context.remainder
+    );
+    return;
+  }
+  replaceAnaphor(context, antecedent);
+}
+
+/**
+ *
+ * @param context
+ */
 function replaceUnnumberedBibleBook(context: html.Context): void {
-  const key: string = context.match[0];
-  const regex = new RegExp(`^\\d ${key}$`);
+  const regex = new RegExp(`^\\d ${context.match[0]}$`);
   const books: bib.Book[] = Object.entries(bib.MAPPING)
     .filter(([abb, _]: [string, bib.Book]): boolean => regex.test(abb))
     .map(([_, book]: [string, bib.Book]): bib.Book => book);
   const anchor: HTMLAnchorElement = html.anchor(
     paths.bible(books.map((book: bib.Book): string => book.path)),
-    ...context.munch(key.length)
+    ...context.munch()
   );
   anchor.classList.add(cls.BIBLE);
   tool.addTooltip(
@@ -982,7 +1034,7 @@ function replaceReference(context: html.Context): void {
   }
 
   const span: HTMLSpanElement = ref.MAPPING[key]!.span(
-    context.munch(key.length),
+    context.munch(),
     suffix ? [...context.munch(suffix.length), ...suffixFollowups(context)] : []
   );
 
@@ -1119,24 +1171,33 @@ function replaceMatch(context: html.Context): void {
     // as a Crum page or a suffix annotation.
   }
 
-  if (key in ann.MAPPING) {
-    // 'p' and 'pp' are also annotations, so it's important for annotation
-    // handling to have less priority than page handling.
-    replaceAnnotation(context);
-    return;
-  }
-
-  if (key === ';') {
-    context.insert(semicolon(context));
-    return;
-  }
-
   if (UNNUMBERED_BIBLE_BOOK.has(key)) {
     replaceUnnumberedBibleBook(context);
     return;
   }
 
-  log.fatal('This is impossible!');
+  // `flag` is used to verify that the key is processed at least once.
+  let flag = false;
+  if (key in ann.MAPPING) {
+    // 'p' and 'pp' are also annotations, so it's important for annotation
+    // handling to have less priority than page handling.
+    replaceAnnotation(context);
+    // Do not return because some annotations are also dangling suffix markers.
+    flag = true;
+  }
+
+  if (key === ';') {
+    context.insert(semicolon(context));
+    // Do not return because the semicolon is also a dangling suffix marker.
+    flag = true;
+  }
+
+  if (key in DANGLING_SUFFIX_MARKERS) {
+    // Dangling suffix detected!
+    replaceDanglingSuffix(context);
+    flag = true;
+  }
+  log.ensure(flag, 'This is impossible');
 }
 
 /**
@@ -1251,7 +1312,7 @@ function handleAddenda(root: HTMLElement): void {
 function semicolon(context: html.Context): HTMLSpanElement {
   const span = document.createElement('span');
   span.classList.add(cls.SEMICOLON);
-  span.append(...context.munch(1));
+  span.append(...context.munch());
   tool.addTooltip(
     span,
     ['semicolons separate groups in meaning or usage'],
@@ -1356,10 +1417,7 @@ function handleManualAux(manual: HTMLElement): Iterable<Node> | Node {
   // There are two possibilities:
   // 1. The antecedent is a Bible citation.
   // 2. The antecedent is a reference.
-  const antecedent: HTMLElement | null = findAntecedent(
-    manual,
-    css.disjunction(cls.REFERENCE, cls.BIBLE)
-  );
+  const antecedent: HTMLElement | null = findAntecedent(manual);
 
   if (!antecedent) {
     log.error('Unable to find antecedent for dangling manual suffix', manual);
@@ -1382,92 +1440,12 @@ function handleManualAux(manual: HTMLElement): Iterable<Node> | Node {
 
 /**
  *
- * @param ib
- * @returns
- */
-function ibFallback(ib: HTMLElement): HTMLElement {
-  ib.classList.add(cls.ANNOTATION);
-  tool.addTooltip(ib, [ref.ibidem()]);
-  return ib;
-}
-
-/**
- *
- * @param ib
- * @param antecedent
- * @param context
- * @returns
- */
-function replaceReferenceIB(
-  ib: HTMLElement,
-  antecedent: HTMLElement,
-  context: html.Context
-): void {
-  const suffix: string | undefined = SUFFIX.exec(context.remainder)?.[0];
-  const span: HTMLSpanElement = ref.Reference.fromSpan(antecedent).span(
-    [ib],
-    suffix ? [...context.munch(suffix.length), ...suffixFollowups(context)] : []
-  );
-  context.insert(span);
-}
-
-/**
- *
- * @param ib
- * @param antecedent
- * @param context
- * @returns
- */
-function replaceBibleIB(
-  ib: HTMLElement,
-  antecedent: HTMLElement,
-  context: html.Context
-): void {
-  // Construct the antecedent citation.
-  const cit: Citation = Citation.fromAnchor(antecedent);
-
-  // Update the citation with numbers from this citation.
-  // Notice that it's valid for the new citation to not have any numbers.
-  const match: RegExpMatchArray | null | undefined = CHAPTER_VERSE.exec(
-    context.remainder
-  );
-  cit.update(match?.[1] ?? match?.[3], match?.[2] ?? match?.[4]);
-
-  context.insert(
-    cit.anchor(true, ib, ...context.munch(match?.[0].length ?? 0))
-  );
-  parseBibleFollowups(cit, context);
-}
-
-/**
- *
- * @param ib
- * @param antecedent
- * @param context
- * @returns
- */
-function replacePageIB(
-  ib: HTMLElement,
-  antecedent: HTMLAnchorElement,
-  context: html.Context
-): void {
-  // This `ib` instances refers to a Crum page.
-  // An example is 1730 (ⲟⲩⲱⲛⲅ):
-  //   https://remnqymi.com/crum/1730.html
-  // We don't expect a suffix to be present.
-  const a = html.anchor(antecedent.href, ib);
-  tool.addTooltip(a, [ref.ibidem()]);
-  context.insert(a);
-}
-
-/**
- *
  * @param context
  * @returns
  */
 function replaceIB(context: html.Context): void {
   // We expect the 'ib' match to be a clean 'ib' element.
-  const ibNodes: Node[] = context.munch(context.match[0].length);
+  const ibNodes: Node[] = context.munch();
 
   let ib: HTMLElement;
   if (
@@ -1482,35 +1460,68 @@ function replaceIB(context: html.Context): void {
     return;
   }
 
-  const antecedent: HTMLElement | null = findAntecedent(
-    ib,
-    css.disjunction(cls.BIBLE, cls.REFERENCE, cls.PAGE),
-    context
-  );
+  const antecedent: HTMLElement | null = findAntecedent(context);
 
   if (!antecedent) {
     log.error('Unable to find antecedent reference for ib element', ib);
-    ibFallback(ib);
+    ib.classList.add(cls.ANNOTATION);
+    tool.addTooltip(ib, [ref.ibidem()]);
     context.insert(ib);
     return;
   }
 
-  if (antecedent.classList.contains(cls.PAGE)) {
-    replacePageIB(ib, antecedent as HTMLAnchorElement, context);
-    return;
-  }
+  replaceAnaphor(context, antecedent, [ib]);
+}
+
+/**
+ * Resolve an anaphor — an expression whose numbers refer back to an antecedent
+ * citation — into a link that inherits the antecedent's book/chapter/verse (for
+ * a Bible antecedent) or reference (for a reference antecedent).
+ *
+ * @param context
+ * @param antecedent - The citation the anaphor refers back to.
+ * @param prefix - Carrier nodes placed inside the produced link (e.g. the `ib`
+ * element). Empty for a dangling suffix, where the numbers stand alone.
+ */
+function replaceAnaphor(
+  context: html.Context,
+  antecedent: HTMLElement,
+  prefix: HTMLElement[] = []
+): void {
+  const munch = (match: RegExpMatchArray | null | undefined): Node[] => {
+    // Munch an anaphor's matched content into nodes for the produced link.
+    // With no carrier prefix (the dangling-suffix case) a leading space before
+    // the numbers is plain text, not part of the link: advance it into the
+    // fragment so it renders as a space, and munch only the rest into the link.
+    const length: number = match?.[0].length ?? 0;
+    const lead: number = !prefix.length && match?.[0]?.startsWith(' ') ? 1 : 0;
+    context.advance(lead);
+    return context.munch(length - lead);
+  };
 
   if (antecedent.classList.contains(cls.REFERENCE)) {
-    replaceReferenceIB(ib, antecedent, context);
+    const match: RegExpMatchArray | null = SUFFIX.exec(context.remainder);
+    const suffix: (Node | string)[] = match
+      ? [...munch(match), ...suffixFollowups(context)]
+      : [];
+    context.insert(ref.Reference.fromSpan(antecedent).span(prefix, suffix));
     return;
   }
 
-  if (antecedent.classList.contains(cls.BIBLE)) {
-    replaceBibleIB(ib, antecedent, context);
-    return;
-  }
+  log.ensure(antecedent.classList.contains(cls.BIBLE)); // Sanity check.
 
-  log.fatal('This is impossible!');
+  // Construct the antecedent citation.
+  const cit: Citation = Citation.fromAnchor(antecedent);
+
+  // Update the citation with numbers from this citation.
+  // Notice that it's valid for the new citation to not have any numbers.
+  const match: RegExpMatchArray | null | undefined = CHAPTER_VERSE.exec(
+    context.remainder
+  );
+  cit.update(match?.[1] ?? match?.[3], match?.[2] ?? match?.[4]);
+
+  context.insert(cit.anchor(true, ...prefix, ...munch(match)));
+  parseBibleFollowups(cit, context);
 }
 
 /* eslint-disable complexity */
@@ -1573,10 +1584,10 @@ function replaceIB(context: html.Context): void {
  * @param node
  * @returns
  */
-function previous(node: Element | null): Element | null {
+function previous(node: Node | null): Node | null {
   // Try the element's previous sibling.
   return (
-    node?.previousElementSibling ??
+    node?.previousSibling ??
     // Step out of a nesting wrapper — an addendum's <del>/<ins> or a footnoted
     // span — once the sibling walk above has exhausted the content inside it.
     // Resume from the wrapper span itself, which is the element that lives on
@@ -1611,7 +1622,7 @@ function previous(node: Element | null): Element | null {
  * @param context
  */
 function* backtrack(
-  node: Element | null,
+  node: Node | null,
   context?: html.Context
 ): Generator<Element> {
   // Candidates are gathered from two roots, because the preceding elements are
@@ -1655,26 +1666,28 @@ function* backtrack(
   }
 
   while ((node = previous(node))) {
-    yield node;
+    if (node instanceof Element) {
+      yield node;
+    }
   }
 }
 
+const ANTECEDENT_QUERY: string = css.disjunction(cls.BIBLE, cls.REFERENCE);
 /**
  * Find the first preceding sibling to the given element that matches the query.
  *
- * @param node
- * @param query
- * @param context
+ * @param start
  * @returns
  */
-function findAntecedent(
-  node: Element | null,
-  query: string,
-  context?: html.Context
-): HTMLElement | null {
-  for (const curr of backtrack(node, context)) {
-    if (curr.matches(query)) {
-      return curr as HTMLElement;
+function findAntecedent(start: Node | null | html.Context): HTMLElement | null {
+  const candidates: Iterable<Element> =
+    start instanceof html.Context
+      ? backtrack(start.first(), start)
+      : backtrack(start);
+
+  for (const element of candidates) {
+    if (element.matches(ANTECEDENT_QUERY)) {
+      return element as HTMLElement;
     }
   }
 
