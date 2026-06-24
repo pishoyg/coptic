@@ -167,6 +167,30 @@ const TEST_CASES: {
       [cls.REFERENCE]: 21,
     },
   },
+  {
+    // 754 contains an `ib` (ibidem) whose antecedent lives inside an addendum.
+    // The antecedent search in `previous` must backtrack within the addendum's
+    // `<ins>`/`<del>` wrapper before resuming at the addendum's siblings, so
+    // this exercises the fragile wrapper-climbing logic.
+    key: '754',
+    want: {
+      [cls.REFERENCE]: 5,
+      [cls.BIBLE]: 6,
+      [cls.ADDENDUM]: 1,
+    },
+  },
+  {
+    // 400 contains an `ib` (ibidem) nested inside a `footnoted` span. The
+    // antecedent search must climb out of the footnoted wrapper to find the
+    // preceding book, so the `ib` resolves to a Bible reference. This
+    // exercises the same fragile wrapper-climbing logic as 754.
+    key: '400',
+    want: {
+      [cls.REFERENCE]: 51,
+      [cls.BIBLE]: 81,
+      [cls.FOOTNOTED]: 1,
+    },
+  },
 ];
 
 play.test.describe('Wiki Enrichment', () => {
