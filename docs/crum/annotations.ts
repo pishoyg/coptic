@@ -460,4 +460,4 @@ DATA.forEach((abb: Abbreviation): void => {
   });
 });
 
-export const RE = new RegExp(str.regex(Object.keys(MAPPING)), 'gu');
+export const RE = new RegExp(str.regex(Object.keys(MAPPING)), 'ug');

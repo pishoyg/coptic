@@ -125,7 +125,7 @@ const ENRICHMENT_RE = new RegExp(
     // text without a number.
     ...UNNUMBERED_BIBLE_BOOK,
   ]),
-  'gu'
+  'u'
 );
 
 // Pay attention to the following:
@@ -242,8 +242,8 @@ const NUMS = '(\\d+|[A-F])(?: (\\d+))?';
 // CHAPTER_VERSE matches "NUMS" OR "(NUMS)".
 // NOTE:
 // 1. This creates two sets of capture groups.
-// 2. This is a sticky regex.
-const CHAPTER_VERSE = new RegExp(`\\.? (?:${NUMS}|\\(${NUMS}\\))\\b`, 'uy');
+// 2. This is anchored at the start of the string.
+const CHAPTER_VERSE = new RegExp(`^\\.? (?:${NUMS}|\\(${NUMS}\\))\\b`, 'u');
 
 // MANUAL_CHAPTER_VERSE parses a chapter/verse pair (e.g. "27 11") from the
 // text content of a manually-keyed or dangling Bible citation.
@@ -886,7 +886,6 @@ function replaceBible(context: html.Context): boolean {
   // Parse the numbers following the book abbreviation.
   const key: string = context.match[0];
   let right: string = context.right;
-  CHAPTER_VERSE.lastIndex = 0;
   const match: RegExpExecArray | null = CHAPTER_VERSE.exec(right);
   right = right.slice(match?.[0].length ?? 0);
 
@@ -1429,8 +1428,6 @@ function replaceBibleIB(
 
   // Update the citation with numbers from this citation.
   // Notice that it's valid for the new citation to not have any numbers.
-  // The regex is sticky. Last index needs to be reset.
-  CHAPTER_VERSE.lastIndex = 0;
   const match: RegExpMatchArray | null | undefined = CHAPTER_VERSE.exec(
     context.remainder
   );

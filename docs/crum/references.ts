@@ -204,7 +204,6 @@ export class Reference {
       const text: string = html.textContent(node);
       const italic = node instanceof Element && node.nodeName === 'I';
 
-      ann.RE.lastIndex = 0;
       for (const match of text.matchAll(ann.RE)) {
         const abb: string = match[0];
         const annot = ann.MAPPING[abb];

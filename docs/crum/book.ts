@@ -277,7 +277,6 @@ export class Word implements scan.Word {
    */
   public constructor(public readonly word: string) {
     word = normalize(word);
-    LETTER.lastIndex = 0;
     const letters: Letter[] = (word.match(LETTER) ?? []).map(
       (t) => new Letter(t)
     );

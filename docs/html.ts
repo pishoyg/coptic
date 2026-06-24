@@ -93,7 +93,6 @@ export function replaceNode(
 
   // Loop as long as there is text to process.
   while (text) {
-    regex.lastIndex = 0; // Reset regex state for searching the new text.
     const match: RegExpExecArray | null = regex.exec(text);
 
     if (!match) {
@@ -350,7 +349,6 @@ export class Context {
     replaceMatch: (context: Context) => void
   ): void {
     while (this.remainder) {
-      regex.lastIndex = 0;
       const match: RegExpExecArray | null = regex.exec(this.remainder);
       if (!match) {
         // No matches left. Consume the remainder of the chain into the

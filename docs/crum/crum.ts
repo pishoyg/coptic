@@ -23,7 +23,7 @@ import * as roots from './roots.js';
 import * as derivations from './derivations.js';
 
 const GREEK_WORD_RE = /^[\p{Script=Greek}][\p{Script=Greek}\p{Mark}]*$/u;
-const ENGLISH_RE = /[\p{Script=Latin}][\p{Script=Latin}\p{Mark}]*/gu;
+const ENGLISH_RE = /[\p{Script=Latin}][\p{Script=Latin}\p{Mark}]*/u;
 
 /**
  * Handle all Crum elements.
@@ -297,7 +297,7 @@ function addCopticLookups(root: HTMLElement): void {
     html.linkifyText(
       form,
       // If the word is fully surrounded by parentheses, drop them.
-      /(?=[^(]|\(\S+\)\S)\S+(?<=[^)]|\S\(\S+\))/g,
+      /(?=[^(]|\(\S+\)\S)\S+(?<=[^)]|\S\(\S+\))/,
       (match: RegExpExecArray): string | null => {
         // Skip words that don't contain any Coptic characters.
         return /\p{Script=Coptic}/u.test(match[0])
@@ -317,7 +317,7 @@ export function addGreekLookups(root: HTMLElement): void {
   root.querySelectorAll(`.${cls.GREEK}`).forEach((greek: Element) => {
     html.linkifyText(
       greek,
-      /\S+/g,
+      /\S+/,
       (match: RegExpExecArray): string | null =>
         GREEK_WORD_RE.test(match[0]) ? paths.greekLookup(match[0]) : null,
       [cls.GREEK]
@@ -349,7 +349,7 @@ function addEnglishLookups(root: HTMLElement): void {
 // The leaf number is almost always a number, but occasionally it's "flyleaf
 // verso" or "flyleaft recto".
 const NAG_HAMMADI_RE =
-  /\bcodex ([a-z]*) - ([^;]+); [0-9]+; ([0-9]+|flyleaf (?:verso|recto)); ([0-9]+);/gi;
+  /\bcodex ([a-z]*) - ([^;]+); [0-9]+; ([0-9]+|flyleaf (?:verso|recto)); ([0-9]+);/i;
 
 /**
  * TODO: (#167) Use structured HTML for Nag Hammadi, instead of relying on

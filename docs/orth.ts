@@ -10,27 +10,13 @@ export function normalize(text: string): string {
   return text.normalize('NFD');
 }
 
-const DIACRITIC_RE = /\p{M}/gu;
-
-/**
- * Check if the given character is a diacritic.
- * We have the word "one" in the function name in order to make it explicit that
- * it's the caller's responsibility to handle strings consisting of multiple
- * characters.
- * @param char - String to test.
- * @returns True if the string contains exactly one character, and that
- * character is a diacritic. False otherwise.
- */
-export function isOneDiacritic(char?: string): boolean {
-  return !!char && char.length === 1 && !!char.match(DIACRITIC_RE);
-}
+const DIACRITIC_RE = /\p{Mark}/gu;
 
 /**
  * @param text - Text to be cleaned.
  * @returns - The text, with diacritics removed.
  */
 export function cleanDiacritics(text: string): string {
-  DIACRITIC_RE.lastIndex = 0;
   return normalize(text).replaceAll(DIACRITIC_RE, '');
 }
 
@@ -49,7 +35,7 @@ export type Translation = number[];
 export function translation(text: string): Translation {
   const mapping: number[] = [];
   for (const [i, c] of Array.from(text).entries()) {
-    if (!isOneDiacritic(c)) {
+    if (!c.match(DIACRITIC_RE)) {
       mapping.push(i);
     }
   }
