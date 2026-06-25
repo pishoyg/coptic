@@ -154,6 +154,8 @@ export const DATA: Abbreviation[] = [
   // reference suffix, which is not ideal.
   // [1] https://remnqymi.com/crum/2610.html#:~:text=%20291%2C%20JEA%2021-,pl
   { fullForm: 'plural', variants: ['pl'] },
+  // 'pll' is definitely 'plates'.
+  { fullForm: 'plates', variants: ['pll'], suffix: true },
   // Crum has "possessive pronoun" for "poss", but "possessive" is suitable. See
   // examples: https://remnqymi.com/crum/?query=poss&full=true&wiki=true.
   { fullForm: 'possessive', variants: ['poss'] },
