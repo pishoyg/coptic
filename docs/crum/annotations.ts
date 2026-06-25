@@ -273,7 +273,7 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'excluding', variants: ['exc'] },
   { fullForm: 'figurative', variants: ['figur'] },
   {
-    fullForm: 'and the following pages/verses',
+    fullForm: 'and the following (pages / verses)',
     variants: ['ff'],
     noCaseVariant: true,
     suffix: true,
