@@ -26,14 +26,14 @@ del {
 }
 
 :root {
-  --reference-green: #007200;
+  --reference-green: #1f7a48; /* emerald */
 }
 
 .wiki .gloss {
   font-style: italic;
-  color: #ae841a; /* dark yellow */
+  color: #9a7b2e; /* muted ochre */
   &:hover {
-    background-color: #fdf8e6; /* light yellow */
+    background-color: #f8f2df; /* light ochre */
   }
 }
 
@@ -68,7 +68,7 @@ del {
   color: var(--reference-green);
 
   &:hover {
-    background-color: #ddf5dd; /* light green */
+    background-color: #e6f2ea; /* light emerald */
   }
 }
 
@@ -143,9 +143,9 @@ del {
 }
 
 .greek {
-  color: #543976; /* Dark Purple */
+  color: #573f90; /* amethyst */
   &:hover {
-    background-color: #ece4f4; /* light purple */
+    background-color: #ece7f6; /* light amethyst */
   }
 }
 
@@ -165,9 +165,9 @@ del {
 }
 
 .bible {
-  color: #1873cc; /* dark blue */
+  color: #2763aa; /* sapphire */
   &:hover {
-    background-color: #e3eef9; /* light blue */
+    background-color: #e6eef8; /* light sapphire */
   }
 }
 
@@ -185,9 +185,9 @@ del {
 }
 
 .dialect {
-  color: #835f08; /* Dark gold */
+  color: #8c6a1e; /* gold */
   &:hover {
-    background-color: #f3ebd5; /* light gold */
+    background-color: #f3ecda; /* light gold */
   }
 }
 
@@ -227,13 +227,13 @@ del {
 }
 
 .semicolon {
-  color: #6e260e; /* dark brown */
+  color: #8a4434; /* terracotta */
   font-weight: bold;
   margin-left: 0.2em;
   margin-right: 0.75em;
 
   &:hover {
-    background-color: #efe4e0; /* light brown */
+    background-color: #f4e8e3; /* light terracotta */
   }
 }
 
@@ -251,10 +251,10 @@ del {
   .amharic,
   .demotic,
   .hieroglyphic {
-    color: brown;
+    color: #8a5a3c; /* sienna */
 
     &:hover {
-      background-color: #f5e3e3; /* light brown */
+      background-color: #f3e9e1; /* light sienna */
     }
 
     /* Isolates the span from the surrounding context, ensuring that pieces of
@@ -268,7 +268,7 @@ del {
   }
 
   & .bullet {
-    color: firebrick;
+    color: #b2473a; /* refined brick */
     font-weight: bold;
 
     /* Bullets are also used in cross references. For example, the following
