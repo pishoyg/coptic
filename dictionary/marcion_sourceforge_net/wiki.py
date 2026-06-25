@@ -9,6 +9,7 @@
 # - Use an actual newline character instead of the "\n" token.
 # - The headword notation is simply unnecessary.
 import functools
+import itertools
 import typing
 from collections import abc, defaultdict
 from html import escape
@@ -218,6 +219,19 @@ CLOSE_SUBPARAGRAPH: str = "</span>"
 OPEN_PARAGRAPH: str = "<p>"
 CLOSE_PARAGRAPH: str = "</p>"
 
+# Footnotes and addenda both render a footnote-like `[N]` indicator, numbered
+# sequentially across the entry in document order. A mark's number depends on
+# how many marks precede it in the final text, which isn't known while the
+# substitution passes run (footnotes and addenda are numbered in separate
+# passes). So we emit this placeholder and assign the numbers in a single pass
+# once the entry is assembled.
+# A Private Use Area code point, guaranteed not to occur in real entry text.
+_MARK_PLACEHOLDER: str = "\uf8ff"
+_MARK_PLACEHOLDER_RE: regex.Pattern[str] = regex.compile(
+    regex.escape(_MARK_PLACEHOLDER),
+)
+_MARK: str = f'<span class="{cls.MARK}">{_MARK_PLACEHOLDER}</span>'
+
 # Coptic Wiki substitutions:
 #
 # NOTE: This is based on a snapshot of the following file, taken on
@@ -363,8 +377,6 @@ class Wiki:
                 self.keys,
             )
 
-        self.footnotes: int = 0
-
         wip: str = record["WIP"]
         ensure.ensure(
             wip in ["", "*"],
@@ -479,6 +491,8 @@ class Wiki:
             yield " "
         if g2:
             yield f"<ins>{g2}</ins>"
+        # Append a footnote-like `[N]` indicator, mirroring `replace_footnote`.
+        yield _MARK
         yield "</span>"
 
     def replace_headword(self, match: regex.Match[str]) -> str:
@@ -546,11 +560,10 @@ class Wiki:
     @functools.cached_property
     def html(self) -> str:
         # NOTE: Each call to this method populates some fields, such as
-        # headwords and footnotes. Calling it multiple times would be an error.
-        # Caching should prevent multiple executions on the same object.
-        assert not self.footnotes
+        # headwords. Calling it multiple times would be an error. Caching
+        # should prevent multiple executions on the same object.
         assert not self._headwords
-        html: str = "".join(self._html_aux())
+        html: str = self._number_marks("".join(self._html_aux()))
         for token in self._banned():
             ensure.ensure(
                 token not in html,
@@ -563,8 +576,23 @@ class Wiki:
             )
         return html
 
+    @staticmethod
+    def _number_marks(html: str) -> str:
+        """Replace each mark placeholder with a sequential `[N]` indicator.
+
+        Footnotes and addenda share a single numbering sequence, assigned in
+        document order once the entry's HTML is fully assembled.
+
+        Args:
+            html: HTML potentially containing mark placeholders.
+
+        Returns:
+            HTML with mark placeholders replaced appropriately.
+        """
+        counter = itertools.count(1)
+        return _MARK_PLACEHOLDER_RE.sub(lambda _: f"[{next(counter)}]", html)
+
     def replace_footnote(self, match: regex.Match[str]) -> str:
-        self.footnotes += 1
         # The footnote content is embedded in a `data-footnote` attribute on
         # the `.footnoted` wrapper. The rest is taken care of by JavaScript.
         # The inner `.mark` element keeps the `[N]` indicator visible to flag
@@ -578,9 +606,7 @@ class Wiki:
         return (
             f'<span class="{cls.FOOTNOTED}" {DATA_FOOTNOTE}="{attr}">'
             + match.group(1)
-            + f'<span class="{cls.MARK}">'
-            + f"[{self.footnotes}]"
-            + "</span>"
+            + _MARK
             + "</span>"
         )
 
@@ -593,6 +619,7 @@ class Wiki:
         yield OPEN_SUBPARAGRAPH
 
         raw: str = self.entry
+        assert _MARK_PLACEHOLDER not in raw
         for s in self.subs():
             raw = s.html(raw)
         yield raw

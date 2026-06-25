@@ -291,12 +291,6 @@ del {
   }
 }
 
-/* Addenda host a tooltip, and they also contain elements within them that have
- * other tooltips. They should have a distinct background color when hovered. */
-.addendum.tipper:hover {
-  background-color: #fff4e6;
-}
-
 /* Several colored spans (and Coptic) carry a hover background but aren't tipper
  * elements, so they don't pick up the shared highlight shape from
  * `.tipper:hover` in tooltip.css. Give them the same rounded corners here.
@@ -443,6 +437,16 @@ del {
 
 .footnoted:has(.mark:hover) {
   text-decoration: underline gray;
+}
+
+.addendum:has(.mark:hover) {
+  ins {
+    background-color: #ddf5dd; /* light green */
+  }
+
+  del {
+    background-color: lightpink; /* light red */
+  }
 }
 
 .drv-link {

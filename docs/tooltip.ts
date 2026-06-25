@@ -7,7 +7,6 @@
  * */
 
 type Invocation = 'hover' | 'click';
-type Position = 'above' | 'below';
 
 export enum CLS {
   /* TOOLTIP is the class of tooltip content. */
@@ -18,8 +17,6 @@ export enum CLS {
   /* MISER is the class of elements that, when clicked, toggle the display of
    * their associated tooltip. */
   MISER = 'miser',
-  /* ABOVE is the class for tooltips that render above the element. */
-  ABOVE = 'above',
 }
 
 /* Delay (ms) between mouseleave and hiding a hover-invoked tooltip, giving
@@ -120,22 +117,17 @@ function wire(
  * @param content - The content that shows when the parent element is hovered.
  * @param classes
  * @param invocation
- * @param position - Whether to render 'above' or 'below'.
  */
 export function addTooltip(
   parent: Element,
   content: (Node | string)[],
   classes: string[] = [],
-  invocation: Invocation = 'hover',
-  position: Position = 'below'
+  invocation: Invocation = 'hover'
 ): void {
   const tooltip: HTMLDivElement = document.createElement('div');
   tooltip.append(...content);
 
   tooltip.classList.add(CLS.TOOLTIP, ...classes);
-  if (position === 'above') {
-    tooltip.classList.add(CLS.ABOVE);
-  }
 
   parent.classList.add(invocation === 'hover' ? CLS.TIPPER : CLS.MISER);
 

@@ -1253,9 +1253,8 @@ const DATA_FOOTNOTE = 'footnote';
 
 /**
  * Wire a hover tooltip onto each `.footnoted` wrapper carrying a
- * `data-footnote` so the footnote text renders above it, matching the addenda
- * treatment. The whole wrapper is the trigger; the inner `.mark` keeps the
- * `[N]` indicator visible to flag the presence of a footnote.
+ * `data-footnote`. The inner `.mark` keeps the `[N]` indicator visible to flag
+ * the presence of a footnote, and is itself the tooltip's trigger.
  *
  * The footnote text in `data-footnote` is the raw HTML produced by the Python
  * pipeline (Coptic/Greek spans, italics, etc. all rendered before the footnote
@@ -1279,13 +1278,7 @@ function handleFootnotes(root: HTMLElement): void {
       // tooltips! Footnoted text also (usually) has tooltips. If hovering the
       // footnoted text were to show the footnote, that could trigger too many
       // overlapping tooltips simultaneously!
-      tool.addTooltip(
-        footnoted.querySelector(css.c(cls.MARK))!,
-        [content],
-        [],
-        'hover',
-        'above'
-      );
+      tool.addTooltip(footnoted.querySelector(css.c(cls.MARK))!, [content]);
     });
 }
 
@@ -1295,14 +1288,15 @@ function handleFootnotes(root: HTMLElement): void {
  */
 function handleAddenda(root: HTMLElement): void {
   root
-    .querySelectorAll<HTMLElement>(`.${cls.ADDENDUM}`)
+    .querySelectorAll<HTMLElement>(css.c(cls.ADDENDUM))
     .forEach((elem: HTMLElement): void => {
       const page: string = elem.dataset[DATA_PAGE]!;
-      const a: HTMLAnchorElement = html.anchor(
-        paths.crumScan(page),
-        ...scan.prettyPage(page)
-      );
-      tool.addTooltip(elem, ['Addenda', ' (', a, ')'], [], 'hover', 'above');
+      tool.addTooltip(elem.querySelector(css.c(cls.MARK))!, [
+        'Addenda',
+        ' (',
+        html.anchor(paths.crumScan(page), ...scan.prettyPage(page)),
+        ')',
+      ]);
     });
 }
 
@@ -1545,7 +1539,8 @@ function replaceAnaphor(
  * content one (or more) levels BELOW it:
  *   - A correction `//removed//added//` is emitted (by `replace_addendum` in
  *     `dictionary/marcion_sourceforge_net/wiki.py`) as
- *       <span class="addendum"><del>removed</del> <ins>added</ins></span>
+ *       <span class="addendum"><del>removed</del> <ins>added</ins>
+ *       <span class="mark">[N]</span></span>
  *   - Text carrying a footnote is emitted (by `replace_footnote`) as
  *       <span class="footnoted" data-footnote="…">text<span class="mark">[N]
  *       </span></span>

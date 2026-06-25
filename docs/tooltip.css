@@ -104,19 +104,6 @@
     display: block;
   }
 
-  /* .above causes tooltips to render above their parent element. */
-  &.above {
-    /* Mirror of the default: the positioning area runs from a small top
-     * gutter down to the anchor's top edge, and we align to the bottom of
-     * it so the tooltip sits flush against the anchor and grows upward. */
-    top: 8px;
-    bottom: anchor(top);
-    align-self: end;
-
-    /* Move the box shadow to prevent it from hiding the parent. */
-    box-shadow: 0 -8px 16px rgb(0 0 0 / 20%);
-  }
-
   /* Default: left edge pinned to the anchor's left edge (via `left: anchor(left)` above).
    * If that would cause the tooltip to overflow the viewport on the right,
    * the browser falls back to the rule below, which pins the tooltip's
