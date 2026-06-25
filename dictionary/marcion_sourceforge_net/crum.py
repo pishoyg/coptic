@@ -446,11 +446,12 @@ class Root(Row):
     @functools.cached_property
     def wikis(self) -> list[wiki.Wiki]:
         _verify_wiki_keys()
-        return (
-            []
-            if self.key in _FROM_MARCION
-            else wiki.by_marcion_key()[self.key]
-        )
+        if self.key in _FROM_MARCION:
+            return []
+        wikis: list[wiki.Wiki] = wiki.by_marcion_key()[self.key]
+        if all(w.vide for w in wikis):
+            log.error(self, "consists entirely of vide entries!")
+        return wikis
 
     @functools.cached_property
     def wiki_html(self) -> str:
@@ -939,6 +940,14 @@ class Root(Row):
                 before = True
             yield "</div>"
             del before
+
+    @typing.override
+    def __str__(self) -> str:
+        return self.key
+
+    @typing.override
+    def __repr__(self) -> str:
+        return self.__str__()
 
 
 class Crum:
