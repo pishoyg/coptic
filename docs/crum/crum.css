@@ -437,6 +437,11 @@ del {
 
 .footnoted:has(.mark:hover) {
   text-decoration: underline gray;
+
+  /* As of the time of writing, footnotes are solely used for corrections rather
+   * than adding information. It is therefore appropriate to slightly dim the
+   * (incorrect) footnoted text when showing the footnote. */
+  opacity: 0.6;
 }
 
 .addendum:has(.mark:hover) {
