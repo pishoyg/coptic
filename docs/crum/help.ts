@@ -17,6 +17,7 @@ import * as cls from './cls.js';
 import * as head from '../header.js';
 import * as id from './id.js';
 import * as mode from './mode.js';
+import * as html from '../html.js';
 
 /**
  *
@@ -74,7 +75,7 @@ export function makeHelpPanel(
     ],
     H: [
       new help.Shortcut(
-        `Open <a href="${paths.HOME}" target="_blank"><strong>h</strong>omepage</a>`,
+        ['Open ', html.anchor(paths.HOME, ...help.strongKey('H', 'Homepage'))],
         ['lexicon', 'note', 'index', 'index_index'],
         () => {
           browser.open(paths.HOME);
@@ -83,7 +84,7 @@ export function makeHelpPanel(
     ],
     X: [
       new help.Shortcut(
-        `Open the <a href="${browser.getLinkHref('search')!}" target="_blank">search page</a>`,
+        ['Open ', html.anchor(browser.getLinkHref('search')!, 'search page')],
         ['lexicon', 'note', 'index', 'index_index'],
         browser.openSearchLink
       ),
@@ -116,12 +117,15 @@ export function makeHelpPanel(
     ],
     z: [
       new help.Shortcut(
-        `Yank the key of the word currently being viewed <span class="${cls.DEV_MODE_NOTE}">(dev mode)</span>`,
+        [
+          'Yank the key of the word currently being viewed',
+          html.classify(html.span('(dev mode)'), cls.DEV_MODE_NOTE),
+        ],
         ['lexicon', 'note', 'index'],
         (): void => {
           const text: string | undefined = browser
             .findNextElement(
-              `.${xoox.CLS.KEY}, .${cls.SISTER_KEY}, .${cls.DRV_KEY}`,
+              css.disjunction(xoox.CLS.KEY, cls.SISTER_KEY, cls.DRV_KEY),
               'cur'
             )
             ?.textContent.trim();
@@ -200,7 +204,7 @@ export function makeHelpPanel(
     ],
     K: [
       new help.Shortcut(
-        `<a href="${paths.KELLIA}" target="_blank" rel="noopener,noreferrer"><strong>K</strong>ELLIA</a>`,
+        html.anchor(paths.KELLIA, ...help.strongKey('K', 'KELLIA')),
         ['lexicon'],
         () => {
           browser.scroll(id.title(id.KELLIA));
@@ -241,7 +245,7 @@ export function makeHelpPanel(
     ],
     e: [
       new help.Shortcut(
-        'S<strong>e</strong>ns<strong>e</strong>s',
+        ['S', html.strong('e'), 'ns', html.strong('e'), 's'],
         ['note'],
         () => {
           browser.scroll(id.SENSES);
@@ -301,7 +305,7 @@ export function makeHelpPanel(
     ],
     k: [
       new help.Shortcut(
-        `<a href="${paths.KELLIA}" target="_blank" rel="noopener,noreferrer"><strong>K</strong>ELLIA</a>`,
+        html.anchor(paths.KELLIA, ...help.strongKey('K', 'KELLIA')),
         ['lexicon'],
         () => {
           browser.click(id.collapse(id.KELLIA));

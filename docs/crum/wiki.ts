@@ -1189,7 +1189,7 @@ function replaceMatch(context: html.Context): void {
   }
 
   if (key === ';') {
-    context.insert(semicolon(context));
+    replaceSemicolon(context);
     // Do not return because the semicolon is also a dangling suffix marker.
     flag = true;
   }
@@ -1305,16 +1305,15 @@ function handleAddenda(root: HTMLElement): void {
  * @param context
  * @returns
  */
-function semicolon(context: html.Context): HTMLSpanElement {
-  const span = document.createElement('span');
+function replaceSemicolon(context: html.Context): void {
+  const span: HTMLSpanElement = html.span(...context.munch());
   span.classList.add(cls.SEMICOLON);
-  span.append(...context.munch());
   tool.addTooltip(
     span,
     ['semicolons separate groups in meaning or usage'],
     [cls.SEMICOLON]
   );
-  return span;
+  context.insert(span);
 }
 
 const DATA_KEY = 'key';

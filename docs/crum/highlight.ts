@@ -190,7 +190,7 @@ export class Highlighter extends high.DialectHighlighter<dial.DIALECT> {
     const availability: iam.Identity[] = dialect.dictionaries.includes('Crum')
       ? ['lexicon', 'note', 'index']
       : ['lexicon'];
-    return new help.Shortcut(table, availability, () => {
+    return new help.Shortcut([table], availability, () => {
       this.toggle(dialect.code);
     });
   }

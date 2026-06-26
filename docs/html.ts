@@ -38,6 +38,26 @@ export function span(...children: (Node | string)[]): HTMLSpanElement {
 }
 
 /**
+ * @param elem
+ * @param classes
+ * @returns
+ */
+export function classify<T extends Element>(elem: T, ...classes: string[]): T {
+  elem.classList.add(...classes);
+  return elem;
+}
+
+/**
+ * @param children
+ * @returns
+ */
+export function strong(...children: (Node | string)[]): HTMLElement {
+  const s: HTMLSpanElement = document.createElement('strong');
+  s.append(...children);
+  return s;
+}
+
+/**
  *
  * @param content
  * @param flag

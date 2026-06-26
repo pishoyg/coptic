@@ -4,6 +4,7 @@ import * as iam from './iam.js';
 import * as cls from './cls.js';
 import * as log from './logger.js';
 import * as dev from './dev.js';
+import * as html from './html.js';
 
 const TITLE = 'Keyboard Shortcuts';
 
@@ -115,43 +116,17 @@ const SHIFT_MAP: Record<string, string> = {
 };
 
 /**
- * Bolden the given text, for the purposes of the help panel.
- *
- * To make it easier for users to memorize keyboard shortcuts, the shortcut
- * description boldens the character that inspired the key. For example, if `B`
- * toggles `Bohairic`, then the description of the shortcut should show the word
- * as `*B*ohairic` with the `B` boldened, to make it obvious why the key `B` was
- * selected for this shortcut.
- *
- * @param char
- * @returns A plain HTML string representing a highlighted version of the given
- * string.
- */
-export function highlight(char: string): string {
-  return `<strong>${char}</strong>`;
-}
-
-/**
- * Highlight the first occurrence of the given character in the given string.
- * @param char - Character to search for.
- * @param str - An HTML string, potentially containing tags.
+ * Highlight the first occurrence of the given key in the given string.
+ * @param key - Key to search for.
+ * @param str - A string.
  * @returns - A copy of the string, with the first occurrence of the given
  * character wrapped in a <strong> tag.
- * If the string looks like it has other HTML tags, we return the original
- * string without modifying it.
  */
-export function highlightFirstOccurrence(char: string, str: string): string {
-  if (str.includes('<')) {
-    // This might already have an HTML tag, so we don't risk highlighting it to
-    // avoid breaking something.
-    return str;
-  }
-  const index = str.toLowerCase().indexOf(char.toLowerCase());
-  if (index === -1) {
-    return str;
-  }
-
-  return `${str.slice(0, index)}${highlight(str[index]!)}${str.slice(index + 1)}`;
+export function strongKey(key: string, str: string): (Node | string)[] {
+  const index: number = str.toLowerCase().indexOf(key.toLowerCase());
+  return index === -1
+    ? [str]
+    : [str.slice(0, index), html.strong(str[index]!), str.slice(index + 1)];
 }
 
 /**
@@ -166,7 +141,7 @@ export class Shortcut {
    * @param action - Action that this shortcut performs.
    */
   public constructor(
-    private readonly description: string | HTMLElement,
+    private readonly description: Node | string | (Node | string)[],
     private readonly identities: iam.Identity[],
     private readonly action: (event: KeyboardEvent) => void
   ) {}
@@ -217,7 +192,9 @@ export class Shortcut {
   private descriptionCell(key: string): HTMLTableCellElement {
     const cell = document.createElement('td');
     if (typeof this.description === 'string') {
-      cell.innerHTML = highlightFirstOccurrence(key, this.description);
+      cell.append(...strongKey(key, this.description));
+    } else if (Array.isArray(this.description)) {
+      cell.append(...this.description);
     } else {
       cell.append(this.description);
     }
@@ -235,16 +212,6 @@ export class Shortcut {
     row.classList.add(CLS.SHORTCUT);
     row.append(this.keyCell(key), this.descriptionCell(key));
     return row;
-  }
-
-  /**
-   *
-   * @returns
-   */
-  public textDescription(): string {
-    return typeof this.description === 'string'
-      ? this.description.replace(/<.*?>/g, '')
-      : this.description.textContent;
   }
 }
 
@@ -501,12 +468,7 @@ export class Help {
       log.ensure(
         consumers.length <= 1,
         key,
-        'is consumable by multiple shortcuts:',
-        ...consumers.flatMap((s: Shortcut, index: number): string[] =>
-          index === consumers.length - 1
-            ? [s.textDescription()]
-            : [s.textDescription(), ',']
-        )
+        'is consumable by multiple shortcuts!'
       );
     });
   }

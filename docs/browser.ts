@@ -12,7 +12,7 @@ export function open(url: string | null | undefined, external = true): void {
     return;
   }
   if (external) {
-    window.open(url, '_blank', 'noopener,noreferrer');
+    window.open(url, '_blank', 'noopener noreferrer');
     return;
   }
   window.open(url, '_self');

@@ -77,9 +77,9 @@ export class Source {
         ul.append(li);
       });
       ul.querySelectorAll('strong').forEach((strong: HTMLElement): void => {
-        const span: HTMLSpanElement = html.span(...strong.childNodes);
-        span.classList.add(cls.ABBREVIATION);
-        strong.replaceWith(span);
+        strong.replaceWith(
+          html.classify(html.span(...strong.childNodes), cls.ABBREVIATION)
+        );
       });
       this.descriptionMemo = ul;
     }
@@ -119,7 +119,7 @@ export class Reference {
     const fragment: DocumentFragment = new DocumentFragment();
 
     fragment.append(
-      ...abbreviation(this.variant),
+      abbreviation(this.variant),
       ...this.source.title(),
       ...[this.source.description(), this.postfix?.tooltip()].filter(
         (e) => e !== undefined
@@ -229,7 +229,7 @@ export class Reference {
         }
         const div: HTMLDivElement = document.createElement('div');
         div.append(
-          ...abbreviation(abb, italic),
+          abbreviation(abb, italic),
           html.maybeI(annot.fullForm, italic)
         );
         yield div;
@@ -244,14 +244,11 @@ export class Reference {
  * @param italic
  * @returns
  */
-function* abbreviation(
-  name: string | Node,
-  italic?: boolean
-): Iterable<HTMLElement> {
-  const span: HTMLSpanElement = document.createElement('span');
-  span.append(html.maybeI(name, italic), ': ');
-  span.classList.add(cls.ABBREVIATION);
-  yield span;
+function abbreviation(name: string | Node, italic?: boolean): Element {
+  return html.classify(
+    html.span(html.maybeI(name, italic), ': '),
+    cls.ABBREVIATION
+  );
 }
 
 /**
@@ -291,7 +288,7 @@ class Postfix {
     }
 
     if (typeof this.interpretation === 'string') {
-      return [...abbreviation(this.name), ...html.parse(this.interpretation)];
+      return [abbreviation(this.name), ...html.parse(this.interpretation)];
     }
 
     dev.play(() => {
