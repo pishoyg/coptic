@@ -43,11 +43,21 @@
 
   /* Default placement: directly below the parent, aligned with its left edge. */
 
-  /* `absolute`, not `fixed`: Firefox resolves `anchor()` in document
-   * coordinates, while a `fixed` element's insets are viewport-relative, so on
-   * a scrolled page the tooltip lands off by the scroll offset. `absolute`
-   * insets are document-relative too, which matches `anchor()` and keeps the
-   * tooltip pinned to its trigger in both Firefox and Chromium. */
+  /* `absolute`, not `fixed`, by default. Under `fixed`, Firefox resolves
+   * `anchor()` in document coordinates but treats the element's insets as
+   * viewport-relative, so on a scrolled page the tooltip lands off by the
+   * anchor's offset. Under `absolute` the insets are document-relative too,
+   * which matches `anchor()`, so the tooltip stays pinned in Firefox and
+   * Chromium alike. (Chromium pins correctly under `fixed` as well — it just
+   * doesn't need `fixed`, since `absolute` already shifts correctly for it.)
+   *
+   * Safari/WebKit is the exception: under `absolute` it grows the containing
+   * block to the document's scroll width, defeating the overflow-shift below
+   * (#755), so the Safari-only @supports rule at the bottom of this file
+   * overrides it to `position: fixed` — WebKit resolves `anchor()` correctly
+   * under `fixed`, so positioning stays accurate while the shift starts
+   * working. The override must stay WebKit-scoped: Chromium doesn't need it,
+   * and Firefox would break under `fixed`. */
   position: absolute;
   inset: anchor(bottom) 0 8px anchor(left);
 
@@ -123,4 +133,16 @@
 @position-try --shift-to-fit {
   left: auto;
   right: 8px;
+}
+
+/* Safari-only override (see the `position: absolute` note above for why).
+ * `-webkit-named-image` is a WebKit feature that Chromium removed and Firefox
+ * never shipped, so this @supports query matches Safari but not Chromium or
+ * Firefox — letting us hand Safari `position: fixed` (which it needs to make
+ * the overflow-shift fire) without disturbing the engines that position
+ * correctly under `absolute` (#755). */
+@supports (background: -webkit-named-image(i)) {
+  .tooltip[popover] {
+    position: fixed;
+  }
 }
