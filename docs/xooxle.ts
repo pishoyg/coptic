@@ -1347,10 +1347,7 @@ class LineSearchResult implements Result {
     // are too, and a linear merge suffices.
     const ranges: Range[] = [];
     for (const match of this.matches) {
-      const range: Range = {
-        start: this.scan(match.start, -1, orth.isWordCharInChrome),
-        end: this.scan(match.end, 1, orth.isWordCharInChrome),
-      };
+      const range: Range = this.range(match);
       const last = ranges[ranges.length - 1];
       if (last && range.start <= last.end) {
         last.end = Math.max(last.end, range.end);
@@ -1369,6 +1366,57 @@ class LineSearchResult implements Result {
   }
 
   /**
+   * @param match
+   * @returns
+   */
+  private range(match: Match): Range {
+    const range: Range = {
+      start: this.scan(match.start, -1, orth.isWordCharForFragments),
+      end: this.scan(match.end, 1, orth.isWordCharForFragments),
+    };
+
+    // Extend a fragment's end forward off a boundary that Chromium can't
+    // anchor.
+    //
+    // Chromium silently drops a text fragment whose `textStart` ends on a
+    // spacing diacritic presentation form such as U+FE76 (see
+    // `orth.isSpacingDiacritic`): its word-boundary check won't place a
+    // boundary next to one. Word expansion happily produces such an edge for
+    // a token like `ﻣﹶ` (whose final character is the isolated fatha), so
+    // here we absorb the following word(s) until the final character is a
+    // normal word character — `ﻣﹶ` becomes `ﻣﹶ بحري`, which Chromium
+    // highlights. If no following word exists (end of line) we leave the
+    // range unchanged, as a best effort.
+    //
+    // This is a Chromium-only quirk; other engines anchor `ﻣﹶ` correctly, so
+    // we skip the adjustment there and keep the tighter highlight.
+    //
+    // There is deliberately no symmetric `anchorStart`. The rejection is
+    // asymmetric: Chromium refuses a boundary *after* a base-attached
+    // diacritic but accepts one *before* a diacritic, so a `textStart` that
+    // begins with one still matches. Word expansion can only rest `start` on
+    // a diacritic that a non-word char precedes (an "orphan" not attached to
+    // a base letter), which is exactly the leading position Chromium
+    // tolerates — so the start never needs adjusting.
+    //
+    // NOTE: our search text is NFD-normalized with combining marks stripped,
+    // so precomposed letters (e.g. "é" → "e") never reach this check; the
+    // only survivors whose NFKD form re-introduces a combining mark — and
+    // hence the only characters `orth.isSpacingDiacritic` can match here — are
+    // these compatibility spacing forms.
+    if (browser.chromium()) {
+      while (
+        range.end < this.text.length &&
+        orth.isSpacingDiacritic(this.text[range.end - 1]!)
+      ) {
+        range.end = this.traverseContext(range.end, 1, 1);
+      }
+    }
+
+    return range;
+  }
+
+  /**
    * moves an index in a specific direction (step) as long as the
    * predicate returns true for the current character.
    * @param idx
@@ -1384,38 +1432,34 @@ class LineSearchResult implements Result {
     // When moving left (-1), we look at the character before the cursor
     // (idx - 1).
     // When moving right (1), we look at the character at the cursor (idx).
-    let charIdx = step < 0 ? idx - 1 : idx;
+    if (step < 0) {
+      --idx;
+    }
 
-    while (
-      charIdx >= 0 &&
-      charIdx < this.text.length &&
-      predicate(this.text[charIdx]!)
-    ) {
+    while (idx >= 0 && idx < this.text.length && predicate(this.text[idx]!)) {
       idx += step;
-      charIdx += step;
+    }
+
+    // Restore the delta.
+    if (step < 0) {
+      ++idx;
     }
     return idx;
   }
 
   /**
    * Repeats the "Skip Separators -> Consume Word" logic 'count' times.
-   * @param startIdx
+   * @param idx
    * @param count
    * @param step
    * @returns
    */
-  private traverseContext(
-    startIdx: number,
-    count: number,
-    step: number
-  ): number {
-    let idx = startIdx;
-    for (let i = 0; i < count; i++) {
+  private traverseContext(idx: number, count: number, step: number): number {
+    while (count--) {
       // 1. Skip whitespace / delimiters.
-      idx = this.scan(idx, step, (c) => !orth.isWordCharInChrome(c));
-
+      idx = this.scan(idx, step, (c) => !orth.isWordCharForFragments(c));
       // 2. Consume the word.
-      idx = this.scan(idx, step, (c) => orth.isWordCharInChrome(c));
+      idx = this.scan(idx, step, orth.isWordCharForFragments);
     }
     return idx;
   }

@@ -26,6 +26,24 @@ export function firefox(): boolean {
 }
 
 /**
+ * @returns Whether you're running on a Chromium-based browser (Chrome, Edge,
+ * Opera, Brave, ...). Their user-agent strings all carry the "Chrome" token,
+ * while Firefox and Safari do not.
+ */
+export function chromium(): boolean {
+  return navigator.userAgent.toLowerCase().includes('chrome');
+}
+
+/**
+ * @returns Whether you're running on Safari (WebKit). Every Chromium browser
+ * also carries a "Safari" token in its user-agent string, so we additionally
+ * require the absence of the "Chrome" token that they all add.
+ */
+export function safari(): boolean {
+  return navigator.userAgent.toLowerCase().includes('safari') && !chromium();
+}
+
+/**
  * @returns
  */
 export function smallScreen(): boolean {

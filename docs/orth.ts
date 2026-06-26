@@ -1,4 +1,5 @@
 /** Package orth defines orthography logic. */
+import * as browser from './browser.js';
 
 /**
  * Use NFD normalization to split characters into their base character and
@@ -52,10 +53,10 @@ export function idempotent(tran: Translation): boolean {
   return tran.at(-1) === tran.length - 1;
 }
 
-// CHROME_WORD_CHARS is a list of characters that are considered word characters
-// in Chrome.
-// See #286 for context.
-const CHROME_WORD_CHARS: Set<string> = new Set<string>(["'"]);
+// SAFARI_FRAGMENT_WORD_CHARS is a list of otherwise non-word characters that
+// are considered word characters for fragment purposes by Safari. See #286 for
+// context.
+const SAFARI_FRAGMENT_WORD_CHARS: Set<string> = new Set<string>(["'"]);
 
 /**
  *
@@ -75,6 +76,23 @@ export function isWordChar(char?: string): boolean {
  * @returns
  * See #286 for context.
  */
-export function isWordCharInChrome(char?: string): boolean {
-  return isWordChar(char) || (!!char && CHROME_WORD_CHARS.has(char));
+export function isWordCharForFragments(char: string): boolean {
+  return (
+    isWordChar(char) ||
+    (SAFARI_FRAGMENT_WORD_CHARS.has(char) && browser.safari())
+  );
+}
+
+/**
+ * A "spacing diacritic" is a presentation form that renders a diacritic as a
+ * standalone glyph \u2014 for example U+FE76 ARABIC FATHA ISOLATED FORM, whose
+ * compatibility decomposition is <space> + U+064E (combining fatha). Unlike a
+ * combining mark, it has letter category (Lo) rather than Mark, so it survives
+ * `cleanDiacritics` (which strips only combining marks).
+ *
+ * @param char
+ * @returns Whether `char` is a spacing clone of a combining mark.
+ */
+export function isSpacingDiacritic(char: string): boolean {
+  return !/\p{Mark}/u.test(char) && /\p{Mark}/u.test(char.normalize('NFKD'));
 }
