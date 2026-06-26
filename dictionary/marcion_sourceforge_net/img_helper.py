@@ -842,7 +842,10 @@ class _Prompter:
             img: crum.Image = crum.Image(basename)
             _ = pathlib.Path(f).rename(img.src_path)
             _convert(img)
-            file.write("\n".join(self.sources[f]), img.sources_path)
+            file.writelines(
+                (f"{line}\n" for line in self.sources[f]),
+                img.sources_path,
+            )
 
         return True
 

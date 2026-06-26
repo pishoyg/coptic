@@ -99,36 +99,56 @@ def singleton[T](arr: abc.Iterable[T]) -> T:
     return first
 
 
-_bracket_map: dict[str, str] = {")": "(", "]": "[", "}": "{", ">": "<"}
-_opening_brackets: set[str] = set(_bracket_map.values())
+def balanced[T](
+    tokens: abc.Iterable[T],
+    is_opening: abc.Callable[[T], bool],
+    is_closing: abc.Callable[[T], bool],
+    key: abc.Callable[[T], object],
+    *message: object,
+) -> None:
+    """Verify that opening and closing tokens nest correctly, using a stack.
 
+    An opening token and a closing token correspond iff `key` maps them to
+    equal values. Tokens that are neither opening nor closing are ignored.
 
-def brackets_balanced(s: str, *message: object, strict: bool = True) -> None:
-    stack: list[str] = []
-    for idx, char in enumerate(s):
-        if char in _opening_brackets:
-            stack.append(char)
-            continue
-        if char in _bracket_map:
+    Args:
+        tokens: The stream of tokens to check (e.g. characters, or HTML tags).
+        is_opening: Whether a token opens a new scope (pushed onto the stack).
+        is_closing: Whether a token closes the innermost open scope.
+        key: Maps a token to the value used to match an opening token against
+            its closing token.
+        *message: Extra context prepended to error messages.
+    """
+    stack: list[object] = []
+    for idx, token in enumerate(tokens):
+        if is_opening(token):
+            stack.append(key(token))
+        elif is_closing(token):
             ensure(
-                stack and _bracket_map[char] == stack.pop(),
+                stack and stack.pop() == key(token),
                 *message,
-                "unbalanced bracket at position",
+                "unbalanced closing token",
+                token,
+                "at position",
                 idx,
-                s[:idx],
-                char,
-                s[idx + 1 :],
-                strict=strict,
             )
 
-    ensure(
-        not stack,
-        *message,
-        "unclosed brackets:",
-        stack,
-        "in",
+    ensure(not stack, *message, "unclosed tokens:", stack)
+
+
+_bracket_map: dict[str, str] = {"(": ")", "[": "]", "{": "}", "<": ">"}
+_closing_brackets: set[str] = set(_bracket_map.values())
+
+
+def brackets_balanced(s: str, *message: object) -> None:
+    balanced(
         s,
-        strict=strict,
+        lambda char: char in _bracket_map,
+        lambda char: char in _closing_brackets,
+        # An opening bracket maps to its matching closing bracket; a closing
+        # bracket maps to itself. We use the closing bracket as a key.
+        lambda char: _bracket_map.get(char, char),
+        *message,
     )
 
 

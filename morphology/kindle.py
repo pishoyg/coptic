@@ -331,5 +331,7 @@ class Dictionary:
 
         # Write the files.
         for filename, content in filename_to_content.items():
+            # TODO: (#0) Express the content as a generator, and use
+            # `file.writelines`.
             file.write(content, os.path.join(directory, filename))
         log.wrote(directory)

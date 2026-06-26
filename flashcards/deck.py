@@ -123,13 +123,13 @@ class Note:
         self.back: str = back
         self.js_path: str = js_path
         self.css: list[str] = css or []
-        self.head: str = page.html_head(
+        self.head: abc.Generator[str] = page.html_head_aux(
             title=title,
             search=search,
             next_href=nxt,
             prev_href=prv,
             scripts=[js_path] if js_path else [],
-            css=css,
+            css=css or [],
         )
         self.html: str = "".join(self.__html_aux())
         self.js_start: str = js_start

@@ -1296,7 +1296,12 @@ class Index:
     def basename(self) -> str:
         return file_name(self.title) + ".html"
 
-    def write(self, dir_: str | pathlib.Path, head: str, header: str) -> None:
+    def write(
+        self,
+        dir_: str | pathlib.Path,
+        head: abc.Generator[str],
+        header: str,
+    ) -> None:
         file.writelines(
             page.html_aux(head, INDEX_CLASS, header, *self.body),
             os.path.join(dir_, self.basename()),
@@ -1324,7 +1329,7 @@ class IndexIndex:
     def _basename(self) -> str:
         return file_name(self.name) + ".html"
 
-    def _iter_subindex_heads(self) -> abc.Generator[str]:
+    def _iter_subindex_heads(self) -> abc.Generator[abc.Generator[str]]:
         for i, index in enumerate(self.indexes):
             prv = self.indexes[i - 1].basename() if i > 0 else ""
             nxt = (
@@ -1332,7 +1337,7 @@ class IndexIndex:
                 if i < len(self.indexes) - 1
                 else ""
             )
-            yield page.html_head(
+            yield page.html_head_aux(
                 title=index.title,
                 search=SEARCH,
                 scripts=[JS],
@@ -1343,7 +1348,7 @@ class IndexIndex:
 
     def _write_subindex(
         self,
-        args: tuple[str | pathlib.Path, Index, str],
+        args: tuple[str | pathlib.Path, Index, abc.Generator[str]],
     ) -> None:
         dir_, subindex, head = args
         subindex.write(dir_, head, self.subindex_header)
@@ -1364,16 +1369,15 @@ class IndexIndex:
             )
 
         # Write the index index!
-        head: str = page.html_head(
-            title=self.name,
-            search=SEARCH,
-            scripts=[JS],
-            css=CSS,
-        )
 
         file.writelines(
             page.html_aux(
-                head,
+                page.html_head_aux(
+                    title=self.name,
+                    search=SEARCH,
+                    scripts=[JS],
+                    css=CSS,
+                ),
                 INDEX_INDEX_CLASS,
                 *self.header,
                 *self._body_aux(),

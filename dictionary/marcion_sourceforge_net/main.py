@@ -56,14 +56,14 @@ def _row_nums_js(mapping: abc.Iterable[tuple[int, int]]) -> abc.Generator[str]:
     for row in mapping:
         key, value = row
         yield f"{key}: {value},"
-    yield "};"
+    yield "};\n"
 
 
 def _write_row_nums(
     mapping: abc.Iterable[tuple[int, int]],
     dst: pathlib.Path,
 ) -> None:
-    file.write("".join(_row_nums_js(mapping)), dst)
+    file.writelines(_row_nums_js(mapping), dst)
 
 
 class Page:

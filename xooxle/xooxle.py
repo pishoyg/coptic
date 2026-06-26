@@ -295,9 +295,6 @@ class Capture:
         parts = clean.clean(parts)
         return "".join(parts)
 
-    def _close(self, tag: str) -> str:
-        return f"</{clean.tag_name(tag)}>"
-
     def _balance_lines(self, stream: Iterable[str]) -> Generator[str]:
         """Make sure every unit and line in the stream has balanced tags.
 
@@ -328,16 +325,20 @@ class Capture:
         for token in stream:
 
             if token in [const.UNIT_DELIMITER, page.LINE_BREAK]:
-                yield from map(self._close, reversed(stack))
+                # Close all tags on the stack.
+                for tag in reversed(stack):
+                    yield f"</{page.name(tag)}>"
+                # Yield the current token.
                 yield token
+                # Reopen all tags.
                 yield from stack
                 continue
 
             yield token
 
-            if clean.closing_tag(token):
-                clean.ensure_same_name(stack.pop(), token)
-            elif clean.opening_tag(token):
+            if page.closing(token, False):
+                _ = stack.pop()
+            elif page.opening(token, False):
                 stack.append(token)
 
         ensure.ensure(
@@ -400,8 +401,8 @@ class Capture:
                 )
             }>'
             ensure.ensure(
-                const.TAG_RE.fullmatch(opening),
-                "Generated opening tag does not match TAG_RE:",
+                page.opening(opening),
+                "Invalid opening tag:",
                 opening,
             )
             yield opening
@@ -409,8 +410,8 @@ class Capture:
             yield from self._get_children_simplified_html(child)
             closing: str = f"</{name}>"
             ensure.ensure(
-                const.TAG_RE.fullmatch(closing),
-                "Generated closing tag does not match TAG_RE:",
+                page.closing(closing),
+                "Invalid closing tag:",
                 closing,
             )
             yield closing
@@ -456,7 +457,7 @@ class Capture:
         # below will catch it loudly. TODO: (#0) Allow tag-like text.
         text: str = " ".join(raw.split())
         ensure.ensure(
-            not const.TAG_RE.search(text),
+            not page.TAG_RE.search(text),
             "Input text looks like a tag and would corrupt the index:",
             text,
         )
@@ -501,7 +502,7 @@ class Xooxle:
     def _diacritic_free_text(self, html: str) -> str:
         # NOTE: The HTML doesn't escape its special characters, so we don't need
         # to un-escape them during text extraction.
-        return orth.clean_diacritics(const.TAG_RE.sub("", html))
+        return orth.clean_diacritics(page.TAG_RE.sub("", html))
 
     def line(self, html: str) -> Line:
         return html, self._diacritic_free_text(html)

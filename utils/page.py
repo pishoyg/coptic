@@ -4,6 +4,8 @@ import os
 import re
 from collections import abc
 
+import regex
+
 from utils import ensure, paths
 
 _CHARSET_TAG: str = """
@@ -33,22 +35,72 @@ _GOOGLE_TAG: str = """
   </script>
 """
 
+# TAG_RE matches a single HTML tag (opening, closing, or self-closing) and
+# captures its tag name. We intentionally maintain a simplified, permissive
+# expression, which suffices for our purposes.
+TAG_RE: re.Pattern[str] = re.compile(
+    r"</?([a-z][a-z0-9]*).*?>",
+    re.DOTALL | re.IGNORECASE,
+)
 LINE_BREAK: str = "<br>"
 HORIZONTAL_RULE: str = "<hr>"
 
-HTML_ID_RE: re.Pattern[str] = re.compile(r'\bid=".*?"')
+_HTML_ID_RE: regex.Pattern[str] = regex.compile(
+    r'(?<=<\w+[^>]*)\bid=".*?"(?=[^<]*>)',
+)
+
+assert TAG_RE.fullmatch(LINE_BREAK)
+assert TAG_RE.fullmatch(HORIZONTAL_RULE)
+
+# _VOID_TAGS are HTML elements that never have a closing tag, and so are
+# excluded from the balance check.
+# NOTE: This list is not exhaustive, but it covers all the tags used in our
+# repository.
+_VOID_TAGS: frozenset[str] = frozenset(
+    {"br", "col", "hr", "img", "input", "link", "meta", "source"},
+)
 
 
-def no_line_breaks(htm: str) -> str:
-    return htm.replace(LINE_BREAK, " ")
+def name(tag: str) -> str:
+    match: re.Match[str] | None = TAG_RE.fullmatch(tag)
+    assert match, tag
+    return match.group(1).lower()
 
 
-def no_ids(htm: str) -> str:
-    return HTML_ID_RE.sub("", htm)
+def is_tag(token: str) -> bool:
+    return bool(TAG_RE.fullmatch(token))
 
 
-# NOTE: html_head is used by our HTML generation logic to generated the <head>
-# elements for our pages.
+def opening(tag: str, strict: bool = True) -> bool:
+    match: re.Match[str] | None = TAG_RE.fullmatch(tag)
+    if strict:
+        assert match, tag
+    return bool(
+        match and tag[1] != "/" and match.group(1).lower() not in _VOID_TAGS,
+    )
+
+
+def closing(tag: str, strict: bool = True) -> bool:
+    match: re.Match[str] | None = TAG_RE.fullmatch(tag)
+    if strict:
+        assert match, tag
+    return bool(match) and tag[1] == "/"
+
+
+def ensure_same(a: str, b: str) -> None:
+    ensure.ensure(name(a) == name(b), "Unbalanced tags!", a, "and ", b)
+
+
+def no_line_breaks(html: str) -> str:
+    return html.replace(LINE_BREAK, " ")
+
+
+def no_ids(html: str) -> str:
+    return _HTML_ID_RE.sub("", html)
+
+
+# NOTE: html_head_aux is used by our HTML generation logic to generated the
+# <head> elements for our pages.
 # Besides the generated HTML files, a number of singleton manually-written HTML
 # pages don't use this function. If the desired head structure changes, updating
 # this function should update all of the auto-generated pages. But the
@@ -61,43 +113,13 @@ def no_ids(htm: str) -> str:
 # relative or server paths as appropriate.
 # This applies to paths to CSS and JavaScript files, and also to next, prev, and
 # search links.
-def html_head(
-    title: str,
-    search: str = "",
-    next_href: str = "",
-    prev_href: str = "",
-    scripts: list[str] | None = None,
-    css: list[str] | None = None,
-    epub: bool = False,
-) -> str:
-    assert title
-    if epub:
-        assert not search
-        assert not next_href
-        assert not prev_href
-        assert not scripts
-        assert not css
-
-    return "".join(
-        html_head_aux(
-            title,
-            search,
-            next_href,
-            prev_href,
-            scripts or [],
-            css or [],
-            epub,
-        ),
-    )
-
-
 def html_head_aux(
     title: str,
-    search: str,
-    next_href: str,
-    prev_href: str,
-    scripts: list[str],
-    css: list[str],
+    search: str | None = None,
+    next_href: str | None = None,
+    prev_href: str | None = None,
+    scripts: list[str] | None = None,
+    css: list[str] | None = None,
     epub: bool = False,
 ) -> abc.Generator[str]:
     """Construct content of an HTML <head> tag.
@@ -121,10 +143,23 @@ def html_head_aux(
         The HTML pieces, to be concatenated into the full HTML file.
     """
 
-    scripts = list(map(os.path.normpath, scripts))
+    assert title
+    yield "<head>"
+    yield f"<title>{title}</title>"
+    if epub:
+        # Nothing else is relevant to EPUB.
+        assert not search
+        assert not next_href
+        assert not prev_href
+        assert not scripts
+        assert not css
+        yield "</head>"
+        return
+
+    scripts = list(map(os.path.normpath, scripts or []))
     ensure.unique(scripts)
 
-    css = list(map(os.path.normpath, css))
+    css = list(map(os.path.normpath, css or []))
     ensure.unique(css)
 
     # The shared CSS is always included.
@@ -132,13 +167,6 @@ def html_head_aux(
     # normalized, uniform (all-relative or all-absolute) list of paths for all
     # the CSS files.
     css.append(paths.server(paths.SHARED_CSS))
-
-    yield "<head>"
-    yield f"<title>{title}</title>"
-    if epub:
-        # None of what remains is relevant to EPUB.
-        yield "</head>"
-        return
 
     yield _CHARSET_TAG
     yield _VIEWPORT_TAG
@@ -158,15 +186,29 @@ def html_head_aux(
     yield "</head>"
 
 
-def html_aux(head: str, iam: str, *body: str) -> abc.Generator[str]:
+def _html_aux(
+    head: abc.Generator[str],
+    iam: str,
+    *body: str,
+) -> abc.Generator[str]:
     yield "<!DOCTYPE html>"
     yield "<html>"
-    yield head
+    yield from head
     yield f'<body class="{iam}">'
     yield from body
     yield "</body>"
     yield "</html>"
 
 
-def html(head: str, iam: str, *body: str) -> str:
-    return "".join(html_aux(head, iam, *body))
+def html_aux(
+    head: abc.Generator[str],
+    iam: str,
+    *body: str,
+) -> abc.Generator[str]:
+    tags: list[str] = []
+    for token in _html_aux(head, iam, *body):
+        # NOTE: The following only works because our generators never generate a
+        # tag that spans multiple tokens.
+        tags.extend(match.group(0) for match in TAG_RE.finditer(token))
+        yield token
+    ensure.balanced(tags, opening, closing, name, "Unbalanced HTML:", tags)

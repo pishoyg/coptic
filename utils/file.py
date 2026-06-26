@@ -34,7 +34,7 @@ def write(
         content = orth.normalize(content)
     if make_dir:
         mk_parent_dir(path)
-    if fix_newline and (not content or content[-1] != "\n"):
+    if fix_newline and not content.endswith("\n"):
         content += "\n"
     with open(path, "w", encoding="utf-8") as f:
         _ = f.write(content)
@@ -78,10 +78,6 @@ def readlines(path: str | pathlib.Path) -> list[str]:
     except UnicodeDecodeError:
         with open(path, encoding="utf-16") as f:
             return f.readlines()
-
-
-def paths(dir_path: str | pathlib.Path) -> list[str]:
-    return [os.path.join(dir_path, f) for f in os.listdir(dir_path)]
 
 
 def splitext(path: str | pathlib.Path) -> tuple[str, str]:

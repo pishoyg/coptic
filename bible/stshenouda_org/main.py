@@ -528,7 +528,7 @@ class Chapter(Item):
         self._is_last: bool = False
         self.book: Book = book
 
-        # Make sure we're aware of all special cases. See #524.
+        # Make sure we're aware of all special cases. See #524 (and #677).
         if self.num.isalpha():
             assert self.book.name in ["Daniel", "Esther"]
         elif self.num[-1].isalpha():
@@ -545,9 +545,9 @@ class Chapter(Item):
         # resulting sequence seems to be aligned with Crum's up to 52 or 53,
         # then it starts being off by 1 from 53 or 54 onward, and then being off
         # by 2 from the late 50s or early 60s and all the way to the end!
-        # TODO: (#524) Implement this override in a cleaner, more visible
+        # TODO: (#677) Implement this override in a cleaner, more visible
         # location.
-        # TODO: (#524) Handle other oddly-numbered or interleaved chapters.
+        # TODO: (#677) Handle other oddly-numbered or interleaved chapters.
         if self.id() == "daniel_3":
             for idx, v in enumerate(self.verses[1:], 1):
                 v.num = str(idx)
@@ -557,7 +557,7 @@ class Chapter(Item):
                 for v in self.verses
                 if v.chapter and v.chapter != self.num
             }
-            # TODO: (#524) Change the following error to an assertion.
+            # TODO: (#677) Change the following error to an assertion.
             if foreign:
                 log.error(
                     self,
@@ -602,7 +602,7 @@ class Chapter(Item):
             seen.add(v.num)
 
         if non_consec:
-            # TODO: (#524) If possible, change the following error to an
+            # TODO: (#677) If possible, change the following error to an
             # assertion.
             log.error(
                 self,
@@ -611,7 +611,7 @@ class Chapter(Item):
             )
 
         if dupes:
-            # TODO: (#524) If possible, change the following warning to an
+            # TODO: (#677) If possible, change the following warning to an
             # assertion.
             log.warn(self, "has duplicate verse IDs:", dupes)
 
@@ -1129,7 +1129,7 @@ class HTMLBuilder:
         css: list[str] | None = None,
     ) -> abc.Generator[str]:
         return page.html_aux(
-            page.html_head(
+            page.html_head_aux(
                 title=title,
                 search="" if is_epub else _SEARCH,
                 next_href=nxt,
@@ -1139,7 +1139,7 @@ class HTMLBuilder:
                 css=css or [],
             ),
             page_class,
-            "".join(body),
+            *body,
         )
 
     # __search_form_aux builds the search form HTML.
@@ -1420,10 +1420,10 @@ class TableBuilder(HTMLBuilder):
         for lang in langs:
             sources: list[str] = chapter.book.sources.get(lang, [])
             assert all("\n" not in s for s in sources)
-            yield "<th"
-            yield f' class="{_key(lang)}"'
-            yield f' data-sources="{html.escape(json.dumps(sources))}"'
-            yield ">"
+            yield f'<th \
+                    class="{_key(lang)}" \
+                    data-sources="{html.escape(json.dumps(sources))}" \
+                    >'
             yield lang
             yield "</th>"
         yield "</tr>"

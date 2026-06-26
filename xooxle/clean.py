@@ -6,7 +6,6 @@ Some assumptions are made about the structure of the iterable (for example,
 we assume that a tag is always a standalone string).
 """
 
-import re
 import typing
 from collections.abc import Generator, Iterable
 from itertools import groupby
@@ -40,7 +39,7 @@ def clean(tokens: Iterable[str]) -> Generator[str]:
 def _strip_field_start(tokens: Iterable[str]) -> Generator[str]:
     found_text: bool = False
     for token in tokens:
-        if not _is_tag(token) and not token.isspace():
+        if not page.is_tag(token) and not token.isspace():
             # This is a non-space text token.
             found_text = True
         if found_text:
@@ -94,7 +93,7 @@ def _clean_line(line: Iterable[str]) -> Generator[str]:
 def _strip_line_start(line: Iterable[str]) -> Generator[str]:
     found_non_space = False
     for token in line:
-        if _is_tag(token):
+        if page.is_tag(token):
             # This is a tag. Yield as is.
             yield token
             continue
@@ -114,34 +113,6 @@ def _strip_line_start(line: Iterable[str]) -> Generator[str]:
         assert token.isspace() and not found_non_space
 
 
-def _is_tag(token: str) -> bool:
-    return bool(const.TAG_RE.fullmatch(token))
-
-
-def opening_tag(token: str) -> bool:
-    return _is_tag(token) and token[1] != "/"
-
-
-def closing_tag(token: str) -> bool:
-    return _is_tag(token) and token[1] == "/"
-
-
-def tag_name(token: str) -> str:
-    match: re.Match[str] | None = const.TAG_RE.fullmatch(token)
-    assert match, token
-    return match.group(1)
-
-
-def ensure_same_name(opening: str, closing: str) -> None:
-    ensure.ensure(
-        tag_name(opening) == tag_name(closing),
-        "Unbalanced tags!",
-        opening,
-        "followed by",
-        closing,
-    )
-
-
 def _filter_empty_tags(line: Iterable[str]) -> list[str]:
     """Eliminate opening tags immediately followed by their closing tags.
 
@@ -153,30 +124,26 @@ def _filter_empty_tags(line: Iterable[str]) -> list[str]:
     """
     stack: list[str] = []
     for token in line:
-        if not closing_tag(token):
-            # This is not a closing tag. Just add it to the stack.
+        if not page.closing(token, False):
+            # Not a closing tag. Just append to the stack.
             stack.append(token)
             continue
         # This is a closing tag. Check to see if the stack has a corresponding
         # opening tag on top.
-        # Since the current token is a closing tag, the stack is guaranteed not
-        # to be empty.
         ensure.ensure(
             stack,
-            "Unbalanced tags! Encountered ",
+            "Unbalanced HTML! Encountered",
             token,
             "on an empty stack!",
         )
-        top: str = stack[-1]
-        if not opening_tag(top):
+        if not page.opening(stack[-1], False):
             # The stack top is not an opening tag.
             stack.append(token)
             continue
         # An opening tag is immediately followed by the corresponding
         # closing tag. Remove the opening tag from the stack, and skip adding
         # the current token.
-        ensure_same_name(top, token)
-        _ = stack.pop()
+        page.ensure_same(stack.pop(), token)
 
     return stack
 
