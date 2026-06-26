@@ -19,7 +19,7 @@ import regex
 from dictionary import cls as dict_cls
 from dictionary.marcion_sourceforge_net import cls, constants
 from dictionary.marcion_sourceforge_net import lexical as lex
-from utils import ensure, gcp, lang, log, orth
+from utils import ensure, gcp, lang, orth
 
 # HTML data attribute names emitted in the Wiki HTML, and consumed by both the
 # TypeScript front-end and the Xooxle indexer.
@@ -390,15 +390,15 @@ class Wiki:
         if self.wip:
             # Don't validate this entry yet.
             return
-        invalid: str = RAW_RE.sub("", self.entry)
-        if invalid:
-            log.fatal(
-                self,
-                "contains invalid text:",
-                invalid,
-                "in:",
-                self.entry,
-            )
+        invalid: str = RAW_RE.sub(" ", self.entry)
+        invalid = ", ".join(invalid.split())
+        ensure.ensure(
+            not invalid,
+            "contains invalid text:",
+            invalid,
+            "in:",
+            self.entry,
+        )
 
     def headwords(self) -> list[str]:
         # TODO: (#503) Restore the check below when the data is complete.
