@@ -1375,6 +1375,7 @@ class LineSearchResult implements Result {
       end: this.scan(match.end, 1, orth.isWordCharForFragments),
     };
 
+    // See https://issues.chromium.org/u/1/issues/527930352
     // Extend a fragment's end forward off a boundary that Chromium can't
     // anchor.
     //
