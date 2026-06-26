@@ -402,12 +402,12 @@ function handleAux(wiki: HTMLElement, full: boolean): void {
 
   handleFootnotes(wiki);
 
+  addTextCopyTriggers(wiki);
+
+  handleFormSuperscripts(wiki);
+
   if (full) {
     addEntryCopyShortcuts(wiki);
-
-    addTextCopyTriggers(wiki);
-
-    handleFormSuperscripts(wiki);
 
     addFinePrint(wiki);
   }
