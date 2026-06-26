@@ -38,7 +38,7 @@ from xooxle import xooxle
 # isort: off
 # pylint: disable-next=ungrouped-imports
 from utils import cache, concur, ensure, file, gcp, log, page, paths, text
-from utils import javascript, numeral
+from utils import javascript, numeral, markdown
 
 _NUM_DRV_COLS: int = 10
 _HUNDRED: int = 100
@@ -868,8 +868,7 @@ class Root(Row):
         # Editor's notes.
         if self.notes:
             yield f'<div id="{ids.NOTES}" class="{cls.NOTES}">'
-            yield "<i>Editor's note: </i>"
-            yield self.notes
+            yield markdown.to_html(self.notes)
             yield "</div>"
 
         # Senses.
