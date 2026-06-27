@@ -20,11 +20,6 @@ figcaption {
   }
 }
 
-ins,
-del {
-  text-decoration-color: gray;
-}
-
 :root {
   --reference-green: #1f7a48; /* emerald */
 }
@@ -444,13 +439,23 @@ del {
   opacity: 0.6;
 }
 
-.addendum:has(.mark:hover) {
-  ins {
-    background-color: #ddf5dd; /* light green */
+.addendum {
+  & ins {
+    text-decoration-color: var(--light-gray);
   }
 
-  del {
-    background-color: lightpink; /* light red */
+  & del {
+    text-decoration-color: gray;
+  }
+
+  &:has(.mark:hover) {
+    ins {
+      background-color: #ddf5dd; /* light green */
+    }
+
+    del {
+      background-color: lightpink; /* light red */
+    }
   }
 }
 
