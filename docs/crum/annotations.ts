@@ -229,7 +229,7 @@ export const DATA: Abbreviation[] = [
     suffix: true,
   },
   { fullForm: 'alchemical', variants: ['alchem'] },
-  { fullForm: 'Appendix', variants: ['Append'], suffix: true },
+  { fullForm: 'Appendix', variants: ['App', 'Append'], suffix: true },
   { fullForm: 'absolute', variants: ['absol'] },
   { fullForm: 'according to', variants: ['acc to', 'acc. to'] },
   { fullForm: 'Anno Domini', variants: ['AD'], noCaseVariant: true },
