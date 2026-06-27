@@ -406,10 +406,10 @@
     Copt: "Coptic"
     copt: "Coptic"
     (P):
-    (P)a:
-    (P)b:
-    (P)c:
-    (P)d:
+    (P) a:
+    (P) b:
+    (P) c:
+    (P) d:
     P:
     Hunt:
     Marsh: "Marshall Collection"
@@ -421,7 +421,7 @@
     - "Bor"
   postfixes:
     # NOTE: Only in manual labels (#668).
-    VitaSin: !lookup
+    Vita Sin: !lookup
 
 - title: "Papyri & ostraca in Staatsmuseum, Berlin"
   description:
@@ -1921,7 +1921,7 @@
     Bor: !lookup
     C: !lookup
     Cai Copt Mus: !lookup
-    CO: !lookup
+    C O: !lookup
     Cai: !lookup
     Cl Pr: !lookup
     Ep: !lookup
@@ -1941,7 +1941,7 @@
     RE: !lookup
     Rec: !lookup
     Ryl: !lookup
-    ViK: !lookup
+    Vi K: !lookup
     Wess: !lookup
     Z: !lookup
 
