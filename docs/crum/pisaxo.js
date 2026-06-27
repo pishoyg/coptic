@@ -313,10 +313,10 @@ export const DATA = [
       "Copt": "Coptic",
       "copt": "Coptic",
       "(P)": null,
-      "(P)a": null,
-      "(P)b": null,
-      "(P)c": null,
-      "(P)d": null,
+      "(P) a": null,
+      "(P) b": null,
+      "(P) c": null,
+      "(P) d": null,
       "P": null,
       "Hunt": null,
       "Marsh": "Marshall Collection",
@@ -330,7 +330,7 @@ export const DATA = [
       "Bor"
     ],
     "postfixes": {
-      "VitaSin": LOOKUP
+      "Vita Sin": LOOKUP
     }
   },
   {
@@ -1833,7 +1833,7 @@ export const DATA = [
       "Bor": LOOKUP,
       "C": LOOKUP,
       "Cai Copt Mus": LOOKUP,
-      "CO": LOOKUP,
+      "C O": LOOKUP,
       "Cai": LOOKUP,
       "Cl Pr": LOOKUP,
       "Ep": LOOKUP,
@@ -1853,7 +1853,7 @@ export const DATA = [
       "RE": LOOKUP,
       "Rec": LOOKUP,
       "Ryl": LOOKUP,
-      "ViK": LOOKUP,
+      "Vi K": LOOKUP,
       "Wess": LOOKUP,
       "Z": LOOKUP
     }
