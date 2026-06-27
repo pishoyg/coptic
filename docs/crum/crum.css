@@ -456,6 +456,15 @@ figcaption {
     del {
       background-color: lightpink; /* light red */
     }
+
+    /* Ensure the colors above override any other background colors. */
+    *:not(ins, del) {
+      background-color: transparent;
+    }
+
+    &::target-text {
+      background-color: transparent;
+    }
   }
 }
 
