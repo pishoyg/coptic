@@ -123,20 +123,15 @@ class Note:
         self.back: str = back
         self.js_path: str = js_path
         self.css: list[str] = css or []
-        self.head: abc.Generator[str] = page.html_head_aux(
-            title=title,
-            search=search,
-            next_href=nxt,
-            prev_href=prv,
-            scripts=[js_path] if js_path else [],
-            css=css or [],
-        )
-        self.html: str = "".join(self._html_aux())
-        self.js_start: str = js_start
-
-    def _html_aux(self) -> abc.Generator[str]:
-        return page.html_aux(
-            self.head,
+        self.html: str = page.html(
+            page.html_head(
+                title=title,
+                search=search,
+                next_href=nxt,
+                prev_href=prv,
+                scripts=[js_path] if js_path else [],
+                css=css or [],
+            ),
             cls.NOTE,
             f'<div class="{cls.FRONT}" id="{ids.FRONT}">',
             self.front,
@@ -145,6 +140,7 @@ class Note:
             self.back,
             "</div>",
         )
+        self.js_start: str = js_start
 
     def write(self, dir_: str | pathlib.Path) -> None:
         path: str = os.path.join(dir_, self.key + ".html")

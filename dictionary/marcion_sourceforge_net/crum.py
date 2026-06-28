@@ -1298,8 +1298,8 @@ class Index:
         head: abc.Generator[str],
         header: str,
     ) -> None:
-        file.writelines(
-            page.html_aux(head, INDEX_CLASS, header, *self.body),
+        file.write(
+            page.html(head, INDEX_CLASS, header, *self.body),
             os.path.join(dir_, self.basename()),
             report=False,
         )
@@ -1333,7 +1333,7 @@ class IndexIndex:
                 if i < len(self.indexes) - 1
                 else ""
             )
-            yield page.html_head_aux(
+            yield page.html_head(
                 title=index.title,
                 search=SEARCH,
                 scripts=[JS],
@@ -1366,9 +1366,9 @@ class IndexIndex:
 
         # Write the index index!
 
-        file.writelines(
-            page.html_aux(
-                page.html_head_aux(
+        file.write(
+            page.html(
+                page.html_head(
                     title=self.name,
                     search=SEARCH,
                     scripts=[JS],

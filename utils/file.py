@@ -11,7 +11,7 @@ import pandas as pd
 import typeguard
 import yaml
 
-from utils import log, orth
+from utils import ensure, log, orth
 
 
 def mkdir(path: str | pathlib.Path) -> None:
@@ -50,6 +50,9 @@ def writelines(
     make_dir: bool = False,
     normalize: bool = True,
 ) -> None:
+    # Prevent accidentally passing a string (which also satisfies
+    # `Iterable[str]`) as a parameter.
+    ensure.ensure(not isinstance(content, str), content, "is a string")
     if normalize:
         content = map(orth.normalize, content)
     if make_dir:

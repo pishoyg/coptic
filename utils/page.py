@@ -91,15 +91,15 @@ def ensure_same(a: str, b: str) -> None:
     ensure.ensure(name(a) == name(b), "Unbalanced tags!", a, "and ", b)
 
 
-def no_line_breaks(html: str) -> str:
-    return html.replace(LINE_BREAK, " ")
+def no_line_breaks(htm: str) -> str:
+    return htm.replace(LINE_BREAK, " ")
 
 
-def no_ids(html: str) -> str:
-    return _HTML_ID_RE.sub("", html)
+def no_ids(htm: str) -> str:
+    return _HTML_ID_RE.sub("", htm)
 
 
-# NOTE: html_head_aux is used by our HTML generation logic to generated the
+# NOTE: html_head is used by our HTML generation logic to generated the
 # <head> elements for our pages.
 # Besides the generated HTML files, a number of singleton manually-written HTML
 # pages don't use this function. If the desired head structure changes, updating
@@ -113,7 +113,7 @@ def no_ids(html: str) -> str:
 # relative or server paths as appropriate.
 # This applies to paths to CSS and JavaScript files, and also to next, prev, and
 # search links.
-def html_head_aux(
+def html_head(
     title: str,
     search: str | None = None,
     next_href: str | None = None,
@@ -200,15 +200,14 @@ def _html_aux(
     yield "</html>"
 
 
-def html_aux(
-    head: abc.Generator[str],
-    iam: str,
-    *body: str,
-) -> abc.Generator[str]:
-    tags: list[str] = []
-    for token in _html_aux(head, iam, *body):
-        # NOTE: The following only works because our generators never generate a
-        # tag that spans multiple tokens.
-        tags.extend(match.group(0) for match in TAG_RE.finditer(token))
-        yield token
-    ensure.balanced(tags, opening, closing, name, "Unbalanced HTML:", tags)
+def html(head: abc.Generator[str], iam: str, *body: str) -> str:
+    htm: str = "".join(_html_aux(head, iam, *body))
+    ensure.balanced(
+        (match.group(0) for match in TAG_RE.finditer(htm)),
+        opening,
+        closing,
+        name,
+        "Unbalanced HTML:",
+        htm,
+    )
+    return htm

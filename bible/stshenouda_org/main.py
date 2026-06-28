@@ -1117,7 +1117,7 @@ class HTMLBuilder:
             yield from self._chapter_body_aux(chapter, langs)
 
     # _html_aux builds the HTML file content as a generator.
-    def _html_aux(
+    def _html(
         self,
         body: abc.Iterable[str],
         title: str,
@@ -1127,9 +1127,9 @@ class HTMLBuilder:
         is_epub: bool = False,
         scripts: list[str] | None = None,
         css: list[str] | None = None,
-    ) -> abc.Generator[str]:
-        return page.html_aux(
-            page.html_head_aux(
+    ) -> str:
+        return page.html(
+            page.html_head(
                 title=title,
                 search="" if is_epub else _SEARCH,
                 next_href=nxt,
@@ -1214,14 +1214,16 @@ class HTMLBuilder:
         with concur.thread_pool_executor() as executor:
             _ = list(executor.map(write_chapter, bible.chain_chapters()))
 
-        toc = self._html_aux(
-            self._toc_body_aux(bible, is_epub=False),
-            title=_TITLE_COP_EN,
-            page_class=cls.BIBLE,
-            scripts=[_INDEX_JS],
-            css=_INDEX_CSS,
+        file.write(
+            self._html(
+                self._toc_body_aux(bible, is_epub=False),
+                title=_TITLE_COP_EN,
+                page_class=cls.BIBLE,
+                scripts=[_INDEX_JS],
+                css=_INDEX_CSS,
+            ),
+            paths.BIBLE_DIR / _INDEX,
         )
-        file.writelines(toc, paths.BIBLE_DIR / _INDEX)
 
     def _write_html_chapter(
         self,
@@ -1231,20 +1233,19 @@ class HTMLBuilder:
         nxt: Chapter | None = chapter.next()
         prv: Chapter | None = chapter.prev()
 
-        out = self._html_aux(
-            self._chapter_body_aux(chapter, langs),
-            title=chapter.title(),
-            page_class=cls.CHAPTER,
-            nxt=nxt.href(is_epub=False) if nxt else "",
-            prv=prv.href(is_epub=False) if prv else "",
-            scripts=[_CHAPTER_JS],
-            css=[
-                _CHAPTER_CSS,
-                os.path.relpath(paths.TOOLTIP_CSS, paths.BIBLE_DIR),
-            ],
-        )
-        file.writelines(
-            out,
+        file.write(
+            self._html(
+                self._chapter_body_aux(chapter, langs),
+                title=chapter.title(),
+                page_class=cls.CHAPTER,
+                nxt=nxt.href(is_epub=False) if nxt else "",
+                prv=prv.href(is_epub=False) if prv else "",
+                scripts=[_CHAPTER_JS],
+                css=[
+                    _CHAPTER_CSS,
+                    os.path.relpath(paths.TOOLTIP_CSS, paths.BIBLE_DIR),
+                ],
+            ),
             paths.BIBLE_DIR / chapter.path(is_epub=False),
             make_dir=True,
             report=False,
@@ -1279,12 +1280,10 @@ class HTMLBuilder:
             file_name="toc.xhtml",
         )
         toc.set_content(
-            "".join(
-                self._html_aux(
-                    self._toc_body_aux(bible, is_epub=True),
-                    title=_TITLE_COP_EN,
-                    is_epub=True,
-                ),
+            self._html(
+                self._toc_body_aux(bible, is_epub=True),
+                title=_TITLE_COP_EN,
+                is_epub=True,
             ),
         )
         kindle.add_item(toc)
@@ -1297,12 +1296,10 @@ class HTMLBuilder:
                 file_name=book.path(is_epub=True),
             )
             c.set_content(
-                "".join(
-                    self._html_aux(
-                        self._book_body_aux(book, langs, is_epub=True),
-                        title=book.name,
-                        is_epub=True,
-                    ),
+                self._html(
+                    self._book_body_aux(book, langs, is_epub=True),
+                    title=book.name,
+                    is_epub=True,
                 ),
             )
             spine.append(c)
