@@ -79,7 +79,7 @@ from collections.abc import Generator, Iterable
 
 import bs4
 
-from utils import concur, ensure, file, orth, page
+from utils import concur, ensure, file, log, orth, page
 from xooxle import clean
 from xooxle import constants as const
 
@@ -502,7 +502,12 @@ class Xooxle:
     def _diacritic_free_text(self, html: str) -> str:
         # NOTE: The HTML doesn't escape its special characters, so we don't need
         # to un-escape them during text extraction.
-        return orth.clean_diacritics(page.TAG_RE.sub("", html))
+        text: str = orth.clean_diacritics(page.TAG_RE.sub("", html))
+        if "  " in text:
+            # TODO: (#0) Double spaces signal errors in the data. Ideally, this
+            # would be an assertion, rather than just an error message.
+            log.error("double space in Xooxle line:", repr(text))
+        return text
 
     def line(self, html: str) -> Line:
         return html, self._diacritic_free_text(html)
