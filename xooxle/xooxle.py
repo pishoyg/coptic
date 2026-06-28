@@ -476,6 +476,7 @@ class Xooxle:
         captures: list[Capture],
         output: str | pathlib.Path,
         layers: list[list[str]] | None = None,
+        strict: bool = True,
     ) -> None:
         """
         Args:
@@ -487,6 +488,7 @@ class Xooxle:
             layers: A grouping of the capture names into layers. If not
                 provided, will default to a single layer containing all
                 captures.
+            strict: Whether to process the data in strict mode.
         """
         self._source: Iterable[tuple[str, str]] = source
         self._extract: list[Selector] = extract
@@ -495,6 +497,7 @@ class Xooxle:
         self._layers: list[list[str]] = layers or [
             [cap.name for cap in self._captures],
         ]
+        self._strict: bool = strict
 
     def _is_comment(self, elem: bs4.PageElement) -> bool:
         return isinstance(elem, bs4.element.Comment)
@@ -506,7 +509,10 @@ class Xooxle:
         if "  " in text:
             # TODO: (#0) Double spaces signal errors in the data. Ideally, this
             # would be an assertion, rather than just an error message.
-            log.error("double space in Xooxle line:", repr(text))
+            (log.fatal if self._strict else log.error)(
+                "double space in Xooxle line:",
+                repr(text),
+            )
         return text
 
     def line(self, html: str) -> Line:

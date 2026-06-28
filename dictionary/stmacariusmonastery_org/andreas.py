@@ -483,4 +483,6 @@ XOOXLE = xooxle.Xooxle(
         ),
     ],
     output=os.path.join(paths.LEXICON_DIR, "andreas.json"),
+    # TODO: (#591) Fix errors in the source data, then restore strict mode.
+    strict=False,
 )
