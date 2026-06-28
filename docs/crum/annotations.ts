@@ -382,7 +382,7 @@ export const DATA: Abbreviation[] = [
     noCaseVariant: true,
     noStyledParent: true,
   },
-  { fullForm: 'sub voce', variants: ['s v'] },
+  { fullForm: 'sub voce', variants: ['s v'], suffix: true },
   { fullForm: 'subjunctive', variants: ['subjunct'] },
   { fullForm: 'substantive', variants: ['substant'] },
   { fullForm: 'sic erat scriptum', variants: ['sic'] },

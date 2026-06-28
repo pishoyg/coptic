@@ -226,16 +226,16 @@ const NOT_SINGLE_LETTER_REFERENCE = `(?! [${Object.keys(ref.MAPPING)
   .join('')}]${str.ASSERT_NON_WORD.source})`;
 
 const NUMBER = `(?:${NUMBERS.join('|')})`;
+const NUMBER_GROUP = `(?: ${NUMBER}| ?\\(${NUMBER}(?: ${NUMBER})*\\))`;
+
 // A suffix never ends with 'v' or 'l'. As of the time of writing, no such
 // suffix is known to exist. Following a reference, these are annotations for
-// 'vide' or 'legendum', rather than part of the suffix. (The rule applies to
-// the suffix only, matching the historical behavior; followups are unaffected.)
-const NUMBER_GROUP = `(?: ${NUMBER}| ?\\(${NUMBER}(?: ${NUMBER})*\\))`;
+// 'vide' or 'legendum', rather than part of the suffix.
+// 's v' stands for 'sub voce', and is a valid suffix, so we account for that.
+const NOT_VL = '(?<!\\b(?:l|(?<!\\bs )v))';
 
 // SUFFIX matches a reference suffix together with any followups that trail it,
 // e.g. the whole " 44 66, 179" in "P 44 66, 179".
-const NOT_VL = '(?<!\\b[vl])';
-
 const SUFFIX = new RegExp(
   `^\\.?${NUMBER_GROUP}+${NOT_VL}(?:(?:,| [=&])${NOT_SINGLE_LETTER_REFERENCE + NUMBER_GROUP}+${NOT_VL})*${str.ASSERT_NON_WORD.source}`,
   'u'
