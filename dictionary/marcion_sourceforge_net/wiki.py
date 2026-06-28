@@ -63,6 +63,12 @@ _HEADWORD_RE: regex.Pattern[str] = regex.compile(
     rf"{_HEADWORD_RE_AUX}|\({_HEADWORD_RE_AUX}\)",
 )
 
+# Matches an opening tag immediately followed by a space, which signals stray
+# leading whitespace inside an element.
+_SPACE_AFTER_TAG_RE: regex.Pattern[str] = regex.compile(
+    r"<(?!/)[^>]+> .*?</[^>]+>",
+)
+
 
 def headword_variants(form: str) -> abc.Generator[str]:
     assert constants.COPTIC_LETTERS_OR_PARENTHESES_RE.fullmatch(form)
@@ -544,6 +550,14 @@ class Wiki:
                 "output:",
                 html,
             )
+        # TODO: (#0) This check belongs in a shared package.
+        invalid_tags: list[str] = _SPACE_AFTER_TAG_RE.findall(html)
+        ensure.ensure(
+            not invalid_tags,
+            self,
+            "contains an opening tag immediately followed by a space:",
+            invalid_tags,
+        )
         return html
 
     @staticmethod
@@ -660,21 +674,20 @@ class Column:
         self.crum: lex.Column = crum
         self.wikis: list[Wiki] = list(ws)
 
-    def html(self) -> str:
-        return "".join(self.html_aux())
-
     def html_aux(self) -> abc.Generator[str]:
         yield f'<div class="{cls.FOLIO}">'
         yield f'<span class="{cls.CRUM_PAGE}">'
         yield str(self.crum)
         yield "</span>"
-        html: str = "".join(w.html for w in self.wikis if w.complete)
         ensure.ensure(
-            html,
+            any(w.complete for w in self.wikis),
             "Generating HTML for a page without any complete Wikis! Page:",
             self.crum,
             "Wikis:",
             list(map(str, self.wikis)),
         )
-        yield html
+        for w in self.wikis:
+            if not w.complete:
+                continue
+            yield w.html
         yield "</div>"

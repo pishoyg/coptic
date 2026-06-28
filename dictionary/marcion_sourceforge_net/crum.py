@@ -453,8 +453,7 @@ class Root(Row):
             log.error(self, "consists entirely of vide entries!")
         return wikis
 
-    @functools.cached_property
-    def wiki_html(self) -> str:
+    def wiki_html(self) -> abc.Generator[str]:
         wikis: list[wiki.Wiki] = [w for w in self.wikis if not w.wip]
         ensure.ensure(
             wikis,
@@ -463,10 +462,8 @@ class Root(Row):
         )
         # The input is guaranteed to be sorted by page number, so we can use
         # `groupby` directly.
-        return "".join(
-            wiki.Column(col, group).html()
-            for col, group in itertools.groupby(wikis, key=lambda w: w.crum)
-        )
+        for col, group in itertools.groupby(wikis, key=lambda w: w.crum):
+            yield from wiki.Column(col, group).html_aux()
 
     @functools.cached_property
     def images(self) -> list[Image]:
@@ -895,7 +892,7 @@ class Root(Row):
         # Wiki.
         if self.has_wiki_canonical_entries():
             yield f'<div class="{cls.WIKI}" id="{ids.WIKI}">'
-            yield self.wiki_html
+            yield from self.wiki_html()
             yield "</div>"
 
         # Sisters.
