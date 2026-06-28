@@ -97,7 +97,6 @@ class Substitution:
         self,
         pattern: str,
         repl: str | typing.Callable[[regex.Match[str]], str],
-        text_repl: str | typing.Callable[[regex.Match[str]], str] = r"\1",
         ban: list[str] | None = None,
     ):
         """Initializes a Substitution object.
@@ -105,24 +104,16 @@ class Substitution:
         Args:
             pattern: The regular expression pattern to search for.
             repl: The replacement string.
-            text_repl: A replacement used to generate a plain-text (no-HTML)
-                version of the data.
             ban: A list of tokens that are used for substitution, and
                 can't be present in the HTML post-processing. Use this optional
                 field to verify that all substitutions are well-formed.
         """
         self.pattern: regex.Pattern[str] = regex.compile(pattern)
         self.repl: str | typing.Callable[[regex.Match[str]], str] = repl
-        self.text_repl: str | typing.Callable[[regex.Match[str]], str] = (
-            text_repl
-        )
         self.ban: list[str] = ban or []
 
     def html(self, raw: str) -> str:
         return self.pattern.sub(self.repl, raw)
-
-    def text(self, raw: str) -> str:
-        return self.pattern.sub(self.text_repl, raw)
 
 
 def bracketed(exp: str, repeat: int = 2) -> str:
@@ -251,18 +242,13 @@ _SUBSTITUTIONS: list[Substitution] = [
     # explicitly.
     # In some cases, we made the mistake of typing "&amp;" directly, instead of
     # just "&". We ban the token "&amp;amp" to catch this error.
-    Substitution("&", "&amp;", text_repl="&", ban=["&amp;amp"]),
+    Substitution("&", "&amp;", ban=["&amp;amp"]),
     # The asterisk is not a reserved character in modern HTML, so we don't need
     # to use `&ast;`. However, using a plain asterisk risks conflicting with the
     # bold rule below. We therefore leave it up to our linters to replace
     # the occurrences of `&ask;` produced here with a literal asterisk.
-    Substitution(r"\\\*", "&ast;", text_repl="*", ban=["*", "\\"]),
-    Substitution(
-        r"\\t",
-        CLOSE_SUBPARAGRAPH + OPEN_SUBPARAGRAPH,
-        text_repl="    ",
-        ban=["\\"],
-    ),
+    Substitution(r"\\\*", "&ast;", ban=["*", "\\"]),
+    Substitution(r"\\t", CLOSE_SUBPARAGRAPH + OPEN_SUBPARAGRAPH, ban=["\\"]),
     Substitution(
         r"__(.+?)__",
         rf'<span class="{cls.GLOSS}">\1</span>',
@@ -294,13 +280,11 @@ _SUBSTITUTIONS: list[Substitution] = [
         # so they can render properly.
         bracketed(r"(S|F|B|O)\^(a|f|b|af)"),
         rf'<span class="{dict_cls.DIALECT} \1\2">\1\2</span>',
-        text_repl=r"\1\2",
         ban=["[[", "]]", "^"],
     ),
     Substitution(
         bracketed(r"(A\^2)"),
         rf'<span class="{dict_cls.DIALECT} L">A2</span>',
-        text_repl="L",
         ban=["[[", "]]", "^"],
     ),
     Substitution(
@@ -309,26 +293,15 @@ _SUBSTITUTIONS: list[Substitution] = [
         rf'<span class="{cls.STACK_TOP}">\2</span>'
         rf'<span class="{cls.STACK_BOTTOM}">\1</span>'
         r"</span>",
-        # The plain-text version separates the two pieces with a slash,
-        # mirroring how superscript degrades to `^(...)`.
-        text_repl=r"\1/\2",
         ban=["^^"],
     ),
-    Substitution(
-        r"\^([-–—\w\p{Letter}]+)",
-        r"<sup>\1</sup>",
-        # This is not entirely plain text, but we have no other way to represent
-        # superscripted text.
-        text_repl=r"^(\1)",
-        ban=["^"],
-    ),
+    Substitution(r"\^([-–—\w\p{Letter}]+)", r"<sup>\1</sup>", ban=["^"]),
     Substitution(
         r"\\n",
         CLOSE_SUBPARAGRAPH
         + CLOSE_PARAGRAPH
         + OPEN_PARAGRAPH
         + OPEN_SUBPARAGRAPH,
-        text_repl="\n",
         ban=["\\"],
     ),
     Substitution(bracketed(r"(.*?)"), replace_bracketed, ban=["[[", "]]"]),
@@ -458,8 +431,6 @@ class Wiki:
         yield Substitution(
             r"{([^{}]*)}{{(.*?)}}",
             self.replace_footnote,
-            # NOTE: Footnotes are omitted from the text version.
-            text_repl="",
             ban=["{", "}"],
         )
         # The substitution for manual labels must follow the substitution for
@@ -472,7 +443,6 @@ class Wiki:
         yield Substitution(
             "//(.*?)//(.*?)//",
             self.replace_addendum,
-            r"\2",
             ban=["//"],
         )
 
@@ -627,13 +597,6 @@ class Wiki:
         yield CLOSE_SUBPARAGRAPH
         yield CLOSE_PARAGRAPH
         yield "</div>"
-
-    @functools.cached_property
-    def text(self) -> str:
-        txt: str = self.entry
-        for s in self.subs():
-            txt = s.text(txt)
-        return txt
 
     @typing.override
     def __str__(self) -> str:
