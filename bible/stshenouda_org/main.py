@@ -356,7 +356,7 @@ class Verse:
         # NOTE: Normalization must take place after recoloring, because
         # recoloring uses the original text.
         self.recolored: dict[Language, str] = {
-            lang: _normalize(lang, self.__recolor(data[lang], data))
+            lang: _normalize(lang, self._recolor(data[lang], data))
             for lang in _LANGUAGES
         }
         unnumbered: dict[Language, str] = {
@@ -464,7 +464,7 @@ class Verse:
             yield f'<span class="{class_}">{txt}</span>' if class_ else txt
         yield v[last:]
 
-    def __recolor(self, v: str, verse: schema.Verse) -> str:
+    def _recolor(self, v: str, verse: schema.Verse) -> str:
         return "".join(self._recolor_aux(v, verse))
 
     @typing.override
@@ -865,7 +865,7 @@ class Bible:
         self.testaments: list[Testament] = [
             Testament(name, data) for name, data in bible_data.items()
         ]
-        self.__link_chapters()
+        self._link_chapters()
 
     def write_crum_map(self) -> None:
         # NOTE: Crum didn't explicitly list all Biblical book abbreviations.
@@ -898,7 +898,7 @@ class Bible:
             paths.LEXICON_DIR / "bible.js",
         )
 
-    def __link_chapters(self) -> None:
+    def _link_chapters(self) -> None:
         iterator: abc.Iterator[Chapter] = iter(self.chain_chapters())
         cur: Chapter | None = next(iterator, None)
         if not cur:
@@ -1032,7 +1032,7 @@ class HTMLBuilder:
         )
 
     # __chapter_body_aux builds the contents of the <body> element of a chapter.
-    def __chapter_body_aux(
+    def _chapter_body_aux(
         self,
         chapter: Chapter,
         langs: list[Language],
@@ -1093,8 +1093,8 @@ class HTMLBuilder:
 
         yield from self.chapter_end(chapter)
 
-    # __book_body_aux builds the contents of the <body> element of a book.
-    def __book_body_aux(
+    # _book_body_aux builds the contents of the <body> element of a book.
+    def _book_body_aux(
         self,
         book: Book,
         langs: list[Language],
@@ -1114,10 +1114,10 @@ class HTMLBuilder:
 
         # Yield the chapter contents.
         for chapter in book.chapters:
-            yield from self.__chapter_body_aux(chapter, langs)
+            yield from self._chapter_body_aux(chapter, langs)
 
-    # __html_aux builds the HTML file content as a generator.
-    def __html_aux(
+    # _html_aux builds the HTML file content as a generator.
+    def _html_aux(
         self,
         body: abc.Iterable[str],
         title: str,
@@ -1142,8 +1142,8 @@ class HTMLBuilder:
             *body,
         )
 
-    # __search_form_aux builds the search form HTML.
-    def __search_form_aux(self) -> abc.Generator[str]:
+    # _search_form_aux builds the search form HTML.
+    def _search_form_aux(self) -> abc.Generator[str]:
         yield _SEARCH_FORM
         yield f'<table id="{ids.RESULTS}" class="{cls.RESULTS}"><thead><tr>'
         yield '<th style="width: 10%;"></th>'
@@ -1154,9 +1154,9 @@ class HTMLBuilder:
         yield "<tbody><!-- Search results will be appended here. --></tbody>"
         yield "</table>"
 
-    # _build_toc_body_aux builds the contents of the <body> element for the
+    # _toc_body_aux builds the contents of the <body> element for the
     # table of contents.
-    def __toc_body_aux(
+    def _toc_body_aux(
         self,
         bible: Bible,
         is_epub: bool,
@@ -1176,7 +1176,7 @@ class HTMLBuilder:
 
         assert not is_epub
         # For HTML, we render the search form, followed by the book index.
-        yield from self.__search_form_aux()
+        yield from self._search_form_aux()
 
         # The book index: testaments side by side, each a column of books with
         # their (collapsible) chapter lists.
@@ -1209,13 +1209,13 @@ class HTMLBuilder:
 
     def write_html(self, bible: Bible, langs: list[Language]) -> None:
         def write_chapter(chapter: Chapter) -> None:
-            self.__write_html_chapter(chapter, langs)
+            self._write_html_chapter(chapter, langs)
 
         with concur.thread_pool_executor() as executor:
             _ = list(executor.map(write_chapter, bible.chain_chapters()))
 
-        toc = self.__html_aux(
-            self.__toc_body_aux(bible, is_epub=False),
+        toc = self._html_aux(
+            self._toc_body_aux(bible, is_epub=False),
             title=_TITLE_COP_EN,
             page_class=cls.BIBLE,
             scripts=[_INDEX_JS],
@@ -1223,7 +1223,7 @@ class HTMLBuilder:
         )
         file.writelines(toc, paths.BIBLE_DIR / _INDEX)
 
-    def __write_html_chapter(
+    def _write_html_chapter(
         self,
         chapter: Chapter,
         langs: list[Language],
@@ -1231,8 +1231,8 @@ class HTMLBuilder:
         nxt: Chapter | None = chapter.next()
         prv: Chapter | None = chapter.prev()
 
-        out = self.__html_aux(
-            self.__chapter_body_aux(chapter, langs),
+        out = self._html_aux(
+            self._chapter_body_aux(chapter, langs),
             title=chapter.title(),
             page_class=cls.CHAPTER,
             nxt=nxt.href(is_epub=False) if nxt else "",
@@ -1280,8 +1280,8 @@ class HTMLBuilder:
         )
         toc.set_content(
             "".join(
-                self.__html_aux(
-                    self.__toc_body_aux(bible, is_epub=True),
+                self._html_aux(
+                    self._toc_body_aux(bible, is_epub=True),
                     title=_TITLE_COP_EN,
                     is_epub=True,
                 ),
@@ -1298,8 +1298,8 @@ class HTMLBuilder:
             )
             c.set_content(
                 "".join(
-                    self.__html_aux(
-                        self.__book_body_aux(book, langs, is_epub=True),
+                    self._html_aux(
+                        self._book_body_aux(book, langs, is_epub=True),
                         title=book.name,
                         is_epub=True,
                     ),

@@ -131,10 +131,10 @@ class Note:
             scripts=[js_path] if js_path else [],
             css=css or [],
         )
-        self.html: str = "".join(self.__html_aux())
+        self.html: str = "".join(self._html_aux())
         self.js_start: str = js_start
 
-    def __html_aux(self) -> abc.Generator[str]:
+    def _html_aux(self) -> abc.Generator[str]:
         return page.html_aux(
             self.head,
             cls.NOTE,
@@ -232,7 +232,7 @@ class Deck:
             "Note keys must be unique!",
         )
 
-    def __anki_html(self, html: str) -> str:
+    def _anki_html(self, html: str) -> str:
         def src_to_basename(match: re.Match[str]) -> str:
             path: str = os.path.join(self.html_dir, match.group(1))
             f: MediaFile = MediaFile(path)
@@ -274,7 +274,7 @@ class Deck:
 
         return f
 
-    def __anki_css(self) -> abc.Generator[str]:
+    def _anki_css(self) -> abc.Generator[str]:
         files: list[str] = ensure.singleton(note.css for note in self.notes)
         # Get absolute paths, so you can read them.
         files = [os.path.join(self.html_dir, f) for f in files]
@@ -288,7 +288,7 @@ class Deck:
                 file.read(path),
             )
 
-    def __anki_js_aux(self) -> abc.Generator[str]:
+    def _anki_js_aux(self) -> abc.Generator[str]:
         # We don't allow notes to have different JavaScript, because in our Anki
         # package, we define the JavaScript in the template.
         js_path: str = ensure.singleton(note.js_path for note in self.notes)
@@ -307,7 +307,7 @@ class Deck:
     def anki(self) -> tuple[genanki.Deck, abc.Iterable[MediaFile]]:
         # Anki can't pick up the JavaScript. It must be inserted into the
         # template.
-        javascript = "".join(self.__anki_js_aux())
+        javascript = "".join(self._anki_js_aux())
         model = genanki.Model(
             model_id=self.deck_id,
             name=self.name,
@@ -332,7 +332,7 @@ class Deck:
                     + f'<script type="text/javascript">{javascript}</script>',
                 },
             ],
-            css="".join(self.__anki_css()),
+            css="".join(self._anki_css()),
         )
 
         deck = genanki.Deck(
@@ -342,8 +342,8 @@ class Deck:
         )
 
         for note in self.notes:
-            front = self.__anki_html(note.front)
-            back = self.__anki_html(note.back)
+            front = self._anki_html(note.front)
+            back = self._anki_html(note.back)
             key = f"{self.name} - {note.key}"
             deck.add_note(GenankiNote(model=model, fields=[front, back, key]))
 
