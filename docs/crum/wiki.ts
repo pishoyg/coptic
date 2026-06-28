@@ -1675,10 +1675,27 @@ function* backtrack(
 
 const ANTECEDENT_QUERY: string = css.disjunction(cls.BIBLE, cls.REFERENCE);
 /**
- * Find the first preceding sibling to the given element that matches the query.
+ * Find the antecedent of an anaphor — the nearest already-enriched Bible
+ * citation or reference that precedes `start` in document order.
  *
- * @param start
- * @returns
+ * NOTE: The heuristic is known to be faulty due to the fact that parentheses
+ * are completely ignored. Earlier versions tracked parenthesis depth and
+ * refused to return a candidate that lay at a different depth than the anaphor
+ * — the idea being that a citation buried inside parentheses is unlikely to be
+ * what a following `ib` refers to — falling back to a depth-agnostic search
+ * only when the stricter criterion found nothing. That heuristic produced
+ * numerous errors, so it was removed: we now always return the nearest matching
+ * candidate regardless of parentheses. We lack statistics, but our impression
+ * is that ignoring parentheses entirely produces fewer errors. The remaining
+ * errors — ibidem citations whose first preceding reference or Bible citation
+ * is not the true antecedent — are fixed by manual labeling. See #709, #511.
+ *
+ * @param start - one of two forms, matching the two ways anaphors are enriched:
+ * - An `html.Context`, for elements enriched inside the chain machinery. The
+ *   walk begins at `context.first()` and additionally consults the fragment.
+ * - A plain `Node`, for manually-marked elements enriched after their chains
+ *   have already been spliced back into the live tree (no fragment to consult).
+ * @returns the antecedent, or null if none precedes `start`.
  */
 function findAntecedent(start: Node | null | html.Context): HTMLElement | null {
   const candidates: Iterable<Element> =
