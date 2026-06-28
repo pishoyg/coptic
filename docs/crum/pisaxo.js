@@ -1829,6 +1829,7 @@ export const DATA = [
       "BM": LOOKUP,
       "BM Or": LOOKUP,
       "Berl Or": LOOKUP,
+      "Berl Sitz": LOOKUP,
       "BIF": LOOKUP,
       "Bor": LOOKUP,
       "C": LOOKUP,
