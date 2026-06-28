@@ -955,9 +955,9 @@ _SEARCH_FORM: str = """\
 <!--Dialect checkboxes go here.--></span>
     </td>
     <td id="full-word-checkbox-td"><label for="full-word-checkbox">\
-<input id="full-word-checkbox" type="checkbox"> Full-Word</label></td>
+<input id="full-word-checkbox" type="checkbox">Full-Word</label></td>
     <td id="case-sensitive-checkbox-td"><label for="case-sensitive-checkbox">\
-<input id="case-sensitive-checkbox" type="checkbox"> Case</label></td>
+<input id="case-sensitive-checkbox" type="checkbox">Case</label></td>
     <td id="regex-checkbox-td"><label for="regex-checkbox">\
 <input id="regex-checkbox" type="checkbox">RegEx</label></td>
   </tr>
