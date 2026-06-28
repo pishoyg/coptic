@@ -19,6 +19,7 @@ import * as white from './white.js';
 import * as dev from '../dev.js';
 import * as scan from '../scan.js';
 import * as dial from '../dialect.js';
+import * as book from './book.js';
 
 /**
  * NOTE: All of the regexes below assume the following normalizations:
@@ -313,8 +314,12 @@ const BIBLE_FOLLOWUP = new RegExp(
   'du'
 );
 
-const PAGE_RE = /^p{1,2} ([0-9]+)(?: ([ab]))?\b/;
-const PAGE_FOLLOWUP_RE = /^(, )([0-9]+)(?: ([ab]))?\b/;
+// Instead of using a generic expression for Roman numerals, we only include
+// those roman numerals that we know are present in the book, to minimize the
+// chances of false positives.
+const NUM_COL = `(${['[0-9]+', ...book.ROMAN_PAGES].join('|')})(?: ([ab]))?\\b`;
+const PAGE_RE = new RegExp(`^p{1,2} ${NUM_COL}`);
+const PAGE_FOLLOWUP_RE = new RegExp(`^(, )${NUM_COL}`);
 
 // Roman-numeral pages of the Preface and the List of Abbreviations in the
 // Crum book scan. The `Index` override table in `crum/book.ts` resolves
@@ -866,16 +871,16 @@ function replaceUnnumberedBibleBook(context: html.Context): void {
   const regex = new RegExp(`^\\d ${context.match[0]}$`);
   const books: bib.Book[] = Object.entries(bib.MAPPING)
     .filter(([abb, _]: [string, bib.Book]): boolean => regex.test(abb))
-    .map(([_, book]: [string, bib.Book]): bib.Book => book);
+    .map(([_, bk]: [string, bib.Book]): bib.Book => bk);
   const anchor: HTMLAnchorElement = html.anchor(
-    paths.bible(books.map((book: bib.Book): string => book.path)),
+    paths.bible(books.map((bk: bib.Book): string => bk.path)),
     ...context.munch()
   );
   anchor.classList.add(cls.BIBLE);
   tool.addTooltip(
     anchor,
     Array.from(
-      html.parse(books.map((book: bib.Book): string => book.name).join('<br>'))
+      html.parse(books.map((bk: bib.Book): string => bk.name).join('<br>'))
     ),
     [cls.BIBLE]
   );

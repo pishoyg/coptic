@@ -35,7 +35,7 @@ const HEADWORDS = str.joinPaths(DATA_DIR, 'headwords.json');
  * Addenda are all linkable by their book-side numbering.
  */
 const ROMAN_START = -19;
-const ROMAN_PAGES: string[] = [
+export const ROMAN_PAGES: string[] = [
   'v',
   'vi',
   'vii',
