@@ -110,7 +110,7 @@ async function handleSources(): Promise<void> {
         }
 
         // Found it!
-        // TODO: (#0) Do your best to store URLs for all resources.
+        // TODO: (#730) Do your best to store URLs for all resources.
         const title: HTMLElement = resource.url
           ? html.anchor(resource.url, variant)
           : html.span(variant);

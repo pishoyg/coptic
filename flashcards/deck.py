@@ -48,11 +48,6 @@ Model IDs are hardcoded.
 
 """
 
-# TODO: (#0) For text generation, it's likely more efficient to use generators
-# and avoid concatenating the strings, unless necessary.
-# You can also use `writelines` instead of `write` to write a file, thus
-# avoiding saving the data in memory at any point.
-
 import os
 import pathlib
 import re

@@ -635,9 +635,6 @@ export class Scroller {
    * input is already handled directly by each `Dictionary` via the shared
    * search box's `input` event; RESET already follows the custom-event
    * shape via `head.EVENT`.
-   *
-   * TODO: (#0) A complementary cleaner design is for the host to
-   * register / unregister the listener set wholesale on mode change.
    */
   private addEventListeners(): void {
     // The next button scrolls to the next page.

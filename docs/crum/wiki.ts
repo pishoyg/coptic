@@ -200,7 +200,7 @@ const NUMBERS = [
   'm{0,3}(?:cm|cd|d?c{0,3})(?:xc|xl|l?x{0,3})(?:ix|iv|v?i{0,3})(?<=[mdclxvi])',
   ...ann.DATA.filter((abb: ann.Abbreviation) => abb.suffix).flatMap(
     (abb: ann.Abbreviation): string[] =>
-      Array.from(ann.variants(abb)).map((variant) => str.escape(variant))
+      Array.from(ann.variants(abb)).map(RegExp.escape)
   ),
 ];
 

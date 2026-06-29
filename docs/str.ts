@@ -130,19 +130,6 @@ export function bounded(
 }
 
 /**
- * Escape all the special characters in the string, in order to search for raw
- * matches.
- * @param query
- * @returns
- */
-export function escape(query: string): string {
-  // TODO: (#0) Use `RegExp.escape` when it's more widely available:
-
-  // [1] https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/escape
-  return query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-}
-
-/**
  * @param node
  * @param overrides - A map from CSS selector queries to replacement text.
  * If an element matches a query, its subtree is skipped and the corresponding
@@ -218,7 +205,7 @@ export function regex(keys: string[], bound = true): string {
     // should come earlier in the list. Otherwise, the regex could match the
     // prefix and return early.
     .sort((a: string, b: string): number => b.length - a.length)
-    .map((key: string): string => escape(key))
+    .map((key: string): string => RegExp.escape(key))
     .join('|');
   return bound
     ? // Group and bound.

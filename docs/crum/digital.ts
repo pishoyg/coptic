@@ -230,7 +230,7 @@ class CrumSearchResult extends SearchResult {
     // them in any special way so we have no way to detect them.
     // A workaround might be prioritizing results with matches closer to the
     // beginning of the text.
-    // TODO: (#0) Consider overriding the parent's `compareKey` method.
+    // TODO: (#243) Consider overriding the parent's `compareKey` method.
     return row.querySelector(
       `.${cls.HEADWORD} .${xoox.CLS.MATCH}, .${cls.GLOSS} .${xoox.CLS.MATCH}`
     )

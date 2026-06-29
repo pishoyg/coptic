@@ -229,12 +229,10 @@ export class Form {
     this.table.insertAdjacentElement('afterend', this.paginationContainer);
 
     this.otherCheckBoxes =
-      form.boxes?.map(
-        ([id, param]: [string, string]): Checkbox => ({
-          box: document.getElementById(id) as HTMLInputElement,
-          param,
-        })
-      ) ?? [];
+      form.boxes?.map(([id, param]: [string, string]): Checkbox => ({
+        box: document.getElementById(id) as HTMLInputElement,
+        param,
+      })) ?? [];
 
     // Populate the form once from the query parameters.
     this.populateFromParams();
@@ -314,7 +312,7 @@ export class Form {
     }
 
     if (!this.regexCheckbox.box.checked) {
-      query = str.escape(query);
+      query = RegExp.escape(query);
     }
 
     if (this.fullWordCheckbox.box.checked) {
@@ -523,8 +521,8 @@ export class SearchResult extends AggregateResult {
     public readonly layer: number
   ) {
     super();
-    this.results = candidate.layers[layer]!.map(
-      (f: Field): FieldSearchResult => f.search(this.regex, this.unitsLimit())
+    this.results = candidate.layers[layer]!.map((f: Field): FieldSearchResult =>
+      f.search(this.regex, this.unitsLimit())
     );
   }
 
@@ -777,8 +775,8 @@ export class SearchResult extends AggregateResult {
   }
 
   /**
-   * TODO: (#0) This heuristic was conceived by experimentation. Its optimality
-   * is unproven, and we should perhaps revisit it.
+   * TODO: (#243) This heuristic was conceived by experimentation. Its
+   * optimality is unproven, and we should perhaps revisit it.
    *
    * @returns
    */
