@@ -88,7 +88,7 @@ repos:
         language: system
         pass_filenames: false
   - repo: https://github.com/pre-commit/mirrors-eslint
-    rev: v10.5.0
+    rev: v10.6.0
     hooks:
       - id: eslint
         additional_dependencies:
@@ -167,7 +167,7 @@ repos:
       - id: pyupgrade
 
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.15.18
+    rev: v0.15.20
     hooks:
       - id: ruff
         args: [--fix]
