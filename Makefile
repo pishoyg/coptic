@@ -82,8 +82,12 @@ yo: FORCE
 ########## TypeScript ##########
 transpile: FORCE
 	# Transpile TypeScript to JavaScript.
+	# NOTE: This target should stay in sync with the TypeScript compiler. See
+	# `tsconfig.json`.
+	# TODO: (#0) Upgrade the target whenever it has aged enough.
 	npx esbuild \
 		$$(find docs -name "*.ts" -not -name "*.test.ts" -not -name "*.d.ts") \
+		--target=ES2025 \
 		--outdir=docs \
 		--minify \
 		--sourcemap

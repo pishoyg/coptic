@@ -18,6 +18,8 @@
     }
   ],
   "compilerOptions": {
+    // NOTE: This version should stay in sync with the version used by
+    // `esbuild`. See `Makefile`.
     // TODO: (#0) Upgrade the target when it has aged enough.
     "target": "ES2025",
     "module": "ESNext",
