@@ -75,6 +75,14 @@ _install() {
   fi
 }
 
+# TODO: (#0) Figure out a way to upgrade the following as well:
+# - TypeScript target – `tsconfig.json`
+# - GitHub action versions – `.github/workflows`
+# - `node`
+# - `nvm`
+# - Other binaries installed via `_install`
+# Where unfeasible to upgrade automatically, print a reminder so the user can
+# upgrade them manually.
 _upgrade() {
   # Upgrade pip packages. `pip-sync` uninstalls anything absent from the
   # compiled requirements, including our editable local package, so reinstall

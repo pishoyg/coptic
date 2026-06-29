@@ -18,6 +18,7 @@
     }
   ],
   "compilerOptions": {
+    // TODO: (#0) Upgrade the target when it has aged enough.
     "target": "ES2025",
     "module": "ESNext",
     // TODO: (#0) Supplying `node` and `jest` types globally is not ideal.
