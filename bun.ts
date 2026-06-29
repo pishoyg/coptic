@@ -12,6 +12,6 @@ const dom = new jsdom.JSDOM('<html></html>', { url: 'http://localhost' });
 // Assign the JSDOM-created window and document objects to the global scope.
 // This makes them available to any module that needs them, right from the
 // start.
-global.window = dom.window;
+global.window = dom.window as unknown as Window & typeof globalThis;
 global.document = dom.window.document;
 global.localStorage = dom.window.localStorage;

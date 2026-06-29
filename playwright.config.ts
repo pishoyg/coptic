@@ -8,8 +8,8 @@
 import * as play from '@playwright/test';
 
 const PORT = 3000;
-const SITE_DIR: string = process.env.SITE_DIR!;
-const CI = !!process.env.CI;
+const SITE_DIR: string = process.env['SITE_DIR']!;
+const CI = !!process.env['CI'];
 
 /**
  * See https://playwright.dev/docs/test-configuration.
@@ -34,7 +34,7 @@ export default play.defineConfig({
   /* Retry on CI only */
   retries: CI ? 2 : 0,
   /* Opt out of parallel tests on CI. */
-  workers: CI ? 1 : undefined,
+  ...(CI ? { workers: 1 } : {}),
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: 'html',
 

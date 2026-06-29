@@ -20,6 +20,11 @@
   "compilerOptions": {
     "target": "ES2025",
     "module": "ESNext",
+    // TODO: (#0) Supplying `node` and `jest` types globally is not ideal.
+    "types": [
+      "node",
+      "jest"
+    ],
     "noEmit": true,
     "noEmitOnError": true,
     "preserveConstEnums": true,

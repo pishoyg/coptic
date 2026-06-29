@@ -4,7 +4,8 @@
     "./**/*.ts"
   ],
   "exclude": [
-    "./docs/*.ts"
+    "./docs/*.ts",
+    "./archive/**/*.ts"
   ],
   "compilerOptions": {
     "module": "NodeNext"
