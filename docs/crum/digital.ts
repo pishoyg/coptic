@@ -23,9 +23,9 @@ import * as kellia from './kellia.js';
 import * as andreas from './andreas.js';
 import * as cls from './cls.js';
 import * as html from '../html.js';
-import * as query from './query.js';
 import * as mode from './mode.js';
 import type * as ddial from '../dialect.js';
+import * as params from './params.js';
 
 // NOTE: The terms "roman" and "italic" below are used to distinguish pieces of
 // text surrounded by <span> tags with the "roman" class from those that are
@@ -338,8 +338,8 @@ const XOOXLES: Xooxle[] = [
     tableID: id.CRUM,
     searchResultType: CrumSearchResult,
     otherCheckboxes: [
-      [id.WIKI_CHECKBOX, 'wiki'],
-      [id.MARCION_CHECKBOX, 'marcion'],
+      [id.WIKI_CHECKBOX, params.WIKI],
+      [id.MARCION_CHECKBOX, params.MARCION],
     ],
   },
   {
@@ -425,7 +425,7 @@ function addListDialects(): HTMLInputElement[] {
 /**
  * Initialise the digital lexicon view: wire dialect controls and
  * tooltips, build the Xooxle search engines, the help panel, and the
- * report-link header — then start listening for query-change events.
+ * report-link header. Each Xooxle searches on every search-box keystroke.
  */
 export async function init(): Promise<void> {
   // We have a tooltip element bearing the dialects (intended for small
@@ -458,34 +458,29 @@ export async function init(): Promise<void> {
   );
   SearchResult.init(manager, highlighter);
 
-  // Initialize searchers. Ownership of the search box, `?query=` URL
-  // parameter, and search-box keyboard propagation lives in
-  // `docs/crum/query.ts`; each `Xooxle` listens there for `querychange`
-  // events rather than wiring its own input listener.
+  // Initialize searchers. Ownership of the `?query=` URL
+  // parameter lives in `docs/crum/mode.ts`.
   await Promise.all(
     XOOXLES.map(async (xooxle: Xooxle): Promise<void> => {
-      const json: xoox.XooxleRaw = (await fetch(xooxle.indexURL).then(
-        (raw: Response) => raw.json()
-      )) as xoox.XooxleRaw;
-      const form: xoox.Form = new xoox.Form({
-        searchBoxID: id.SEARCH_BOX,
-        fullWordCheckboxID: id.FULL_WORD_CHECKBOX,
-        caseSensitiveCheckboxID: id.CASE_SENSITIVE_CHECKBOX,
-        regexCheckboxID: id.REGEX_CHECKBOX,
-        // TODO: (#0) The message box gets written. Since multiple Xooxle
-        // instances are allowed to coexist on the same page, we should create
-        // several boxes, otherwise they could override each other!
-        messageBoxID: id.MESSAGE_BOX,
-        resultsTableID: xooxle.tableID,
-        scrollTargetID: id.title(xooxle.tableID),
-        boxes: xooxle.otherCheckboxes,
-      });
-      const x = new xoox.Xooxle(json, form, xooxle.searchResultType);
-
-      document.addEventListener(query.EVENT, (): void => {
-        x.search();
-      });
-      x.search();
+      // TODO: (#0) Instantiating multiple Xooxle instances means that the
+      // event listeners on shared elements (such as the checkboxes and the
+      // query parameters) get duplicated. Deduplicate them.
+      new xoox.Xooxle(
+        (await fetch(xooxle.indexURL).then((raw: Response) =>
+          raw.json()
+        )) as xoox.XooxleRaw,
+        new xoox.Form({
+          searchBoxID: id.SEARCH_BOX,
+          fullWordCheckboxID: id.FULL_WORD_CHECKBOX,
+          caseSensitiveCheckboxID: id.CASE_SENSITIVE_CHECKBOX,
+          regexCheckboxID: id.REGEX_CHECKBOX,
+          messageBoxID: id.MESSAGE_BOX,
+          resultsTableID: xooxle.tableID,
+          scrollTargetID: id.title(xooxle.tableID),
+          boxes: xooxle.otherCheckboxes,
+        }),
+        xooxle.searchResultType
+      );
 
       coll.fromIDs(
         id.collapse(xooxle.tableID),

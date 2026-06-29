@@ -4,7 +4,6 @@
 import * as scan from '../scan.js';
 import * as log from '../logger.js';
 import * as dev from '../dev.js';
-import * as query from './query.js';
 import * as mode from './mode.js';
 import * as id from './id.js';
 import * as str from '../str.js';
@@ -358,7 +357,8 @@ export class Word implements scan.Word {
 
 /**
  * Initialise the Crum scan view: build the index, wire the scroller, and
- * subscribe to query-change events.
+ * hand the shared search box to the `Dictionary` so it searches on every
+ * keystroke.
  */
 export async function init(): Promise<void> {
   const form: scan.Form = {
@@ -369,17 +369,6 @@ export async function init(): Promise<void> {
   };
 
   const isActive: scan.IsActive = () => mode.active(MODE);
-
-  const scroller = new scan.Scroller({
-    start: MIN_PAGE_NUM,
-    end: MAX_PAGE_NUM,
-    ext: 'png',
-    form,
-    offset: OFFSET,
-    landingPage: LANDING,
-    directory: DATA_DIR,
-    isActive,
-  });
 
   const [coptic, headwords]: [string, Record<string, string>] =
     await Promise.all([
@@ -397,16 +386,23 @@ export async function init(): Promise<void> {
     ])
   );
 
-  const index = new scan.Index(coptic, Word, {
-    ...headwords,
-    ...romanOverrides,
-  });
-  const dictionary = new scan.Dictionary(index, scroller);
-
   new scan.ZoomerDragger(form, isActive);
 
-  document.addEventListener(query.EVENT, (e: Event): void => {
-    dictionary.search((e as CustomEvent<string>).detail);
-  });
-  dictionary.search(query.current());
+  new scan.Dictionary(
+    new scan.Index(coptic, Word, {
+      ...headwords,
+      ...romanOverrides,
+    }),
+    new scan.Scroller({
+      start: MIN_PAGE_NUM,
+      end: MAX_PAGE_NUM,
+      ext: 'png',
+      form,
+      offset: OFFSET,
+      landingPage: LANDING,
+      directory: DATA_DIR,
+      isActive,
+    }),
+    document.getElementById(id.SEARCH_BOX) as HTMLInputElement
+  );
 }

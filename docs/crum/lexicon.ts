@@ -3,10 +3,10 @@
  * book, and dawoud — and this file wires them up symmetrically.
  *
  * `mode.init()` runs first; it owns the Digital / Book / Dawoud switcher
- * and (via `query.init()`) the shared search box. Once the box is wired,
- * the three peer views are initialised in parallel — each one attaches
- * its own `querychange` listener on `document` and performs its initial
- * search using `query.current()`.
+ * and the shared search box (the `?query=` URL param and key handling).
+ * Once the box is wired, the three peer views are initialised in
+ * parallel — each one attaches its own `input` listener to the shared
+ * search box and performs its initial search from the box's value.
  *
  *   - `digital.ts` — Xooxle / digital-lexicon init
  *   - `book.ts`    — Crum scan init

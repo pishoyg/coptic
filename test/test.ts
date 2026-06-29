@@ -3,25 +3,37 @@
  */
 
 import * as play from '@playwright/test';
+import * as paths from '../docs/paths.js';
+import * as params from '../docs/params.js';
+import * as crum from '../docs/crum/params.js';
 
 /**
  * PAGES_TO_TEST defines the list of site pages to test.
- *
- * TODO: (#0) Figure out a way to retrieve the paths from `paths.ts`, instead of
- * duplicating them below!
  */
 const PAGES_TO_TEST: string[] = [
-  '/', // Home
-  '/keyboard.html', // Keyboard Instructions
-  '/crum', // Lexicon
-  '/crum?wiki=true', // Lexicon with Wiki
-  '/crum?query=light&full=true&regex=true', // Lexicon with a query
-  '/crum/2.html', // A Crum note (sample). (We skip 1 because of #701.)
-  '/bible', // Bible
-  '/bible/genesis_1.html', // A Bible chapter (sample)
-  '/crum?mode=book', // Crum scan
-  '/crum?mode=dawoud', // Dawoud scan
-  '/crum?mode=dawoud&query=18', // Dawoud scan, landed on a page
+  // Home
+  paths.HOME,
+  // Keyboard Instructions
+  paths.KEYBOARD,
+  // Lexicon
+  paths.LEXICON,
+  // Lexicon with Wiki
+  paths.lexicon('light', undefined, { [crum.WIKI]: String(true) }),
+  // Lexicon with a query
+  paths.lexicon('light', undefined, {
+    [params.FULL]: String(true),
+    [params.REGEX]: String(true),
+  }),
+  // A Crum note (sample).
+  paths.crum('1'),
+  // Bible
+  paths.BIBLE,
+  // A Bible chapter (sample)
+  paths.bible('genesis', '1'),
+  // Crum scan
+  paths.lexicon('v', paths.BOOK),
+  // Dawoud scan
+  paths.lexicon('18', paths.DAWOUD),
 ];
 
 // Our test-environment detection relies on `navigator.webdriver` being true

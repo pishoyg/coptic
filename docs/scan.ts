@@ -360,9 +360,10 @@ export class Index {
 /**
  * Form holds the HTML elements used to drive a scan view.
  *
- * The search box and the wrapping <form> are NOT part of this — they're
- * owned by `docs/crum/query.ts`, which dispatches search queries to every
- * registered `Dictionary.search` on every keystroke.
+ * The search box and the wrapping <form> are NOT part of this — the
+ * shared search box is wired by `docs/crum/mode.ts` (which owns the
+ * `?query=` URL param and key handling), while each `Dictionary` listens
+ * to it directly to run a search on every keystroke.
  *
  * `Form` is a behaviorless data holder, so it is exposed as an interface
  * rather than a class — callers construct one with an object literal.
@@ -630,9 +631,10 @@ export class Scroller {
    * TODO: (#203) Re-express NEXT / PREV as custom DOM events dispatched
    * by the host (or by the buttons themselves on the active scan's
    * image). Each scroller would listen on its own image and so be
-   * inherently mode-scoped, eliminating the `active()` checks here. The
-   * matching plan for search events lives in `docs/crum/query.ts`; RESET
-   * already follows this shape via `head.EVENT`.
+   * inherently mode-scoped, eliminating the `active()` checks here. Search
+   * input is already handled directly by each `Dictionary` via the shared
+   * search box's `input` event; RESET already follows the custom-event
+   * shape via `head.EVENT`.
    *
    * TODO: (#0) A complementary cleaner design is for the host to
    * register / unregister the listener set wholesale on mode change.
@@ -829,10 +831,10 @@ export class ZoomerDragger {
 /**
  * Dictionary represents a searchable dictionary scan.
  *
- * The Dictionary is a thin lookup-and-navigate object: it does NOT listen
- * to the search box itself. Ownership of the `#search-box` and the
- * `?query=` URL param lives in another module (currently `crum/query.ts`),
- * which dispatches search events to registered dictionaries.
+ * The Dictionary listens to the shared search box's `input` event and
+ * navigates to the matching page on each keystroke. Ownership of the
+ * `?query=` URL param and the box's key handling lives in
+ * `docs/crum/mode.ts`.
  */
 export class Dictionary {
   /**
@@ -842,20 +844,24 @@ export class Dictionary {
    *
    * @param scroller - The scroller updates the scan image given a page
    * number.
+   * @param searchBox - The shared search box. The `Dictionary` listens to
+   * its `input` event and searches on every keystroke.
    */
   public constructor(
     private readonly index: Index,
-    private readonly scroller: Scroller
-  ) {}
+    private readonly scroller: Scroller,
+    private readonly searchBox: HTMLInputElement
+  ) {
+    searchBox.addEventListener('input', this.search.bind(this));
+    this.search();
+  }
 
   /**
    * Execute a search for the given query, navigating the scroller to the
    * matching page (if any).
-   *
-   * @param query - The search query (Coptic word or page number).
    */
-  public search(query: string): void {
-    const ref: Result | undefined = this.index.getPage(query);
+  public search(): void {
+    const ref: Result | undefined = this.index.getPage(this.searchBox.value);
     if (ref === undefined) {
       return;
     }

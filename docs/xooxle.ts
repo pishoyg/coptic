@@ -8,6 +8,7 @@ import * as str from './str.js';
 import * as tool from './tooltip.js';
 import * as dev from './dev.js';
 import * as pagination from './pagination.js';
+import * as params from './params.js';
 
 // KEY is the name of the field that bears the word key. The key can be used to
 // generate an HREF to open the word page.
@@ -152,16 +153,6 @@ export interface FormParams {
   boxes?: [string, string][] | undefined;
 }
 
-/**
- * _Param defines the form query parameters.
- */
-enum Param {
-  QUERY = 'query',
-  FULL = 'full',
-  CASE = 'case',
-  REGEX = 'regex',
-}
-
 interface Checkbox {
   param: string;
   box: HTMLInputElement;
@@ -203,19 +194,19 @@ export class Form {
 
     this.fullWordCheckbox = {
       box: document.getElementById(form.fullWordCheckboxID) as HTMLInputElement,
-      param: Param.FULL,
+      param: params.FULL,
     };
 
     this.caseSensitiveCheckbox = {
       box: document.getElementById(
         form.caseSensitiveCheckboxID
       ) as HTMLInputElement,
-      param: Param.CASE,
+      param: params.CASE,
     };
 
     this.regexCheckbox = {
       box: document.getElementById(form.regexCheckboxID) as HTMLInputElement,
-      param: Param.REGEX,
+      param: params.REGEX,
     };
 
     this.messageBox = document.getElementById(form.messageBoxID)!;
@@ -265,10 +256,6 @@ export class Form {
 
   /**
    * Add event listeners to update query parameters from the form fields.
-   *
-   * The search box's `input` event, the form's `submit` event, and the
-   * `?query=` URL parameter are owned by `docs/crum/query.ts` — see the
-   * comment at the top of that file for the rationale.
    */
   private addEventListeners(): void {
     this.checkboxes.forEach((box: Checkbox): void => {
@@ -281,13 +268,14 @@ export class Form {
   /**
    * Populate form fields from query parameters in the URL.
    *
-   * The `?query=` parameter is restored by `query.ts`; this method only
-   * handles the lexicon-specific boolean parameters.
+   * The `?query=` parameter is restored by the host page (`mode.ts` for
+   * the lexicon, `bible.ts` for the Bible); this method only handles the
+   * lexicon-specific boolean parameters.
    */
   private populateFromParams(): void {
-    const params = new URLSearchParams(window.location.search);
+    const parameters = new URLSearchParams(window.location.search);
     this.checkboxes.forEach((box: Checkbox): void => {
-      if (params.get(box.param)) {
+      if (parameters.get(box.param)) {
         box.box.checked = true;
       }
     });
@@ -1562,7 +1550,6 @@ export class Xooxle {
       }
     );
     this.addEventListeners();
-
     dev.play(() => {
       index.metadata.layers.forEach((layer: string[]): void => {
         // The number of columns must be divisible by the number of fields in a
@@ -1577,6 +1564,9 @@ export class Xooxle {
         );
       });
     });
+
+    // Execute the search query in the query parameter upon loading the page.
+    this.search();
   }
 
   /**
@@ -1588,11 +1578,15 @@ export class Xooxle {
   }
 
   /**
-   * Wire the listeners owned by this `Xooxle`. Search-box input is owned
-   * by `docs/crum/query.ts`, which calls `Xooxle.search()` on every
-   * keystroke; this method only wires the checkbox click handlers.
+   * Wire the listeners owned by this `Xooxle`: a fresh search on every
+   * search-box keystroke and on every checkbox click. The `?query=` URL
+   * param is owned by the host page (`docs/crum/mode.ts` for the lexicon,
+   * `docs/bible/bible.ts` for the Bible).
    */
   private addEventListeners(): void {
+    this.form.searchBox.addEventListener('input', () => {
+      this.search();
+    });
     // Checkbox clicks re-run search synchronously. They fire as singletons,
     // so no debounce is needed.
     this.form.addCheckboxClickListener(this.search.bind(this, 0));

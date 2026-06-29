@@ -6,7 +6,6 @@
 import * as coll from '../collapse.js';
 import * as log from '../logger.js';
 import * as browser from '../browser.js';
-import * as paths from '../paths.js';
 import * as tool from '../tooltip.js';
 import * as xoox from '../xooxle.js';
 import * as cls from './cls.js';
@@ -14,6 +13,7 @@ import * as dial from './dialect.js';
 import * as high from './highlight.js';
 import * as ddial from '../dialect.js';
 import * as map from '../crum/bible.js';
+import * as params from '../params.js';
 
 const BOOK_PARAM = 'book';
 // TODO: (#0) It's probably cleaner to export a separate mapping for this use
@@ -351,13 +351,13 @@ function addEventListeners(
   manager: dial.Manager,
   highlighter: high.Highlighter
 ): void {
-  // On input to the search box: update the URL parameters, auto-enable a
-  // language whose script the user just typed, and run a fresh search.
+  // On input to the search box: update the URL parameters, and auto-enable a
+  // language whose script the user just typed.
   form.searchBox.addEventListener('input', (e: Event): void => {
-    // Delete the book parameter in case it's present. A URL with both the
-    // query and book parameter wouldn't render properly.
     browser.setParams({
-      [paths.QUERY_PARAM]: form.searchBox.value,
+      [params.QUERY]: form.searchBox.value,
+      // Delete the book parameter in case it's present. A URL with both the
+      // query and book parameter wouldn't render properly.
       [BOOK_PARAM]: null,
     });
 
@@ -367,8 +367,6 @@ function addEventListeners(
     if (e instanceof InputEvent && e.inputType.startsWith('insert')) {
       updateLanguageSelection(form, manager, highlighter);
     }
-
-    xooxle.search();
   });
 
   // Since dialect selection affects the subset of fields that gets searched,
@@ -410,7 +408,7 @@ async function main(): Promise<void> {
   });
 
   // TODO: (#445) Control the query parameter through the Xooxle module.
-  form.searchBox.value = browser.getParam(paths.QUERY_PARAM) ?? '';
+  form.searchBox.value = browser.getParam(params.QUERY) ?? '';
 
   // The form is now populated with query parameters. Update language selection.
   updateLanguageSelection(form, manager, highlighter);
@@ -427,12 +425,6 @@ async function main(): Promise<void> {
   }
 
   addEventListeners(form, xooxle, manager, highlighter);
-
-  // Run a first search to honour an initial query restored from the URL.
-  // NOTE: If the URL has both a `book` and a `query` parameter, we would both
-  // scroll to the book and execute a search, which would be confusing. We don't
-  // account for this case because we never construct such a URL.
-  xooxle.search();
 }
 
 await main();

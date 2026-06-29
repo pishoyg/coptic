@@ -1,24 +1,14 @@
 /** Package paths defines path constants. */
 
 import * as iam from './iam.js';
+import * as params from './params.js';
 
 // remnqymi.com ownables:
 const SITE_URL = iam.amI('card') ? 'http://remnqymi.com' : '';
 export const HOME = `${SITE_URL}/`;
 export const LEXICON = `${SITE_URL}/crum`;
 export const BIBLE = `${SITE_URL}/bible`;
-
-/**
- * Lexicon URL contract.
- *
- * Owned by `paths.ts` (rather than by `crum/mode.ts` / `crum/query.ts`)
- * so that the URL shape is defined in the same module that constructs
- * the URLs, and so a shared utility never has to import from a
- * lexicon-specific module. `crum/mode.ts` and `crum/query.ts` consume
- * these values (and re-export `Mode` for convenience).
- */
-export const QUERY_PARAM = 'query';
-export const MODE_PARAM = 'mode';
+export const KEYBOARD = `${SITE_URL}/keyboard.html`;
 
 export type Mode = 'digital' | 'book' | 'dawoud';
 export const DIGITAL: Mode = 'digital';
@@ -45,24 +35,28 @@ export function crum(key: string, drvKey?: string): string {
  * @param query - Search query.
  * @param mode - Optional initial mode. When omitted, the lexicon opens in
  * its default mode.
- * @param params
+ * @param parameters
  * @returns The full lexicon URL.
  */
 export function lexicon(
-  query: string,
+  query?: string,
   mode?: Mode,
-  params: Record<string, string> = {}
+  parameters: Record<string, string> = {}
 ): string {
+  // Copy params, to avoid mutating the passed object.
+  parameters = { ...parameters };
+  if (query) {
+    parameters[params.QUERY] = query;
+  }
+  if (mode) {
+    parameters[params.MODE] = mode;
+  }
   // String concatenation is slightly cheaper than building a URL object and
   // serializing it.
   // We intentionally avoid encoding the URL parameters so the constructed links
   // will be prettier. Encoding is, as of the time of writing, not required in
   // any of our use cases.
-  params[QUERY_PARAM] = query;
-  if (mode) {
-    params[MODE_PARAM] = mode;
-  }
-  return `${LEXICON}?${Object.entries(params)
+  return `${LEXICON}?${Object.entries(parameters)
     .map(([key, value]: [string, string]): string => `${key}=${value}`)
     .join('&')}`;
 }

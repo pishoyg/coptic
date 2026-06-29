@@ -2,7 +2,6 @@
 
 import * as scan from '../scan.js';
 import * as copt from '../coptic.js';
-import * as query from './query.js';
 import * as mode from './mode.js';
 import * as id from './id.js';
 import * as str from '../str.js';
@@ -66,7 +65,8 @@ export class DawoudWord extends copt.Word implements scan.Word {
 
 /**
  * Initialise the Dawoud scan view: build the index, wire the scroller,
- * and subscribe to query-change events.
+ * and hand the shared search box to the `Dictionary` so it searches on
+ * every keystroke.
  */
 export async function init(): Promise<void> {
   const form: scan.Form = {
@@ -78,25 +78,21 @@ export async function init(): Promise<void> {
 
   const isActive: scan.IsActive = () => mode.active(MODE);
 
-  const scroller = new scan.Scroller({
-    start: MIN_PAGE_NUM,
-    end: MAX_PAGE_NUM,
-    ext: EXT,
-    form,
-    offset: OFFSET,
-    directory: DATA_DIR,
-    isActive,
-  });
-
-  const index = new scan.Index(
-    await fetch(COPTIC).then((res) => res.text()),
-    DawoudWord
-  );
   new scan.ZoomerDragger(form, isActive);
-  const dictionary = new scan.Dictionary(index, scroller);
-
-  document.addEventListener(query.EVENT, (e: Event): void => {
-    dictionary.search((e as CustomEvent<string>).detail);
-  });
-  dictionary.search(query.current());
+  new scan.Dictionary(
+    new scan.Index(
+      await fetch(COPTIC).then((res: Response): Promise<string> => res.text()),
+      DawoudWord
+    ),
+    new scan.Scroller({
+      start: MIN_PAGE_NUM,
+      end: MAX_PAGE_NUM,
+      ext: EXT,
+      form,
+      offset: OFFSET,
+      directory: DATA_DIR,
+      isActive,
+    }),
+    document.getElementById(id.SEARCH_BOX) as HTMLInputElement
+  );
 }

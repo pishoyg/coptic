@@ -7,19 +7,12 @@
  * this class to show / hide the corresponding view. The mode is also mirrored
  * to a `?mode=` URL query parameter so the view survives reload and link
  * sharing.
- *
  */
 import * as browser from '../browser.js';
-import * as query from './query.js';
 import * as id from './id.js';
+import * as params from '../params.js';
 
-import {
-  type Mode,
-  DIGITAL,
-  BOOK,
-  DAWOUD,
-  MODE_PARAM as PARAM,
-} from '../paths.js';
+import { type Mode, DIGITAL, BOOK, DAWOUD } from '../paths.js';
 
 // The `Mode` type and values live in `paths.ts`, which owns the lexicon URL
 // contract. They are re-exported here so consumers continue to spell
@@ -28,6 +21,10 @@ export { type Mode, DIGITAL, BOOK, DAWOUD };
 
 const MODES: Mode[] = [DIGITAL, BOOK, DAWOUD];
 const DEFAULT: Mode = DIGITAL;
+
+const box: HTMLInputElement = document.getElementById(
+  id.SEARCH_BOX
+) as HTMLInputElement;
 
 /**
  * Switch to the given mode: update the body class and URL parameter, and
@@ -43,13 +40,13 @@ export function set(mode: Mode): void {
   for (const m of MODES) {
     document.body.classList.toggle(m, m === mode);
   }
-  browser.setParam(PARAM, mode === DEFAULT ? null : mode);
+  browser.setParam(params.MODE, mode === DEFAULT ? null : mode);
   if (browser.virtualKeyboardLikely()) {
     // Skip focusing the search box when an on-screen keyboard is likely to
     // appear, since that would cover the page.
     return;
   }
-  query.focus();
+  box.focus();
 }
 
 /**
@@ -61,25 +58,48 @@ export function active(mode: Mode): boolean {
 }
 
 /**
+ * Initialise the module: restore the memorised query from the URL, wire
+ * the key listeners, and focus the search box so the user can start typing
+ * immediately.
+ *
  * Initialise mode switching. Reads the initial mode from the URL (falling
  * back to `digital`), applies it, and attaches click listeners to the three
  * mode buttons.
  */
 export function init(): void {
-  // Initialise the query module before we apply a mode, so that the very
-  // first `set` call can hand focus back to the search box via
-  // `query.focus()`.
-  query.init();
+  // Restore the memorised query and wire the search box before we apply a
+  // mode, so that the very first `set` call can hand focus back to the
+  // search box via `box.focus()`.
+  box.value = browser.getParam(params.QUERY) ?? '';
+
+  box.addEventListener('input', () => {
+    browser.setParam(params.QUERY, box.value);
+  });
+
+  // Stop key events on the search box from bubbling so other handlers
+  // don't fire while typing.
+  box.addEventListener('keyup', browser.stopPropagation);
+  box.addEventListener('keypress', browser.stopPropagation);
+  box.addEventListener('keydown', (e: KeyboardEvent) => {
+    // Pressing Escape blurs the search box, letting the user switch from
+    // typing to keyboard control of the page.
+    if (e.key === 'Escape') {
+      box.blur();
+    }
+    e.stopPropagation();
+  });
+
+  box.focus();
 
   for (const mode of MODES) {
     // Suppress the default mousedown focus shift onto the button so the
     // search box keeps focus across a click. Without this, the search
     // box's :focus styles briefly flicker off between mousedown and the
-    // re-focus that happens inside `set` → `query.focus()`.
+    // re-focus that happens inside `set` → `box.focus()`.
     const button = document.getElementById(id.modeButton(mode))!;
     button.addEventListener('mousedown', browser.preventDefault);
     button.addEventListener('click', set.bind(null, mode));
   }
 
-  set((browser.getParam(PARAM) as Mode | undefined) ?? DEFAULT);
+  set((browser.getParam(params.MODE) as Mode | undefined) ?? DEFAULT);
 }
