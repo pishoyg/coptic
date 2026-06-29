@@ -88,8 +88,8 @@ _upgrade() {
   pre-commit autoupdate
 
   # Upgrade npm packages.
-  jq -r "(.dependencies // {}) | keys[]" "package.json" | xargs npm add
-  jq -r "(.devDependencies // {}) | keys[]" "package.json" | xargs npm add --include=dev
+  jq -r '(.dependencies // {}) | keys[] | . + "@latest"' "package.json" | xargs npm add
+  jq -r '(.devDependencies // {}) | keys[] | . + "@latest"' "package.json" | xargs npm add --include=dev
 
   # Refresh the Playwright browser binaries, which are versioned to the
   # (just-upgraded) Playwright packages. `playwright` and `playwright-cli` ship
