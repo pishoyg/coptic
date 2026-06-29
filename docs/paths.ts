@@ -42,22 +42,29 @@ export function crum(key: string, drvKey?: string): string {
 /**
  * Build a lexicon URL with an optional initial mode.
  *
- * @param q - Search query.
- * @param m - Optional initial mode. When omitted, the lexicon opens in
+ * @param query - Search query.
+ * @param mode - Optional initial mode. When omitted, the lexicon opens in
  * its default mode.
+ * @param params
  * @returns The full lexicon URL.
  */
-export function lexiconLookup(q: string, m?: Mode): string {
+export function lexicon(
+  query: string,
+  mode?: Mode,
+  params: Record<string, string> = {}
+): string {
   // String concatenation is slightly cheaper than building a URL object and
   // serializing it.
   // We intentionally avoid encoding the URL parameters so the constructed links
   // will be prettier. Encoding is, as of the time of writing, not required in
   // any of our use cases.
-  const url = `${LEXICON}?${QUERY_PARAM}=${q}`;
-  if (!m) {
-    return url;
+  params[QUERY_PARAM] = query;
+  if (mode) {
+    params[MODE_PARAM] = mode;
   }
-  return `${url}&${MODE_PARAM}=${m}`;
+  return `${LEXICON}?${Object.entries(params)
+    .map(([key, value]: [string, string]): string => `${key}=${value}`)
+    .join('&')}`;
 }
 
 /**
@@ -169,5 +176,5 @@ export function rowUrl(worksheetUrl: string, rowNum: number | string): string {
  * @returns The full Lexicon URL.
  */
 export function crumScan(query: string): string {
-  return lexiconLookup(query, BOOK);
+  return lexicon(query, BOOK);
 }

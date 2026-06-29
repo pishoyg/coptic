@@ -301,7 +301,7 @@ function addCopticLookups(root: HTMLElement): void {
       (match: RegExpExecArray): string | null => {
         // Skip words that don't contain any Coptic characters.
         return /\p{Script=Coptic}/u.test(match[0])
-          ? paths.lexiconLookup(match[0])
+          ? paths.lexicon(match[0])
           : null;
       },
       [ccls.HOVER_LINK]
@@ -334,7 +334,7 @@ function addEnglishLookups(root: HTMLElement): void {
     html.linkifyText(
       el,
       ENGLISH_RE,
-      (match: RegExpExecArray) => paths.lexiconLookup(match[0]),
+      (match: RegExpExecArray) => paths.lexicon(match[0]),
       [ccls.HOVER_LINK],
       [cls.PART_OF_SPEECH, cls.ROMAN, cls.HEADING, cls.LANG]
     );
