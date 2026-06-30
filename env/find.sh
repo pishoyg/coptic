@@ -54,6 +54,7 @@ findex () {
     -not -path "./archive" \
     -not -name "package-lock.json" \
     -not -name "LICENSE" \
+    -not -name "*.tsbuildinfo" \
     "${@:2}"
 }
 
