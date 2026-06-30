@@ -170,25 +170,22 @@ LANGS: dict[Language, tuple[str, regex.Pattern[str]]] = {
     "GREEK": (
         cls.GREEK,
         regex.compile(
-            # TODO: (#759) Restrict the Greek character set if possible.
-            r"(?:[\p{Greek}\p{Coptic} '(),\-./;?\[\]·—…⸝ʹʹ]\p{M}*)+",
+            # TODO: (#503) Ideally, the comma should be removed.
+            r"(?:[\p{Greek}\p{Coptic} '(),\-./?\[\]·—…⸝ʹ]\p{M}*)+",
         ),
     ),
     "COPTIC": (
         cls.COPTIC,
-        # "Ꞩ" (U+A7A8 LATIN CAPITAL LETTER S WITH OBLIQUE STROKE) is a
-        # manuscript siglum that occurs, rarely, inside otherwise-Coptic text.
         # TODO: (#503) Ideally, the comma should be removed. A Coptic block of
-        # comma-separated words should instead by represented as a
+        # comma-separated words should instead be represented as a
         # comma-separated list of one-word Coptic blocks.
         regex.compile(
-            r"(?:[\p{Coptic}Ꞩ (),\-./:?\[\]·―†…⸗⸪]\p{M}*)+",
+            r"(?:[\p{Coptic} Ꞩ(),\-./:?\[\]·―†…⸗⸪]\p{M}*)+",
         ),
     ),
     "ARABIC": (
         cls.ARABIC,
-        # TODO: (#759) Restrict the Arabic character set if possible.
-        regex.compile(r"(?:[\p{Arabic} (),\-.\]…،؟ـ]\p{M}*)+"),
+        regex.compile(r"(?:[\p{Arabic} ()?\-.\]…،]\p{M}*)+"),
     ),
     "HEBREW": (cls.HEBREW, regex.compile(r"(?:[\p{Hebrew} ]\p{M}*)+")),
     "SYRIAC": (cls.ARAMAIC, regex.compile(r"(?:[\p{Syriac} …]\p{M}*)+")),
