@@ -22,6 +22,17 @@ import * as dial from '../dialect.js';
 import * as book from './book.js';
 
 /**
+ * The Bible book mapping, keyed by every Crum abbreviation. It's derived from
+ * the generated book list (`bib.BOOKS`): each book is reachable under each of
+ * its abbreviations.
+ */
+const BIBLE_MAPPING: Record<string, bib.Book> = Object.fromEntries(
+  bib.BOOKS.flatMap((bk: bib.Book): [string, bib.Book][] =>
+    bk.crum.map((abb: string): [string, bib.Book] => [abb, bk])
+  )
+);
+
+/**
  * NOTE: All of the regexes below assume the following normalizations:
  * - HTML tree normalization[1], which allows us to use `\s` instead of `\s+`.
  * - NFD normalization[2], which allows us to use `\p{M}`.
@@ -96,13 +107,13 @@ const DAN_OVERRIDE: Record<string, string> = {
 // [2] https://remnqymi.com/crum/31.html#:~:text=Thes
 // [3] https://remnqymi.com/crum/1666.html#:~:text=Kg
 const UNNUMBERED_BIBLE_BOOK: Set<string> = new Set<string>(
-  Object.keys(bib.MAPPING)
+  Object.keys(BIBLE_MAPPING)
     .filter((key: string): boolean => /^\d /.test(key))
     .map((key: string): string => key.slice(2))
     // There is '1 Jo', '2 Jo', and '3 Jo' for the Epistles. But there is also
     // just 'Jo' for the Gospel of John. An unqualified 'Jo' refers to the
     // Gospel, not the epistles.
-    .filter((key: string): boolean => !(key in bib.MAPPING))
+    .filter((key: string): boolean => !(key in BIBLE_MAPPING))
 );
 
 // DANGLING_SUFFIX_MARKERS are tokens that precede dangling suffixes. The
@@ -129,7 +140,7 @@ const DANGLING_SUFFIX_MARKERS: Record<string, boolean> = {
 const ENRICHMENT_RE = new RegExp(
   str.regex([
     // Bible:
-    ...Object.keys(bib.MAPPING),
+    ...Object.keys(BIBLE_MAPPING),
     ...Object.keys(DAN_OVERRIDE),
     // References:
     ...Object.keys(ref.MAPPING),
@@ -280,7 +291,7 @@ const MANUAL_CHAPTER_VERSE = new RegExp(`\\b${NUMS}\\b`, 'u');
 // prevents that. Non-numbered books can't be mistaken for a followup, so
 // including them would only bloat the lookahead.
 const NOT_NUMBERED_BIBLE_BOOK = `(?!${str.regex(
-  Object.keys(bib.MAPPING).filter((key: string): boolean => /^\d/.test(key)),
+  Object.keys(BIBLE_MAPPING).filter((key: string): boolean => /^\d/.test(key)),
   false
 )}${str.ASSERT_NON_WORD.source})`;
 
@@ -329,7 +340,7 @@ const LIST_OF_ABBREVIATIONS_PAGE = 'xi';
 
 const REFERENCE_RE = new RegExp(`^${str.regex(Object.keys(ref.MAPPING))}`, 'u');
 const BIBLE_RE = new RegExp(
-  `^${str.regex([...Object.keys(bib.MAPPING), ...Object.keys(DAN_OVERRIDE)])}`,
+  `^${str.regex([...Object.keys(BIBLE_MAPPING), ...Object.keys(DAN_OVERRIDE)])}`,
   'u'
 );
 
@@ -581,6 +592,10 @@ class Citation {
    */
   private explicit = true;
   private readonly book: bib.Book;
+  // The abbreviation under which the book was cited. The book data is shared
+  // across abbreviations, so the specific one used is tracked here rather than
+  // on `book`. Several heuristics in `valid()` are abbreviation-specific.
+  private readonly abb: string;
   /**
    *
    * @param chapter
@@ -599,7 +614,8 @@ class Citation {
       this.explicit = false;
     }
 
-    this.book = bib.MAPPING[key]!;
+    this.book = BIBLE_MAPPING[key]!;
+    this.abb = key;
 
     if (this.chapter && !this.verse && this.book.chapters.length === 1) {
       // This is a one-chapter book. The number immediately following the book
@@ -695,7 +711,7 @@ class Citation {
       // would point to a non-existent page).
       log.warn(
         'Bible citation references unknown chapter:',
-        `${this.book.abb} ${this.chapter}`
+        `${this.abb} ${this.chapter}`
       );
       elem = document.createElement('span');
       elem.append(...content);
@@ -707,7 +723,7 @@ class Citation {
     }
 
     elem.classList.add(cls.BIBLE);
-    elem.dataset[Citation.DATA_BOOK] = this.book.abb;
+    elem.dataset[Citation.DATA_BOOK] = this.abb;
     elem.dataset[Citation.DATA_CHAPTER] = this.chapter ?? '';
     elem.dataset[Citation.DATA_VERSE] = this.verse ?? '';
     const tooltip: (Node | string)[] = [];
@@ -777,7 +793,7 @@ class Citation {
     // NOTE: We don't verify any verification of verse numbers. But in some
     // cases the absence of a verse is used to detect false positives.
 
-    if (['AP', 'PS', 'AM'].includes(this.book.abb)) {
+    if (['AP', 'PS', 'AM'].includes(this.abb)) {
       // Distinguish between citations of Acta Pauli and Apocalypse, Pistis
       // Sophia and Psalms, and Amos and Actes des Martyrs.
       // See #705 and #709.
@@ -787,7 +803,7 @@ class Citation {
     // Amos citations were always followed by either zero numbers or two numbers
     // representing the chapter and verse, while the latter was only followed by
     // one number represented the page.
-    if (this.book.abb === 'Am') {
+    if (this.abb === 'Am') {
       return !this.chapter || (this.knownChapter() && !!this.verse);
     }
 
@@ -795,7 +811,7 @@ class Citation {
     // This heuristic is based on known examples (#524), but other cases might
     // turn up in the text that violate these rules. See #709.
     // The check is skipped when the parse context is not provided.
-    if (['He', 'Is'].includes(this.book.abb)) {
+    if (['He', 'Is'].includes(this.abb)) {
       if (remainder === undefined) {
         // We can not detect false positives without the context. Assume true
         // positive.
@@ -869,7 +885,7 @@ function replaceDanglingSuffix(context: html.Context): void {
  */
 function replaceUnnumberedBibleBook(context: html.Context): void {
   const regex = new RegExp(`^\\d ${context.match[0]}$`);
-  const books: bib.Book[] = Object.entries(bib.MAPPING)
+  const books: bib.Book[] = Object.entries(BIBLE_MAPPING)
     .filter(([abb, _]: [string, bib.Book]): boolean => regex.test(abb))
     .map(([_, bk]: [string, bib.Book]): bib.Book => bk);
   const anchor: HTMLAnchorElement = html.anchor(
@@ -1154,7 +1170,7 @@ function replaceMatch(context: html.Context): void {
     return;
   }
 
-  if (key in bib.MAPPING || key in DAN_OVERRIDE) {
+  if (key in BIBLE_MAPPING || key in DAN_OVERRIDE) {
     replaceBible(context);
     return;
   }
@@ -1366,7 +1382,7 @@ function handleManualAux(manual: HTMLElement): Iterable<Node> | Node {
     //    the chapter / verse numbers.
     // 3. The key is an annotation.
     // NOTE: A few abbreviations are ambiguous: they exist in both `ref.MAPPING`
-    // and `bib.MAPPING`. Elsewhere we resolve such collisions in favour of
+    // and `BIBLE_MAPPING`. Elsewhere we resolve such collisions in favour of
     // Bible citations, but manual labels reverse that priority and resolve to
     // the reference, because manual labels are primarily intended for
     // references; their use for Bible citations is incidental and rare.
@@ -1378,7 +1394,7 @@ function handleManualAux(manual: HTMLElement): Iterable<Node> | Node {
     // The `log.error` below flags any such label at build / test time.
     const reference: ref.Reference | undefined = ref.MAPPING[key];
     if (reference) {
-      if (key in bib.MAPPING) {
+      if (key in BIBLE_MAPPING) {
         log.error(key, 'is an ambiguous manual label!');
       }
       return reference.span(manual.childNodes);

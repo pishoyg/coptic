@@ -20,6 +20,6 @@ export interface Book {
   name: string;
   path: string;
   chapters: string[];
-  abb: string;
+  crum: string[];
 }
-export const MAPPING: Record<string, Book>;
+export const BOOKS: Book[];

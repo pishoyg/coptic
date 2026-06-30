@@ -16,15 +16,15 @@ import * as map from '../crum/bible.js';
 import * as params from '../params.js';
 
 const BOOK_PARAM = 'book';
-// TODO: (#0) It's probably cleaner to export a separate mapping for this use
+// TODO: (#0) It may be cleaner to export a separate mapping for this use
 // case, instead of reusing Crum's mapping.
-const MAPPING: Record<string, string> = Object.values(map.MAPPING).reduce<
-  Record<string, string>
->((acc: Record<string, string>, book: map.Book): Record<string, string> => {
-  // Retain the first abbreviation encountered. It's more canonical.
-  acc[book.path] ??= book.abb;
-  return acc;
-}, {});
+const MAPPING: Record<string, string> = Object.fromEntries(
+  map.BOOKS.map((book: map.Book): [string, string] => [
+    book.path,
+    // The first abbreviation is the most canonical.
+    book.crum[0]!,
+  ])
+);
 
 const KEY_RE = /^(.*?)_(\d+[ab]?|[a-f])\.html(?:#v(\d+)[a-z]?)?$/;
 const FRAGMENT_CONTEXT = 10;

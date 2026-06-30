@@ -174,11 +174,11 @@ _AVAILABLE_SOURCE_RE: regex.Pattern[str] = regex.compile(
 )
 
 
-class _CrumMapEntry(typing.TypedDict):
+class _CrumBook(typing.TypedDict):
     name: str
     path: str
     chapters: list[str]
-    abb: str
+    crum: list[str]
 
 
 # Output parameters
@@ -867,7 +867,7 @@ class Bible:
         ]
         self._link_chapters()
 
-    def write_crum_map(self) -> None:
+    def write_crum_books(self) -> None:
         # NOTE: Crum didn't explicitly list all Biblical book abbreviations.
         # Particularly:
         # - Joel and Jude are not listed, perhaps because he uses their full
@@ -881,20 +881,20 @@ class Bible:
         # Thus, the data in the input file is a super set of the data in Crum's
         # List of Abbreviation.
         ensure.unique(key for book in self.chain_books() for key in book.crum)
-        mapping: dict[str, _CrumMapEntry] = {
-            key: _CrumMapEntry(
+        books: list[_CrumBook] = [
+            _CrumBook(
                 name=book.name,
                 path=book.id(),
                 chapters=sorted(book.chapter_names()),
-                abb=key,
+                crum=book.crum,
             )
             for book in self.chain_books()
-            for key in book.crum
-        }
-        # This TypeScript code is needed by our website due to difficulties
+            if book.crum
+        ]
+        # This JavaScript code is needed by our website due to difficulties
         # getting Anki to read a JSON.
         file.write(
-            f"export const MAPPING = {mapping};",
+            f"export const BOOKS = {books};",
             paths.LEXICON_DIR / "bible.js",
         )
 
@@ -1537,7 +1537,7 @@ def main():
     table_builder.write("epub", bible, ["Bohairic", "English"], "2")
     table_builder.write("html", bible, _LANGUAGES, "")
 
-    bible.write_crum_map()
+    bible.write_crum_books()
 
     _build_xooxle(bible, table_builder)
 
