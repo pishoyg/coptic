@@ -305,8 +305,12 @@ export const DATA: Abbreviation[] = [
   // 'initial'.
   { fullForm: 'initio', variants: ['init'] },
   { fullForm: 'inventory', variants: ['inv', 'invent'], suffix: true },
-  { fullForm: 'loco citato', variants: ['l c', 'll c'], suffix: true },
-  { fullForm: 'loci citati', variants: ['ll cc'], suffix: true },
+  { fullForm: 'loco citato', variants: ['l c'], suffix: true },
+  {
+    fullForm: 'locis citatis',
+    variants: ['ll cc', 'll c', 'llc'],
+    suffix: true,
+  },
   { fullForm: 'loquitur', variants: ['loq'] },
   { fullForm: 'liturgical', variants: ['liturg'] },
   { fullForm: 'Septuagint', variants: ['LXX'], noCaseVariant: true },
