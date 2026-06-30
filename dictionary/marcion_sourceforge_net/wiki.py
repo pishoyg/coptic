@@ -161,7 +161,6 @@ Language: typing.TypeAlias = typing.Literal[
 # single allowed character optionally followed by combining marks (`\p{M}*`).
 # The allowed characters are the letters of the relevant Unicode script, plus
 # the punctuation and separators that actually occur in that language's text.
-# TODO: (#759) Restrict character classes further where appropriate.
 # TODO: (#0) You can simplify the structure by deduplicating `regex.compile` and
 # `(?:...)+`, retaining only the core of the regex in each entry.
 LANGS: dict[Language, tuple[str, regex.Pattern[str]]] = {
@@ -171,6 +170,7 @@ LANGS: dict[Language, tuple[str, regex.Pattern[str]]] = {
     "GREEK": (
         cls.GREEK,
         regex.compile(
+            # TODO: (#759) Restrict the Greek character set if possible.
             r"(?:[\p{Greek}\p{Coptic} '(),\-./;?\[\]·—…⸝ʹʹ]\p{M}*)+",
         ),
     ),
@@ -178,12 +178,16 @@ LANGS: dict[Language, tuple[str, regex.Pattern[str]]] = {
         cls.COPTIC,
         # "Ꞩ" (U+A7A8 LATIN CAPITAL LETTER S WITH OBLIQUE STROKE) is a
         # manuscript siglum that occurs, rarely, inside otherwise-Coptic text.
+        # TODO: (#503) Ideally, the comma should be removed. A Coptic block of
+        # comma-separated words should instead by represented as a
+        # comma-separated list of one-word Coptic blocks.
         regex.compile(
-            r"(?:[\p{Coptic}Ꞩ *(),\-./:;?\[\]°·–―†…⸗⸪]\p{M}*)+",
+            r"(?:[\p{Coptic}Ꞩ (),\-./:?\[\]·―†…⸗⸪]\p{M}*)+",
         ),
     ),
     "ARABIC": (
         cls.ARABIC,
+        # TODO: (#759) Restrict the Arabic character set if possible.
         regex.compile(r"(?:[\p{Arabic} (),\-.\]…،؟ـ]\p{M}*)+"),
     ),
     "HEBREW": (cls.HEBREW, regex.compile(r"(?:[\p{Hebrew} ]\p{M}*)+")),
@@ -196,10 +200,7 @@ LANGS: dict[Language, tuple[str, regex.Pattern[str]]] = {
     # NOTE: Demotic is not detectable using a character's Unicode name.
     "DEMOTIC": (
         cls.DEMOTIC,
-        regex.compile(
-            r"^(?:[\p{Ll}ꜣꜥʾʿ]\p{M}*|[ '\-=\.])+$",
-            regex.IGNORECASE,
-        ),
+        regex.compile(r"(?:[\p{Ll}ꜣꜥʾʿ]\p{M}*|[ '\-\.])+", regex.IGNORECASE),
     ),
 }
 
