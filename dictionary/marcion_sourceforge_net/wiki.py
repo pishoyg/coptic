@@ -140,23 +140,59 @@ def bracketed(exp: str, repeat: int = 2) -> str:
     return r"(?<!\[)" + r"\[" * repeat + exp + r"\]" * repeat + r"(?!\])"
 
 
+Language: typing.TypeAlias = typing.Literal[
+    "GREEK",
+    "COPTIC",
+    "ARABIC",
+    "HEBREW",
+    "SYRIAC",
+    "ETHIOPIC",
+    "HIEROGLYPH",
+    "DEMOTIC",
+]
+
 # LANGS maps language names, as they appear in the Unicode names of characters
 # belonging to the language, to a tuple containing:
 # - The HTML class used for the language.
 # - A validation regular expression for text marked as belonging to this
 # language.
-# NOTE: It's important for Greek to precede Coptic, and Hebrew Arabic. Some
-# Greek words contain Coptic letters, and Arabic words often use the Hebrew
-# geresh.
-# TODO: (#0) Populate validation regular expressions for other languages.
-LANGS: dict[str, tuple[str, regex.Pattern[str] | None]] = {
-    "GREEK": (cls.GREEK, None),
-    "COPTIC": (cls.COPTIC, None),
-    "ARABIC": (cls.ARABIC, None),
-    "HEBREW": (cls.HEBREW, None),
-    "SYRIAC": (cls.ARAMAIC, None),
-    "ETHIOPIC": (cls.AMHARIC, None),
-    "HIEROGLYPH": (cls.HIEROGLYPHIC, None),
+#
+# Each validation pattern accepts a sequence of tokens, where a token is a
+# single allowed character optionally followed by combining marks (`\p{M}*`).
+# The allowed characters are the letters of the relevant Unicode script, plus
+# the punctuation and separators that actually occur in that language's text.
+# TODO: (#759) Restrict character classes further where appropriate.
+# TODO: (#0) You can simplify the structure by deduplicating `regex.compile` and
+# `(?:...)+`, retaining only the core of the regex in each entry.
+LANGS: dict[Language, tuple[str, regex.Pattern[str]]] = {
+    # NOTE: Since Greek can contain Coptic, it's important for the Greek to
+    # precede Coptic in the list, so that a text will be tested for being Greek
+    # first.
+    "GREEK": (
+        cls.GREEK,
+        regex.compile(
+            r"(?:[\p{Greek}\p{Coptic} '(),\-./;?\[\]·—…⸝ʹʹ]\p{M}*)+",
+        ),
+    ),
+    "COPTIC": (
+        cls.COPTIC,
+        # "Ꞩ" (U+A7A8 LATIN CAPITAL LETTER S WITH OBLIQUE STROKE) is a
+        # manuscript siglum that occurs, rarely, inside otherwise-Coptic text.
+        regex.compile(
+            r"(?:[\p{Coptic}Ꞩ *(),\-./:;?\[\]°·–―†…⸗⸪]\p{M}*)+",
+        ),
+    ),
+    "ARABIC": (
+        cls.ARABIC,
+        regex.compile(r"(?:[\p{Arabic} (),\-.\]…،؟ـ]\p{M}*)+"),
+    ),
+    "HEBREW": (cls.HEBREW, regex.compile(r"(?:[\p{Hebrew} ]\p{M}*)+")),
+    "SYRIAC": (cls.ARAMAIC, regex.compile(r"(?:[\p{Syriac} …]\p{M}*)+")),
+    "ETHIOPIC": (cls.AMHARIC, regex.compile(r"\p{Ethiopic}+")),
+    "HIEROGLYPH": (
+        cls.HIEROGLYPHIC,
+        regex.compile(r"\p{Egyptian_Hieroglyphs}+"),
+    ),
     # NOTE: Demotic is not detectable using a character's Unicode name.
     "DEMOTIC": (
         cls.DEMOTIC,
@@ -178,28 +214,26 @@ def replace_bracketed(match: regex.Match[str]) -> str:
         # simply return the text itself.
         return text
 
-    language: str = (
-        next(
-            (language for language in LANGS if lang.has_lang(language, text)),
-            None,
-        )
-        or "DEMOTIC"
+    language: Language = next(
+        (language for language in LANGS if lang.has_lang(language, text)),
+        "DEMOTIC",
     )
 
     klass: str
-    expression: regex.Pattern[str] | None
+    expression: regex.Pattern[str]
     klass, expression = LANGS[language]
 
-    # TODO: (#0) This if statement won't be necessary once regexes are populated
-    # for all languages.
-    if expression:
-        ensure.ensure(
-            expression.fullmatch(text),
-            "invalid",
-            language,
-            "text:",
-            text,
-        )
+    ensure.ensure(
+        expression.fullmatch(
+            # Greek and Coptic are allowed to have superscripts and stacks
+            # within.
+            _detag(text) if language in ["GREEK", "COPTIC"] else text,
+        ),
+        "invalid",
+        language,
+        "text:",
+        repr(text),
+    )
 
     return f'<span class="{klass}">{text}</span>'
 
@@ -312,6 +346,19 @@ _SUBSTITUTIONS: list[Substitution] = [
     ),
     Substitution(bracketed(r"(.*?)"), replace_bracketed, ban=["[[", "]]"]),
 ]
+
+
+def _detag(text: str) -> str:
+    for tag in [
+        "<sup>",
+        "</sup>",
+        f'<span class="{cls.STACK}">',
+        f'<span class="{cls.STACK_TOP}">',
+        f'<span class="{cls.STACK_BOTTOM}">',
+        "</span>",
+    ]:
+        text = text.replace(tag, "")
+    return text
 
 
 @typing.final
