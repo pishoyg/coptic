@@ -350,8 +350,8 @@ _SUBSTITUTIONS: list[Substitution] = [
     Substitution(
         r"(\p{Letter})\^\^(\p{Letter})",
         rf'<span class="{cls.STACK}">'
-        rf'<span class="{cls.STACK_TOP}">\2</span>'
         rf'<span class="{cls.STACK_BOTTOM}">\1</span>'
+        rf'<span class="{cls.STACK_TOP}">\2</span>'
         r"</span>",
         ban=["^^"],
     ),
