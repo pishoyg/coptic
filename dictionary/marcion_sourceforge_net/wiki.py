@@ -205,7 +205,7 @@ LANGS: dict[Language, tuple[str, regex.Pattern[str]]] = {
 def _language(text: str) -> Language:
     # We exclude diacritics from language determination because Coptic uses
     # Greek diacritics in the expression ⲇͅⲇͅ - which is the abbreviation for
-    # the Greek phrase δήινα δήινα, translating to "so-and-so" or "NN".
+    # the Greek phrase δεῖνα δεῖνος, translating to "so-and-so" or "NN".
     # The diacritic used is Combining Greek Ypogegrammeni (U+0345), and we don't
     # want use of this diacritic to cause the expression to be evaluated as
     # Greek.
