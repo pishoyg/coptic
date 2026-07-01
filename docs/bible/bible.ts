@@ -408,7 +408,12 @@ async function main(): Promise<void> {
   });
 
   // TODO: (#445) Control the query parameter through the Xooxle module.
-  form.searchBox.value = browser.getParam(params.QUERY) ?? '';
+  // Only override the search box when the URL carries a query. Otherwise we
+  // could clobber input that the user has already typed into the box.
+  const query: string | null = browser.getParam(params.QUERY);
+  if (query) {
+    form.searchBox.value = query;
+  }
 
   // The form is now populated with query parameters. Update language selection.
   updateLanguageSelection(form, manager, highlighter);

@@ -70,7 +70,12 @@ export function init(): void {
   // Restore the memorised query and wire the search box before we apply a
   // mode, so that the very first `set` call can hand focus back to the
   // search box via `box.focus()`.
-  box.value = browser.getParam(params.QUERY) ?? '';
+  // Only override the search box when the URL carries a query. Otherwise we
+  // could clobber input that the user has already typed into the box.
+  const query: string | null = browser.getParam(params.QUERY);
+  if (query) {
+    box.value = query;
+  }
 
   box.addEventListener('input', () => {
     browser.setParam(params.QUERY, box.value);
