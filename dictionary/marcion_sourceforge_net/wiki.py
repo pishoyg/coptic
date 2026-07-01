@@ -202,6 +202,20 @@ LANGS: dict[Language, tuple[str, regex.Pattern[str]]] = {
 }
 
 
+def _language(text: str) -> Language:
+    # We exclude diacritics from language determination because Coptic uses
+    # Greek diacritics in the expression ⲇͅⲇͅ - which is the abbreviation for
+    # the Greek phrase δήινα δήινα, translating to "so-and-so" or "NN".
+    # The diacritic used is Combining Greek Ypogegrammeni (U+0345), and we don't
+    # want use of this diacritic to cause the expression to be evaluated as
+    # Greek.
+    text = orth.clean_diacritics(text)
+    for language in LANGS:
+        if lang.has_lang(language, text):
+            return language
+    return "DEMOTIC"
+
+
 def replace_bracketed(match: regex.Match[str]) -> str:
     text: str = match.group(1)
     del match
@@ -212,10 +226,7 @@ def replace_bracketed(match: regex.Match[str]) -> str:
         # simply return the text itself.
         return text
 
-    language: Language = next(
-        (language for language in LANGS if lang.has_lang(language, text)),
-        "DEMOTIC",
-    )
+    language: Language = _language(text)
 
     klass: str
     expression: regex.Pattern[str]
