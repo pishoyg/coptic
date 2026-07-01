@@ -197,7 +197,7 @@ LANGS: dict[Language, tuple[str, regex.Pattern[str]]] = {
     # NOTE: Demotic is not detectable using a character's Unicode name.
     "DEMOTIC": (
         cls.DEMOTIC,
-        regex.compile(r"(?:[\p{Ll}ꜣꜥʾʿ]\p{M}*|[ '\-\.])+", regex.IGNORECASE),
+        regex.compile(r"(?:\p{Latin}\p{M}*|[ꜣꜥʾʿ '\-.])+"),
     ),
 }
 
