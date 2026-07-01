@@ -247,6 +247,35 @@ def replace_bracketed(match: regex.Match[str]) -> str:
     return f'<span class="{klass}">{text}</span>'
 
 
+_SIGLA: list[str] = [
+    "S",  # Sahidic
+    "Sa",  # Sahidic with Akhmimic tendency
+    "Sf",  # Sahidic with Fayyumic tendency
+    "A",  # Akhmimic
+    "A2",  # Lycopolitan (Subakhmimic)
+    "B",  # Bohairic
+    "F",  # Fayyumic
+    "Fb",  # Fayyumic with Bohairic tendency
+    "O",  # Old Coptic
+    # While not explicitly mentioned in Crum's intro, there are occurrences
+    # of non-standard dialect sigla in the dictionary.
+    # For each of these, we add a non-standard dialect entry in TypeScript,
+    # so they can render properly.
+    "Of",
+    "Saf",
+    "Sb",
+    "Bf",
+]
+_CANONICAL: dict[str, str] = {"A2": "L"}
+
+
+def replace_dialect(match: regex.Match[str]) -> str:
+    siglum: str = "".join(g or "" for g in match.group(1, 2))
+    ensure.ensure(siglum in _SIGLA, "unknown siglum:", siglum)
+    klass: str = _CANONICAL.get(siglum, siglum)
+    return rf'<span class="{dict_cls.DIALECT} {klass}">{siglum}</span>'
+
+
 def replace_manual(match: regex.Match[str]) -> str:
     text, key = match.group(1, 2)
     if key is None:
@@ -314,26 +343,8 @@ _SUBSTITUTIONS: list[Substitution] = [
     ),
     Substitution(r"_(.+?)_", r"<i>\1</i>", ban=["_"]),
     Substitution(
-        bracketed("(S|B|A|F|O)"),
-        rf'<span class="{dict_cls.DIALECT} \1">\1</span>',
-        ban=["[[", "]]"],
-    ),
-    Substitution(
-        # While not explicitly mentioned in Crum's intro, there are occurrences
-        # of non-standard dialect sigla in the dictionary (such as S^af, B^f,
-        # and O^f).
-        # We are made aware of those cases by looking at the regexes used in
-        # CopticWiki. See history at:
-        # https://github.com/randykomforty/coptic/commits/main/scripts/dictionary_regexes.js
-        # For each of these, we add a non-standard dialect entry in TypeScript,
-        # so they can render properly.
-        bracketed(r"(S|F|B|O)\^(a|f|b|af)"),
-        rf'<span class="{dict_cls.DIALECT} \1\2">\1\2</span>',
-        ban=["[[", "]]", "^"],
-    ),
-    Substitution(
-        bracketed(r"(A\^2)"),
-        rf'<span class="{dict_cls.DIALECT} L">A2</span>',
+        bracketed(r"([SABFO])(?:\^(a|f|b|af|2))?"),
+        replace_dialect,
         ban=["[[", "]]", "^"],
     ),
     Substitution(
