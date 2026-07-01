@@ -1314,10 +1314,12 @@ function handleAddenda(root: HTMLElement): void {
     .forEach((elem: HTMLElement): void => {
       const page: string = elem.dataset[DATA_PAGE]!;
       tool.addTooltip(elem.querySelector(css.c(cls.MARK))!, [
-        'Addenda',
-        ' (',
-        html.anchor(paths.crumScan(page), ...scan.prettyPage(page)),
-        ')',
+        html.anchor(
+          paths.crumScan(page),
+          'Addenda (',
+          ...scan.prettyPage(page),
+          ')'
+        ),
       ]);
     });
 }
