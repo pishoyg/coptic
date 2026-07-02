@@ -617,7 +617,7 @@ class Wiki:
                 "output:",
                 html,
             )
-        # TODO: (#0) This check belongs in a shared package.
+        # TODO: (#756) This check belongs in a shared package.
         invalid_tags: list[str] = _SPACE_AFTER_TAG_RE.findall(html)
         ensure.ensure(
             not invalid_tags,

@@ -334,10 +334,9 @@ class Image:
 
     @functools.cached_property
     def sources(self) -> list[str]:
-        # TODO: (#0) Sources should be stripped at the source.
-        sources: list[str] = list(
-            map(str.strip, file.readlines(self.sources_path)),
-        )
+        sources: list[str] = [
+            s.removesuffix("\n") for s in file.readlines(self.sources_path)
+        ]
         ensure.ensure(
             all(sources),
             "source file",
