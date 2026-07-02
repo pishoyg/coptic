@@ -902,39 +902,27 @@ class Root(Row):
             or self.homonyms
         ):
             yield f'<div id="{ids.SISTERS}" class="{cls.SISTERS}">'
-            before: bool = False
             if self.sisters:
                 yield "<i>See also: </i>"
                 yield f'<table class="{cls.SISTERS_TABLE}">'
                 yield from _mother().gather_aux(self.sisters)
                 yield "</table>"
-                before = True
             if self.greek_sisters:
-                if before:
-                    yield page.LINE_BREAK
                 yield "<i>Greek: </i>"
                 yield f'<table class="{cls.SISTERS_TABLE}">'
                 yield from _stepmother().gather_aux(self.greek_sisters)
                 yield "</table>"
-                before = True
             if self.antonyms:
-                if before:
-                    yield page.LINE_BREAK
                 yield "<i>Opposite: </i>"
                 yield f'<table class="{cls.SISTERS_TABLE}">'
                 yield from _mother().gather_aux(self.antonyms)
                 yield "</table>"
-                before = True
             if self.homonyms:
-                if before:
-                    yield page.LINE_BREAK
                 yield "<i>Homonyms: </i>"
                 yield f'<table class="{cls.SISTERS_TABLE}">'
                 yield from _mother().gather_aux(self.homonyms)
                 yield "</table>"
-                before = True
             yield "</div>"
-            del before
 
     @typing.override
     def __str__(self) -> str:
@@ -1137,7 +1125,6 @@ def _img_aux(
     path: str,
     alt: str,
     caption: str | None = None,
-    line_br: bool = False,
 ) -> abc.Generator[str]:
     yield f'<figure id="{id_}" class="{class_}">'
     # NOTE: Anki requires basenames. The string `src="{path}"` gets updated
@@ -1147,8 +1134,6 @@ def _img_aux(
     if caption:
         yield f"<figcaption>{caption}</figcaption>"
     yield "</figure>"
-    if line_br:
-        yield page.LINE_BREAK
 
 
 # TODO: (#399) Crum and KELLIA words should implement a sister interface. You
