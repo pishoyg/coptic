@@ -19,7 +19,7 @@ import regex
 from dictionary import cls as dict_cls
 from dictionary.marcion_sourceforge_net import cls, constants
 from dictionary.marcion_sourceforge_net import lexical as lex
-from utils import ensure, gcp, lang, orth
+from utils import ensure, gcp, lang, log, orth
 
 # HTML data attribute names emitted in the Wiki HTML, and consumed by both the
 # TypeScript front-end and the Xooxle indexer.
@@ -684,37 +684,32 @@ class Wiki:
         return self.headword
 
     @functools.cached_property
-    def addenda_page(self) -> str | None:
+    def addenda_page(self) -> str:
         """
         Returns:
             A string representing the page number and column in the Additions
-            and Corrections section that contains addenda for this entry. If
-            this page lies outside the range of pages for which addenda are
-            available, return None.
+            and Corrections section that contains addenda for this entry.
 
             NOTE: The return value is often inaccurate. In particular:
             - If addenda for a given column start on a column and spill over to
               the following one, the first column will be returned. For example,
-              the addenda for 100b start on xviib and spill over to xviiia.
-              For all entries on 100b, the addenda page will be reported as
-              xviib.
+              the addenda for '100b' start on 'xviib' and spill over to
+              'xviiia'. For all entries on '100b', the addenda page will be
+              reported as 'xviib'.
             - If a Crum entry spans several columns, addenda will be inferred
-              based on the first column. For example, ϯ spans 392a to 396a, but
-              the addenda column will be inferred based on 392a.
+              based on the first column. For example, ϯ spans '392a' to '396a',
+              but the addenda column will be inferred based on '392a'.
 
             The blast radius is extremely small because the list of addenda is
             quite compact anyway.
             TODO: (#0) Contemplate a more precise implementation.
         """
-        if self.addendum():
-            # Addenda do not themselves possess addenda.
-            return None
         # We could binary-search, but the list only contains 20 elements, so
         # binary search is not worth it.
         for col in constants.COLUMN_RANGES:
             if self.crum <= col.end:
                 return col.name
-        return None
+        log.fatal(self, "has no addenda page!")
 
 
 @functools.cache
