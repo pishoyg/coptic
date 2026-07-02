@@ -207,17 +207,36 @@ figcaption {
 }
 
 /* Stacked letters: pieces written on top of one another (e.g. a vertical
- * ligature). Letters are full-size and horizontally centered, stacked within a
- * single character's footprint on the line. */
+ * ligature). The top letter sits above the bottom one, within a single
+ * character's footprint on the line.
+ *
+ * The two letters are deliberately kept as ordinary inline boxes so that the
+ * combined word stays matchable by find-in-page and text fragments (
+ * `#:~:text=`). A flex, grid, or block container would blockify the letters,
+ * inserting a block boundary between them that stops the browser from matching
+ * their contiguous text. Instead we pull the top letter back over the bottom
+ * one with a negative margin and lift it with relative positioning, neither of
+ * which blockifies an inline box.
+ *
+ * `z-index` keeps the top letter above the bottom one as a safety margin
+ * against font metrics that leave the boxes slightly overlapping.
+ * */
 .stack {
-  display: inline-flex;
-  flex-direction: column-reverse;
-  align-items: center;
-  line-height: 0.6;
-  vertical-align: middle;
+  & .stack-bottom {
+    /* Pull the top letter back over the bottom one. -0.6em centers the two
+     * letters of the corpus's stack (ⲩ/ⲱ) to within ~1px.
+     * TODO: (#503) Tune the margin once all stacks are known and populated.
+     * */
+    margin-right: -0.6em;
+  }
 
   & .stack-top {
     font-size: small;
+    position: relative;
+
+    /* TODO: (#503) Ditto. */
+    top: -0.8em;
+    z-index: 1;
   }
 }
 
