@@ -43,10 +43,10 @@ const TEST_CASES: {
   {
     key: '122', // ϣⲱⲧ
     want: {
-      [cls.REFERENCE]: 0,
-      [cls.BIBLE]: 0,
-      [cls.DIALECT]: 0,
-      [cls.ANNOTATION]: 0,
+      [cls.REFERENCE]: 255,
+      [cls.BIBLE]: 165,
+      [cls.DIALECT]: 572,
+      [cls.ANNOTATION]: 204,
     },
   },
   {
@@ -233,8 +233,8 @@ play.test.describe('Copy Wiki Entry Text', () => {
       await entry.hover();
       await entry.locator(`.${cls.COPY}`).click();
 
-      const yanked: string = await page.evaluate(
-        (): Promise<string> => navigator.clipboard.readText()
+      const yanked: string = await page.evaluate((): Promise<string> =>
+        navigator.clipboard.readText()
       );
       play.expect(yanked).toBe(
         `    ⲃⲁⲗ SB, ⲃⲉⲗ AA2F, DM bel nn m, eye: Job 16 20 SB, Ps 53 7 SB, ib 33 16 SA (Cl 22 6) B, Pro 4 25 SAB, Is 30 20 SBF, Lam 2 18 B, ὀφθαλμός; Sa 11 19 S, Mk 8 23 SB ὄμμα; ⲉⲓⲁⲧ Ge 18 2 S not true var, cf Ps 53 7, 91 11 S ⲁⲡⲁⲃ. ⲙⲉϩ ⲉⲓⲁⲧϥ, ib 90 8 B ϯ ⲛⲓⲁⲧⲕ ⲛⲛⲉⲕⲃ.
