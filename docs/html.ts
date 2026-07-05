@@ -458,7 +458,7 @@ export function linkifyText(
   root: Node,
   regex: RegExp,
   url: (match: RegExpExecArray) => string | null,
-  classes: string[],
+  classes: string[] = [],
   excludedClasses: string[] = []
 ): void {
   Array.from(linkifyWalk(root, css.disjunction(...excludedClasses))).forEach(

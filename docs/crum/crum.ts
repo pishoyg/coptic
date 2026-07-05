@@ -314,13 +314,9 @@ function addCopticLookups(root: HTMLElement): void {
  * @param root
  */
 export function addGreekLookups(root: HTMLElement): void {
-  root.querySelectorAll(`.${cls.GREEK}`).forEach((greek: Element) => {
-    html.linkifyText(
-      greek,
-      /\S+/,
-      (match: RegExpExecArray): string | null =>
-        GREEK_WORD_RE.test(match[0]) ? paths.greekLookup(match[0]) : null,
-      [cls.GREEK]
+  root.querySelectorAll(`.${cls.GREEK}`).forEach((greek: Element): void => {
+    html.linkifyText(greek, /\S+/, (match: RegExpExecArray): string | null =>
+      GREEK_WORD_RE.test(match[0]) ? paths.greekLookup(match[0]) : null
     );
   });
 }

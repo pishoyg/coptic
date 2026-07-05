@@ -139,6 +139,12 @@ figcaption {
 
 .greek {
   color: #573f90; /* amethyst */
+
+  /* Apply the color to all children as well. */
+  & * {
+    color: #573f90;
+  }
+
   &:hover {
     background-color: #ece7f6; /* light amethyst */
   }
