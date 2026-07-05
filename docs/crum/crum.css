@@ -228,19 +228,24 @@ figcaption {
  * against font metrics that leave the boxes slightly overlapping.
  * */
 .stack {
+  /* Pull the top letter back over the bottom one to center the two letters.
+   * TODO: (#503) Tune the margin once all stacks are known and populated.
+   * */
   & .stack-bottom {
-    /* Pull the top letter back over the bottom one. -0.6em centers the two
-     * letters of the corpus's stack (ⲩ/ⲱ) to within ~1px.
-     * TODO: (#503) Tune the margin once all stacks are known and populated.
-     * */
-    margin-right: -0.6em;
+    &:is(.coptic *) {
+      margin-right: -0.6em;
+    }
+
+    &:is(.greek *) {
+      margin-right: -0.35em;
+    }
   }
 
   & .stack-top {
     font-size: small;
     position: relative;
 
-    /* TODO: (#503) Ditto. */
+    /* TODO: (#503) Tune the margin once all stacks are known and populated. */
     top: -0.8em;
     z-index: 1;
   }
