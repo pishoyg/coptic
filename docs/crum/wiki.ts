@@ -1764,13 +1764,13 @@ function addEntryCopyShortcuts(root: HTMLElement): void {
 function addTextCopyTriggers(root: HTMLElement): void {
   root
     .querySelectorAll<HTMLElement>(
-      // NOTE: The following intentionally includes such elements as GREEK and
-      // BIBLE, although they are, as of the time of writing, hyperlinked.
-      // Clicking such elements both triggers clipboard copy and opens a link,
-      // which is deemed acceptable.
-      // Notice that, in case of GREEK, the copied text may be a superset of the
-      // hyperlinked text, as hyperlinks are added to each word individually
-      // instead of an entire `.greek` span.
+      // NOTE: The following intentionally includes GREEK although it is, as of
+      // the time of writing, hyperlinked.
+      // Clicking Greek elements both triggers a clipboard copy and opens a
+      // link. This is acceptable.
+      // Notice that the copied text may be a superset of the hyperlinked text,
+      // as hyperlinks are added to each word individually instead of an entire
+      // `.greek` span.
       // TODO: (#661,#658) Figure out a way to allow copying and lookups to
       // coexist gracefully.
       css.disjunction(
@@ -1781,12 +1781,7 @@ function addTextCopyTriggers(root: HTMLElement): void {
         cls.ARABIC,
         cls.ARAMAIC,
         cls.DEMOTIC,
-        cls.HEBREW,
-        // We also allow copying entities added by enrichment:
-        cls.BIBLE,
-        cls.REFERENCE,
-        cls.ANNOTATION,
-        cls.PAGE
+        cls.HEBREW
       )
     )
     .forEach((word: HTMLElement): void => {
