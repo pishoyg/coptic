@@ -505,7 +505,17 @@ class Xooxle:
     def _diacritic_free_text(self, html: str) -> str:
         # NOTE: The HTML doesn't escape its special characters, so we don't need
         # to un-escape them during text extraction.
-        text: str = orth.clean_diacritics(page.TAG_RE.sub("", html))
+        stripped: str = page.TAG_RE.sub("", html)
+        # Reject astral combining marks. The front-end highlighter indexes by
+        # UTF-16 code unit and can't strip them, so they would corrupt search
+        # highlighting (see `orth.is_astral_combining_mark` and #760). This is a
+        # hard correctness invariant, so it holds even in non-strict mode.
+        ensure.ensure(
+            not any(orth.is_astral_combining_mark(c) for c in stripped),
+            "astral combining mark in Xooxle line:",
+            repr(stripped),
+        )
+        text: str = orth.clean_diacritics(stripped)
         if "  " in text:
             # TODO: (#0) Double spaces signal errors in the data. Ideally, this
             # would be an assertion, rather than just an error message.

@@ -1178,8 +1178,21 @@ class Match {
    * @returns
    */
   public translate(translation: number[]): Match {
-    const start: number = translation[this.start]!;
-    const end: number = translation[this.end]!;
+    const start: number | undefined = translation[this.start];
+    const end: number | undefined = translation[this.end];
+    // A match offset that falls outside the translation is a logic error: it
+    // means the match- and translation-index spaces have drifted apart (as they
+    // did in #760, when translation was code-point indexed). Fail loudly rather
+    // than silently collapsing the match to a zero-width span.
+    log.ensure(
+      start !== undefined && end !== undefined,
+      'Match',
+      this.start,
+      '-',
+      this.end,
+      'is out of translation bounds',
+      translation.length
+    );
     if (start === this.start && end === this.end) {
       // Match is immutable (all fields are readonly), so it's safe to return
       // `this` directly.
@@ -1215,6 +1228,9 @@ class Line {
     // This preprocessing is now performed during index construction. We can
     // readily use the `text` field, which is expected to have been obtained as
     // described above.
+    //
+    // The index builder guarantees the text is free of astral combining marks
+    // (see `xooxle/xooxle.py`), which `orth.translation` cannot handle.
   }
 
   /**

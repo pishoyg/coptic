@@ -35,8 +35,23 @@ export type Translation = number[];
  */
 export function translation(text: string): Translation {
   const mapping: number[] = [];
-  for (const [i, c] of Array.from(text).entries()) {
-    if (!c.match(DIACRITIC_RE)) {
+  // Index by UTF-16 code unit, not code point: the match offsets that consume
+  // this mapping (see xooxle's `Match.translate` and `highlight`) all come from
+  // `String.matchAll`, `String.length`, and `String.substring`, which are
+  // UTF-16 based. Iterating by code point (`Array.from`) would make the mapping
+  // fall behind by one slot per astral character (e.g. U+1018E), so a match
+  // past such a character would read an out-of-range, `undefined` translation
+  // and collapse to zero width.
+  //
+  // Testing a single code unit against `DIACRITIC_RE` (rather than
+  // NFD-decomposing and stripping, as `cleanDiacritics` does) is only correct
+  // when no diacritic is an astral combining mark: an astral mark's two
+  // surrogate halves would each fail the `\p{Mark}` test and be kept, desyncing
+  // this mapping from `cleanDiacritics`. That precondition is not universal —
+  // astral combining marks exist (e.g. U+1D165) — so the Xooxle index builder
+  // rejects them (see `_diacritic_free_text` in `xooxle/xooxle.py`).
+  for (let i = 0; i < text.length; i++) {
+    if (!text.charAt(i).match(DIACRITIC_RE)) {
       mapping.push(i);
     }
   }
