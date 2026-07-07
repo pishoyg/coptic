@@ -350,7 +350,8 @@ figcaption {
     background-color: transparent;
   }
 
-  &:hover::target-text {
+  &:hover::target-text,
+  &:hover ::target-text {
     background-color: transparent;
   }
 }
