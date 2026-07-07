@@ -44,7 +44,6 @@ _install() {
   if command -v npm &> /dev/null; then
     npm install
     npx playwright install
-    npx playwright-cli install-browser
   fi
 
   if ! command -v tidy &> /dev/null; then
@@ -100,10 +99,8 @@ _upgrade() {
   jq -r '(.devDependencies // {}) | keys[] | . + "@latest"' "package.json" | xargs npm add --include=dev
 
   # Refresh the Playwright browser binaries, which are versioned to the
-  # (just-upgraded) Playwright packages. `playwright` and `playwright-cli` ship
-  # separate browser stacks, so refresh both.
+  # (just-upgraded) Playwright packages.
   npx playwright install
-  npx playwright-cli install-browser
 }
 
 if ${UPGRADE}; then

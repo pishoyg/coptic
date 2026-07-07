@@ -36,8 +36,6 @@ findex () {
     -not -path "./playwright-report/*" \
     -not -path "./.playwright-mcp" \
     -not -path "./.playwright-mcp/*" \
-    -not -path "./.playwright-cli" \
-    -not -path "./.playwright-cli/*" \
     -not -path "./.remember" \
     -not -path "./.remember/*" \
     -not -path "./.mypy_cache/*" \
