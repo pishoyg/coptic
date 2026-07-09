@@ -93,8 +93,13 @@ _NONEMPTY_LANGUAGES: list[Language] = [
     lang for lang in _LANGUAGES if lang not in _EMPTY_LANGUAGES
 ]
 
-_RESOURCES: list[schema.Source] = file.json_loads(
-    paths.BIBLE_DIR / "pisaxo.json",
+# The YAML is the human-friendly source of truth for the bibliography.
+# The pipeline renders it to the JSON artifact that the front-end consumes.
+_BIB_YAML: pathlib.Path = _SCRIPT_DIR / "data/bib.yaml"
+_BIB_JSON: pathlib.Path = paths.BIBLE_DIR / "pisaxo.json"
+
+_RESOURCES: list[schema.Source] = file.yaml_loads(
+    _BIB_YAML,
     list[schema.Source],
 )
 
@@ -1532,6 +1537,8 @@ def main():
     if args.html:
         table_builder.write("html", bible, _LANGUAGES, "")
         return
+
+    file.write(file.json_dumps(_RESOURCES), _BIB_JSON)
 
     flow_builder.write("epub", bible, ["Bohairic", "English"], "1")
     table_builder.write("epub", bible, ["Bohairic", "English"], "2")
