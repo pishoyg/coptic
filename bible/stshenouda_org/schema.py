@@ -1,7 +1,4 @@
-"""This package defines the structure of the input JSON.
-
-Parse and validate files against these schemas with `utils.file.json_loads`.
-"""
+"""This package defines the structure of the input JSON."""
 
 # pylint: disable=invalid-name
 import typing

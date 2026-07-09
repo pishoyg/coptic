@@ -98,10 +98,7 @@ _NONEMPTY_LANGUAGES: list[Language] = [
 _BIB_YAML: pathlib.Path = _SCRIPT_DIR / "data/bib.yaml"
 _BIB_JSON: pathlib.Path = paths.BIBLE_DIR / "pisaxo.json"
 
-_RESOURCES: list[schema.Source] = file.yaml_loads(
-    _BIB_YAML,
-    list[schema.Source],
-)
+_RESOURCES: list[schema.Source] = file.loads(_BIB_YAML, list[schema.Source])
 
 
 # Verify that all URLs are fully qualified and well-formed. A non-absolute URL
@@ -721,7 +718,7 @@ class Book(Item):
         self.sources: dict[Language, list[str]] = self._sources()
 
     def _sources(self) -> dict[Language, list[str]]:
-        raw: schema.Sources = file.json_loads(
+        raw: schema.Sources = file.loads(
             _SOURCES_DIR / f"{self.name}_Sources.json",
             schema.Sources,
         )
@@ -788,7 +785,7 @@ class Book(Item):
         if not os.path.exists(path):
             log.error("Book not found:", self)
             return []
-        return file.json_loads(path, list[schema.Chapter])
+        return file.loads(path, list[schema.Chapter])
 
     def chapter_names(self) -> list[str]:
         return [c.num for c in self.chapters]
@@ -865,7 +862,7 @@ class Bible:
     """The Bible."""
 
     def __init__(self) -> None:
-        bible_data: schema.BibleInfo = file.json_loads(_JSON, schema.BibleInfo)
+        bible_data: schema.BibleInfo = file.loads(_JSON, schema.BibleInfo)
 
         self.testaments: list[Testament] = [
             Testament(name, data) for name, data in bible_data.items()
