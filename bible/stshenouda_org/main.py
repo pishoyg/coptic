@@ -94,7 +94,7 @@ _NONEMPTY_LANGUAGES: list[Language] = [
 ]
 
 _RESOURCES: list[schema.Source] = file.json_loads(
-    paths.BIBLE_DIR / "bibliography.json",
+    paths.BIBLE_DIR / "pisaxo.json",
     list[schema.Source],
 )
 

@@ -25,7 +25,7 @@ enum CLS {
   CITATION = 'citation',
 }
 
-const BIBLIOGRAPHY = 'bibliography.json';
+const BIBLIOGRAPHY = 'pisaxo.json';
 interface Resource {
   variants: string[];
   url?: string;

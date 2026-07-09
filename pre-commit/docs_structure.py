@@ -105,7 +105,7 @@ PATTERNS: list[Pattern] = [
     Pattern(["index.html"]),  # Home
     Pattern(["crum/index.html"]),  # Lexicon
     Pattern(["keyboard.html"]),
-    Pattern(["bible/bibliography.json"]),
+    Pattern(["bible/pisaxo.json"]),
     Pattern(["**.ts"]),
     Pattern(["**.css"]),
     # Data files:
