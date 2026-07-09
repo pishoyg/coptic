@@ -121,6 +121,26 @@ def json_loads(
     )
 
 
+def yaml_loads[T](path: str | pathlib.Path, schema: type[T]) -> T:
+    """Read and parse the YAML file at `path`.
+
+    Args:
+        path: The path to the YAML file to read.
+        schema: The schema (a `TypedDict` class or a type alias) to
+            validate the parsed value against. A mismatch raises a
+            `typeguard.TypeCheckError`.
+
+    Returns:
+        The parsed YAML value, typed as `schema`.
+    """
+    return typeguard.check_type(
+        yaml.safe_load(read(path)),
+        schema,
+        # pylint: disable-next=line-too-long
+        collection_check_strategy=typeguard.CollectionCheckStrategy.ALL_ITEMS,
+    )
+
+
 def json_dumps(j: object, **kwargs: typing.Any) -> str:
     return json.dumps(
         j,
