@@ -1,3 +1,4 @@
+# TODO: (#730) Populate all URLs.
 ---
 - variants:
     - "Brenton, L. C. L. (1870). The Septuagint Version of the Old Testament: English
@@ -83,8 +84,10 @@
       Bibliotheca Bodmeriana. Cologny/Genève"
 - variants:
     - "Kosack, W. 1973. Vetus Testamentum Coptice Vol.1: Proverbia Salomonis. Achmimisch,
-      Sahidisch, Bohairisch und Arabisch. Bonn. Chap 1-4, 31:1-20"
+      Sahidisch, Bohairisch und Arabisch. Bonn."
 - variants:
+    # NOTE: This is no longer under copyright, but we still can't fine an online
+    # copy.
     - "Labib, E. 1897. ⲡⲓϫⲱⲙ ⲛ̀ⲧⲉ ⲛⲓⲯⲁⲗⲙⲟⲥ ⲛ̀ⲧⲉ ⲇⲁⲩⲉⲓⲇ ⲡⲓⲡⲣⲟⲫⲏⲧⲏⲥ ⲟⲩⲟϩ ⲡⲓⲟⲩⲣⲟ ⲛⲉⲙ
       ⲛⲓϩⲱⲇⲏ. (The Book of the Psalms of David the Prophet and the King and the Odes).
       Cairo"
@@ -94,6 +97,8 @@
   url: "https://elephantine.smb.museum/objects/object.php?o=315851"
 - variants:
     - "London, BL.Or.1319, paper, 225 f., 33 l., 432x279 mm, AM 1522/AD 1806, Boh-Ar"
+    # NOTE: This URL points to the manuscript entry, but the text / images are
+    # not available, likely because of the 2023 BL cybersecurity breach
   url: "https://searcharchives.bl.uk/catalog/032-004396055"
 - variants:
     - "M.K.H. Peter. 1983. A Critical Edition of the Coptic Bohairic Pentateuch. Vol.
@@ -109,7 +114,7 @@
     - "Malinine, M. 1950. \"Fragment d'une Version Achmimique des Petits Prophètes.\"
       In Coptic Studies in Honor of Walter Ewing Crum. Bulletin of Byzantine Institute,
       2. 365-415. Boston"
-  url: "https://archive.org/details/copticstudiesinh0000byza"
+  url: "https://archive.org/details/copticstudiesinh0000byza/page/365/mode/1up"
 - variants:
     - "Perez, G. A., El evangelio di San Matteo en Copto Sahidico, Madrid 1984"
 - variants:
@@ -124,6 +129,9 @@
     - "Quecke, Das Markusevangelium Saidisch, Barcelona 1972"
 - variants:
     - "Rahlfs, A. & Hanhart, R. (2006). Septuaginta: Complete Text without Apparatus"
+    # NOTE: Alfred Rahlfs' 1935 edition of the Septuagint is available online,
+    # but the text cites the 2006 revision by Hanhart. This URL merely points to
+    # a Wikipedia page.
   url: "https://en.wikipedia.org/wiki/Alfred_Rahlfs%27_edition_of_the_Septuagint"
 - variants:
     - "Schüssler, Die Katholischen Briefe in der Koptischen (Sahidischen) Version,
@@ -140,6 +148,8 @@
   url: "https://chesterbeatty.ie/assets/uploads/2018/11/Monographs-9-Joshua-I-VI-and-Other-Passages-In-Coptic-Opt.pdf"
 - variants:
     - "The Theodotion text - textualcriticism.scienceontheweb.net"
+    # NOTE: The URL is broken, but it's retained because that's how it's cited
+    # by St. Shenouda.
   url: "http://textualcriticism.scienceontheweb.net/APOC/Susanna2.html#chi01"
 - variants:
     - "Takla, H.N. 1996-7. \"The Sahidic Book of Tobit.\" Bulletin of the St. Shenouda
@@ -169,6 +179,8 @@
       Epistles in the Sahidic Dialect, Cambridge 1932"
   url: "https://coptot.manuscriptroom.com/images/webfriendly/PDF/URTPKUKA.pdf"
 - variants:
+    # NOTE: This is no longer under copyright, but we still can't fine an online
+    # copy.
     - "Till, W. 1927. Die Achmimische Version der Zwölf Kleinen Propheten. Codex Rainerianus.
       Wien. Coptica IV Copenhagen"
 - variants:
