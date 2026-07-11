@@ -258,6 +258,7 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'doxology', variants: ['doxol'] },
   { fullForm: 'duplicate', variants: ['duplic', 'dupl'] },
   {
+    // NOTE: This annotation is a source of false positives.
     fullForm: 'East',
     variants: ['E'],
     noCaseVariant: true,
@@ -332,6 +333,7 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'monastery', variants: ['monast'] },
   { fullForm: 'New Testament', variants: ['NTest'], noCaseVariant: true },
   {
+    // NOTE: This annotation is a source of false positives.
     fullForm: 'North',
     variants: ['N'],
     noCaseVariant: true,
@@ -383,6 +385,7 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'reference', variants: ['ref'] },
   { fullForm: 'references', variants: ['reff'] },
   {
+    // NOTE: This annotation is a source of false positives.
     fullForm: 'South',
     variants: ['S'],
     noCaseVariant: true,
@@ -418,6 +421,7 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'videlicet', variants: ['viz'] },
   { fullForm: 'verso folio', variants: ['vo'], suffix: true },
   {
+    // NOTE: This annotation is a source of false positives.
     fullForm: 'West',
     variants: ['W'],
     noCaseVariant: true,
