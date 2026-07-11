@@ -956,7 +956,8 @@ export const DATA = [
       "J": null,
       "K": null,
       "M": null,
-      "R": null
+      "R": null,
+      "S": null
     }
   },
   {
@@ -1843,6 +1844,7 @@ export const DATA = [
       "Louvre": null,
       "Leyd": LOOKUP,
       "L Mis": LOOKUP,
+      "MIE": LOOKUP,
       "MIF": LOOKUP,
       "Mich": LOOKUP,
       "Ming": LOOKUP,
