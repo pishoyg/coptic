@@ -349,7 +349,9 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'optative', variants: ['optat'] },
   { fullForm: 'papyrus', variants: ['pap'], suffix: true },
   { fullForm: 'page', variants: ['p'], noCaseVariant: true, suffix: true },
-  { fullForm: 'participle', variants: ['particip', 'partic'] }, // Encountered once (as of the time of writing).
+  // NOTE: 'part' is occasionally used as a variant for participle, but it's
+  // omitted as it would otherwise produce too many false positives.
+  { fullForm: 'participle', variants: ['particip', 'partic'] },
   { fullForm: 'penultimate', variants: ['penult'], suffix: true },
   { fullForm: 'penes', variants: ['penes'] },
   { fullForm: 'perfect', variants: ['perf', 'pf'] },
