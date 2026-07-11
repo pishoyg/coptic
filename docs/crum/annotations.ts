@@ -391,6 +391,7 @@ export const DATA: Abbreviation[] = [
     noCaseVariant: true,
     noStyledParent: true,
   },
+  { fullForm: 'spiritus asper', variants: ['sp asp'] },
   { fullForm: 'sub voce', variants: ['s v'], suffix: true },
   { fullForm: 'subjunctive', variants: ['subjunct'] },
   { fullForm: 'substantive', variants: ['substant'] },
