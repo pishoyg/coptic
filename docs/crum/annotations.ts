@@ -287,6 +287,11 @@ export const DATA: Abbreviation[] = [
     variants: ['HGhost', 'H. Ghost'],
     noCaseVariant: true,
   },
+  {
+    fullForm: 'Holy Spirit',
+    variants: ['Holy Sp.'],
+    noCaseVariant: true,
+  },
   { fullForm: 'hieroglyphic', variants: ['hierogl'] },
   { fullForm: 'ibidem', variants: ['ib'] },
   { fullForm: 'id est', variants: ['i e'] },
