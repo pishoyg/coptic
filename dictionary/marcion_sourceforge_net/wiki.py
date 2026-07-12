@@ -477,6 +477,12 @@ class Wiki:
                 yield variant
 
     def subs(self) -> abc.Generator[Substitution]:
+        yield Substitution(
+            # Four square brackets mark special-font (old) Coptic.
+            bracketed("(.*?)", 4),
+            r'<span class="old coptic">\1</span>',
+            ["[[[[", "]]]]"],
+        )
         # The headword substitution (which uses triple brackets) must precede
         # the double-bracket substitution.
         yield Substitution(
