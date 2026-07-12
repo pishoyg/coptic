@@ -223,9 +223,27 @@ class Deck:
             "Note keys must be unique!",
         )
 
+    @staticmethod
+    def _media_path(directory: str | pathlib.Path, src: str) -> str:
+        """Resolve a media reference to a path on disk.
+
+        Args:
+            directory: The directory containing the file that references the
+                media.
+            src: The reference. It's either an absolute server path (starting
+                with '/'), which lives under the site directory, or a path
+                relative to `directory`.
+
+        Returns:
+            The path of the media file on disk.
+        """
+        if src.startswith("/"):
+            return str(paths.disk(src))
+        return os.path.normpath(os.path.join(directory, src))
+
     def _anki_html(self, html: str) -> str:
         def src_to_basename(match: re.Match[str]) -> str:
-            path: str = os.path.join(self.html_dir, match.group(1))
+            path: str = Deck._media_path(self.html_dir, match.group(1))
             f: MediaFile = MediaFile(path)
             self.media_files.add(f)
             return f'<img src="{f.basename()}"'
@@ -239,20 +257,20 @@ class Deck:
     ) -> typing.Callable[[re.Match[str]], str]:
         """Construct a function that reformats font references in a CSS file.
 
-        NOTE: Font paths in the CSS must be relative.
+        NOTE: Font paths in the CSS are either relative to the CSS file, or
+        absolute server paths (starting with '/').
 
         Args:
             directory: The directory containing the CSS file.
 
         Returns:
             A function that can be used to substitute font rules in the CSS
-            file. The relative path to a font file will be replaced with the
-            path inside Anki.
+            file. The path to a font file will be replaced with the path inside
+            Anki.
         """
 
         def f(match: re.Match[str]) -> str:
-            path: str = os.path.join(directory, match.group(1))
-            path = os.path.normpath(path)
+            path: str = Deck._media_path(directory, match.group(1))
             ensure.ensure(
                 os.path.isfile(path),
                 "font file",

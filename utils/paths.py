@@ -79,6 +79,23 @@ def server(path: str | pathlib.Path) -> str:
     return f"/{p.relative_to(SITE_DIR)}"
 
 
+def disk(path: str) -> pathlib.Path:
+    """Construct a path to the given file on disk. Inverse of `server`.
+
+    Args:
+        path: A URL path, as seen by the server. It must start with '/'.
+
+    Returns:
+        The path (Path) of the target on disk, inside SITE_DIR.
+    """
+    ensure.ensure(
+        path.startswith("/"),
+        path,
+        "is not an absolute server path!",
+    )
+    return file(SITE_DIR, path.removeprefix("/"))
+
+
 def crum_url(key: str | int, deriv_key: str | int | None = None) -> str:
     html_file_path: pathlib.Path = LEXICON_DIR / f"{key}.html"
     root_url: str = f"{URL}{server(html_file_path)}"
