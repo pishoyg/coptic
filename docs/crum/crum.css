@@ -667,3 +667,17 @@ i,
   z-index: 1;
 }
 /* stylelint-enable selector-class-pattern */
+
+@font-face {
+  font-family: old-coptic;
+  src: url('/fonts/old-coptic/old-coptic.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.old.coptic {
+  /* NOTE: The rule below merely prepends `old-coptic` to the general rule.
+   * See `docs/style.css`. */
+  font-family:
+    old-coptic, Antinoou, 'Noto Sans', 'Noto Sans Symbols 2', sans-serif;
+}
