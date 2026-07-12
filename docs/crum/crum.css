@@ -678,6 +678,5 @@ i,
 .old.coptic {
   /* NOTE: The rule below merely prepends `old-coptic` to the general rule.
    * See `docs/style.css`. */
-  font-family:
-    old-coptic, Antinoou, 'Noto Sans', 'Noto Sans Symbols 2', sans-serif;
+  font-family: old-coptic, Antinoou, 'Noto Sans', sans-serif;
 }
