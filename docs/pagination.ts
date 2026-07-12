@@ -290,8 +290,8 @@ export class Pagination {
     for (let budget: number = MAX_SLOTS; budget >= 1; budget--) {
       tokens = visiblePages(currentPage, totalPages, budget);
       pages.replaceChildren(
-        ...tokens.map(
-          (token: PageToken): HTMLElement => this.chip(token, currentPage)
+        ...tokens.map((token: PageToken): HTMLElement =>
+          this.chip(token, currentPage)
         )
       );
       if (pages.scrollWidth <= pages.clientWidth) {
@@ -324,8 +324,7 @@ export class Pagination {
     }
     div.textContent = isPrev ? '←' : '→';
     tool.addTooltip(div, [isPrev ? 'prev' : 'next'], [CLS.TIP]);
-    div.addEventListener('click', (e: Event): void => {
-      e.preventDefault();
+    div.addEventListener('click', (): void => {
       this.navigate(target);
     });
     return div;
@@ -355,8 +354,7 @@ export class Pagination {
     }
 
     span.classList.add(CLS.NUM, cls.LINK);
-    span.addEventListener('click', (e: Event): void => {
-      e.preventDefault();
+    span.addEventListener('click', (): void => {
       this.navigate(token);
     });
     return span;
