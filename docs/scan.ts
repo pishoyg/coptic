@@ -12,11 +12,100 @@ import * as head from './header.js';
 // WANT_COLUMNS is the list of the first columns we expect to find in the TSV.
 const WANT_COLUMNS = ['page', 'start', 'end'];
 
-// ZOOM_FACTOR controls how fast zooming happens in response to scroll events.
-const ZOOM_FACTOR = 0.05;
+// ZOOM_DOUBLING_DELTA is how much wheel delta (in pixels) doubles or halves
+// the zoom: each event multiplies the scale by
+// `2 ** (-deltaPixels(e) / ZOOM_DOUBLING_DELTA)`.
+//
+// Expressing the rate as a delta budget, rather than as a step per event,
+// is what makes the zoom feel the same on both devices: a single trackpad
+// flick spends roughly this much delta across its hundreds of tiny events,
+// so it lands near a 2x zoom, while a mouse-wheel notch spends ~100px of it
+// and so zooms ~15%.
+const ZOOM_DOUBLING_DELTA = 500;
+
+// PINCH_DOUBLING_DELTA is ZOOM_DOUBLING_DELTA's counterpart for a trackpad
+// pinch, which browsers deliver as a wheel event with `ctrlKey` set, rather
+// than as a gesture of its own. A pinch spends an order of magnitude less
+// delta than a two-finger scroll of the same physical effort — a comfortable
+// pinch is a few tens of pixels, not a few hundred — so charging it the
+// scroll budget would leave the gesture users reach for first barely moving
+// the zoom at all.
+const PINCH_DOUBLING_DELTA = 50;
+
+// PINCH_MAX_DELTA is the largest per-event delta (in pixels) we will read as
+// part of a pinch. A pinch is not an event of its own: it arrives as a wheel
+// event with `ctrlKey` set, which is also exactly what ctrl + mouse wheel
+// sends. The two are told apart only by grain — a pinch reports many fine
+// deltas, a mouse a few coarse notches — so a `ctrlKey` event this large is
+// a mouse, and is charged the scroll budget. Were it charged the pinch
+// budget, a single notch would quarter the zoom.
+const PINCH_MAX_DELTA = 50;
+
+// PIXELS_PER_LINE converts a line-mode wheel delta into pixels. Chromium
+// values a line at ~33px — it reports the standard three-line notch as the
+// ~100px quoted above — and reusing that factor makes Firefox agree with
+// Chromium for the same mouse on the same machine, whatever the OS's
+// lines-per-notch setting happens to be.
+const PIXELS_PER_LINE = 33;
 
 const MIN_SCALE = 0.2;
 const MAX_SCALE = 10;
+
+/**
+ * Normalize a wheel delta to pixels.
+ *
+ * `deltaY` is only expressed in pixels when `deltaMode` is
+ * `DOM_DELTA_PIXEL`. Chromium and WebKit always report pixels, but Firefox
+ * reports a line-scrolling mouse in *lines* [1] — a delta of ~3 rather than
+ * ~100 — which a delta-proportional zoom would read as very nearly no zoom
+ * at all, leaving the wheel apparently dead. (A trackpad is a precise
+ * device, and reports pixels in every browser; only a mouse reaches this.)
+ *
+ * [1] https://bugzilla.mozilla.org/show_bug.cgi?id=1057252
+ *
+ * @param e - Mouse wheel event.
+ * @returns The event's vertical delta, in pixels.
+ */
+function deltaPixels(e: WheelEvent): number {
+  switch (e.deltaMode) {
+    case WheelEvent.DOM_DELTA_LINE:
+      return e.deltaY * PIXELS_PER_LINE;
+    case WheelEvent.DOM_DELTA_PAGE:
+      // A page is a scrollport, so the viewport height is the pixel count.
+      return e.deltaY * window.innerHeight;
+    default:
+      return e.deltaY;
+  }
+}
+
+/**
+ * The delta budget that an event's zoom is charged against.
+ *
+ * @param e - Mouse wheel event.
+ * @returns `PINCH_DOUBLING_DELTA` if the event is a trackpad pinch,
+ * `ZOOM_DOUBLING_DELTA` otherwise.
+ */
+function doublingDelta(e: WheelEvent): number {
+  return e.ctrlKey && Math.abs(deltaPixels(e)) < PINCH_MAX_DELTA
+    ? PINCH_DOUBLING_DELTA
+    : ZOOM_DOUBLING_DELTA;
+}
+
+/**
+ * Clamp a zoom scale to the permitted range.
+ *
+ * @param scale - Candidate scale.
+ * @returns The scale, confined to `[MIN_SCALE, MAX_SCALE]`.
+ */
+function bounded(scale: number): number {
+  if (scale > MAX_SCALE) {
+    return MAX_SCALE;
+  }
+  if (scale < MIN_SCALE) {
+    return MIN_SCALE;
+  }
+  return scale;
+}
 
 /**
  * IsActive answers whether a scan view is currently the active one on the
@@ -219,8 +308,8 @@ export class Index {
       return undefined;
     }
 
-    let column: Column = undefined;
-    let override: string | undefined = undefined;
+    let column: Column;
+    let override: string | undefined;
     // 1. Check overrides with the query as-is first.
     override = this.overrides[query];
     if (override) {
@@ -749,10 +838,39 @@ export class ZoomerDragger {
     e.preventDefault();
     e.stopPropagation();
 
-    if (e.deltaY < 0 && this.scale < MAX_SCALE) {
-      this.scale += ZOOM_FACTOR;
-    } else if (e.deltaY > 0 && this.scale > MIN_SCALE) {
-      this.scale -= ZOOM_FACTOR;
+    // Zoom by the wheel delta, rather than by a fixed step per event. A
+    // mouse reports a few coarse events per gesture (|deltaY| ~= 100), a
+    // trackpad hundreds of tiny ones (|deltaY| ~= 1), so a fixed step lets a
+    // single trackpad flick race all the way to a clamp. Scaling
+    // exponentially also keeps the zoom multiplicative, so equal and
+    // opposite deltas cancel out exactly.
+    const scale: number = bounded(
+      this.scale * 2 ** (-deltaPixels(e) / doublingDelta(e))
+    );
+    // Take the ratio from the *clamped* scale, so a zoom that the clamp
+    // refuses does not pan the image either.
+    const ratio: number = scale / this.scale;
+
+    // Anchor the zoom at the pointer, keeping whichever pixel of the image
+    // sits under the cursor there. Otherwise the image slides out from under
+    // the cursor as it shrinks, and the remainder of the gesture — no longer
+    // over the image, so no longer ours to preventDefault — scrolls the page.
+    //
+    // CSS maps a local point `p` to `origin + translate + scale * (p -
+    // origin)`, so the transformed box's centre is precisely the image of the
+    // transform origin. Holding the pointer fixed then reduces to nudging the
+    // translation by the pointer's offset from that centre.
+    const rect: DOMRect = this.transformTarget.getBoundingClientRect();
+    const centerX: number = rect.left + rect.width / 2;
+    const centerY: number = rect.top + rect.height / 2;
+    this.originX += (1 - ratio) * (e.clientX - centerX);
+    this.originY += (1 - ratio) * (e.clientY - centerY);
+    this.scale = scale;
+    if (this.isDragging) {
+      // handleZoom moved the origin; rebase the drag so the next mousemove
+      // does not snap the image by the anchoring offset.
+      this.startX = e.clientX - this.originX;
+      this.startY = e.clientY - this.originY;
     }
 
     this.updateTransform();
@@ -796,6 +914,13 @@ export class ZoomerDragger {
    * @param e - Mouse event.
    */
   private stopDragging(e: MouseEvent): void {
+    // The listener is on the document, so it sees every mouseup on the page,
+    // not just the ones ending a drag. Without this guard we would cancel and
+    // stop the propagation of all of them — including clicks on the search
+    // box, the mode buttons, and the pagination chips.
+    if (!this.isDragging) {
+      return;
+    }
     e.preventDefault();
     e.stopPropagation();
     this.isDragging = false;
