@@ -184,14 +184,14 @@ table {
 
 @font-face {
   font-family: Antinoou;
-  src: url('fonts/AntinoouFont-1.0.6/_Antinoou.woff2') format('woff2');
+  src: url('fonts/AntinoouFont-1.0.6/Antinoou.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: Antinoou;
-  src: url('fonts/AntinoouFont-1.0.6/_AntinoouItalic.woff2') format('woff2');
+  src: url('fonts/AntinoouFont-1.0.6/AntinoouItalic.woff2') format('woff2');
   font-weight: normal;
   font-style: italic;
 }
