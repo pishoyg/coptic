@@ -1119,7 +1119,8 @@ export const DATA = [
       "Lemm, O. von. (1913). <em><a href=\"https://www.biodiversitylibrary.org/item/212319#page/10/mode/1up\">Bruchstücke koptischer Märtyrerakten. I-V.</a></em> (I. Theodoros des Orientalen und Panikyros des Persers und Leontios des Arabers; II. Theodoros des Orientalen; III. Leontios des Arabers; IV. Heraklides; V. Isidoros). (Mémoires de l’ Académie impériale des sciences de St.-Pétersbourg, VIIIe série, Tome XII, No. 1). St. Petersburg."
     ],
     "variants": [
-      "L Mär"
+      "L Mär",
+      "L Märt"
     ]
   },
   {
@@ -1365,6 +1366,7 @@ export const DATA = [
     ],
     "variants": [
       "Orat Cyp",
+      "Or Cyp",
       "P Bad"
     ]
   },
