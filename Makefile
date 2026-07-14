@@ -129,19 +129,7 @@ epub_publish: REQUIRE_DRIVE_DIR FORCE
 crum: FORCE
 	# Generate the Crum lexicon artefacts.
 	./dictionary/marcion_sourceforge_net/main.py
-
-pisaxo: FORCE
-	# Regenerate ⲡⲓⲥⲁϧⲟ's Bibliography from the YAML, and create a commit.
-	@if git status --porcelain | grep -q .; then \
-		echo -e "$${RED}Dirty worktree.$${RESET}"; \
-		echo -e "$${YELLOW}$$(git status --porcelain)$${RESET}"; \
-		exit 1; \
-	fi
-
-	# Regenerate the Bibliography.
 	./dictionary/marcion_sourceforge_net/pisaxo.ts
-	git add --all
-	git commit --no-verify --message '[Crum/Wiki/References] `make pisaxo`'
 
 # TODO: (#421) Delete this rule. We will no longer retain the original images,
 # and this won't be even possible.
