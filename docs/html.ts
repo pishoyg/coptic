@@ -192,7 +192,7 @@ export class Chain {
   // misuse.
   private readonly reversed: Node[];
   private readonly parentNode: Node;
-  private readonly previousSibling: Node | null;
+  public readonly previousSibling: Node | null;
   public readonly nextSibling: Node | null;
 
   /**
@@ -367,6 +367,13 @@ export class Context {
    */
   public get nextSibling(): Node | null {
     return this.chain.nextSibling;
+  }
+
+  /**
+   * @returns The previous sibling of the first node in the chain, if it exists.
+   */
+  public get previousSibling(): Node | null {
+    return this.chain.previousSibling;
   }
 
   /**

@@ -521,6 +521,16 @@ function replaceAnnotation(context: html.Context): void {
     return;
   }
 
+  // Compute the full form before advancing the cursor while `context.left`
+  // still shows the text before the key.
+  const fullForm: string =
+    key === 'inf' &&
+    !context.left.trim() &&
+    context.previousSibling instanceof Element &&
+    context.previousSibling.classList.contains(cls.GREEK)
+      ? 'infinitive'
+      : annot.fullForm;
+
   // We consume the key-length nodes first so we can inspect them.
   const nodes: Node[] = context.munch(key.length);
 
@@ -534,7 +544,7 @@ function replaceAnnotation(context: html.Context): void {
     return;
   }
 
-  context.insert(annotation(annot.fullForm, ...nodes));
+  context.insert(annotation(fullForm, ...nodes));
 }
 
 /**
