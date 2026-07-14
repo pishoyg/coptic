@@ -339,9 +339,6 @@ GREEK_WORDS: str = rf"(?:{GREEK_WORD}(?: {GREEK_WORD}| \({GREEK_WORD}\))*)"
 GREEK_RE: regex.Pattern[str] = regex.compile(
     rf"{GREEK_WORDS}(?:, {GREEK_WORDS})*(?: &c)?",
 )
-UNBRACKETED_GREEK_RE: regex.Pattern[str] = regex.compile(
-    r"\p{Greek}" + _OUTSIDE_BRACKETS,
-)
 
 
 ENGLISH_PROCESSING: list[

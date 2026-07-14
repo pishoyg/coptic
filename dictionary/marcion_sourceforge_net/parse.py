@@ -165,8 +165,6 @@ def parse_english_cell(line: str) -> str:
             "Invalid bracketed text:",
             bracketed,
         )
-    if constants.UNBRACKETED_GREEK_RE.search(line):
-        log.warn("Found unbracketed Greek text in:", line)
 
     return _apply_substitutions(line, constants.ENGLISH_PROCESSING)
 
