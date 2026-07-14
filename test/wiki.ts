@@ -16,8 +16,8 @@ const TEST_CASES: {
   {
     key: '2', // ϯ
     want: {
-      [cls.REFERENCE]: 308,
-      [cls.BIBLE]: 235,
+      [cls.REFERENCE]: 307,
+      [cls.BIBLE]: 238,
       [cls.DIALECT]: 803,
       [cls.ANNOTATION]: 245,
     },
@@ -25,7 +25,7 @@ const TEST_CASES: {
   {
     key: '54', // ⲃⲱⲗ
     want: {
-      [cls.REFERENCE]: 391,
+      [cls.REFERENCE]: 400,
       [cls.BIBLE]: 305,
       [cls.DIALECT]: 832,
       [cls.ANNOTATION]: 238,
@@ -44,8 +44,8 @@ const TEST_CASES: {
     key: '122', // ϣⲱⲧ
     want: {
       [cls.REFERENCE]: 255,
-      [cls.BIBLE]: 165,
-      [cls.DIALECT]: 572,
+      [cls.BIBLE]: 166,
+      [cls.DIALECT]: 571,
       [cls.ANNOTATION]: 204,
     },
   },
@@ -61,7 +61,7 @@ const TEST_CASES: {
   {
     key: '139', // ⲭⲱ
     want: {
-      [cls.REFERENCE]: 289,
+      [cls.REFERENCE]: 291,
       [cls.BIBLE]: 287,
       [cls.DIALECT]: 882,
       [cls.ANNOTATION]: 208,
@@ -71,7 +71,7 @@ const TEST_CASES: {
     key: '369', // ⲧⲱⲣⲓ
     want: {
       [cls.REFERENCE]: 370,
-      [cls.BIBLE]: 301,
+      [cls.BIBLE]: 302,
       [cls.DIALECT]: 980,
       [cls.ANNOTATION]: 265,
     },
