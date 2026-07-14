@@ -480,7 +480,7 @@ class Wiki:
         yield Substitution(
             # Four square brackets mark special-font (old) Coptic.
             bracketed("(.*?)", 4),
-            r'<span class="old coptic">\1</span>',
+            rf'<span class="{cls.OLD} {cls.COPTIC}">\1</span>',
             ["[[[[", "]]]]"],
         )
         # The headword substitution (which uses triple brackets) must precede

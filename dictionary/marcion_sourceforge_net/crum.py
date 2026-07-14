@@ -1566,6 +1566,7 @@ XOOXLE: xooxle.Xooxle = xooxle.Xooxle(
                 cls.STACK,
                 cls.STACK_TOP,
                 cls.STACK_BOTTOM,
+                cls.OLD,
             },
             unit_tags={"p"},
             retain_tags=xooxle.RETAIN_TAGS_DEFAULT | {"p"},
