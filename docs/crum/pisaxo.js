@@ -396,7 +396,10 @@ export const DATA = [
       "Copt Mus Cai",
       "Copt Mus",
       "P Cai Copt Mus"
-    ]
+    ],
+    "postfixes": {
+      "tablet": null
+    }
   },
   {
     "title": "Canons of Athanasius ed. Riedel &amp; Crum (Text &amp; Transl. Soc.), 1904",
@@ -2118,7 +2121,8 @@ export const DATA = [
       "Va"
     ],
     "postfixes": {
-      "ar 172": "<em><a href=\"https://digi.vatlib.it/view/MSS_Vat.ar.172\">Vat. Arabo 172</a></em>"
+      "ar 172": "<em><a href=\"https://digi.vatlib.it/view/MSS_Vat.ar.172\">Vat. Arabo 172</a></em>",
+      "arab 172": "<em><a href=\"https://digi.vatlib.it/view/MSS_Vat.ar.172\">Vat. Arabo 172</a></em>"
     }
   },
   {
