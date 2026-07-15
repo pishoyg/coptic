@@ -100,6 +100,11 @@ _BIB_JSON: pathlib.Path = paths.BIBLE_DIR / "pisaxo.json"
 
 _RESOURCES: list[schema.Source] = file.loads(_BIB_YAML, list[schema.Source])
 
+# TIT is the verse number of the title of a given chapter. It's used to ID the
+# title, and this happens to be how it's cited by Crum.
+TIT: str = "tit"
+SUBSCR: str = "subscr"
+
 
 # Verify that all URLs are fully qualified and well-formed. A non-absolute URL
 # could be resolved as relative rather than absolute!
@@ -416,12 +421,10 @@ class Verse:
         Returns:
             Verse number, stripping any trailing letters.
         """
-        if not self.num:
-            return ""
-        num: str = self.num
-        if num[-1].isalpha():
-            num = num[:-1]
-        return num
+        if self.num in ["", TIT, SUBSCR] or self.num.isdigit():
+            return self.num
+        ensure.ensure(re.fullmatch(r"\d+[a-z]", self.num))
+        return self.num[:-1]
 
     def has(self, lang: Language) -> bool:
         return self._has[lang]
@@ -583,18 +586,23 @@ class Chapter(Item):
         # the grace to the second verse when the first is also numberless. We
         # deliberately do NOT extend it symmetrically to the second-to-last
         # verse: a single trailing numberless entry is tolerated, but no more.
-        boundaries: list[int] = [0, len(self.verses) - 1]
-        if not self.verses[0].num and not self.verses[1].num:
-            boundaries.append(1)
 
         for idx, v in enumerate(self.verses):
             if not v.num:
-                ensure.ensure(
-                    idx in boundaries or self.id() == "psalms_118",
-                    self,
-                    "has verse with unknown number:",
-                    v,
-                )
+                # No verse number!
+                if idx == 0:
+                    v.num = TIT
+                elif idx == 1 and self.verses[0].num == TIT:
+                    v.num = TIT
+                elif idx == len(self.verses) - 1:
+                    v.num = SUBSCR
+                else:
+                    ensure.ensure(
+                        self.id() == "psalms_118",
+                        self,
+                        "has verse with unknown number:",
+                        v,
+                    )
                 continue
             if v.num in seen:
                 dupes.add(v.num)
@@ -1073,8 +1081,6 @@ class HTMLBuilder:
 
         group: abc.Iterable[Verse]
         for num, group in itertools.groupby(chapter.verses, key=Verse.number):
-            # Sanity check! This assertion must hold given the regex.
-            assert not num or num.isdigit()
             group = list(group)
             # Avoid grouping the verses if:
             # - The group verses have no number (`verse.num` is the empty
@@ -1083,7 +1089,7 @@ class HTMLBuilder:
             #   If, otherwise, the group has an alphabetical suffix, we wrap it
             #   in a group that has a numerical number, in order for lookups
             #   that use the non-suffixed number to resolve correctly.
-            if not num or (len(group) == 1 and group[0].num.isdigit()):
+            if not num or (len(group) == 1 and num == group[0].num):
                 yield from emit_group(group)
                 continue
 

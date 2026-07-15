@@ -272,7 +272,7 @@ const SUFFIX = new RegExp(
  * In another singleton occurrence (in ⲁⲥⲕ – 503), the chapter and verse numbers
  * are parenthesized, so we account for that.
  */
-const NUMS = '(\\d+|[A-F])(?: (\\d+))?';
+const NUMS = '(\\d+|[A-F])(?: (\\d+|tit|subscr))?';
 // CHAPTER_VERSE matches "NUMS" OR "(NUMS)".
 // NOTE:
 // 1. This creates two sets of capture groups.
