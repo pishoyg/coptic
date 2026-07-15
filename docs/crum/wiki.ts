@@ -745,7 +745,11 @@ class Citation {
       // including them in the tooltip would be redundant.
       // However, if some numbers are inherited, we include the numbers in the
       // tooltip for readability.
-      this.explicit ? this.book.name : this.name()
+      // We also include the numbers if the verse number is a suffix, so we can
+      // spell it out.
+      !this.explicit || (this.verse && this.verse in ann.MAPPING)
+        ? this.name()
+        : this.book.name
     );
     tool.addTooltip(elem, tooltip, [cls.BIBLE]);
     return elem;
@@ -769,13 +773,19 @@ class Citation {
    * @returns
    */
   private name(): string {
+    let name = this.book.name;
     if (!this.chapter) {
-      return this.book.name;
+      return name;
     }
+    name = `${name} ${this.chapter}`;
     if (!this.verse) {
-      return `${this.book.name} ${this.chapter}`;
+      return name;
     }
-    return `${this.book.name} ${this.chapter}:${this.verse}`;
+    const annot: ann.Annotation | undefined = ann.MAPPING[this.verse];
+    if (annot) {
+      return `${name} ${annot.fullForm}`;
+    }
+    return `${name}:${this.verse}`;
   }
 
   /**
