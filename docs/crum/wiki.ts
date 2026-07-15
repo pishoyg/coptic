@@ -342,30 +342,73 @@ const BIBLE_RE = new RegExp(
 );
 
 /**
- * formSuperscripts maps the text content of a form-superscript element to the
- * Coptic form it stands for, for the wiki currently being processed.
+ * Ambient is the state scoped to the processing of a single wiki subtree by
+ * `handleAux`. It is installed as a stack frame by `withAmbient` so that a
+ * re-entrant call stacks its own frame instead of clobbering the caller's.
  *
- * It is populated by `collectFormSuperscripts` before enrichment, consulted by
- * `suffixFollowups` to decide whether a trailing `<sup>` belongs to a
- * reference suffix or is a form superscript, and read by
- * `annotateFormSuperscripts` to add tooltips at the end.
+ * We keep this ambient rather than threading it as a parameter: doing so would
+ * complicate the signatures of many functions between `enrich` and its deep
+ * consumers. Bundling both fields into one frame keeps that simplicity while
+ * making the save/restore discipline structural — `withAmbient` is the single
+ * place it lives, so a field added here can't be left unsaved.
  */
-let formSuperscripts = new Map<string, string>();
+interface Ambient {
+  /**
+   * formSuperscripts maps the text content of a form-superscript element to the
+   * Coptic form it stands for, for the wiki currently being processed.
+   *
+   * It is populated by `collectFormSuperscripts` before enrichment, consulted
+   * by `suffixFollowups` to decide whether a trailing `<sup>` belongs to a
+   * reference suffix or is a form superscript, and read by
+   * `handleFormSuperscripts` to add tooltips at the end.
+   */
+  formSuperscripts: Map<string, string>;
+
+  /**
+   * crossParagraphs controls whether antecedent search (for `ib` elements and
+   * dangling suffixes) is allowed to walk past the boundary of the enclosing
+   * paragraph into the preceding one.
+   *
+   * On the full Crum page the entire entry is rendered, so the paragraph that
+   * precedes a citation in the DOM is genuinely its textual antecedent. In the
+   * Xooxle search view, however, the entry is truncated to a handful of
+   * matching units and whole paragraphs may be dropped, so the paragraph that
+   * happens to precede a citation in the (incomplete) DOM may not be its real
+   * antecedent. Crossing the boundary there risks binding a citation to an
+   * unrelated antecedent; we would rather fail to resolve it than resolve it
+   * incorrectly.
+   */
+  crossParagraphs: boolean;
+}
 
 /**
- * crossParagraphs controls whether antecedent search (for `ib` elements and
- * dangling suffixes) is allowed to walk past the boundary of the
- * enclosing paragraph into the preceding one.
- *
- * On the full Crum page the entire entry is rendered, so the paragraph that
- * precedes a citation in the DOM is genuinely its textual antecedent. In the
- * Xooxle search view, however, the entry is truncated to a handful of matching
- * units and whole paragraphs may be dropped, so the paragraph that happens to
- * precede a citation in the (incomplete) DOM may not be its real antecedent.
- * Crossing the boundary there risks binding a citation to an unrelated
- * antecedent; we would rather fail to resolve it than resolve it incorrectly.
+ * ambient is the currently-installed processing frame. `withAmbient` swaps it
+ * for the duration of one `handleAux` call and restores it on exit.
  */
-let crossParagraphs = true;
+let ambient: Ambient = {
+  formSuperscripts: new Map<string, string>(),
+  crossParagraphs: true,
+};
+
+/**
+ * Install `next` as the ambient frame for the duration of `fn`, restoring the
+ * previous frame on exit. Re-entrant by construction: a nested call stacks its
+ * own frame, so a footnote pass can't clobber the state its caller's later
+ * steps depend on.
+ *
+ * @param next - The frame to install.
+ * @param fn - The function to run with `next` installed.
+ * @returns Whatever `fn` returns.
+ */
+function withAmbient<T>(next: Ambient, fn: () => T): T {
+  const saved: Ambient = ambient;
+  ambient = next;
+  try {
+    return fn();
+  } finally {
+    ambient = saved;
+  }
+}
 
 /**
  *
@@ -402,60 +445,55 @@ export function handle(root: HTMLElement, full = true): void {
  * @param full
  */
 function handleAux(wiki: HTMLElement, full: boolean): void {
-  // `crossParagraphs` and `formSuperscripts` are ambient state scoped to the
-  // processing of one subtree. `handleFootnotes` re-enters `handleAux` on each
-  // footnote's detached content, and that nested call reassigns both. Save the
-  // caller's values and restore them on exit, so a footnote can't clobber the
-  // state this call's own later steps depend on (notably
+  // Identify form superscripts before enrichment so that reference suffix
+  // processing can distinguish a trailing `<sup>` that stands for a Coptic
+  // form from one that is part of the suffix itself.
+  //
+  // `withAmbient` installs this frame for the duration of the call and restores
+  // the previous one on exit. `handleFootnotes` re-enters `handleAux` on each
+  // footnote's detached content; that nested call stacks its own frame, so it
+  // can't clobber the state this call's own later steps depend on (notably
   // `handleFormSuperscripts`, which runs after `handleFootnotes`).
-  // We choose global variables over parameters (which would be cleaner) because
-  // passing parameters would complicate the signatures of too many functions.
-  // This is much simpler, and benign.
-  const savedCrossParagraphs: boolean = crossParagraphs;
-  const savedFormSuperscripts: Map<string, string> = formSuperscripts;
-  try {
-    crossParagraphs = full;
-    const startText: string | undefined = dev.play(() => textContent(wiki));
+  withAmbient(
+    {
+      formSuperscripts: collectFormSuperscripts(wiki),
+      crossParagraphs: full,
+    },
+    (): void => {
+      const startText: string | undefined = dev.play(() => textContent(wiki));
 
-    // Identify form superscripts before enrichment so that reference suffix
-    // processing can distinguish a trailing `<sup>` that stands for a Coptic
-    // form from one that is part of the suffix itself.
-    formSuperscripts = collectFormSuperscripts(wiki);
+      enrich(wiki);
 
-    enrich(wiki);
+      handleAddenda(wiki);
 
-    handleAddenda(wiki);
+      handleFootnotes(wiki);
 
-    handleFootnotes(wiki);
+      addTextCopyTriggers(wiki);
 
-    addTextCopyTriggers(wiki);
+      handleFormSuperscripts(wiki);
 
-    handleFormSuperscripts(wiki);
+      if (full) {
+        addEntryCopyShortcuts(wiki);
 
-    if (full) {
-      addEntryCopyShortcuts(wiki);
+        addFinePrint(wiki);
+      }
 
-      addFinePrint(wiki);
+      dev.play(() => {
+        white.warnPotentiallyMissingReferences(wiki, EXCLUDE);
+
+        const endText: string = textContent(wiki);
+        // This handler should only add tooltips without modifying text content
+        // at all. Verify that the text content hasn't changed.
+        log.ensure(
+          endText === startText,
+          'Final text differs from original text! Original:',
+          startText,
+          'Final:',
+          endText
+        );
+      });
     }
-
-    dev.play(() => {
-      white.warnPotentiallyMissingReferences(wiki, EXCLUDE);
-
-      const endText: string = textContent(wiki);
-      // This handler should only add tooltips without modifying text content
-      // at all. Verify that the text content hasn't changed.
-      log.ensure(
-        endText === startText,
-        'Final text differs from original text! Original:',
-        startText,
-        'Final:',
-        endText
-      );
-    });
-  } finally {
-    crossParagraphs = savedCrossParagraphs;
-    formSuperscripts = savedFormSuperscripts;
-  }
+  );
 }
 
 /**
@@ -1070,7 +1108,7 @@ function* suffixFollowups(context: html.Context): Generator<Node | string> {
   // at the end necessitated checking against known form superscripts instead
   // of relying solely on position.
   //   https://remnqymi.com/crum/636.html#:~:text=P%201303
-  if (formSuperscripts.has(maybeSUP.textContent ?? '')) {
+  if (ambient.formSuperscripts.has(maybeSUP.textContent ?? '')) {
     return;
   }
 
@@ -1659,7 +1697,7 @@ function previous(node: Node | null): Node | null {
     // This cross-paragraph hop is suppressed when `crossParagraphs` is false.
     // This can be used on views where some paragraphs are dropped, making the
     // preceding `<p>` an unreliable antecedent.
-    (crossParagraphs
+    (ambient.crossParagraphs
       ? node?.parentElement?.parentElement?.previousElementSibling
           ?.lastElementChild?.lastElementChild
       : null) ??
@@ -1871,7 +1909,9 @@ function handleFormSuperscripts(root: HTMLElement): void {
       // reference span, a dialect siglum, or another excluded element.
       return;
     }
-    const form: string | undefined = formSuperscripts.get(sup.textContent);
+    const form: string | undefined = ambient.formSuperscripts.get(
+      sup.textContent
+    );
     if (!form) {
       log.error('Unable to find the form of superscript', sup.textContent);
       return;
