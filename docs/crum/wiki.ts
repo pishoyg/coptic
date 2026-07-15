@@ -183,14 +183,11 @@ const ENRICHMENT_RE = new RegExp(
 const NUMBERS = [
   "'?[0-9]+[a-zA-Z]?\\*?(?:–'?[0-9]+)?",
   'ed [A-Z]\\p{Letter}+',
-  // 'no' means 'number', but it must be followed by an integer, otherwise it's
-  // a false positive.
+  // 'no' means 'number'.
+  // It's not part of our canonical list of suffix annotations because it would
+  // produce too many false positives, so we have to add it here.
+  // It must be followed by an integer, otherwise it's a false positive.
   'no [0-9]+',
-  // 'pl' means 'plate', though outside suffixes it means 'plural'.
-  'pl [0-9]+',
-  // TODO: (#0) Consider explaining 'no' and 'pl' in the tooltip. Right now,
-  // only suffixes retrieved from the list of annotations are explained in the
-  // tooltip.
   '§\\d*',
   'scala',
   'Scala',
@@ -241,16 +238,16 @@ const NOT_SINGLE_LETTER_REFERENCE = `(?! [${Object.keys(ref.MAPPING)
 const NUMBER = `(?:${NUMBERS.join('|')})`;
 const NUMBER_GROUP = `(?: ${NUMBER}| ?\\(${NUMBER}(?: ${NUMBER})*\\))`;
 
-// A suffix never ends with 'v' or 'l'. As of the time of writing, no such
-// suffix is known to exist. Following a reference, these are annotations for
-// 'vide' or 'legendum', rather than part of the suffix.
+// A suffix never ends with 'v', 'l', or 'pl'. As of the time of writing, no
+// such suffix is known to exist. Following a reference, these are annotations
+// for 'vide', 'legendum', or 'plural', rather than part of the suffix.
 // 's v' stands for 'sub voce', and is a valid suffix, so we account for that.
-const NOT_VL = '(?<!\\b(?:l|(?<!\\bs )v))';
+const SUFFIX_END = '(?<!\\b(?:p?l|(?<!\\bs )v))';
 
 // SUFFIX matches a reference suffix together with any followups that trail it,
 // e.g. the whole " 44 66, 179" in "P 44 66, 179".
 const SUFFIX = new RegExp(
-  `^\\.?${NUMBER_GROUP}+${NOT_VL}(?:(?:,| [=&])${NOT_SINGLE_LETTER_REFERENCE + NUMBER_GROUP}+${NOT_VL})*${str.ASSERT_NON_WORD.source}`,
+  `^\\.?${NUMBER_GROUP}+${SUFFIX_END}(?:(?:,| [=&])${NOT_SINGLE_LETTER_REFERENCE + NUMBER_GROUP}+${SUFFIX_END})*${str.ASSERT_NON_WORD.source}`,
   'u'
 );
 

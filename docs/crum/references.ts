@@ -5,6 +5,7 @@ import * as dev from '../dev.js';
 import * as html from '../html.js';
 import * as ann from './annotations.js';
 import * as sax from './pisaxo.js';
+import * as str from '../str.js';
 
 export const MAPPING: Record<string, Reference> = {};
 
@@ -86,6 +87,22 @@ export class Source {
     return this.descriptionMemo.cloneNode(true) as HTMLUListElement;
   }
 }
+
+const SUFFIX_ANNOTATIONS: Record<string, string> = Object.fromEntries([
+  ...Object.entries(ann.MAPPING)
+    .filter(([_, annot]: [string, ann.Annotation]): boolean => !!annot.suffix)
+    .map(([key, annot]: [string, ann.Annotation]): [string, string] => [
+      key,
+      annot.suffixFullForm ?? annot.fullForm,
+    ]),
+  // 'no' is absent from the canonical list of annotations, because it would
+  // yield too many false positives.
+  ['no', 'number'],
+]);
+const SUFFIX_ANNOTATION_RE = new RegExp(
+  str.regex(Object.keys(SUFFIX_ANNOTATIONS)),
+  'ug'
+);
 
 /**
  * Reference represents a particular way of citing a source in the text.
@@ -212,25 +229,16 @@ export class Reference {
     // annotations have never been encountered yet, so this is deemed
     // acceptable.
     for (const node of suffix) {
-      const text: string = html.textContent(node);
-      const italic = node instanceof Element && node.nodeName === 'I';
+      const italic: boolean = node instanceof Element && node.nodeName === 'I';
 
-      for (const match of text.matchAll(ann.RE)) {
+      for (const match of html
+        .textContent(node)
+        .matchAll(SUFFIX_ANNOTATION_RE)) {
         const abb: string = match[0];
-        const annot = ann.MAPPING[abb];
-        if (!annot?.suffix) {
-          log.warn(
-            'Non-suffix annotation',
-            abb,
-            'found in suffix',
-            Array.from(suffix).map(html.textContent).join('')
-          );
-          continue;
-        }
         const div: HTMLDivElement = document.createElement('div');
         div.append(
           abbreviation(abb, italic),
-          html.maybeI(annot.fullForm, italic)
+          html.maybeI(SUFFIX_ANNOTATIONS[abb]!, italic)
         );
         yield div;
       }

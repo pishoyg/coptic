@@ -37,12 +37,16 @@ export interface Abbreviation {
   noStyledParent?: boolean;
   // suffix indicates whether this annotation can occur as a Reference suffix.
   suffix?: boolean;
+  // suffixFullForm is the full form of this abbreviation when it occurs on a
+  // suffix.
+  suffixFullForm?: string;
 }
 
 export interface Annotation {
   fullForm: string;
-  noStyledParent?: boolean | undefined;
-  suffix?: boolean | undefined;
+  suffixFullForm: string | undefined;
+  noStyledParent: boolean | undefined;
+  suffix: boolean | undefined;
 }
 
 // NOTE: We choose to use English, rather than Latin, names of tenses (perfect,
@@ -120,7 +124,12 @@ export const DATA: Abbreviation[] = [
       'intransitive (i.e. verb without immediate object, or one constructed with prep. ⲉ-)',
     variants: ['intr'],
   },
-  { fullForm: 'legendum', variants: ['l'] },
+  {
+    fullForm: 'legendum',
+    variants: ['l'],
+    suffix: true,
+    suffixFullForm: 'line',
+  },
   { fullForm: 'literally', variants: ['lit'] },
   {
     fullForm: 'masculine',
@@ -148,12 +157,12 @@ export const DATA: Abbreviation[] = [
   // 'passive', and is sometimes the verb 'pass'
   { fullForm: 'passim', variants: ['pass'], suffix: true },
   { fullForm: 'conjunctive participle', variants: ['p c'] },
-  // TODO: (#0) 'pl' sometimes stands for 'plate' (example: [1]).
-  // We need to figure out a way to handle that!
-  // If we were to manually annotate it (#668), it wouldn't be parsed as a
-  // reference suffix, which is not ideal.
-  // [1] https://remnqymi.com/crum/2610.html#:~:text=%20291%2C%20JEA%2021-,pl
-  { fullForm: 'plural', variants: ['pl'] },
+  {
+    fullForm: 'plural',
+    variants: ['pl'],
+    suffix: true,
+    suffixFullForm: 'plate',
+  },
   // 'pll' is definitely 'plates'.
   { fullForm: 'plates', variants: ['pll'], suffix: true },
   // Crum has "possessive pronoun" for "poss", but "possessive" is suitable. See
@@ -471,6 +480,7 @@ export const MAPPING: Record<string, Annotation> = {};
 DATA.forEach((abb: Abbreviation): void => {
   const ann: Annotation = {
     fullForm: abb.fullForm,
+    suffixFullForm: abb.suffixFullForm,
     noStyledParent: abb.noStyledParent,
     suffix: abb.suffix,
   };
@@ -483,5 +493,3 @@ DATA.forEach((abb: Abbreviation): void => {
     MAPPING[variant] = ann;
   });
 });
-
-export const RE = new RegExp(str.regex(Object.keys(MAPPING)), 'ug');
