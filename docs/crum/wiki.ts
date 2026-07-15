@@ -402,44 +402,60 @@ export function handle(root: HTMLElement, full = true): void {
  * @param full
  */
 function handleAux(wiki: HTMLElement, full: boolean): void {
-  crossParagraphs = full;
-  const startText: string | undefined = dev.play(() => textContent(wiki));
+  // `crossParagraphs` and `formSuperscripts` are ambient state scoped to the
+  // processing of one subtree. `handleFootnotes` re-enters `handleAux` on each
+  // footnote's detached content, and that nested call reassigns both. Save the
+  // caller's values and restore them on exit, so a footnote can't clobber the
+  // state this call's own later steps depend on (notably
+  // `handleFormSuperscripts`, which runs after `handleFootnotes`).
+  // We choose global variables over parameters (which would be cleaner) because
+  // passing parameters would complicate the signatures of too many functions.
+  // This is much simpler, and benign.
+  const savedCrossParagraphs: boolean = crossParagraphs;
+  const savedFormSuperscripts: Map<string, string> = formSuperscripts;
+  try {
+    crossParagraphs = full;
+    const startText: string | undefined = dev.play(() => textContent(wiki));
 
-  // Identify form superscripts before enrichment so that reference suffix
-  // processing can distinguish a trailing `<sup>` that stands for a Coptic
-  // form from one that is part of the suffix itself.
-  formSuperscripts = collectFormSuperscripts(wiki);
+    // Identify form superscripts before enrichment so that reference suffix
+    // processing can distinguish a trailing `<sup>` that stands for a Coptic
+    // form from one that is part of the suffix itself.
+    formSuperscripts = collectFormSuperscripts(wiki);
 
-  enrich(wiki);
+    enrich(wiki);
 
-  handleAddenda(wiki);
+    handleAddenda(wiki);
 
-  handleFootnotes(wiki);
+    handleFootnotes(wiki);
 
-  addTextCopyTriggers(wiki);
+    addTextCopyTriggers(wiki);
 
-  handleFormSuperscripts(wiki);
+    handleFormSuperscripts(wiki);
 
-  if (full) {
-    addEntryCopyShortcuts(wiki);
+    if (full) {
+      addEntryCopyShortcuts(wiki);
 
-    addFinePrint(wiki);
+      addFinePrint(wiki);
+    }
+
+    dev.play(() => {
+      white.warnPotentiallyMissingReferences(wiki, EXCLUDE);
+
+      const endText: string = textContent(wiki);
+      // This handler should only add tooltips without modifying text content
+      // at all. Verify that the text content hasn't changed.
+      log.ensure(
+        endText === startText,
+        'Final text differs from original text! Original:',
+        startText,
+        'Final:',
+        endText
+      );
+    });
+  } finally {
+    crossParagraphs = savedCrossParagraphs;
+    formSuperscripts = savedFormSuperscripts;
   }
-
-  dev.play(() => {
-    white.warnPotentiallyMissingReferences(wiki, EXCLUDE);
-
-    const endText: string = textContent(wiki);
-    // This handler should only add tooltips without modifying text content
-    // at all. Verify that the text content hasn't changed.
-    log.ensure(
-      endText === startText,
-      'Final text differs from original text! Original:',
-      startText,
-      'Final:',
-      endText
-    );
-  });
 }
 
 /**
