@@ -408,6 +408,12 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'status constructus', variants: ['st const'] },
   { fullForm: 'Saint', variants: ['St'], noCaseVariant: true },
   { fullForm: 'subject', variants: ['subj'] },
+  {
+    fullForm: 'subscriptio',
+    variants: ['subscr'],
+    noCaseVariant: true,
+    suffix: true,
+  },
   { fullForm: 'subordinate', variants: ['subord'] }, // Encountered once (as of the time of writing).
   { fullForm: 'superlative', variants: ['superlat'] },
   { fullForm: 'supra', variants: ['sup', 'supra'], suffix: true },
@@ -415,7 +421,7 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'tabula', variants: ['tab'], suffix: true },
   // "Tafel" is German for "Table". It's used as a suffix to German references.
   { fullForm: 'Tafel', variants: ['Taf'], suffix: true, noCaseVariant: true },
-  { fullForm: 'title', variants: ['tit'], noCaseVariant: true },
+  { fullForm: 'titulus', variants: ['tit'], noCaseVariant: true, suffix: true },
   { fullForm: 'translation, translated', variants: ['transl'] },
   { fullForm: 'variants', variants: ['varr', 'vars'] },
   { fullForm: 'ultimo', variants: ['ult'], suffix: true },
