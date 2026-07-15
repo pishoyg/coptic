@@ -1468,7 +1468,7 @@ function handleManualAux(manual: HTMLElement): Iterable<Node> | Node {
     const reference: ref.Reference | undefined = ref.MAPPING[key];
     if (reference) {
       if (key in BIBLE_MAPPING) {
-        log.error(key, 'is an ambiguous manual label!');
+        log.warn(key, 'is an ambiguous manual label!');
       }
       return reference.span(manual.childNodes);
     }
@@ -1913,7 +1913,7 @@ function handleFormSuperscripts(root: HTMLElement): void {
       sup.textContent
     );
     if (!form) {
-      log.error('Unable to find the form of superscript', sup.textContent);
+      log.warn('Unable to find the form of superscript', sup.textContent);
       return;
     }
     if (sup.previousSibling?.textContent === form) {
