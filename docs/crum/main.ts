@@ -16,9 +16,6 @@ import * as browser from '../browser.js';
  *
  */
 function main(): void {
-  // Normalizing the tree and text content is necessary for some of our text
-  // search logic to work correctly.
-  html.normalize();
   const manager: dial.Manager = new dial.Manager();
   const anki = iam.amI('card');
   if (!anki) {

@@ -491,35 +491,6 @@ export function linkifyText(
 }
 
 /**
- * Squash space in text nodes within the given root.
- * Such normalization is often necessary for text search logic to work
- * correctly.
- *
- * NOTE:
- * 1. We intentionally refrain from normalizing the tree because we expect
- * our HTML to be tree-normalized already.
- * 2. We also refrain from NFD-normalizing the text content, because our
- * pipelines generate NFD-normalized HTML.
- * 3. We don't expect our HTML to have comments or fragments. Only text and
- * element nodes are expected to be present.
- *
- * @param root - The root element to normalize. Defaults to document.body.
- */
-export function normalize(root: HTMLElement = document.body): void {
-  const walker: TreeWalker = document.createTreeWalker(
-    root,
-    NodeFilter.SHOW_TEXT
-  );
-  while (walker.nextNode()) {
-    const node: Node = walker.currentNode;
-    if (!node.nodeValue) {
-      continue;
-    }
-    node.nodeValue = node.nodeValue.replace(/\s+/g, ' ');
-  }
-}
-
-/**
  * Parses an HTML string into a NodeList of child nodes.
  *
  * @param html - The HTML string to parse.

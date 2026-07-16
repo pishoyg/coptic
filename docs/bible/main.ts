@@ -152,10 +152,6 @@ async function handleSources(): Promise<void> {
  *
  */
 async function main(): Promise<void> {
-  // Normalizing the tree is necessary for some of our text search logic to work
-  // correctly.
-  html.normalize();
-
   const controls: ddial.Control[] = dial.DIALECTS.map(
     (d: dial.Dialect): ddial.Control => d.control()
   );
