@@ -402,10 +402,10 @@ export async function init(): Promise<void> {
       ext: 'png',
       form,
       offset: OFFSET,
-      fallbackPage: LANDING,
       directory: DATA_DIR,
       isActive,
     }),
-    document.getElementById(id.SEARCH_BOX) as HTMLInputElement
+    document.getElementById(id.SEARCH_BOX) as HTMLInputElement,
+    LANDING
   );
 }

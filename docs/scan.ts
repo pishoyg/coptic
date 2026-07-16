@@ -190,10 +190,9 @@ const SWAP_TOLERANCE = 10;
 type Column = 'a' | 'b' | undefined;
 
 /**
- * Result of resolving a search query against the index: the target
- * page, plus a column letter when one was determined.
+ * Target page: the page number, plus a column letter when one was determined.
  */
-export interface Result {
+interface Target {
   page: number;
   column?: Column;
 }
@@ -271,7 +270,7 @@ export class Index {
   }
 
   /**
-   * Resolve a search query to a `Result` (page number + optional
+   * Resolve a search query to a `Target` (page number + optional
    * column).
    *
    * Resolution order (first match wins):
@@ -295,9 +294,9 @@ export class Index {
    * typed suffix.
    *
    * @param query - The raw search query (any case, any whitespace).
-   * @returns The resolved `Result`, or `undefined` when no rule fires.
+   * @returns The resolved `Target`, or `undefined` when no rule fires.
    */
-  public getPage(query: string): Result | undefined {
+  public getPage(query: string): Target | undefined {
     // Normalize the query.
     query = query.toLowerCase();
     query = orth.cleanDiacritics(query);
@@ -324,7 +323,7 @@ export class Index {
     [query, column] = chopColumn(query);
     override = this.overrides[query];
     if (override) {
-      const result: Result | undefined = this.getPage(override);
+      const result: Target | undefined = this.getPage(override);
       if (!result) {
         log.error('Override', override, 'does not resolve for query', query);
         return result;
@@ -493,12 +492,6 @@ export interface ScrollerOptions {
    */
   offset?: number;
   /**
-   * Which page to open when navigation is requested without providing a page
-   * number.
-   * Defaults to 1.
-   */
-  fallbackPage?: number;
-  /**
    * Path to the directory containing the images. Joined with the page-stem
    * filename when setting `img.src`. Defaults to the empty string, which
    * resolves filenames relative to the current document.
@@ -532,11 +525,13 @@ export class Scroller {
   private readonly offset: number;
   private readonly ext: string;
   private readonly form: Form;
-  private readonly fallbackPage: number;
   private readonly directory: string;
   private readonly isActive: IsActive | undefined;
   private readonly highlight: HTMLDivElement;
-  private currentPage: number;
+  // The page on screen, or `undefined` until the owner opens one via
+  // `update`. Until then the host page's placeholder is displayed and
+  // N / P navigation has no page to step from.
+  private currentPage: number | undefined = undefined;
   // Latest `src` assigned to the image. We compare against this to
   // detect re-navigation to the same page (where `img.src = sameValue`
   // would not refire `load`).
@@ -555,13 +550,11 @@ export class Scroller {
     this.offset = opts.offset ?? 0;
     this.ext = opts.ext;
     this.form = opts.form;
-    this.fallbackPage = opts.fallbackPage ?? 1;
     this.directory = opts.directory ?? '';
     this.isActive = opts.isActive;
 
     this.start = opts.start - this.offset;
     this.end = opts.end - this.offset;
-    this.currentPage = this.fallbackPage;
 
     // The overlay is inserted as a sibling of the image, inside the same
     // parent (the `<figure>` for the existing scan pages). That parent
@@ -575,17 +568,23 @@ export class Scroller {
   }
 
   /**
-   * Update the display to the given page number.
+   * Update the display to the given target page.
    *
-   * @param page - Page number to open. This will be modified if it falls
-   * outside our page range.
-   * @param page.page
-   * @param page.column - Optional column to highlight ('a' or 'b'). Omit
-   * to clear the highlight — N / P navigation and queries without an
-   * explicit column letter call `update` without this argument, so the
-   * leftover highlight from a previous typed `1a`/`1b` is cleared.
+   * @param target - Page to open, plus an optional column. Pass `undefined`
+   * — as an unresolved `Index.getPage` returns — to leave the scan where it
+   * is, so that a query resolving nowhere does not yank the reader off the
+   * page they are on.
+   * @param target.page - Page number to open. Capped to our page range.
+   * @param target.column - Column to highlight ('a' or 'b'). Omit to clear
+   * the highlight — N / P navigation and queries without an explicit column
+   * letter omit it, so the leftover highlight from a previous typed
+   * `1a`/`1b` is cleared.
    */
-  public update({ page, column }: Result = { page: this.fallbackPage }): void {
+  public update(target?: Target): void {
+    if (!target) {
+      return;
+    }
+    let { page } = target;
     if (page < this.start) {
       page = this.start;
     }
@@ -598,7 +597,7 @@ export class Scroller {
     // over the previous one. Until then the previous highlight stays
     // visible on the previous image, which is the visually consistent
     // state.
-    this.updateDisplay(page, this.updateHighlight.bind(this, column));
+    this.updateDisplay(page, this.updateHighlight.bind(this, target.column));
   }
 
   /**
@@ -663,8 +662,13 @@ export class Scroller {
    * and jump back to the page that query resolves to.
    * TODO: (#0) Figure out a way to store the page state in the URL. Restore the
    * `page` parameter?
+   *
+   * Does nothing until a page is open, since there is none to step from.
    */
   private incrementPage(): void {
+    if (this.currentPage === undefined) {
+      return;
+    }
     this.update({ page: this.currentPage + 1 });
   }
 
@@ -673,8 +677,13 @@ export class Scroller {
    *
    * NOTE: See `incrementPage` for the URL-state limitation that also applies
    * here.
+   *
+   * Does nothing until a page is open, since there is none to step from.
    */
   private decrementPage(): void {
+    if (this.currentPage === undefined) {
+      return;
+    }
     this.update({ page: this.currentPage - 1 });
   }
 
@@ -966,32 +975,31 @@ export class Dictionary {
    * number.
    * @param searchBox - The shared search box. The `Dictionary` listens to
    * its `input` event and searches on every keystroke.
+   * @param landingPage - Page to open when the initial query resolves
+   * nowhere, including the empty query. Defaults to 1.
    */
   public constructor(
     private readonly index: Index,
     private readonly scroller: Scroller,
-    private readonly searchBox: HTMLInputElement
+    private readonly searchBox: HTMLInputElement,
+    private readonly landingPage = 1
   ) {
-    searchBox.addEventListener('input', this.search.bind(this));
+    this.searchBox.addEventListener('input', (): void => {
+      // A query that resolves nowhere leaves the scan where it is, so that
+      // clearing the box does not yank the reader off the page they are on.
+      this.scroller.update(this.search());
+    });
     // Open the first scan: the initial query's page when it resolves, the
-    // fallback page otherwise. The `Scroller` opens nothing until told to,
+    // landing page otherwise. The `Scroller` opens nothing until told to,
     // so exactly one scan is ever fetched.
-    this.scroller.update(this.index.getPage(this.searchBox.value));
+    this.scroller.update(this.search() ?? { page: this.landingPage });
   }
 
   /**
-   * Navigate to the page matching the search box's current content.
-   *
-   * A query that resolves nowhere leaves the scan where it is, so that
-   * clearing the box does not yank the reader off the page they are on.
-   *
-   * @returns Whether the query resolved to a page.
+   * @returns The page matching the search box's current content, or
+   * `undefined` when the query resolves nowhere.
    */
-  public search(): void {
-    const ref: Result | undefined = this.index.getPage(this.searchBox.value);
-    if (ref === undefined) {
-      return;
-    }
-    this.scroller.update(ref);
+  private search(): Target | undefined {
+    return this.index.getPage(this.searchBox.value);
   }
 }

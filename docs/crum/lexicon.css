@@ -142,6 +142,16 @@ body.dawoud button#mode-dawoud {
   cursor: grab;
 }
 
+/* Until the `Scroller` is told to open a page, the scan is the transparent
+ * 1x1 data-URI placeholder that `index.html` ships (see `scan.ts`). It has
+ * no page to frame, so suppress the `figure img` chrome from `style.css` —
+ * otherwise the border and shadow collapse around the 1x1 and render as a
+ * small grey blob in the middle of an otherwise empty frame. */
+.scan[src^='data:'] {
+  border: 0;
+  box-shadow: none;
+}
+
 .scan-frame figure {
   margin: 0;
 
@@ -162,7 +172,7 @@ body.dawoud button#mode-dawoud {
   top: 0;
   bottom: 0;
   width: 50%;
-  border: 3px solid rgba(10 126 220 / 90%);
+  border: 3px solid rgb(10 126 220 / 90%);
   box-sizing: border-box;
   pointer-events: none;
   display: none;
