@@ -232,7 +232,7 @@ class Sequence {
    *
    * @param letters
    */
-  public constructor(private readonly letters: Letter[]) { }
+  public constructor(private readonly letters: Letter[]) {}
 
   /**
    *
@@ -402,7 +402,7 @@ export async function init(): Promise<void> {
       ext: 'png',
       form,
       offset: OFFSET,
-      landingPage: LANDING,
+      fallbackPage: LANDING,
       directory: DATA_DIR,
       isActive,
     }),

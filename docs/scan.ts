@@ -493,10 +493,11 @@ export interface ScrollerOptions {
    */
   offset?: number;
   /**
-   * Which page to open on initial load, before any query-driven navigation
-   * takes over. Defaults to 1.
+   * Which page to open when navigation is requested without providing a page
+   * number.
+   * Defaults to 1.
    */
-  landingPage?: number;
+  fallbackPage?: number;
   /**
    * Path to the directory containing the images. Joined with the page-stem
    * filename when setting `img.src`. Defaults to the empty string, which
@@ -531,7 +532,7 @@ export class Scroller {
   private readonly offset: number;
   private readonly ext: string;
   private readonly form: Form;
-  private readonly landingPage: number;
+  private readonly fallbackPage: number;
   private readonly directory: string;
   private readonly isActive: IsActive | undefined;
   private readonly highlight: HTMLDivElement;
@@ -554,13 +555,13 @@ export class Scroller {
     this.offset = opts.offset ?? 0;
     this.ext = opts.ext;
     this.form = opts.form;
-    this.landingPage = opts.landingPage ?? 1;
+    this.fallbackPage = opts.fallbackPage ?? 1;
     this.directory = opts.directory ?? '';
     this.isActive = opts.isActive;
 
     this.start = opts.start - this.offset;
     this.end = opts.end - this.offset;
-    this.currentPage = this.landingPage;
+    this.currentPage = this.fallbackPage;
 
     // The overlay is inserted as a sibling of the image, inside the same
     // parent (the `<figure>` for the existing scan pages). That parent
@@ -571,7 +572,6 @@ export class Scroller {
     this.form.image.insertAdjacentElement('afterend', this.highlight);
 
     this.addEventListeners();
-    this.update(this.landingPage);
   }
 
   /**
@@ -579,15 +579,13 @@ export class Scroller {
    *
    * @param page - Page number to open. This will be modified if it falls
    * outside our page range.
-   * @param column - Optional column to highlight ('a' or 'b'). Omit
+   * @param page.page
+   * @param page.column - Optional column to highlight ('a' or 'b'). Omit
    * to clear the highlight — N / P navigation and queries without an
    * explicit column letter call `update` without this argument, so the
    * leftover highlight from a previous typed `1a`/`1b` is cleared.
    */
-  public update(page: number, column?: Column): void {
-    if (isNaN(page)) {
-      page = this.landingPage;
-    }
+  public update({ page, column }: Result = { page: this.fallbackPage }): void {
     if (page < this.start) {
       page = this.start;
     }
@@ -667,7 +665,7 @@ export class Scroller {
    * `page` parameter?
    */
   private incrementPage(): void {
-    this.update(this.currentPage + 1);
+    this.update({ page: this.currentPage + 1 });
   }
 
   /**
@@ -677,7 +675,7 @@ export class Scroller {
    * here.
    */
   private decrementPage(): void {
-    this.update(this.currentPage - 1);
+    this.update({ page: this.currentPage - 1 });
   }
 
   /**
@@ -975,18 +973,25 @@ export class Dictionary {
     private readonly searchBox: HTMLInputElement
   ) {
     searchBox.addEventListener('input', this.search.bind(this));
-    this.search();
+    // Open the first scan: the initial query's page when it resolves, the
+    // fallback page otherwise. The `Scroller` opens nothing until told to,
+    // so exactly one scan is ever fetched.
+    this.scroller.update(this.index.getPage(this.searchBox.value));
   }
 
   /**
-   * Execute a search for the given query, navigating the scroller to the
-   * matching page (if any).
+   * Navigate to the page matching the search box's current content.
+   *
+   * A query that resolves nowhere leaves the scan where it is, so that
+   * clearing the box does not yank the reader off the page they are on.
+   *
+   * @returns Whether the query resolved to a page.
    */
   public search(): void {
     const ref: Result | undefined = this.index.getPage(this.searchBox.value);
     if (ref === undefined) {
       return;
     }
-    this.scroller.update(ref.page, ref.column);
+    this.scroller.update(ref);
   }
 }
