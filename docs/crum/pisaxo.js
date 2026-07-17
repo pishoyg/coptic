@@ -394,11 +394,13 @@ export const DATA = [
       "(Cai)CoptMus",
       "Cai Copt Mus",
       "Copt Mus Cai",
-      "Copt Mus",
-      "P Cai Copt Mus"
+      "Copt Mus"
     ],
     "postfixes": {
       "tablet": null
+    },
+    "prefixes": {
+      "P": LOOKUP
     }
   },
   {
@@ -2086,25 +2088,21 @@ export const DATA = [
     }
   },
   {
+    "title": "Museo Archeol., Turin",
+    "description": null,
+    "variants": [
+      "Turin"
+    ],
+    "prefixes": {
+      "P": LOOKUP
+    }
+  },
+  {
     "title": "ostraca in Museo Archeol., Turin (Crum’s copies)",
     "description": null,
     "variants": [
       "Turin ostr",
       "Tur ostr"
-    ]
-  },
-  {
-    "title": "Museo Archeol., Turin",
-    "description": null,
-    "variants": [
-      "Turin"
-    ]
-  },
-  {
-    "title": "Papyri in Museo Archeol., Turin",
-    "description": null,
-    "variants": [
-      "PTurin"
     ]
   },
   {
@@ -2298,6 +2296,13 @@ export const DATA = [
     ]
   },
   {
+    "title": "Edwyn Clement Hoskyns",
+    "description": null,
+    "variants": [
+      "E C Hoskyns"
+    ]
+  },
+  {
     "title": "Presumably <em>Edward Charles Everard Owen</em> (1860-1949)",
     "description": null,
     "variants": [
@@ -2381,6 +2386,16 @@ export const DATA = [
     "description": null,
     "variants": [
       "Guide"
+    ]
+  },
+  {
+    "title": "W. Till, Koptische Heiligen- und Märtyrerlegenden, 1935-36",
+    "description": [
+      "Till, W. (1935). <em><a href=\"https://alinsuciu.com/wp-content/uploads/2012/01/till-koptische-heiligen-und-martyrerlegenden-1.pdf\">Koptische Heiligen- und Märtyrerlegenden: Texte, Übersetzungen und Indices</a></em>. Teil I. (Orientalia Christiana Analecta, 102). Roma: Pont. Institutum Orientalium Studiorum.",
+      "Till, W. (1936). <em><a href=\"https://alinsuciu.com/wp-content/uploads/2012/01/till-koptische-heiligen-und-martyrerlegenden-2.pdf\">Koptische Heiligen- und Märtyrerlegenden: Texte, Übersetzungen und Indices</a></em>. Teil II. (Orientalia Christiana Analecta, 108). Roma: Pont. Institutum Orientalium Studiorum. [Also available on <a href=\"https://archive.org/details/koptischeheilige0000till\">archive.org</a>.]"
+    ],
+    "variants": [
+      "HM"
     ]
   },
   {
@@ -2630,12 +2645,16 @@ export const DATA = [
     "title": null,
     "description": null,
     "variants": [
+      "Univ Col Lond",
       "Univ Coll Lond",
       "Univ Coll London",
       "Univ College Lond",
-      "Univ College London",
-      "Ostr Univ Coll London"
-    ]
+      "Univ College London"
+    ],
+    "prefixes": {
+      "ostr": LOOKUP,
+      "Ostr": LOOKUP
+    }
   },
   {
     "title": null,
