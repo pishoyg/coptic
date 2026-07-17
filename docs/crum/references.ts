@@ -345,34 +345,29 @@ class Prefix extends Fix {
  * @param reference
  */
 function add(key: string, reference: Reference): void {
+  const words: string[] = key.split(' ');
   /**
    *
    * @param index
    * @param current
    */
   function* spaceVariants(index: number, current: string): Generator<string> {
-    const char: string | undefined = key[index];
+    const word: string | undefined = words[index];
 
-    if (char === undefined) {
+    if (word === undefined) {
       // We've reached the end of the string.
       yield current;
       return;
     }
 
-    if (char === ' ') {
-      // Branch 1: Keep the space.
-      yield* spaceVariants(index + 1, `${current} `);
+    // Branch 1: Keep the space.
+    yield* spaceVariants(index + 1, `${current} ${word}`);
 
-      // Branch 2: Remove the space.
-      yield* spaceVariants(index + 1, current);
-      return;
-    }
-
-    // Not a space: Must keep the character and move on
-    yield* spaceVariants(index + 1, current + char);
+    // Branch 2: Remove the space.
+    yield* spaceVariants(index + 1, current + word);
   }
 
-  for (const variant of spaceVariants(0, '')) {
+  for (const variant of spaceVariants(1, words[0]!)) {
     log.ensure(MAPPING[variant] === undefined, 'duplicate key:', variant);
     MAPPING[variant] = reference;
   }
