@@ -487,16 +487,15 @@
 
 - title: "MSS. &c. in Coptic Museum, Cairo"
   description:
-  # NOTE: P for papyrus, but we don't mention that!
-  # TODO: (#522) Does this variant belong to PCai?
   variants:
     - "(Cai)CoptMus"
     - "Cai Copt Mus"
     - "Copt Mus Cai"
     - "Copt Mus"
-    - "P Cai Copt Mus"
   postfixes:
     tablet:
+  prefixes:
+    P: !lookup
 
 - title: "Canons of Athanasius ed. Riedel & Crum (Text & Transl. Soc.), 1904"
   description:
@@ -2182,30 +2181,26 @@
       Koptskia Ostraka… Golenishtshef (= Bull. Acad. Imp. x, no. 5, 1899)
       - Turayev, B. A. (1899). [Коптскія ostraca коллекціи В. С. Голенищева](https://www.biodiversitylibrary.org/item/94351#page/503/mode/1up) [Coptic ostraca from the collection of V. S. Golenishchev]. *Bulletin de l’ Académie Impériale des Sciences de St.-Pétersbourg*, 5e série, T. X, no. 5, pp. 435–449.
 
-# NOTE: Below are three different entries for Turin.
+# NOTE: Below are two different entries for Turin.
 # `Turin` occurs on its own, so it must have an entry.
-# Only the first (Turin ostr) is in Crum's list of abbreviations, and we
-# retain it for this reason, instead of simply letting `ostr` come as a suffix
-# or postfix of `Turin`. We also retain it because the variant `Tur ostr` must
-# be spelled out to avoid conflict with `Tur`.
-# We also have a standalone entry for `PTurin` because, while we have mechanisms
-# to process suffixes and postfixes, `P` occurs here as a prefix.
+# Only Turin ostr is in Crum's list of abbreviations, and we retain it for this
+# reason, instead of simply letting `ostr` come as a suffix or postfix of
+# `Turin`.
+# We also retain it because the variant `Tur ostr` must be spelled out to avoid
+# conflict with `Tur`.
+
+- title: "Museo Archeol., Turin"
+  description:
+  variants:
+    - "Turin"
+  prefixes:
+    P: !lookup
 
 - title: "ostraca in Museo Archeol., Turin (Crum’s copies)"
   description:
   variants:
     - "Turin ostr"
     - "Tur ostr"
-
-- title: "Museo Archeol., Turin"
-  description:
-  variants:
-    - "Turin"
-
-- title: "Papyri in Museo Archeol., Turin"
-  description:
-  variants:
-    - "PTurin"
 
 - title: "Atti della Reale Accademia delle Scienze di Torino"
   description:
@@ -2435,6 +2430,19 @@
   variants:
     - "Guide"
 
+- title: "W. Till, Koptische Heiligen- und Märtyrerlegenden, 1935-36"
+  description:
+    - "Till, W. (1935). *[Koptische Heiligen- und Märtyrerlegenden: Texte, Übersetzungen
+      und Indices](https://alinsuciu.com/wp-content/uploads/2012/01/till-koptische-heiligen-und-martyrerlegenden-1.pdf)*.
+      Teil I. (Orientalia Christiana Analecta, 102). Roma: Pont. Institutum Orientalium
+      Studiorum."
+    - "Till, W. (1936). *[Koptische Heiligen- und Märtyrerlegenden: Texte, Übersetzungen
+      und Indices](https://alinsuciu.com/wp-content/uploads/2012/01/till-koptische-heiligen-und-martyrerlegenden-2.pdf)*.
+      Teil II. (Orientalia Christiana Analecta, 108). Roma: Pont. Institutum Orientalium
+      Studiorum. [Also available on [archive.org](https://archive.org/details/koptischeheilige0000till).]"
+  variants:
+    - "HM"
+
 - title:
   description:
   variants:
@@ -2626,12 +2634,14 @@
 - title:
   description:
   variants:
-    # NOTE: Ostr stands for "ostracon", but we don't mention that!
+    - "Univ Col Lond"
     - "Univ Coll Lond"
     - "Univ Coll London"
     - "Univ College Lond"
     - "Univ College London"
-    - "Ostr Univ Coll London"
+  prefixes:
+    ostr: !lookup
+    Ostr: !lookup
 
 - title:
   description:
