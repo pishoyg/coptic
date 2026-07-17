@@ -58,6 +58,24 @@ the canonical error, and the canonical fix.)
 Because annotations are interpreted *last*, an annotation false positive is
 often really a *missing* reference or Bible variant upstream.
 
+A third mechanic makes *correct* output look broken, and Ambrose does not fall
+for it. Two facts about postfixes conspire:
+
+1. A postfix whose interpretation is null in `bib.yaml` (a placeholder, like
+   `Vi`'s `K:` or `Mani`'s `1:` / `2:`) contributes **nothing** to the tooltip —
+   `Postfix.tooltip()` returns undefined.
+2. `Postfix.tooltipAux` renders the source's **standard variant**, not the form
+   Crum actually cited.
+
+So `ShViK 9100 229` (under ⲟⲩⲟⲉⲓⲛ, page 1) is parsed *correctly* — `Sh` carries
+a real `Vi K` postfix, and longest-first takes the whole `ShViK` — yet its
+tooltip reads only "Sh: … Vi: …", making the `K` look swallowed as a stray
+single-letter suffix. It was not. Before reporting a postfix as mis-parsed,
+grep `bib.yaml` for the *combined* key: the postfix you think went missing is
+usually declared and merely silent. Note too that postfixes are not suffixes —
+`Mani 1` and `Mani 2` are whole citations (distinct source designations), not a
+reference plus a page number.
+
 ## Procedure
 
 Review each page ID in `$ARGUMENTS`. If none is given, ask for one.
@@ -161,6 +179,28 @@ postfix resolved too). Plain text between the markers is what enrichment
 **5. Read the entry as a scholar, not a linter.** Go through the dump start to
 finish. Ask of every marker whether Crum meant it, and of every unmarked token
 whether he meant something.
+
+**Stay inside the enrichment.** Ambrose reviews what the enricher did and
+declined to do — not the fidelity of the transcription. `.coptic`, `.greek`,
+`.arabic` and their siblings are in `EXCLUDE` (`wiki.ts`), so enrichment
+provably never touches a character inside them: a mis-transcribed Coptic form
+there can never be an enrichment finding. Report one if you trip over it; do
+**not** go hunting for it. Diffing an entry against the scan is a different job
+with a different budget, and it will eat a review's whole token allowance to
+produce findings this command was not asked for.
+
+**Consulting the scan for one token.** Legitimate when an *unmarked* token might
+be a missed abbreviation, or a marked one might rest on a misprint — that is the
+false-negative hunt, and it is in scope. Two hard-won mechanics:
+
+- **The page offset is 22.** `OFFSET = 22` in `docs/crum/book.ts`: printed page
+  N is `docs/crum/crum/{N+22}.png`. Crum 481 is `503.png`. Opening `481.png`
+  lands you in an unrelated entry.
+- **Measure, don't squint.** `ⲛ` and `ⲡ` are near-twins in Crum's typeface, and
+  eyeballing zoomed crops will send you back and forth indefinitely. Segment the
+  word by ink-column runs, then read each glyph's height and centre-ink: `ⲗ`
+  towers over the x-height (~52px vs ~32px at full scan resolution), `ⲛ` carries
+  a diagonal through its centre, `ⲡ` is hollow there with a flat top bar.
 
 ## Crum was a man, and men err
 
