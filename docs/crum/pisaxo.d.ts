@@ -6,13 +6,13 @@
 // (`null`). This is why we account for both values below.
 
 export const LOOKUP: symbol;
-export type Postfix = string | null | typeof LOOKUP;
+export type Fix = string | null | typeof LOOKUP;
 
 export const DATA: Source[];
 
 /**
- * Source represents a source, and the different variants and postfixes
- * used to cite it.
+ * Source represents a source, and the different variants, postfixes, and
+ * prefixes used to cite it.
  */
 export interface Source {
   // TODO: (#522) Tighten `title` / `description` / `variants` once every
@@ -59,5 +59,21 @@ export interface Source {
    * postfix, but we treat it as a postfix because it's written as 'BMOr' not
    * 'BM Or'.
    */
-  readonly postfixes?: Record<string, Postfix> | null;
+  readonly postfixes?: Record<string, Fix> | null;
+  /** prefixes is a list of all prefixes that this abbreviation can bear.
+   *
+   * Prefixes mirror postfixes, but they precede the variant rather than
+   * follow it. For example, the 'P' of 'PCaiCoptMus' stands for 'papyrus'.
+   *
+   * Prefixes are far less common than postfixes.
+   *
+   * A prefix resolves its `LOOKUP` interpretation against the annotation
+   * mapping, not the reference mapping — the opposite of a postfix. The
+   * prefix 'ostr' of 'ostr Univ Coll London' looks up the annotation 'Ostr'
+   * ('ostracon').
+   *
+   * Prefixes don't combine with postfixes. A source that records both yields
+   * prefixed variants and postfixed variants, but never both at once.
+   */
+  readonly prefixes?: Record<string, Fix> | null;
 }

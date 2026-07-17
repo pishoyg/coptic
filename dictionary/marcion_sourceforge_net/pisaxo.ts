@@ -46,6 +46,10 @@ const JS_PATH: string = path.join('docs', 'crum', 'pisaxo.js');
 // example, do not surround it it with Python-style double underscores.
 const MAGIC_LOOKUP = 'MAGIC_LOOKUP_SENTINEL';
 
+const FIXES = z
+  .record(z.string(), z.union([z.string(), z.null(), z.literal(MAGIC_LOOKUP)]))
+  .optional();
+
 // The schema below is the validation-time twin of the `Source` interface in
 // `docs/crum/pisaxo.d.ts`. Keep the two definitions in sync — see the
 // file-level docstring.
@@ -59,12 +63,8 @@ const SCHEMA: zod.ZodArray = z.array(
     description: z.array(z.string()).nullable(),
     variants: z.array(z.string()).nonempty(),
     typos: z.array(z.string()).nonempty().optional(),
-    postfixes: z
-      .record(
-        z.string(),
-        z.union([z.string(), z.null(), z.literal(MAGIC_LOOKUP)])
-      )
-      .optional(),
+    postfixes: FIXES,
+    prefixes: FIXES,
   })
 );
 
@@ -138,8 +138,46 @@ function ensureNormalized(sources: sax.Source[]): void {
       ...entry.variants,
       ...(entry.typos ?? []),
       ...Object.keys(entry.postfixes ?? {}),
+      ...Object.keys(entry.prefixes ?? {}),
     ]) {
       log.ensure(orth.normalize(key) === key, 'Key is not normalized:', key);
+    }
+  }
+}
+
+/**
+ *
+ * @param record
+ */
+function convertFixes(record: Record<string, sax.Fix>): void {
+  for (const [key, value] of Object.entries(record)) {
+    if (typeof value !== 'string') {
+      continue;
+    }
+    record[key] = markdownToHTML(value);
+  }
+}
+
+/**
+ *
+ * @param data
+ */
+function convert(data: Mutable<sax.Source>[]): void {
+  for (const entry of data) {
+    if (entry.title) {
+      entry.title = markdownToHTML(entry.title);
+    }
+
+    if (entry.description) {
+      entry.description = entry.description.map(markdownToHTML);
+    }
+
+    if (entry.postfixes) {
+      convertFixes(entry.postfixes);
+    }
+
+    if (entry.prefixes) {
+      convertFixes(entry.prefixes);
     }
   }
 }
@@ -172,23 +210,8 @@ function main(): void {
 
   ensureNormalized(parsed.data as sax.Source[]);
 
-  // Convert Markdown to HTML
-  for (const entry of parsed.data as Mutable<sax.Source>[]) {
-    if (entry.title) {
-      entry.title = markdownToHTML(entry.title);
-    }
-
-    entry.description = entry.description?.map(markdownToHTML) ?? null;
-
-    if (!entry.postfixes) {
-      continue;
-    }
-    for (const [key, value] of Object.entries(entry.postfixes)) {
-      if (typeof value === 'string') {
-        entry.postfixes[key] = markdownToHTML(value);
-      }
-    }
-  }
+  // Convert Markdown to HTML.
+  convert(parsed.data as Mutable<sax.Source>[]);
 
   // Restore the `LOOKUP` symbol.
   const json: string = JSON.stringify(parsed.data, null, 2).replaceAll(

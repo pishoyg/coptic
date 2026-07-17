@@ -37,14 +37,14 @@ export interface Abbreviation {
   noStyledParent?: boolean;
   // suffix indicates whether this annotation can occur as a Reference suffix.
   suffix?: boolean;
-  // suffixFullForm is the full form of this abbreviation when it occurs on a
-  // suffix.
-  suffixFullForm?: string;
+  // fixFullForm is the full form of this abbreviation when it occurs on a
+  // suffix, postfix, or prefix.
+  fixFullForm?: string;
 }
 
 export interface Annotation {
   fullForm: string;
-  suffixFullForm: string | undefined;
+  fixFullForm: string | undefined;
   noStyledParent: boolean | undefined;
   suffix: boolean | undefined;
 }
@@ -128,7 +128,7 @@ export const DATA: Abbreviation[] = [
     fullForm: 'legendum',
     variants: ['l'],
     suffix: true,
-    suffixFullForm: 'line',
+    fixFullForm: 'line',
   },
   { fullForm: 'literally', variants: ['lit'] },
   {
@@ -161,7 +161,7 @@ export const DATA: Abbreviation[] = [
     fullForm: 'plural',
     variants: ['pl'],
     suffix: true,
-    suffixFullForm: 'plate',
+    fixFullForm: 'plate',
   },
   // 'pll' is definitely 'plates'.
   { fullForm: 'plates', variants: ['pll'], suffix: true },
@@ -363,6 +363,8 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'Old Testament', variants: ['OTest'], noCaseVariant: true },
   { fullForm: 'olim penes', variants: ['olim penes'] },
   { fullForm: 'optative', variants: ['optat'] },
+  // NOTE: 'P' is also a reference variant.
+  { fullForm: 'Papyrus', variants: ['P'], noCaseVariant: true },
   { fullForm: 'papyrus', variants: ['pap'], suffix: true },
   { fullForm: 'page', variants: ['p'], noCaseVariant: true, suffix: true },
   // NOTE: 'part' is occasionally used as a variant for participle, but it's
@@ -480,7 +482,7 @@ export const MAPPING: Record<string, Annotation> = {};
 DATA.forEach((abb: Abbreviation): void => {
   const ann: Annotation = {
     fullForm: abb.fullForm,
-    suffixFullForm: abb.suffixFullForm,
+    fixFullForm: abb.fixFullForm,
     noStyledParent: abb.noStyledParent,
     suffix: abb.suffix,
   };

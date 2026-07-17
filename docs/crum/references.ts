@@ -63,12 +63,12 @@ export class Source {
   }
 
   /**
-   * @returns A deep copy of the parsed description list, or undefined if the
-   *   source has no description.
+   * @returns A deep copy of the parsed description list, empty if the source
+   *   has no description.
    */
-  public description(): HTMLUListElement | undefined {
+  public description(): HTMLElement[] {
     if (!this.descriptionHTML?.length) {
-      return undefined;
+      return [];
     }
     if (!this.descriptionMemo) {
       const ul: HTMLUListElement = document.createElement('ul');
@@ -84,7 +84,7 @@ export class Source {
       });
       this.descriptionMemo = ul;
     }
-    return this.descriptionMemo.cloneNode(true) as HTMLUListElement;
+    return [this.descriptionMemo.cloneNode(true) as HTMLUListElement];
   }
 }
 
@@ -93,7 +93,7 @@ const SUFFIX_ANNOTATIONS: Record<string, string> = Object.fromEntries([
     .filter(([_, annot]: [string, ann.Annotation]): boolean => !!annot.suffix)
     .map(([key, annot]: [string, ann.Annotation]): [string, string] => [
       key,
-      annot.suffixFullForm ?? annot.fullForm,
+      annot.fixFullForm ?? annot.fullForm,
     ]),
   // 'no' is absent from the canonical list of annotations, because it would
   // yield too many false positives.
@@ -114,36 +114,29 @@ export class Reference {
    *
    * @param source - Cited source.
    * @param variant - Abbreviation used to cite this source.
-   * @param postfix - Postfix appended to the abbreviation, if any.
+   * @param fix - Either a postfix or a prefix. Optional.
    */
   public constructor(
     // TODO: (#522) The `source` field should become required once all sources
     // are populated.
     public readonly source: Source | undefined,
     public readonly variant: string,
-    public readonly postfix?: Postfix
+    public readonly fix?: Fix
   ) {}
 
   /**
    *
    * @returns
    */
-  public tooltip(): DocumentFragment | undefined {
+  public tooltip(): HTMLElement[] {
     if (!this.source) {
-      return undefined;
+      return [];
     }
-
-    const fragment: DocumentFragment = new DocumentFragment();
-
-    fragment.append(
-      abbreviation(this.variant),
-      ...this.source.title(),
-      ...[this.source.description(), this.postfix?.tooltip()].filter(
-        (e) => e !== undefined
-      )
-    );
-
-    return fragment;
+    return [
+      tooltip(this.variant, this.source.title()),
+      ...this.source.description(),
+      ...(this.fix?.tooltip() ?? []),
+    ];
   }
 
   /**
@@ -164,19 +157,24 @@ export class Reference {
     suffix = Array.from(suffix);
     const span: HTMLSpanElement = document.createElement('span');
     span.classList.add(cls.REFERENCE);
-    span.dataset[Reference.DATA_REF] = this.raw();
+    span.dataset[Reference.DATA_REF] =
+      this.fix?.compose(this.variant) ?? this.variant;
     span.append(...content, ...suffix);
-    const tooltip: (Node | string)[] = [];
+    const tip: (Node | string)[] = [];
     if (ib(span.textContent)) {
-      tooltip.push(ibidem(true));
+      tip.push(ibidem(true));
     }
-    tooltip.push(
-      ...(this.tooltip()?.childNodes ?? []),
-      ...Reference.suffixAnnotations(suffix)
-    );
+    tip.push(...this.tooltip());
+    if (!tip.length) {
+      // Avoid creating a tooltip that only consists of suffix annotations.
+      // TODO: (#522) When all sources are populated, this check won't be
+      // necessary.
+      return span;
+    }
+    tip.push(...Reference.suffixAnnotations(suffix));
 
     // Make all hyperlinks in the tooltip external.
-    tooltip
+    tip
       .filter((n: Node | string) => n instanceof Element)
       .forEach((node: Element): void => {
         node.querySelectorAll('a').forEach((a: HTMLAnchorElement): void => {
@@ -185,23 +183,8 @@ export class Reference {
         });
       });
 
-    // TODO: (#522) This check will soon be unnecessary, because all references
-    // will be guaranteed to have tooltips.
-    if (tooltip.length) {
-      tool.addTooltip(span, tooltip);
-    }
-
+    tool.addTooltip(span, tip);
     return span;
-  }
-
-  /**
-   * @returns
-   */
-  public raw(): string {
-    if (!this.postfix) {
-      return this.variant;
-    }
-    return `${this.variant} ${this.postfix.name}`;
   }
 
   /**
@@ -235,12 +218,11 @@ export class Reference {
         .textContent(node)
         .matchAll(SUFFIX_ANNOTATION_RE)) {
         const abb: string = match[0];
-        const div: HTMLDivElement = document.createElement('div');
-        div.append(
-          abbreviation(abb, italic),
-          html.maybeI(SUFFIX_ANNOTATIONS[abb]!, italic)
+        yield tooltip(
+          abb,
+          [html.maybeI(SUFFIX_ANNOTATIONS[abb]!, italic)],
+          italic
         );
-        yield div;
       }
     }
   }
@@ -249,20 +231,27 @@ export class Reference {
 /**
  *
  * @param name
+ * @param interpretation
  * @param italic
  * @returns
  */
-function abbreviation(name: string | Node, italic?: boolean): Element {
-  return html.classify(
-    html.span(html.maybeI(name, italic), ': '),
-    cls.ABBREVIATION
+function tooltip(
+  name: string,
+  interpretation: Iterable<Node | string>,
+  italic = false
+): HTMLDivElement {
+  const div: HTMLDivElement = document.createElement('div');
+  div.append(
+    html.classify(html.span(html.maybeI(name, italic), ': '), cls.ABBREVIATION),
+    ...interpretation
   );
+  return div;
 }
 
 /**
  *
  */
-class Postfix {
+abstract class Fix {
   /**
    *
    * @param name
@@ -270,40 +259,49 @@ class Postfix {
    */
   public constructor(
     public readonly name: string,
-    public readonly interpretation: sax.Postfix
+    public readonly interpretation: sax.Fix
   ) {}
 
-  /**
-   * @returns
-   */
-  public tooltip(): HTMLDivElement | undefined {
-    const content: Node[] = this.tooltipAux();
-    if (!content.length) {
-      return undefined;
-    }
+  public abstract compose(variant: string): string;
 
-    const div: HTMLDivElement = document.createElement('div');
-    div.append(...content);
-    return div;
-  }
+  protected abstract lookup(): HTMLElement[];
 
   /**
    * @returns
    */
-  private tooltipAux(): Node[] {
+  public tooltip(): HTMLElement[] {
     if (!this.interpretation) {
       return [];
     }
-
     if (typeof this.interpretation === 'string') {
-      return [abbreviation(this.name), ...html.parse(this.interpretation)];
+      return [tooltip(this.name, html.parse(this.interpretation))];
     }
-
     dev.play(() => {
-      // Sanity check. This is the only option left.
+      // Sanity check!
       log.ensure(this.interpretation === sax.LOOKUP);
     });
+    return this.lookup();
+  }
+}
 
+/**
+ *
+ */
+class Postfix extends Fix {
+  /**
+   *
+   * @param variant
+   * @returns
+   */
+  public override compose(variant: string): string {
+    return `${variant} ${this.name}`;
+  }
+
+  /**
+   *
+   * @returns
+   */
+  protected override lookup(): HTMLElement[] {
     // The postfix 'Am' (as in 'ShAm', under ⲏⲡⲥ 525) refers to Amélineau,
     // but we only record the variant 'A' for Amélineau — 'Am' was
     // intentionally excluded from its variants to avoid colliding with Actes
@@ -311,8 +309,30 @@ class Postfix {
     // still resolves.
     // NOTE: The tooltip will use `A` as the abbreviation, although the text
     // uses `Am`.
-    const name = this.name === 'Am' ? 'A' : this.name;
-    return Array.from(MAPPING[name]?.tooltip()?.childNodes ?? []);
+    return MAPPING[this.name === 'Am' ? 'A' : this.name]!.tooltip();
+  }
+}
+
+/**
+ *
+ */
+class Prefix extends Fix {
+  /**
+   *
+   * @param variant
+   * @returns
+   */
+  public override compose(variant: string): string {
+    return `${this.name} ${variant}`;
+  }
+
+  /**
+   *
+   * @returns
+   */
+  protected override lookup(): HTMLElement[] {
+    const annot: ann.Annotation = ann.MAPPING[this.name]!;
+    return [tooltip(this.name, [annot.fixFullForm ?? annot.fullForm])];
   }
 }
 
@@ -369,35 +389,45 @@ sax.DATA.forEach((raw: sax.Source): void => {
     (variant: string, index: number): void => {
       const standard: string =
         index < raw.variants.length ? variant : raw.variants[0]!;
-      // Add the abbreviation without any postfixes.
+      // Add the abbreviation without any fixes.
       add(variant, new Reference(source, standard));
-      Object.entries(raw.postfixes ?? {}).forEach(
-        ([name, type]: [string, sax.Postfix]): void => {
-          add(
-            `${variant} ${name}`,
-            new Reference(source, standard, new Postfix(name, type))
-          );
-        }
-      );
+      for (const [fixes, fixClass] of [
+        [raw.postfixes, Postfix],
+        [raw.prefixes, Prefix],
+      ] as const) {
+        Object.entries(fixes ?? {}).forEach(
+          ([name, type]: [string, sax.Fix]): void => {
+            const fix = new fixClass(name, type);
+            add(fix.compose(variant), new Reference(source, standard, fix));
+          }
+        );
+      }
     }
   );
 });
 
+/**
+ *
+ * @param fixes
+ * @param mapping
+ */
+function verifyFixLookups(
+  fixes: Record<string, sax.Fix> | undefined | null,
+  mapping: Record<string, unknown>
+): void {
+  if (!fixes) {
+    return;
+  }
+  for (const [key, interpretation] of Object.entries(fixes)) {
+    if (interpretation === sax.LOOKUP) {
+      log.ensure(key in mapping, 'LOOKUP fix', key, 'is absent from the map!');
+    }
+  }
+}
+
 dev.play(() => {
-  // Verify that all LOOKUP postfixes are present.
-  Object.values(MAPPING)
-    .map((reference: Reference): string | undefined =>
-      reference.postfix?.interpretation === sax.LOOKUP
-        ? reference.postfix.name
-        : undefined
-    )
-    .filter((postfix) => postfix !== undefined)
-    .forEach((postfix: string) => {
-      log.ensure(
-        postfix in MAPPING,
-        'LOOKUP postfix',
-        postfix,
-        'is absent from the map'
-      );
-    });
+  sax.DATA.forEach((source: sax.Source): void => {
+    verifyFixLookups(source.postfixes, MAPPING);
+    verifyFixLookups(source.prefixes, ann.MAPPING);
+  });
 });
