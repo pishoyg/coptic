@@ -379,6 +379,7 @@ export const DATA: Abbreviation[] = [
     noCaseVariant: true,
   },
   { fullForm: 'Persian', variants: ['Pers'], noCaseVariant: true },
+  { fullForm: 'photo', variants: ['phot'], noCaseVariant: true },
   { fullForm: 'pluperfect', variants: ['pluperf', 'plupf'] },
   { fullForm: 'postpositive', variants: ['post-posit'] }, // Encountered once (as of the time of writing).
   { fullForm: 'possessive', variants: ['possess'] },
