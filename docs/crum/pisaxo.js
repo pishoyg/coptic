@@ -459,7 +459,7 @@ export const DATA = [
     ]
   },
   {
-    "title": "F. Rösch, Bruchstücke des I. Clem. 1910, acc. to chh. of Greek text",
+    "title": "C. Schmidt, Der I. Clemensbrief. 1908; or F. Rösch, Bruchstücke des I. Clem. 1910; acc. to chh. of Greek text",
     "description": [
       "Schmidt, C. (1908). <em><a href=\"https://archive.org/details/derersteclemensb00clemuoft/page/n3/mode/2up\">Der erste Clemensbrief in altkoptischer Übersetzung: Untersucht und herausgegeben von Carl Schmidt mit Lichtdruck-Faksimile der Handschrift</a></em>. (Texte und Untersuchungen zur Geschichte der altchristlichen Literatur, Vol. 32, No. 1). Leipzig: J. C. Hinrichs’sche Buchhandlung.",
       "Rösch, F. (1910). <em><a href=\"https://archive.org/details/bruchstckedese00clemuoft/bruchstckedese00clemuoft/page/n5/mode/2up\">Bruchstücke des ersten Clemensbriefes nach dem achmimischen Papyrus der Strassburger Universitäts- und Landesbibliothek mit biblischen Texten derselben Handschrift</a></em>. Strassburg: Schlesier &amp; Schweikhardt."
@@ -603,7 +603,8 @@ export const DATA = [
       "<em><a href=\"https://www.google.co.uk/books/edition/%C3%89tudes_arch%C3%A9ologiques/ByowAAAAYAAJ?hl=en&gbpv=1\">Études archéologiques, linguistiques et historiques dédiées à Mr. le Dr. C. Leemans, à l’occasion du cinquantième anniversaire de sa nomination aux fonctions de Directeur du Musée archéologique des Pays-Bas</a></em>. (1885). Leide: E. J. Brill."
     ],
     "variants": [
-      "Et Leem"
+      "Et Leem",
+      "Ét Leem"
     ]
   },
   {
