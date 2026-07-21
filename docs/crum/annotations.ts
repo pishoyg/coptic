@@ -250,6 +250,7 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'biblical', variants: ['bibl'] },
   { fullForm: 'bis', variants: ['bis'] },
   { fullForm: 'catalogue', variants: ['catal'] },
+  { fullForm: 'century', variants: ['cent'] },
   { fullForm: 'circa', variants: ['ca'] },
   { fullForm: 'codex', variants: ['cod'], suffix: true },
   { fullForm: 'condition, conditional', variants: ['condit'] },
