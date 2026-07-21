@@ -232,7 +232,7 @@ export const DATA = [
     ]
   },
   {
-    "title": "Bulletin de l’lnstit. français… au Caire",
+    "title": "Bulletin de l’Instit. français… au Caire",
     "description": [
       "All volumes of <em>Le Bulletin de l’Institut français d’ archéologie orientale</em> (BIFAO) published from 1901 to date are listed, digitised, and freely available via the <a href=\"https://www.ifao.egnet.net/bifao/\">Institut français d’ archéologie orientale</a>."
     ],
