@@ -194,7 +194,7 @@ LANGS: dict[Language, tuple[str, regex.Pattern[str]]] = {
         # - ⳪, ⳨ (passim)
         # - ⳗ, ⳓ, ⳙ (under ϫ: https://remnqymi.com/crum/3415.html)
         regex.compile(
-            r"(?:[ⲁ-ⲱϣ-ϯⳉ⳪⳨ⳗⳓⳙ Ꞩ(),\-./:?\[\]·―†…⸗⸪]\p{M}*)+",
+            r"(?:[ⲁ-ⲱϣ-ϯⳉ⳪⳨ⳗⳓⳙ ع Ꞩ \-⸗† () \[\] … ⸪ ― ,.:/?·]\p{M}*)+",
         ),
     ),
     "ARABIC": (
