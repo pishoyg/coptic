@@ -1534,6 +1534,15 @@ function handleManualAux(manual: HTMLElement): Iterable<Node> | Node {
  * @returns
  */
 function replaceIB(context: html.Context): void {
+  // NOTE: The antecedent must be resolved BEFORE the 'ib' is munched.
+  // `findAntecedent` walks the live tree starting at `context.first()`, which
+  // is the chain's first UNCONSUMED node. Munching an 'ib' that is the last
+  // node of its chain empties the chain, and `Chain.first` then returns
+  // undefined (it asserts non-null on an `at(-1)` that has nothing to return).
+  // `backtrack` short-circuits on that undefined, skipping the live-tree walk
+  // in its entirety and silently reporting no antecedent.
+  const antecedent: HTMLElement | null = findAntecedent(context);
+
   // We expect the 'ib' match to be a clean 'ib' element.
   const ibNodes: Node[] = context.munch();
 
@@ -1549,8 +1558,6 @@ function replaceIB(context: html.Context): void {
     context.insert(ibNodes);
     return;
   }
-
-  const antecedent: HTMLElement | null = findAntecedent(context);
 
   if (!antecedent) {
     log.error('Unable to find antecedent reference for ib element', ib);
