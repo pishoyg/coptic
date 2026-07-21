@@ -179,8 +179,15 @@ LANGS: dict[Language, tuple[str, regex.Pattern[str]]] = {
         # TODO: (#503) Ideally, the comma should be removed. A Coptic block of
         # comma-separated words should instead be represented as a
         # comma-separated list of one-word Coptic blocks.
+        # NOTE: We intentionally spell out the Coptic characters employed,
+        # instead of simply using `\p{Script=Coptic}`, in order to make sure
+        # we're aware of all used characters.
+        # As of the time of writing, besides the familiar letters, the following
+        # Coptic characters are employed:
+        # - ⳪, ⳨ (passim)
+        # - ⳗ, ⳓ, ⳙ (under ϫ: https://remnqymi.com/crum/3415.html)
         regex.compile(
-            r"(?:[\p{Coptic} Ꞩ(),\-./:?\[\]·―†…⸗⸪]\p{M}*)+",
+            r"(?:[ⲁ-ⲱϣ-ϯⳉ⳪⳨ⳗⳓⳙ Ꞩ(),\-./:?\[\]·―†…⸗⸪]\p{M}*)+",
         ),
     ),
     "ARABIC": (
