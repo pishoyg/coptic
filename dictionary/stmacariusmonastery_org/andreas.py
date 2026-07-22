@@ -226,21 +226,36 @@ class Span:
         # Collapse superfluous whitespace.
         text = _SPACE_RE.sub(" ", text)
         self.text: str = text.strip()
+        # The font says how to read the run, and nothing later may change that.
+        # `language` is what the run belongs to, which a neutral run takes from
+        # its neighbours; the two part company for exactly those runs, and a
+        # symbol decoded as the Coptic it sits in would be nonsense.
+        self.font_language: Language = language
         self.language: Language = language
         # The whitespace around a run separates it from its neighbours, and is
         # the only record the document keeps of that separation. The whitespace
         # inside a run is a different beast: the Greek, for one, is littered
-        # with spaces that mean nothing. So we hold the two apart,
-        # and only put the boundary whitespace back after transliterating.
+        # with spaces that mean nothing. So we hold the two apart, and only put
+        # the boundary whitespace back once the runs have been merged.
         self.lead: str = " " if text != text.lstrip() else ""
         self.trail: str = " " if self.text and text != text.rstrip() else ""
         del text
-        if self.language == Language.HEBREW:
+
+    def decode(self) -> None:
+        """Convert the run from the document's own encoding to Unicode.
+
+        A run keeps its encoding until the runs around it have been merged
+        into it. Word splits a word wherever its formatting changes, and it
+        sets each of the Greek font's accented vowels in a run of its own, so
+        the stray spaces below sit as often on such a split as they do inside
+        a run. A pass that ran per run would only ever see half of them.
+        """
+        if self.font_language == Language.HEBREW:
             # In the original data, Hebrew is written in reverse. Reverse
             # it before translating so that each vowel point follows its
             # consonant, as Unicode expects.
             self.text = self.text[::-1]
-        if self.language == Language.GREEK:
+        if self.font_language == Language.GREEK:
             # The Greek is littered with stray spaces. Drop them before
             # transliterating, while the glyphs that give them away are still
             # there, and keep the spaces that separate two words.
@@ -248,10 +263,19 @@ class Span:
                 lambda m: m.group(1) or "",
                 self.text,
             )
+            # A prefix diacritic and the letter it is drawn over spell a single
+            # letter between them. Join the two now that the rule above has
+            # closed the gap that the document leaves between them.
+            self.text = constants.GREEK_PREFIX_DIACRITIC_RE.sub(
+                lambda m: constants.GREEK_PREFIX_DIACRITICS[m.group()],
+                self.text,
+            )
         # Convert to Unicode.
-        if self.language not in constants.LANG_TRANSLATION:
+        if self.font_language not in constants.LANG_TRANSLATION:
             return
-        translation: dict[int, str] = constants.LANG_TRANSLATION[self.language]
+        translation: dict[int, str] = constants.LANG_TRANSLATION[
+            self.font_language
+        ]
         ensure.members(map(ord, self.text), translation)
         self.text = self.text.translate(translation)
 
@@ -319,7 +343,11 @@ class Paragraph:
         self.spans: list[Span] = list(self._runs(p))
         self._adopt_neutrals()
         self._squash()
+        # The runs hold the document's encoding until here. Decoding them only
+        # once they have been merged lets `decode` see across a split that Word
+        # made in the middle of a word.
         for s in self.spans:
+            s.decode()
             s.postprocess()
 
     @staticmethod
@@ -380,16 +408,24 @@ class Paragraph:
 
         The whitespace that separated the two runs moves inside the merged
         one, where the final normalization can collapse it.
+
+        Only the runs that one font wrote are merged into one another. A
+        neutral run takes the language of its neighbours, but it keeps the
+        encoding of the font that wrote it, and the merged text is decoded in
+        one piece: a symbol read as the Coptic it stands in would be nonsense.
         """
         result: list[Span] = []
         for span in self.spans:
-            if not result or result[-1].language != span.language:
+            previous: Span | None = result[-1] if result else None
+            if previous is None or previous.language != span.language:
                 result.append(span)
                 continue
-            previous: Span = result[-1]
             if not span.text:
                 # A run of pure whitespace only records a separation.
                 previous.trail = " "
+                continue
+            if previous.font_language != span.font_language:
+                result.append(span)
                 continue
             previous.text += previous.trail + span.lead + span.text
             previous.trail = span.trail

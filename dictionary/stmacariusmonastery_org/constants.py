@@ -169,7 +169,6 @@ _GREEK_ENCODING: dict[str, str] = {
     "ù": "ῷ",
     "„": "ἰ",
     "‡": "ἴ",
-    "—": "ΐ",
     "y": "ψ",
     "†": "ἵ",
     "ƒ": "ἱ",
@@ -282,6 +281,19 @@ GREEK_STRAY_SPACE_RE: re.Pattern[str] = re.compile(
     f"({"|".join(map(re.escape, _GREEK_PHRASES))})|(?<=[{_STRAY_SPACE_GLYPHS}]) | (?=[{_STRAY_SPACE_GLYPHS}])",
 )
 
+# GREEK_PREFIX_DIACRITICS are the glyphs that the font draws over the letter
+# that follows them rather than beside it, so that two keystrokes spell one
+# letter. Everywhere else the encoding gives one character per keystroke, so
+# these pairs are rewritten before the translation below sees them, and the
+# glyph is absent from the encoding: on its own it spells nothing.
+GREEK_PREFIX_DIACRITICS: dict[str, str] = {
+    "—i": "ΐ",  # Iota with a diaeresis and an acute.
+}
+
+GREEK_PREFIX_DIACRITIC_RE: re.Pattern[str] = re.compile(
+    "|".join(map(re.escape, GREEK_PREFIX_DIACRITICS)),
+)
+
 _HEBREW_ENCODING: dict[str, str] = {
     # The `rhebrew` font is an ASCII transliteration font (akin to the
     # Michigan-Claremont encoding): each keystroke renders a Hebrew consonant
@@ -362,6 +374,9 @@ _SYMBOL_ENCODING: dict[str, str] = {
     '"': "→",
     # The mark of the pronominal forms of verbs, from the `Arial` font.
     "״": "⸗",
+    # Two symbols in a row keep the space that stood between them, as in every
+    # other encoding here.
+    " ": " ",
 }
 
 # UNMISTAKABLE_SYMBOLS are the characters that give a run away as a symbol
