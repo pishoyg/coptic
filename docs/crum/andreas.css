@@ -4,14 +4,19 @@
  * `#andreas`. */
 .card,
 body.lexicon #andreas {
-  & .arabic {
+  /* A definition reads left to right, and embeds right-to-left runs within it,
+   * exactly as the source document does. `isolate` keeps each run's direction
+   * to itself, so the punctuation between two runs doesn't get dragged into
+   * the wrong one, and brackets don't come out mirrored.
+   * The runs stay inline: the line breaks belong to the paragraphs of the
+   * entry, not to the languages inside them. */
+  & .arabic,
+  & .hebrew {
     direction: rtl;
-    display: block;
+    unicode-bidi: isolate;
   }
 
   & .hebrew {
     color: brown;
-    direction: rtl;
-    display: block;
   }
 }

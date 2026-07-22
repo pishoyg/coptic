@@ -16,7 +16,20 @@ FONT_FAMILY_RE: re.Pattern[str] = re.compile(
     re.IGNORECASE,
 )
 
-COPTIC_ENCODING: dict[str, str] = {
+DISPLAY_NONE_RE: re.Pattern[str] = re.compile(
+    r"display:\s*none",
+    re.IGNORECASE,
+)
+
+# CLASS_FONT maps a character style to the font that the document's own
+# stylesheet gives it. Word only writes `font-family` inline when a run
+# overrides its style, so the runs that don't must inherit it from here.
+CLASS_FONT: dict[str, str] = {"greekdictionary": "greek"}
+
+# DEFAULT_FONT is the font that `p.MsoNormal` gives the body text.
+DEFAULT_FONT: str = "times new roman"
+
+_COPTIC_ENCODING: dict[str, str] = {
     # Capital letters.
     "A": "Ⲁ",
     "B": "Ⲃ",
@@ -95,6 +108,7 @@ COPTIC_ENCODING: dict[str, str] = {
     "(": "(",
     "&": "?",
     ".": ".",
+    "=": "=",
     "-": "-",
     "–": "-",
     " ": " ",
@@ -106,7 +120,7 @@ COPTIC_ENCODING: dict[str, str] = {
     "ô": "",
 }
 
-GREEK_ENCODING: dict[str, str] = {
+_GREEK_ENCODING: dict[str, str] = {
     "¥": "ἄ",
     "b": "β",
     "a": "α",
@@ -142,7 +156,7 @@ GREEK_ENCODING: dict[str, str] = {
     "p": "π",
     "©": "ᾶ",
     ",": ",",
-    " ": "",
+    " ": " ",
     "¡": "ἁ",
     "z": "ζ",
     "¤": "ἅ",
@@ -236,7 +250,39 @@ GREEK_ENCODING: dict[str, str] = {
     "Í": "ῇ",
 }
 
-HEBREW_ENCODING: dict[str, str] = {
+# _STRAY_SPACE_GLYPHS are the Greek glyphs that the data sets a stray space
+# beside. The font keeps its accented vowels in the C1 range (the Windows-1252
+# code points 0x80-0x9F), and whatever produced the data dropped a space next
+# to nearly every one of them: `¢gwn… zesqai` is one word, ἀγωνίζεσθαι.
+_STRAY_SPACE_GLYPHS: str = re.escape("ƒ„…†‡ˆ‹Œ”—˜™š›œ\x8d")
+
+# _GREEK_PHRASES are the runs that hold more than one Greek word, written in
+# the document's own encoding. A space beside one of the glyphs above is
+# nearly always an artifact, but in these the author typed it, and nothing in
+# the run tells the two apart: `ka… per` is one word, καίπερ, and `kaˆ g£r` is
+# two. So they are listed. These are all of them: a space that stands between
+# two characters the font writes plainly is a word boundary wherever it
+# occurs, and needs no listing.
+_GREEK_PHRASES: tuple[str, ...] = (
+    "KÚrie ™lšhson",  # Κύριε ἐλέησον
+    "e„ gš",  # εἰ γέ
+    "e„ m»",  # εἰ μή
+    "kaˆ g£r",  # καὶ γάρ
+    "kaˆ ™£n",  # καὶ ἐάν
+    "kaˆ ™¦n",  # καὶ ἐὰν
+    "oÙk œxesti",  # οὐκ ἔξεστι
+    "™pˆ ka…",  # ἐπὶ καί
+)
+
+# GREEK_STRAY_SPACE_RE matches a stray space, and captures a phrase that holds
+# one. The phrases come first, so that a run that spells one out is matched
+# whole and keeps its space.
+GREEK_STRAY_SPACE_RE: re.Pattern[str] = re.compile(
+    # pylint: disable-next=line-too-long
+    f"({"|".join(map(re.escape, _GREEK_PHRASES))})|(?<=[{_STRAY_SPACE_GLYPHS}]) | (?=[{_STRAY_SPACE_GLYPHS}])",
+)
+
+_HEBREW_ENCODING: dict[str, str] = {
     # The `rhebrew` font is an ASCII transliteration font (akin to the
     # Michigan-Claremont encoding): each keystroke renders a Hebrew consonant
     # or vowel point (niqqud). The text is stored in visual (reversed) order,
@@ -307,13 +353,38 @@ HEBREW_ENCODING: dict[str, str] = {
     "à": "",
 }
 
-UNKNOWN_ENCODING: dict[str, str] = {
-    "״": '"',
-    "]": "]",
-    "+": "+",
-    "→": "→",
-    "[": "[",
-} | GREEK_ENCODING
+_SYMBOL_ENCODING: dict[str, str] = {
+    # The cross-reference arrow, from the `Wingdings 3` font. Word writes it
+    # either in the private use area or as its raw single-byte code.
+    "\uf08a": "→",
+    "\uf022": "→",
+    "\u008a": "→",
+    '"': "→",
+    # The mark of the pronominal forms of verbs, from the `Arial` font.
+    "״": "⸗",
+}
+
+# UNMISTAKABLE_SYMBOLS are the characters that give a run away as a symbol
+# wherever they occur. A handful of runs carry no style at all, and these
+# characters are the only clue to what they hold. The quotation mark that
+# `Wingdings 3` also uses is absent, because it means something else in every
+# other font.
+UNMISTAKABLE_SYMBOLS: frozenset[str] = frozenset(
+    "\uf08a\uf022\u008a\u05f4",
+)
+
+# NEUTRAL_PUNCTUATION are the marks that belong to the text around them
+# whatever font they are set in. The data types its etymology joiner and its
+# cross-reference sign in whichever font happened to be active at the time, so
+# a run holding nothing else says nothing about the language it is written in.
+# Neither mark is mirrored, so which way round it is rendered doesn't matter.
+NEUTRAL_PUNCTUATION: frozenset[str] = frozenset("+=")
+
+# MIRRORED_PUNCTUATION are the marks that come out reversed when rendered
+# right-to-left. A bracket typed on the Arabic keyboard is only a bracket if it
+# is rendered the way it was typed, so unlike the neutral marks these can't
+# take a neighbour's language: they keep the direction the document gives them.
+MIRRORED_PUNCTUATION: frozenset[str] = frozenset("()[]")
 
 
 class Language(enum.Enum):
@@ -321,23 +392,35 @@ class Language(enum.Enum):
     GREEK = "Greek"
     ARABIC = "Arabic"
     HEBREW = "Hebrew"
-    RIGHT_ARROW = "Right Arrow"
     LATIN = "Latin"
-    UNKNOWN = "Unknown"
-
-    def known(self) -> bool:
-        return self in [
-            Language.COPTIC,
-            Language.ARABIC,
-            Language.GREEK,
-            Language.HEBREW,
-            Language.LATIN,
-        ]
+    # SYMBOL is not a language. It covers the runs that the document sets in a
+    # symbol font: the cross-reference arrow and the mark of the pronominal
+    # forms of verbs. Symbols carry no language of their own, so they adopt the
+    # language of the run next to them.
+    SYMBOL = "Symbol"
 
 
-LANG_ENCODING: dict[Language, dict[int, str]] = {
-    Language.COPTIC: str.maketrans(COPTIC_ENCODING),
-    Language.GREEK: str.maketrans(GREEK_ENCODING),
-    Language.HEBREW: str.maketrans(HEBREW_ENCODING),
-    Language.UNKNOWN: str.maketrans(UNKNOWN_ENCODING),
+# FONT_LANGUAGE maps a substring of a font name to the language that the font
+# writes. The whole data uses only these fonts, so an unrecognized one is an
+# error rather than something to fall back from.
+FONT_LANGUAGE: list[tuple[str, Language]] = [
+    ("athanasius", Language.COPTIC),
+    ("greek", Language.GREEK),
+    ("athena", Language.GREEK),
+    ("rhebrew", Language.HEBREW),
+    ("arabic", Language.ARABIC),
+    ("kenshrin1", Language.ARABIC),
+    ("wingdings", Language.SYMBOL),
+    ("arial", Language.SYMBOL),
+    ("times new roman", Language.LATIN),
+]
+
+LANG_TRANSLATION: dict[Language, dict[int, str]] = {
+    language: str.maketrans(encoding)
+    for language, encoding in [
+        (Language.COPTIC, _COPTIC_ENCODING),
+        (Language.GREEK, _GREEK_ENCODING),
+        (Language.HEBREW, _HEBREW_ENCODING),
+        (Language.SYMBOL, _SYMBOL_ENCODING),
+    ]
 }

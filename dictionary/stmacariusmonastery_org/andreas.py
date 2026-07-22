@@ -9,282 +9,441 @@ import typing
 from collections import abc
 
 import bs4
+import regex
 
-from dictionary import cls as dict_cls
+from dictionary import cls
 from dictionary.stmacariusmonastery_org import constants
 from dictionary.stmacariusmonastery_org.constants import Language
 from flashcards import deck, ids
 from utils import ensure, file, lang, log, paths
 from xooxle import xooxle
 
-POSTPROCESSING: list[tuple[str | re.Pattern[str], str]] = [
+POSTPROCESSING: list[tuple[str | regex.Pattern[str], str]] = [
     ("``", "`"),
     (" -", "-"),
     (" ,", ","),
     (",", ", "),
+    # The mark of the pronominal forms attaches to its stem, but the data
+    # sometimes puts a space in front of it.
     (" ⸗", "⸗"),
     ("→", " → "),
     ("( ", "("),
     (" )", ")"),
     ("  ", " "),
+    ("--", "-"),
+    ("))", ")"),
+    ("((", "("),
+    ("، ، ", "، "),
+    # Arabic punctuation attaches to the word before it, but the data puts a
+    # space in front of it here and there.
+    (" ،", "،"),
+    (" ؛", "؛"),
+    ("،؛", "؛"),
+    (" ؟", "؟"),
+    (" !", "!"),
+    # An ellipsis is one mark, however the data spaces its dots.
+    (". . .", "..."),
+    # A gender marker is a word of its own, and stands apart from the headword
+    # it follows. A few dozen entries glue it on.
+    (regex.compile(r"(?<=[^\s(])(?=\((?:ⲡ|ⲧ|ⲛ|ⲉϥ|ⲟⲩ)\))"), " "),
     # Misplaced accents:
-    (re.compile("(?:`|⳿)(.)"), r"\1̀"),
-    (re.compile(" \u0300(.)"), r"\1̀"),
+    (regex.compile("(?:`|⳿)(.)"), "\\1\u0300"),
+    (regex.compile(" \u0300(.)"), "\\1\u0300"),
     # Misplaced overline:
-    (re.compile("(.) \u0305"), r"\1̅"),
-    # Extra space (common error by our heurstic, because it inserts spaces
-    # between all spans).
-    (re.compile("(→ .) "), r"\1"),
-    # Combining double overline.
-    ("\u0305 \u0305", "\u033f"),
+    (regex.compile("(.) \u0305"), "\\1\u0305"),
+    # No mark is ever written twice over one letter. The rule above doubles an
+    # overline that the data spaces out, and the data itself doubles an Arabic
+    # diacritic in a few dozen places; either way the mark was typed twice.
+    # This comes after the rules that move a mark about, so that it sees the
+    # marks where they end up rather than where they were typed.
+    (regex.compile(r"(\p{Mn})\1+"), "\\1"),
+    # A hyphen that doesn't follow Coptic text marks a prefix, and binds
+    # to the letters after it. This comes last, because the rules above
+    # can turn what precedes a space into Coptic.
+    (
+        regex.compile(r"(?<=(?<!\p{Script=Coptic})-) (?=\p{Script=Coptic})"),
+        "",
+    ),
 ]
+
+# _SPACE_RE matches a run of whitespace. The data indents its lines and
+# separates its runs with non-breaking spaces, which `\s` matches.
+_SPACE_RE: re.Pattern[str] = re.compile(r"\s+")
+
+# _HUGS_LEFT are the characters that attach to whatever precedes them, and
+# _HUGS_RIGHT to whatever follows. These decide the gaps between two runs,
+# where the runs are joined, because the whitespace that separates them lives
+# outside their text.
+# POSTPROCESSING closes the same gaps within a run, but the two are not quite
+# the same rule: the comma rule there reopens the gap in front of a hyphen, so
+# `ⲁⲅⲅⲉⲗⲓⲕⲟⲥ, -ⲟⲛ` keeps its space. Nothing in the data splits a run between
+# the comma and the hyphen, so the two never have to agree.
+_HUGS_LEFT: str = "-,⸗)"
+_HUGS_RIGHT: str = "("
+
+# _CROSS_REFERENCE_RE matches an entry that points the reader at another entry
+# (`ⲁⲛⲁⲗⲩⲯⲓⲥ (ⲧ) = ⲁⲛⲁⲗⲩⲙⲯⲓⲥ`) instead of defining a word. Such an entry
+# legitimately carries no definition, and no Arabic.
+_CROSS_REFERENCE_RE: re.Pattern[str] = re.compile(r"[=→]")
+
+
+def _style(tag: bs4.Tag) -> str:
+    style: str | list[str] | None = tag.get("style")
+    assert style is None or isinstance(style, str)
+    return style or ""
+
+
+def _classes(tag: bs4.Tag) -> list[str]:
+    classes: str | list[str] | None = tag.get("class")
+    if classes is None:
+        return []
+    return [classes] if isinstance(classes, str) else classes
+
+
+def _tags(string: bs4.NavigableString) -> abc.Generator[bs4.Tag]:
+    """Yield the tags enclosing a string, innermost first.
+
+    Args:
+        string: The string to walk up from.
+
+    Yields:
+        The enclosing tags, from the innermost outwards.
+    """
+    for tag in string.parents:
+        if isinstance(tag, bs4.Tag):
+            yield tag
+
+
+def _hidden(string: bs4.NavigableString) -> bool:
+    """Whether the document hides a string.
+
+    A few runs are marked `display: none`. They duplicate text that is already
+    visible elsewhere in the same paragraph.
+
+    Args:
+        string: The string to check.
+
+    Returns:
+        Whether any enclosing tag hides the string.
+    """
+    return any(
+        constants.DISPLAY_NONE_RE.search(_style(tag)) for tag in _tags(string)
+    )
+
+
+def _rtl(string: bs4.NavigableString) -> bool:
+    """Whether the document renders a run right-to-left.
+
+    Word records the direction of every run it sets with the Arabic keyboard,
+    even where the font gives nothing away.
+
+    Args:
+        string: The string to check.
+
+    Returns:
+        Whether any enclosing tag marks the run right-to-left.
+    """
+    return any(tag.get("dir") == "rtl" for tag in _tags(string))
+
+
+def _font(string: bs4.NavigableString) -> str:
+    """Return the font that the document renders a string with.
+
+    An inline `font-family` wins, however far up the tree it sits. A run that
+    overrides no font inherits one from its character style, and a run without
+    a character style falls back to the document's default font.
+
+    Args:
+        string: The string whose font to resolve.
+
+    Returns:
+        The font name, lowercased.
+    """
+    for tag in _tags(string):
+        match: re.Match[str] | None = constants.FONT_FAMILY_RE.search(
+            _style(tag),
+        )
+        if match:
+            return match.group(1).strip().lower()
+        for name in _classes(tag):
+            if name.lower() in constants.CLASS_FONT:
+                return constants.CLASS_FONT[name.lower()]
+    return constants.DEFAULT_FONT
+
+
+def _language(font: str, text: str, rtl: bool) -> Language:
+    """Determine the language that a run is written in.
+
+    The font decides, with two exceptions. A few dozen Arabic runs are set in
+    `Arial`, which the data otherwise reserves for the mark of the pronominal
+    forms; Arabic script is unambiguous, so the text overrules the font there.
+    And a bracket looks the same in every font, so for those the direction
+    decides.
+
+    Args:
+        font: The font that the document renders the run with.
+        text: The text of the run.
+        rtl: Whether the document renders the run right-to-left.
+
+    Returns:
+        The language of the run.
+    """
+    stripped: str = text.strip()
+    if lang.has_lang("ARABIC", text):
+        return Language.ARABIC
+    if rtl and all(c in constants.MIRRORED_PUNCTUATION for c in stripped):
+        # A right-to-left bracket has to stay with the right-to-left text, or
+        # it comes out mirrored and its pair points the wrong way.
+        return Language.ARABIC
+    if all(c in constants.UNMISTAKABLE_SYMBOLS for c in stripped):
+        return Language.SYMBOL
+    for name, language in constants.FONT_LANGUAGE:
+        if name in font:
+            return language
+    log.fatal("Unknown font", repr(font), "for the text:", repr(text))
+
+
+def _hugs(before: str, after: str) -> bool:
+    """Whether two runs meet with no space between them.
+
+    Args:
+        before: The text of the run on the left.
+        after: The text of the run on the right.
+
+    Returns:
+        Whether the two runs join without a space.
+    """
+    return bool(after) and (
+        after[0] in _HUGS_LEFT or (bool(before) and before[-1] in _HUGS_RIGHT)
+    )
 
 
 @typing.final
 class Span:
-    """Span represents an HTML tag bearing text in a given language."""
+    """Span is a run of text that the document writes in a single font."""
 
-    def __init__(self, tag: bs4.Tag) -> None:
-        self.text: str = tag.get_text().replace("\n", " ")
-        self.indented: bool = bool(self.text) and self.text[0].isspace()
-        # Remove superfluous space after determining whether the span is
-        # indented.
-        self.text = " ".join(self.text.split()).strip()
-        style: str | list[str] | None = tag.get("style")
-        assert style is None or isinstance(style, str)
-        self.language: Language = self._determine_language(style)
-        self.unicode: bool = False
-
-    def convert_to_unicode(self) -> None:
-        ensure.ensure(not self.unicode, self, "already converted to Unicode!")
-        self.unicode = True
-        if self.language == Language.RIGHT_ARROW:
-            assert len(self.text) == 1
-            self.text = "→"
-            return
-
-        if self.language in [Language.ARABIC, Language.LATIN]:
-            # Arabic and Latin text is not encoded.
-            return
-
+    def __init__(self, text: str, language: Language) -> None:
+        # Collapse superfluous whitespace.
+        text = _SPACE_RE.sub(" ", text)
+        self.text: str = text.strip()
+        self.language: Language = language
+        # The whitespace around a run separates it from its neighbours, and is
+        # the only record the document keeps of that separation. The whitespace
+        # inside a run is a different beast: the Greek, for one, is littered
+        # with spaces that mean nothing. So we hold the two apart,
+        # and only put the boundary whitespace back after transliterating.
+        self.lead: str = " " if text != text.lstrip() else ""
+        self.trail: str = " " if self.text and text != text.rstrip() else ""
+        del text
         if self.language == Language.HEBREW:
-            # In the original data, Hebrew is written in reverse. Reverse it
-            # before translating so that each vowel point follows its
+            # In the original data, Hebrew is written in reverse. Reverse
+            # it before translating so that each vowel point follows its
             # consonant, as Unicode expects.
             self.text = self.text[::-1]
+        if self.language == Language.GREEK:
+            # The Greek is littered with stray spaces. Drop them before
+            # transliterating, while the glyphs that give them away are still
+            # there, and keep the spaces that separate two words.
+            self.text = constants.GREEK_STRAY_SPACE_RE.sub(
+                lambda m: m.group(1) or "",
+                self.text,
+            )
+        # Convert to Unicode.
+        if self.language not in constants.LANG_TRANSLATION:
+            return
+        translation: dict[int, str] = constants.LANG_TRANSLATION[self.language]
+        ensure.members(map(ord, self.text), translation)
+        self.text = self.text.translate(translation)
 
-        # This is an encoded language.
-        # TODO: (#590) This ignores characters not present in the mapping. You
-        # should instead ensure that all encountered characters are present in
-        # the mapping.
-        self.text = self.text.translate(constants.LANG_ENCODING[self.language])
-
-    def _determine_language(self, style: str | None) -> Language:
-        if lang.has_lang("ARABIC", self.text):
-            return Language.ARABIC
-
-        if not style:
-            return Language.UNKNOWN
-
-        # Extract font properties from inline styles
-        font_match: re.Match[str] | None = constants.FONT_FAMILY_RE.search(
-            style,
+    def neutral(self) -> bool:
+        # Whether the run carries a language of its own. Whitespace, symbols
+        # and bare punctuation don't; they belong to the text around them.
+        # Only a language that the document stores as plain Unicode can hold
+        # bare punctuation: the encoded ones spend those same characters on
+        # letters, so `[` is a Coptic ⲝ and `(` a Hebrew ע.
+        return (
+            not self.text
+            or self.language == Language.SYMBOL
+            or (
+                self.language not in constants.LANG_TRANSLATION
+                and all(c in constants.NEUTRAL_PUNCTUATION for c in self.text)
+            )
         )
 
-        if not font_match:
-            return Language.GREEK
+    def postprocess(self) -> None:
+        """Tidy up the transliterated text.
 
-        font: str = font_match.group(1).strip().lower()
-        if "athanasius" in font:
-            return Language.COPTIC
-        if "rhebrew" in font:
-            return Language.HEBREW
-        if "kenshrin1" in font:
-            return Language.ARABIC
-        if "wingdings" in font:
-            return Language.RIGHT_ARROW
-        if "greek" in font or "athena" in font:
-            return Language.GREEK
+        We do this per run, and before the runs are wrapped in their tags: the
+        rules below move spaces about, and a rule can't tell that a space it
+        adds sits right against a space on the far side of a tag.
+        """
+        for pattern, repl in POSTPROCESSING:
+            if isinstance(pattern, str):
+                self.text = self.text.replace(pattern, repl)
+            else:
+                self.text = pattern.sub(repl, self.text)
+        # A rule may have pushed a space out to either end of the run, where it
+        # separates this run from the next rather than belonging to it.
+        if self.text != self.text.lstrip():
+            self.lead = " "
+        if self.text != self.text.rstrip():
+            self.trail = " "
+        self.text = self.text.strip()
 
-        # Some corner cases:
-        if "times new roman" in font:
-            return Language.LATIN
-        # TODO: (#590) Prevent spans with unknown languages. We should be able
-        # to infer languages for all spans.
-        return Language.UNKNOWN
-
-    def content(self, html: bool) -> abc.Generator[str]:
-        ensure.ensure(
-            self.unicode,
-            "attempting to retrieve span content before Unicode conversion:",
-            self,
+    def content(self, html: bool) -> str:
+        # Arabic and Hebrew have classes, because they are right-to-left and
+        # need to be styled. The other languages need no class of their own.
+        if not html or self.language not in [Language.ARABIC, Language.HEBREW]:
+            return self.text
+        return (
+            f'<span class="{self.language.value.lower()}">{self.text}</span>'
         )
-        ensure.ensure(
-            self.language.known(),
-            "Can't retrieve content from a span with an unknown language:",
-            self,
-        )
-        ensure.ensure(self.text, self, "has no text!")
-
-        # Arabic and Hebrew have classes, because they need to be styled. For
-        # other languages, we prefer omitting the language so we can prettify
-        # the text (e.g. by removing superfluous space).
-        # TODO: (#595) HTML classes will no longer be necessary if Greek is
-        # extracted and the remainder is determined to be entirely
-        # right-to-left. The "arabic" class would then be inserted on a
-        # per-entry basis rather than on a per-span basis.
-        span: bool = html and self.language in [
-            Language.ARABIC,
-            Language.HEBREW,
-        ]
-        if span:
-            yield f'<span class="{self.language.value.lower()}">'
-        yield self.text
-        if span:
-            yield "</span>"
 
     @typing.override
     def __str__(self) -> str:
-        return self.text
+        return self.lead + self.text + self.trail
 
 
 class Paragraph:
     """Paragraph represents a <p> tag from the dictionary data."""
 
     def __init__(self, p: bs4.Tag) -> None:
-        self.spans: list[Span] = []
+        text: str = p.get_text()
+        # The data indents its continuation lines with a leading run of
+        # non-breaking spaces. Read the indentation off the paragraph, before
+        # any whitespace is normalized away: it is what tells a derivation
+        # apart from a new entry.
+        self.indented: bool = bool(text) and text[0].isspace()
+        del text
 
-        tag: bs4.Tag
-        last_text: str | None = None
-        for tag in p.find_all("span"):
-            span: Span = Span(tag)
-            if not span.text:
-                # An empty span!
-                continue
-
-            # Outer and inner spans cause some text to be repeated twice.
-            # This repetition comes from the fact that we encounter the same
-            # string several times as we navigate down the tree:
-            #  - `soup.find_all("span")` loops over all <span> tags.
-            #  - Some of those span elements may be parents of other span
-            #    elements that we will cover later in the loop.
-            # TODO: (#590) This is only valid if every <span> element is
-            # guaranteed to have a single string as a child, which may not be
-            # the case. Also this is not a clean check. Investigate and fix.
-            if last_text == span.text:
-                # If the second occurrence of the text has no language, use the
-                # first occurrence
-                if span.language == Language.UNKNOWN:
-                    continue
-                else:
-                    # Otherwise, use the second occurrence.
-                    _ = self.spans.pop()
-
-            self.spans.append(span)
-            last_text = span.text
-
+        self.spans: list[Span] = list(self._runs(p))
+        self._adopt_neutrals()
         self._squash()
-        # After squashing, all spans should represent known languages.
-        self._assert_all_known()
-
         for s in self.spans:
-            s.convert_to_unicode()
+            s.postprocess()
 
-    def _assert_all_known(self) -> None:
-        unknown: list[Span] = [s for s in self.spans if not s.language.known()]
-        if not unknown:
-            return
-        log.fatal(
-            self,
-            "has spans with unknown languages after squashing:",
-            unknown,
-        )
+    @staticmethod
+    def _runs(p: bs4.Tag) -> abc.Generator[Span]:
+        """Extract the runs of a paragraph.
+
+        We walk the strings rather than the <span> tags, because the tags nest:
+        a run is wrapped in an outer <span> bearing its character style and an
+        inner one bearing its font, and a few outer spans hold text of their
+        own. Walking the strings visits each piece of text exactly once.
+
+        Args:
+            p: The paragraph to extract the runs of.
+
+        Yields:
+            The runs of the paragraph, in order.
+        """
+        for node in p.descendants:
+            if not isinstance(node, bs4.NavigableString):
+                continue
+            if not node or _hidden(node):
+                continue
+            text: str = str(node)
+            if not text.strip():
+                # The document separates its runs with plain spaces, which sit
+                # between the tags rather than inside them. Whitespace has no
+                # language, so we don't bother asking what font it is in. The
+                # language below is a placeholder that `_adopt_neutrals`
+                # replaces, and that nothing decodes in the meantime, because
+                # the run holds nothing to decode.
+                yield Span(text, Language.SYMBOL)
+                continue
+            yield Span(text, _language(_font(node), text, _rtl(node)))
+
+    def _adopt_neutrals(self) -> None:
+        """Give the neutral runs the language of their neighbours.
+
+        A symbol or a run of whitespace has no language of its own; it belongs
+        to the text around it. The arrow in `ⲃⲁⲥⲧ⸗ → ⲃⲱⲥⲧ` is part of the
+        Coptic, not a language of its own.
+        """
+        languages: list[Language | None] = [
+            None if span.neutral() else span.language for span in self.spans
+        ]
+        # A neutral run belongs to the run before it, or, when it opens the
+        # paragraph, to the run after it.
+        for i in range(1, len(languages)):
+            languages[i] = languages[i] or languages[i - 1]
+        for i in reversed(range(len(languages) - 1)):
+            languages[i] = languages[i] or languages[i + 1]
+
+        for span, language in zip(self.spans, languages, strict=True):
+            if language:
+                span.language = language
+
+    def _squash(self) -> None:
+        """Merge the adjacent runs that share a language.
+
+        The whitespace that separated the two runs moves inside the merged
+        one, where the final normalization can collapse it.
+        """
+        result: list[Span] = []
+        for span in self.spans:
+            if not result or result[-1].language != span.language:
+                result.append(span)
+                continue
+            previous: Span = result[-1]
+            if not span.text:
+                # A run of pure whitespace only records a separation.
+                previous.trail = " "
+                continue
+            previous.text += previous.trail + span.lead + span.text
+            previous.trail = span.trail
+        self.spans = result
 
     @typing.override
     def __str__(self) -> str:
-        return " ".join(map(str, self.spans))
-
-    def _squash(self) -> None:
-        """Merge consecutive paragraphs within the same language."""
-        # TODO: (#590) You shouldn't need to squash any spans. Spans should be
-        # independent of one another, and each span should bear its own language
-        # information.
-
-        result: list[Span] = []
-        for span in self.spans:
-            if not result:
-                result.append(span)
-                continue
-            # If a span has an unknown language, or is an arrow, it belongs to
-            # the previous span.
-            # Also, if it has the same language as the previous span, we simply
-            # concatenate them.
-            if span.language == Language.RIGHT_ARROW:
-                span.convert_to_unicode()
-            if span.language in [
-                Language.UNKNOWN,
-                Language.RIGHT_ARROW,
-                result[-1].language,
-            ]:
-                result[-1].text += " " + span.text
-                continue
-
-            # If the top of the stack has an unknown language, it's the same
-            # language as this span.
-            if result[-1].language == Language.UNKNOWN:
-                result[-1].language = span.language
-            result.append(span)
-
-        self.spans = result
+        return "".join(map(str, self.spans)).strip()
 
     def empty(self) -> bool:
-        return not self.spans
+        # We look at the converted text rather than at the runs: a few
+        # paragraphs hold nothing but characters that transliterate away.
+        return not "".join(s.text for s in self.spans).strip()
 
     def content_aux(
         self,
         html: bool,
         spans: list[Span] | None = None,
     ) -> abc.Generator[str]:
-        for s in (self.spans if spans is None else spans):
-            yield from s.content(html)
+        # The whitespace separating two runs stays outside their tags, so that
+        # the normalization in `content` sees the two sides of a boundary as
+        # one run of whitespace rather than as two split by a tag.
+        gap: str = ""
+        previous: str = ""
+        if spans is None:
+            spans = self.spans
+        for s in spans:
+            gap = gap or s.lead
+            if not s.text:
+                continue
+            if not _hugs(previous, s.text):
+                yield gap
+            yield s.content(html)
+            gap = s.trail
+            previous = s.text
 
     def content(self, html: bool, spans: list[Span] | None = None) -> str:
         content: str = "".join(self.content_aux(html, spans))
-        # TODO: (#590) While this normalization step removes a lot of unwanted
-        # space, some space characters mistakenly make it to the output.
-        # Examples:
-        # - ϯ ⲡ⸗ ⲟⲩⲟⲓ
-        # - ϭⲉ- → ϭ ⲟ
-        # This is true for both Greek and Coptic, although there are far fewer
-        # Greek victims.
-        # It's also true for Arabic, unfortunately.
-        # Here is a list of candidates:
-        # pylint: disable-next=line-too-long
-        # - https://remnqymi.com/crum/?regex=true&query=%5Cp%7BScript%3DCoptic%7D+%5Cp%7BScript%3DCoptic%7D+&crum=false&kellia=false
-        # pylint: disable-next=line-too-long
-        # - https://remnqymi.com/crum/?query=%5Cp%7BScript%3DGreek%7D+%5Cp%7BScript%3DGreek%7D&regex=true
-        # The equivalent Arabic query returns most of the dictionary, so we
-        # might have to go over the whole dictionary to find Arabic spacing
-        # errors.
         content = " ".join(content.split()).strip()
-        for substitution in POSTPROCESSING:
-            pattern, repl = substitution
-            if isinstance(pattern, str):
-                content = content.replace(pattern, repl)
-            else:
-                assert isinstance(pattern, re.Pattern)
-                content = pattern.sub(repl, content)
         if spans is None:
-            # If we're not using the override, we have used our own spans, which
-            # means that we must have content.
+            # If we're not using the override, we have used our own spans,
+            # which means that we must have content.
             ensure.ensure(content, "paragraph", self, "has no content!")
         return content
 
     def langs(self) -> set[Language]:
-        self._assert_all_known()
         return {s.language for s in self.spans}
 
     def _coptic_prefix(self) -> list[Span]:
+        """The Coptic runs that open the paragraph.
+
+        Returns:
+            The runs that make up the headword.
+        """
         spans: list[Span] = []
         for s in self.spans:
             if s.language != Language.COPTIC:
@@ -297,9 +456,6 @@ class Paragraph:
 
     def non_coptic_suffix(self, html: bool) -> str:
         return self.content(html, self.spans[len(self._coptic_prefix()) :])
-
-    def indented(self) -> bool:
-        return self.spans[0].indented
 
 
 @typing.final
@@ -323,63 +479,98 @@ class DictionaryEntry:
     def __str__(self) -> str:
         return "\n".join(map(str, self.paragraphs))
 
+    @functools.cached_property
+    def _split(self) -> int:
+        """The index of the paragraph where the definition begins.
+
+        The front and the back meet in a single paragraph: the first one that
+        carries a non-Coptic part. Both sides read that boundary from here, so
+        that they can't come to disagree about where it lies.
+
+        Returns:
+            The index of that paragraph, or the number of paragraphs if the
+            entry is all Coptic and has no definition at all.
+        """
+        for i, p in enumerate(self.paragraphs):
+            if p.non_coptic_suffix(html=False):
+                return i
+        return len(self.paragraphs)
+
     def _front_aux(self, html: bool) -> abc.Generator[str]:
         if html:
-            yield f'<span class="{dict_cls.WORD} B">'
-            yield f'<span class="{dict_cls.SPELLING} B">'
+            yield f'<span class="{cls.WORD} B">'
+            yield f'<span class="{cls.SPELLING} B">'
 
         # The front consists of the Coptic prefix of the data. This is an
-        # (optional) sequence of paragraphs paragraphs that consist entirely of
-        # Coptic, followed by an (optional) partial paragraph that only has a
-        # Coptic prefix.
-        for i, p in enumerate(self.paragraphs):
+        # (optional) sequence of paragraphs that consist entirely of Coptic,
+        # followed by an (optional) partial paragraph that only has a Coptic
+        # prefix.
+        previous: str = ""
+        for i, p in enumerate(self.paragraphs[: self._split + 1]):
             prefix: str = p.coptic_prefix(html)
+            if prefix and previous and not _hugs(previous, prefix):
+                # A headword can run over several lines, and the line break
+                # between them separates its words.
+                yield " "
             yield prefix
-            # TODO: (#591) Handle these errors, and switch the error message to
-            # an assertion if the check has no false positives.
+            previous = prefix or previous
             if i == 0:
-                if not prefix:
-                    log.error(
-                        "Paragraph starts an entry but has no Coptic prefix:",
-                        p,
-                    )
-                elif not lang.is_lang("COPTIC", prefix[0]):
-                    log.error(
-                        "Coptic prefix doesn't start with Coptic text:",
-                        p,
-                    )
-            if p.non_coptic_suffix(html):
-                # This paragraph has a non-Coptic part! This is the start of the
-                # back.
-                break
+                self._check_headword(p, prefix)
 
         if html:
             yield "</span>"
             yield "</span>"
+
+    @staticmethod
+    def _check_headword(p: Paragraph, prefix: str) -> None:
+        ensure.ensure(
+            prefix,
+            "Paragraph starts an entry but has no Coptic prefix:",
+            p,
+        )
+        if prefix.startswith("-"):
+            prefix = prefix[1:]
+        ensure.ensure(
+            lang.is_lang("COPTIC", prefix[0]),
+            "Coptic prefix doesn't start with Coptic text:",
+            p,
+        )
 
     def front(self, html: bool) -> str:
         return "".join(self._front_aux(html))
 
     def back_aux(self, html: bool) -> abc.Generator[str]:
-        # Go through the paragraphs until you encounter non-Coptic text, and
-        # yield everything starting from there.
-        for i, p in enumerate(self.paragraphs):
-            non_coptic_suffix: str = p.non_coptic_suffix(html)
-            if non_coptic_suffix:
-                yield non_coptic_suffix
-                for p in self.paragraphs[i + 1 :]:
-                    yield p.content(html)
-                return
+        """Yield the paragraphs of the definition.
+
+        Args:
+            html: Whether to render the text as HTML.
+
+        Yields:
+            The non-Coptic part of the paragraph that the front ends in,
+            followed by the paragraphs after it in full.
+        """
+        if self._split == len(self.paragraphs):
+            # The entry is all Coptic. It has no definition.
+            return
+        yield self.paragraphs[self._split].non_coptic_suffix(html)
+        for p in self.paragraphs[self._split + 1 :]:
+            yield p.content(html)
 
     def back(self, html: bool) -> str:
+        # A paragraph of the definition is a block of its own. We wrap it here
+        # rather than in `Paragraph.content`, so that an empty paragraph stays
+        # empty: the checks below and in `back_aux` read that emptiness.
         back: str = "\n".join(
             f"<p>{b}</p>" if html else b for b in self.back_aux(html)
         )
+        if _CROSS_REFERENCE_RE.search(str(self)):
+            # A cross-reference sends the reader to another entry rather than
+            # defining anything, so it owes us neither a definition nor Arabic.
+            return back
+        ensure.ensure(back, "Entry doesn't have a definition:", self)
         # TODO: (#591) Handle the errors below, and switch the error message to
         # an assertion if the check has no false positives.
-        if not back:
-            log.error("Entry doesn't have a definition:", self)
-        elif not lang.has_lang("ARABIC", back):
+        if not lang.has_lang("ARABIC", back):
             log.error("Entry's definition has no Arabic:", self)
         return back
 
@@ -425,8 +616,7 @@ def group_paragraphs(
         # yield and entry and start a new one.
         # A new entry is marked by a paragraph containing Coptic text (unless
         # it's indented, in which case it belong to the entry above it).
-        # TODO: (#590) This doesn't catch all derivations.
-        if entry and Language.COPTIC in p.langs() and not p.indented():
+        if entry and Language.COPTIC in p.langs() and not p.indented:
             # This paragraph actually starts a new entry.
             yield DictionaryEntry(entry, idx)
             idx += 1
@@ -437,6 +627,7 @@ def group_paragraphs(
     if entry:
         yield DictionaryEntry(entry, idx)
         idx += 1
+        entry = []
 
 
 @functools.cache
@@ -470,7 +661,7 @@ XOOXLE = xooxle.Xooxle(
         xooxle.Capture(
             "FRONT",
             xooxle.Selector({"id": ids.FRONT}),
-            retain_classes={dict_cls.WORD, "B"},
+            retain_classes={cls.WORD, "B"},
         ),
         xooxle.Capture(
             "BACK",
@@ -480,9 +671,12 @@ XOOXLE = xooxle.Xooxle(
                 language.value.lower()
                 for language in [Language.ARABIC, Language.HEBREW]
             },
+            # Each paragraph of the definition is a line of its own. Without
+            # this, they would run together, and the styling would have to
+            # break them apart, which mixed left-to-right and right-to-left
+            # text doesn't survive.
+            block_elements=xooxle.BLOCK_ELEMENTS_DEFAULT | {"p"},
         ),
     ],
     output=os.path.join(paths.LEXICON_DIR, "andreas.json"),
-    # TODO: (#591) Fix errors in the source data, then restore strict mode.
-    strict=False,
 )

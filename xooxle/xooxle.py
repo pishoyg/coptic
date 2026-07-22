@@ -79,7 +79,7 @@ from collections.abc import Generator, Iterable
 
 import bs4
 
-from utils import concur, ensure, file, log, orth, page
+from utils import concur, ensure, file, orth, page
 from xooxle import clean
 from xooxle import constants as const
 
@@ -476,7 +476,6 @@ class Xooxle:
         captures: list[Capture],
         output: str | pathlib.Path,
         layers: list[list[str]] | None = None,
-        strict: bool = True,
     ) -> None:
         """
         Args:
@@ -488,7 +487,6 @@ class Xooxle:
             layers: A grouping of the capture names into layers. If not
                 provided, will default to a single layer containing all
                 captures.
-            strict: Whether to process the data in strict mode.
         """
         self._source: Iterable[tuple[str, str]] = source
         self._extract: list[Selector] = extract
@@ -497,7 +495,6 @@ class Xooxle:
         self._layers: list[list[str]] = layers or [
             [cap.name for cap in self._captures],
         ]
-        self._strict: bool = strict
 
     def _is_comment(self, elem: bs4.PageElement) -> bool:
         return isinstance(elem, bs4.element.Comment)
@@ -516,13 +513,11 @@ class Xooxle:
             repr(stripped),
         )
         text: str = orth.clean_diacritics(stripped)
-        if "  " in text:
-            # TODO: (#0) Double spaces signal errors in the data. Ideally, this
-            # would be an assertion, rather than just an error message.
-            (log.fatal if self._strict else log.error)(
-                "double space in Xooxle line:",
-                repr(text),
-            )
+        ensure.ensure(
+            "  " not in text,
+            "double space in Xooxle line:",
+            repr(text),
+        )
         return text
 
     def line(self, html: str) -> Line:
