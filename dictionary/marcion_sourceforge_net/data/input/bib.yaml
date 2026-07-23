@@ -480,10 +480,15 @@
   variants:
     - "C"
 
+# We have to split this into two entries to prevent conflict with another "P
+# Cai".
+
 - title: "MSS. &c. in the Egyptian Museum, Cairo"
   description:
   variants:
     - "Cai"
+  prefixes:
+    Ostr: !lookup
 
 - title: "MSS. &c. in Coptic Museum, Cairo"
   description:
@@ -495,7 +500,9 @@
   postfixes:
     tablet:
   prefixes:
+    tablet:
     P: !lookup
+    MS: !lookup
 
 - title: "Canons of Athanasius ed. Riedel & Crum (Text & Transl. Soc.), 1904"
   description:
@@ -663,6 +670,9 @@
     - "EES"
   postfixes:
     Report:
+    Antinoe:
+  prefixes:
+    ostr: !lookup
 
 - title: "Die Apokalypse d. Elias, ed. G. Steindorff, 1899"
   description:
@@ -2203,6 +2213,8 @@
   variants:
     - "Turin ostr"
     - "Tur ostr"
+  postfixes:
+    St Symeon:
 
 - title: "Atti della Reale Accademia delle Scienze di Torino"
   description:
@@ -2449,6 +2461,8 @@
   description:
   variants:
     - "Inst franç Epiph De Gemm"
+  prefixes:
+    MS: !lookup
 
 - title:
   description:
@@ -2546,7 +2560,8 @@
     der griechischen Inschriften, Ausschriften, Ostraka, Mumienschilder usw. aus Ägypten"
   description:
   variants:
-    - "Preisigke W.buch"
+    - "Preisigke W. buch"
+    - "Preisigke W buch"
 
 - title:
   description:

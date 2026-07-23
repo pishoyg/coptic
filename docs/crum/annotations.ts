@@ -313,7 +313,7 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'inscription', variants: ['inscr'], suffix: true },
   { fullForm: 'instrumental', variants: ['instr'] },
   { fullForm: 'interpretation', variants: ['interpr'] },
-  { fullForm: 'in loco', variants: ['in loc'] },
+  { fullForm: 'in loco', variants: ['in loc'], suffix: true },
   { fullForm: 'indeclinable', variants: ['indecl'] },
   { fullForm: 'indefinite', variants: ['indef'] },
   { fullForm: 'infinitive', variants: ['infin'] },
