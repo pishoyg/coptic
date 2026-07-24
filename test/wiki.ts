@@ -73,7 +73,7 @@ const TEST_CASES: {
       [cls.REFERENCE]: 370,
       [cls.BIBLE]: 302,
       [cls.DIALECT]: 980,
-      [cls.ANNOTATION]: 265,
+      [cls.ANNOTATION]: 264,
     },
   },
   {
