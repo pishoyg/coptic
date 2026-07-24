@@ -385,7 +385,10 @@ export const DATA = [
     "description": null,
     "variants": [
       "Cai"
-    ]
+    ],
+    "prefixes": {
+      "Ostr": LOOKUP
+    }
   },
   {
     "title": "MSS. &amp;c. in Coptic Museum, Cairo",
@@ -400,7 +403,9 @@ export const DATA = [
       "tablet": null
     },
     "prefixes": {
-      "P": LOOKUP
+      "tablet": null,
+      "P": LOOKUP,
+      "MS": LOOKUP
     }
   },
   {
@@ -564,7 +569,11 @@ export const DATA = [
       "EES"
     ],
     "postfixes": {
-      "Report": null
+      "Report": null,
+      "Antinoe": null
+    },
+    "prefixes": {
+      "ostr": LOOKUP
     }
   },
   {
@@ -2104,7 +2113,10 @@ export const DATA = [
     "variants": [
       "Turin ostr",
       "Tur ostr"
-    ]
+    ],
+    "postfixes": {
+      "St Symeon": null
+    }
   },
   {
     "title": "Atti della Reale Accademia delle Scienze di Torino",
@@ -2404,7 +2416,10 @@ export const DATA = [
     "description": null,
     "variants": [
       "Inst franç Epiph De Gemm"
-    ]
+    ],
+    "prefixes": {
+      "MS": LOOKUP
+    }
   },
   {
     "title": null,
@@ -2536,7 +2551,8 @@ export const DATA = [
     "title": "Preisigke, F. (1922). Wörterbuch der griechischen Papyrusurkunden: mit Einschluss der griechischen Inschriften, Ausschriften, Ostraka, Mumienschilder usw. aus Ägypten",
     "description": null,
     "variants": [
-      "Preisigke W.buch"
+      "Preisigke W. buch",
+      "Preisigke W buch"
     ]
   },
   {
