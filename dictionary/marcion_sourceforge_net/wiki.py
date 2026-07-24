@@ -167,11 +167,16 @@ LANGS: dict[Language, tuple[str, regex.Pattern[str]]] = {
     # NOTE: Since Greek can contain Coptic, it's important for the Greek to
     # precede Coptic in the list, so that a text will be tested for being Greek
     # first.
+    # NOTE: Superfluous spaces were inserted in some expressions below in order
+    # to separate groups within the regex, and make the expression more
+    # readable.
     "GREEK": (
         cls.GREEK,
         regex.compile(
+            # \U0001018E is 𐆎 (Nomisma Sign).
             # TODO: (#503) Ideally, the comma should be removed.
-            r"(?:[\p{Greek}\p{Coptic} '(),\-./?\[\]·—…⸝ʹ]\p{M}*)+",
+            r"(?:[α-ω ϛ 𐅵\U0001018E ʹʹ ' ⲁ-ⲱϣ-ϯ ⸝/ \[\]() \-,.?·—…]\p{M}*)+",
+            regex.IGNORECASE,
         ),
     ),
     "COPTIC": (
@@ -209,6 +214,17 @@ LANGS: dict[Language, tuple[str, regex.Pattern[str]]] = {
 }
 
 
+def _normalize_for_validation(language: Language, text: str) -> str:
+    # Greek and Coptic are allowed to have superscripts and stacks within.
+    # Greek is often transcribed with precomposed characters, which are not
+    # represented in our regex, so we NFD-normalize it.
+    if language in ["COPTIC", "GREEK"]:
+        text = _IN_LANG_TAGS.sub("", text)
+    if language == "GREEK":
+        text = orth.normalize(text)
+    return text
+
+
 def _language(text: str) -> Language:
     # We exclude diacritics from language determination because Coptic uses
     # Greek diacritics in the expression ⲇͅⲇͅ - which is the abbreviation for
@@ -240,11 +256,7 @@ def replace_bracketed(match: regex.Match[str]) -> str:
     klass, expression = LANGS[language]
 
     ensure.ensure(
-        expression.fullmatch(
-            # Greek and Coptic are allowed to have superscripts and stacks
-            # within.
-            _detag(text) if language in ["GREEK", "COPTIC"] else text,
-        ),
+        expression.fullmatch(_normalize_for_validation(language, text)),
         "invalid",
         language,
         "text:",
@@ -375,17 +387,18 @@ _SUBSTITUTIONS: list[Substitution] = [
 ]
 
 
-def _detag(text: str) -> str:
-    for tag in [
-        "<sup>",
-        "</sup>",
-        f'<span class="{cls.STACK}">',
-        f'<span class="{cls.STACK_TOP}">',
-        f'<span class="{cls.STACK_BOTTOM}">',
-        "</span>",
-    ]:
-        text = text.replace(tag, "")
-    return text
+_IN_LANG_TAGS: regex.Pattern[str] = regex.compile(
+    "|".join(
+        [
+            "<sup>",
+            "</sup>",
+            f'<span class="{cls.STACK}">',
+            f'<span class="{cls.STACK_TOP}">',
+            f'<span class="{cls.STACK_BOTTOM}">',
+            "</span>",
+        ],
+    ),
+)
 
 
 @typing.final
