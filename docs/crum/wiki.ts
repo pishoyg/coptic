@@ -182,6 +182,7 @@ const ENRICHMENT_RE = new RegExp(
 //     assume that, if it occurs after a reference abbreviation, then it's
 //     likely a suffix.
 const NUMBERS = [
+  '[٠١٢٣٤٥٦٧٨٩۰۱۲۳۴۵۶۷۸۹]+',
   "'?[0-9]+[a-zA-Z]?\\*?(?:–'?[0-9]+)?",
   'ed [A-Z]\\p{Letter}+',
   // 'no' means 'number'.
