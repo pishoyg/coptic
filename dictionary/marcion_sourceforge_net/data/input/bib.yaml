@@ -499,6 +499,7 @@
     - "Copt Mus"
   postfixes:
     tablet:
+    Catal: "Catalogue"
   prefixes:
     tablet:
     P: !lookup
@@ -1938,6 +1939,7 @@
     Bor: !lookup
     C: !lookup
     Cai Copt Mus: !lookup
+    Cai Copt Mus Catal: !lookup
     C O: !lookup
     Cai: !lookup
     Cl Pr: !lookup
