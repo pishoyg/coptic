@@ -400,7 +400,8 @@ export const DATA = [
       "Copt Mus"
     ],
     "postfixes": {
-      "tablet": null
+      "tablet": null,
+      "Catal": "Catalogue"
     },
     "prefixes": {
       "tablet": null,
@@ -1852,6 +1853,7 @@ export const DATA = [
       "Bor": LOOKUP,
       "C": LOOKUP,
       "Cai Copt Mus": LOOKUP,
+      "Cai Copt Mus Catal": LOOKUP,
       "C O": LOOKUP,
       "Cai": LOOKUP,
       "Cl Pr": LOOKUP,
