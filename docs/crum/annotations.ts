@@ -419,6 +419,7 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'sic lege', variants: ['sic l'] },
   { fullForm: 'scilicet', variants: ['sc'] },
   { fullForm: 'status constructus', variants: ['st const'] },
+  { fullForm: 'status pronominalis', variants: ['st pron'] },
   { fullForm: 'Saint', variants: ['St'], noCaseVariant: true },
   { fullForm: 'subject', variants: ['subj'] },
   {
