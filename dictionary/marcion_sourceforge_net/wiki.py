@@ -143,6 +143,8 @@ def bracketed(exp: str, repeat: int = 2) -> str:
 Language: typing.TypeAlias = typing.Literal[
     "GREEK",
     "COPTIC",
+    # NOTE: The ARABIC class is used for both Arabic and Persian words, which we
+    # can not always distinguish. Thus the label is inaccurate.
     "ARABIC",
     "HEBREW",
     "SYRIAC",
@@ -197,7 +199,11 @@ LANGS: dict[Language, tuple[str, regex.Pattern[str]]] = {
     ),
     "ARABIC": (
         cls.ARABIC,
-        regex.compile(r"(?:[\p{Arabic} ()?\-.\]…،]\p{M}*)+"),
+        # ء-ي covers standard Arabic letters
+        # ﹰ-ﻼ covers presentation forms-B (including isolated diacritics)
+        # گݣ covers the two Persian letters that occur in our transcription. We
+        # intentional refrain from supporting the entire Persian range.
+        regex.compile(r"(?:[ء-ي ﹰ-ﻼ گݣ ()?\-.\]…،]\p{M}*)+"),
     ),
     "HEBREW": (cls.HEBREW, regex.compile(r"(?:[\p{Hebrew} ]\p{M}*)+")),
     "SYRIAC": (cls.ARAMAIC, regex.compile(r"(?:[\p{Syriac} …]\p{M}*)+")),
