@@ -413,7 +413,7 @@
     P:
     Hunt:
     Marsh: "Marshall Collection"
-    Marsh Or: "Marsh Oriental Collection"
+    Marsh Or: "Marshall Oriental Collection"
 
 - title: "Codex Borgianus (where not printed by Zoega)"
   description:
@@ -499,6 +499,7 @@
     - "Copt Mus"
   postfixes:
     tablet:
+    # TODO: (#522) Is the catalogue published?
     Catal: "Catalogue"
   prefixes:
     tablet:
@@ -560,6 +561,11 @@
   variants:
     - "Chaîne"
 
+# NOTE: 'Cl' refers to two different works! The two of them show by default.
+# Occasionally, Crum uses a postfix to specify which work is intended.
+# We create a separate entry with the more specific variants, in order to avoid
+# showing the irrelevant publication when the other one is clearly intended.
+
 - title: "C. Schmidt, Der I. Clemensbrief. 1908; or F. Rösch, Bruchstücke des I. Clem.
     1910; acc. to chh. of Greek text"
   description:
@@ -573,9 +579,16 @@
       Strassburg: Schlesier & Schweikhardt."
   variants:
     - "Cl"
-  postfixes:
-    Rösch:
-    (Strassb):
+
+- title: "F. Rösch, Bruchstücke des I. Clem. 1910; acc. to chh. of Greek text"
+  description:
+    - "Rösch, F. (1910). *[Bruchstücke des ersten Clemensbriefes nach dem achmimischen
+      Papyrus der Strassburger Universitäts- und Landesbibliothek mit biblischen Texten
+      derselben Handschrift](https://archive.org/details/bruchstckedese00clemuoft/bruchstckedese00clemuoft/page/n5/mode/2up)*.
+      Strassburg: Schlesier & Schweikhardt."
+  variants:
+    - "Cl Rösch"
+    - "Cl (Strassb)"
 
 - title: "Woide’s MSS. belonging to the Clarendon Press (Crum’s copies & photographs)"
   description:
@@ -1496,6 +1509,7 @@
     - "Or Chr"
     - "Oriens Chr"
   postfixes:
+    # TODO: (#522) Is there a different hyperlink for the Neue Serie?
     NS: "Neue Serie"
 
 - title: "M.A. Murray, The Osireion, 1904"
@@ -1687,8 +1701,6 @@
   variants:
     - "P Lond"
     - "P Lon"
-  postfixes:
-    V:
 
 - title: "Un Papyrus Medical Copte, ed. E. Chassinat (= MIF. 32), 1921, acc. to pp"
   description:
@@ -1698,6 +1710,8 @@
       orientale."
   variants:
     - "P Méd"
+    - "Chassinat P Méd"
+    - "(Chassinat) P Méd"
 
 - title: "Papyri at Michigan University, with year of acquisition where no. not ascertained"
   description:
@@ -2225,9 +2239,11 @@
 
 - title: "MSS. in Vatican Library, acc. to photographs or to copies by H. De Vis"
   description:
-    - "[Biblioteca Apostolica Vaticana](https://digi.vatlib.it/)"
+    - "Manuscripts are available on [Biblioteca Apostolica Vaticana](https://digi.vatlib.it/),
+      Coptic manuscripts under [Vat.copt](https://digi.vatlib.it/mss/Vat.copt)."
   variants:
     - "Va"
+    - "Vat"
   postfixes:
     ar 172: "*[Vat. Arabo 172](https://digi.vatlib.it/view/MSS_Vat.ar.172)*"
     arab 172: "*[Vat. Arabo 172](https://digi.vatlib.it/view/MSS_Vat.ar.172)*"
@@ -2580,13 +2596,13 @@
 - title:
   description:
     # NOTE: `Ryl` is also a standalone reference variant.
-    - |-
-      Catalogue of the Demotic Papyri in the John Rylands Library, Manchester: with Facsimiles and Complete Translations
-
-      - [Volume III](https://archive.org/details/mdp.39015020864875)
+    - "Catalogue of the Demotic Papyri in the John Rylands Library, Manchester: with
+      Facsimiles and Complete Translations"
   variants:
     - "Ryl Dem"
     - "Dem Ryl"
+  postfixes:
+    3: "[Volume III](https://archive.org/details/mdp.39015020864875)"
 
 - title:
   description:
