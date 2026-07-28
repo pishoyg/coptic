@@ -1,10 +1,5 @@
 """Process coptic.wiki's Digital Version of Crum."""
 
-# TODO: (#503) Many checks and filters in this file will no longer be necessary
-# once part of the data (e.g. the entries, the Crum page numbers, or the Marcion
-# keys) is fully populated. Revisit this module, replacing this filters with
-# assertions where appropriate.
-
 # TODO: (#0) Consider the following simplifications of the substitution rules:
 # - Use an actual newline character instead of the "\n" token.
 # - The headword notation is simply unnecessary.
@@ -436,10 +431,7 @@ class Wiki:
         self.keys: list[int] = list(map(int, record["Marcion"].split(" ")))
         assert self.keys
         self.entry: str = record["Entry"]
-        # TODO: (#503) Retrieve from the parsed entry. Abandon the "Headword"
-        # column.
-        self.headword: str = record["Headword"]
-        assert self.headword
+        ensure.ensure(self.entry, "Empty entry for Marcion keys:", self.keys)
 
         # headwords tracks the headwords encountered in the text. In extremely
         # rare cases, there could be multiple, e.g. ϩⲁ, ϩⲟ:
@@ -452,7 +444,7 @@ class Wiki:
         vide: str = record["_v_"]
         ensure.ensure(
             vide in ["", "v"],
-            self.headword,
+            self,
             "has an invalid vide entry:",
             vide,
         )
@@ -467,19 +459,7 @@ class Wiki:
                 self.keys,
             )
 
-        wip: str = record["WIP"]
-        ensure.ensure(
-            wip in ["", "*"],
-            self.headword,
-            "has an invalid WIP entry:",
-            wip,
-        )
-        self.wip: bool = bool(wip) or not self.entry
-        del wip
         # Validate entry.
-        if self.wip:
-            # Don't validate this entry yet.
-            return
         invalid: str = RAW_RE.sub(" ", self.entry)
         invalid = ", ".join(invalid.split())
         ensure.ensure(
@@ -491,9 +471,7 @@ class Wiki:
         )
 
     def headwords(self) -> list[str]:
-        # TODO: (#503) Restore the check below when the data is complete.
-        # ensure.ensure(self._headwords, "Headwords for", self,
-        # "not populated!")
+        ensure.ensure(self._headwords, "Headwords for", self, "not populated!")
         return self._headwords
 
     def headword_variants(self) -> abc.Generator[str]:
@@ -611,15 +589,6 @@ class Wiki:
         """
         return self.crum.roman()
 
-    @property
-    def canonical(self) -> bool:
-        # A canonical entry is a non-vide entry.
-        return not self.vide
-
-    @property
-    def complete(self) -> bool:
-        return not self.wip
-
     @functools.cached_property
     def lexicographic_key(self) -> str:
         """Get the key used to sort the word lexicographically.
@@ -629,7 +598,7 @@ class Wiki:
             word's alphabetical position in the dictionary.
         """
         # Remove all parentheses.
-        headword: str = self.headword
+        headword: str = self.headwords()[0]
         # If the headword consists of multiple words, select the first one.
         headword = COMMA_OR_SPACE.split(headword, 1)[0]
         # Clean up the headword.
@@ -642,7 +611,7 @@ class Wiki:
         ensure.ensure(
             lang.is_lang("COPTIC", headword),
             "can not determine the lexicographic key of",
-            self.headword,
+            self,
         )
 
         return headword
@@ -731,7 +700,7 @@ class Wiki:
 
     @typing.override
     def __str__(self) -> str:
-        return self.headword
+        return self._headwords[0] if self._headwords else self.entry
 
     @functools.cached_property
     def addenda_page(self) -> str:
@@ -791,15 +760,6 @@ class Column:
         yield f'<span class="{cls.CRUM_PAGE}">'
         yield str(self.crum)
         yield "</span>"
-        ensure.ensure(
-            any(w.complete for w in self.wikis),
-            "Generating HTML for a page without any complete Wikis! Page:",
-            self.crum,
-            "Wikis:",
-            list(map(str, self.wikis)),
-        )
         for w in self.wikis:
-            if not w.complete:
-                continue
             yield w.html
         yield "</div>"

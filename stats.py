@@ -384,10 +384,7 @@ _CRUM_STATS: list[Stat] = [
     Stat(
         "crum_wiki",
         "Number of complete Wiki entries",
-        lambda: sum(
-            root.has_wiki_canonical_entries()
-            for root in crum.Crum.roots.values()
-        ),
+        lambda: sum(bool(root.wikis) for root in crum.Crum.roots.values()),
         1700,
         const.MAX_NUM_ROOTS,
         Dash.CRUM_APPENDICES,

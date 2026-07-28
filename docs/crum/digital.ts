@@ -402,8 +402,7 @@ function addCheckboxTooltips(): void {
       ['Use regular expressions (', examples, ', ', cheatSheet, ' )'],
     ],
     [id.MARCION_CHECKBOX, ['Only search the summary']],
-    // TODO: (#503) Drop the progress note once the wiki is fully populated.
-    [id.WIKI_CHECKBOX, ['Only search the full text (99% complete)']],
+    [id.WIKI_CHECKBOX, ['Only search the full text']],
   ];
 
   for (const [checkbox, content] of tooltips) {

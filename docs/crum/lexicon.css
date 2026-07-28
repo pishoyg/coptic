@@ -15,19 +15,9 @@
 
 /* Narrow screen rules: */
 @media (width <= 700px) {
-  /* Shorten the label of the Wiki checkbox. */
-  #experimental {
-    display: none;
-  }
-
   /* Shorten the title of Crum. */
   #w-e-crum {
     display: none;
-  }
-
-  /* Control the size of the Wiki checkbox cell. */
-  td#wiki-checkbox-td {
-    width: 20%;
   }
 }
 

@@ -450,18 +450,13 @@ class Root(Row):
         wikis: list[wiki.Wiki] = wiki.by_marcion_key()[self.key]
         if all(w.vide for w in wikis):
             log.error(self, "consists entirely of vide entries!")
+        ensure.ensure(wikis, self, "has no Wiki entries populated!")
         return wikis
 
     def wiki_html(self) -> abc.Generator[str]:
-        wikis: list[wiki.Wiki] = [w for w in self.wikis if not w.wip]
-        ensure.ensure(
-            wikis,
-            "Can't generate HTML for an empty list of Wikis at",
-            self.key,
-        )
         # The input is guaranteed to be sorted by page number, so we can use
         # `groupby` directly.
-        for col, group in itertools.groupby(wikis, key=lambda w: w.crum):
+        for col, group in itertools.groupby(self.wikis, key=lambda w: w.crum):
             yield from wiki.Column(col, group).html_aux()
 
     @functools.cached_property
@@ -471,21 +466,6 @@ class Root(Row):
     def update_cell(self, col: sheet.COL, value: str) -> None:
         if super().update(col.value, value):
             log.info("Updated", col, "under", self.key)
-
-    def from_marcion(self) -> bool:
-        return self.key in _FROM_MARCION
-
-    def has_wiki_canonical_entries(self) -> bool:
-        """Assess whether we have complete Wiki data.
-
-        Returns:
-            True if all Wiki canonical entries are populated, false otherwise.
-        """
-        if self.from_marcion():
-            return False
-        # TODO: (#503) This check will no longer be necessary once the data is
-        # fully populated.
-        return not any(w.canonical and w.wip for w in self.wikis)
 
     def title(self) -> str:
         return ", ".join(
@@ -889,7 +869,7 @@ class Root(Row):
         yield self.drv_html_table().replace("{", "(").replace("}", ")")
 
         # Wiki.
-        if self.has_wiki_canonical_entries():
+        if self.wikis:
             yield f'<div class="{cls.WIKI}" id="{ids.WIKI}">'
             yield from self.wiki_html()
             yield "</div>"
