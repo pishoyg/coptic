@@ -103,7 +103,7 @@ export const DATA: Abbreviation[] = [
     variants: ['do'],
     noCaseVariant: true,
   },
-  { fullForm: 'especially', variants: ['esp'] },
+  { fullForm: 'especially', variants: ['esp'], suffix: true },
   {
     fullForm: 'feminine',
     variants: ['f', 'Fem'],
@@ -253,6 +253,7 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'century', variants: ['cent'] },
   { fullForm: 'circa', variants: ['ca'] },
   { fullForm: 'codex', variants: ['cod'], suffix: true },
+  { fullForm: 'column', variants: ['col'], suffix: true, noCaseVariant: true },
   { fullForm: 'condition, conditional', variants: ['condit'] },
   { fullForm: 'conjunctive', variants: ['conj', 'conjunct'] },
   { fullForm: 'constructive', variants: ['constr', 'construct'] },
