@@ -1927,9 +1927,23 @@ function handleFormSuperscripts(root: HTMLElement): void {
       return;
     }
     if (sup.previousSibling?.textContent === form) {
-      // This is the <sup> element that defines the form.
+      // This is the element that defines the form.
       return;
     }
+
+    // In a singleton known instance[1], two paragraphs in the entry use two
+    // different groups of form superscripts and their corresponding forms.
+    // We detect this case by checking if the previous sibling is a spelled-out
+    // Coptic word, in which case we update the stored form for the superscript
+    // and refrain from adding a tooltip.
+    //
+    // [1]: https://remnqymi.com/crum/79.html (ϩⲱⲃⲥ)
+    const prev: string | null | undefined = sup.previousSibling?.textContent;
+    if (prev && /^\p{Script=Coptic}*$/u.test(prev)) {
+      ambient.formSuperscripts.set(sup.textContent, prev);
+      return;
+    }
+
     tool.addTooltip(sup, [form]);
   });
 }
