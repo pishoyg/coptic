@@ -436,6 +436,7 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'tabula', variants: ['tab'], suffix: true },
   // "Tafel" is German for "Table". It's used as a suffix to German references.
   { fullForm: 'Tafel', variants: ['Taf'], suffix: true, noCaseVariant: true },
+  { fullForm: 'ter', variants: ['ter'], noCaseVariant: true },
   { fullForm: 'titulus', variants: ['tit'], noCaseVariant: true, suffix: true },
   { fullForm: 'translation, translated', variants: ['transl'] },
   { fullForm: 'variants', variants: ['varr', 'vars'] },
