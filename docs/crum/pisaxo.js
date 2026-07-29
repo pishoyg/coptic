@@ -320,7 +320,7 @@ export const DATA = [
       "P": null,
       "Hunt": null,
       "Marsh": "Marshall Collection",
-      "Marsh Or": "Marsh Oriental Collection"
+      "Marsh Or": "Marshall Oriental Collection"
     }
   },
   {
@@ -472,11 +472,17 @@ export const DATA = [
     ],
     "variants": [
       "Cl"
+    ]
+  },
+  {
+    "title": "F. Rösch, Bruchstücke des I. Clem. 1910; acc. to chh. of Greek text",
+    "description": [
+      "Rösch, F. (1910). <em><a href=\"https://archive.org/details/bruchstckedese00clemuoft/bruchstckedese00clemuoft/page/n5/mode/2up\">Bruchstücke des ersten Clemensbriefes nach dem achmimischen Papyrus der Strassburger Universitäts- und Landesbibliothek mit biblischen Texten derselben Handschrift</a></em>. Strassburg: Schlesier &amp; Schweikhardt."
     ],
-    "postfixes": {
-      "Rösch": null,
-      "(Strassb)": null
-    }
+    "variants": [
+      "Cl Rösch",
+      "Cl (Strassb)"
+    ]
   },
   {
     "title": "Woide’s MSS. belonging to the Clarendon Press (Crum’s copies &amp; photographs)",
@@ -1596,10 +1602,7 @@ export const DATA = [
     "variants": [
       "P Lond",
       "P Lon"
-    ],
-    "postfixes": {
-      "V": null
-    }
+    ]
   },
   {
     "title": "Un Papyrus Medical Copte, ed. E. Chassinat (= MIF. 32), 1921, acc. to pp",
@@ -1607,7 +1610,9 @@ export const DATA = [
       "Chassinat, É. (1921). <em><a href=\"https://archive.org/details/MIFAO32/mode/2up\">Un papyrus médical copte</a></em>. (Mémoires publiés par les membres de l’ Institut français d’archéologie orientale du Caire, Tome 32). Le Caire: Imprimerie de l’Institut français d’archéologie orientale."
     ],
     "variants": [
-      "P Méd"
+      "P Méd",
+      "Chassinat P Méd",
+      "(Chassinat) P Méd"
     ]
   },
   {
@@ -2130,12 +2135,14 @@ export const DATA = [
   {
     "title": "MSS. in Vatican Library, acc. to photographs or to copies by H. De Vis",
     "description": [
-      "<a href=\"https://digi.vatlib.it/\">Biblioteca Apostolica Vaticana</a>"
+      "Manuscripts are available on <a href=\"https://digi.vatlib.it/\">Biblioteca Apostolica Vaticana</a>, Coptic manuscripts under <a href=\"https://digi.vatlib.it/mss/Vat.copt\">Vat.copt</a>."
     ],
     "variants": [
-      "Va"
+      "Va",
+      "Vat"
     ],
     "postfixes": {
+      "172": "<em><a href=\"https://digi.vatlib.it/view/MSS_Vat.ar.172\">Vat. Arabo 172</a></em>",
       "ar 172": "<em><a href=\"https://digi.vatlib.it/view/MSS_Vat.ar.172\">Vat. Arabo 172</a></em>",
       "arab 172": "<em><a href=\"https://digi.vatlib.it/view/MSS_Vat.ar.172\">Vat. Arabo 172</a></em>"
     }
@@ -2576,12 +2583,15 @@ export const DATA = [
   {
     "title": null,
     "description": [
-      "Catalogue of the Demotic Papyri in the John Rylands Library, Manchester: with Facsimiles and Complete Translations <ul> <li><a href=\"https://archive.org/details/mdp.39015020864875\">Volume III</a></li> </ul>"
+      "Catalogue of the Demotic Papyri in the John Rylands Library, Manchester: with Facsimiles and Complete Translations"
     ],
     "variants": [
       "Ryl Dem",
       "Dem Ryl"
-    ]
+    ],
+    "postfixes": {
+      "3": "<a href=\"https://archive.org/details/mdp.39015020864875\">Volume III</a>"
+    }
   },
   {
     "title": null,
