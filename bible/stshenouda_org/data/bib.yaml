@@ -44,16 +44,16 @@
 - variants:
     - "De Lagarde, P. 1879. Brüchstucke de Koptischen Übersetzung des Alten Testaments.
       Abhandlungen der König. Gesellschaft der Wissenschaften zu Göttingen XXIV. Göttingen"
-  url: "https://archive.org/details/abhandlungenderk2324knig/page/62/mode/2up"
+  url: "https://archive.org/details/abhandlungenderk2324knig/page/62"
 - variants:
     - "De Lagarde, P. 1883. Aegyptiaca. Göttingen"
   url: "https://archive.org/details/aegyptiaca01lagagoog"
 - variants:
-    - "Diebner, B.J. and R. Kasser. 1989. Hamburger Papyrus Bil. I - DIe Alttestamentlichen
+    - "Diebner, B.J. and R. Kasser. 1989. Hamburger Papyrus Bil. I - Die Alttestamentlichen
       Texte des Papyrus Bilinguis 1 Der Staat-und Universitätsbibliothek Hamburg -
       Canticum Canticorum (Coptice), Lamentationes Ieremiae (Coptice), Ecclesiastes
       (Graece et Coptice). Genève"
-  url: "https://archive.org/details/hamburgerpapyrus0018unse/mode/1up"
+  url: "https://archive.org/details/hamburgerpapyrus0018unse"
 - variants:
     - "Drescher, J. 1970. The Coptic (Sahidic) Version of Kings I, II (Samuel I, II).
       Corpus Scriptorium Christianorum Orientalium 313 Scriptores Coptici 35 (text)"
@@ -86,7 +86,7 @@
     - "Kosack, W. 1973. Vetus Testamentum Coptice Vol.1: Proverbia Salomonis. Achmimisch,
       Sahidisch, Bohairisch und Arabisch. Bonn."
 - variants:
-    # NOTE: This is no longer under copyright, but we still can't fine an online
+    # TODO: (#730): This is no longer under copyright, but we still can't fine an online
     # copy.
     - "Labib, E. 1897. ⲡⲓϫⲱⲙ ⲛ̀ⲧⲉ ⲛⲓⲯⲁⲗⲙⲟⲥ ⲛ̀ⲧⲉ ⲇⲁⲩⲉⲓⲇ ⲡⲓⲡⲣⲟⲫⲏⲧⲏⲥ ⲟⲩⲟϩ ⲡⲓⲟⲩⲣⲟ ⲛⲉⲙ
       ⲛⲓϩⲱⲇⲏ. (The Book of the Psalms of David the Prophet and the King and the Odes).
@@ -97,7 +97,7 @@
   url: "https://elephantine.smb.museum/objects/object.php?o=315851"
 - variants:
     - "London, BL.Or.1319, paper, 225 f., 33 l., 432x279 mm, AM 1522/AD 1806, Boh-Ar"
-    # NOTE: This URL points to the manuscript entry, but the text / images are
+    # TODO: (#730): This URL points to the manuscript entry, but the text / images are
     # not available, likely because of the 2023 BL cybersecurity breach
   url: "https://searcharchives.bl.uk/catalog/032-004396055"
 - variants:
@@ -114,13 +114,14 @@
     - "Malinine, M. 1950. \"Fragment d'une Version Achmimique des Petits Prophètes.\"
       In Coptic Studies in Honor of Walter Ewing Crum. Bulletin of Byzantine Institute,
       2. 365-415. Boston"
-  url: "https://archive.org/details/copticstudiesinh0000byza/page/365/mode/1up"
+  url: "https://archive.org/details/copticstudiesinh0000byza/page/365"
 - variants:
     - "Perez, G. A., El evangelio di San Matteo en Copto Sahidico, Madrid 1984"
 - variants:
     - "Porcher, L. 1924. Le Livre de Job. Version Copte Bohairique. Patrologia Orientalis
-      18.2. Reprint 1990"
-  url: "https://archive.org/details/patrologiaorient18pariuoft"
+      18.2."
+    # TODO: (#730): The text cites a 1990 reprint, but the URL below has the 1924 print.
+  url: "https://archive.org/details/patrologiaorient0018unse/page/209"
 - variants:
     - "Quecke, Das Johannesevangelium Saidisch, Barcelona 1984"
 - variants:
@@ -129,7 +130,7 @@
     - "Quecke, Das Markusevangelium Saidisch, Barcelona 1972"
 - variants:
     - "Rahlfs, A. & Hanhart, R. (2006). Septuaginta: Complete Text without Apparatus"
-    # NOTE: Alfred Rahlfs' 1935 edition of the Septuagint is available online,
+    # TODO: (#730): Alfred Rahlfs' 1935 edition of the Septuagint is available online,
     # but the text cites the 2006 revision by Hanhart. This URL merely points to
     # a Wikipedia page.
   url: "https://en.wikipedia.org/wiki/Alfred_Rahlfs%27_edition_of_the_Septuagint"
@@ -138,17 +139,17 @@
       CSCO T.528, Script. Copt. T.45, Louvain 1991"
 - variants:
     - "Shier, L. A. \"Old Testament on Vellum\". In Worrell, W. H. 1942. Coptic Texts
-      in the University of Michigan Collection. Ann Arbor"
+      in the University of Michigan Collection. Ann Arbor. 23-167"
     - "Shier, L. A. 1942. \"Old Testament on Vellum.\" In William H. Worrell, ed.,
-      Coptic Texts in the University of Michigan Collection. 23-167. Ann Arbor"
-  url: "https://archive.org/details/coptictextsinuni0000worr"
+      Coptic Texts in the University of Michigan Collection. Ann Arbor. 23-167"
+  url: "https://archive.org/details/coptictextsinuni0000worr/page/23"
 - variants:
     - "Shore, A.F. 1963. Joshua I-VI and Other Passages in Coptic. Edited from a Fourth-Century
       Sahidix Codex in the Chester BeattyLibrary, Dublin. Dublin"
   url: "https://chesterbeatty.ie/assets/uploads/2018/11/Monographs-9-Joshua-I-VI-and-Other-Passages-In-Coptic-Opt.pdf"
 - variants:
     - "The Theodotion text - textualcriticism.scienceontheweb.net"
-    # NOTE: The URL is broken, but it's retained because that's how it's cited
+    # TODO: (#730): The URL is broken, but it's retained because that's how it's cited
     # by St. Shenouda.
   url: "http://textualcriticism.scienceontheweb.net/APOC/Susanna2.html#chi01"
 - variants:
@@ -179,7 +180,7 @@
       Epistles in the Sahidic Dialect, Cambridge 1932"
   url: "https://coptot.manuscriptroom.com/images/webfriendly/PDF/URTPKUKA.pdf"
 - variants:
-    # NOTE: This is no longer under copyright, but we still can't fine an online
+    # TODO: (#730): This is no longer under copyright, but we still can't fine an online
     # copy.
     - "Till, W. 1927. Die Achmimische Version der Zwölf Kleinen Propheten. Codex Rainerianus.
       Wien. Coptica IV Copenhagen"
