@@ -25,9 +25,30 @@ todo_pattern() {
   fi
 }
 
-# todo_issue_closed prints "true" if the given GitHub issue is closed.
+# todo_issue_closed prints "true" if the given GitHub issue is closed, and
+# "false" if it is open.
+# It prints nothing and returns a non-zero exit code if the issue can't be
+# resolved at all, for example because it doesn't exist, or because `gh` can't
+# reach GitHub. Callers must distinguish this case from "false"; treating an
+# unresolvable issue as an open one silently lets bad issue numbers through.
+#
+# NOTE: We deliberately don't distinguish "this issue doesn't exist" from "we
+# couldn't reach GitHub", even though the former is the case we care about and
+# the latter makes the check unrunnable rather than failed. We don't care to
+# handle an unreachable GitHub: it's rare, it's not the local machine's problem
+# to paper over, and the alternative is scraping `gh`'s stderr for prose that
+# isn't part of its contract. A developer stuck offline can use `--no-verify`.
 todo_issue_closed() {
-  gh issue view "${1}" --json "closed" --jq ".closed"
+  local CLOSED
+  CLOSED="$(gh issue view "${1}" --json "closed" --jq ".closed")" || return 1
+  case "${CLOSED}" in
+    true | false)
+      printf '%s\n' "${CLOSED}"
+      ;;
+    *)
+      return 1
+      ;;
+  esac
 }
 
 # Search for TODO's.
@@ -50,9 +71,18 @@ todo() {
 
   if [[ "${PARAM}" == "0" ]]; then
     echo -e "${CYAN}Warning: ${YELLOW}Issues assigned to the pseudo-issue ${CYAN}#0${YELLOW} are discouraged.${RESET}"
-  elif [ -n "${PARAM}" ] && [[ "$(todo_issue_closed "${PARAM}")" == "true" ]]; then
-    echo -e "${CYAN}Warning: ${YELLOW}Issue ${CYAN}#${PARAM} ${YELLOW}is closed!"\
-      "See ${CYAN}${GITHUB}/issues/${PARAM}${YELLOW}.${RESET}"
+  elif [ -n "${PARAM}" ]; then
+    # NOTE: We can't inline the call inside the condition below. A command
+    # substitution that fails inside a condition is indistinguishable from one
+    # that printed "false", so an unresolvable issue would pass for an open one.
+    local CLOSED
+    if ! CLOSED="$(todo_issue_closed "${PARAM}")"; then
+      echo -e "${CYAN}Warning: ${YELLOW}Couldn't resolve issue ${CYAN}#${PARAM}${YELLOW}!"\
+        "It may not exist. See ${CYAN}${GITHUB}/issues/${PARAM}${YELLOW}.${RESET}"
+    elif [[ "${CLOSED}" == "true" ]]; then
+      echo -e "${CYAN}Warning: ${YELLOW}Issue ${CYAN}#${PARAM} ${YELLOW}is closed!"\
+        "See ${CYAN}${GITHUB}/issues/${PARAM}${YELLOW}.${RESET}"
+    fi
   fi
 
   local PATTERN

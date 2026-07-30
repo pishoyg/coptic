@@ -37,7 +37,16 @@ for ISSUE in ${ISSUES}; do
   if [[ "${ISSUE}" == "0" ]]; then
     continue
   fi
-  if [[ "$(todo_issue_closed "${ISSUE}")" == "true" ]]; then
+  # NOTE: We can't inline this inside the `if` below. A command substitution
+  # that fails inside a condition is exempt from `errexit`, and an empty
+  # result would silently compare unequal to "true", letting the issue pass.
+  if ! CLOSED="$(todo_issue_closed "${ISSUE}")"; then
+    echo -e "${RED}Unable to retrieve issue ${YELLOW}#${ISSUE}${RED}, which is assigned a TODO!"
+    echo -e "${RED}It may not exist, or ${YELLOW}gh${RED} may be unable to reach GitHub."
+    echo -e "${RED}Run ${YELLOW}todo ${ISSUE}${RED} to find TODO's assigned to this issue.${RESET}"
+    exit 1
+  fi
+  if [[ "${CLOSED}" == "true" ]]; then
     echo -e "${RED}Issue ${YELLOW}#${ISSUE} ${RED}is closed, but is assigned a TODO!"
     echo -e "${RED}Run ${YELLOW}todo ${ISSUE}${RED} to find TODO's assigned to this issue."
     exit 1
