@@ -161,18 +161,18 @@ export class Pagination {
   /** resizeTimer debounces re-renders triggered by window `resize`. */
   private resizeTimer: ReturnType<typeof setTimeout> | null = null;
 
+  public readonly container: HTMLDivElement = document.createElement('div');
   /**
-   * @param container - The host element the bar renders into.
    * @param perPage - The number of results shown per page; used both to derive
    * the page count and to label each page's result range.
    * @param navigate - Called with the 0-based destination page when the user
    * activates an arrow or a page link.
    */
   public constructor(
-    private readonly container: HTMLElement,
     private readonly perPage: number,
     private readonly navigate: (page: number) => void
   ) {
+    this.container.classList.add(CLS.CONTAINER);
     this.addEventListeners();
   }
 
@@ -213,12 +213,12 @@ export class Pagination {
    * @param totalResults - The total number of search results.
    */
   public render(currentPage: number, totalResults: number): void {
+    this.clear();
     // Remember the args so a `resize` can re-render without the host's help.
     // Stored before the early return so resizing after an empty (single-page)
     // result keeps the bar empty rather than restoring a stale one.
     this.last = { currentPage, totalResults };
 
-    this.container.replaceChildren();
     const totalPages: number = Math.ceil(totalResults / this.perPage);
     if (totalPages <= 1) {
       return;
@@ -243,6 +243,16 @@ export class Pagination {
         return chip;
       })
     );
+  }
+
+  /**
+   * Tear the bar down, leaving the host container empty.
+   */
+  public clear(): void {
+    this.last = null;
+    this.container.replaceChildren();
+    // Remove orphaned tooltips.
+    tool.cleanupOrphans();
   }
 
   /**

@@ -177,7 +177,6 @@ export class Form {
   private readonly tbody: HTMLTableSectionElement;
   public readonly numColumns: number;
   public readonly scrollTarget: HTMLElement;
-  public readonly paginationContainer: HTMLDivElement;
 
   /**
    * Construct the form object.
@@ -222,11 +221,6 @@ export class Form {
     this.scrollTarget = form.scrollTargetID
       ? document.getElementById(form.scrollTargetID)!
       : this.table;
-
-    // Pagination renders outside the results table, as its sibling.
-    this.paginationContainer = document.createElement('div');
-    this.paginationContainer.classList.add(pagination.CLS.CONTAINER);
-    this.table.insertAdjacentElement('afterend', this.paginationContainer);
 
     this.otherCheckBoxes =
       form.boxes?.map(([id, param]: [string, string]): Checkbox => ({
@@ -354,10 +348,13 @@ export class Form {
 
   /**
    * Clear output fields.
+   *
+   * NOTE: The pagination bar is not cleared here. It is owned by the
+   * `Pagination` object that renders into `paginationContainer`, and only that
+   * object can tear it down safely.
    */
   public clearOutputFields(): void {
     this.tbody.replaceChildren();
-    this.paginationContainer.replaceChildren();
     this.messageBox.replaceChildren();
     /* Enrichers wire many tooltips into the search results; those popovers
      * live under <body>, so they survive the tbody clear above. Sweep them. */
@@ -1554,8 +1551,8 @@ export class Xooxle {
     this.candidates = index.data.map(
       (record) => new Candidate(record, index.metadata.layers)
     );
+
     this.pagination = new pagination.Pagination(
-      this.form.paginationContainer,
       PER_PAGE,
       (page: number): void => {
         this.currentPage = page;
@@ -1563,6 +1560,13 @@ export class Xooxle {
         this.form.scrollTarget.scrollIntoView({ block: 'start' });
       }
     );
+
+    // Pagination renders outside the results table, as its sibling.
+    this.form.table.insertAdjacentElement(
+      'afterend',
+      this.pagination.container
+    );
+
     this.addEventListeners();
     dev.play(() => {
       index.metadata.layers.forEach((layer: string[]): void => {
@@ -1638,6 +1642,8 @@ export class Xooxle {
 
     // Clear output fields in the form, since we're starting a new search.
     this.form.clearOutputFields();
+    // Clear the pagination bar as well.
+    this.pagination.clear();
 
     try {
       const regex: RegExp | undefined = this.form.regex();
