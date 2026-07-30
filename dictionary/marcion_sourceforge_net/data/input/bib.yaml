@@ -2602,13 +2602,17 @@
 - title:
   description:
     # NOTE: `Ryl` is also a standalone reference variant.
-    - "Catalogue of the Demotic Papyri in the John Rylands Library, Manchester: with
-      Facsimiles and Complete Translations"
+    # NOTE: Crum only cites volume III, but we include all three volumes in the
+    # description.
+    - |-
+      Griffith, F. Ll. (1909). *Catalogue of the Demotic Papyri in the John Rylands Library, Manchester*. Manchester: University Press.
+
+      - Vol. I: *[Atlas of Facsimiles](https://archive.org/details/0981732.0001.001.umich.edu)* (nos. 1-45);
+      - Vol. II: *[Hand-Copies of the Earlier Documents](https://archive.org/details/mdp.39015020864867)* (nos. I-IX);
+      - Vol. III: *[Key-List, Translations, Commentaries and Indices](https://archive.org/details/mdp.39015020864875)*.
   variants:
     - "Ryl Dem"
     - "Dem Ryl"
-  postfixes:
-    3: "[Volume III](https://archive.org/details/mdp.39015020864875)"
 
 - title:
   description:
