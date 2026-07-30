@@ -18,6 +18,26 @@ figcaption {
     background-color: white;
     box-shadow: 0 2px 8px rgb(0 0 0 / 5%);
   }
+
+  /* A short, centered hairline between consecutive entries. Drawn as a
+   * background image rather than a `border-top` so it can be narrower than
+   * the entry, and rather than an `::before` so that `.entry` stays
+   * `position: static` — a positioned `.entry` would become the containing
+   * block for the anchor-positioned tooltips inside it (see tooltip.css),
+   * clamping them to the entry's width instead of the viewport's. */
+  .entry + .entry {
+    padding-top: 12px;
+    margin-top: 12px;
+    background-image: linear-gradient(
+      to right,
+      transparent,
+      var(--light-gray),
+      transparent
+    );
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 60% 1.1px;
+  }
 }
 
 :root {
