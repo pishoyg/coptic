@@ -249,6 +249,22 @@ const SUFFIX_END = '(?<!\\b(?:p?l|(?<!\\bs )v))';
 
 // SUFFIX matches a reference suffix together with any followups that trail it,
 // e.g. the whole " 44 66, 179" in "P 44 66, 179".
+//
+// NOTE: KNOWN UNHANDLED CASE: A numbered Bible book abbreviation (e.g. "2 Cor")
+// immediately following a reference would have its leading number swallowed as
+// a suffix token, leaving the bare book name ("Cor 4 18") behind. Both suffix
+// branches are exposed: the leading `NUMBER_GROUP+` would eat the "2" in
+// "P 44 2 Cor 4 18", and the followup branch would eat the ", 2" in
+// "P 44, 2 Cor 4 18" — its NOT_SINGLE_LETTER_REFERENCE guard rules out
+// single-letter references, not numbered book names.
+//
+// This is deliberately left unguarded, unlike BIBLE_FOLLOWUP below, which does
+// carry the NOT_NUMBERED_BIBLE_BOOK lookahead for the mirror-image case (a
+// numbered citation trailing another Bible citation). The asymmetry reflects
+// the data: Crum states in his preface that illustration begins with biblical
+// examples, and that holds uniformly throughout the book, so a Bible citation
+// never follows a non-Bible reference within a single enrichment run. No
+// occurrence has been encountered, so we don't pay for a guard we don't need.
 const SUFFIX = new RegExp(
   `^\\.?${NUMBER_GROUP}+${SUFFIX_END}(?:(?:,| [=&])${NOT_SINGLE_LETTER_REFERENCE + NUMBER_GROUP}+${SUFFIX_END})*${str.ASSERT_NON_WORD.source}`,
   'u'
