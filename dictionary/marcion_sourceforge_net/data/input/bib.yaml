@@ -51,6 +51,11 @@
 # TODO: (#522) Populate missing references, variants, postfixes, descriptions,
 # ...etc.
 
+# TODO: (#522) Unify the `papyri.info` citations. They currently disagree on
+# the capitalization of the site name (`papyri.info` or `Papyri.info`), and on
+# whether the hyperlink sits on the series name or on the site name. The `Tor`
+# entry even uses both idioms within a single sentence.
+
 ################################################################################
 ##### Section 1 lists the sources from Crum's list of abbreviations.
 ################################################################################
@@ -260,6 +265,12 @@
 - title: "papyri from Balaizah, in Bodleian, in so far as not numbered in series “Bodl.
     Copt. (P)”"
   description:
+    - "Kahle, P. E. (1954). *[Bala’izah: Coptic Texts from Deir el-Bala’izah in Upper
+      Egypt](https://archive.org/details/balaizahcopticte0000unse/page/n5)*. London:
+      Oxford University Press."
+    - "The texts are catalogued as the *p.bal* series on [papyri.info](https://papyri.info/search?SERIES=p.bal),
+      where transcriptions are available for some of them. Crum’s references predate
+      Kahle’s edition, so they do not use his numbering."
   variants:
     - "Bal"
 
@@ -344,6 +355,7 @@
       Koptische Urkunden (BKU)](https://archive.org/details/mdp.39015020865393/page/n9/mode/2up)*.
       Vol. 1. Berlin: Weidmannsche Buchhandlung. [Several of the BKU I texts (along
       with other collections) have been digitised at the [Berliner Papyrusdatenbank](https://berlpap.smb.museum/bku-i/).]"
+    - "Some of the texts are catalogued as the *bku* series on [papyri.info](https://papyri.info/search?SERIES=bku)."
     - "**Kam**: Kambysesroman in BKU I, no. 31, acc. to pp. in lower margins & line"
   variants:
     - "BKU"
@@ -366,6 +378,7 @@
     - "Bentley Layton (1987). *[Catalogue of Coptic Literary Manuscripts in the British
       Library Acquired Since the Year 1906](https://archive.org/details/catalogueofcopti0000brit/)*.
       London: The British Library."
+    - "Some of the manuscripts are catalogued as the *p.lond.copt* series on [papyri.info](https://papyri.info/search?SERIES=p.lond.copt)."
     - "Note: The manuscripts have since been moved to the [British Library](https://bl.libguides.com/reference-services/asian-and-african-studies/introduction/oriental-manuscripts)."
   variants:
     - "BM"
@@ -603,6 +616,7 @@
       Petrie, Esq., D.C.L. together with a papyrus in the Bodleian Library edited
       with commentaries and indices](https://archive.org/details/copticmanuscript00crumuoft/page/n5/mode/2up)*.
       London: David Nutt."
+    - "A few of the manuscripts are catalogued as the *p.fay.copt* series on [papyri.info](https://papyri.info/search?SERIES=p.fay.copt)."
   variants:
     - "CMSS"
 
@@ -612,7 +626,8 @@
       Fund, the Cairo Museum, and others](https://archive.org/details/copticostracafr00fundgoog/page/n4/mode/2up)*.
       London: Egypt Exploration Fund."
     - "The texts are catalogued as the *o.crum* series on [papyri.info](https://papyri.info/search?SERIES=o.crum),
-      where images are available for some of the ostraca."
+      where images are available for many of the ostraca, and transcriptions for some
+      of them."
   variants:
     - "C O"
   postfixes:
@@ -720,6 +735,10 @@
       by W. E. Crum, and Greek ostraca and papyri edited with translations and commentaries
       by H. G. Evelyn White](https://archive.org/details/monasteryofepiph02winl/page/n7/mode/2up)*.
       New York: The Metropolitan Museum of Art."
+    - "The texts are catalogued on papyri.info as the *[o.mon.epiph](https://papyri.info/search?SERIES=o.mon.epiph)*
+      (ostraca) and *[p.mon.epiph](https://papyri.info/search?SERIES=p.mon.epiph)*
+      (papyri) series, where transcriptions are available for some of the texts, and
+      images for many of them."
   variants:
     - "Ep"
   postfixes:
@@ -882,6 +901,7 @@
     - "Hall, H. R. (1905). *[Coptic and Greek Texts of the Christian Period from Ostraka,
       Stelae, etc. in the British Museum](https://archive.org/details/mdp.39015020865567/page/n9/mode/2up)*.
       London: British Museum."
+    - "A few of the texts are catalogued as the *o.brit.mus.copt* series on [papyri.info](https://papyri.info/search?SERIES=o.brit.mus.copt)."
   variants:
     - "Hall"
 
@@ -974,6 +994,8 @@
     - "Crum, W. E., & Steindorff, G. (1912). *[Koptische Rechtsurkunden des achten
       Jahrhunderts aus Djême (Theben). I. Band: Text und Incides](https://archive.org/details/koptischerechtsu00crum/page/n3/mode/2up)*.
       Leipzig: J. C. Hinrichs’sche Buchhandlung."
+    - "The documents are catalogued as the *p.kru* series on [papyri.info](https://papyri.info/search?SERIES=p.kru),
+      where transcriptions are available for nearly all of them."
   variants:
     - "J"
   postfixes:
@@ -1028,6 +1050,8 @@
     - "Schiller, A. A. (1932). *[Ten Coptic Legal Texts Edited with Translation, Commentary,
       and Indexes Together with an Introduction](https://archive.org/details/in.ernet.dli.2015.44575/page/n5/mode/2up)*.
       New York: Metropolitan Museum of Art."
+    - "The texts are catalogued as the *p.clt* series on [papyri.info](https://papyri.info/search?SERIES=p.clt),
+      where transcriptions and images are available for a few of them."
   variants:
     - "J Sch"
 
@@ -1086,6 +1110,8 @@
     - "Krall, J. (1895). *[Corpus papyrorum Raineri archiducis Austriae. Band II:
       Koptische Texte](https://www.google.co.uk/books/edition/Koptische_Texte_Bd_Rechtsurkunden/VlcPAQAAMAAJ?hl=en&gbpv=1&pg=PR3&printsec=frontcover)*.
       Wien: Verlag der Kaiserlich-Königlichen Hof- und Staatsdruckerei."
+    - "The texts are catalogued as volume 2 of the *cpr* series on [papyri.info](https://papyri.info/search?SERIES=cpr&VOLUME=2),
+      where transcriptions and images are available for nearly all of them."
   variants:
     - "Kr"
 
@@ -1500,6 +1526,7 @@
       zur Religion und religiösen Literatur in Ägyptens Spätzeit*. (Veröffentlichungen
       aus den badischen Papyrus-Sammlungen, Heft 5). Heidelberg: Verlag der Universitätsbibliothek.
       [If you know of a digital copy, please [ contact me](https://www.coptist.com/contact-%e2%b2%a7%e2%b2%81%e2%b2%99%e2%b2%9f%e2%b2%93/)]"
+    - "The texts of Heft 5 are catalogued as volume 5 of the *p.bad* series on [papyri.info](https://papyri.info/search?SERIES=p.bad&VOLUME=5)."
   variants:
     - "Orat Cyp"
     - "Or Cyp"
@@ -1552,6 +1579,8 @@
       F.S.A. at Didlington Hall, Norfolk. Part II: Classical Fragments and Documents
       of the Ptolemaic, Roman, and Byzantine Periods](https://archive.org/details/amherstpapyribei02grenuoft/page/n9/mode/2up)*.
       London: Henry Frowde."
+    - "The texts are catalogued as the *p.amh* series on [papyri.info](https://papyri.info/search?SERIES=p.amh),
+      where transcriptions and images are available for most of them."
   variants:
     - "P Amh"
 
@@ -1601,6 +1630,9 @@
     - "Maspero, J. (1916). *[Papyrus grecs d’ époque byzantine, Tome III](https://archive.org/details/papyrusgrecsdp03masp/page/n7/mode/2up)*
       (Catalogue général des antiquités égyptiennes du Musée du Caire, N. 67279-67359).
       Le Caire: Impr. de l’Institut français d’archéologie orientale."
+    - "The texts are catalogued as the *p.cair.masp* series on [papyri.info](https://papyri.info/search?SERIES=p.cair.masp),
+      where images are available for nearly all of the texts, and transcriptions for
+      most of them."
   variants:
     - "P Cai"
 
@@ -1702,6 +1734,8 @@
       W. E. Crum). London: British Museum."
     - "Bell, H. I. (1917). *[Greek Papyri in the British Museum: Catalogue with Texts](https://archive.org/details/greekpapyriinbri05brit/page/n5/mode/2up)*.
       Vol. V. London: British Museum."
+    - "The texts are catalogued as the *p.lond* series on [papyri.info](https://papyri.info/search?SERIES=p.lond),
+      where transcriptions are available for most of them."
   variants:
     - "P Lond"
     - "P Lon"
@@ -1729,6 +1763,8 @@
       Hof- und Staatsbibliothek zu München](https://archive.org/details/mdp.39015010705187/page/n11/mode/2up)*.
       (Veröffentlichungen aus der Papyrus-Sammlung der Königlichen Hof- und Staatsbibliothek
       zu München, Band I: Byzantinische Papyri). Leipzig: B. G. Teubner."
+    - "The texts are catalogued as the *p.muench* series on [papyri.info](https://papyri.info/search?SERIES=p.muench),
+      where transcriptions are available for most of them."
   variants:
     - "P Mon"
 
@@ -1752,6 +1788,8 @@
       on [The Online Books Page](https://onlinebooks.library.upenn.edu/webbin/serial?id=ocyrhynchus)
       with further volumes on [HathiTrust](https://catalog.hathitrust.org/Record/000051960)
       via US access."
+    - "The texts are catalogued as the *p.oxy* series on [papyri.info](https://papyri.info/search?SERIES=p.oxy),
+      where transcriptions are available for most of them."
   variants:
     - "P Oxy"
 
@@ -1895,6 +1933,8 @@
     - "Crum, W. E. (1909). *[Catalogue of the Coptic Manuscripts in the Collection
       of the John Rylands Library, Manchester](https://archive.org/details/cu31924099175329/page/n11/mode/2up)*.
       Manchester: University Press."
+    - "Some of the manuscripts are catalogued as the *p.ryl.copt* series on [papyri.info](https://papyri.info/search?SERIES=p.ryl.copt),
+      where images are available for a number of them."
   variants:
     - "Ryl"
   postfixes:
@@ -2017,6 +2057,7 @@
   description:
     - "Crum, W. E. (1921). *[Short Texts from Coptic Ostraca and Papyri](https://archive.org/details/shorttextsfromco00crum/page/n5/mode/2up)*.
       Oxford University Press."
+    - "Some of the texts are catalogued as the *o.crum.st* series on [papyri.info](https://papyri.info/search?SERIES=o.crum.st)."
   variants:
     - "ST"
 
@@ -2108,6 +2149,10 @@
       Edited from the Originals, Now Mainly in the Royal Ontario Museum of Archaeology,
       Toronto, and the Bodleian Library, Oxford](https://archive.org/details/thebanostracaedi00royauoft/page/n5/mode/2up)*.
       (University of Toronto Studies). London: Humphrey Milford."
+    - "A few of the Coptic texts (Part IV) are catalogued as the *o.theb.copt* series
+      on [papyri.info](https://papyri.info/search?SERIES=o.theb.copt), and the Greek
+      texts (Part III) as the *[o.theb](https://papyri.info/search?SERIES=o.theb)*
+      series."
   variants:
     - "Tor"
 
@@ -2266,6 +2311,8 @@
   description:
     - "Wessely, C. (1901–1924). *Studien zur Palaeographie und Papyruskunde*, 23 vols.
       Leipzig: Verlag von E. Avenarius. [Digitised volumes listed and linked on [de.WikiSource.org](https://de.wikisource.org/wiki/Studien_zur_Palaeographie_und_Papyruskunde).]"
+    - "The texts are catalogued as the *stud.pal* series on [papyri.info](https://papyri.info/search?SERIES=stud.pal),
+      where transcriptions are available for nearly all of them."
   variants:
     - "Wess"
 
@@ -2295,6 +2342,10 @@
       the Excavations Undertaken by the Byzantine Research Account](https://archive.org/details/wadisargacopticg00crumuoft/page/n7/mode/2up)*.
       (Coptica Consilio et Impensis Instituti Rask-Oerstediani III). Copenhagen: Gyldendalske
       Boghandel-Nordisk Forlag."
+    - "The texts are catalogued on Papyri.info as the *[o.sarga](https://papyri.info/search?SERIES=o.sarga)*
+      (ostraca) and *[p.sarga](https://papyri.info/search?SERIES=p.sarga)* (papyri)
+      series, where transcriptions are available for nearly all of the texts, and
+      images for most of the ostraca."
   variants:
     - "WS"
 
