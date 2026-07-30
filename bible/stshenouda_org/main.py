@@ -1420,10 +1420,15 @@ class TableBuilder(HTMLBuilder):
         for lang in langs:
             sources: list[str] = chapter.book.sources.get(lang, [])
             assert all("\n" not in s for s in sources)
-            yield f'<th \
-                    class="{_key(lang)}" \
-                    data-sources="{html.escape(json.dumps(sources))}" \
-                    >'
+            # `ensure_ascii` must stay off. `file.write` normalizes what we
+            # write to NFD, but it can only reach characters that are still
+            # characters: `\uXXXX` escapes would slip through as ASCII, and
+            # the front end would parse them back into precomposed NFC,
+            # which no longer matches the NFD variants in the bibliography.
+            sources_attr: str = html.escape(
+                json.dumps(sources, ensure_ascii=False, allow_nan=False),
+            )
+            yield f'<th class="{_key(lang)}" data-sources="{sources_attr}">'
             yield lang
             yield "</th>"
         yield "</tr>"

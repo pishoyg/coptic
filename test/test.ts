@@ -30,6 +30,11 @@ const PAGES_TO_TEST: string[] = [
   paths.BIBLE,
   // A Bible chapter (sample)
   paths.bible('genesis', '1'),
+  // A Bible chapter whose citations contain non-ASCII characters. The
+  // bibliography lookup matches them by prefix, so it breaks if the page and
+  // `pisaxo.json` ever disagree on Unicode normalization. Genesis alone
+  // wouldn't catch it: all of its citations are ASCII.
+  paths.bible('ecclesiastes', '1'),
   // Crum scan
   paths.lexicon('v', paths.BOOK),
   // Dawoud scan
