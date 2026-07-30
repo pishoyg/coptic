@@ -56,6 +56,15 @@
 # whether the hyperlink sits on the series name or on the site name. The `Tor`
 # entry even uses both idioms within a single sentence.
 
+# TODO: (#522) Unify the punctuation of ranges (of pages, volumes, and years).
+# The file currently mixes hyphens and en dashes, sometimes within a single
+# entry. En dashes are the typographically correct choice.
+
+# TODO: (#522) Drop the `mode/` component from the `archive.org` paths. It
+# merely selects a viewer layout (`1up` or `2up`), so it doesn't belong in a
+# citation, and it leaves the reader with whichever layout we happened to
+# record.
+
 ################################################################################
 ##### Section 1 lists the sources from Crum's list of abbreviations.
 ################################################################################
@@ -342,9 +351,9 @@
 
 - title: "Bulletin de l’Instit. français… au Caire"
   description:
-    - "All volumes of *Le Bulletin de l’Institut français d’ archéologie orientale*
+    - "All volumes of *Le Bulletin de l’Institut français d’archéologie orientale*
       (BIFAO) published from 1901 to date are listed, digitised, and freely available
-      via the [Institut français d’ archéologie orientale](https://www.ifao.egnet.net/bifao/)."
+      via the [Institut français d’archéologie orientale](https://www.ifao.egnet.net/bifao/)."
   variants:
     - "BIF"
 
@@ -561,7 +570,7 @@
     - "Clugnet, L., Nau, F., & Guidi, I. (Eds.). (1901). *[Vie (et récits) de l’Abbé
       Daniel le Scétiote (VIe siècle): Texte grec publ. par Léon Clugnet, texte syriaque
       publ. par F. Nau, texte copte publ. par Ignazio Guidi](https://archive.org/details/VieDanielLeScetiote/page/n7/mode/2up)*.
-      (Extrait de la Revue de l’ Orient Chrétien, Année 1901). Paris: A. Picard et
+      (Extrait de la Revue de l’Orient Chrétien, Année 1901). Paris: A. Picard et
       fils."
   variants:
     - "C Dan"
@@ -888,7 +897,7 @@
       - [Volume II](https://archive.org/details/copticversionofn02unse/page/n5/mode/2up): The Gospel of S. Luke
       - [Volume III](https://archive.org/details/copticversionofn03unse/page/n5/mode/2up): The Gospel of S. John, register of fragments, etc., facsimiles
       - [Volume IV](https://archive.org/details/copticversionofn04hornuoft/page/n3/mode/2up): The Epistles of S. Paul
-      - [Volume V](https://archive.org/details/copticversionofn05unse/page/n3/mode/2up): The Episles of S. Paul (continued), register of fragments, etc.
+      - [Volume V](https://archive.org/details/copticversionofn05unse/page/n3/mode/2up): The Epistles of S. Paul (continued), register of fragments, etc.
       - [Volume VI](https://archive.org/details/copticversionofn06hornuoft/page/n3/mode/2up): The Acts of the Apostles
       - [Volume VII](https://archive.org/details/copticversionofn07hornuoft/page/n5/mode/2up): The Catholic Epistles and the Apocalypse
   variants:
@@ -1075,13 +1084,13 @@
       Rome: Hermann Scheus."
     - "Loret, V. (1900). [Les livres III et IV (animaux et végétaux) de la Scala Magna
       de Schams-Ar-Riâsah](https://archive.org/details/AnnalesDuServiceDesAntiquitsDeLegyptevolume1/page/n63/mode/2up).
-      *Annales du Service des antiquités de l’Egypte*, 1, 48-63 (edition), 215-229
+      *Annales du Service des antiquités de l’Égypte*, 1, 48-63 (edition), 215-229
       (indices)."
     - |-
       Macomber, F. (2020). *The Scala Magna of Shams al-Riʾāsah Abū al-Barakāt.*
 
-      - [Volume I: Introduction, Text, Translation, and Notes.](https://drive.google.com/file/d/1T3Nmg6asUsj7C156txX4jm2iLHZlKHyx/view)
-      - [Volume II: Apparatus of Variant Readings and Indexes.](https://drive.google.com/file/d/1T8F7HFolW1FNyU6bqeza5qzyRrr9OAVr/view)
+      - [Volume I: Introduction, Text, Translation, and Notes](https://drive.google.com/file/d/1T3Nmg6asUsj7C156txX4jm2iLHZlKHyx/view).
+      - [Volume II: Apparatus of Variant Readings and Indexes](https://drive.google.com/file/d/1T8F7HFolW1FNyU6bqeza5qzyRrr9OAVr/view).
   variants:
     - "K"
 
@@ -1121,7 +1130,7 @@
     - "Kropp, A. M. (1931). *[Ausgewählte koptische Zaubertexte. Band I: Textpublikation](https://archive.org/details/ausgewhltekoptis0012krop/page/n9/mode/2up)*.
       Bruxelles: Fondation Égyptologique Reine Élisabeth."
     - "Kropp, A. M. (1931). *[Ausgewählte koptische Zaubertexte. Band II: Übersetzungen
-      und Anmerkungen](https://archive.org/details/ausgewhltekoptis0003krop/page/n5/mode/2up)*.
+      und Anmerkungen](https://archive.org/details/ausgewhltekoptis0012krop/page/n163)*.
       Bruxelles: Fondation Égyptologique Reine Élisabeth."
     - "Kropp, A. M. (1930). *[Ausgewählte koptische Zaubertexte. Band III: Einleitung
       in koptische Zaubertexte](https://archive.org/details/ausgewhltekoptis0003krop/page/n5/mode/2up)*.
@@ -1268,7 +1277,7 @@
 
 - title: "Antiquités Coptes (Catal. du Musée), 1900, acc. to pp"
   description:
-    - "Pleyte, W., & Boeser, P. A. A. (1900). *[Catalogue du musée d’ antiquités à
+    - "Pleyte, W., & Boeser, P. A. A. (1900). *[Catalogue du musée d’antiquités à
       Leide, sousdivision F. Égypte, antiquités coptes](https://catalog.hathitrust.org/Record/008693139)*.
       Leide: E. J. Brill. [Accessible in the US via HathiTrust.]"
   variants:
@@ -1287,7 +1296,7 @@
     - "Lemm, O. von. (1913). *[Bruchstücke koptischer Märtyrerakten. I-V.](https://www.biodiversitylibrary.org/item/212319#page/10/mode/1up)*
       (I. Theodoros des Orientalen und Panikyros des Persers und Leontios des Arabers;
       II. Theodoros des Orientalen; III. Leontios des Arabers; IV. Heraklides; V.
-      Isidoros). (Mémoires de l’ Académie impériale des sciences de St.-Pétersbourg,
+      Isidoros). (Mémoires de l’Académie impériale des sciences de St.-Pétersbourg,
       VIIIe série, Tome XII, No. 1). St. Petersburg."
   variants:
     - "L Mär"
@@ -1373,7 +1382,7 @@
 - title: "Annales du Musée Guimet, Paris"
   description:
     - |-
-      *Annales du Musée Guimet* began in 1880. Many volumes are available through [HathiTrust](https://catalog.hathitrust.org/Record/000054404), though some only through US access. Others are also listed and linked on [fr.WikiSource.org.](https://fr.wikisource.org/wiki/Annales_du_Mus%C3%A9e_Guimet) Crum seems only to cite two volumes:
+      *Annales du Musée Guimet* began in 1880. Many volumes are available through [HathiTrust](https://catalog.hathitrust.org/Record/000054404), though some only through US access. Others are also listed and linked on [fr.WikiSource.org](https://fr.wikisource.org/wiki/Annales_du_Mus%C3%A9e_Guimet). Crum seems only to cite two volumes:
 
       - Amélineau, E. (1889). *[Monuments pour servir à l’histoire de l’Égypte chrétienne au IVe siècle: Histoire de Saint Pakhôme et de ses communautés: Documents coptes et arabes inédits, publiés et traduits](https://archive.org/details/monumentspourser00amel/page/n5/mode/2up)*. (Annales du Musée Guimet, Tome 17). Paris: Ernest Leroux.
       - Amélineau, E. (1894). *[Histoire des monastères de la Basse-Égypte: Vies des saints Paul, Antoine, Macaire, Maxime et Domèce, Jean le Nain, etc.: Texte copte et traduction française](https://archive.org/details/monumentspourser00amel_0/page/n8/mode/2up)*. (Annales du Musée Guimet, Tome 25). Paris: Ernest Leroux.
@@ -1447,7 +1456,7 @@
   description:
     - "Munier, H. (1916). *[Manuscrits coptes](https://archive.org/details/manuscritscoptes00muni/page/n5/mode/2up)*
       (Catalogue général des antiquités égyptiennes du Musée du Caire, N. 9201-9301).
-      Le Caire: Impr. de l’ Institut français d’archéologie orientale."
+      Le Caire: Impr. de l’Institut français d’archéologie orientale."
   variants:
     - "Mun"
 
@@ -1600,7 +1609,7 @@
       ⲡⲓⲉⲩⲗⲟⲅⲓⲙⲉⲛⲟⲥ ϣⲁⲡ̀ϫⲱⲛⲉ̀ⲃⲟⲗ ⲙ̀ⲡⲓϣⲁⲓ ⲛ̀ϯⲁ̀ⲛⲁⲥⲧⲁⲥⲓⲥ ⲉⲧⲥ̀ⲙⲁⲣⲱⲟⲩⲧ ⲕⲁⲧⲁ ⲧⲁⲝⲓⲥ ⲛ̀ϯⲉⲕⲕ̀ⲗⲏⲥⲓⲁ
       ⲛ̀ⲣⲉⲙⲛ̀ⲭⲏⲙⲓ ⲛ̀ⲟⲣⲑⲟⲇⲟⲝⲟⲥ –كتاب البصخة المقدسة: الذي يخدم من يوم احد الشعانين
       الى نهاية عيد القيامة المجيد حسب ترتيب الكنيسة القبطية الارثوذكسية](https://coptic-treasures.com/book/%D9%83%D8%AA%D8%A7%D8%A8-%D8%A7%D9%84%D8%A8%D8%B5%D8%AE%D8%A9-%D8%A3%D9%85%D8%B1-%D8%A8%D8%B7%D8%A8%D8%B9%D8%A9-%D8%A7%D9%84%D8%A8%D8%A7%D8%A8%D8%A7-%D8%B4%D9%86%D9%88%D8%AF%D8%A9/)*,
-      printed by order of Pope Shenouda III. Anba Waris Press. [This appears to be
+      printed by order of Pope Shenouda III. Anba Rewis Press. [This appears to be
       a reprint of the edition cited by Crum, possibly originally edited by Claudius
       Y. Labib]"
   variants:
@@ -1621,13 +1630,13 @@
 - title: "Papyrus grecs d’ époque byzantine, ed. J. Maspero (Catal. Gén. Musée du
     Caire, 1911 ff.)"
   description:
-    - "Maspero, J. (1911). *[Papyrus grecs d’ époque byzantine, Tome I](https://archive.org/details/papyrusgrecsdp01masp/page/n5/mode/2up)*
+    - "Maspero, J. (1911). *[Papyrus grecs d’époque byzantine, Tome I](https://archive.org/details/papyrusgrecsdp01masp/page/n5/mode/2up)*
       (Catalogue général des antiquités égyptiennes du Musée du Caire, N. 67001-67124).
       Le Caire: Impr. de l’Institut français d’archéologie orientale."
-    - "Maspero, J. (1913). *[Papyrus grecs d’ époque byzantine, Tome II](https://archive.org/details/papyrusgrecsdp02masp/page/n5/mode/2up)*
+    - "Maspero, J. (1913). *[Papyrus grecs d’époque byzantine, Tome II](https://archive.org/details/papyrusgrecsdp02masp/page/n5/mode/2up)*
       (Catalogue général des antiquités égyptiennes du Musée du Caire, N. 67125-67278).
       Le Caire: Impr. de l’Institut français d’archéologie orientale."
-    - "Maspero, J. (1916). *[Papyrus grecs d’ époque byzantine, Tome III](https://archive.org/details/papyrusgrecsdp03masp/page/n7/mode/2up)*
+    - "Maspero, J. (1916). *[Papyrus grecs d’époque byzantine, Tome III](https://archive.org/details/papyrusgrecsdp03masp/page/n7/mode/2up)*
       (Catalogue général des antiquités égyptiennes du Musée du Caire, N. 67279-67359).
       Le Caire: Impr. de l’Institut français d’archéologie orientale."
     - "The texts are catalogued as the *p.cair.masp* series on [papyri.info](https://papyri.info/search?SERIES=p.cair.masp),
@@ -1743,7 +1752,7 @@
 - title: "Un Papyrus Medical Copte, ed. E. Chassinat (= MIF. 32), 1921, acc. to pp"
   description:
     - "Chassinat, É. (1921). *[Un papyrus médical copte](https://archive.org/details/MIFAO32/mode/2up)*.
-      (Mémoires publiés par les membres de l’ Institut français d’archéologie orientale
+      (Mémoires publiés par les membres de l’Institut français d’archéologie orientale
       du Caire, Tome 32). Le Caire: Imprimerie de l’Institut français d’archéologie
       orientale."
   variants:
@@ -1850,7 +1859,7 @@
 - title: "E. Revillout, Actes et Contrats… de Boulaq et du Louvre, 1876"
   description:
     - "Revillout, E. (1876). *[Papyrus coptes. Actes et contrats des Musées égyptiens
-      de Boulaq et du Louvre: Textes et fac-similés.](https://archive.org/details/umn.319510016716448/page/n7/mode/2up)*
+      de Boulaq et du Louvre: Textes et fac-similés](https://archive.org/details/umn.319510016716448/page/n7/mode/2up)*.
       (Études Égyptologiques, 50). Paris: F. Vieweg."
   variants:
     - "RAC"
@@ -1886,10 +1895,10 @@
 
 - title: "Recueil de Travaux &c"
   description:
-    - "*Recueil de travaux relatifs à la philologie et à l’ archéologie égyptiennes
-      et assyriennes: pour servir de bullletin à la Mission Française du Caire* began
+    - "*Recueil de travaux relatifs à la philologie et à l’archéologie égyptiennes
+      et assyriennes: pour servir de bulletin à la Mission Française du Caire* began
       in 1870 and continued until 1923 (40 volumes). All volumes are available on
-      the [Heidelbery digital library](https://digi.ub.uni-heidelberg.de/diglit/rectrav)."
+      the [Heidelberg digital library](https://digi.ub.uni-heidelberg.de/diglit/rectrav)."
   variants:
     - "Rec"
 
@@ -1959,7 +1968,7 @@
   description:
     - "Quibell, J. E. (1909). *[Excavations of Saqqara (1907-1908) with Sections by
       Sir Herbert Thompson and Prof. W. Spiegelberg](https://archive.org/details/cu31924028671265/page/n7/mode/2up)*.
-      Le Caire: Imprimerie de l’ Institut français d’archéologie orientale."
+      Le Caire: Imprimerie de l’Institut français d’archéologie orientale."
     - "Quibell, J. E. (1912). *[Excavations of Saqqara (1908-9, 1909-10): The Monastery
       of Apa Jeremias (The Coptic Inscriptions edited by Sir Herbert Thompson)](https://archive.org/details/cu31924028671273/page/n5/mode/2up)*.
       Le Caire: Imprimerie de l’Institut français d’archéologie orientale."
@@ -2229,7 +2238,7 @@
     - "Tuki, R. (1778). *[Rudimenta linguae coptae sive aegyptiacae ad usum Collegii
       Urbani de Propaganda Fide. –غراماطيق في اللسان القبطي (أى المصري) لبيان نسق
       الكلام البحيري والصعيدي في اللسان المذكور بنمودجات من الكتب المقدسة المسطرة
-      بالنسق الواحد والاخر.](https://archive.org/details/bub_gb_5tc2rD_Ba-sC/page/n4/mode/2up)*
+      بالنسق الواحد والاخر](https://archive.org/details/bub_gb_5tc2rD_Ba-sC/page/n4/mode/2up)*.
       Romae: Typis eiusdem Sacrae Congregationis de Propaganda Fide."
   variants:
     - "Tuki"
@@ -2257,7 +2266,7 @@
       - Turayev, B. A. (1902). [Коптскіе тексты, пріобрѣтенные экспедиціей пок. В. Г. Бока въ Египтѣ](https://babel.hathitrust.org/cgi/pt?id=chi.102555010&seq=389) [Coptic texts, acquired by the expedition of the late V. G. Bok in Egypt]. In *Труды одиннадцатаго Археологическаго Съѣзда въ Кіевѣ* (1899), т. II, pp. 225–246. Москва.
     O: |-
       Koptskia Ostraka… Golenishtshef (= Bull. Acad. Imp. x, no. 5, 1899)
-      - Turayev, B. A. (1899). [Коптскія ostraca коллекціи В. С. Голенищева](https://www.biodiversitylibrary.org/item/94351#page/503/mode/1up) [Coptic ostraca from the collection of V. S. Golenishchev]. *Bulletin de l’ Académie Impériale des Sciences de St.-Pétersbourg*, 5e série, T. X, no. 5, pp. 435–449.
+      - Turayev, B. A. (1899). [Коптскія ostraca коллекціи В. С. Голенищева](https://www.biodiversitylibrary.org/item/94351#page/503/mode/1up) [Coptic ostraca from the collection of V. S. Golenishchev]. *Bulletin de l’Académie Impériale des Sciences de St.-Pétersbourg*, 5e série, T. X, no. 5, pp. 435–449.
 
 # NOTE: Below are two different entries for Turin.
 # `Turin` occurs on its own, so it must have an entry.
