@@ -231,6 +231,22 @@ def _normalize_for_validation(language: Language, text: str) -> str:
     return text
 
 
+# `lang.has_lang` determines a language from the Unicode names of a text's
+# characters, which fails for characters whose name omits their script. The
+# characters below are the exceptions encountered so far, each mapped to the
+# language it belongs to.
+_LANGUAGE_OVERRIDES: dict[str, Language] = {
+    # The horizontal bar bears no script in its name, and is always Coptic.
+    "―": "COPTIC",
+    # The S with oblique stroke is a Latin letter, used to transcribe a
+    # character that seems absent from the Coptic Unicode.
+    "Ꞩ": "COPTIC",
+    # The nomisma sign is named "NOMISMA SIGN", lacking the "GREEK" that its
+    # neighbours bear (such as "GREEK INDICTION SIGN").
+    "𐆎": "GREEK",
+}
+
+
 def _language(text: str) -> Language:
     # We exclude diacritics from language determination because Coptic uses
     # Greek diacritics in the expression ⲇͅⲇͅ - which is the abbreviation for
@@ -238,11 +254,8 @@ def _language(text: str) -> Language:
     # The diacritic used is Combining Greek Ypogegrammeni (U+0345), and we don't
     # want use of this diacritic to cause the expression to be evaluated as
     # Greek.
-    if text in ["―", "Ꞩ"]:
-        # The horizontal bar is always Coptic.
-        # The S with oblique stroke is used to transcribe a character that seems
-        # absent from the Coptic Unicode.
-        return "COPTIC"
+    if text in _LANGUAGE_OVERRIDES:
+        return _LANGUAGE_OVERRIDES[text]
     text = orth.clean_diacritics(text)
     for language in LANGS:
         if lang.has_lang(language, text):
