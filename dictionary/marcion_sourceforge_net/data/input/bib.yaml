@@ -583,36 +583,29 @@
   variants:
     - "Chaîne"
 
-# NOTE: 'Cl' refers to two different works! The two of them show by default.
-# Occasionally, Crum uses a postfix to specify which work is intended.
-# We create a separate entry with the more specific variants, in order to avoid
-# showing the irrelevant publication when the other one is clearly intended.
-
 - title: "C. Schmidt, Der I. Clemensbrief. 1908; or F. Rösch, Bruchstücke des I. Clem.
     1910; acc. to chh. of Greek text"
   description:
-    - "Schmidt, C. (1908). *[Der erste Clemensbrief in altkoptischer Übersetzung:
+    - |-
+      Schmidt, C. (1908). *[Der erste Clemensbrief in altkoptischer Übersetzung:
       Untersucht und herausgegeben von Carl Schmidt mit Lichtdruck-Faksimile der Handschrift](https://archive.org/details/derersteclemensb00clemuoft/page/n3/mode/2up)*.
       (Texte und Untersuchungen zur Geschichte der altchristlichen Literatur, Vol.
-      32, No. 1). Leipzig: J. C. Hinrichs’sche Buchhandlung."
+      32, No. 1). Leipzig: J. C. Hinrichs’sche Buchhandlung.
+
+      - The manuscript is available on [Digitalisierte Sammlungen der Staatsbibliothek zu Berlin](https://digital.staatsbibliothek-berlin.de/werkansicht?PPN=PPN641063156).
     - "Rösch, F. (1910). *[Bruchstücke des ersten Clemensbriefes nach dem achmimischen
       Papyrus der Strassburger Universitäts- und Landesbibliothek mit biblischen Texten
       derselben Handschrift](https://archive.org/details/bruchstckedese00clemuoft/bruchstckedese00clemuoft/page/n5/mode/2up)*.
       Strassburg: Schlesier & Schweikhardt."
   variants:
     - "Cl"
-
-- title: "F. Rösch, Bruchstücke des I. Clem. 1910; acc. to chh. of Greek text"
-  description:
-    - "Rösch, F. (1910). *[Bruchstücke des ersten Clemensbriefes nach dem achmimischen
-      Papyrus der Strassburger Universitäts- und Landesbibliothek mit biblischen Texten
-      derselben Handschrift](https://archive.org/details/bruchstckedese00clemuoft/bruchstckedese00clemuoft/page/n5/mode/2up)*.
-      Strassburg: Schlesier & Schweikhardt."
-  variants:
-    - "Cl Rösch"
-    - "Cl (Strassb)"
-    - "Cl Stras"
-    - "Stras"
+  # NOTE: 'Cl' postfixes often require manual labeling, as there tends to be
+  # intermediate text between 'Cl' and the postfix.
+  postfixes:
+    Berl: "The Berlin manuscript (published by Schmidt)"
+    Rösch: "The Strassburg manuscript (published by Rösch)"
+    (Strassb): "The Strassburg manuscript (published by Rösch)"
+    Stras: "The Strassburg manuscript (published by Rösch)"
 
 - title: "Woide’s MSS. belonging to the Clarendon Press (Crum’s copies & photographs)"
   description:
