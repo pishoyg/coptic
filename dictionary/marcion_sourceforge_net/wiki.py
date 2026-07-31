@@ -238,8 +238,10 @@ def _language(text: str) -> Language:
     # The diacritic used is Combining Greek Ypogegrammeni (U+0345), and we don't
     # want use of this diacritic to cause the expression to be evaluated as
     # Greek.
-    if text == "―":
+    if text in ["―", "Ꞩ"]:
         # The horizontal bar is always Coptic.
+        # The S with oblique stroke is used to transcribe a character that seems
+        # absent from the Coptic Unicode.
         return "COPTIC"
     text = orth.clean_diacritics(text)
     for language in LANGS:
