@@ -46,7 +46,13 @@
       "Bash(stylelint *)",
       "Bash(source *)",
       "Bash(./*)",
+      "Bash(curl -sf http://localhost:*)",
       "mcp__playwright",
+      "mcp__plugin_playwright_playwright__browser_navigate",
+      "mcp__plugin_playwright_playwright__browser_take_screenshot",
+      "mcp__plugin_playwright_playwright__browser_console_messages",
+      "mcp__claude-in-chrome__navigate",
+      "mcp__claude-in-chrome__get_page_text",
       "Skill"
     ]
   },
