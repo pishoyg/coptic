@@ -589,6 +589,8 @@
   variants:
     - "Cl Rösch"
     - "Cl (Strassb)"
+    - "Cl Stras"
+    - "Stras"
 
 - title: "Woide’s MSS. belonging to the Clarendon Press (Crum’s copies & photographs)"
   description:
@@ -1972,6 +1974,7 @@
     Miss: !lookup
     Mun: !lookup
     P: !lookup
+    P Stras: !lookup
     P Col: !lookup
     R: !lookup
     RE: !lookup
