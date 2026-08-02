@@ -926,6 +926,8 @@
   variants:
     - "Heng B"
 
+# TODO: (#522) Consider splitting 'HL' and 'Hist Laus'.
+
 - title: "E. Amélineau, De Historia Lausiaca, 1887; but Hist Laus = E. C. Butler’s
     edition of Greek text (= Texts & Studies vi)"
   description:
@@ -942,6 +944,7 @@
       6, No. 2). Cambridge: University Press."
   variants:
     - "HL"
+    - "Hist Laus"
 
 - title: "Griffith, The Old Coptic Horoscope, in AZ 38 76 ff., acc. to pp. of publication"
   description:
@@ -2404,12 +2407,6 @@
   variants:
     - "Amélineau"
     - "Amélineau Géog"
-
-- title:
-  description:
-  variants:
-    - "Antony Hist Laus"
-    - "Hist Laus"
 
 - title:
   description:
