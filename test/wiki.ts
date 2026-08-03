@@ -52,10 +52,10 @@ const TEST_CASES: {
   {
     key: '131', // ϭⲓ
     want: {
-      [cls.REFERENCE]: 0,
-      [cls.BIBLE]: 0,
-      [cls.DIALECT]: 0,
-      [cls.ANNOTATION]: 0,
+      [cls.REFERENCE]: 323,
+      [cls.BIBLE]: 201,
+      [cls.DIALECT]: 725,
+      [cls.ANNOTATION]: 194,
     },
   },
   {
