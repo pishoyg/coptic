@@ -790,7 +790,8 @@ export const DATA = [
       "Butler, D. C. (1904). <em><a href=\"https://archive.org/details/lausiachistoryof02pall/page/n7/mode/2up\">The Lausiac History of Palladius. Vol. II: The Greek Text edited with Introduction and Notes</a></em>. (Texts and Studies: Contributions to Biblical and Patristic Literature, Vol. 6, No. 2). Cambridge: University Press."
     ],
     "variants": [
-      "HL"
+      "HL",
+      "Hist Laus"
     ]
   },
   {
@@ -2270,14 +2271,6 @@ export const DATA = [
     "variants": [
       "Amélineau",
       "Amélineau Géog"
-    ]
-  },
-  {
-    "title": null,
-    "description": null,
-    "variants": [
-      "Antony Hist Laus",
-      "Hist Laus"
     ]
   },
   {
