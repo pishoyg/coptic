@@ -216,12 +216,32 @@ const NUMBERS = [
   ),
 ];
 
-// Single-letter reference abbreviations (e.g. K, P, H) are indistinguishable
-// by shape from the single-letter `[a-zA-Z]` suffix token. Without care, the
-// "K" in "P 44 66, K 179" would be swallowed as a suffix of the "P" reference
-// instead of being recognized as its own reference. This negative lookahead
-// keeps a standalone single-letter reference from being mistaken for the start
-// of a followup.
+// LONE_LETTER_OPENING matches a reference abbreviation that opens with a letter
+// standing on its own: either the whole key ("K", "P"), or a first letter set
+// off from the rest by a non-word character ("N&E", "O'Leary H", "V Sitz").
+// Such a key is indistinguishable by shape from the single-letter `[a-zA-Z]`
+// suffix token, because nothing binds its leading letter to what follows.
+//
+// A key whose first letter runs straight into another word character ("Wess.",
+// "Cl") needs no guard: the suffix token would consume that letter alone, and
+// the ASSERT_NON_WORD closing SUFFIX then fails in the middle of the word.
+//
+// The character class is the suffix token's own `[a-zA-Z]`, not `\p{Letter}`:
+// the point is to detect a collision with that token, so a letter the token
+// can't match can't collide with it either.
+const LONE_LETTER_OPENING = new RegExp(
+  `^[a-zA-Z]${str.ASSERT_NON_WORD.source}`,
+  'u'
+);
+
+// NOT_CONFUSABLE_REFERENCE keeps such an abbreviation from being mistaken for
+// the start of a followup. Without it, the "K" in "P 44 66, K 179" and the "N"
+// in "P 44 66, N&E 179" would both be swallowed as suffixes of the "P"
+// reference instead of being recognized as references of their own.
+//
+// The lookahead spells out each key in full rather than just its leading
+// letter, so that only a genuine reference — not any stray letter that happens
+// to be followed by punctuation — suppresses the followup.
 //
 // The guard applies only to the FIRST token of each followup (the token right
 // after the "," / " =" / " &" separator), which is where a new reference would
@@ -232,12 +252,31 @@ const NUMBERS = [
 //   "P 44, 56 K 179") is intentionally treated as a suffix token, not a new
 //   reference.
 //
-// Only single-letter keys are included: multi-letter abbreviations can't be
-// confused with the single-letter suffix token, so including them would only
-// bloat the lookahead.
-const NOT_SINGLE_LETTER_REFERENCE = `(?! [${Object.keys(ref.MAPPING)
-  .filter((key: string): boolean => key.length === 1)
-  .join('')}]${str.ASSERT_NON_WORD.source})`;
+// Two filters keep the alternation small:
+// 1. Only keys with a lone-letter opening are included. The rest can't be
+//    confused with the single-letter suffix token, so including them would only
+//    bloat the lookahead.
+// 2. A key is dropped when its opening letter is itself a key ("P Bad" given
+//    "P"). The shorter key already fires the guard at the same position: it
+//    matches the same opening letter, and the ASSERT_NON_WORD that follows it
+//    is satisfied by the very non-word character that qualified the longer key
+//    under filter 1. Listing both would be pure duplication. This drops more
+//    than half of the keys that survive filter 1.
+//
+// NOTE: The single letter is not the only suffix token a key could be confused
+// with — NUMBERS also admits Roman numerals and words such as "scala". A key
+// whose opening token is a multi-letter Roman numeral would slip past filter 1.
+// None currently does: the Roman numeral patterns are case-uniform, so the
+// mixed-case keys that come closest ("Cl", "DM", "Vi") match only their first
+// letter, and are stopped by the same mid-word ASSERT_NON_WORD.
+const NOT_CONFUSABLE_REFERENCE = `(?! (?:${Object.keys(ref.MAPPING)
+  .filter(
+    (key: string): boolean =>
+      LONE_LETTER_OPENING.test(key) &&
+      (key.length === 1 || !(key.charAt(0) in ref.MAPPING))
+  )
+  .map(RegExp.escape)
+  .join('|')})${str.ASSERT_NON_WORD.source})`;
 
 const NUMBER = `(?:${NUMBERS.join('|')})`;
 const NUMBER_GROUP = `(?: ${NUMBER}| ?\\(${NUMBER}(?: ${NUMBER})*\\))`;
@@ -256,8 +295,8 @@ const SUFFIX_END = '(?<!\\b(?:p?l|(?<!\\bs )v))';
 // a suffix token, leaving the bare book name ("Cor 4 18") behind. Both suffix
 // branches are exposed: the leading `NUMBER_GROUP+` would eat the "2" in
 // "P 44 2 Cor 4 18", and the followup branch would eat the ", 2" in
-// "P 44, 2 Cor 4 18" — its NOT_SINGLE_LETTER_REFERENCE guard rules out
-// single-letter references, not numbered book names.
+// "P 44, 2 Cor 4 18" — its NOT_CONFUSABLE_REFERENCE guard rules out reference
+// abbreviations, not numbered book names.
 //
 // This is deliberately left unguarded, unlike BIBLE_FOLLOWUP below, which does
 // carry the NOT_NUMBERED_BIBLE_BOOK lookahead for the mirror-image case (a
@@ -267,7 +306,7 @@ const SUFFIX_END = '(?<!\\b(?:p?l|(?<!\\bs )v))';
 // never follows a non-Bible reference within a single enrichment run. No
 // occurrence has been encountered, so we don't pay for a guard we don't need.
 const SUFFIX = new RegExp(
-  `^\\.?${NUMBER_GROUP}+${SUFFIX_END}(?:(?:,| [=&])${NOT_SINGLE_LETTER_REFERENCE + NUMBER_GROUP}+${SUFFIX_END})*${str.ASSERT_NON_WORD.source}`,
+  `^\\.?${NUMBER_GROUP}+${SUFFIX_END}(?:(?:,| [=&])${NOT_CONFUSABLE_REFERENCE}${NUMBER_GROUP}+${SUFFIX_END})*${str.ASSERT_NON_WORD.source}`,
   'u'
 );
 
@@ -322,10 +361,10 @@ const NOT_NUMBERED_BIBLE_BOOK = `(?!${str.regex(
  * the "2 Cor" in "Job 3 18, 2 Cor 4 18") from being swallowed as a followup.
  * See its definition above.
  *
- * The NOT_SINGLE_LETTER_REFERENCE assertion prevents matching a single-letter
- * reference as a followup (e.g. in "Jer 52 16, C 41 42"). It guards only the
- * comma branch; the en-dash branch always introduces a numeric range, where a
- * single-letter reference can't appear.
+ * The NOT_CONFUSABLE_REFERENCE assertion prevents matching a reference
+ * abbreviation as a followup (e.g. the "C" in "Jer 52 16, C 41 42", or the "B"
+ * in "Jer 52 16, B Ap 4"). It guards only the comma branch; the en-dash branch
+ * always introduces a numeric range, where a reference can't appear.
  *
  * NOTE: 'A' and 'C' are both single-letter references and special chapter
  * labels (see CHAPTER_VERSE below; e.g. the Book of Esther). The assertion thus
@@ -338,7 +377,7 @@ const NOT_NUMBERED_BIBLE_BOOK = `(?!${str.regex(
 // `match.indices`, which `parseBibleFollowups` uses to locate the enriched
 // citation text within the match without searching for it.
 const BIBLE_FOLLOWUP = new RegExp(
-  `^(?:(?:,${NOT_SINGLE_LETTER_REFERENCE} |–)${NOT_NUMBERED_BIBLE_BOOK}(${NUMS})${str.ASSERT_NON_WORD.source}| ?\\((${NUMS})\\))`,
+  `^(?:(?:,${NOT_CONFUSABLE_REFERENCE} |–)${NOT_NUMBERED_BIBLE_BOOK}(${NUMS})${str.ASSERT_NON_WORD.source}| ?\\((${NUMS})\\))`,
   'du'
 );
 
