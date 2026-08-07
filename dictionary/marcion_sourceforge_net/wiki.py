@@ -535,6 +535,8 @@ class Wiki:
             replace_manual,
             ban=["{", "}"],
         )
+        # An addendum takes the form `//deleted//inserted//`, either half of
+        # which may be empty.
         yield Substitution(
             "//(.*?)//(.*?)//",
             self.replace_addendum,
@@ -544,12 +546,36 @@ class Wiki:
     def replace_addendum(self, match: regex.Match[str]) -> str:
         return "".join(self.replace_addendum_aux(match))
 
+    def _validate_addendum_group(self, group: str) -> None:
+        ensure.ensure(
+            not (group.startswith(" ") or group.endswith(" ")),
+            self,
+            "has an addendum group with a space on the boundary:",
+            group,
+        )
+        # NOTE: An addendum may not contain a `\n` or a `\t` token. Those are
+        # substituted by paragraph and subparagraph boundaries, which
+        # would spill out of the addendum element and corrupt the HTML.
+        # NOTE: This assumes that paragraphing substitutions precede addenda
+        # substitutions.
+        ensure.ensure(
+            all(
+                token not in group
+                for token in (OPEN_PARAGRAPH, OPEN_SUBPARAGRAPH)
+            ),
+            self,
+            "has an addendum group containing paragraphing elements:",
+            group,
+        )
+
     def replace_addendum_aux(
         self,
         match: regex.Match[str],
     ) -> abc.Generator[str]:
         yield f'<span class="{cls.ADDENDUM}" {DATA_PAGE}="{self.addenda_page}">'
         g1, g2 = match.group(1), match.group(2)
+        self._validate_addendum_group(g1)
+        self._validate_addendum_group(g2)
         if g1:
             yield f"<del>{g1}</del>"
         if g1 and g2:
