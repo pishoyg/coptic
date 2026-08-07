@@ -62,7 +62,6 @@ const SCHEMA: zod.ZodArray = z.array(
     title: z.string().nullable(),
     description: z.array(z.string()).nullable(),
     variants: z.array(z.string()).nonempty(),
-    typos: z.array(z.string()).nonempty().optional(),
     postfixes: FIXES,
     prefixes: FIXES,
   })
@@ -126,7 +125,7 @@ type Mutable<T> = {
 };
 
 /**
- * Ensure all reference keys are normalized. Variants, typos, and postfix
+ * Ensure all reference keys are normalized. Variants, and postfix
  * names become keys in the front-end's reference MAPPING, where lookups
  * assume normalized input.
  *
@@ -136,7 +135,6 @@ function ensureNormalized(sources: sax.Source[]): void {
   for (const entry of sources) {
     for (const key of [
       ...entry.variants,
-      ...(entry.typos ?? []),
       ...Object.keys(entry.postfixes ?? {}),
       ...Object.keys(entry.prefixes ?? {}),
     ]) {

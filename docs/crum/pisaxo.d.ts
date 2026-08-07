@@ -33,13 +33,6 @@ export interface Source {
    * TODO: (#522) Record variants.
    */
   readonly variants: string[];
-  /**
-   * typos records nonstandard variants that will never be shown to the users.
-   * Most nonstandard variants should still go to the `variants` field. However,
-   * nonstandard variants that are common typos should go to the `typos` field.
-   * See #705.
-   */
-  readonly typos?: string[] | null;
   /** postfixes is a list of all postfixes that this abbreviation can bear.
    *
    * Notice that postfixes are distinct from suffixes. Postfixes are part of

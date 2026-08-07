@@ -302,14 +302,7 @@ class Postfix extends Fix {
    * @returns
    */
   protected override lookup(): HTMLElement[] {
-    // The postfix 'Am' (as in 'ShAm', under ⲏⲡⲥ 525) refers to Amélineau,
-    // but we only record the variant 'A' for Amélineau — 'Am' was
-    // intentionally excluded from its variants to avoid colliding with Actes
-    // des Martyrs (and Amos as well). Redirect the lookup so the tooltip
-    // still resolves.
-    // NOTE: The tooltip will use `A` as the abbreviation, although the text
-    // uses `Am`.
-    return MAPPING[this.name === 'Am' ? 'A' : this.name]!.tooltip();
+    return MAPPING[this.name]!.tooltip();
   }
 }
 
@@ -380,25 +373,21 @@ sax.DATA.forEach((raw: sax.Source): void => {
       ? new Source(raw.title, raw.description)
       : undefined;
 
-  [...raw.variants, ...(raw.typos ?? [])].forEach(
-    (variant: string, index: number): void => {
-      const standard: string =
-        index < raw.variants.length ? variant : raw.variants[0]!;
-      // Add the abbreviation without any fixes.
-      add(variant, new Reference(source, standard));
-      for (const [fixes, fixClass] of [
-        [raw.postfixes, Postfix],
-        [raw.prefixes, Prefix],
-      ] as const) {
-        Object.entries(fixes ?? {}).forEach(
-          ([name, type]: [string, sax.Fix]): void => {
-            const fix = new fixClass(name, type);
-            add(fix.compose(variant), new Reference(source, standard, fix));
-          }
-        );
-      }
+  raw.variants.forEach((variant: string): void => {
+    // Add the abbreviation without any fixes.
+    add(variant, new Reference(source, variant));
+    for (const [fixes, fixClass] of [
+      [raw.postfixes, Postfix],
+      [raw.prefixes, Prefix],
+    ] as const) {
+      Object.entries(fixes ?? {}).forEach(
+        ([name, type]: [string, sax.Fix]): void => {
+          const fix = new fixClass(name, type);
+          add(fix.compose(variant), new Reference(source, variant, fix));
+        }
+      );
     }
-  );
+  });
 });
 
 /**
