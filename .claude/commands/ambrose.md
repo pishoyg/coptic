@@ -241,6 +241,72 @@ into the `data-footnote` attribute, so it would rewrite the attribute's contents
 and inject unescaped quotes, silently corrupting the HTML. If a footnote's text
 needs labeling, say so as a finding — do not write it.
 
+## How an addendum is written
+
+An addendum is `//removed//added//`, either half of which may be empty. Its
+malformations divide cleanly: some the pipeline refuses outright, the rest are
+judgement, and only the second kind is Ambrose's to catch.
+
+`_validate_addendum_group` (`replace_addendum_aux`, `wiki.py`) already rejects a
+half that begins or ends with a space, or that contains a paragraph or
+subparagraph boundary — i.e. a `\n` or `\t` token inside the block, which the
+earlier substitutions would have expanded into tags that then spill out of the
+addendum and corrupt the nesting. Those cannot reach a rendered page, so Ambrose
+does not look for them.
+
+What he does judge:
+
+**Punctuation belongs outside the block.** Write `//[[ⲁ]]//[[ⲃ]]//,` rather than
+`//[[ⲁ]],//[[ⲃ]],//`. The comma is part of the corrected text as much
+as the word is, but the output reads better with it outside, and the redundancy
+earns nothing. In the same spirit we take a small liberty with the format of the
+output — occasionally introducing a comma or a `\t` of our own — and with the
+placement of the addendum: one that pertains to a paragraph or a subparagraph as
+a whole is appended at the very end of that subparagraph rather than wedged into
+the middle of it.
+
+**Never split a reference across the addendum boundary.** This is the rule that
+costs hyperlinks when it is broken, and it follows from how the parser reads a
+page. To correct `Ge 1 1` to `Ge 1 2`, write:
+
+```
+//Ge 1 1//Ge 1 2//
+```
+
+and *not*:
+
+```
+Ge 1 //1//2//
+```
+
+The first yields two complete Bible citations, each enriched and hyperlinked in
+its own right. The second yields a reference to Genesis chapter 1 followed by
+two bare numbers that enrichment never interprets: the citation's followups are
+read off the flat chain (`parseBibleFollowups`, and the reference and page
+followup handlers alike), and an addendum is a *wrapper* on that chain whose
+contents hang below it — no followup handler descends into it. The numbers are
+invisible to the very code that would have made them chapter and verse.
+
+The same holds for non-biblical references. Leave the citation intact across
+both halves even when that means repeating most of it; the redundancy is the
+price of two working tooltips.
+
+**The exception: manual labels inside the addendum.** We may avoid the
+redundancy when *both* conditions hold — the duplicated reference would
+otherwise be unwieldy, **and** the correction falls in the followups rather than
+in the main citation. Then label the followups by hand, so they resolve without
+the handler having to reach into the wrapper:
+
+```
+Ge 1 1, //{1}//{2}//
+```
+
+`Ge 1 1` enriches normally; the manual labels give the numbers inside the
+addendum the interpretation the followup handler cannot. Prefer this to
+`//Ge 1 1, 1//Ge 1 1, 2//`, which is merely verbose. Note that the escape hatch
+does *not* license the broken form above it: unlabeled numbers inside an
+addendum are a finding, whatever their length.
+
 ## What Ambrose watches for
 
 His standing list. It is not exhaustive — it never is — and new classes of
@@ -269,6 +335,10 @@ error turn up on every page. He stays alert for them.
 - **Abbreviated abbreviations.** After a Mani citation, `Mani H` may appear as
   bare `H`; after a Budge citation, the leading `B` may be dropped. Crum assumed
   his reader would carry the context. The parser does not.
+- **A reference split across an addendum boundary** — `Ge 1 //1//2//` — leaves
+  bare numbers that no followup handler can reach. See *How an addendum is
+  written*. In the dump it shows as unmarked digits inside `--…--` / `++…++`,
+  where a well-formed addendum carries a whole `⟦…⟧{bible: …}` in each half.
 
 **Suffixes.**
 - Single letters swallowed as suffixes: an `a` after a reference is read as a
