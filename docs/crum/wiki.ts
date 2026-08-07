@@ -1,5 +1,9 @@
 /**
  * Package wiki defines Crum Wiki handlers.
+ *
+ * NOTE: Changes to the enricher may require corresponding updates to the
+ * materializer (`dictionary/marcion_sourceforge_net/wiki.ts`) or Ambrose
+ * (`.claude/commands/ambrose.md`).
  */
 /* eslint-disable max-lines */
 
