@@ -62,6 +62,13 @@ Three mechanics account for most mis-parses. Get them straight before starting:
 
 Review each page ID in `$ARGUMENTS`. If none is given, ask for one.
 
+TODO: (#778) Enrichment currently runs in JavaScript when the browser loads a
+page, and is never materialized — which is the only reason the steps below
+drive a live browser at all. Once the enrichment is encoded in a format that is
+committed to Git, fetching it on the fly becomes unnecessary: the server, the
+dev-mode flag, and the serializer in step 4 all fall away, and the dump is read
+straight from the repository.
+
 **1. Make sure a server is up.** Reuse it if so; only start one if not.
 
 ```sh
