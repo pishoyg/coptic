@@ -309,6 +309,43 @@ def replace_dialect(match: regex.Match[str]) -> str:
 
 
 def replace_manual(match: regex.Match[str]) -> str:
+    """Render a manual label — an enrichment decision made by hand.
+
+    A manual label overrides the enrichment heuristics for one span of text,
+    and it is the fix for most findings, since the algorithm is mature enough
+    that what remains is usually an error in Crum's text that no heuristic can
+    resolve. The counterpart on the front-end is `handleManualAux` in
+    `docs/crum/wiki.ts`. The notations:
+
+    - `{text}{}` suppresses. An empty key means "leave this text alone", and
+      is the fix for a false positive.
+    - `{text}{Abb}` forces a reference. `Abb` must be a variant in `bib.yaml`.
+    - `{text}{Bk C V}` forces a Bible citation, e.g. `{ib 26}{Jud 19 26}`, or
+      `{Heb 11 38}{He}`.
+    - `{text}{full form}` forces an annotation. The key is displayed as the
+      tooltip text, e.g. `{pl}{plate}`.
+    - `{text}`, with no key, infers: a reference if the text opens with one,
+      otherwise a dangling suffix resolved against its antecedent.
+
+    NOTE: Manual labels resolve reference-first — the reverse of the automatic
+    priority in `replaceMatch` — so a manual `Am` / `AM` can not mean Amos.
+
+    NOTE: Footnotes share the brace notation with manual labels, so the same
+    token can not take both. A footnoted error therefore can not also have its
+    bad tooltip suppressed, which is why the unnumbered-book feature sits at
+    the precision it does (see the `UNNUMBERED_BIBLE_BOOK` note in `wiki.ts`).
+    Nor may a manual label be nested inside footnote text: the substitution
+    below runs after the footnote has been packed into the `data-footnote`
+    attribute, so it would rewrite the attribute's contents and inject
+    unescaped quotes, silently corrupting the HTML.
+
+    Args:
+        match: The manual label match, whose groups are the text and the
+            (optional) key.
+
+    Returns:
+        The manual label's HTML.
+    """
     text, key = match.group(1, 2)
     if key is None:
         return rf'<span class="{cls.MANUAL}">{text}</span>'
@@ -536,7 +573,7 @@ class Wiki:
             ban=["{", "}"],
         )
         # An addendum takes the form `//deleted//inserted//`, either half of
-        # which may be empty.
+        # which may be empty. See `replace_addendum` for how one is written.
         yield Substitution(
             "//(.*?)//(.*?)//",
             self.replace_addendum,
@@ -544,6 +581,59 @@ class Wiki:
         )
 
     def replace_addendum(self, match: regex.Match[str]) -> str:
+        """Render an addendum — a correction of Crum's own.
+
+        An addendum records an emendation from Crum's Additions and
+        Corrections, as opposed to a footnote, which records an editorial note
+        of ours. Its two halves are the removed and the added text, either of
+        which may be empty.
+
+        The rules below govern how one is written into the sheet. The first two
+        are enforced by `_validate_addendum_group`; the rest are matters of
+        judgement, and are checked by review rather than by code.
+
+        1. Neither half may begin or end with a space, which would strand the
+           space immediately inside the `<del>` or `<ins>` tag.
+        2. Neither half may contain a `\\n` or a `\\t` token. Paragraphing is
+           substituted before addenda are, so those tokens would already have
+           become tags, which would then spill out of the addendum element and
+           corrupt the nesting.
+        3. Punctuation belongs outside the block: prefer `//[[ⲁ]]//[[ⲃ]]//,` to
+           `//[[ⲁ]],//[[ⲃ]],//`. The comma is as much a part of the corrected
+           text as the word is, but the output reads better with it outside,
+           and the duplication earns nothing. In the same spirit we take a
+           small liberty with the format of the output — occasionally
+           introducing a comma or a `\\t` of our own — and with the placement
+           of an addendum: one that pertains to a paragraph or a subparagraph
+           as a whole is appended at the very end of that subparagraph, rather
+           than wedged into the middle of it.
+        4. A citation is never split across the addendum boundary. To correct
+           `Ge 1 1` to `Ge 1 2`, write `//Ge 1 1//Ge 1 2//`, and not
+           `Ge 1 //1//2//`. The first yields two complete Bible citations, each
+           enriched and hyperlinked in its own right. The second yields a
+           citation of Genesis 1 trailed by two numbers that nothing ever
+           interprets: followups are read off the flat chain, and an addendum
+           is a wrapper on that chain that no followup handler descends into
+           (see `parseBibleFollowups` in `docs/crum/wiki.ts`). The same holds
+           for non-biblical references — leave the citation whole in both
+           halves even when that means repeating most of it. The redundancy is
+           the price of two working tooltips.
+        5. The exception to 4, when the duplication would otherwise be
+           unwieldy AND the correction falls in the followups rather than in
+           the main citation: label the followups by hand, so that they resolve
+           without a handler having to reach into the wrapper. Prefer
+           `Ge 1 1, //{1}//{2}//` to the merely verbose
+           `//Ge 1 1, 1//Ge 1 1, 2//`. Note that this does not license the
+           broken form in 4: numbers left unlabeled inside an addendum are an
+           error whatever their length.
+
+        Args:
+            match: The addendum match, whose two groups are the removed and the
+                added text.
+
+        Returns:
+            The addendum's HTML.
+        """
         return "".join(self.replace_addendum_aux(match))
 
     def _validate_addendum_group(self, group: str) -> None:
@@ -683,6 +773,12 @@ class Wiki:
         return _MARK_PLACEHOLDER_RE.sub(lambda _: f"[{next(counter)}]", html)
 
     def replace_footnote(self, match: regex.Match[str]) -> str:
+        # A footnote — `{text}{{note}}` — is an editorial note of OURS on an
+        # error of Crum's; an addendum (`replace_addendum`) is a correction of
+        # his own. Use a footnote to record what he got wrong and what he
+        # meant. See `replace_manual` for the notation it shares with manual
+        # labels, and for the consequences of sharing it.
+        #
         # The footnote content is embedded in a `data-footnote` attribute on
         # the `.footnoted` wrapper. The rest is taken care of by JavaScript.
         # The inner `.mark` element keeps the `[N]` indicator visible to flag

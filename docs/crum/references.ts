@@ -267,6 +267,21 @@ abstract class Fix {
   protected abstract lookup(): HTMLElement[];
 
   /**
+   * NOTE: A fix whose interpretation is null in `bib.yaml` — a declared
+   * placeholder, such as `Vi`'s `K:` or `Mani`'s `1:` / `2:` — contributes
+   * NOTHING here. This makes correct output look broken, and it is worth
+   * knowing before reporting a postfix as mis-parsed. `ShViK 9100 229` (under
+   * ⲟⲩⲟⲉⲓⲛ, page 1) parses exactly right: `Sh` carries a real `Vi K` postfix,
+   * and the longest-first match in `ENRICHMENT_RE` takes the whole `ShViK`.
+   * Yet the tooltip reads only "Sh: … Vi: …", so the `K` looks as though it
+   * were swallowed as a stray single-letter suffix. It was not. Grep
+   * `bib.yaml` for the COMBINED key before concluding otherwise: the postfix
+   * that appears to have gone missing is usually declared and merely silent.
+   *
+   * Note also that `Postfix.lookup` renders the postfix source's own standard
+   * variant rather than the form Crum actually wrote, which compounds the
+   * illusion.
+   *
    * @returns
    */
   public tooltip(): HTMLElement[] {
@@ -285,7 +300,9 @@ abstract class Fix {
 }
 
 /**
- *
+ * A postfix is part of the source designation, NOT a suffix. `Mani 1` and
+ * `Mani 2` are two whole citations naming two distinct sources — not the
+ * reference `Mani` followed by a page number.
  */
 class Postfix extends Fix {
   /**

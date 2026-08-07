@@ -140,6 +140,20 @@ const DANGLING_SUFFIX_MARKERS: Record<string, boolean> = {
   '&': false,
 };
 
+// ENRICHMENT_RE decides WHICH key matches. It is the first of the two stages
+// that together determine every enrichment decision; the second is
+// `replaceMatch`, which decides how the matched key is INTERPRETED.
+//
+// The stages run in that order, and the consequence is easy to miss: because
+// `str.regex` sorts all keys longest-first, the longest key that fits wins the
+// match outright, before any interpretation priority gets a say. A key that is
+// chosen too greedily here cannot be rescued by the ladder in `replaceMatch`.
+//
+// "Heb" is the standing example. Crum writes it for the Epistle to the Hebrews
+// (whose abbreviation is "He"), but "Heb" is also the annotation for "Hebrew",
+// and being longer it takes the match. The Bible's higher interpretation
+// priority never applies, and "Heb 11 38" would read as "Hebrew". It does not,
+// only because it is labeled by hand in the data: `{Heb 11 38}{He}`.
 const ENRICHMENT_RE = new RegExp(
   str.regex([
     // Bible:
@@ -1037,6 +1051,19 @@ function replaceUnnumberedBibleBook(context: html.Context): void {
  * Parse the Bible followups that trail a citation, updating `cit` in place as
  * it goes.
  *
+ * NOTE: Followups are read off `context.remainder` — the flat chain. Addenda
+ * and footnoted spans are wrappers that sit ON that chain while holding their
+ * content BELOW it (see `replaceAnaphor` for the full account of the shape),
+ * and no followup handler descends into one. The same holds for the reference
+ * followups in `SUFFIX` and the page followups in `PAGE_FOLLOWUP_RE`.
+ *
+ * The consequence is a rule for whoever writes the Wiki text, and it is
+ * recorded at `replace_addendum` in
+ * `dictionary/marcion_sourceforge_net/wiki.py`: a citation must never be split
+ * across an addendum boundary. Written as `Ge 1 //1//2//`, the "Ge 1" enriches
+ * and the two numbers — sitting inside the wrapper — are invisible to this
+ * function, which would otherwise have made them chapter and verse.
+ *
  * @param cit - The antecedent citation, which will get mutated to reflect each
  * followup.
  * @param context
@@ -1259,10 +1286,31 @@ function walk(root: Node): Node[] {
 }
 
 /**
- * Replace an enrichment match.
+ * Interpret the key that `ENRICHMENT_RE` matched.
+ *
+ * This is the second of the two stages described at `ENRICHMENT_RE`: which key
+ * matched was settled there, longest-first; here we decide what it means. The
+ * branches below are a priority ladder, in this order:
+ *
+ *   Bible → Reference → ibidem → page → unnumbered Bible book →
+ *   annotation / semicolon / dangling suffix
+ *
+ * Two corollaries follow from annotations sitting at the bottom:
+ *
+ * 1. An annotation false positive is often not an annotation problem at all,
+ *    but a *missing* reference or Bible variant upstream. The token fell
+ *    through to the last rung because nothing above it claimed the key. Adding
+ *    the variant to `bib.yaml` fixes the false positive at its source, which
+ *    is why raising the recall of the higher-priority types also raises
+ *    annotation precision (see the `noCaseVariant` note in `annotations.ts`).
+ * 2. When a heuristic *declines* a match — a false-positive `Is`, `He`
+ *    (`Citation.valid`), or `My` (`replaceReference`) — the token is passed
+ *    over silently and no alternative reading is attempted. Only the ambiguous
+ *    `Am` / `AM` / `AP` / `PS` fall back from Bible to Reference below. A wrong
+ *    refusal therefore leaves no trace in the console: the only way to catch it
+ *    is to read the text that came out unmarked.
  *
  * @param context
- * @returns
  */
 function replaceMatch(context: html.Context): void {
   const key: string = context.match[0];
