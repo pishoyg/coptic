@@ -107,9 +107,7 @@ export const DATA = [
       "Hyvernat, H. (1886). <em><a href=\"https://archive.org/details/lesactesdesmarty01hyve/page/n5/mode/2up\">Actes des Martyrs de l’Égypte</a></em>. Paris: Ernest Leroux."
     ],
     "variants": [
-      "AM"
-    ],
-    "typos": [
+      "AM",
       "Am"
     ]
   },
@@ -1864,7 +1862,6 @@ export const DATA = [
     ],
     "postfixes": {
       "A": LOOKUP,
-      "Am": LOOKUP,
       "AZ": LOOKUP,
       "BM": LOOKUP,
       "BM Or": LOOKUP,
