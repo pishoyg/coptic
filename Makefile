@@ -126,26 +126,8 @@ epub_publish: REQUIRE_DRIVE_DIR FORCE
 	"$${DRIVE_DIR}/bohairic_english - desktop.epub"
 
 ########## CRUM ##########
-# NOTE: There is asymmetry in the pipeline. We retrieve the Marcion data
-# directly from Google Sheets, while we take a snapshot of the Wiki sheet and
-# store it in a local TSV which our pipeline reads. This was motivated by the
-# desire to review Wiki changes carefully.
-# The Marcion format is generally much simpler, and such a `diff` review can
-# be easily performed against the output HTML.
-# TODO: (#0) Consider tracking the Marcion source of truth in a local TSV as
-# well.
-# NOTE: We download to a temporary file, and only move it into place once the
-# transfer has succeeded. Redirecting straight into the TSV would truncate our
-# tracked snapshot before the request is even made, and `-f` is what keeps an
-# error page (or the sign-in redirect that `-L` would otherwise follow) from
-# being written into it as though it were data.
 crum: FORCE
 	# Generate the Crum lexicon artefacts.
-	curl -fsSL \
-		"https://docs.google.com/spreadsheets/d/1lhjcnkHS-pA3p5Vys-6ohKu7Y4ZCJ5NO/export?format=tsv" \
-		-o "$${TMPDIR:-/tmp}/wiki.tsv"
-	mv "$${TMPDIR:-/tmp}/wiki.tsv" \
-		"dictionary/marcion_sourceforge_net/data/input/wiki.tsv"
 	./dictionary/marcion_sourceforge_net/main.py
 	./dictionary/marcion_sourceforge_net/pisaxo.ts
 

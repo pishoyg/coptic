@@ -10,7 +10,27 @@ import pandas as pd
 
 from dictionary.marcion_sourceforge_net import constants, crum, wiki
 from flashcards import deck
-from utils import concur, file, log, paths
+from utils import concur, file, gcp, log, paths
+
+# There is an asymmetry in the pipeline. We read the Marcion data straight from
+# Google Sheets, but we take a snapshot of the Wiki sheet, track it in Git, and
+# read that. This is motivated by the desire to review Wiki changes carefully:
+# a snapshot turns a sheet edit into a `diff`.
+# The Marcion format is much simpler, and a `diff` review of the output HTML
+# serves it well enough.
+# TODO: (#0) Consider tracking the Marcion source of truth in a local TSV as
+# well.
+_WIKI_SHEET_TSV_URL: str = (
+    # pylint: disable-next=line-too-long
+    "https://docs.google.com/spreadsheets/d/1lhjcnkHS-pA3p5Vys-6ohKu7Y4ZCJ5NO/export?format=tsv"
+)
+
+# The sheet's columns that the pipeline actually reads. The rest are the
+# contributors' own bookkeeping (assignee, dates, progress counters, comments),
+# and they are pure noise in the snapshot: they would bloat the tracked file and
+# fill its `diff` with churn that has no bearing on the output.
+# NOTE: This must list every column consumed by `wiki.Wiki.__init__`.
+_WIKI_COLUMNS: list[str] = ["Marcion", "Crum", "_v_", "Entry"]
 
 _argparser = argparse.ArgumentParser("Generate Crum artifacts (by default).")
 
@@ -43,6 +63,12 @@ _ = _argparser.add_argument(
     default=False,
     help="Generate the Xooxle index and exit.",
 )
+
+
+def _snapshot_wiki() -> None:
+    """Refresh the local snapshot of the Wiki sheet, dropping the noise."""
+    df: pd.DataFrame = gcp.tsv_spreadsheet(_WIKI_SHEET_TSV_URL)
+    file.to_tsv(df[_WIKI_COLUMNS], paths.WIKI_TSV)
 
 
 def _print_next_key(keys: abc.Container[str]) -> None:
@@ -166,6 +192,11 @@ def _write_headword_index() -> None:
 
 def main():
     args = _argparser.parse_args()
+
+    # Refresh the snapshot before anything can read it. `wiki.wikis()` caches
+    # the parsed records on its first call, so a stale read can not be corrected
+    # later in the run.
+    _snapshot_wiki()
 
     if args.root_key:
         _print_next_key({r.key for r in crum.Crum.roots.values()})
