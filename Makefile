@@ -131,6 +131,25 @@ crum: FORCE
 	./dictionary/marcion_sourceforge_net/main.py
 	./dictionary/marcion_sourceforge_net/pisaxo.ts
 
+########## CRUM WIKI ENRICHMENT ##########
+# Materialize the enrichment that `docs/crum/wiki.ts` performs in the browser.
+#
+# NOTE: This is deliberately not part of `crum`, even though it is derived from
+# the HTML that `crum` writes and does go stale when the Wiki data changes. It
+# takes minutes, and it depends on the transpiled JavaScript besides, which
+# `crum` has no business rebuilding. Run it yourself after either changes.
+#
+# NOTE: It reads the *transpiled* JavaScript under `docs/`, exactly as
+# `pisaxo.ts` does. After editing the enrichment TypeScript, run `make
+# transpile` (or `make javascript`) first, or the dump will faithfully describe
+# the previous version of the engine.
+#
+# NOTE: The HTML should be formatted prior to running the `wiki` recipe. In
+# particular, unformatted HTML changes the output due to #784.
+wiki: FORCE
+	# Generate the Crum Wiki enrichment dump.
+	./dictionary/marcion_sourceforge_net/wiki.ts
+
 # TODO: (#421) Delete this rule. We will no longer retain the original images,
 # and this won't be even possible.
 crum_img: FORCE
