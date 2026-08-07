@@ -32,6 +32,11 @@ export interface Abbreviation {
   // #528 and #522 should therefore recover the precision loss resulting from
   // case flexibility.
   noCaseVariant?: boolean;
+  // styledParent is used to eliminate some false positives. An annotation
+  // marked with this field must be the child of an <i> or <sup> tag.
+  // NOTE: This is only honoured where annotations are matched in running
+  // text. It is intentionally ignored on the suffix path.
+  styledParent?: boolean;
   // noStyledParent is used to eliminate some false positives. An annotation
   // marked with this field can't be the child of an <i> or <sup> tag.
   noStyledParent?: boolean;
@@ -45,6 +50,7 @@ export interface Abbreviation {
 export interface Annotation {
   fullForm: string;
   fixFullForm: string | undefined;
+  styledParent: boolean | undefined;
   noStyledParent: boolean | undefined;
   suffix: boolean | undefined;
 }
@@ -129,6 +135,7 @@ export const DATA: Abbreviation[] = [
     variants: ['l'],
     suffix: true,
     fixFullForm: 'line',
+    styledParent: true,
   },
   { fullForm: 'literally', variants: ['lit'] },
   {
@@ -186,7 +193,7 @@ export const DATA: Abbreviation[] = [
   },
   { fullForm: 'suffix', variants: ['suff'] },
   { fullForm: 'transitive', variants: ['tr'] },
-  { fullForm: 'vide', variants: ['V', 'vid'] },
+  { fullForm: 'vide', variants: ['v', 'vid'], styledParent: true },
   { fullForm: 'variant, in same dialect', variants: ['var'] },
   { fullForm: 'verb', variants: ['vb'] },
   // NOTE: '†' is currently broken, for two reasons:
@@ -488,6 +495,7 @@ DATA.forEach((abb: Abbreviation): void => {
   const ann: Annotation = {
     fullForm: abb.fullForm,
     fixFullForm: abb.fixFullForm,
+    styledParent: abb.styledParent,
     noStyledParent: abb.noStyledParent,
     suffix: abb.suffix,
   };

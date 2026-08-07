@@ -611,6 +611,12 @@ function annotation(tip: string, ...children: (Node | string)[]): Element {
   return elem;
 }
 
+// The styling that `styledParent` and `noStyledParent` are predicated on.
+// NOTE: This is matched against both the node and its parent, because `walk`
+// surfaces the two cases differently: an <i> is yielded as an atomic node of
+// the chain, whereas a <sup> is stepped over and only its text is yielded.
+const STYLED = 'i, sup';
+
 /**
  *
  * @param context
@@ -658,10 +664,12 @@ function replaceAnnotation(context: html.Context): void {
   // We consume the key-length nodes first so we can inspect them.
   const nodes: Node[] = context.munch(key.length);
 
-  if (
-    annot.noStyledParent &&
-    nodes.some((node: Node): boolean => ['I', 'SUP'].includes(node.nodeName))
-  ) {
+  const styled: boolean = nodes.some(
+    (node: Node): boolean =>
+      (node instanceof Element && node.matches(STYLED)) ||
+      !!node.parentElement?.matches(STYLED)
+  );
+  if ((annot.noStyledParent && styled) || (annot.styledParent && !styled)) {
     // This annotation can't show in styled text, and this node is
     // styled.
     context.insert(nodes);
