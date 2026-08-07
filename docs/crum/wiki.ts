@@ -68,6 +68,7 @@ const EXCLUDE: string = css.disjunction(
   cls.DEMOTIC,
   cls.GREEK,
   cls.HEBREW,
+  cls.HIEROGLYPHIC,
   // TODO: (#522) The presence of the four classes below in the query will
   // become unnecessary when the query is solely used during enrichment.
   cls.BIBLE,
