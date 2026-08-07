@@ -14,19 +14,13 @@ import regex
 from dictionary import cls as dict_cls
 from dictionary.marcion_sourceforge_net import cls, constants
 from dictionary.marcion_sourceforge_net import lexical as lex
-from utils import ensure, gcp, lang, log, orth
+from utils import ensure, file, lang, log, orth, paths
 
 # HTML data attribute names emitted in the Wiki HTML, and consumed by both the
 # TypeScript front-end and the Xooxle indexer.
 DATA_FOOTNOTE: str = "data-footnote"
 DATA_KEY: str = "data-key"
 DATA_PAGE: str = "data-page"
-
-# TODO: (#0) Move to `utils/paths.py`.
-SHEET_TSV_URL: str = (
-    # pylint: disable-next=line-too-long
-    "https://docs.google.com/spreadsheets/d/1lhjcnkHS-pA3p5Vys-6ohKu7Y4ZCJ5NO/export?format=tsv"
-)
 
 COMMA_OR_SPACE: regex.Pattern[str] = regex.compile(r"[ ,]")
 
@@ -733,8 +727,8 @@ class Wiki:
 
 @functools.cache
 def wikis() -> list[Wiki]:
-    records: list[dict[typing.Hashable, typing.Any]] = gcp.tsv_spreadsheet(
-        SHEET_TSV_URL,
+    records: list[dict[typing.Hashable, typing.Any]] = file.read_tsv(
+        paths.WIKI_TSV,
     ).to_dict(orient="records")
     return list(map(Wiki, records))
 

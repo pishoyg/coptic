@@ -34,6 +34,9 @@ FLASHCARDS: pathlib.Path = directory("flashcards/")
 KEYBOARD: pathlib.Path = directory("keyboard/")
 MORPHOLOGY: pathlib.Path = directory("morphology/")
 
+# Component Files
+WIKI_TSV: pathlib.Path = file(MARCION, "data/input/wiki.tsv")
+
 
 # Site Directories
 SITE_DIR: pathlib.Path = directory(os.environ["SITE_DIR"])
