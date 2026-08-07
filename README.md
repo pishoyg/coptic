@@ -30,6 +30,7 @@ that aims to make the Coptic language more **learnable**.
 - [Project-specific](#project-specific)
   - [`dictionary/`](#dictionary)
     - [`marcion.sourceforge.net/`](#marcionsourceforgenet)
+      - [Wiki Enrichment](#wiki-enrichment)
       - [Image Collection](#image-collection)
         - [Why?](#why)
         - [Technical Guidelines](#technical-guidelines)
@@ -397,6 +398,33 @@ primary targets of our statistics are:
 This directory contains the data and logic for processing our dictionaries.
 
 ### [`marcion.sourceforge.net/`](dictionary/marcion_sourceforge_net)
+
+#### Wiki Enrichment
+
+The Wiki text is enriched in the browser: `docs/crum/wiki.ts` walks a page when
+it loads and marks up references, Biblical citations, abbreviations, page
+numbers and the rest. Being a browser-side algorithm, it used to leave nothing
+behind, and the effect of a change to it — a new source in `bib.yaml`, a
+sharpened heuristic — could not be reviewed.
+
+[`wiki.ts`](dictionary/marcion_sourceforge_net/wiki.ts) (`make wiki`) runs
+that same algorithm under a headless DOM and writes down every decision it
+made, one file per page, to `data/output/wiki/`. We track the result in Git for
+the same reason we track the Bible HTML and not the EPUBs: it is text, so
+`git diff` shows exactly what a change to the enrichment did across the whole
+dictionary. It is also what the `ambrose` review command reads, which is why
+that command needs neither a server nor a browser.
+
+The output is derived. Never edit it by hand; regenerate it. And note that it
+is regenerated neither by `make crum` (which rewrites the HTML it is derived
+from) nor by `make transpile` (which rewrites the engine it runs), so it wants
+a `make wiki` of its own after either.
+
+The serializer refuses to pass through an element it does not recognize. That
+matters more than it sounds: bare text in the dump asserts that enrichment
+looked at those characters and declined to act, and an unrecognized element
+rendered transparently would forge that claim. So a construct added to
+`wiki.py` fails the run until `wiki.ts` is taught how to write it down.
 
 #### Image Collection
 
