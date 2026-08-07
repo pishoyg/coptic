@@ -28,27 +28,13 @@ enum CLS {
 }
 
 /**
- * @returns Whether we are running on Node.js (as opposed to in a browser).
- */
-export function node(): boolean {
-  return typeof process !== 'undefined' && !!process.versions.node;
-}
-
-/**
- * @returns Whether we are running in a browser (as opposed to on Node.js).
- */
-export function browser(): boolean {
-  return !node();
-}
-
-/**
- * @returns Whether we are running under a test harness: either directly on
- * Node.js (unit tests) or in a Playwright-controlled browser (E2E tests).
+ * @returns Whether we are running under a test harness in a
+ * Playwright-controlled browser (E2E tests).
  *
  * Playwright sets `navigator.webdriver` to true in the browsers it drives.
  */
 export function test(): boolean {
-  return node() || (typeof navigator !== 'undefined' && navigator.webdriver);
+  return typeof navigator !== 'undefined' && navigator.webdriver;
 }
 
 /**

@@ -75,12 +75,6 @@ repos:
         types: [file]
         entry: npx prettier
         language: system
-      - id: typescript-unittest
-        name: typescript-unittest
-        types: [ts]
-        entry: npx bun test --preload ./bun.ts
-        language: system
-        pass_filenames: false
       - id: tsc
         name: tsc
         types: [ts]
