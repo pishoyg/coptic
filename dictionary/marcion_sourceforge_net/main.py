@@ -25,13 +25,6 @@ _WIKI_SHEET_TSV_URL: str = (
     "https://docs.google.com/spreadsheets/d/1lhjcnkHS-pA3p5Vys-6ohKu7Y4ZCJ5NO/export?format=tsv"
 )
 
-# The sheet's columns that the pipeline actually reads. The rest are the
-# contributors' own bookkeeping (assignee, dates, progress counters, comments),
-# and they are pure noise in the snapshot: they would bloat the tracked file and
-# fill its `diff` with churn that has no bearing on the output.
-# NOTE: This must list every column consumed by `wiki.Wiki.__init__`.
-_WIKI_COLUMNS: list[str] = ["Marcion", "Crum", "_v_", "Entry"]
-
 _argparser = argparse.ArgumentParser("Generate Crum artifacts (by default).")
 
 # Each of the following flags short-circuits the run, so at most one of them
@@ -78,9 +71,16 @@ _ = _helpers.add_argument(
 
 
 def _snapshot_wiki() -> None:
-    """Refresh the local snapshot of the Wiki sheet, dropping the noise."""
+    """Refresh the local snapshot of the Wiki sheet, dropping the noise.
+
+    We only save the columns used in the pipeline, which are listed in the
+    `wiki.Col` enum. The sheet's other columns are the contributors' own
+    bookkeeping, and they are pure noise in the snapshot: they would bloat the
+    tracked file and fill its `diff` with churn that has no bearing on the
+    output.
+    """
     df: pd.DataFrame = gcp.tsv_spreadsheet(_WIKI_SHEET_TSV_URL)
-    file.to_tsv(df[_WIKI_COLUMNS], paths.WIKI_TSV)
+    file.to_tsv(df[[col.value for col in wiki.Col]], paths.WIKI_TSV)
 
 
 def _print_next_key(keys: abc.Container[str]) -> None:

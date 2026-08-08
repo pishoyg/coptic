@@ -3,6 +3,7 @@
 # TODO: (#0) Consider the following simplifications of the substitution rules:
 # - Use an actual newline character instead of the "\n" token.
 # - The headword notation is simply unnecessary.
+import enum
 import functools
 import itertools
 import typing
@@ -451,6 +452,20 @@ _IN_LANG_TAGS: regex.Pattern[str] = regex.compile(
 )
 
 
+class Col(enum.StrEnum):
+    """Name of a column in the Wiki sheet that the pipeline reads.
+
+    This doubles as the whitelist for the tracked snapshot, and the member
+    order fixes the snapshot's column order, so reordering the members rewrites
+    the tracked file wholesale.
+    """
+
+    MARCION = "Marcion"
+    CRUM = "Crum"
+    VIDE = "_v_"
+    ENTRY = "Entry"
+
+
 @typing.final
 class Wiki:
     """Wiki represents an entry in the Wiki sheet."""
@@ -459,9 +474,9 @@ class Wiki:
         self,
         record: dict[typing.Hashable, typing.Any],
     ) -> None:
-        self.keys: list[int] = list(map(int, record["Marcion"].split(" ")))
+        self.keys: list[int] = list(map(int, record[Col.MARCION].split(" ")))
         assert self.keys
-        self.entry: str = record["Entry"]
+        self.entry: str = record[Col.ENTRY]
         ensure.ensure(self.entry, "Empty entry for Marcion keys:", self.keys)
 
         # headwords tracks the headwords encountered in the text. In extremely
@@ -469,10 +484,10 @@ class Wiki:
         #  https://remnqymi.com/crum/2096.html
         self._headwords: list[str] = []
 
-        self.crum: lex.Column = lex.Column(record["Crum"])
+        self.crum: lex.Column = lex.Column(record[Col.CRUM])
         assert self.crum
 
-        vide: str = record["_v_"]
+        vide: str = record[Col.VIDE]
         ensure.ensure(
             vide in ["", "v"],
             self,
