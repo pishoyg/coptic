@@ -139,6 +139,7 @@ const DANGLING_SUFFIX_MARKERS: Record<string, boolean> = {
   ';': false,
   '=': false,
   '&': false,
+  '?': false,
 };
 
 // ENRICHMENT_RE decides WHICH key matches. It is the first of the two stages
