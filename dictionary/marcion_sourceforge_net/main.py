@@ -34,7 +34,12 @@ _WIKI_COLUMNS: list[str] = ["Marcion", "Crum", "_v_", "Entry"]
 
 _argparser = argparse.ArgumentParser("Generate Crum artifacts (by default).")
 
-_ = _argparser.add_argument(
+# Each of the following flags short-circuits the run, so at most one of them
+# can be honored. Let `argparse` reject the combinations rather than let the
+# order of the checks in `main` silently pick a winner.
+_helpers = _argparser.add_mutually_exclusive_group()
+
+_ = _helpers.add_argument(
     "-r",
     "--root-key",
     action="store_true",
@@ -42,7 +47,7 @@ _ = _argparser.add_argument(
     help="Print the smallest unused root key and exit.",
 )
 
-_ = _argparser.add_argument(
+_ = _helpers.add_argument(
     "-d",
     "--drv-key",
     action="store_true",
@@ -50,14 +55,21 @@ _ = _argparser.add_argument(
     help="Print the smallest unused derivation key and exit.",
 )
 
-_ = _argparser.add_argument(
+_ = _helpers.add_argument(
+    "--tsv",
+    action="store_true",
+    default=False,
+    help="Refresh the Wiki TSV snapshot and exit.",
+)
+
+_ = _helpers.add_argument(
     "--html",
     action="store_true",
     default=False,
     help="Generate HTMl and exit.",
 )
 
-_ = _argparser.add_argument(
+_ = _helpers.add_argument(
     "--xooxle",
     action="store_true",
     default=False,
@@ -197,6 +209,9 @@ def main():
     # the parsed records on its first call, so a stale read can not be corrected
     # later in the run.
     _snapshot_wiki()
+
+    if args.tsv:
+        return
 
     if args.root_key:
         _print_next_key({r.key for r in crum.Crum.roots.values()})
