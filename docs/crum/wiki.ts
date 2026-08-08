@@ -719,7 +719,7 @@ function replacePage(context: html.Context): boolean {
 /**
  *
  */
-class Citation {
+export class Citation {
   private static readonly DATA_BOOK = 'book';
   private static readonly DATA_CHAPTER = 'chapter';
   private static readonly DATA_VERSE = 'verse';
@@ -892,6 +892,17 @@ class Citation {
   }
 
   /**
+   * @param node - A `.bible` element.
+   * @returns Whether it carries citation data, and can therefore be read back
+   * with `fromAnchor`. An unnumbered book link — `Kg`, standing for all four of
+   * Samuel and Kings (`replaceUnnumberedBibleBook`) — resolves to no single
+   * book, so it is not built from a Citation and carries none.
+   */
+  public static tagged(node: HTMLElement): boolean {
+    return Citation.DATA_BOOK in node.dataset;
+  }
+
+  /**
    * @param node
    * @returns
    */
@@ -906,9 +917,12 @@ class Citation {
   }
 
   /**
-   * @returns
+   * @returns The citation in full: the book's name, and its chapter and verse
+   * when it has them. A tooltip shows this only when some number was inherited
+   * (see `anchor`), but it is always the whole of what the citation resolved
+   * to.
    */
-  private name(): string {
+  public name(): string {
     let name = this.book.name;
     if (!this.chapter) {
       return name;

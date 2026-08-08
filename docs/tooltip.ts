@@ -32,6 +32,9 @@ let counter = 0;
  * is removed and GCed. */
 const triggers = new WeakMap<HTMLElement, HTMLElement>();
 
+export const ANCHOR_NAME = 'anchor-name';
+export const POSITION_ANCHOR = 'position-anchor';
+
 /**
  * Reparent the tooltip to <body>, anchor it to its trigger via a unique
  * anchor name, mark it as a popover, and attach the right interaction
@@ -47,8 +50,8 @@ function wire(
   inv: Invocation
 ): void {
   const anchor = `--tooltip-${(++counter).toString()}`;
-  parent.style.setProperty('anchor-name', anchor);
-  tooltip.style.setProperty('position-anchor', anchor);
+  parent.style.setProperty(ANCHOR_NAME, anchor);
+  tooltip.style.setProperty(POSITION_ANCHOR, anchor);
 
   /* `manual` for hover so we drive show/hide ourselves without the auto
    * popover stack closing siblings; `auto` for click so the browser handles

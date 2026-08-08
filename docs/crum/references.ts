@@ -125,6 +125,15 @@ export class Reference {
   ) {}
 
   /**
+   * @returns This reference's key in the `MAPPING` — the variant with its fix
+   * composed in, if it has one. `span` records it, and `fromSpan` looks the
+   * reference back up by it, so the round trip holds by construction.
+   */
+  public key(): string {
+    return this.fix?.compose(this.variant) ?? this.variant;
+  }
+
+  /**
    *
    * @returns
    */
@@ -157,8 +166,7 @@ export class Reference {
     suffix = Array.from(suffix);
     const span: HTMLSpanElement = document.createElement('span');
     span.classList.add(cls.REFERENCE);
-    span.dataset[Reference.DATA_REF] =
-      this.fix?.compose(this.variant) ?? this.variant;
+    span.dataset[Reference.DATA_REF] = this.key();
     span.append(...content, ...suffix);
     const tip: (Node | string)[] = [];
     if (ib(span.textContent)) {

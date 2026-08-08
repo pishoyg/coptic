@@ -74,14 +74,14 @@ export function bible(
   verse?: string
 ): string {
   if (Array.isArray(book)) {
-    return `${BIBLE}?book=${book.join('&book=')}`;
+    return `${BIBLE}?${params.BOOK}=${book.join(`&${params.BOOK}=`)}`;
   }
   // Some chapters are called A, C, D, or F. But we always use lower case for
   // those.
   chapter = chapter?.toLowerCase();
   if (!chapter) {
     // This is a book URL.
-    return `${BIBLE}?book=${book}`;
+    return `${BIBLE}?${params.BOOK}=${book}`;
   }
   const chapterURL = `${BIBLE}/${book}_${chapter}.html`;
   if (verse) {

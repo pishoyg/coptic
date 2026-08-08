@@ -15,7 +15,6 @@ import * as ddial from '../dialect.js';
 import * as map from '../crum/bible.js';
 import * as params from '../params.js';
 
-const BOOK_PARAM = 'book';
 // TODO: (#0) It may be cleaner to export a separate mapping for this use
 // case, instead of reusing Crum's mapping.
 const MAPPING: Record<string, string> = Object.fromEntries(
@@ -358,7 +357,7 @@ function addEventListeners(
       [params.QUERY]: form.searchBox.value,
       // Delete the book parameter in case it's present. A URL with both the
       // query and book parameter wouldn't render properly.
-      [BOOK_PARAM]: null,
+      [params.BOOK]: null,
     });
 
     // Only auto-enable a language when the user adds text (typing, pasting, or
@@ -384,7 +383,7 @@ async function main(): Promise<void> {
 
   // NOTE: We scroll to the book *before* loading the index, because loading the
   // index takes a lot of time.
-  const books: string[] = browser.getParamAll(BOOK_PARAM);
+  const books: string[] = browser.getParamAll(params.BOOK);
   if (books.length) {
     goTo(books);
   }

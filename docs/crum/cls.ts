@@ -40,6 +40,11 @@ export const EXPLANATORY = 'explanatory';
 export const EXPLANATORY_KEY = 'explanatory-key';
 export const FINE_PRINT = 'fine-print';
 /**
+ * FOLIO is the class of a Crum page's worth of Wiki content: a `.crum-page`
+ * label followed by the entries printed on it.
+ */
+export const FOLIO = 'folio';
+/**
  * FOOTNOTED is the class of a span wrapping text that has an attached
  * footnote. The footnote itself is carried by the inner `.mark` span in a
  * `data-footnote` attribute and rendered as a hover tooltip.
@@ -54,6 +59,8 @@ export const HEADER = 'header';
 export const HEADING = 'heading';
 export const HEADWORD = 'headword';
 export const HEBREW = 'hebrew';
+/** HIEROGLYPHIC is the class of Egyptian hieroglyphic text. */
+export const HIEROGLYPHIC = 'hieroglyphic';
 export const IBIDEM = 'ibidem';
 export const INDEX_TABLE = 'index-table';
 /**
@@ -73,6 +80,8 @@ export const NAG_HAMMADI = 'nag-hammadi';
 // TODO: (#203) Although this class's primary use is Anki, it might actually
 // belong in the header.
 export const NAVIGATE = 'navigate';
+/** OLD marks Coptic text that is rendered in the Old Coptic typeface. */
+export const OLD = 'old';
 export const PAGE = 'page';
 export const QUALITY = 'quality';
 /**
@@ -87,6 +96,13 @@ export const SISTER_INDEX = 'sister-index';
 export const SISTER_KEY = 'sister-key';
 export const SISTER_VIEW = 'sister-view';
 export const SPELLING = 'spelling';
+/**
+ * STACK renders two Coptic letters one above the other, as a ligature Crum
+ * prints vertically. STACK_TOP and STACK_BOTTOM are its two halves.
+ */
+export const STACK = 'stack';
+export const STACK_BOTTOM = 'stack-bottom';
+export const STACK_TOP = 'stack-top';
 export const SUBPARAGRAPH = 'subparagraph';
 export const TYPE = 'type';
 export const WIKI = 'wiki';
