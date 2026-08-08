@@ -387,7 +387,8 @@ export const DATA = [
     "title": "MSS. &amp;c. in the Egyptian Museum, Cairo",
     "description": null,
     "variants": [
-      "Cai"
+      "Cai",
+      "Cairo"
     ],
     "prefixes": {
       "Ostr": LOOKUP
@@ -1630,8 +1631,14 @@ export const DATA = [
     "title": "Papyri at Michigan University, with year of acquisition where no. not ascertained",
     "description": null,
     "variants": [
-      "P Mich"
-    ]
+      "P Mich",
+      "Mich",
+      "Mich P"
+    ],
+    "postfixes": {
+      "wooden tablet": null,
+      "Pasc Lect": null
+    }
   },
   {
     "title": "Byzantinische Papyri… zu München, ed. Heisenberg &amp; Wenger, 1914, acc. to pp",
@@ -2532,24 +2539,6 @@ export const DATA = [
     "description": null,
     "variants": [
       "MélCh Moeller"
-    ]
-  },
-  {
-    "title": null,
-    "description": null,
-    "variants": [
-      "Mich"
-    ],
-    "postfixes": {
-      "P": null,
-      "wooden tablet": null
-    }
-  },
-  {
-    "title": null,
-    "description": null,
-    "variants": [
-      "Mich Pasc Lect"
     ]
   },
   {
