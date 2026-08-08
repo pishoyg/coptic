@@ -10,27 +10,6 @@ import * as str from '../str.js';
 export const MAPPING: Record<string, Reference> = {};
 
 /**
- * @param text
- * @returns
- */
-export function ib(text: string): boolean {
-  return /^ib\b/i.test(text);
-}
-
-/**
- * @param classify
- * @returns
- */
-export function ibidem(classify = false): HTMLElement {
-  const i: HTMLElement = document.createElement('i');
-  i.textContent = 'ibidem';
-  if (classify) {
-    i.classList.add(cls.IBIDEM);
-  }
-  return i;
-}
-
-/**
  * Source wraps a raw source, caching its parsed title and description so
  * the HTML is parsed once per source rather than once per tooltip render.
  */
@@ -169,8 +148,8 @@ export class Reference {
     span.dataset[Reference.DATA_REF] = this.key();
     span.append(...content, ...suffix);
     const tip: (Node | string)[] = [];
-    if (ib(span.textContent)) {
-      tip.push(ibidem(true));
+    if (ann.ib(span.textContent)) {
+      tip.push(ann.ibidem(true));
     }
     tip.push(...this.tooltip());
     if (!tip.length) {

@@ -1,5 +1,31 @@
 import * as str from '../str.js';
 import * as log from '../logger.js';
+import * as cls from './cls.js';
+
+export const IBIDEM = 'ibidem';
+const IB = 'ib';
+const IB_RE = new RegExp(`^${IB}\\b`, 'i');
+
+/**
+ * @param text
+ * @returns
+ */
+export function ib(text: string): boolean {
+  return IB_RE.test(text);
+}
+
+/**
+ * @param classify
+ * @returns
+ */
+export function ibidem(classify = false): HTMLElement {
+  const i: HTMLElement = document.createElement('i');
+  i.textContent = IBIDEM;
+  if (classify) {
+    i.classList.add(cls.IBIDEM);
+  }
+  return i;
+}
 
 export interface Abbreviation {
   // fullForm defines the full-form of the abbreviation, which is to be
@@ -311,7 +337,7 @@ export const DATA: Abbreviation[] = [
     noCaseVariant: true,
   },
   { fullForm: 'hieroglyphic', variants: ['hierogl'] },
-  { fullForm: 'ibidem', variants: ['ib'] },
+  { fullForm: IBIDEM, variants: [IB] },
   { fullForm: 'id est', variants: ['i e'] },
   { fullForm: 'idem quod', variants: ['i q'] },
   { fullForm: 'imperative', variants: ['imper', 'imperat'] },

@@ -597,20 +597,17 @@ function addFinePrint(wiki: HTMLElement): void {
  * @param {...any} children
  * @returns
  */
-function annotation(tip: string, ...children: (Node | string)[]): Element {
-  let elem: Element;
-  let italic: boolean;
-  if (children.length === 1 && children[0] instanceof Element) {
-    elem = children[0];
-    italic = elem.nodeName === 'I';
-  } else {
-    elem = document.createElement('span');
-    elem.append(...children);
-    italic = children.every((e) => e instanceof Node && e.nodeName === 'I');
-  }
-  tool.addTooltip(elem, [html.maybeI(tip, italic)]);
-  elem.classList.add(cls.ANNOTATION);
-  return elem;
+function annotation(
+  tip: string,
+  ...children: (Node | string)[]
+): HTMLSpanElement {
+  const span: HTMLSpanElement = html.span(...children);
+  span.classList.add(cls.ANNOTATION);
+  const italic: boolean = children.every(
+    (e: Node | string): boolean => e instanceof Node && e.nodeName === 'I'
+  );
+  tool.addTooltip(span, [html.maybeI(tip, italic)]);
+  return span;
 }
 
 // The styling that `styledParent` and `noStyledParent` are predicated on.
@@ -871,11 +868,8 @@ export class Citation {
     elem.dataset[Citation.DATA_CHAPTER] = this.chapter ?? '';
     elem.dataset[Citation.DATA_VERSE] = this.verse ?? '';
     const tooltip: (Node | string)[] = [];
-    // TODO: (#0) Ibidem helpers are not Reference-specific, since
-    // it's also used for Bible processing. They should live in a shared
-    // module.
-    if (ref.ib(elem.textContent)) {
-      tooltip.push(ref.ibidem(), ': ');
+    if (ann.ib(elem.textContent)) {
+      tooltip.push(ann.ibidem(), ': ');
     }
     tooltip.push(
       // If this citation is explicit (all numbers are present in `raw`), then
@@ -1691,9 +1685,7 @@ function replaceIB(context: html.Context): void {
 
   if (!antecedent) {
     log.error('Unable to find antecedent reference for ib element', ib);
-    ib.classList.add(cls.ANNOTATION);
-    tool.addTooltip(ib, [ref.ibidem()]);
-    context.insert(ib);
+    context.insert(annotation(ann.IBIDEM, ib));
     return;
   }
 
