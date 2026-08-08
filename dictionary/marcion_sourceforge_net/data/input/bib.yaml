@@ -1759,6 +1759,12 @@
   description:
   variants:
     - "P Mich"
+    - "Mich"
+    - "Mich P"
+  postfixes:
+    # TODO: (#522) Populate the following postfixes.
+    wooden tablet:
+    Pasc Lect:
 
 - title: "Byzantinische Papyri… zu München, ed. Heisenberg & Wenger, 1914, acc. to
     pp"
@@ -2603,20 +2609,6 @@
   description:
   variants:
     - "MélCh Moeller"
-
-- title:
-  description:
-  variants:
-    # TODO: (#522) Verify the following postfixes.
-    - "Mich"
-  postfixes:
-    P:
-    wooden tablet:
-
-- title:
-  description:
-  variants:
-    - "Mich Pasc Lect"
 
 - title:
   description:
