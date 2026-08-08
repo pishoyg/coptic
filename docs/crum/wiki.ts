@@ -162,7 +162,7 @@ const DANGLING_SUFFIX_MARKERS: Record<string, boolean> = {
 // (whose abbreviation is "He"), but "Heb" is also the annotation for "Hebrew",
 // and being longer it takes the match. The Bible's higher interpretation
 // priority never applies, and "Heb 11 38" would read as "Hebrew". It does not,
-// only because it is labeled by hand in the data: `{Heb 11 38}{He}`.
+// only because it is manually labeled in the data: `{Heb 11 38}{He}`.
 const ENRICHMENT_RE = new RegExp(
   str.regex([
     // Bible:
@@ -380,6 +380,11 @@ const DIRECTION = '(?: (?:above|below))';
 // examples, and that holds uniformly throughout the book, so a Bible citation
 // never follows a non-Bible reference within a single enrichment run. No
 // occurrence has been encountered, so we don't pay for a guard we don't need.
+//
+// NOTE: KNOWN UNHANDLED CASE: A suffix must open with a run of numbers, or with
+// a bare DIRECTION, so one that opens with a followup — the ", 83" of
+// "P 130³, 83" — can not match. Only a suffix interrupted by a `<sup>` takes
+// that shape. See `suffixFollowups`.
 const SUFFIX = new RegExp(
   `^\\.?(?:${NUMBER_GROUP}+${SUFFIX_END}${DIRECTION}?|${DIRECTION})(?:(?:,| [=&])${NOT_CONFUSABLE_REFERENCE}${NUMBER_GROUP}+${SUFFIX_END}${DIRECTION}?)*${str.ASSERT_NON_WORD.source}`,
   'u'
@@ -1063,7 +1068,7 @@ export class Citation {
     // one number represented the page.
     // One exception to that is cross-references that, occasionally, reference a
     // chapter alone (e.g. "cf Am 4 above"). This would land on Actes des
-    // Martyrs. Label those by hand, carrying the chapter in the key:
+    // Martyrs. Label those manually, carrying the chapter in the key:
     //   `{Am 4}{Am 4}`.
     // See the collision note in `handleManualAux` for why that
     // key forces the Bible reading.
@@ -1268,18 +1273,34 @@ function replaceBible(context: html.Context): boolean {
 }
 
 /**
+ * Yield the single `<sup>` that abuts the end of the chain, and the suffix text
+ * behind it, when both belong to the reference suffix.
  *
+ * A suffix can be interrupted by a superscript, as the "P 131¹ 66" of [1] is.
+ * A superscript's text is not a sibling of the text around it, so `enrich` cuts
+ * the chain at every one of them, and the `SUFFIX` match that brought us here
+ * only ever covers the stretch before the first.
+ *
+ * NOTE: KNOWN UNHANDLED CASES: Two shapes are left half-enriched, the leftover
+ * sitting outside the reference as plain text. Both are rare, and are manually
+ * labeled where they occur. A walk that consumed them was implemented under
+ * #542 and reverted: too few instances for the heuristics it took.
+ *
+ * - A suffix broken by more than one superscript, as the "P 131¹ 66, 131³ 1"
+ *   of [1]. Only the first superscript is taken.
+ *
+ * - A suffix whose remainder opens with a followup rather than with a run of
+ *   numbers, as the ", 83" of the "P 130³, 83" of [2] — the superscript
+ *   standing where the opening numbers would be. `SUFFIX` can not match such a
+ *   remainder at all (see SUFFIX above), so none of it is taken.
+ *
+ * [1] https://remnqymi.com/crum/1058.html#:~:text=P%201311%2066
+ * [2] https://remnqymi.com/crum/636.html#:~:text=P%201303
  * @param context
- * @returns
+ * @yields The superscript, and the suffix text behind it, to be appended to the
+ * reference.
  */
 function* suffixFollowups(context: html.Context): Generator<Node | string> {
-  // TODO: (#0) This function considers the possibility
-  // that our match has following <sup> element that is part of the suffix.
-  // Right now, our code doesn't account for the possibility that such a
-  // superscript is followed by a comma that is followed by more suffixes.
-  // We have never encountered such a case in reality, so we dismiss this
-  // possibility for the time being.
-
   if (context.remainder) {
     // There is text before the superscript that is suspected to be part of the
     // suffix.
@@ -1300,20 +1321,24 @@ function* suffixFollowups(context: html.Context): Generator<Node | string> {
       // follows it), so it is part of the suffix.
       yield maybeSUP;
       yield match[0];
+      // `next` belongs to no chain — it lies beyond this one — so the text
+      // taken out of it has to be chopped off. `enrich` drops a node
+      // that this empties, since nothing is left in it to enrich.
       next.nodeValue = next.nodeValue.slice(match[0].length);
       return;
     }
   }
 
-  // The superscript appears at the end of the suffix (no further suffix text
-  // follows it). If it matches a known form superscript, leave it alone — it
-  // will receive a form tooltip in `annotateFormSuperscripts`. Otherwise,
-  // treat it as a trailing part of the suffix.
-  // NOTE: Previously, the heuristic assumed that suffix superscripts only
-  // appeared mid-suffix. Rare exceptions (e.g. [1]) where they appear
-  // at the end necessitated checking against known form superscripts instead
-  // of relying solely on position.
-  //   https://remnqymi.com/crum/636.html#:~:text=P%201303
+  // No further suffix text was found behind the superscript: either nothing
+  // follows it, or what does is a remainder `SUFFIX` can not match (the
+  // second unhandled case above). If the superscript matches a known form
+  // superscript, leave it alone — it will receive a form tooltip in
+  // `handleFormSuperscripts`. Otherwise, treat it as a trailing part of the
+  // suffix.
+  // NOTE: This check replaced a positional assumption — that a suffix
+  // superscript only ever appears mid-suffix, so one reaching this point must
+  // be a trailing part of the suffix. That pulled a form superscript trailing
+  // a citation into the reference.
   if (ambient.formSuperscripts.has(maybeSUP.textContent ?? '')) {
     return;
   }
@@ -1666,7 +1691,7 @@ function handleManual(manual: HTMLElement): void {
 }
 
 /**
- * Interpret a manual label — an enrichment decision made by hand.
+ * Interpret a manual label — an enrichment decision made by a scholar.
  *
  * A manual label overrides the enrichment heuristics for one span of text, and
  * it is the fix for most findings, since the algorithm is mature enough that
@@ -1941,7 +1966,8 @@ function replaceAnaphor(
  *     occur (e.g. under ⲟⲩⲉⲓⲛⲓⲛ – 523), are extremely rare. And resolving them
  *     programmatically is awkward: it's not clear whether the <ins> or <del>
  *     element should contain the true antecedent. We therefore skip the whole
- *     addendum, keeping the walk simple, and label those `ib`s by hand instead.
+ *     addendum, keeping the walk simple, and label those `ib`s manually
+ *     instead.
  *
  *     A footnoted span is skipped the same way, but its
  *     content is real, current text rather than corrected/obsolete text, so a

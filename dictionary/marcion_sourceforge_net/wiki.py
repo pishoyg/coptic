@@ -310,7 +310,7 @@ def replace_dialect(match: regex.Match[str]) -> str:
 
 
 def replace_manual(match: regex.Match[str]) -> str:
-    """Render a manual label — an enrichment decision made by hand.
+    """Render a manual label — an enrichment decision made by a scholar.
 
     A manual label overrides the enrichment heuristics for one span of text,
     and it is the fix for most findings, since the algorithm is mature enough
