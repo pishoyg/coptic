@@ -277,7 +277,8 @@ export const DATA = [
       "Or": "Oriental",
       "or": "oriental",
       "Add": "Addenda",
-      "Ad": "Addenda"
+      "Ad": "Addenda",
+      "ostr": "ostracon"
     }
   },
   {
@@ -1690,7 +1691,8 @@ export const DATA = [
     ],
     "variants": [
       "Preisigke",
-      "Preis."
+      "Preis.",
+      "Pr"
     ]
   },
   {
@@ -1891,6 +1893,7 @@ export const DATA = [
       "MIE": LOOKUP,
       "MIF": LOOKUP,
       "Mich": LOOKUP,
+      "Mich 550": LOOKUP,
       "Ming": LOOKUP,
       "Miss": LOOKUP,
       "Mun": LOOKUP,
@@ -2158,7 +2161,7 @@ export const DATA = [
   {
     "title": "MSS. in Vatican Library, acc. to photographs or to copies by H. De Vis",
     "description": [
-      "Manuscripts are available on <a href=\"https://digi.vatlib.it/\">Biblioteca Apostolica Vaticana</a>, Coptic manuscripts under <a href=\"https://digi.vatlib.it/mss/Vat.copt\">Vat.copt</a>."
+      "Manuscripts are available on <a href=\"https://digi.vatlib.it/\">Biblioteca Apostolica Vaticana</a>, Coptic manuscripts under <a href=\"https://digi.vatlib.it/mss/Vat.copt\">Vat.copt</a>; numbered according to modern foliation."
     ],
     "variants": [
       "Va",
