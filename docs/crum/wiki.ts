@@ -959,6 +959,12 @@ export class Citation {
     // NOTE: We don't verify any verification of verse numbers. But in some
     // cases the absence of a verse is used to detect false positives.
 
+    if (this.abb === 'Pr') {
+      // Where no chapter or verse specified, this is Preisigke's Namenbuch for
+      // Greek personal names, not Proverbs.
+      return !!this.chapter;
+    }
+
     if (['AP', 'PS', 'AM'].includes(this.abb)) {
       // Distinguish between citations of Acta Pauli and Apocalypse, Pistis
       // Sophia and Psalms, and Amos and Actes des Martyrs.
@@ -1362,8 +1368,12 @@ function replaceMatch(context: html.Context): void {
   //   'Ps' almost always refers to the Psalms. Instances where 'Ps' refers to
   //   Pistis Sophia are rare, and can't be easily detected with a heuristic, so
   //   we opted for marking them manually whenever we come across one.
+  //
+  // - 'Pr' is ambiguous. It usually refers to Preisigke's Namenbuch, but is
+  //   rarely used for Proverbs (instead of 'Pro'). They can be told apart
+  //   through a heuristic.
 
-  if (['Am', 'AM', 'AP', 'PS'].includes(key)) {
+  if (['Am', 'AM', 'AP', 'PS', 'Pr'].includes(key)) {
     if (!replaceBible(context)) {
       replaceReference(context);
     }
