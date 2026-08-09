@@ -555,8 +555,9 @@ class Wiki:
         # the double-bracket substitution.
         yield Substitution(
             # Ensure the headword is preceded by the start of the string
-            # (optionally with a single opening parenthesis) or by the
-            # separator ']]], ' from a previous headword.
+            # (optionally with a single opening parenthesis for unattested
+            # forms, or a double slash for entries removed in the addenda) or by
+            # the separator ']]], ' from a previous headword.
             # This prevents false positives in cases where multiple pieces of
             # Coptic text in the entry contain brackets at the beginning or the
             # end, resulting in triple brackets.
@@ -568,7 +569,7 @@ class Wiki:
             # [1] https://remnqymi.com/crum/2321.html
             # [2] https://remnqymi.com/crum/2095.html
             # [2] https://remnqymi.com/crum/2096.html
-            r"(?:(?<=^)|(?<=^\()|(?<=]]], ))" + bracketed("(.*?)", 3),
+            r"(?<=^(?://|\()?|]]], )" + bracketed("(.*?)", 3),
             self.replace_headword,
             ban=["[[[", "]]]"],
         )
