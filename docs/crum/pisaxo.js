@@ -808,7 +808,10 @@ export const DATA = [
     "description": null,
     "variants": [
       "HT"
-    ]
+    ],
+    "prefixes": {
+      "Pap": LOOKUP
+    }
   },
   {
     "title": "G. Horner, Statutes of the Apostles, 1904",
@@ -2659,6 +2662,14 @@ export const DATA = [
     "description": null,
     "variants": [
       "Strzygowski Kopt Kunst"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Tebtunis",
+      "Tebtunis church fresco of hell"
     ]
   },
   {
