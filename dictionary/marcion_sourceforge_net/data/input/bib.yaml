@@ -959,6 +959,8 @@
   description:
   variants:
     - "HT"
+  prefixes:
+    Pap: !lookup
 
 - title: "G. Horner, Statutes of the Apostles, 1904"
   # NOTE: This is listed twice as both 'Stat' and 'HSt'.
@@ -2714,6 +2716,12 @@
   description:
   variants:
     - "Strzygowski Kopt Kunst"
+
+- title:
+  description:
+  variants:
+    - "Tebtunis"
+    - "Tebtunis church fresco of hell"
 
 - title: "Mina, Togo - Le Martyre d'Apa Epima"
   description:
