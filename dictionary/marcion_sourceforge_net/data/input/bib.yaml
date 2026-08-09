@@ -395,6 +395,7 @@
     or: "oriental"
     Add: "Addenda"
     Ad: "Addenda"
+    ostr: "ostracon"
 
 - title: "Budge, Coptic Martyrdoms, 1914"
   description:
@@ -2020,6 +2021,7 @@
     MIE: !lookup
     MIF: !lookup
     Mich: !lookup
+    Mich 550: !lookup
     Ming: !lookup
     Miss: !lookup
     Mun: !lookup
