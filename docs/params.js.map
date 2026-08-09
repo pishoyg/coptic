@@ -1,7 +1,7 @@
 {
   "version": 3,
   "sources": ["params.ts"],
-  "sourcesContent": ["export const CASE = 'case';\nexport const FULL = 'full';\nexport const MODE = 'mode';\nexport const REGEX = 'regex';\nexport const QUERY = 'query';\n"],
-  "mappings": "aAAO,aAAM,KAAO,OACP,KAAO,OACP,KAAO,OACP,MAAQ,QACR,MAAQ",
+  "sourcesContent": ["export const BOOK = 'book';\nexport const CASE = 'case';\nexport const FULL = 'full';\nexport const MODE = 'mode';\nexport const QUERY = 'query';\nexport const REGEX = 'regex';\n"],
+  "mappings": "aAAO,aAAM,KAAO,OACP,KAAO,OACP,KAAO,OACP,KAAO,OACP,MAAQ,QACR,MAAQ",
   "names": []
 }

@@ -1,2 +1,2 @@
-"use strict";export const CASE="case",FULL="full",MODE="mode",REGEX="regex",QUERY="query";
+"use strict";export const BOOK="book",CASE="case",FULL="full",MODE="mode",QUERY="query",REGEX="regex";
 //# sourceMappingURL=params.js.map
