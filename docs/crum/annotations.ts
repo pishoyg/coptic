@@ -264,12 +264,6 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'abbreviated', variants: ['abbrev'], noCaseVariant: true },
   { fullForm: 'Addenda', variants: ['Ad'], noCaseVariant: true, suffix: true },
   { fullForm: 'ad locum', variants: ['ad loc'], suffix: true },
-  {
-    fullForm: 'Assyrian',
-    variants: ['Assyr'],
-    noCaseVariant: true,
-    suffix: true,
-  },
   { fullForm: 'alchemical', variants: ['alchem'] },
   { fullForm: 'Appendix', variants: ['App', 'Append'], suffix: true },
   { fullForm: 'absolute', variants: ['absol'] },
