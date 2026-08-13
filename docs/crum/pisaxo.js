@@ -1476,7 +1476,8 @@ export const DATA = [
       "(n.d.) <em><a href=\"https://coptic-treasures.com/book/%D9%83%D8%AA%D8%A7%D8%A8-%D8%A7%D9%84%D8%A8%D8%B5%D8%AE%D8%A9-%D8%A3%D9%85%D8%B1-%D8%A8%D8%B7%D8%A8%D8%B9%D8%A9-%D8%A7%D9%84%D8%A8%D8%A7%D8%A8%D8%A7-%D8%B4%D9%86%D9%88%D8%AF%D8%A9/\">ⲡ̀ϫⲱⲙ ⲛ̀ⲧⲉ ⲡⲓⲡⲁⲥⲭⲁ ⲉ̀ⲑⲟⲩⲁⲃ ⲫⲏⲉⲧϣⲉⲙϣⲓ ⲓⲥϫⲉⲛ ⲡⲓⲉ̀ϩⲟⲟⲩ ⲛ̀ϯⲕⲩⲣⲓⲁ̀ⲕⲏ ⲛ̀ⲧⲉ ⲡⲓⲉⲩⲗⲟⲅⲓⲙⲉⲛⲟⲥ ϣⲁⲡ̀ϫⲱⲛⲉ̀ⲃⲟⲗ ⲙ̀ⲡⲓϣⲁⲓ ⲛ̀ϯⲁ̀ⲛⲁⲥⲧⲁⲥⲓⲥ ⲉⲧⲥ̀ⲙⲁⲣⲱⲟⲩⲧ ⲕⲁⲧⲁ ⲧⲁⲝⲓⲥ ⲛ̀ϯⲉⲕⲕ̀ⲗⲏⲥⲓⲁ ⲛ̀ⲣⲉⲙⲛ̀ⲭⲏⲙⲓ ⲛ̀ⲟⲣⲑⲟⲇⲟⲝⲟⲥ –كتاب البصخة المقدسة: الذي يخدم من يوم احد الشعانين الى نهاية عيد القيامة المجيد حسب ترتيب الكنيسة القبطية الارثوذكسية</a></em>, printed by order of Pope Shenouda III. Anba Rewis Press. [This appears to be a reprint of the edition cited by Crum, possibly originally edited by Claudius Y. Labib]"
     ],
     "variants": [
-      "Pas Lect"
+      "Pas Lect",
+      "Pasc Lect"
     ]
   },
   {
@@ -2747,6 +2748,16 @@ export const DATA = [
     "variants": [
       "MRJames Catal MSS Corpus Chr Coll",
       "MRJames Cat MSS Corp Chr Coll"
+    ]
+  },
+  {
+    "title": "Zeitschrift für Assyriologie",
+    "description": [
+      "<em>Zeitschrift für Assyriologie und verwandte Gebiete</em> (ZA) was founded by Carl Bezold in 1886, and issued by the Deutsche Morgenländische Gesellschaft. From volume 35 (1939) it was retitled <em>Zeitschrift für Assyriologie und vorderasiatische Archäologie</em>. Volumes 1-23 (1886-1909) are <a href=\"https://archive.org/search?query=identifier%3Azeitschriftfuras%2A\">available on Internet Archive</a>, among them <a href=\"https://archive.org/details/zeitschriftfuras1418deut\">14 (1899)</a>. All volumes are available digitised on the <a href=\"https://www.degruyterbrill.com/journal/key/zava/html\">De Gruyter Brill website</a> (with login credentials)."
+    ],
+    "variants": [
+      "Z f Assyr",
+      "Z Assyr"
     ]
   }
 ];
