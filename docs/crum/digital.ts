@@ -364,10 +364,7 @@ const XOOXLES: Xooxle[] = [
 /**
  * @returns
  */
-function addTooltipDialects(): {
-  button: HTMLElement;
-  checkboxes: HTMLInputElement[];
-} {
+function addTooltipDialects(): ddial.Control[] {
   const button: HTMLElement = document.getElementById(id.DIALECTS_BUTTON)!;
   const controls = Object.values(dial.DIALECTS).map(
     (d: dial.Dialect): ddial.Control => d.control(true)
@@ -378,7 +375,7 @@ function addTooltipDialects(): {
     [],
     'click'
   );
-  return { button, checkboxes: controls.map((d) => d.checkbox) };
+  return controls;
 }
 
 /**
@@ -416,7 +413,7 @@ function addCheckboxTooltips(): void {
 /**
  * @returns
  */
-function addListDialects(): HTMLInputElement[] {
+function addListDialects(): ddial.Control[] {
   const controls: ddial.Control[] = Object.values(dial.DIALECTS).map(
     (d: dial.Dialect): ddial.Control => d.control(false)
   );
@@ -425,7 +422,7 @@ function addListDialects(): HTMLInputElement[] {
     .querySelector(`#${id.DIALECTS} #${id.CHECKBOXES}`)!
     .append(...controls.map((d: ddial.Control): HTMLLabelElement => d.label));
 
-  return controls.map((d: ddial.Control): HTMLInputElement => d.checkbox);
+  return controls;
 }
 
 /**
@@ -434,32 +431,21 @@ function addListDialects(): HTMLInputElement[] {
  * report-link header. Each Xooxle searches on every search-box keystroke.
  */
 export async function init(): Promise<void> {
-  // We have a tooltip element bearing the dialects (intended for small
-  // screens).
-  const { button: dialectsButton, checkboxes: tooltipCheckboxes } =
-    addTooltipDialects();
-  // We also have a second dialect list outside the tooltip (intended to be
-  // shown on large screens).
-  const listCheckboxes: HTMLInputElement[] = addListDialects();
   addCheckboxTooltips();
 
   const manager: dial.Manager = new dial.Manager();
 
-  if (manager.setToDefaultIfUnset()) {
-    // In order to alert the user to the fact that dialect selection has
-    // changed, we make sure the dialect list is visible.
-    // NOTE: This step should precede the construction of the highlighter, so
-    // that the selected dialects will be visible to the highlighter during its
-    // initialization.
-    // It should also follow registration of event listeners, so that clicking
-    // on the button will actually show the dialects.
-    dialectsButton.click();
-  }
-
   const isActive = (): boolean => mode.active(mode.DIGITAL);
   const highlighter: high.Highlighter = new high.Highlighter(
     manager,
-    [...tooltipCheckboxes, ...listCheckboxes],
+    [
+      // We have a tooltip element bearing the dialects (intended for small
+      // screens).
+      ...addTooltipDialects(),
+      // We also have a second dialect list outside the tooltip (intended to be
+      // shown on large screens).
+      ...addListDialects(),
+    ].map((d: ddial.Control): HTMLInputElement => d.checkbox),
     isActive
   );
   SearchResult.init(manager, highlighter);

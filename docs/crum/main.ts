@@ -17,12 +17,6 @@ import * as browser from '../browser.js';
  */
 function main(): void {
   const manager: dial.Manager = new dial.Manager();
-  const anki = iam.amI('card');
-  if (!anki) {
-    // Set to defaults.
-    // Anki manages its own dialects, so we shouldn't use defaults.
-    manager.setToDefaultIfUnset();
-  }
 
   const highlighter = new high.Highlighter(manager, []);
   const devHighlighter: dev.Highlighter = new dev.Highlighter();
@@ -34,7 +28,7 @@ function main(): void {
   //   which conflict with ours!
   // - Elements created by the panel logic (such as the `help` footer) were
   //   found to be duplicated on some Anki platforms!
-  if (!anki) {
+  if (!iam.amI('card')) {
     help.makeHelpPanel(highlighter, devHighlighter);
   }
 

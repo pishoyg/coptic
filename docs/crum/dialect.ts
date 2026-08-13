@@ -3,21 +3,9 @@ import * as css from '../css.js';
 import * as dial from '../dialect.js';
 
 type SingleCharDialect =
-  | 'S'
-  | 'A'
-  | 'L'
-  | 'B'
-  | 'F'
-  | 'O'
-  | 'M'
-  | 'P'
-  | 'V'
-  | 'W'
-  | 'U';
+  'S' | 'A' | 'L' | 'B' | 'F' | 'O' | 'M' | 'P' | 'V' | 'W' | 'U';
 type DoubleCharDialect = 'Sa' | 'Sf' | 'Fb' | 'NH';
 export type DIALECT = SingleCharDialect | DoubleCharDialect;
-
-const DEFAULT: DIALECT[] = ['B'];
 
 /**
  * For dialects that have a single-character code, we use the code as a keyboard
@@ -191,19 +179,5 @@ export class Manager extends dial.Manager<DIALECT> {
     // Our local-storage variable used to store active Crum dialects is called
     // 'd'.
     super('d');
-  }
-  /**
-   * Set the list of active dialects to a given default, if dialects are not
-   * already configured.
-   *
-   * @returns Whether defaults have been set.
-   */
-  public setToDefaultIfUnset(): boolean {
-    if (this.active() !== undefined) {
-      // Dialects have already been configured.
-      return false;
-    }
-    this.setActive(DEFAULT);
-    return true;
   }
 }
