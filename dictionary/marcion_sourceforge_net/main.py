@@ -69,6 +69,18 @@ _ = _helpers.add_argument(
     help="Generate the Xooxle index and exit.",
 )
 
+# Unlike the flags above, this one doesn't short-circuit the run; it modifies
+# how the run reads its input, so it must combine freely with them. It does
+# conflict with `--tsv`, which exists to refresh the snapshot. `argparse` can't
+# express that, since an action can only belong to one mutually exclusive
+# group, so `main` rejects that pair itself.
+_ = _argparser.add_argument(
+    "--notsv",
+    action="store_true",
+    default=False,
+    help="Skip refreshing the Wiki TSV snapshot; read the tracked copy as is.",
+)
+
 
 def _snapshot_wiki() -> None:
     """Refresh the local snapshot of the Wiki sheet, dropping the noise.
@@ -205,10 +217,14 @@ def _write_headword_index() -> None:
 def main():
     args = _argparser.parse_args()
 
-    # Refresh the snapshot before anything can read it. `wiki.wikis()` caches
-    # the parsed records on its first call, so a stale read can not be corrected
-    # later in the run.
-    _snapshot_wiki()
+    if args.tsv and args.notsv:
+        log.fatal("--notsv", "not allowed with", "--tsv")
+
+    if not args.notsv:
+        # Refresh the snapshot before anything can read it. `wiki.wikis()`
+        # caches the parsed records on its first call, so a stale read can not
+        # be corrected later in the run.
+        _snapshot_wiki()
 
     if args.tsv:
         return
