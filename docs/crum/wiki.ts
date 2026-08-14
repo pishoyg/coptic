@@ -430,9 +430,16 @@ const BIBLE_FOLLOWUP = new RegExp(
 const NUM_COL_LINE = `(${['[0-9]+', ...book.ROMAN_PAGES].join('|')})(?: ([ab])(?: \\d+(?: up)?)?)?(?: above)?\\b`;
 const PAGE_RE = new RegExp(`^p{1,2}\\.? ${NUM_COL_LINE}`);
 const PAGE_FOLLOWUP_RE = new RegExp(`^(, )${NUM_COL_LINE}`);
-// MANUAL_PAGE_RE parses the page number and column out of the text content of a
-// manually-keyed page followup (e.g. "98 b", "108 a 2 above").
-const MANUAL_PAGE_RE = new RegExp(`^${NUM_COL_LINE}`);
+// MANUAL_PAGE_RE tells whether the key of a manual label names a page in the
+// Crum book scan. The key is forwarded to the scan verbatim, so it captures
+// nothing.
+// The scan accepts more than this: a page without a column, and the
+// Roman-numeral intro pages. Manual labels need neither. They are only ever
+// used for the pages that the automatic heuristics can't reach, and those are
+// numbered pages carrying a column. Keeping the pattern this tight also keeps
+// the branch from hijacking the keys below it: a bare Roman page would swallow
+// `v` (*vide*), which is an annotation.
+const MANUAL_PAGE_RE = /^[0-9]+[ab]$/;
 
 // Roman-numeral pages of the Preface and the List of Abbreviations in the
 // Crum book scan. The `Index` override table in `crum/book.ts` resolves
@@ -709,6 +716,18 @@ function replaceAnnotation(context: html.Context): void {
 }
 
 /**
+ *
+ * @param key
+ * @param {...any} children
+ * @returns
+ */
+function page(key: string, ...children: (Node | string)[]): HTMLAnchorElement {
+  const a: HTMLAnchorElement = html.anchor(paths.crumScan(key), ...children);
+  a.classList.add(cls.PAGE);
+  return a;
+}
+
+/**
  * Insert hyperlinks for page references in the text.
  *
  * @param context
@@ -723,22 +742,19 @@ function replacePage(context: html.Context): boolean {
     return false;
   }
 
-  const a: HTMLElement = html.anchor(
-    paths.crumScan(`${match[1]!}${match[2] ?? ''}`),
-    ...context.munch(match[0].length)
+  context.insert(
+    page(`${match[1]!}${match[2] ?? ''}`, ...context.munch(match[0].length))
   );
-  a.classList.add(cls.PAGE);
-  context.insert(a);
 
   while ((match = PAGE_FOLLOWUP_RE.exec(context.remainder))) {
     const comma: string = match[1]!;
     context.advance(comma.length);
-    const followup = html.anchor(
-      paths.crumScan(`${match[2]!}${match[3] ?? ''}`),
-      ...context.munch(match[0].length - comma.length)
+    context.insert(
+      page(
+        `${match[2]!}${match[3] ?? ''}`,
+        ...context.munch(match[0].length - comma.length)
+      )
     );
-    followup.classList.add(cls.PAGE);
-    context.insert(followup);
   }
 
   return true;
@@ -1554,12 +1570,12 @@ function handleAddenda(root: HTMLElement): void {
   root
     .querySelectorAll<HTMLElement>(css.c(cls.ADDENDUM))
     .forEach((elem: HTMLElement): void => {
-      const page: string = elem.dataset[DATA_PAGE]!;
+      const key: string = elem.dataset[DATA_PAGE]!;
       tool.addTooltip(elem.querySelector(css.c(cls.MARK))!, [
         html.anchor(
-          paths.crumScan(page),
+          paths.crumScan(key),
           'Addenda (',
-          ...scan.prettyPage(page),
+          ...scan.prettyPage(key),
           ')'
         ),
       ]);
@@ -1583,9 +1599,7 @@ function replaceSemicolon(context: html.Context): void {
 }
 
 const DATA_KEY = 'key';
-// PAGE_KEY is the manual key marking a page followup, whose text carries the
-// page number and column instead of a reference or Bible citation.
-const PAGE_KEY = 'PAGE';
+
 /**
  *
  * @param manual
@@ -1616,8 +1630,9 @@ function handleManual(manual: HTMLElement): void {
  *   omits is read out of the text instead.
  * - `{text}{full form}` forces an annotation. The key is displayed as the
  *   tooltip text, e.g. `{pl}{plate}`.
- * - `{text}{PAGE}` forces a page followup, whose text carries the page number
- *   and column in place of a reference or a citation, e.g. `{98 b}{PAGE}`.
+ * - `{text}{98b}` forces a page link. The key is the page — a page number
+ *   followed by its column — and the whole text becomes the hyperlink,
+ *   e.g. `{Sheet 15}{1756a}`.
  * - `{text}`, with no key, infers: a reference if the text opens with one,
  *   otherwise a dangling suffix resolved against its antecedent.
  *
@@ -1641,13 +1656,6 @@ function handleManualAux(manual: HTMLElement): Iterable<Node> | Node {
     return manual.childNodes;
   }
 
-  if (key === PAGE_KEY) {
-    // The text is a page followup, which lacks the "p" prefix that
-    // `replacePage` keys on. The page number and column live in the text, and
-    // the whole element becomes the hyperlink.
-    return handleManualPage(manual);
-  }
-
   // NOTE: We don't split the suffix out of manually-labeled references, the
   // whole text inside the manual tag is treated as a reference name (which
   // is not true).
@@ -1656,10 +1664,15 @@ function handleManualAux(manual: HTMLElement): Iterable<Node> | Node {
   // the number of manually-marked references is very small anyway.
   if (key) {
     // The key is explicit. The possibilities are:
-    // 1. The key is a reference abbreviation.
-    // 2. The key is a Bible book abbreviation, potentially with overrides for
+    // 1. The key is a page in the book scan.
+    // 2. The key is a reference abbreviation.
+    // 3. The key is a Bible book abbreviation, potentially with overrides for
     //    the chapter / verse numbers.
-    // 3. The key is an annotation.
+    // 4. The key is an annotation.
+    if (MANUAL_PAGE_RE.test(key)) {
+      return page(key, ...manual.childNodes);
+    }
+
     // NOTE: A few abbreviations are ambiguous: they exist in both `ref.MAPPING`
     // and `BIBLE_MAPPING`. Elsewhere we resolve such collisions in favour of
     // Bible citations, but manual labels reverse that priority and resolve to
@@ -1740,25 +1753,6 @@ function handleManualAux(manual: HTMLElement): Iterable<Node> | Node {
   const cit: Citation = Citation.fromAnchor(antecedent);
   cit.update(cv?.[1], cv?.[2]);
   return cit.anchor(...manual.childNodes);
-}
-
-/**
- *
- * @param manual
- * @returns
- */
-function handleManualPage(manual: HTMLElement): Iterable<Node> | Node {
-  const match: RegExpExecArray | null = MANUAL_PAGE_RE.exec(manual.textContent);
-  if (!match) {
-    log.error('Unable to parse a page out of a manual page label', manual);
-    return manual.childNodes;
-  }
-  const a: HTMLElement = html.anchor(
-    paths.crumScan(`${match[1]!}${match[2] ?? ''}`),
-    ...manual.childNodes
-  );
-  a.classList.add(cls.PAGE);
-  return a;
 }
 
 /**
