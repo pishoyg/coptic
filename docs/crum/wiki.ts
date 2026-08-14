@@ -421,7 +421,13 @@ const BIBLE_FOLLOWUP = new RegExp(
 // Instead of using a generic expression for Roman numerals, we only include
 // those roman numerals that we know are present in the book, to minimize the
 // chances of false positives.
-const NUM_COL_LINE = `(${['[0-9]+', ...book.ROMAN_PAGES].join('|')})(?: ([ab])(?: \\d+)?)?(?: (?:up|above))?\\b`;
+//
+// NOTE: When Crum references a page in his own book, it's usually a
+// preceding page, rather than an upcoming one. Hence we have 'above', but not
+// 'below' as an optional suffix.
+// 'up', following the line number, means that the lines should be counted from
+// the bottom up.
+const NUM_COL_LINE = `(${['[0-9]+', ...book.ROMAN_PAGES].join('|')})(?: ([ab])(?: \\d+(?: up)?)?)?(?: above)?\\b`;
 const PAGE_RE = new RegExp(`^p{1,2}\\.? ${NUM_COL_LINE}`);
 const PAGE_FOLLOWUP_RE = new RegExp(`^(, )${NUM_COL_LINE}`);
 // MANUAL_PAGE_RE parses the page number and column out of the text content of a
