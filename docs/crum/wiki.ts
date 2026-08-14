@@ -130,6 +130,7 @@ const DANGLING_SUFFIX_MARKERS: Record<string, boolean> = {
   Cf: true,
   v: true,
   V: true,
+  as: true,
   also: true,
   but: true,
   paral: true,
