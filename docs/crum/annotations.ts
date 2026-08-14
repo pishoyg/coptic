@@ -273,6 +273,7 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'aorist', variants: ['aor'] },
   { fullForm: 'approximate', variants: ['approx', 'approxim'] },
   { fullForm: 'arithmetic', variants: ['arithm'] },
+  { fullForm: 'astronomical', variants: ['astron'] },
   { fullForm: 'auxiliary', variants: ['auxil'] },
   { fullForm: 'biblical', variants: ['bibl'] },
   { fullForm: 'bis', variants: ['bis'] },
