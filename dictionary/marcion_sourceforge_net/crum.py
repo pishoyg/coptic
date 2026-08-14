@@ -84,8 +84,6 @@ JS: str = relpath(paths.CRUM_JS)
 SEARCH: str = relpath(paths.LEXICON_DIR)
 HOME: str = relpath(paths.SITE_DIR)
 
-KELLIA_PREFIX = "https://coptic-dictionary.org/entry.cgi?tla="
-
 
 class Row(gcp.Record):
     """Row represents a row in the Crum sheet."""
@@ -1131,11 +1129,12 @@ class Sister:
 class SisterWithFrag:
     """SisterWithFrag represents a Sister, and an associated fragment."""
 
-    HREF_FMT: str = "{key}.html"
-
     def __init__(self, sis: Sister, fragment: str) -> None:
         self.sister: Sister = sis
         self.fragment: str = fragment
+
+    def href(self) -> str:
+        return f"{self.sister.key}.html"
 
     def frag(self) -> str:
         if not self.fragment:
@@ -1148,8 +1147,8 @@ class SisterWithFrag:
     def html_aux(self) -> abc.Generator[str]:
         yield f'<tr id="{cls.SISTER}{self.sister.key}" class="{cls.SISTER}">'
         yield f'<td class="{cls.SISTER_VIEW}">'
-        href = self.HREF_FMT.format(key=self.sister.key) + self.frag()
-        yield f'<a class="{cls.NAVIGATE}" href="{href}" target="_blank">'
+        url: str = self.href() + self.frag()
+        yield f'<a class="{cls.NAVIGATE}" href="{url}" target="_blank">'
         yield "view"
         yield "</a>"
         yield "</td>"
@@ -1172,7 +1171,9 @@ class SisterWithFrag:
 class StepsisterWithFrag(SisterWithFrag):
     """StepsisterWithFrag is a Greek Crum sister, with a fragment."""
 
-    HREF_FMT: str = KELLIA_PREFIX + "{key}"
+    @typing.override
+    def href(self) -> str:
+        return paths.coptic_dictionary_online(self.sister.key)
 
 
 class Mother:

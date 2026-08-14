@@ -104,7 +104,7 @@ export const KELLIA = 'https://kellia.uni-goettingen.de/';
  * @returns
  */
 export function copticDictionaryOnline(key: string): string {
-  return `https://coptic-dictionary.org/entry.cgi?tla=${key}`;
+  return `https://coptic-dictionary.org/entry/${key}`;
 }
 
 /* NAG_HAMMADI_OVERRIDE defines URLs for codex leaves that are hard to find

@@ -105,3 +105,15 @@ def crum_url(key: str | int, deriv_key: str | int | None = None) -> str:
     if not deriv_key:
         return root_url
     return f"{root_url}#drv{deriv_key}"
+
+
+# Pages that we don't own:
+CDO: str = "https://coptic-dictionary.org"
+
+
+def coptic_dictionary_online(key: str) -> str:
+    return f"{CDO}/entry/{key}"
+
+
+def coptic_dictionary_online_query(query: str) -> str:
+    return f"{CDO}/?q={query}"

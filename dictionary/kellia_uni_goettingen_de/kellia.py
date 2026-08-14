@@ -255,10 +255,8 @@ class Etymology:
         xrs: list[str] = re.findall(r" #(.*?)#", etym)
         for xr in xrs:
             word = xr
-            link: str = (
-                # pylint: disable-next=line-too-long
-                f'<a href="https://coptic-dictionary.org/results.cgi?coptic={word}">{word}</a>'
-            )
+            href: str = paths.coptic_dictionary_online_query(word)
+            link: str = f'<a href="{href}">{word}</a>'
             word = re.sub(r"\(", r"\(", word)
             word = re.sub(r"\)", r"\)", word)
             etym = re.sub(r"#" + word + "#", link, etym)
@@ -451,9 +449,7 @@ class Word:
         return merged
 
     def cdo(self) -> str:
-        return (
-            f"https://coptic-dictionary.org/entry.cgi?tla={self.entry_xml_id}"
-        )
+        return paths.coptic_dictionary_online(self.entry_xml_id)
 
     def has_dialect(self, geo: str) -> bool:
         return self.orthstring.has_dialect(geo)
