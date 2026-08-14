@@ -208,7 +208,7 @@ const ENRICHMENT_RE = new RegExp(
 //     likely a suffix.
 const NUMBERS = [
   '[٠١٢٣٤٥٦٧٨٩۰۱۲۳۴۵۶۷۸۹]+',
-  "'?[0-9]+[a-zA-Z]?\\*?(?:–'?[0-9]+)?",
+  "['-]?[0-9]+[a-zA-Z]?\\*?(?:[–-]'?[0-9]+)*",
   'ed [A-Z]\\p{Letter}+',
   // 'no' means 'number'.
   // It's not part of our canonical list of suffix annotations because it would
@@ -310,6 +310,20 @@ const NUMBER_GROUP = `(?: ${NUMBER}| ?\\(${NUMBER}(?: ${NUMBER})*\\))`;
 // 's v' stands for 'sub voce', and is a valid suffix, so we account for that.
 const SUFFIX_END = '(?<!\\b(?:p?l|(?<!\\bs )v))';
 
+// DIRECTION is Crum's cross-reference adverb, pointing at another place in the
+// dictionary: "J 76 above", "Tri below". It closes a suffix, and belongs to
+// the citation, but it is deliberately NOT a suffix token in NUMBERS:
+// - It sits after SUFFIX_END, so a trailing 'v' / 'l' / 'pl' is still read as
+//   an annotation. Were it a suffix token, the run in "Mor 29 5 v above" would
+//   no longer end on the 'v', SUFFIX_END would never fire, and the 'vide'
+//   would be swallowed into the reference.
+// - It stays out of NUMBER_GROUP's parenthesized branch, so a parenthetical
+//   aside — "Va 57 165 (v below)" — is not absorbed whole.
+// A followup must still carry a number of its own, so DIRECTION alone can not
+// open one: the "above" in "BIF 20 223 & above ⲉⲓⲟⲩⲉ" is a fresh
+// cross-reference to another entry, not a continuation of the BIF citation.
+const DIRECTION = '(?: (?:above|below))';
+
 // SUFFIX matches a reference suffix together with any followups that trail it,
 // e.g. the whole " 44 66, 179" in "P 44 66, 179".
 //
@@ -329,7 +343,7 @@ const SUFFIX_END = '(?<!\\b(?:p?l|(?<!\\bs )v))';
 // never follows a non-Bible reference within a single enrichment run. No
 // occurrence has been encountered, so we don't pay for a guard we don't need.
 const SUFFIX = new RegExp(
-  `^\\.?${NUMBER_GROUP}+${SUFFIX_END}(?:(?:,| [=&])${NOT_CONFUSABLE_REFERENCE}${NUMBER_GROUP}+${SUFFIX_END})*${str.ASSERT_NON_WORD.source}`,
+  `^\\.?(?:${NUMBER_GROUP}+${SUFFIX_END}${DIRECTION}?|${DIRECTION})(?:(?:,| [=&])${NOT_CONFUSABLE_REFERENCE}${NUMBER_GROUP}+${SUFFIX_END}${DIRECTION}?)*${str.ASSERT_NON_WORD.source}`,
   'u'
 );
 
