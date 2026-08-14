@@ -127,7 +127,9 @@ const UNNUMBERED_BIBLE_BOOK: Set<string> = new Set<string>(
 // is a dangling suffix. False indicates that we should exercise some caution.
 const DANGLING_SUFFIX_MARKERS: Record<string, boolean> = {
   cf: true,
+  Cf: true,
   v: true,
+  V: true,
   also: true,
   but: true,
   paral: true,
