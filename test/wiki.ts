@@ -61,9 +61,9 @@ const TEST_CASES: {
   {
     key: '139', // ⲭⲱ
     want: {
-      [cls.REFERENCE]: 291,
+      [cls.REFERENCE]: 292,
       [cls.BIBLE]: 287,
-      [cls.DIALECT]: 882,
+      [cls.DIALECT]: 883,
       [cls.ANNOTATION]: 208,
     },
   },
@@ -176,7 +176,7 @@ const TEST_CASES: {
     want: {
       [cls.REFERENCE]: 5,
       [cls.BIBLE]: 7,
-      [cls.ADDENDUM]: 1,
+      [cls.ADDENDUM]: 2,
     },
   },
   {
