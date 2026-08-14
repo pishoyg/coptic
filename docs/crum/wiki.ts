@@ -995,6 +995,12 @@ export class Citation {
     // Amos citations were always followed by either zero numbers or two numbers
     // representing the chapter and verse, while the latter was only followed by
     // one number represented the page.
+    // One exception to that is cross-references that, occasionally, reference a
+    // chapter alone (e.g. "cf Am 4 above"). This would land on Actes des
+    // Martyrs. Label those by hand, carrying the chapter in the key:
+    //   `{Am 4}{Am 4}`.
+    // See the collision note in `handleManualAux` for why that
+    // key forces the Bible reading.
     if (this.abb === 'Am') {
       return !this.chapter || (this.knownChapter() && !!this.verse);
     }
@@ -1354,7 +1360,7 @@ function walk(root: Node): Node[] {
  * 2. When a heuristic *declines* a match — a false-positive `Is`, `He`
  *    (`Citation.valid`), or `My` (`replaceReference`) — the token is passed
  *    over silently and no alternative reading is attempted. Only the ambiguous
- *    `Am` / `AM` / `AP` / `PS` fall back from Bible to Reference below. A wrong
+ *    abbreviations listed below fall back from Bible to Reference. A wrong
  *    refusal therefore leaves no trace in the console: the only way to catch it
  *    is to read the text that came out unmarked.
  *
@@ -1587,6 +1593,31 @@ function handleManual(manual: HTMLElement): void {
 }
 
 /**
+ * Interpret a manual label — an enrichment decision made by hand.
+ *
+ * A manual label overrides the enrichment heuristics for one span of text, and
+ * it is the fix for most findings, since the algorithm is mature enough that
+ * what remains is usually an inconsistency in Crum's text that no heuristic
+ * can resolve. The notation lives in the Wiki sheet, and is parsed by
+ * `replace_manual` in `dictionary/marcion_sourceforge_net/wiki.py`, which packs
+ * the key into `data-key` for us. The forms:
+ *
+ * - `{text}{}` suppresses. An empty key means "leave this text alone", and is
+ *   the fix for a false positive.
+ * - `{text}{Abb}` forces a reference. `Abb` must be a variant in `bib.yaml`.
+ * - `{text}{Bk C V}` forces a Bible citation, e.g. `{ib 26}{Jud 19 26}`, or
+ *   `{Heb 11 38}{He}`. The chapter and verse are optional; whatever the key
+ *   omits is read out of the text instead.
+ * - `{text}{full form}` forces an annotation. The key is displayed as the
+ *   tooltip text, e.g. `{pl}{plate}`.
+ * - `{text}{PAGE}` forces a page followup, whose text carries the page number
+ *   and column in place of a reference or a citation, e.g. `{98 b}{PAGE}`.
+ * - `{text}`, with no key, infers: a reference if the text opens with one,
+ *   otherwise a dangling suffix resolved against its antecedent.
+ *
+ * An explicit key is resolved reference-first — the reverse of the automatic
+ * priority in `replaceMatch` — which is what makes the chapter in `{Am 4}`
+ * load-bearing. See the collision note below.
  *
  * @param manual
  * @returns
@@ -1628,12 +1659,21 @@ function handleManualAux(manual: HTMLElement): Iterable<Node> | Node {
     // Bible citations, but manual labels reverse that priority and resolve to
     // the reference, because manual labels are primarily intended for
     // references; their use for Bible citations is incidental and rare.
-    // As of the time of writing, the collisions are `Am` / `AM`, `AP`, and
-    // `PS`. `AP` and `PS` have Bible-only counterparts (`Ap` / `Apoc`,
-    // `Ps` / `Pss`) that a contributor can use to force the Bible reading, so
-    // the only real victim is Amos: its only abbreviations, `Am` and `AM`,
-    // both resolve to Actes des Martyrs, with no unambiguous alternative.
-    // The `log.error` below flags any such label at build / test time.
+    // As of the time of writing, the collisions are `Am` / `AM`, `AP`, `PS`
+    // and `Pr` — the same set that `replaceMatch` sends down the Bible-first
+    // fallback. None of them is stranded, because the collision is only on
+    // the BARE abbreviation. `AP`, `PS` and `Pr` have Bible-only counterparts
+    // (`Ap` / `Apoc`, `Ps` / `Pss`, `Pro`) that a contributor can use to force
+    // the Bible reading. `Am` / `AM` have none — but the `ref.MAPPING` lookup
+    // below is on the WHOLE key, so carrying the chapter is enough to force
+    // Amos: `Am 4` is not a declared postfix composition, so it misses the
+    // reference map, falls to the Bible branch, and reads its chapter
+    // straight out of the key. That is just the documented `{Bk C V}` form
+    // with the verse left off, and it is the fix wherever Crum cites a
+    // chapter alone — `(cf Am 4 above)` under ϩⲁϫⲱ⸗ (2364), pointing at
+    // his own `Am 4 7` earlier on the page — which `Citation.valid` refuses
+    // automatically, since one number is neither zero numbers nor two.
+    // The `log.warn` below flags any such label at build / test time.
     const reference: ref.Reference | undefined = ref.MAPPING[key];
     if (reference) {
       if (key in BIBLE_MAPPING) {

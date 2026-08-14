@@ -314,22 +314,8 @@ def replace_manual(match: regex.Match[str]) -> str:
 
     A manual label overrides the enrichment heuristics for one span of text,
     and it is the fix for most findings, since the algorithm is mature enough
-    that what remains is usually an error in Crum's text that no heuristic can
-    resolve. The counterpart on the front-end is `handleManualAux` in
-    `docs/crum/wiki.ts`. The notations:
-
-    - `{text}{}` suppresses. An empty key means "leave this text alone", and
-      is the fix for a false positive.
-    - `{text}{Abb}` forces a reference. `Abb` must be a variant in `bib.yaml`.
-    - `{text}{Bk C V}` forces a Bible citation, e.g. `{ib 26}{Jud 19 26}`, or
-      `{Heb 11 38}{He}`.
-    - `{text}{full form}` forces an annotation. The key is displayed as the
-      tooltip text, e.g. `{pl}{plate}`.
-    - `{text}`, with no key, infers: a reference if the text opens with one,
-      otherwise a dangling suffix resolved against its antecedent.
-
-    NOTE: Manual labels resolve reference-first — the reverse of the automatic
-    priority in `replaceMatch` — so a manual `Am` / `AM` can not mean Amos.
+    that what remains is usually an inconsistency in Crum's text that no
+    heuristic can resolve.
 
     NOTE: Footnotes share the brace notation with manual labels, so the same
     token can not take both. A footnoted error therefore can not also have its
