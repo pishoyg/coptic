@@ -407,9 +407,12 @@ const BIBLE_FOLLOWUP = new RegExp(
 // Instead of using a generic expression for Roman numerals, we only include
 // those roman numerals that we know are present in the book, to minimize the
 // chances of false positives.
-const NUM_COL_LINE = `(${['[0-9]+', ...book.ROMAN_PAGES].join('|')})(?: ([ab])(?: \\d+(?: (?:up|above))?)?)?\\b`;
-const PAGE_RE = new RegExp(`^p{1,2} ${NUM_COL_LINE}`);
+const NUM_COL_LINE = `(${['[0-9]+', ...book.ROMAN_PAGES].join('|')})(?: ([ab])(?: \\d+)?)?(?: (?:up|above))?\\b`;
+const PAGE_RE = new RegExp(`^p{1,2}\\.? ${NUM_COL_LINE}`);
 const PAGE_FOLLOWUP_RE = new RegExp(`^(, )${NUM_COL_LINE}`);
+// MANUAL_PAGE_RE parses the page number and column out of the text content of a
+// manually-keyed page followup (e.g. "98 b", "108 a 2 above").
+const MANUAL_PAGE_RE = new RegExp(`^${NUM_COL_LINE}`);
 
 // Roman-numeral pages of the Preface and the List of Abbreviations in the
 // Crum book scan. The `Index` override table in `crum/book.ts` resolves
@@ -1554,6 +1557,9 @@ function replaceSemicolon(context: html.Context): void {
 }
 
 const DATA_KEY = 'key';
+// PAGE_KEY is the manual key marking a page followup, whose text carries the
+// page number and column instead of a reference or Bible citation.
+const PAGE_KEY = 'PAGE';
 /**
  *
  * @param manual
@@ -1582,6 +1588,13 @@ function handleManualAux(manual: HTMLElement): Iterable<Node> | Node {
   if (key === '') {
     // An empty key indicates that this should not be annotated.
     return manual.childNodes;
+  }
+
+  if (key === PAGE_KEY) {
+    // The text is a page followup, which lacks the "p" prefix that
+    // `replacePage` keys on. The page number and column live in the text, and
+    // the whole element becomes the hyperlink.
+    return handleManualPage(manual);
   }
 
   // NOTE: We don't split the suffix out of manually-labeled references, the
@@ -1667,6 +1680,25 @@ function handleManualAux(manual: HTMLElement): Iterable<Node> | Node {
   const cit: Citation = Citation.fromAnchor(antecedent);
   cit.update(cv?.[1], cv?.[2]);
   return cit.anchor(...manual.childNodes);
+}
+
+/**
+ *
+ * @param manual
+ * @returns
+ */
+function handleManualPage(manual: HTMLElement): Iterable<Node> | Node {
+  const match: RegExpExecArray | null = MANUAL_PAGE_RE.exec(manual.textContent);
+  if (!match) {
+    log.error('Unable to parse a page out of a manual page label', manual);
+    return manual.childNodes;
+  }
+  const a: HTMLElement = html.anchor(
+    paths.crumScan(`${match[1]!}${match[2] ?? ''}`),
+    ...manual.childNodes
+  );
+  a.classList.add(cls.PAGE);
+  return a;
 }
 
 /**
