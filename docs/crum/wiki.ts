@@ -310,6 +310,40 @@ const NUMBER_GROUP = `(?: ${NUMBER}| ?\\(${NUMBER}(?: ${NUMBER})*\\))`;
 // 's v' stands for 'sub voce', and is a valid suffix, so we account for that.
 const SUFFIX_END = '(?<!\\b(?:p?l|(?<!\\bs )v))';
 
+// SUFFIX ABSORPTION: how much of the trailing text each element type swallows.
+//
+// A citation trails tokens that locate it more precisely: numbers, but also
+// `l c` (*loco citato*), `above`, `inf` (*infra*). How many of them end up
+// INSIDE the enriched element differs by type, and the differences are
+// deliberate.
+//
+// - Reference (`SUFFIX`, below) is the liberal one. A `.reference` span names a
+//   work; it does not point into it. Its suffix is therefore inert payload —
+//   whatever is swallowed rides along inside the span without having to be
+//   understood — and `Reference.suffixAnnotations` spells out any abbreviation
+//   among it, so swallowing one costs the reader nothing.
+//
+// - Bible (`CHAPTER_VERSE`, `BIBLE_FOLLOWUP`) is the strict one. A `.bible`
+//   anchor is a hyperlink to one verse, built out of the chapter and verse it
+//   parsed, so it can only take in what it can resolve into those. `l c` and
+//   `above` are a component of the citation's location just as much as the
+//   numbers are, but not one we can aim a link at, so they are left outside the
+//   element and enriched on their own — `l c` as an annotation, `above` as
+//   plain text.
+//
+// - Page (`NUM_COL_LINE`) sits in between, and draws its line at whether the
+//   token needs spelling out. `above` is absorbed: it is plain English, and
+//   `replacePage` leaves it out of the scan key anyway. `inf` is not, though it
+//   says the same thing, because a `.page` anchor — like `.bible`, and unlike
+//   `.reference` — has no way to spell an abbreviation out from within itself.
+//   Left outside, `inf` falls through to the annotation rung of `replaceMatch`
+//   and earns an *infra* tooltip; absorbed, it would sit in the link text
+//   unexplained. We would rather explain it.
+//
+// The only abbreviations spelled out from inside a non-`.reference` element are
+// the two hardcoded in `Citation.anchor`: `ib` (*ibidem*), and a verse that is
+// itself an annotation (`tit` / `subscr`, the non-numeric branch of `NUMS`).
+
 // DIRECTION is Crum's cross-reference adverb, pointing at another place in the
 // dictionary: "J 76 above", "Tri below". It closes a suffix, and belongs to
 // the citation, but it is deliberately NOT a suffix token in NUMBERS:
@@ -322,6 +356,10 @@ const SUFFIX_END = '(?<!\\b(?:p?l|(?<!\\bs )v))';
 // A followup must still carry a number of its own, so DIRECTION alone can not
 // open one: the "above" in "BIF 20 223 & above ⲉⲓⲟⲩⲉ" is a fresh
 // cross-reference to another entry, not a continuation of the BIF citation.
+//
+// This token is reference-only. A Crum page absorbs "above" through
+// `NUM_COL_LINE`'s own branch, and a Bible citation absorbs neither adverb.
+// See SUFFIX ABSORPTION above.
 const DIRECTION = '(?: (?:above|below))';
 
 // SUFFIX matches a reference suffix together with any followups that trail it,
@@ -364,6 +402,10 @@ const SUFFIX = new RegExp(
  *
  * In another singleton occurrence (in ⲁⲥⲕ – 503), the chapter and verse numbers
  * are parenthesized, so we account for that.
+ *
+ * Nothing beyond these numbers is taken in. Trailing tokens that also locate
+ * the citation — `l c`, `above` — stay outside the `.bible` element, unlike
+ * their treatment in a reference suffix. See SUFFIX ABSORPTION above.
  */
 const NUMS = '(\\d+|[A-F])(?: (\\d+|tit|subscr))?';
 // CHAPTER_VERSE matches "NUMS" OR "(NUMS)".
@@ -427,6 +469,8 @@ const BIBLE_FOLLOWUP = new RegExp(
 // 'below' as an optional suffix.
 // 'up', following the line number, means that the lines should be counted from
 // the bottom up.
+// 'above' is absorbed here, but 'inf', which says the same thing in
+// abbreviated form, deliberately is not. See SUFFIX ABSORPTION above.
 const NUM_COL_LINE = `(${['[0-9]+', ...book.ROMAN_PAGES].join('|')})(?: ([ab])(?: \\d+(?: up)?)?)?(?: above)?\\b`;
 const PAGE_RE = new RegExp(`^p{1,2}\\.? ${NUM_COL_LINE}`);
 const PAGE_FOLLOWUP_RE = new RegExp(`^(, )${NUM_COL_LINE}`);
