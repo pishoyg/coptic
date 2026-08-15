@@ -1534,6 +1534,15 @@ export function enrich(root: HTMLElement): void {
   const chains = function* (): Generator<Node[]> {
     let chain: Node[] = [];
     for (const node of walk(root)) {
+      if (node.nodeType === Node.TEXT_NODE && !node.nodeValue) {
+        // The walk above happened before any enrichment, and `suffixFollowups`
+        // empties the text nodes whose whole content it takes into a reference
+        // suffix. Such a node has nothing left to enrich, and `Chain` can't
+        // munch a node with no text, so it must not be seated in a chain.
+        // TODO: (#0) Ideally, you would remove such nodes from the tree.
+        continue;
+      }
+
       if (node instanceof Element && node.classList.contains(cls.MANUAL)) {
         if (chain.length > 0) {
           yield chain;
