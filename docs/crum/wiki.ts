@@ -1932,16 +1932,18 @@ function replaceAnaphor(
  *     own predecessors on the flat chain. For an addendum it additionally never
  *     crosses into the other half: a `<del>` element stays within `<del>`, an
  *     `<ins>` element within `<ins>`.
+ *
  *   - A wrapper merely ENCOUNTERED along the walk is yielded whole (its own
  *     class never matches an antecedent query) and stepped over; we never
- *     descend into its contents. For an addendum this is deliberate: an `ib`
- *     outside it was written against the original, uncorrected text, so the
- *     corrected text in the `<ins>` half must be ignored during this pass.
- *     Ideally we would still look inside the `<del>` half, which holds that
- *     original text and could therefore contain the `ib`'s true antecedent —
- *     but a case where an `ib`'s antecedent lives in obsolete (deleted) text
- *     has never been encountered in real data, so we skip the whole addendum
- *     for simplicity. A footnoted span is skipped the same way, but its
+ *     descend into its contents.
+ *
+ *     Cases where an anaphor has its antecedent in an addendum, while they do
+ *     occur (e.g. under ⲟⲩⲉⲓⲛⲓⲛ – 523), are extremely rare. And resolving them
+ *     programmatically is awkward: it's not clear whether the <ins> or <del>
+ *     element should contain the true antecedent. We therefore skip the whole
+ *     addendum, keeping the walk simple, and label those `ib`s by hand instead.
+ *
+ *     A footnoted span is skipped the same way, but its
  *     content is real, current text rather than corrected/obsolete text, so a
  *     citation buried in it could legitimately be a later `ib`'s antecedent.
  *     We guard against that editorially: when adding footnotes to the data, we
