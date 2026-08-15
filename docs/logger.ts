@@ -69,25 +69,24 @@ export function warn(...message: unknown[]): void {
 }
 
 // NOTE: Aim to avoid expensive sanity checks in production code. Instead, only
-// execute them in developer mode or unit tests. See `dev.ts`.
-// Cheaper validations are OK to execute outside developer mode.
+// execute them in a development environment. See `dev.ts`.
+// Cheaper validations are OK to execute anywhere.
 
 /**
- * Log an error message, or throw an exception if under test.
+ * Log an error message, or throw an exception in a development environment.
  *
- * - If this is a test (unit or Playwright; see `dev.test`), throw an exception.
- * - If this is a user session, simply log an error message to the console.
+ * - If this is a development environment (see `dev.dev`), throw an exception.
+ * - Otherwise, simply log an error message to the console.
  *
  * Use the `error` method to report errors, and add graceful recovery logic
- * following the error message. In a production environment, the function would
- * log the message, and the recovery code would be executed.
- * However, under test, an exception would be thrown, alerting us to the error
- * and giving us an opportunity to fix it.
+ * following the error message. In a plain user session, the function logs the
+ * message and the recovery code is executed. In a development environment, the
+ * exception alerts us to the error, giving us an opportunity to fix it.
  *
  * @param {...any} message - Message to log.
  */
 export function error(...message: unknown[]): void {
-  print(Colors.RED, Colors.PURPLE, 'error', dev.test(), ...message);
+  print(Colors.RED, Colors.PURPLE, 'error', dev.dev(), ...message);
 }
 
 /**

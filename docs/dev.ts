@@ -28,13 +28,27 @@ enum CLS {
 }
 
 /**
- * @returns Whether we are running under a test harness in a
- * Playwright-controlled browser (E2E tests).
+ * @returns Whether this is a development environment, rather than a plain user
+ * session. Errors should be loud, and sanity checks should run, in all three:
  *
- * Playwright sets `navigator.webdriver` to true in the browsers it drives.
+ * - A Playwright-controlled browser (E2E tests), which sets
+ *   `navigator.webdriver`.
+ * - Node, or a Node-compatible runtime, where the Node artifacts run browser
+ *   code under a headless DOM (see
+ *   `dictionary/marcion_sourceforge_net/wiki.ts`).
+ * - Developer mode (see `get`).
+ *
+ * NOTE: Neither the DOM globals nor `navigator` identify the Node runtime.
+ * jsdom installs `window`, `document`, and `localStorage`, and Node defines
+ * `navigator`, without `webdriver`.
  */
-export function test(): boolean {
-  return typeof navigator !== 'undefined' && navigator.webdriver;
+export function dev(): boolean {
+  return (
+    (typeof navigator !== 'undefined' && navigator.webdriver) ||
+    (typeof process !== 'undefined' &&
+      typeof process.versions.node === 'string') ||
+    get()
+  );
 }
 
 /**
@@ -100,13 +114,13 @@ export class Highlighter extends high.Highlighter {
 }
 
 /**
- * If running under a test harness (see `test`) or in developer mode, execute
- * the given function. Otherwise, do nothing and return undefined.
+ * If this is a development environment (see `dev`), execute the given
+ * function. Otherwise, do nothing and return undefined.
  *
  * @param f
  * @returns
  *
  */
 export function play<T>(f: () => T): T | undefined {
-  return test() || get() ? f() : undefined;
+  return dev() ? f() : undefined;
 }
