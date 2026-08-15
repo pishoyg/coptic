@@ -339,6 +339,18 @@ def replace_manual(match: regex.Match[str]) -> str:
     return rf'<span class="{cls.MANUAL}" {DATA_KEY}="{key}">{text}</span>'
 
 
+def replace_stack(match: regex.Match[str]) -> str:
+    bottom, up = match.groups()
+    if bottom == "ν" and up == "ο":
+        log.fatal("Nomisma sign encoded as a stack! Use", "U+1018E")
+    return (
+        f'<span class="{cls.STACK}">'
+        f'<span class="{cls.STACK_BOTTOM}">{match.group(1)}</span>'
+        f'<span class="{cls.STACK_TOP}">{match.group(2)}</span>'
+        r"</span>"
+    )
+
+
 OPEN_SUBPARAGRAPH: str = f'<span class="{cls.SUBPARAGRAPH}">'
 CLOSE_SUBPARAGRAPH: str = "</span>"
 OPEN_PARAGRAPH: str = "<p>"
@@ -403,14 +415,7 @@ _SUBSTITUTIONS: list[Substitution] = [
         replace_dialect,
         ban=["[[", "]]", "^"],
     ),
-    Substitution(
-        r"(\p{Letter})\^\^(\p{Letter})",
-        rf'<span class="{cls.STACK}">'
-        rf'<span class="{cls.STACK_BOTTOM}">\1</span>'
-        rf'<span class="{cls.STACK_TOP}">\2</span>'
-        r"</span>",
-        ban=["^^"],
-    ),
+    Substitution(r"(\p{Letter})\^\^(\p{Letter})", replace_stack, ban=["^^"]),
     Substitution(r"\^([-–—\w\p{Letter}]+)", r"<sup>\1</sup>", ban=["^"]),
     Substitution(
         r"\\n",
