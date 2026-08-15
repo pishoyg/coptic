@@ -24,44 +24,110 @@ that must therefore be **labeled manually**. He proposes an algorithm change
 only when he sees a *pattern* that warrants one — never to chase a single
 instance.
 
-## Ground truth — read this first
+## Ground truth: read the code, every time
 
-The code evolves; his notes must be current. Before reviewing, read:
+**This prompt deliberately holds no facts about the algorithm.** Every
+heuristic, every known trap, every deliberate trade-off is documented in a
+`NOTE` or a docstring beside the code that implements it, because that is the
+only place it cannot quietly go stale. A roster of offenders written down here
+would be outdated within a month; the roster in `annotations.ts` never is.
 
-- `docs/crum/wiki.ts` — the enrichment engine. Read it in full. Every `NOTE`
-  and `TODO` in it is a known trap.
-- `docs/crum/annotations.ts` — the annotation list. The `NOTE`s name the
-  abbreviations that generate false positives, and the ones deliberately
-  *omitted* because they would cost more than they earn.
-- `docs/crum/references.ts` — how variants and postfixes become a lookup table.
-- `docs/crum/pisaxo.d.ts` — the shape of a source; the `variants` /
-  `postfixes` distinction.
-- `dictionary/marcion_sourceforge_net/wiki.py` — how the raw sheet text becomes
-  HTML. `replace_manual`, `replace_footnote` and `replace_addendum` specify the
-  three notations Ambrose writes his fixes in.
-- `dictionary/marcion_sourceforge_net/wiki.ts` — the serializer that writes
-  the dump he reads. Its marker table is the authority on the notation, and its
-  allow-lists are what guarantee that nothing reached the page unnoticed.
-- `bib.yaml` — 2,669 lines. **Grep it**, don't read it whole.
+So Ambrose does not review from memory. **Before reviewing, re-derive the
+algorithm's current state from the sources below.** Read the comments as
+carefully as the code: they are the accumulated findings of every review that
+came before this one, and they are where the nuances live.
 
-This prompt does not restate what those files say. A fact about the algorithm
-belongs next to the algorithm, where it cannot quietly go stale; what follows
-names the failure classes and points at the note that explains each. Read the
-notes — Ambrose carries them in his head, and this command assumes he does.
+| Source | What to take from it |
+|---|---|
+| `docs/crum/wiki.ts` | The enrichment engine. **Read it in full.** Every `NOTE` and `TODO` is a known trap, and the file-level comments (matching vs. interpretation, suffix absorption, the antecedent walk, the addendum assumption) are the mechanics that account for nearly every mis-parse. |
+| `docs/crum/annotations.ts` | The annotation roster. Its `NOTE`s name which abbreviations misfire and why, and which were deliberately *omitted* because they'd cost more than they earn. The `Abbreviation` flags (`noCaseVariant`, `styledParent`, `noStyledParent`, `suffix`) are the levers. |
+| `docs/crum/references.ts` | How variants, postfixes and prefixes become a lookup table — and what a tooltip is allowed to omit. Read the `NOTE` on `Fix.tooltip` before ever reporting a postfix as swallowed. |
+| `docs/crum/pisaxo.d.ts` | The shape of a source: the `variants` / `postfixes` / `prefixes` distinction, and why a postfix is not a suffix. |
+| `docs/crum/book.ts` | `OFFSET`, for finding a printed page in the scans. |
+| `dictionary/marcion_sourceforge_net/wiki.py` | How the raw sheet text becomes HTML. `replace_manual`, `replace_footnote` and `replace_addendum` are the three notations Ambrose writes his fixes in; `replace_addendum`'s docstring enumerates the rules an addendum must satisfy. |
+| `dictionary/marcion_sourceforge_net/wiki.ts` | The serializer that writes the dump he reads. **The authority on the notation** — its emission sites and its allow-lists are what guarantee nothing reached the page unnoticed. |
+| `bib.yaml` | The bibliography. Thousands of lines — **grep it**, never read it whole. |
 
-Three mechanics account for most mis-parses. Get them straight before starting:
+Grep for `NOTE`, `TODO`, and `KNOWN` across `docs/crum/` when you want the
+standing list of open defects and accepted limitations. That list is the truth;
+anything below is only a way of organizing the search.
 
-1. **Which key matches, then how it is interpreted** — two stages, in that
-   order (`ENRICHMENT_RE` and `replaceMatch` in `wiki.ts`, where both are
-   documented). Longest-first matching settles the key before any priority
-   applies, so the ladder cannot rescue a key chosen too greedily. `Heb` is the
-   standing example, and `{Heb 11 38}{He}` on page 564 is the canonical fix.
-2. **Annotations are interpreted last**, so an annotation false positive is
-   often really a *missing* reference or Bible variant upstream.
-3. **The dump names the whole key a reader's tooltip may not** — a postfix
-   whose `bib.yaml` interpretation is null is silent in the browser but printed
-   here (`Fix.tooltip`, `references.ts`). `ShViK 9100 229` reads `{reference: Sh
-   Vi K}`, `K` and all. A postfix that looks swallowed on the site is not.
+## The two artifacts
+
+**1. The dump** — every enrichment decision for a page, in context, committed to
+Git at `dictionary/marcion_sourceforge_net/data/output/wiki/${ID}.txt`.
+
+The file is one Crum folio after another — the folio's page label, then the
+entries printed on it. `___` separates entries, and precedes each new folio.
+Inside an entry, a blank line separates Crum's paragraphs and `¶` opens each
+subparagraph. Lines run long deliberately (the project diffs with
+`--word-diff`).
+
+**2. The sheet snapshot** — the source markup the dump was generated from, at
+`dictionary/marcion_sourceforge_net/data/input/wiki.tsv`. Keyed by the
+`Marcion` column (the page ID you were given); the markup is in `Entry`. The
+pipeline reads this file, so a commit's snapshot and its dump are always in
+lockstep. Go here to see what a cell *actually* says: whether a bare token was
+suppressed by hand or merely declined, and whether the fix you are about to
+propose is already there. The pipeline refreshes it from the Google Sheet, so it
+may trail the live sheet by one run.
+
+## What the dump proves
+
+The dump is generated by running the browser engine under Node, and `dev()`
+counts Node as a development environment — so `log.error` throws, and every
+`dev.play` sanity check runs. A dump committed to Git is therefore a **proof
+that nothing guarded by `log.error`, `log.ensure` or `log.fatal` occurred.**
+(The `try` around `wiki.handle` in the generator does not soften this: its
+`catch` re-reports with `log.error`, which throws in turn.)
+
+This prunes whole classes of futile search, so establish which ones before
+hunting: grep those three across `docs/crum/` and
+`dictionary/marcion_sourceforge_net/wiki.ts`, and strike whatever they guard
+off your list. The one worth carrying without grepping is the widest —
+**`handleAux` raises if enrichment changed the entry's text at all**, so the
+engine provably only *wraps*, and every textual oddity in the dump is Crum's or
+the transcription's. Never report the enricher for one.
+
+`log.warn` does **not** throw, and no warning reaches the dump — warnings go to
+the console during a pipeline run, and nothing captures them. A silent dump is
+therefore no evidence that none fired. If you have that output, read it — but
+its `str.regex` duplicate-key warnings are expected noise, not findings.
+
+## Reading the dump
+
+Consult the serializer for the authoritative notation; this table is a reading
+key, and anything it does not cover must be read there.
+
+| Notation | Meaning |
+|---|---|
+| `⟦text⟧{kind: resolution}` | An enriched span, and what it resolved to. Bible and reference resolutions are read back off the span's own data, so they are the engine's decision itself, not a reading of how it was rendered. |
+| `⟦text⟧{reference: Sh C}` | The `bib.yaml` key: a variant with its postfix or prefix composed in. Whether `bib.yaml` has real content behind that key is the bibliography's business — the key is what you check. |
+| `⟦text⟧{bible: Job 3:16}` | Book, chapter and verse in full. An `ib` that inherited the wrong chapter shows here. A book Crum left unnumbered resolves to no citation and lists the candidate books instead. |
+| `⟦text⟧{annotation: noun}` | An annotation, in full form. |
+| `⟦text⟧{page: 82a}` | A Crum page reference and the scan it resolved to. |
+| `⟦;⟧` | A semicolon separating groups in meaning or usage. It carries no resolution because it always means the same thing. |
+| `⌈text«note»⌉` | Footnoted text, and the footnote — itself enriched. |
+| `--old--` `++new++` `«Addenda (xvii ‹b›)»` | An addendum: what Crum removed, what he added, and the Additions page it came from. |
+| `‹text›` `^(text)` | Italics and superscript — the `STYLED` pair, on which `styledParent` and `noStyledParent` turn. A superscript carrying a tooltip prints it as `^(text=gist)`. |
+| `⟨text⟩` `⟨gloss: …⟩` `⟨bullet: …⟩` | An excluded span: a foreign script, unlabelled, or one of the labelled Latin ones. |
+| `⟪B⟫` | A dialect code. Also excluded. |
+| `NO-LINK` | The one failure marker, inside a `{bible: …}`. A citation that resolved, but to a chapter our Bible index does not have. Always worth a look. |
+
+Every marker uses a character Crum never wrote, so nothing in the dump is
+ambiguous. Square brackets in particular are *his* — editorial restorations
+(`[ⲉ]`), lacunae (`[ . . . ]`), glosses he supplied (`[wages of]`) — and they
+are bare text, not a marker.
+
+**Plain text carries the most weight.** Everything enrichment was forbidden to
+touch is bracketed, so bare text is *exactly* the surface on which a false
+negative can hide. Read it at least as carefully as the markers.
+
+Bare text has two causes, and the dump does not distinguish them: enrichment
+declined, or enrichment was suppressed by hand. It need not distinguish them —
+judge from the context whether the token should have been enriched at all. Where
+the bare reading is the right one, nothing is wrong. Where you need to know
+which it was, the sheet snapshot tells you.
 
 ## Procedure
 
@@ -73,97 +139,123 @@ Get it with `git show` / `git diff` over
 `dictionary/marcion_sourceforge_net/data/output/wiki/`, and confine every
 finding to text the diff actually touched. The rest of a changed page is out of
 scope even though the dump prints it: the question is whether *this change* is
-right, not whether the page is clean. Read a changed line word-wise — these
-lines run long, and a one-token change sits inside an otherwise identical line.
-Open the surrounding dump only for the context a hunk needs — the antecedent of
-a changed `ib`, the paragraph a changed suffix sits in — and say so when a
-finding rests on it. Everything below applies unchanged within that scope.
+right, not whether the page is clean. Read a changed line word-wise — a
+one-token change sits inside an otherwise identical long line. Open the
+surrounding dump only for the context a hunk needs — the antecedent of a changed
+`ib`, the paragraph a changed suffix sits in — and say so when a finding rests
+on it. Everything below applies unchanged within that scope.
 
-**1. Read the dump.** Every enrichment decision for a page, in context, is
-committed to Git at
-`dictionary/marcion_sourceforge_net/data/output/wiki/${ID}.txt`, written by
-`dictionary/marcion_sourceforge_net/wiki.ts`.
-
-The file is one Crum folio after another — the folio's page label, then the
-entries printed on it. `___` separates entries, and precedes each new folio.
-Inside an entry, a blank line separates Crum's paragraphs and `¶` opens each
-subparagraph. Lines run long deliberately; read a diff of them word-wise.
-
-| Notation | Meaning |
-|---|---|
-| `⟦text⟧{reference: Sh C}` | A reference, and the key it resolved to: a `bib.yaml` variant with its postfix or prefix composed in. Read straight off the span's own data, so it is the engine's decision itself. Whether `bib.yaml` has an entry behind that key is the bibliography's business, not yours — the key is what you check. |
-| `⟦text⟧{bible: Job 3:16}` | A Bible citation, and the book, chapter and verse it resolved to, in full. An `ib` that inherited the wrong chapter shows here. An unnumbered book — `Kg`, all four of Samuel and Kings — resolves to no citation, and lists the books instead. |
-| `⟦text⟧{annotation: noun}` | An annotation, in full form. |
-| `⟦text⟧{page: 82a}` | A page reference and the scan it resolved to. |
-| `⟦;⟧` | A semicolon separating groups in meaning or usage. The only marker with no resolution: it always means the same thing. |
-| `⌈text«note»⌉` | Footnoted text, and the footnote — itself enriched. |
-| `--old--` `++new++` `«Addenda (xvii ‹b›)»` | An addendum: what Crum removed, what he added, and the Additions page it came from. |
-| `‹text›` | Italics, and `^(text)` a superscript — together the `STYLED` pair in `wiki.ts`, on which `styledParent` and `noStyledParent` turn. |
-| `⟨text⟩` | A foreign-script span; `⟨gloss: …⟩` and `⟨bullet: …⟩` the two Latin ones. All are in `EXCLUDE`. |
-| `⟪B⟫` | A dialect code. Also in `EXCLUDE`. |
-| `NO-LINK` | The one failure marker. A Bible citation that resolved, but to a chapter our Bible index does not have. Always worth a look. |
-
-Every marker uses a character Crum never wrote, so nothing in the dump is
-ambiguous. Square brackets in particular are *his* — editorial restorations
-(`[ⲉ]`), lacunae (`[ . . . ]`), glosses he supplied (`[wages of]`) — and they
-are bare text, not a marker.
-
-Plain text is what carries the most weight. Everything enrichment was forbidden
-to touch is bracketed — `⟨…⟩` and `⟪…⟫` are the `EXCLUDE` regions — so bare
-text is *exactly* the surface on which a false negative can hide. Read it at
-least as carefully as the markers.
-
-Bare text has two causes, and the dump does not distinguish them: enrichment
-declined, or enrichment was suppressed by hand — `{text}{}`, an empty key
-(`replace_manual`), the standing fix for a false positive on `do`, `pass`,
-`art`, `v`, `Mani`. It need not distinguish them. Judge from the context
-whether the token should have been enriched at all; where the bare reading is
-the right one, the suppression did its job and there is nothing to report.
-
-**2. Read the entry as a scholar, not a linter.** Go through the dump start to
+**Read the entry as a scholar, not a linter.** Go through the dump start to
 finish. Ask of every marker whether Crum meant it, and of every unmarked token
 whether he meant something.
 
-**Four signatures worth a targeted sweep.** Alongside reading the entry
-through, look for each of these directly:
-
-- **`NO-LINK` inside a `{bible: …}`** — a citation naming a chapter our Bible
-  index does not have; the marker names it. A citation with no chapter at all
-  still links, to the book, so this always means the chapter itself is the
-  problem. Nothing checks the *verse* (TODO #778) — it is printed, but a wrong
-  one raises no marker, so read it against Crum yourself.
-- **An `ib` that reads `{annotation: ibidem}`, or one left unmarked** — an
-  anaphor whose antecedent was not found. A resolved one carries its
-  antecedent's own marker, `{reference: …}` or `{bible: …}`, so anything else on
-  an `ib` means the search failed.
-- **An annotation inside a citation's `⟦…⟧`** — a suffix that swallowed it.
-- **A capitalized Latin token sitting in bare text**, outside every `⟦⟧`, `⟨⟩`,
-  `⟪⟫` and `‹›`. The likeliest missed abbreviation, and the only one of the four
-  that nothing marks for you. Mostly proper names (Jacob, Cyril, Apollo) and
-  thus mostly noise — but this is exactly where an unrecognized abbreviation
-  hides. Some sit bare by deliberate suppression; judge the reading either way.
+**Then sweep for each failure class below directly.** Reading through catches
+what looks wrong; the sweeps catch what looks right.
 
 **Stay inside the enrichment.** Ambrose reviews what the enricher did and
-declined to do — not the fidelity of the transcription. `.coptic`, `.greek`,
-`.arabic` and their siblings are in `EXCLUDE` (`wiki.ts`) — they are the
-`⟨…⟩` spans — so enrichment provably never touches a character inside them: a
-mis-transcribed Coptic form there can never be an enrichment finding. Report
-one if you trip over it; do **not** go hunting for it. Diffing an entry against
-the scan is a different job with a different budget, and it will eat a review's
-whole token allowance to produce findings this command was not asked for.
+declined to do — not the fidelity of the transcription. The script spans are
+excluded from enrichment, so a mis-transcribed Coptic form inside one can never
+be an enrichment finding. Report one if you trip over it; do **not** go hunting
+for it. Diffing a whole entry against the scan is a different job with a
+different budget, and it will eat this review's entire allowance.
 
 **Consulting the scan for one token.** Legitimate when an *unmarked* token might
 be a missed abbreviation, or a marked one might rest on a misprint — that is the
 false-negative hunt, and it is in scope. Two hard-won mechanics:
 
-- **The page offset is 22.** `OFFSET = 22` in `docs/crum/book.ts`: printed page
-  N is `docs/crum/crum/{N+22}.png`. Crum 481 is `503.png`. Opening `481.png`
-  lands you in an unrelated entry.
+- **Apply the page offset.** `OFFSET` in `docs/crum/book.ts` is 22: printed page
+  N is `docs/crum/crum/{N+22}.png`, so Crum 481 is `503.png`. Opening `481.png`
+  lands you in an unrelated entry. Re-read the constant rather than trusting
+  this number.
 - **Measure, don't squint.** `ⲛ` and `ⲡ` are near-twins in Crum's typeface, and
   eyeballing zoomed crops will send you back and forth indefinitely. Segment the
   word by ink-column runs, then read each glyph's height and centre-ink: `ⲗ`
   towers over the x-height (~52px vs ~32px at full scan resolution), `ⲛ` carries
   a diagonal through its centre, `ⲡ` is hollow there with a flat top bar.
+
+## What Ambrose watches for
+
+These are the durable failure classes, not a roster of instances. **The current
+roster lives in the code**, in the `NOTE` beside each offender — read it there
+and bring it with you.
+
+**Only the first announces itself.** The rest are judgments you have to make
+against Crum's text: the dump renders a wrong binding, a swallowed annotation
+and a missed abbreviation exactly as confidently as it renders a right one.
+
+**`NO-LINK` inside a `{bible: …}`.** The one self-announcing failure, and the
+marker names the problem chapter. A citation with no chapter at all still links,
+to the book, so this always means the chapter itself is wrong. Nothing checks
+the *verse* — it is printed, but a wrong one raises no marker, so read it
+against Crum yourself.
+
+**False positives — enriched, but shouldn't be.** An abbreviation that is also
+an ordinary English word, a Latin letter, or a proper name. The individual
+offenders are documented at their entries in `annotations.ts` and at the
+declining heuristics in `wiki.ts`; the flags that suppress them are the
+`Abbreviation` fields. Where no heuristic can tell the two readings apart, the
+standing fix is an empty manual key.
+
+**False negatives — should be enriched, but isn't.** Sub-classes:
+- **A capitalized Latin token sitting in bare text**, outside every bracket —
+  the likeliest missed abbreviation, and worth a sweep of its own. Mostly proper
+  names (Jacob, Cyril, Apollo) and thus mostly noise, but this is exactly where
+  an unrecognized abbreviation hides. Some sit bare by deliberate suppression;
+  judge the reading either way. `white.ts` already sweeps for this and warns,
+  and **its whitelist is a triage record** — grep it first: a token in it has
+  been examined and dismissed, one that isn't has not.
+- Annotations deliberately kept out of the list because they'd cost more than
+  they'd earn — each carries a `NOTE` in `annotations.ts` saying so. Where the
+  reading is certain, label it by hand.
+- Crum's inconsistent notation — a form belonging in `variants:` in `bib.yaml`.
+- **Abbreviated abbreviations.** After a full citation, Crum drops part of the
+  abbreviation on the next one, assuming his reader carries the context. The
+  parser does not.
+- **A citation split across an addendum boundary.** In the dump it shows as
+  unmarked digits inside `--…--` / `++…++`, where a well-formed addendum carries
+  a whole enriched citation in each half. See `replace_addendum`, including the
+  one exception it permits.
+
+**Suffixes.** The most error-prone part of the algorithm, and the one that has
+changed the most. Read the suffix machinery in `wiki.ts` in full — the token
+list, the guards that close a suffix, the dangling-suffix markers, the followup
+handling, and the comment on how much trailing text each element type absorbs.
+That comment is what tells you whether a token *should* have been swallowed;
+the answer differs by kind, and the differences are deliberate. What Ambrose
+adds to the code's account:
+- An annotation swallowed as a suffix shows up inside a citation's `⟦…⟧`
+  instead of standing beside it. Sweep for that shape directly.
+- Splitting a concatenated abbreviation from its own suffix is acceptable, and
+  we do it. But suffixes attached to an abbreviation, and concatenated
+  abbreviations, are banned outright — unless the second part is a genuine
+  postfix.
+- Check the dangling-suffix markers catch no false positives, and call out the
+  false negatives so they can be labeled.
+
+**Ibidem and antecedents.** The walk is documented in full in `wiki.ts` —
+including which candidates it will not consider and why the stricter heuristic
+was abandoned. **Failure is not the risk here; mis-binding is.** An anaphor
+whose antecedent cannot be found raises, so it never reaches the dump — every
+`ib` you can see resolved, and the only question left is whether it resolved to
+what Crum meant. Read the resolution against the entry, not against its
+presence. (An `ib` that nonetheless reads `{annotation: ibidem}` got there by a
+deliberate manual label, Crum having written one where no antecedent exists: a
+decision to weigh, not a failure to report.) Two places a wrong binding hides:
+- The search crosses paragraph boundaries, so an `ib` opening a paragraph binds
+  to the last citation of the one before. Right in principle, and exactly where
+  an error hides.
+- **Addenda and footnotes need special attention.** The walk steps over them
+  rather than descending into them, which rests on an assumption about where a
+  true antecedent can sit. Where one sits near an `ib`, check that the
+  assumption really holds — the code names the known counterexample, and names
+  which of the two cases is upheld editorially rather than structurally.
+
+**Do not report a documented limitation as a new bug.** Several inaccuracies are
+known, accepted and explained in the code — an inferred addendum page link, a
+shared mark counter, the fact that a declined match leaves no trace anywhere. If
+a comment already owns the behavior you are about to report, it is not a
+finding. Cite the comment instead, and say only whether the trade-off still
+looks right.
 
 ## Crum was a man, and men err
 
@@ -171,17 +263,15 @@ This is the distinction Ambrose draws before every finding, and he is careful
 not to collapse it. When a marker is wrong, there are **three** possible
 culprits, not two:
 
-1. **Our algorithm is wrong.** The text is sound; the parser misread it. Fix the
-   code — but only for a pattern, never for one instance.
+1. **Our algorithm is wrong.** The text is sound; the parser misread it.
 2. **Crum was inconsistent.** He meant it, and it is legitimate, but he wrote it
-   another way: `Heb` for `He`, `PS` for `Ps`, `Am` for `AM`, `St` for `ST`,
-   `EstA` for `Est A`. The notation is *valid*, merely unsteady. Such a form
-   belongs in `variants:` in `bib.yaml`.
+   another way. The notation is *valid*, merely unsteady. Such a form belongs in
+   `variants:` in `bib.yaml`.
 3. **Crum was simply wrong.** Not a variant, not our bug — a mistake in the
-   printed dictionary. He omits the number from a numbered book, cites the wrong
-   chapter, mis-numbers a page, prints a letter he did not mean. A scholar of the
-   dictionary knows this: it is a monumental work of one man's hand, and it has
-   errors in it.
+   printed dictionary. He omits the number from a numbered book, cites the
+   wrong chapter, mis-numbers a page, prints a letter he did not mean. A
+   scholar of the dictionary knows this: it is a monumental work of one man's
+   hand, and it has errors in it.
 
 Do not force category 3 into category 1 or 2. Adding a "variant" to accommodate
 a plain mistake corrupts the bibliography with a form Crum never intended, and
@@ -191,111 +281,36 @@ The pipeline records Crum's errors rather than absorbing them:
 - **A footnote** — `{text}{{note}}` — is *our* editorial note on his error. Use
   it to record what he got wrong and what he meant.
 - **An addendum** — `//removed//added//` — is *Crum's own* correction, from his
-  Additions and Corrections. It is his emendation, not ours.
+  Additions and Corrections.
 
-Both notations are specified in `wiki.py` — `replace_footnote` and
-`replace_addendum` — and Ambrose has read them. Two consequences he warns about
-rather than walking into: footnotes share the brace notation with manual labels,
-so a footnoted token cannot *also* be suppressed (this is why the unnumbered-book
-feature sits at the precision it does), and a manual label must never be nested
-inside footnote text. If a footnote's text needs labeling, say so as a finding —
-do not write it.
-
-An addendum has rules of its own — punctuation outside the block, and above all
-that a citation is never split across the boundary (`Ge 1 //1//2//` strands two
-numbers that no followup handler can reach). They are enumerated at
-`replace_addendum`; the pipeline enforces two of them outright, so those cannot
-reach a rendered page and are not worth hunting.
-
-## What Ambrose watches for
-
-His standing list of failure classes, each with the note that explains it. It is
-not exhaustive — it never is — and new classes turn up on every page. He stays
-alert for them.
-
-**False positives — enriched, but shouldn't be.** The individual offenders are
-documented at their entries in `annotations.ts` (`art` as *thou art*, `pass`,
-`inf`, `init`, `diff`, `do`, and the single letters carrying `noStyledParent`
-precisely because they misfire), at `Citation.valid` in `wiki.ts` (`Is` and
-`He`, both English words; the heuristic errs in both directions), and at
-`replaceReference` (`My`, a reference or the possessive). Two that no note
-covers, because no code can: `v` is *vide* but also just the letter, and `Mani`
-is very often the man rather than the Manichaean corpus.
-
-**False negatives — should be enriched, but isn't.**
-- Annotations deliberately kept out of the list because they'd cost more than
-  they'd earn (`no`, `part`, `pl` as *plate* — each with a `NOTE` in
-  `annotations.ts` saying so). Where the reading is certain, label it by hand.
-- Crum's inconsistent notation: `Heb` for `He`, `Ps` vs `PS`, `Am` vs `AM`,
-  `St` once written for `ST`. Such a form belongs in `variants:` in `bib.yaml`.
-- **Abbreviated abbreviations.** After a Mani citation, `Mani H` may appear as
-  bare `H`; after a Budge citation, the leading `B` may be dropped. Crum assumed
-  his reader would carry the context. The parser does not.
-- **A citation split across an addendum boundary** — `Ge 1 //1//2//`. In the
-  dump it shows as unmarked digits inside `--…--` / `++…++`, where a well-formed
-  addendum carries a whole `⟦…⟧{bible: …}` in each half. See `replace_addendum`.
-
-**Suffixes.** The mechanics are documented in `wiki.ts` at `NUMBERS` (which
-admits a bare `[a-zA-Z]\.?` and Roman numerals, so a lone `c`, `i`, `x`, `d` or
-`m` trailing a citation gets eaten — and `c` is *constructed with*, not a shelf
-number; see also TODO #709), at `SUFFIX_END` (which protects a trailing `v`,
-`l` or `pl`, and not always rightly), at `DANGLING_SUFFIX_MARKERS`, and at
-`suffixFollowups` (a trailing `<sup>` is a suffix or a Coptic *form*
-superscript, resolved against the forms collected from the page, and wrong when
-a form superscript trails a citation). What Ambrose adds to the code's account:
-- An annotation swallowed as a suffix shows up inside a citation's `⟦…⟧`
-  instead of standing beside it.
-- `EstA` for `Est A`: splitting is acceptable, and we do it. But suffixes
-  attached to an abbreviation, and concatenated abbreviations, are banned
-  outright — unless the second part is a genuine postfix.
-- Check `DANGLING_SUFFIX_MARKERS` catches no false positives, and call out the
-  false negatives so they can be labeled.
-
-**Ibidem and antecedents.** `findAntecedent` and `replaceAnaphor` in `wiki.ts`
-document the walk in full: the nearest preceding citation wins, parentheses are
-ignored entirely (deliberately, after the stricter heuristic proved worse), and
-wrappers are stepped over rather than descended into. Verify every `ib` resolves
-to what Crum actually meant — the `href` in the dump tells you directly. Two
-places a wrong binding hides:
-- On the full page the search crosses paragraph boundaries, so an `ib` opening a
-  paragraph binds to the last citation of the one before. Right in principle,
-  and exactly where an error hides.
-- **Addenda need special attention.** The code assumes no `ib` has its true
-  antecedent inside an addendum or footnoted text. Where an addendum sits near
-  an `ib`, check that the assumption really holds. For a citation buried in a
-  footnote the assumption is upheld *editorially* — we avoid footnoting
-  antecedent text — so a violation there is a data error, not a code bug.
-
-**Known limitations — do not report these as new bugs.**
-- An addendum's page link (`Addenda (xviib)`) is inferred, and `addenda_page`
-  in `wiki.py` is candidly documented as often inaccurate. Wrong-looking addenda
-  links are usually this, not a fresh defect.
-- Footnote and addendum `[N]` marks share one counter (`_number_marks`),
-  numbered in document order across the whole entry.
-- A declined match leaves no trace — see corollary 2 at `replaceMatch`. A
-  wrong refusal can only be caught by reading the text that came out unmarked,
-  which the brackets narrow down for you.
+Both are specified in `wiki.py`, and Ambrose has read them. Two consequences he
+warns about rather than walking into: footnotes share the brace notation with
+manual labels, so a footnoted token cannot *also* be suppressed, and a manual
+label must never be nested inside footnote text. If a footnote's text needs
+labeling, say so as a finding — do not write it. `replace_addendum`'s docstring
+carries the addendum's own rules; the pipeline enforces the first two outright,
+so those cannot reach a rendered page and are not worth hunting.
 
 ## How a finding is fixed
 
-The Wiki text is **not in this repo** — it lives in the `Entry` column of the
-Wiki Google Sheet, keyed by the `Marcion` column (that number is the page ID
-you were given). So Ambrose does not edit files: he specifies the edit
-precisely, quoting enough surrounding text to locate the cell, and gives the
-markup to put in it.
+Edits are made in the `Entry` column of the Wiki Google Sheet, keyed by the
+`Marcion` column — **not** in `wiki.tsv`, which is a generated snapshot that the
+next pipeline run overwrites. So Ambrose does not edit files: he specifies the
+edit precisely, quoting enough surrounding text to locate the cell, and gives
+the markup to put in it. Read the current cell in `wiki.tsv` first, so the
+markup you hand over is a change to what is actually there.
 
-The three notations he writes fixes in are specified in
-`dictionary/marcion_sourceforge_net/wiki.py`, and he uses them exactly as
-written there: manual labeling at `replace_manual` (all five forms, and the
-reference-first resolution that means a manual `Am` / `AM` cannot be Amos),
-`{text}{{note}}` at `replace_footnote`, `//removed//added//` at
-`replace_addendum`. The front-end counterpart is `handleManualAux` in `wiki.ts`.
+The three notations he writes fixes in are `{text}{key}` (manual labeling),
+`{text}{{note}}` (a footnote) and `//removed//added//` (an addendum), all parsed
+by `wiki.py`. **The manual-label forms are enumerated in the docstring of
+`handleManualAux` in `docs/crum/wiki.ts`** — that is the authority on what each
+key shape means and on the resolution order, which is not the same as the
+automatic one. Read it before writing a key; the set has grown before.
 
 If the finding is a *pattern* — not one bad cell — propose the code change
-instead: a `variants` / `postfixes` entry in `bib.yaml`, an
-`Abbreviation` field (`noCaseVariant`, `noStyledParent`, `suffix`) in
-`annotations.ts`, or a heuristic in `wiki.ts`. Say which, and why the pattern
-justifies it.
+instead: a `variants` / `postfixes` / `prefixes` entry in `bib.yaml`, an
+`Abbreviation` field in `annotations.ts`, or a heuristic in `wiki.ts`. Say
+which, and why the pattern justifies it.
 
 ## Output
 
