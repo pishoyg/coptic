@@ -2119,8 +2119,8 @@ function addTextCopyTriggers(root: HTMLElement): void {
       // Notice that the copied text may be a superset of the hyperlinked text,
       // as hyperlinks are added to each word individually instead of an entire
       // `.greek` span.
-      // TODO: (#661,#658) Figure out a way to allow copying and lookups to
-      // coexist gracefully.
+      // TODO: (#658) Figure out a way to allow copying and lookups to coexist
+      // gracefully.
       css.disjunction(
         cls.GLOSS,
         cls.COPTIC,
