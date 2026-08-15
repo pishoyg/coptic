@@ -803,10 +803,6 @@ async function main(): Promise<void> {
     return;
   }
 
-  // The whole corpus. Start from an empty directory so that a page which
-  // stops existing does not leave its dump behind.
-  fs.rmSync(OUTPUT_DIR, { recursive: true, force: true });
-  fs.mkdirSync(OUTPUT_DIR, { recursive: true });
   const jobs: number = Math.min(os.availableParallelism(), keys().length);
   const workers: childProcess.ChildProcess[] = Array.from(
     { length: jobs },
