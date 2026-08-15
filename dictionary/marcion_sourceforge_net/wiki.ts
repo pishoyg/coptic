@@ -747,7 +747,11 @@ async function generate(
   for (const key of pages) {
     const file: string = path.join(LEXICON_DIR, `${key}.html`);
     load(fs.readFileSync(file, 'utf8'));
-    wiki.handle(document.body);
+    try {
+      wiki.handle(document.body);
+    } catch (cause: unknown) {
+      log.error('Failed to enrich', key, 'Cause:', cause);
+    }
     // Some pages don't contain a `.wiki` element.
     const text: string = new Serializer(key, unknown, engine).page();
     if (text) {
