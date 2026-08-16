@@ -216,6 +216,7 @@ const NUMBERS = [
   // It must be followed by an integer, otherwise it's a false positive.
   'no [0-9]+',
   '§\\d*',
+  'line',
   'scala',
   'Scala',
   'stele',
