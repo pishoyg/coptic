@@ -2132,7 +2132,8 @@ function* backtrack(
   }
 }
 
-const ANTECEDENT_QUERY: string = css.disjunction(cls.BIBLE, cls.REFERENCE);
+const ANTECEDENTS: string[] = [cls.BIBLE, cls.REFERENCE];
+const ANTECEDENT_QUERY: string = css.disjunction(...ANTECEDENTS);
 
 /**
  * The parenthesis nesting of the backward walk RELATIVE TO THE ANAPHOR.
@@ -2187,26 +2188,42 @@ function nesting(text: string, nest: Nesting): Nesting {
 }
 
 /**
+ * @param one - A candidate antecedent.
+ * @param another - Another candidate antecedent.
+ * @returns Whether the two are citations of the same kind — both Bible
+ * citations, or both references.
+ */
+function sameKind(one: HTMLElement, another: HTMLElement): boolean {
+  return ANTECEDENTS.some(
+    (klass: string): boolean =>
+      one.classList.contains(klass) && another.classList.contains(klass)
+  );
+}
+
+/**
  * Find the antecedent of an anaphor — the nearest already-enriched Bible
  * citation or reference that precedes `start` in document order, with one
- * exception: an anaphor standing outside every parenthesis prefers a BIBLE
- * citation outside them all to a REFERENCE buried inside one.
+ * exception: when a parenthesis INTERRUPTS a running citation, the anaphor
+ * resumes the citation standing outside the parenthesis rather than the one
+ * buried inside it.
  *
- * That exception is the whole rule, and it is narrow on purpose. Crum's
- * commonest shape is a Bible citation, then a parenthesis naming the edition a
- * variant reading comes from, then an 'ib' resuming the Bible book:
+ * A parenthesis is read as interrupting, rather than continuing, the running
+ * citation by the KIND of citation it holds. Crum's commonest shape is a Bible
+ * citation, then a parenthesis naming the edition a variant reading comes from,
+ * then an 'ib' resuming the Bible book:
  * 'Mt 20 5 [S][F] ⲧϫⲡ- (PMich 539, [B] ⲛⲁϫⲡ-) περὶ ὥ., ib 27 45', where
- * 'ib 27 45' is Mt 27:45 and not a page of P Mich. The parenthesis holds a
- * witness; the running citation it interrupts is the Bible one. That shape
- * alone accounted for 35 mis-bindings, all in the same direction.
+ * 'ib 27 45' is Mt 27:45 and not a page of P Mich. Its mirror is just as real:
+ * a reference, then a parenthesis citing the scripture a passage echoes, then
+ * an 'ib' resuming the reference's pages:
+ * 'BMis 413 ⲛⲧⲛⲡⲟⲣϫⲛ ⲉⲛⲁⲑⲏ (cf Phil 3 13), ib 140', where 'ib 140' is page 140
+ * of B Mis — Philippians 3 has 21 verses, so 'Phil 3 140' cannot be meant. In
+ * both, the parenthesis holds an aside of the OTHER kind. A parenthesis holding
+ * the SAME kind is continuing the running series instead, and there the nearer
+ * (buried) candidate is the right one: in 'ⲡϣⲱⲛⲧⲉ (Lant 44), ⲡϣⲁⲛⲧⲉ (ib 49)'
+ * the 'ib' is Lant, though an earlier reference stands outside every
+ * parenthesis.
  *
  * NOTE:
- * - The buried candidate must be a reference and the outer one a Bible
- *   citation. Where BOTH are references, the parenthesis is holding the running
- *   citation rather than interrupting it, and the nearer (buried) one is right:
- *   in 'ⲡϣⲱⲛⲧⲉ (Lant 44), ⲡϣⲁⲛⲧⲉ (ib 49)' the 'ib' is Lant, though an earlier
- *   reference stands outside every parenthesis. Some 30 entries take this
- *   shape, against the 35 above.
  * - The anaphor must not sit inside a parenthesis itself (`enclosed`). A
  *   parenthetical aside resumes the citation of the aside before it, not the
  *   running text around them both: in 'ⲫⲁⲛⲓϫⲱⲓⲧ (C 86 161) = ⲡⲓⲉⲍⲍⲉⲓⲑⲟⲩⲛ
@@ -2246,44 +2263,29 @@ function findAntecedent(start: Node | null | html.Context): HTMLElement | null {
       ? backtrack(start.first(), start)
       : backtrack(start);
 
-  // The nearest candidate, returned unless the exception above overrides it.
+  // The nearest candidate, once the walk has found one buried in a parenthesis
+  // and gone on looking for the outer one that may override it.
   let nearest: HTMLElement | null = null;
   let nest: Nesting = { depth: 0, enclosed: false };
 
   for (const node of candidates) {
-    if (!(node instanceof HTMLElement && node.matches(ANTECEDENT_QUERY))) {
-      // (Normally we would use `Element` in the check above, but we use
-      // `HTMLElement` to appease the linter and avoid a few type casts below.)
+    // (Normally we would use `Element` in the check above, but we use
+    // `HTMLElement` to appease the linter and avoid a few type casts below.)
+    if (node instanceof HTMLElement && node.matches(ANTECEDENT_QUERY)) {
+      if (nest.depth === 0 || nest.enclosed) {
+        // The walk stands at the anaphor's own level, so this candidate is the
+        // outer one. It resumes the running citation — and wins — unless it is
+        // of the same kind as the buried candidate, in which case the two
+        // belong to one series and the nearer of them is the antecedent.
+        return nearest && sameKind(node, nearest) ? nearest : node;
+      }
 
+      nearest ??= node;
       // This is not a candidate. Just update parenthesis nesting.
-      nest = nesting(node.textContent ?? '', nest);
       continue;
     }
 
-    if (nearest && nest.depth === 0) {
-      // Only the first candidate standing outside the parenthesis matters, and
-      // it takes over only if it is the Bible citation the parenthesis
-      // interrupted.
-      return node.classList.contains(cls.BIBLE) ? node : nearest;
-    }
-
-    // NOTE: KNOWN: Once `nearest` is set, the walk falls through to here while
-    // still inside the parenthesis, so a Bible citation SHARING that
-    // parenthesis with `nearest` is returned, though it is neither the nearest
-    // candidate nor an outer one. Guarding it takes an `else`, but the shape it
-    // would guard — '(Bible … Ref) ib' with the anaphor outside the
-    // parenthesis — does not occur.
-    if (
-      nest.depth === 0 ||
-      nest.enclosed ||
-      node.classList.contains(cls.BIBLE)
-    ) {
-      // Nothing overrides the nearest candidate. Take it.
-      return node;
-    }
-
-    nearest ??= node;
-    nest = nesting(node.textContent, nest);
+    nest = nesting(node.textContent ?? '', nest);
   }
 
   return nearest;
