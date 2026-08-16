@@ -307,11 +307,25 @@ const NOT_CONFUSABLE_REFERENCE = `(?! (?:${Object.keys(ref.MAPPING)
 const NUMBER = `(?:${NUMBERS.join('|')})`;
 const NUMBER_GROUP = `(?: ${NUMBER}| ?\\(${NUMBER}(?: ${NUMBER})*\\))`;
 
-// A suffix never ends with 'v', 'l', or 'pl'. As of the time of writing, no
-// such suffix is known to exist. Following a reference, these are annotations
-// for 'vide', 'legendum', or 'plural', rather than part of the suffix.
-// 's v' stands for 'sub voce', and is a valid suffix, so we account for that.
-const SUFFIX_END = '(?<!\\b(?:p?l|(?<!\\bs )v|V))';
+// Suffix do not usually end with 'v', 'V', 'l', or 'pl'.
+// Following a reference, these are annotations for 'vide' ('V' being the same
+// word opening a sentence), or for 'legendum' or 'plural', rather than part of
+// the suffix. 's v' stands for 'sub voce', and is a valid suffix, so we account
+// for that.
+//
+// A lone 'I' is the English pronoun whenever an English verb follows it, which
+// is how Crum introduces the sense of a citation ("BM 592 I wrote thee",
+// "J 70 6 I am about to"). It is a genuine Roman numeral otherwise, as in
+// "BerlSitz '33 I, Taf 1", so the lowercase lookahead is what separates the
+// two, and it must stay specific to 'I': the letters above close a suffix no
+// matter what follows them, and 'V' is in fact followed by a capitalized word
+// ("BM 528 n. V Crum AZ 65").
+//
+// The '\b' confines all of this to a letter standing on its own, which is what
+// keeps the Roman numerals matching: the final 'I' of 'II', 'III', or 'VI',
+// and the 'V' of 'IV', are all preceded by a word character, so no word
+// boundary precedes them, and the lookbehind doesn't fire.
+const SUFFIX_END = '(?<!\\b(?:p?l|(?<!\\bs )v|V|I(?= [a-z])))';
 
 // SUFFIX ABSORPTION: how much of the trailing text each element type swallows.
 //
@@ -733,7 +747,20 @@ function falsePositive(key: string, context: html.Context): boolean {
     return true;
   }
 
-  if (key === 'do' && context.right.startsWith(' not')) {
+  // 'do' is the ditto annotation, but also the English verb. A ditto never
+  // follows an infinitive marker or an auxiliary, and it is never negated, so
+  // these readings are certain. The reverse doesn't hold: an English 'do' can
+  // sit exactly where a ditto sits (after a dialect code or a citation), and a
+  // ditto can be followed by an English word ("C 86 73 B do of 25 years"), so
+  // the rest of the false positives are suppressed through manual labeling.
+  if (
+    key === 'do' &&
+    (context.right.startsWith(' not') ||
+      ['to ', 'will ', 'thou ', 'ye '].some((token: string): boolean =>
+        context.left.endsWith(token)
+      ))
+  ) {
+    // False positive!
     return true;
   }
 
