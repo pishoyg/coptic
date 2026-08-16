@@ -309,7 +309,7 @@ const NUMBER_GROUP = `(?: ${NUMBER}| ?\\(${NUMBER}(?: ${NUMBER})*\\))`;
 // such suffix is known to exist. Following a reference, these are annotations
 // for 'vide', 'legendum', or 'plural', rather than part of the suffix.
 // 's v' stands for 'sub voce', and is a valid suffix, so we account for that.
-const SUFFIX_END = '(?<!\\b(?:p?l|(?<!\\bs )v))';
+const SUFFIX_END = '(?<!\\b(?:p?l|(?<!\\bs )v|V))';
 
 // SUFFIX ABSORPTION: how much of the trailing text each element type swallows.
 //
