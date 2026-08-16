@@ -2023,6 +2023,15 @@ function replaceAnaphor(
  *     are careful not to wrap text that serves as the antecedent of a
  *     following `ib`, so a footnote never conceals a true antecedent.
  *
+ * The last two branches hop to a container and then descend into it. Both
+ * SELECT that container with `previousElementSibling` / `lastElementChild`, to
+ * skip the whitespace text nodes between adjacent `<span>`s and `<p>`s — a text
+ * node there has no children to walk into, so the hop would dead-end. But both
+ * DESCEND with `lastChild`, deliberately, so that a subparagraph's trailing
+ * text is walked rather than skipped: `findAntecedent` reads the text between
+ * the candidates to track parenthesis nesting, and `lastElementChild` would
+ * silently drop every parenthesis standing after a subparagraph's last element.
+ *
  * Termination: every branch returns either null or a node that strictly
  * precedes `node` in document order. In particular the wrapper branch searches
  * from `parentElement`, so it can only return a STRICT ancestor — never `node`
@@ -2050,17 +2059,19 @@ function previous(node: Node | null): Node | null {
       css.disjunction(cls.ADDENDUM, cls.FOOTNOTED)
     ) ??
     // Move to the previous subparagraph. Use `previousElementSibling` to
-    // skip the whitespace text node between adjacent `<span>`s.
-    node?.parentElement?.previousElementSibling?.lastElementChild ??
+    // skip the whitespace text node between adjacent `<span>`s, but land on
+    // its `lastChild`. See the note below on the final step.
+    node?.parentElement?.previousElementSibling?.lastChild ??
     // Move to the previous paragraph. Use `previousElementSibling` to skip
     // the whitespace between adjacent `<p>`s, and `lastElementChild` to
-    // skip trailing whitespace inside that previous `<p>`.
+    // skip trailing whitespace inside that previous `<p>` and descend into
+    // its last subparagraph.
     // This cross-paragraph hop is suppressed when `crossParagraphs` is false.
     // This can be used on views where some paragraphs are dropped, making the
     // preceding `<p>` an unreliable antecedent.
     (ambient.crossParagraphs
       ? node?.parentElement?.parentElement?.previousElementSibling
-          ?.lastElementChild?.lastElementChild
+          ?.lastElementChild?.lastChild
       : null) ??
     null
   );
