@@ -251,3 +251,7 @@ kindle: FORCE
 mobi_publish: FORCE
 	echo -e "$${YELLOW}Work in progress!$${RESET}"
 endif
+
+########## SITEMAP ##########
+sitemap: FORCE
+	./sitemap.py
