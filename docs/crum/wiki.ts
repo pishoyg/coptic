@@ -1127,6 +1127,11 @@ export class Citation {
     // This heuristic is based on known examples (#524), but other cases might
     // turn up in the text that violate these rules. See #709.
     // The check is skipped when the parse context is not provided.
+    // Where it rejects a true positive — a book cited bare, as in
+    // "Ps 62 2 (S ⲉ-), Is Hos l l c" (14) or "2 Cor He Thes" (31) — label it
+    // manually, repeating the abbreviation as the key: `{Is}{Is}`, `{He}{He}`.
+    // Manual labels bypass this method entirely, so the key restores the
+    // citation the heuristic threw away.
     if (['He', 'Is'].includes(this.abb)) {
       if (remainder === undefined) {
         // We can not detect false positives without the context. Assume true
@@ -1754,12 +1759,30 @@ function handleManual(manual: HTMLElement): void {
  *   `{Heb 11 38}{He}`. The chapter and verse are optional; whatever the key
  *   omits is read out of the text instead.
  * - `{text}{full form}` forces an annotation. The key is displayed as the
- *   tooltip text, e.g. `{pl}{plate}`.
+ *   tooltip text, e.g. `{pl}{plate}`. Expanding an abbreviation is the
+ *   commonest use, but not the only one: `{ib}{ibidem}` forces the LITERAL
+ *   reading of an anaphor, and is the fix wherever an `ib` points at
+ *   something that is not a citation at all — 'ⲥ. ⲕⲟⲩⲓ ‹v› ib ⟨B⟩' (174),
+ *   where it means this same entry, or an erratum quoting Crum's own text
+ *   (1780). Without it the anaphor binds to whatever citation precedes.
  * - `{text}{98b}` forces a page link. The key is the page — a page number
  *   followed by its column — and the whole text becomes the hyperlink,
- *   e.g. `{Sheet 15}{1756a}`.
+ *   e.g. `{98 _b_}{98b}`. Note that this really is the WHOLE text:
+ *   `{108 a 2 above}{108a}` (368) makes 'above' part of the link, so keep
+ *   the span down to the page reference itself unless the wider text is
+ *   meant to be clickable.
  * - `{text}`, with no key, infers: a reference if the text opens with one,
  *   otherwise a dangling suffix resolved against its antecedent.
+ *
+ * A `{text}{Abb}` label and a `variants:` entry in `bib.yaml` both teach us to
+ * read an abbreviation Crum spelled his own way, and they are not
+ * interchangeable. A spelling that is unambiguous WHEREVER it occurs belongs
+ * in `bib.yaml`, where it is fixed once for the whole lexicon. A spelling that
+ * is only correct in context, or that Crum used once, has to be a manual
+ * label: `{P 42}{Mani P}` reads `P` as the Manichaean Psalm-Book, which is
+ * true inside a Manichaean entry and false everywhere else, and `{PMd}{PMéd}`
+ * repairs a single dropped accent that as a global variant would invite false
+ * positives.
  *
  * An explicit key is resolved reference-first — the reverse of the automatic
  * priority in `replaceMatch` — which is what makes the chapter in `{Am 4}`
