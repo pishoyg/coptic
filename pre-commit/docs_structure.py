@@ -135,6 +135,8 @@ PATTERNS: list[Pattern] = [
         ["bible/epub/*"],
         required=False,
     ),  # Epub files are not tracked in Git.
+    # Auto-generated (sitemap):
+    Pattern(["sitemap.xml"]),
     # Garbage:
     Pattern([".DS_Store", "**/.DS_Store"], required=False, print_=False),
 ]
