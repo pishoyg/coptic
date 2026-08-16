@@ -703,17 +703,11 @@ function annotation(
 const STYLED = 'i, sup';
 
 /**
- *
+ * @param key
  * @param context
  * @returns
  */
-function replaceAnnotation(context: html.Context): void {
-  const key: string = context.match[0];
-  const annot: ann.Annotation | undefined = ann.MAPPING[key];
-  if (!annot) {
-    log.fatal("Can't find annotation:", key);
-  }
-
+function falsePositive(key: string, context: html.Context): boolean {
   // The question mark is a very common annotation, and punctuation mark. We use
   // a simple heuristic to distinguish the two. Even if heuristic yields false
   // negative annotations, false negatives are deemed more
@@ -725,7 +719,7 @@ function replaceAnnotation(context: html.Context): void {
     !['(', ' '].some((token) => context.left.endsWith(token))
   ) {
     // False positive!
-    return;
+    return true;
   }
 
   if (
@@ -733,6 +727,29 @@ function replaceAnnotation(context: html.Context): void {
     (context.right.startsWith(' thou') || context.left.endsWith('thou '))
   ) {
     // False positive!
+    return true;
+  }
+
+  if (key === 'do' && context.right.startsWith(' not')) {
+    return true;
+  }
+
+  return false;
+}
+
+/**
+ *
+ * @param context
+ * @returns
+ */
+function replaceAnnotation(context: html.Context): void {
+  const key: string = context.match[0];
+  const annot: ann.Annotation | undefined = ann.MAPPING[key];
+  if (!annot) {
+    log.fatal("Can't find annotation:", key);
+  }
+
+  if (falsePositive(key, context)) {
     return;
   }
 
