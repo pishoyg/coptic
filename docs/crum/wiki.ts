@@ -93,6 +93,8 @@ const DAN_OVERRIDE: Record<string, string> = {
   Bel: 'C',
   'Dan Vis 14': 'D',
   'Dan vis 14': 'D',
+  'Dan Vis xiv': 'D', // Only once.
+  'Dan vis xiv': 'D', // Does not occur, added for completion!
 };
 
 // UNNUMBERED_BIBLE_BOOK is a set of names of multi-part Bible books, with the
