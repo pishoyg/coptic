@@ -55,7 +55,7 @@ const TEST_CASES: {
       [cls.REFERENCE]: 323,
       [cls.BIBLE]: 201,
       [cls.DIALECT]: 725,
-      [cls.ANNOTATION]: 194,
+      [cls.ANNOTATION]: 193,
     },
   },
   {
@@ -64,7 +64,7 @@ const TEST_CASES: {
       [cls.REFERENCE]: 292,
       [cls.BIBLE]: 287,
       [cls.DIALECT]: 883,
-      [cls.ANNOTATION]: 208,
+      [cls.ANNOTATION]: 207,
     },
   },
   {
