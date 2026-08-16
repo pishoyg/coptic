@@ -2075,7 +2075,7 @@ function previous(node: Node | null): Node | null {
 function* backtrack(
   node: Node | null,
   context?: html.Context
-): Generator<Element> {
+): Generator<Node> {
   // Candidates are gathered from two roots, because the preceding elements are
   // split across two trees at this point in enrichment:
   // 1. The already-enriched elements of the CURRENT chain live in the
@@ -2097,8 +2097,8 @@ function* backtrack(
   // one of those trees. (The fragment's nodes were *moved*, not copied, out of
   // the live tree as they were enriched.)
   //
-  // Note the asymmetry: walk 1 is a plain `previousElementSibling` loop with
-  // none of the addendum/footnoted wrapper handling that `previous` applies in
+  // Note the asymmetry: walk 1 is a plain `previousSibling` loop with none of
+  // the addendum/footnoted wrapper handling that `previous` applies in
   // walk 2. It needs none, because the fragment is flat by construction.
   // `enrich`'s `walk` descends INTO wrappers and only ever chains their leaf
   // contents (text and `<i>` atoms), never the wrapper elements themselves, and
@@ -2109,36 +2109,118 @@ function* backtrack(
   // fragment's top level. Wrappers stay intact only in the live tree, which is
   // why only walk 2 has to climb out of and step over them.
   for (
-    let elem: Element | null | undefined = context?.fragmentLastElementChild;
-    elem;
-    elem = elem.previousElementSibling
+    let child: Node | null | undefined = context?.fragmentLastChild;
+    child;
+    child = child.previousSibling
   ) {
-    yield elem;
+    yield child;
   }
 
   while ((node = previous(node))) {
-    if (node instanceof Element) {
-      yield node;
-    }
+    yield node;
   }
 }
 
 const ANTECEDENT_QUERY: string = css.disjunction(cls.BIBLE, cls.REFERENCE);
+
+/**
+ * The parenthesis nesting of the backward walk RELATIVE TO THE ANAPHOR.
+ */
+interface Nesting {
+  /**
+   * How many parentheses have opened and closed again between the anaphor and
+   * the walk's current position. Zero means the walk stands at the anaphor's
+   * own level; a positive depth means it is buried in a parenthesis that closed
+   * before the anaphor.
+   */
+  depth: number;
+  /**
+   * Whether the walk has stepped out of a parenthesis that encloses the anaphor
+   * itself — a '(' with no ')' of its own to close.
+   */
+  enclosed: boolean;
+}
+
+/**
+ * Accumulate the nesting across `text`.
+ *
+ * The walk reads the text backwards, so a ')' opens a parenthesis and a '('
+ * closes it. A '(' at depth zero closes nothing: it is the one enclosing the
+ * anaphor, so it raises `enclosed` and leaves the depth alone rather than
+ * driving it negative. That is what confines the depth to candidates BURIED
+ * relative to the anaphor — everything beyond such a '(' stands at a level the
+ * anaphor shares or sits inside. Letting the depth go negative instead would
+ * make this the symmetric depth comparison that was tried and abandoned (see
+ * `findAntecedent`).
+ *
+ * @param text - The text just traversed.
+ * @param nest - The nesting accumulated by the walk up to `text`.
+ * @returns The nesting accumulated including `text`.
+ */
+function nesting(text: string, nest: Nesting): Nesting {
+  let { depth, enclosed } = nest;
+
+  for (let i = text.length - 1; i >= 0; --i) {
+    if (text[i] === ')') {
+      ++depth;
+    } else if (text[i] === '(') {
+      if (depth === 0) {
+        enclosed = true;
+      } else {
+        --depth;
+      }
+    }
+  }
+
+  return { depth, enclosed };
+}
+
 /**
  * Find the antecedent of an anaphor — the nearest already-enriched Bible
- * citation or reference that precedes `start` in document order.
+ * citation or reference that precedes `start` in document order, with one
+ * exception: an anaphor standing outside every parenthesis prefers a BIBLE
+ * citation outside them all to a REFERENCE buried inside one.
  *
- * NOTE: The heuristic is known to be faulty due to the fact that parentheses
- * are completely ignored. Earlier versions tracked parenthesis depth and
- * refused to return a candidate that lay at a different depth than the anaphor
- * — the idea being that a citation buried inside parentheses is unlikely to be
- * what a following `ib` refers to — falling back to a depth-agnostic search
- * only when the stricter criterion found nothing. That heuristic produced
- * numerous errors, so it was removed: we now always return the nearest matching
- * candidate regardless of parentheses. We lack statistics, but our impression
- * is that ignoring parentheses entirely produces fewer errors. The remaining
- * errors — ibidem citations whose first preceding reference or Bible citation
- * is not the true antecedent — are fixed by manual labeling. See #709, #511.
+ * That exception is the whole rule, and it is narrow on purpose. Crum's
+ * commonest shape is a Bible citation, then a parenthesis naming the edition a
+ * variant reading comes from, then an 'ib' resuming the Bible book:
+ * 'Mt 20 5 [S][F] ⲧϫⲡ- (PMich 539, [B] ⲛⲁϫⲡ-) περὶ ὥ., ib 27 45', where
+ * 'ib 27 45' is Mt 27:45 and not a page of P Mich. The parenthesis holds a
+ * witness; the running citation it interrupts is the Bible one. That shape
+ * alone accounted for 35 mis-bindings, all in the same direction.
+ *
+ * NOTE:
+ * - The buried candidate must be a reference and the outer one a Bible
+ *   citation. Where BOTH are references, the parenthesis is holding the running
+ *   citation rather than interrupting it, and the nearer (buried) one is right:
+ *   in 'ⲡϣⲱⲛⲧⲉ (Lant 44), ⲡϣⲁⲛⲧⲉ (ib 49)' the 'ib' is Lant, though an earlier
+ *   reference stands outside every parenthesis. Some 30 entries take this
+ *   shape, against the 35 above.
+ * - The anaphor must not sit inside a parenthesis itself (`enclosed`). A
+ *   parenthetical aside resumes the citation of the aside before it, not the
+ *   running text around them both: in 'ⲫⲁⲛⲓϫⲱⲓⲧ (C 86 161) = ⲡⲓⲉⲍⲍⲉⲓⲑⲟⲩⲛ
+ *   (ib 173)' the 'ib' is C, however many Bible citations precede.
+ * - Depth is relative to the anaphor and never goes negative (see
+ *   `nesting`), so a candidate is skipped only when it is nested
+ *   deeper than the anaphor, never when it is nested less deeply. An earlier
+ *   version of this heuristic tracked absolute depth and refused any candidate
+ *   at a depth different from the anaphor's; that rejected the outer candidate
+ *   whenever the anaphor itself sat inside a parenthesis — usually exactly the
+ *   right antecedent — and it produced numerous errors, so it was removed.
+ *
+ * NOTE: KNOWN: The nesting of a wrapper — an addendum's <del>/<ins> or a
+ * footnoted span — is counted twice. `previous` yields the wrapper only once
+ * the walk has gone through its interior sibling by sibling, so its text has
+ * already been accounted for; counting the wrapper itself adds that text again,
+ * along with the part of it that follows the anaphor. `nesting` is not
+ * idempotent on unbalanced text, so this can inflate the depth or raise
+ * `enclosed` for an anaphor sitting inside a wrapper whose antecedent lies
+ * outside it. No entry currently binds differently for this reason, and
+ * guarding it costs a `contains` check per node, so it is left alone.
+ *
+ * The nearest candidate is still returned whenever the exception does not
+ * apply, so this can only reorder the candidates, never lose them: an anaphor
+ * that resolved before still resolves. See #709, #511.
  *
  * @param start - one of two forms, matching the two ways anaphors are enriched:
  * - An `html.Context`, for elements enriched inside the chain machinery. The
@@ -2148,18 +2230,52 @@ const ANTECEDENT_QUERY: string = css.disjunction(cls.BIBLE, cls.REFERENCE);
  * @returns the antecedent, or null if none precedes `start`.
  */
 function findAntecedent(start: Node | null | html.Context): HTMLElement | null {
-  const candidates: Iterable<Element> =
+  const candidates: Iterable<Node> =
     start instanceof html.Context
       ? backtrack(start.first(), start)
       : backtrack(start);
 
-  for (const element of candidates) {
-    if (element.matches(ANTECEDENT_QUERY)) {
-      return element as HTMLElement;
+  // The nearest candidate, returned unless the exception above overrides it.
+  let nearest: HTMLElement | null = null;
+  let nest: Nesting = { depth: 0, enclosed: false };
+
+  for (const node of candidates) {
+    if (!(node instanceof HTMLElement && node.matches(ANTECEDENT_QUERY))) {
+      // (Normally we would use `Element` in the check above, but we use
+      // `HTMLElement` to appease the linter and avoid a few type casts below.)
+
+      // This is not a candidate. Just update parenthesis nesting.
+      nest = nesting(node.textContent ?? '', nest);
+      continue;
     }
+
+    if (nearest && nest.depth === 0) {
+      // Only the first candidate standing outside the parenthesis matters, and
+      // it takes over only if it is the Bible citation the parenthesis
+      // interrupted.
+      return node.classList.contains(cls.BIBLE) ? node : nearest;
+    }
+
+    // NOTE: KNOWN: Once `nearest` is set, the walk falls through to here while
+    // still inside the parenthesis, so a Bible citation SHARING that
+    // parenthesis with `nearest` is returned, though it is neither the nearest
+    // candidate nor an outer one. Guarding it takes an `else`, but the shape it
+    // would guard — '(Bible … Ref) ib' with the anaphor outside the
+    // parenthesis — does not occur.
+    if (
+      nest.depth === 0 ||
+      nest.enclosed ||
+      node.classList.contains(cls.BIBLE)
+    ) {
+      // Nothing overrides the nearest candidate. Take it.
+      return node;
+    }
+
+    nearest ??= node;
+    nest = nesting(node.textContent, nest);
   }
 
-  return null;
+  return nearest;
 }
 
 /**

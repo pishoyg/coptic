@@ -355,11 +355,12 @@ export class Context {
   }
 
   /**
-   *
-   * @returns
+   * @returns The last node appended to the fragment, if it exists. Text nodes
+   * included: a backward walk over the fragment reads the text between the
+   * enriched elements, not just the elements.
    */
-  public get fragmentLastElementChild(): Element | null {
-    return this.fragment.lastElementChild;
+  public get fragmentLastChild(): Node | null {
+    return this.fragment.lastChild;
   }
 
   /**
