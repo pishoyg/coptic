@@ -499,7 +499,7 @@ figcaption {
     text-decoration-color: gray;
   }
 
-  &:has(.mark:hover) {
+  &:has(> .mark:hover) {
     ins {
       background-color: #ddf5dd; /* light green */
     }

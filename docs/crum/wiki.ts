@@ -1649,7 +1649,7 @@ function handleAddenda(root: HTMLElement): void {
     .querySelectorAll<HTMLElement>(css.c(cls.ADDENDUM))
     .forEach((elem: HTMLElement): void => {
       const key: string = elem.dataset[DATA_PAGE]!;
-      tool.addTooltip(elem.querySelector(css.c(cls.MARK))!, [
+      tool.addTooltip(elem.querySelector(`:scope > .${cls.MARK}`)!, [
         html.anchor(
           paths.crumScan(key),
           'Addenda (',
