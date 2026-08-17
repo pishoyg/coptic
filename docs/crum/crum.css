@@ -82,7 +82,8 @@ figcaption {
 .reference {
   color: var(--reference-green);
 
-  &:hover {
+  &:hover,
+  &.antecedent {
     background-color: #e6f2ea; /* light emerald */
   }
 }
@@ -187,7 +188,8 @@ figcaption {
 
 .bible {
   color: #2763aa; /* sapphire */
-  &:hover {
+  &:hover,
+  &.antecedent {
     background-color: #e6eef8; /* light sapphire */
   }
 }

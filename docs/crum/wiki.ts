@@ -519,6 +519,11 @@ const BIBLE_RE = new RegExp(
   'u'
 );
 
+enum EVENT {
+  VISIT = 'visit',
+  LEAVE = 'leave',
+}
+
 /**
  * Ambient is the state scoped to the processing of a single wiki subtree by
  * `handleAux`. It is installed as a stack frame by `withAmbient` so that a
@@ -1241,11 +1246,16 @@ function replaceUnnumberedBibleBook(context: html.Context): void {
  * and the two numbers — sitting inside the wrapper — are invisible to this
  * function, which would otherwise have made them chapter and verse.
  *
+ * @param antecedent
  * @param cit - The antecedent citation, which will get mutated to reflect each
  * followup.
  * @param context
  */
-function parseBibleFollowups(cit: Citation, context: html.Context): void {
+function parseBibleFollowups(
+  antecedent: HTMLElement,
+  cit: Citation,
+  context: html.Context
+): void {
   for (;;) {
     const match: RegExpExecArray | null = BIBLE_FOLLOWUP.exec(
       context.remainder
@@ -1279,11 +1289,11 @@ function parseBibleFollowups(cit: Citation, context: html.Context): void {
     // anchor's content.
     const [start, end]: [number, number] = (match.indices![1] ??
       match.indices![4])!;
-    context.insert([
-      ...context.munch(start),
-      cit.anchor(...context.munch(end - start)),
-      ...context.munch(match[0].length - end),
-    ]);
+    const prefix: Node[] = context.munch(start);
+    const anaphor: HTMLElement = cit.anchor(...context.munch(end - start));
+    const suffix: Node[] = context.munch(match[0].length - end);
+    context.insert([...prefix, anaphor, ...suffix]);
+    link(anaphor, antecedent);
   }
 }
 
@@ -1314,13 +1324,14 @@ function replaceBible(context: html.Context): boolean {
   // chapter/verse text are munched off the chain and reused as the anchor's
   // content.
   const len: number = key.length + (match?.[0].length ?? 0);
-  context.insert(cit.anchor(...context.munch(len)));
+  const anchor: HTMLElement = cit.anchor(...context.munch(len));
+  context.insert(anchor);
 
   // Resolve any followups (e.g. the ", 56 9" in "Is 27 11, 56 9") in the same
   // pass. This used to be deferred to a second pass to avoid splitting a
   // numbered book like the "2 Cor" in "Job 3 18, 2 Cor 4 18"; a negative
   // lookahead in BIBLE_FOLLOWUP now guards against that instead.
-  parseBibleFollowups(cit, context);
+  parseBibleFollowups(anchor, cit, context);
   return true;
 }
 
@@ -1840,12 +1851,10 @@ function handleManualAux(manual: HTMLElement): Iterable<Node> | Node {
     // chapter alone — `(cf Am 4 above)` under ϩⲁϫⲱ⸗ (2364), pointing at
     // his own `Am 4 7` earlier on the page — which `Citation.valid` refuses
     // automatically, since one number is neither zero numbers nor two.
-    // The `log.warn` below flags any such label at build / test time.
     const reference: ref.Reference | undefined = ref.MAPPING[key];
     if (reference) {
-      if (key in BIBLE_MAPPING) {
-        log.warn(key, 'is an ambiguous manual label!');
-      }
+      // TODO: (#787) Oftentimes, this is an anaphor. Search for an antecedent
+      // to chain with this anaphor.
       return reference.span(manual.childNodes);
     }
 
@@ -1857,6 +1866,8 @@ function handleManualAux(manual: HTMLElement): Iterable<Node> | Node {
       const cv: RegExpExecArray | null =
         MANUAL_CHAPTER_VERSE.exec(key.slice(match[0].length)) ??
         MANUAL_CHAPTER_VERSE.exec(manual.textContent);
+      // TODO: (#787) Oftentimes, this is an anaphor. Search for an antecedent
+      // to chain with this anaphor.
       return new Citation(cv?.[1], cv?.[2], match[0]).anchor(
         ...manual.childNodes
       );
@@ -1865,8 +1876,6 @@ function handleManualAux(manual: HTMLElement): Iterable<Node> | Node {
     // Fall back to treating the key as an annotation.
     return annotation(key, ...manual.childNodes);
   }
-
-  log.ensure(key === undefined); // Sanity check.
 
   // There is no provided key. We need to infer the interpretation. If the text
   // starts with a reference name, then it's a reference. Otherwise, it's a
@@ -1890,7 +1899,11 @@ function handleManualAux(manual: HTMLElement): Iterable<Node> | Node {
   }
 
   if (antecedent.classList.contains(cls.REFERENCE)) {
-    return ref.Reference.fromSpan(antecedent).span(manual.childNodes);
+    const anaphor: HTMLSpanElement = ref.Reference.fromSpan(antecedent).span(
+      manual.childNodes
+    );
+    link(anaphor, antecedent);
+    return anaphor;
   }
 
   log.ensure(antecedent.classList.contains(cls.BIBLE)); // Sanity check.
@@ -1900,7 +1913,9 @@ function handleManualAux(manual: HTMLElement): Iterable<Node> | Node {
   );
   const cit: Citation = Citation.fromAnchor(antecedent);
   cit.update(cv?.[1], cv?.[2]);
-  return cit.anchor(...manual.childNodes);
+  const anaphor: HTMLElement = cit.anchor(...manual.childNodes);
+  link(anaphor, antecedent);
+  return anaphor;
 }
 
 /**
@@ -1944,6 +1959,41 @@ function replaceIB(context: html.Context): void {
 }
 
 /**
+ * Wire an anaphor to its antecedent, so hovering the former highlights the
+ * latter.
+ *
+ * The highlight is transitive. An antecedent is often an anaphor in its own
+ * right — in "Is 27 11, 56 9" followed by a dangling "3 4", the "56 9" refers
+ * back to "Is 27 11", and the "3 4" refers back to "56 9" — so rather than
+ * merely toggling the class, we re-dispatch VISIT / LEAVE on the antecedent.
+ * If it was itself linked, its own listener fires and carries the highlight
+ * one hop further back, until the head of the chain is reached.
+ *
+ * NOTE: The custom events deliberately don't bubble. Propagation must follow
+ * the anaphor chain, which is a relation between siblings, not the DOM tree.
+ *
+ * @param anaphor - The expression that refers back.
+ * @param antecedent - The citation it refers back to.
+ */
+function link(anaphor: HTMLElement, antecedent: HTMLElement): void {
+  const visitAntecedent = (): void => {
+    antecedent.classList.add(cls.ANTECEDENT);
+    antecedent.dispatchEvent(new CustomEvent(EVENT.VISIT));
+  };
+
+  const leaveAntecedent = (): void => {
+    antecedent.classList.remove(cls.ANTECEDENT);
+    antecedent.dispatchEvent(new CustomEvent(EVENT.LEAVE));
+  };
+
+  anaphor.addEventListener('mouseenter', visitAntecedent);
+  anaphor.addEventListener('mouseleave', leaveAntecedent);
+
+  anaphor.addEventListener(EVENT.VISIT, visitAntecedent);
+  anaphor.addEventListener(EVENT.LEAVE, leaveAntecedent);
+}
+
+/**
  * Resolve an anaphor — an expression whose numbers refer back to an antecedent
  * citation — into a link that inherits the antecedent's book/chapter/verse (for
  * a Bible antecedent) or reference (for a reference antecedent).
@@ -1974,7 +2024,12 @@ function replaceAnaphor(
     const suffix: (Node | string)[] = match
       ? [...munch(match), ...suffixFollowups(context)]
       : [];
-    context.insert(ref.Reference.fromSpan(antecedent).span(prefix, suffix));
+    const anaphor: HTMLSpanElement = ref.Reference.fromSpan(antecedent).span(
+      prefix,
+      suffix
+    );
+    context.insert(anaphor);
+    link(anaphor, antecedent);
     return;
   }
 
@@ -1990,8 +2045,11 @@ function replaceAnaphor(
   );
   cit.update(match?.[1] ?? match?.[3], match?.[2] ?? match?.[4]);
 
-  context.insert(cit.anchor(...prefix, ...munch(match)));
-  parseBibleFollowups(cit, context);
+  const anaphor: HTMLElement = cit.anchor(...prefix, ...munch(match));
+  context.insert(anaphor);
+  link(anaphor, antecedent);
+  parseBibleFollowups(anaphor, cit, context);
+  return;
 }
 
 /* eslint-disable complexity */

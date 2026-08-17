@@ -11,6 +11,7 @@ export const AMHARIC = 'amharic';
  * ANNOTATION is the class of a Crum Wiki annotation.
  */
 export const ANNOTATION = 'annotation';
+export const ANTECEDENT = 'antecedent';
 export const ARABIC = 'arabic';
 export const ARAMAIC = 'aramaic';
 /**
