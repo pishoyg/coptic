@@ -1398,7 +1398,8 @@ export const DATA = [
     "variants": [
       "Orat Cyp",
       "Or Cyp",
-      "P Bad"
+      "P Bad",
+      "P Baden"
     ]
   },
   {
