@@ -547,8 +547,9 @@ class Wiki:
         yield Substitution(
             # Ensure the headword is preceded by the start of the string
             # (optionally with a single opening parenthesis for unattested
-            # forms, or a double slash for entries removed in the addenda) or by
-            # the separator ']]], ' from a previous headword.
+            # forms, or a double slash for entries removed in the addenda); by
+            # the separator ']]], ' from a previous headword; or by the double
+            # slash marking addenda.
             # This prevents false positives in cases where multiple pieces of
             # Coptic text in the entry contain brackets at the beginning or the
             # end, resulting in triple brackets.
@@ -556,11 +557,15 @@ class Wiki:
             # - Either at the very beginning of the text, occasionally preceded
             # by a single parenthesis (e.g. ϩⲟⲟⲩⲣⲉ on page 737 b [1]).
             # - Following another headword (e.g. ϩⲁ, ϩⲟ on page 635 a [2]).
+            # - Inside addenda, when the headword is incorrect (e.g. [3], or
+            # when the entire entry needs to be replaced (e.g. [4]).
             #
             # [1] https://remnqymi.com/crum/2321.html
             # [2] https://remnqymi.com/crum/2095.html
             # [2] https://remnqymi.com/crum/2096.html
-            r"(?<=^(?://|\()?|]]], )" + bracketed("(.*?)", 3),
+            # [3] https://remnqymi.com/crum/1240.html
+            # [4] https://remnqymi.com/crum/1727.html
+            r"(?<=^(?:\()?|]]], |//)" + bracketed("(.*?)", 3),
             self.replace_headword,
             ban=["[[[", "]]]"],
         )
