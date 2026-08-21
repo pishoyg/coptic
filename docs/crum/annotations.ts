@@ -142,6 +142,7 @@ export const DATA: Abbreviation[] = [
     noCaseVariant: true,
     noStyledParent: true,
   },
+  { fullForm: 'folio', variants: ['fol'], suffix: true },
   // NOTE: 'Gen' with a capital G stands for 'Genesis'. It has never been
   // encountered as an abbreviation for 'Genitive'.
   { fullForm: 'genitive', variants: ['gen'], noCaseVariant: true },
