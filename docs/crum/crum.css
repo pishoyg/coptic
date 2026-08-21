@@ -455,8 +455,13 @@ figcaption {
 }
 
 .mark {
-  vertical-align: super;
-  font-size: x-small;
+  /* Raise the mark by painting it above the baseline, rather than through
+   * `vertical-align: super`, which grows the line box and pushes the line
+   * away from the one above it. */
+  position: relative;
+  bottom: 0.4em;
+  font-size: small;
+  line-height: 0;
 }
 
 .pretty {
