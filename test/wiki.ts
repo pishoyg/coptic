@@ -12,7 +12,6 @@ const TEST_CASES: {
 }[] = [
   // Seven entries in Crum's book span five pages! All seven are listed below.
   // We use them in our unit tests to get a good coverage of many common cases.
-  // TODO: (#503) Populate values below when the data is available.
   {
     key: '2', // ϯ
     want: {
