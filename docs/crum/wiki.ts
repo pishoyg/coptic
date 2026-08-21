@@ -1674,8 +1674,8 @@ const DATA_FOOTNOTE = 'footnote';
 
 /**
  * Wire a hover tooltip onto each `.footnoted` wrapper carrying a
- * `data-footnote`. The inner `.mark` keeps the `[N]` indicator visible to flag
- * the presence of a footnote, and is itself the tooltip's trigger.
+ * `data-footnote`. The inner `.mark` keeps the footnote symbol visible to
+ * flag the presence of a footnote, and is itself the tooltip's trigger.
  *
  * The footnote text in `data-footnote` is the raw HTML produced by the Python
  * pipeline (Coptic/Greek spans, italics, etc. all rendered before the footnote
@@ -2073,9 +2073,9 @@ function replaceAnaphor(
  *   - A correction `//removed//added//` is emitted (by `replace_addendum` in
  *     `dictionary/marcion_sourceforge_net/wiki.py`) as
  *       <span class="addendum"><del>removed</del> <ins>added</ins>
- *       <span class="mark">[N]</span></span>
+ *       <span class="mark">MARK</span></span>
  *   - Text carrying a footnote is emitted (by `replace_footnote`) as
- *       <span class="footnoted" data-footnote="…">text<span class="mark">[N]
+ *       <span class="footnoted" data-footnote="…">text<span class="mark">MARK
  *       </span></span>
  * so an element produced inside either wrapper sits below the flat chain rather
  * than on it. The second branch below accounts for both, giving two behaviors:
