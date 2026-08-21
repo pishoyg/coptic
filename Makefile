@@ -136,8 +136,8 @@ crum: FORCE
 #
 # NOTE: This is deliberately not part of `crum`, even though it is derived from
 # the HTML that `crum` writes and does go stale when the Wiki data changes. It
-# takes minutes, and it depends on the transpiled JavaScript besides, which
-# `crum` has no business rebuilding. Run it yourself after either changes.
+# depends on the transpiled JavaScript besides, which `crum` has no business
+# rebuilding. Run it yourself after either changes.
 #
 # NOTE: It reads the *transpiled* JavaScript under `docs/`, exactly as
 # `pisaxo.ts` does. After editing the enrichment TypeScript, run `make
