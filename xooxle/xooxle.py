@@ -366,7 +366,7 @@ class Capture:
         elif child.name in self._space_elements:
             yield " "
 
-        classes: list[str | None] = child.get_attribute_list("class")
+        classes: list[str] = child.get_attribute_list("class")
         if self._block_classes.intersection(classes):
             yield page.LINE_BREAK
 
@@ -496,9 +496,6 @@ class Xooxle:
             [cap.name for cap in self._captures],
         ]
 
-    def _is_comment(self, elem: bs4.PageElement) -> bool:
-        return isinstance(elem, bs4.element.Comment)
-
     def _diacritic_free_text(self, html: str) -> str:
         # NOTE: The HTML doesn't escape its special characters, so we don't need
         # to un-escape them during text extraction.
@@ -541,9 +538,9 @@ class Xooxle:
         del pair
         entry = bs4.BeautifulSoup(content, "html.parser")
         # Extract all comments.
-        comment: bs4.Comment
-        for comment in entry.find_all(text=self._is_comment):
-            _ = comment.extract()
+        for elem in entry.descendants:
+            if isinstance(elem, bs4.Comment):
+                _ = elem.extract()
         # Extract all unwanted content.
         for selector in self._extract:
             for element in selector.find_all(entry):
