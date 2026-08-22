@@ -29,6 +29,17 @@
   display: none;
   position: fixed;
   overflow-y: auto;
+
+  & ul {
+    text-align: left;
+    padding-left: 0;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+  }
+
+  & li {
+    padding: 8px;
+  }
 }
 
 .close-btn {

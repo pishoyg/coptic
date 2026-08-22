@@ -13,6 +13,10 @@
   color: gray;
 }
 
+#kellia-header {
+  table-layout: fixed;
+}
+
 #cdo-td,
 #dioskoros-td {
   color: gray;
@@ -185,16 +189,43 @@ body.dawoud button#mode-dawoud {
   display: block;
 }
 
-/* The strip of logos of the works cited at the bottom of the page. */
+/* The footer spreads its two cells across the page: the Cited Works button on
+ * the left, and the logos of the works cited on the right. */
+footer {
+  & table {
+    width: 100%;
+  }
+
+  & td:first-child {
+    text-align: left;
+  }
+
+  --logo-height: 60px;
+
+  & a {
+    min-width: 0;
+  }
+
+  & img {
+    max-height: var(--logo-height);
+    max-width: 100%;
+    height: auto;
+    width: auto;
+  }
+}
+
+/* The strip of logos of the works cited.
+ *
+ * The logos are laid out at `--logo-height`, and, if they don't fit on one
+ * line, they shrink: `min-width: 0` lets the anchors give up their intrinsic
+ * width, and the shrinkage is distributed in proportion to the logos' widths,
+ * so they all keep their aspect ratios and their common height. Resizing the
+ * strip is therefore a matter of changing `--logo-height` here, rather than
+ * sizing the images individually. */
 #logos {
-  text-align: center;
-}
-
-#logos img {
-  height: 100px;
-  margin-right: 10px;
-}
-
-#kellia-header {
-  table-layout: fixed;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
 }

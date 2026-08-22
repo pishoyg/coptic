@@ -1,4 +1,15 @@
-/** Package help defines logic for a help panel. */
+/**
+ * Package help defines the keyboard shortcuts panel, along with the generic
+ * `Panel` that backs it: a floating box, backed by a full-screen overlay, that
+ * is hidden by default and toggled by a trigger element.
+ *
+ * Panels are unaware of one another, so a page can end up displaying two of
+ * them at once, stacked on top of each other. The overlay swallows clicks, so
+ * a second panel can only be opened through a keyboard shortcut: pressing `?`
+ * while the Cited Works panel is displayed opens the Keyboard Shortcuts panel
+ * on top of it. Closing the top panel reveals the one underneath.
+ * This is benign.
+ */
 
 import * as iam from './iam.js';
 import * as cls from './cls.js';
@@ -18,6 +29,101 @@ enum CLS {
 enum ID {
   HELP = 'help',
   FOOTER = 'footer',
+}
+
+/**
+ * A panel. See the package documentation.
+ */
+export class Panel {
+  private readonly overlay: HTMLDivElement;
+  private readonly panel: HTMLDivElement;
+
+  /**
+   * @param title - Title displayed at the top of the panel.
+   * @param trigger - Element whose clicks toggle the panel.
+   */
+  public constructor(title: string, trigger: HTMLElement) {
+    // Create the overlay background.
+    this.overlay = document.createElement('div');
+    this.overlay.classList.add(CLS.OVERLAY_BACKGROUND);
+    document.body.append(this.overlay);
+
+    // Create the panel.
+    this.panel = document.createElement('div');
+    this.panel.classList.add(CLS.INFO_PANEL);
+    document.body.append(this.panel);
+
+    // Add the panel title.
+    const h2: HTMLHeadingElement = document.createElement('h2');
+    h2.textContent = title;
+    this.panel.append(h2);
+
+    // Add the panel close button.
+    const closeButton: HTMLButtonElement = document.createElement('button');
+    closeButton.classList.add(CLS.CLOSE_BTN);
+    closeButton.textContent = '×';
+    this.panel.append(closeButton);
+
+    this.addEventListeners(trigger, closeButton);
+    this.hide(); // Hidden by default.
+  }
+
+  /**
+   * Append content to the panel.
+   * @param children - Nodes to append below the content already present.
+   */
+  public append(...children: (Node | string)[]): void {
+    this.panel.append(...children);
+  }
+
+  /**
+   *
+   * @param visibility
+   */
+  private setVisibility(visibility: 'block' | 'none'): void {
+    this.panel.style.display = visibility;
+    this.overlay.style.display = visibility;
+  }
+
+  /**
+   * Hide the panel.
+   */
+  public hide(): void {
+    this.setVisibility('none');
+  }
+
+  /**
+   * Toggle the panel visibility.
+   */
+  public toggle(): void {
+    this.setVisibility(this.panel.style.display === 'block' ? 'none' : 'block');
+  }
+
+  /**
+   * Add event listeners for the panel.
+   * @param trigger - Element whose clicks toggle the panel.
+   * @param closeButton - Close button.
+   */
+  private addEventListeners(
+    trigger: HTMLElement,
+    closeButton: HTMLButtonElement
+  ): void {
+    // Clicking on the close button hides the panel.
+    closeButton.addEventListener('click', this.hide.bind(this));
+
+    // Clicking the trigger toggles the panel display.
+    trigger.addEventListener('click', this.toggle.bind(this));
+
+    // A click on the overlay background hides the panel.
+    this.overlay.addEventListener('click', this.hide.bind(this));
+
+    // A press on the Escape key hides the panel.
+    document.addEventListener('keydown', (e: KeyboardEvent): void => {
+      if (e.key === 'Escape') {
+        this.hide();
+      }
+    });
+  }
 }
 
 /**
@@ -317,8 +423,7 @@ export class Section {
  */
 export class Help {
   private readonly sections: Section[] = [];
-  private readonly overlay: HTMLDivElement;
-  private readonly panel: HTMLDivElement;
+  private readonly panel: Panel;
 
   /**
    * @returns
@@ -337,27 +442,6 @@ export class Help {
   /**
    */
   public constructor() {
-    // Create the overlay background.
-    this.overlay = document.createElement('div');
-    this.overlay.classList.add(CLS.OVERLAY_BACKGROUND);
-    document.body.append(this.overlay);
-
-    // Create the panel.
-    this.panel = document.createElement('div');
-    this.panel.classList.add(CLS.INFO_PANEL);
-    document.body.append(this.panel);
-
-    // Add the panel title.
-    const h2: HTMLHeadingElement = document.createElement('h2');
-    h2.textContent = TITLE;
-    this.panel.append(h2);
-
-    // Add the panel close button.
-    const closeButton: HTMLButtonElement = document.createElement('button');
-    closeButton.classList.add(CLS.CLOSE_BTN);
-    closeButton.textContent = '×';
-    this.panel.append(closeButton);
-
     const help: HTMLElement =
       document.getElementById(ID.HELP) ??
       ((): HTMLElement => {
@@ -368,8 +452,9 @@ export class Help {
         return span;
       })();
 
-    this.addEventListeners(help, closeButton);
-    this.hide(); // Hidden by default.
+    this.panel = new Panel(TITLE, help);
+
+    this.addEventListeners();
   }
 
   /**
@@ -383,7 +468,7 @@ export class Help {
     // Store the shortcuts.
     this.sections.push(s);
     // Add the section to the help panel.
-    this.panel.appendChild(s.html());
+    this.panel.append(s.html());
     // Verify the new section doesn't introduce any duplicates.
     dev.play(this.verifyNoDuplicates.bind(this));
   }
@@ -429,26 +514,10 @@ export class Help {
   }
 
   /**
-   *
-   * @param visibility
-   */
-  private setVisibility(visibility: 'block' | 'none'): void {
-    this.panel.style.display = visibility;
-    this.overlay.style.display = visibility;
-  }
-
-  /**
-   * Hide the panel.
-   */
-  private hide(): void {
-    this.setVisibility('none');
-  }
-
-  /**
    * Toggle the panel visibility.
    */
   public toggle(): void {
-    this.setVisibility(this.panel.style.display === 'block' ? 'none' : 'block');
+    this.panel.toggle();
   }
 
   /**
@@ -474,23 +543,11 @@ export class Help {
   }
 
   /**
-   * Add event listeners for the help panel.
-   * @param help - Help button.
-   * @param closeButton - Close button.
+   * Add event listeners for the keyboard shortcuts. The panel's own listeners
+   * (trigger, close button, overlay background, and Escape) are added by
+   * `Panel`.
    */
-  private addEventListeners(
-    help: HTMLElement,
-    closeButton: HTMLButtonElement
-  ): void {
-    // Clicking on the close button hides the panel.
-    closeButton.addEventListener('click', this.hide.bind(this));
-
-    // Clicking the help button toggles the panel display.
-    help.addEventListener('click', this.toggle.bind(this));
-
-    // A click on the overlay background hides the panel.
-    this.overlay.addEventListener('click', this.hide.bind(this));
-
+  private addEventListeners(): void {
     // Clicking a keyboard shortcut triggers the associated action.
     // NOTE: We intentionally use the `keydown` event rather than the `keyup`
     // event, so that a long press would trigger a shortcut command repeatedly.
@@ -498,11 +555,6 @@ export class Help {
       if (e.metaKey || e.ctrlKey || e.altKey) {
         // If the user is holding down a modifier key, we don't want to do
         // anything.
-        return;
-      }
-      if (e.key === 'Escape') {
-        // A click on the Escape key hides the panel.
-        this.hide();
         return;
       }
 
