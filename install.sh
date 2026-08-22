@@ -123,9 +123,10 @@ _upgrade() {
   # Upgrade pre-commit hooks.
   pre-commit autoupdate
 
-  # Upgrade npm packages.
-  jq -r '(.dependencies // {}) | keys[] | . + "@latest"' "package.json" | xargs npm add
-  jq -r '(.devDependencies // {}) | keys[] | . + "@latest"' "package.json" | xargs npm add --include=dev
+  # Upgrade npm packages. `--peer` restricts each bump to what the installed
+  # packages' peer ranges accept, so we never request an unsatisfiable set.
+  npx --yes npm-check-updates --upgrade --peer
+  npm install
 
   # Refresh the Playwright browser binaries, which are versioned to the
   # (just-upgraded) Playwright packages.
