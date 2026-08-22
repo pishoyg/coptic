@@ -82,7 +82,7 @@ repos:
         language: system
         pass_filenames: false
   - repo: https://github.com/pre-commit/mirrors-eslint
-    rev: v10.6.0
+    rev: v10.8.1
     hooks:
       - id: eslint
         additional_dependencies:
@@ -139,7 +139,7 @@ repos:
         args: [--line-length, "79"]
 
   - repo: https://github.com/pycqa/isort
-    rev: 9.0.0a3
+    rev: 9.0.0b5
     hooks:
       - id: isort
 
@@ -161,7 +161,7 @@ repos:
       - id: pyupgrade
 
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.15.20
+    rev: v0.16.4
     hooks:
       - id: ruff
         args: [--fix]
@@ -185,7 +185,7 @@ repos:
       - id: setup-cfg-fmt
 
   - repo: https://github.com/pylint-dev/pylint
-    rev: v4.0.6
+    rev: v4.0.7
     hooks:
       - id: pylint
 
@@ -246,7 +246,7 @@ repos:
         args: [requirements.in]
 
   - repo: https://github.com/mxr/sync-pre-commit-deps
-    rev: v0.0.4
+    rev: v0.0.5
     hooks:
       - id: sync-pre-commit-deps
 
@@ -264,7 +264,7 @@ repos:
 
   # Shell
   - repo: https://github.com/shellcheck-py/shellcheck-py
-    rev: v0.11.0.1
+    rev: v0.11.0.1-1
     hooks:
       - id: shellcheck
         args: [-x]
@@ -283,7 +283,7 @@ repos:
 
   # Markdown
   - repo: https://github.com/igorshubovych/markdownlint-cli
-    rev: v0.49.0
+    rev: v0.49.1
     hooks:
       - id: markdownlint-fix
         args: [--disable, MD033, MD036]
@@ -316,7 +316,7 @@ repos:
 
   # Protobuf
   - repo: https://github.com/bufbuild/buf
-    rev: v1.71.0
+    rev: v1.72.0
     hooks:
       - id: buf-dep-prune
       - id: buf-dep-update
