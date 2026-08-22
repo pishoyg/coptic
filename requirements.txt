@@ -7,8 +7,6 @@
 ast-serialize==0.8.0
     # via mypy
 beautifulsoup4==4.15.0
-    # via bs4
-bs4==0.0.2
     # via -r requirements.in
 build==1.5.0
     # via pip-tools
@@ -40,8 +38,6 @@ distlib==0.4.3
     # via virtualenv
 ebooklib==0.20
     # via -r requirements.in
-et-xmlfile==2.0.0
-    # via openpyxl
 filelock==3.32.3
     # via
     #   python-discovery
@@ -74,8 +70,6 @@ identify==2.6.19
     # via pre-commit
 idna==3.19
     # via requests
-json5==0.15.0
-    # via -r requirements.in
 kiwisolver==1.5.0
     # via matplotlib
 librt==0.15.0
@@ -100,8 +94,6 @@ numpy==2.5.2
     #   pandas-stubs
 oauthlib==3.3.1
     # via requests-oauthlib
-openpyxl==3.1.5
-    # via -r requirements.in
 packaging==26.3
     # via
     #   build
@@ -160,12 +152,8 @@ soupsieve==2.9.2
     # via beautifulsoup4
 typeguard==4.6.0
     # via -r requirements.in
-types-beautifulsoup4==4.12.0.20250516
-    # via -r requirements.in
 types-colorama==0.4.15.20260508
     # via -r requirements.in
-types-html5lib==1.1.11.20260518
-    # via types-beautifulsoup4
 types-markdown==3.10.2.20260712
     # via -r requirements.in
 types-pyyaml==6.0.12.20260815
@@ -173,13 +161,9 @@ types-pyyaml==6.0.12.20260815
 types-regex==2026.7.19.20260720
     # via -r requirements.in
 types-requests==2.33.0.20260712
-    # via
-    #   -r requirements.in
-    #   google-auth-stubs
+    # via google-auth-stubs
 types-setuptools==84.0.0.20260812
     # via -r requirements.in
-types-webencodings==0.6.0.20260822
-    # via types-html5lib
 typing-extensions==4.16.0
     # via
     #   beautifulsoup4
@@ -188,13 +172,10 @@ typing-extensions==4.16.0
     #   typeguard
 urllib3==2.7.0
     # via
-    #   -r requirements.in
     #   requests
     #   types-requests
 virtualenv==21.7.4
-    # via
-    #   -r requirements.in
-    #   pre-commit
+    # via pre-commit
 wheel==0.48.0
     # via pip-tools
 
