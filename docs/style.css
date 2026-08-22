@@ -167,20 +167,10 @@ table {
     font-size: 18px;
   }
 
-  figure:not(.flashcards-screenshots) img:not(.logo) {
+  figure:not(.flashcards-screenshots) img {
     height: auto;
     width: 100%;
   }
-}
-
-#logos {
-  text-align: center;
-}
-
-#logos img,
-.logo {
-  height: 100px;
-  margin-right: 10px;
 }
 
 ::target-text {

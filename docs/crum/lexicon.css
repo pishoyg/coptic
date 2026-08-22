@@ -177,3 +177,13 @@ body.dawoud button#mode-dawoud {
   left: 50%;
   display: block;
 }
+
+/* The strip of logos of the works cited at the bottom of the page. */
+#logos {
+  text-align: center;
+}
+
+#logos img {
+  height: 100px;
+  margin-right: 10px;
+}
