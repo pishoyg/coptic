@@ -132,13 +132,20 @@ body {
  * Antinoou doesn't suffice. Characters such as the Latin Glottal I (U+A7BC,
  * U+A7BD – used in Demotic text) aren't supported and require Noto Sans.
  *
- * Additionally, we have manually added U+1018E Nomisma Sign (𐆎) to our copy of
- * Antinoou, as the character is neither present in standard Antinoou nor Noto
- * Sans.
+ * `overrides` is a tiny font carrying the few glyphs that we want to override,
+ * or that are otherwise absent from both Antinoou and Noto Sans.
+ *
+ * A browser picks, per character, the first family in the list that
+ * covers it, so listing `overrides` first lets it win for its handful of
+ * characters, and defer the rest to Antinoou, falling back to Noto Sans for the
+ * handful of characters that are absent from Antinoou as well.
+ *
+ * TODO: (#0) Consider simply adding the Latin Glottal I to `overrides` and
+ * getting rid of Noto Sans.
  * */
 body:not(.android .card),
 input:not(.android .card) {
-  font-family: Antinoou, 'Noto Sans', sans-serif;
+  font-family: overrides, Antinoou, 'Noto Sans', sans-serif;
 }
 
 input[type='checkbox'] {
@@ -181,6 +188,20 @@ table {
 }
 
 /*************** Fonts ***************/
+
+@font-face {
+  font-family: overrides;
+  src: url('fonts/overrides/overrides.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: overrides;
+  src: url('fonts/overrides/overridesItalic.woff2') format('woff2');
+  font-weight: normal;
+  font-style: italic;
+}
 
 @font-face {
   font-family: Antinoou;
