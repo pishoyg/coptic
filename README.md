@@ -29,17 +29,13 @@ that aims to make the Coptic language more **learnable**.
   - [`stats`](#stats)
 - [Project-specific](#project-specific)
   - [`dictionary/`](#dictionary)
-    - [`marcion.sourceforge.net/`](#marcionsourceforgenet)
-      - [Wiki Enrichment](#wiki-enrichment)
+    - [Marcion](#marcion)
       - [Image Collection](#image-collection)
         - [Why?](#why)
         - [Technical Guidelines](#technical-guidelines)
-      - [Undialected Entries](#undialected-entries)
-      - [Entries that are Absent in Crum](#entries-that-are-absent-in-crum)
-    - [`copticocc.org/`](#copticoccorg)
-    - [`kellia.uni-goettingen.de/`](#kelliauni-goettingende)
+    - [KELLIA](#kellia)
   - [`bible/`](#bible)
-    - [`stshenouda.org/`](#stshenoudaorg)
+    - [St. Shenouda Coptic Society](#st-shenouda-coptic-society)
   - [`flashcards/`](#flashcards)
   - [`morphology/`](#morphology)
   - [`docs/`](#docs)
@@ -397,34 +393,7 @@ primary targets of our statistics are:
 
 This directory contains the data and logic for processing our dictionaries.
 
-### [`marcion.sourceforge.net/`](dictionary/marcion_sourceforge_net)
-
-#### Wiki Enrichment
-
-The Wiki text is enriched in the browser: `docs/crum/wiki.ts` walks a page when
-it loads and marks up references, Biblical citations, abbreviations, page
-numbers and the rest. Being a browser-side algorithm, it used to leave nothing
-behind, and the effect of a change to it — a new source in `bib.yaml`, a
-sharpened heuristic — could not be reviewed.
-
-[`wiki.ts`](dictionary/marcion_sourceforge_net/wiki.ts) (`make wiki`) runs
-that same algorithm under a headless DOM and writes down every decision it
-made, one file per page, to `data/output/wiki/`. We track the result in Git for
-the same reason we track the Bible HTML and not the EPUBs: it is text, so
-`git diff` shows exactly what a change to the enrichment did across the whole
-dictionary. It is also what the `ambrose` review command reads, which is why
-that command needs neither a server nor a browser.
-
-The output is derived. Never edit it by hand; regenerate it. And note that it
-is regenerated neither by `make crum` (which rewrites the HTML it is derived
-from) nor by `make transpile` (which rewrites the engine it runs), so it wants
-a `make wiki` of its own after either.
-
-The serializer refuses to pass through an element it does not recognize. That
-matters more than it sounds: bare text in the dump asserts that enrichment
-looked at those characters and declined to act, and an unrecognized element
-rendered transparently would forge that claim. So a construct added to
-`wiki.py` fails the run until `wiki.ts` is taught how to write it down.
+### [Marcion](dictionary/marcion_sourceforge_net/)
 
 #### Image Collection
 
@@ -510,32 +479,14 @@ entities from other cultures, or modern entities.
 
    This could be revisited later.
 
-#### Undialected Entries
+### [KELLIA](dictionary/kellia_uni_goettingen_de)
 
-Some entries have no dialect specified in Crum, so they get treated as belonging
-to all dialects. More information at #237.
+**[TLA](https://aaew.bbaw.de/tla/)/[DDGLC](https://dioskoros.org/)/[CDO](https://coptic-dictionary.org/) data:**
 
-#### Entries that are Absent in Crum
-
-The following entries are absent from Crum's dictionary. They were added to our
-database from other sources:
-
-1. [3380](https://remnqymi.com/crum/3380.html)
-2. [3381](https://remnqymi.com/crum/3381.html)
-3. [3382](https://remnqymi.com/crum/3382.html)
-4. [3385](https://remnqymi.com/crum/3385.html)
-
-### [`copticocc.org/`](dictionary/copticocc_org)
-
-[`copticocc_org/`](dictionary/copticocc_org/) contains a digital scan of
-Moawad Dawoud's dictionary.
-
-### [`kellia.uni-goettingen.de/`](dictionary/kellia_uni_goettingen_de)
-
-**TLA data:**
-
-The TLA data, which comprises the core of the dictionary, is retrieved from
-   [Comprehensive Coptic Lexicon: Including Loanwords from Ancient Greek v
+The
+[TLA](https://aaew.bbaw.de/tla/)/[DDGLC](https://dioskoros.org/)/[CDO](https://coptic-dictionary.org/)
+data, which comprises the core of the dictionary, is retrieved from
+[Comprehensive Coptic Lexicon: Including Loanwords from Ancient Greek v
 1.2](https://refubium.fu-berlin.de/handle/fub188/27813).
    - [84c104](https://github.com/pishoyg/coptic/commit/84c1044282faa12daf748858351b989376f82018)
    integrates some changes made by Coptic Scriptorium to [CDO's copy of the
@@ -545,9 +496,9 @@ The TLA data, which comprises the core of the dictionary, is retrieved from
 
 **Supplemental forms:**
 
-Coptic Scriptorium has attempted to grow the TLA by adding supplemental forms.
+Coptic Scriptorium has attempted to grow the data by adding supplemental forms.
 As of the time of writing, CDO is capable of expanding an entry by adding
-variant forms, but it can't add any new entries that lack a TLA ID.
+variant forms, but it can't add any new entries that lack an ID.
 
 1. Bohairic supplemental forms are being directly retrieved from [the
 sheet](https://docs.google.com/spreadsheets/d/1r9J5nuQFQxgInLpX1Gm-I20nunIBjmGFR3CfFgK0THU)
@@ -575,11 +526,11 @@ show the same set of supplemental forms that
 [CDO](https://coptic-dictionary.org/) shows. CDO doesn't seem to be under active
 development at the moment, and the above issues aren't expected to be resolved.
 We are considering reverting the addition of supplemental forms, and relying
-only on the TLA data.
+only on the core data.
 
 **Code:**
 
-We based [our TLA processing
+We based [our processing
 logic](./dictionary/kellia_uni_goettingen_de/kellia.py) on the CDO's
 [`dictionary_reader.py`](https://github.com/KELLIA/dictionary/blob/master/utils/dictionary_reader.py).
 Parts of the logic, particularly those pertaining to supplemental forms, are
@@ -590,8 +541,8 @@ The original code is very badly written and is completely unmaintainable, and it
 has several (small) bugs. Our code has since significantly diverged from the
 original, and there is little overlap left.
 
-There are TLA and CDO artifacts that we chose to ignore in our own pipeline,
-such as [Egyptian
+There are artifacts that we chose to ignore in our own pipeline, such as
+[Egyptian
 Etymologies](https://github.com/KELLIA/dictionary/blob/dev/utils/egyptian_etymologies.tab),
 [entity
 types](https://github.com/KELLIA/dictionary/blob/edac2731c86fb02819436d39d127344e4e0bf514/utils/dictionary_reader.py#L14),
@@ -602,7 +553,7 @@ tags](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-oRef.html).
 
 This directory contains the data and logic for processing the Bible corpus.
 
-### [`stshenouda.org/`](bible/stshenouda_org/)
+### [St. Shenouda Coptic Society](bible/stshenouda_org/)
 
 There are several published versions of the Coptic Bible. The most
 recent, and most complete, is that of [St. Shenouda the Archmandrite
