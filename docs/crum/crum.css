@@ -360,20 +360,28 @@ figcaption {
 ) {
   border-radius: 2px;
 
-  /* When one of these colored spans is hovered, its own hover background should
-   * take precedence over any highlights that would otherwise paint over it.
-   * So we override the color of all descendants, as well as text fragments.
+  /* When one of these colored spans lights up, its own background should take
+   * precedence over any highlights that would otherwise paint over it. So we
+   * override the color of all descendants, as well as text fragments.
    *
-   * Making both transparent on hover lets the hovered element's background show
-   * through. :where() keeps the specificity low, it still outranks the rules
-   * that are meant to be overridden.
+   * A span lights up either when it's hovered directly, or when it's the
+   * antecedent of a hovered anaphor — `.reference` and `.bible` paint the same
+   * background in both cases (see their rules above), so both must clear what
+   * lies on top of them. Otherwise, a text fragment landing on an antecedent
+   * would keep painting over its highlight, which is precisely the moment the
+   * reader is being pointed at it.
+   *
+   * Making both transparent lets the lit element's background show through.
+   * The outer `:where()` contributes no specificity, and `:is()` only as much
+   * as a single pseudo-class, so these selectors stay low, yet they still
+   * outrank the rules that are meant to be overridden.
    * */
-  &:hover * {
+  &:is(:hover, .antecedent) * {
     background-color: transparent;
   }
 
-  &:hover::target-text,
-  &:hover ::target-text {
+  &:is(:hover, .antecedent)::target-text,
+  &:is(:hover, .antecedent) ::target-text {
     background-color: transparent;
   }
 }
@@ -510,12 +518,22 @@ figcaption {
       background-color: lightpink; /* light red */
     }
 
-    /* Ensure the colors above override any other background colors. */
+    /* Ensure the colors above override any other background colors, exactly
+     * like the colored spans do when they light up (see the `:where()` block
+     * above). Every other descendant loses its background, and so does any
+     * text fragment.
+     *
+     * The text fragment needs both selectors. The addendum is a wrapper, not
+     * the element carrying the color: a fragment landing inside one of the
+     * <ins>/<del> elements would paint over the very color we are revealing,
+     * so the descendant form matters at least as much as the one that matches
+     * the addendum's own text. */
     *:not(ins, del) {
       background-color: transparent;
     }
 
-    &::target-text {
+    &::target-text,
+    & ::target-text {
       background-color: transparent;
     }
   }
