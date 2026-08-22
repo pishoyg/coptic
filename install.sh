@@ -50,11 +50,28 @@ _woff2_install() {
 }
 
 _install() {
+  # `requirements.in` is the source of truth, so compile it into
+  # `requirements.txt` rather than trusting the latter to be current. Without
+  # `--upgrade`, `pip-compile` keeps every pin that still satisfies the
+  # constraints, and only resolves what actually changed. `pip-sync` then
+  # installs exactly that set, uninstalling anything absent from it — including
+  # our editable local package, hence the reinstall below.
+  #
+  # NOTE: `pip-tools` is installed up front because it supplies `pip-compile`
+  # and `pip-sync`, which have to run before the requirements themselves are
+  # installed. It is compiled from `requirements.in` like everything else, so
+  # `pip-sync` settles it on the pinned version a moment later.
+  #
+  # NOTE: `pip-sync` uninstalls whatever the active environment holds outside
+  # the compiled requirements, so it must run inside the virtual environment
+  # that `.env` creates, never against a system Python.
+  #
   # TODO: (#0) Drop the `<26` cap once `pip-tools` supports pip 26. pip 26
   # restructured `pip._internal`'s `DirectUrl` model (removed `.info`), which
   # crashes `pip-sync` (pip-tools 7.5.3, the latest, still reads `.info`).
-  pip install --upgrade 'pip<26'
-  pip install -r requirements.txt
+  pip install --upgrade 'pip<26' pip-tools
+  pip-compile
+  pip-sync
   pip install -e .
   pre-commit install
 
@@ -112,9 +129,9 @@ _install() {
 # Where unfeasible to upgrade automatically, print a reminder so the user can
 # upgrade them manually.
 _upgrade() {
-  # Upgrade pip packages. `pip-sync` uninstalls anything absent from the
-  # compiled requirements, including our editable local package, so reinstall
-  # it afterwards. The `<26` cap is required: see the note in `_install`.
+  # Upgrade pip packages. `--upgrade` lifts the existing pins; everything else
+  # about this sequence, the `<26` cap included, works as it does in `_install`,
+  # whose notes explain it.
   pip install --upgrade 'pip<26'
   pip-compile --upgrade
   pip-sync
