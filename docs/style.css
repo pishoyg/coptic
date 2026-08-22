@@ -189,6 +189,20 @@ table {
 
 /*************** Fonts ***************/
 
+/*
+ * `overrides` is an in-house font carrying our replacements for a handful of
+ * Antinoou glyphs. As of the time of writing, those are:
+ * 1. Lowercase Latin l – Antinoou's is barely distinguishable from its
+ *    digit 1, so we drop the foot serif. (Antinoou's italic l already differs
+ *    from the italic 1, and is carried over unchanged.)
+ * 2. Nomisma sign (U+1018E) – absent from Antinoou.
+ * 3. Double Dagger (which marks addenda) – replaced with a squarer cross,
+ *    to reduce its similarity to the Dagger (which marks qualitative forms).
+ * 4. Dagger – raised (and slightly shrunk) clear of the baseline, keeping
+ *    Antinoou's design. (Antinoou draws the same Dagger in both faces, so
+ *    ours is shared between them as well.)
+ */
+
 @font-face {
   font-family: overrides;
   src: url('fonts/overrides/overrides.woff2') format('woff2');
@@ -202,6 +216,8 @@ table {
   font-weight: normal;
   font-style: italic;
 }
+
+/* Antinoou is retrieved from https://www.evertype.com/fonts/coptic/. */
 
 @font-face {
   font-family: Antinoou;
