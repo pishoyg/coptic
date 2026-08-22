@@ -1,4 +1,4 @@
-bs4
+beautifulsoup4
 colorama
 darglint
 ebooklib
@@ -7,11 +7,9 @@ google-auth
 google-auth-stubs
 gprof2dot
 gspread
-json5
 markdown
 matplotlib
 mypy
-openpyxl
 pandas
 pandas-stubs
 pip-tools
@@ -20,12 +18,8 @@ pyyaml
 regex
 requests
 typeguard
-types-beautifulsoup4
 types-colorama
 types-markdown
 types-pyyaml
 types-regex
-types-requests
 types-setuptools
-urllib3
-virtualenv
