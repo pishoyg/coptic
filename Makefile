@@ -35,6 +35,7 @@ clean: FORCE
 	git clean -x -d --force \
 		--exclude ".envrc" \
 		--exclude "google_cloud_keyfile.json" \
+		--exclude "woff2" \
 
 ########## CONTENT GENERATION, TESTS and FORMATTING ##########
 .PHONY: all
@@ -251,6 +252,16 @@ kindle: FORCE
 mobi_publish: FORCE
 	echo -e "$${YELLOW}Work in progress!$${RESET}"
 endif
+
+########## FONTS ##########
+# NOTE: The rule is phony because the `woff2` clone occupies a directory that
+# bears the same name.
+.PHONY: woff2
+woff2: FORCE
+	# Generate the `woff2` fonts from their `ttf` counterparts.
+	set -o pipefail; \
+	find "$${SITE_DIR}/fonts" -name "*.ttf" -print0 \
+		| xargs -0 -n 1 woff2/woff2_compress
 
 ########## SITEMAP ##########
 sitemap: FORCE

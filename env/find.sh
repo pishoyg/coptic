@@ -30,6 +30,8 @@ findex () {
     -not -path "./coptic.egg-info" \
     -not -path "./node_modules/*" \
     -not -path "./node_modules" \
+    -not -path "./woff2/*" \
+    -not -path "./woff2" \
     -not -path "./test-results" \
     -not -path "./test-results/*" \
     -not -path "./playwright-report" \

@@ -25,6 +25,30 @@ while [ $# -gt 0 ]; do
   shift
 done
 
+WOFF2_URL="https://github.com/google/woff2.git"
+WOFF2_DIR="woff2"
+
+# _woff2_install clones the `woff2` encoder, or updates an existing clone, then
+# builds it, along with the `brotli` submodule that it depends on.
+#
+# NOTE: `_install` calls this in a condition, which suspends `errexit` for the
+# duration, so the exit code is that of the last command, the build. That is the
+# right criterion there: `_install` promises a working encoder, not a freshly
+# fetched one, and the encoder is only needed by `make woff2`, so it mustn't
+# take the rest of the setup down with it. `_upgrade` calls it plainly, leaving
+# `errexit` in force, so a failed fetch aborts with Git's own message.
+_woff2_install() {
+  if [ -d "${WOFF2_DIR}" ]; then
+    # `merge` is a no-op unless `fetch` brought in new commits.
+    git -C "${WOFF2_DIR}" fetch origin
+    git -C "${WOFF2_DIR}" merge --ff-only
+  else
+    git clone --recurse-submodules "${WOFF2_URL}" "${WOFF2_DIR}"
+  fi
+  git -C "${WOFF2_DIR}" submodule update --init --recursive
+  make -C "${WOFF2_DIR}" all
+}
+
 _install() {
   # TODO: (#0) Drop the `<26` cap once `pip-tools` supports pip 26. pip 26
   # restructured `pip._internal`'s `DirectUrl` model (removed `.info`), which
@@ -44,6 +68,11 @@ _install() {
   if command -v npm &> /dev/null; then
     npm install
     npx playwright install
+  fi
+
+  if ! _woff2_install; then
+    echo -e "${RED}Failed to install ${YELLOW}woff2${RED} from ${YELLOW}${WOFF2_URL}${RED}. ${YELLOW}make woff2${RED} won't work.${RESET}"
+    EXIT_CODE=1
   fi
 
   if ! command -v tidy &> /dev/null; then
@@ -101,6 +130,9 @@ _upgrade() {
   # Refresh the Playwright browser binaries, which are versioned to the
   # (just-upgraded) Playwright packages.
   npx playwright install
+
+  # Upgrade the `woff2` encoder, and rebuild it.
+  _woff2_install
 }
 
 if ${UPGRADE}; then

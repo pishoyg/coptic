@@ -16,6 +16,10 @@ coptic.egg-info/
 node_modules
 *.tsbuildinfo
 
+# The `woff2` encoder, cloned and built by `install.sh`. See
+# https://github.com/google/woff2.
+/woff2
+
 # Pre-commit artifacts
 .mypy_cache
 .ruff_cache
