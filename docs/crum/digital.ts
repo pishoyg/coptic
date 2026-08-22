@@ -410,6 +410,54 @@ function addCheckboxTooltips(): void {
   }
 }
 
+/** Search builds a lexicon search URL out of a query. */
+type Search = (query: string) => string;
+
+/**
+ * EXTERNAL_LEXICONS pairs each external lexicon link with the builder that
+ * turns the current query into a search URL on that lexicon.
+ *
+ * TODO: (#305) Remove this once we have obtained the new data.
+ */
+const EXTERNAL_LEXICONS: [string, Search][] = [
+  [id.CDO, paths.cdo],
+  [id.DIOSKOROS, paths.dioskoros],
+];
+
+/**
+ * Wire the external lexicon links that hang off the KELLIA row. Each carries
+ * the current query to a third-party lexicon, giving a user who couldn't find
+ * their word in our lexicon somewhere else to look.
+ *
+ * They are ordinary anchors, so the browser grants them the usual link
+ * affordances (middle-click, "copy link address", keyboard focus). All we do
+ * is keep their `href` in step with the search box, and hide them while the
+ * box is empty, since there would be nothing to forward.
+ */
+function addEventListenersExternalLexicons(): void {
+  const box: HTMLInputElement = document.getElementById(
+    id.SEARCH_BOX
+  ) as HTMLInputElement;
+
+  const links: [HTMLAnchorElement, Search][] = EXTERNAL_LEXICONS.map(
+    ([linkID, url]: [string, Search]): [HTMLAnchorElement, Search] => [
+      document.getElementById(linkID) as HTMLAnchorElement,
+      url,
+    ]
+  );
+
+  const refresh = (): void => {
+    links.forEach(([link, url]: [HTMLAnchorElement, Search]): void => {
+      link.href = url(box.value);
+      link.hidden = !box.value;
+    });
+  };
+
+  // The box may already carry a query restored from the URL.
+  refresh();
+  box.addEventListener('input', refresh);
+}
+
 /**
  * @returns
  */
@@ -432,6 +480,7 @@ function addListDialects(): ddial.Control[] {
  */
 export async function init(): Promise<void> {
   addCheckboxTooltips();
+  addEventListenersExternalLexicons();
 
   const manager: dial.Manager = new dial.Manager();
 

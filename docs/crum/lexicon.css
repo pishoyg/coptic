@@ -13,6 +13,13 @@
   color: gray;
 }
 
+#cdo-td,
+#dioskoros-td {
+  color: gray;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
 /* Narrow screen rules: */
 @media (width <= 700px) {
   /* Shorten the title of Crum. */
@@ -186,4 +193,8 @@ body.dawoud button#mode-dawoud {
 #logos img {
   height: 100px;
   margin-right: 10px;
+}
+
+#kellia-header {
+  table-layout: fixed;
 }

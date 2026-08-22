@@ -98,13 +98,43 @@ export const REPORTS_PAGE_PARAM = 'entry.1382006920';
 // Pages that we don't own:
 export const KELLIA = 'https://kellia.uni-goettingen.de/';
 
+const COPTIC_DICTIONARY_ONLINE = 'https://coptic-dictionary.org';
+const DIOSKOROS = 'https://dioskoros.org';
+
 /**
  *
  * @param key
  * @returns
  */
 export function copticDictionaryOnline(key: string): string {
-  return `https://coptic-dictionary.org/entry/${key}`;
+  return `${COPTIC_DICTIONARY_ONLINE}/entry/${key}`;
+}
+
+/* The two search helpers below let a user who couldn't find what they were
+ * looking for in our lexicon rerun their query against a third-party lexicon.
+ * Unlike `copticDictionaryOnline` above, which links to a known entry, they
+ * forward a free-form query, so it has to be percent-encoded.
+ */
+
+/**
+ * Build a Coptic Dictionary Online search URL.
+ *
+ * @param query - The search query.
+ * @returns The full Coptic Dictionary Online URL.
+ */
+export function cdo(query: string): string {
+  return `${COPTIC_DICTIONARY_ONLINE}/?q=${encodeURIComponent(query)}`;
+}
+
+/**
+ * Build a search URL for Dioskoros – an interface for the Database and
+ * Dictionary of Greek Loanwords in Coptic (DDGLC).
+ *
+ * @param query - The search query.
+ * @returns The full Dioskoros URL.
+ */
+export function dioskoros(query: string): string {
+  return `${DIOSKOROS}/results.php?q=${encodeURIComponent(query)}`;
 }
 
 /* NAG_HAMMADI_OVERRIDE defines URLs for codex leaves that are hard to find
