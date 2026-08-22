@@ -419,9 +419,9 @@ type Search = (query: string) => string;
  *
  * TODO: (#305) Remove this once we have obtained the new data.
  */
-const EXTERNAL_LEXICONS: [string, Search][] = [
-  [id.CDO, paths.cdo],
-  [id.DIOSKOROS, paths.dioskoros],
+const EXTERNAL_LEXICONS: [HTMLAnchorElement, Search][] = [
+  [document.getElementById(id.CDO) as HTMLAnchorElement, paths.cdo],
+  [document.getElementById(id.DIOSKOROS) as HTMLAnchorElement, paths.dioskoros],
 ];
 
 /**
@@ -439,23 +439,14 @@ function addEventListenersExternalLexicons(): void {
     id.SEARCH_BOX
   ) as HTMLInputElement;
 
-  const links: [HTMLAnchorElement, Search][] = EXTERNAL_LEXICONS.map(
-    ([linkID, url]: [string, Search]): [HTMLAnchorElement, Search] => [
-      document.getElementById(linkID) as HTMLAnchorElement,
-      url,
-    ]
-  );
-
-  const refresh = (): void => {
-    links.forEach(([link, url]: [HTMLAnchorElement, Search]): void => {
-      link.href = url(box.value);
-      link.hidden = !box.value;
-    });
-  };
-
-  // The box may already carry a query restored from the URL.
-  refresh();
-  box.addEventListener('input', refresh);
+  document.addEventListener(xoox.EVENT, (): void => {
+    EXTERNAL_LEXICONS.forEach(
+      ([anchor, url]: [HTMLAnchorElement, Search]): void => {
+        anchor.href = url(box.value);
+        anchor.hidden = !box.value;
+      }
+    );
+  });
 }
 
 /**
