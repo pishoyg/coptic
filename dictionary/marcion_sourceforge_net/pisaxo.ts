@@ -192,12 +192,15 @@ function main(): void {
     MAGIC_LOOKUP
   );
   const object: unknown = yaml.load(raw, {
-    schema: yaml.DEFAULT_SCHEMA.extend([
-      new yaml.Type('!lookup', {
-        kind: 'scalar',
-        construct: () => MAGIC_LOOKUP,
-      }),
-    ]),
+    schema: yaml.CORE_SCHEMA.withTags(
+      // `!lookup` is a valueless tag, so it resolves to the sentinel regardless
+      // of the (empty) scalar that carries it. `identify` always declines,
+      // because we only ever load this file, never dump it.
+      yaml.defineScalarTag('!lookup', {
+        resolve: () => MAGIC_LOOKUP,
+        identify: () => false,
+      })
+    ),
   });
 
   // Validate the schema.
