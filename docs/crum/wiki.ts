@@ -1039,13 +1039,21 @@ export class Citation {
    * @returns Whether it carries citation data, and can therefore be read back
    * with `fromAnchor`. An unnumbered book link — `Kg`, standing for all four of
    * Samuel and Kings (`replaceUnnumberedBibleBook`) — resolves to no single
-   * book, so it is not built from a Citation and carries none.
+   * book, so it is not built from a Citation and carries none, although it
+   * carries the `BIBLE` class.
    */
   public static tagged(node: HTMLElement): boolean {
     return Citation.DATA_BOOK in node.dataset;
   }
 
   /**
+   * NOTE: Use the `tagged` function, instead of checking for the presence of
+   * the `BIBLE` class, to verify whether this method is safe to invoke on an
+   * element. Unnumbered Bible books bear the class but not the data.
+   * As of the time of writing, there are only 3 instances of unnumbered book
+   * abbreviations in the corpus, and none causes an erroneous invocation of
+   * this function.
+   *
    * @param node
    * @returns
    */
@@ -1123,8 +1131,8 @@ export class Citation {
     // chapter alone (e.g. "cf Am 4 above"). This would land on Actes des
     // Martyrs. Label those manually, carrying the chapter in the key:
     //   `{Am 4}{Am 4}`.
-    // See the collision note in `handleManualAux` for why that
-    // key forces the Bible reading.
+    // See the collision note in `interpretKey` for why that key forces the
+    // Bible reading.
     if (this.abb === 'Am') {
       return !this.chapter || (this.knownChapter() && !!this.verse);
     }
@@ -1171,6 +1179,18 @@ export class Citation {
     }
 
     return true;
+  }
+
+  /**
+   *
+   * @param span
+   * @returns
+   */
+  public sameBook(span: HTMLElement): boolean {
+    return (
+      Citation.tagged(span) &&
+      Citation.fromAnchor(span).book.path === this.book.path
+    );
   }
 }
 
@@ -1760,6 +1780,87 @@ function handleManual(manual: HTMLElement): void {
 }
 
 /**
+ *
+ * @param manual
+ * @param key
+ *
+ * @returns
+ */
+function interpretKey(manual: HTMLElement, key: string): Iterable<Node> | Node {
+  if (key === '') {
+    // An empty key indicates that this should not be annotated.
+    return manual.childNodes;
+  }
+
+  // NOTE: We don't split the suffix out of manually-labeled references, the
+  // whole text inside the manual tag is treated as a reference name (which
+  // is not true).
+  // As of the time of writing, the only side effect of this bug is that
+  // annotations don't reflect in the tooltip (#666). This is OK, because
+  // the number of manually-marked references is very small anyway.
+  // The key is explicit. The possibilities are:
+  // 1. The key is a page in the book scan.
+  // 2. The key is a reference abbreviation.
+  // 3. The key is a Bible book abbreviation, potentially with overrides for
+  //    the chapter / verse numbers.
+  // 4. The key is an annotation.
+  if (MANUAL_PAGE_RE.test(key)) {
+    return page(key, ...manual.childNodes);
+  }
+
+  // NOTE: A few abbreviations are ambiguous: they exist in both `ref.MAPPING`
+  // and `BIBLE_MAPPING`. Elsewhere we resolve such collisions in favour of
+  // Bible citations, but manual labels reverse that priority and resolve to
+  // the reference, because manual labels are primarily intended for
+  // references; their use for Bible citations is incidental and rare.
+  // As of the time of writing, the collisions are `Am` / `AM`, `AP`, `PS`
+  // and `Pr` — the same set that `replaceMatch` sends down the Bible-first
+  // fallback. None of them is stranded, because the collision is only on
+  // the BARE abbreviation. `AP`, `PS` and `Pr` have Bible-only counterparts
+  // (`Ap` / `Apoc`, `Ps` / `Pss`, `Pro`) that a contributor can use to force
+  // the Bible reading. `Am` / `AM` have none — but the `ref.MAPPING` lookup
+  // below is on the WHOLE key, so carrying the chapter is enough to force
+  // Amos: `Am 4` is not a declared postfix composition, so it misses the
+  // reference map, falls to the Bible branch, and reads its chapter
+  // straight out of the key. That is just the documented `{Bk C V}` form
+  // with the verse left off, and it is the fix wherever Crum cites a
+  // chapter alone — `(cf Am 4 above)` under ϩⲁϫⲱ⸗ (2364), pointing at
+  // his own `Am 4 7` earlier on the page — which `Citation.valid` refuses
+  // automatically, since one number is neither zero numbers nor two.
+  const reference: ref.Reference | undefined = ref.MAPPING[key];
+  if (reference) {
+    const span: HTMLSpanElement = reference.span(manual.childNodes);
+    // NOTE: `sameKey` may be too strict.
+    // Non-load-bearing postfixes may be better ignored in this comparison.
+    // The blast radius is extremely small and both modes
+    // of failure are benign, so we pick the one that keeps the code simpler.
+    // TODO: (#0) Consider ignoring non-load-bearing postfixes.
+    linkMatching(manual, span, reference.sameKey.bind(reference));
+    return span;
+  }
+
+  const match: RegExpExecArray | null = BIBLE_RE.exec(key);
+  if (match) {
+    // The key starts with the abbreviation of a Bible book.
+    // Try extracting the chapter and verse numbers from the key, falling back
+    // to extracting them from the manual element itself.
+    // NOTE: Should the citation be marked as non-explicit if the numbers are
+    // retrieved from the key? The blast radius is extremely small, and failures
+    // are benign both ways.
+    const cv: RegExpExecArray | null =
+      MANUAL_CHAPTER_VERSE.exec(key.slice(match[0].length)) ??
+      MANUAL_CHAPTER_VERSE.exec(manual.textContent);
+    const cit: Citation = new Citation(cv?.[1], cv?.[2], match[0]);
+    const anchor: HTMLElement = cit.anchor(...manual.childNodes);
+    linkMatching(manual, anchor, cit.sameBook.bind(cit));
+    return anchor;
+  }
+
+  // Fall back to treating the key as an annotation.
+  return annotation(key, ...manual.childNodes);
+}
+
+/**
  * Interpret a manual label — an enrichment decision made by a scholar.
  *
  * A manual label overrides the enrichment heuristics for one span of text, and
@@ -1816,71 +1917,8 @@ function handleManualAux(manual: HTMLElement): Iterable<Node> | Node {
   // to be worth addressing.
   const key: string | undefined = manual.dataset[DATA_KEY];
 
-  if (key === '') {
-    // An empty key indicates that this should not be annotated.
-    return manual.childNodes;
-  }
-
-  // NOTE: We don't split the suffix out of manually-labeled references, the
-  // whole text inside the manual tag is treated as a reference name (which
-  // is not true).
-  // As of the time of writing, the only side effect of this bug is that
-  // annotations don't reflect in the tooltip (#666). This is OK, because
-  // the number of manually-marked references is very small anyway.
-  if (key) {
-    // The key is explicit. The possibilities are:
-    // 1. The key is a page in the book scan.
-    // 2. The key is a reference abbreviation.
-    // 3. The key is a Bible book abbreviation, potentially with overrides for
-    //    the chapter / verse numbers.
-    // 4. The key is an annotation.
-    if (MANUAL_PAGE_RE.test(key)) {
-      return page(key, ...manual.childNodes);
-    }
-
-    // NOTE: A few abbreviations are ambiguous: they exist in both `ref.MAPPING`
-    // and `BIBLE_MAPPING`. Elsewhere we resolve such collisions in favour of
-    // Bible citations, but manual labels reverse that priority and resolve to
-    // the reference, because manual labels are primarily intended for
-    // references; their use for Bible citations is incidental and rare.
-    // As of the time of writing, the collisions are `Am` / `AM`, `AP`, `PS`
-    // and `Pr` — the same set that `replaceMatch` sends down the Bible-first
-    // fallback. None of them is stranded, because the collision is only on
-    // the BARE abbreviation. `AP`, `PS` and `Pr` have Bible-only counterparts
-    // (`Ap` / `Apoc`, `Ps` / `Pss`, `Pro`) that a contributor can use to force
-    // the Bible reading. `Am` / `AM` have none — but the `ref.MAPPING` lookup
-    // below is on the WHOLE key, so carrying the chapter is enough to force
-    // Amos: `Am 4` is not a declared postfix composition, so it misses the
-    // reference map, falls to the Bible branch, and reads its chapter
-    // straight out of the key. That is just the documented `{Bk C V}` form
-    // with the verse left off, and it is the fix wherever Crum cites a
-    // chapter alone — `(cf Am 4 above)` under ϩⲁϫⲱ⸗ (2364), pointing at
-    // his own `Am 4 7` earlier on the page — which `Citation.valid` refuses
-    // automatically, since one number is neither zero numbers nor two.
-    const reference: ref.Reference | undefined = ref.MAPPING[key];
-    if (reference) {
-      // TODO: (#787) Oftentimes, this is an anaphor. Search for an antecedent
-      // to chain with this anaphor.
-      return reference.span(manual.childNodes);
-    }
-
-    const match: RegExpExecArray | null = BIBLE_RE.exec(key);
-    if (match) {
-      // The key starts with the abbreviation of a Bible book.
-      // Try extracting the chapter and verse numbers from the key, falling back
-      // to extracting them from the manual element itself.
-      const cv: RegExpExecArray | null =
-        MANUAL_CHAPTER_VERSE.exec(key.slice(match[0].length)) ??
-        MANUAL_CHAPTER_VERSE.exec(manual.textContent);
-      // TODO: (#787) Oftentimes, this is an anaphor. Search for an antecedent
-      // to chain with this anaphor.
-      return new Citation(cv?.[1], cv?.[2], match[0]).anchor(
-        ...manual.childNodes
-      );
-    }
-
-    // Fall back to treating the key as an annotation.
-    return annotation(key, ...manual.childNodes);
+  if (key !== undefined) {
+    return interpretKey(manual, key);
   }
 
   // There is no provided key. We need to infer the interpretation. If the text
@@ -2223,6 +2261,15 @@ const ANTECEDENTS: string[] = [cls.BIBLE, cls.REFERENCE];
 const ANTECEDENT_QUERY: string = css.disjunction(...ANTECEDENTS);
 
 /**
+ *
+ * @param node
+ * @returns Whether the given node is a potential antecedent HTML element.
+ */
+function antecede(node: Node): node is HTMLElement {
+  return node instanceof HTMLElement && node.matches(ANTECEDENT_QUERY);
+}
+
+/**
  * The parenthesis nesting of the backward walk RELATIVE TO THE ANAPHOR.
  */
 interface Nesting {
@@ -2285,6 +2332,55 @@ function sameKind(one: HTMLElement, another: HTMLElement): boolean {
     (klass: string): boolean =>
       one.classList.contains(klass) && another.classList.contains(klass)
   );
+}
+
+const MAX_CANDIDATES = 3;
+
+/**
+ * Link the first antecedent that matches the given precedent to the given
+ * anaphor, if found.
+ * The number of candidates to consider is capped at `MAX_CANDIDATES`.
+ * Candidates farther than that are unlikely to actually be antecedents.
+ *
+ * False negatives are possible, due to non-load-bearing postfixes (#671), and
+ * perhaps due to the distance. They're largely benign.
+ * False positives are rather unlikely, and they're also benign.
+ *
+ * As of the time of writing, this is only used for manual labels with an
+ * explicit key, which is a very small population in the first place, making the
+ * above issues extremely rare.
+ *
+ * That tiny population, and the failures above, are equally
+ * an argument for dropping the feature altogether. We retain it because those
+ * labels are ALREADY annotated as anaphors: `Reference.span` and
+ * `Citation.anchor` both run `ann.ib` over their text and push an `ibidem`
+ * line into the tooltip. Without this, the site tells the reader that a label
+ * means `ibidem` and then, alone among every `ib` on the page, declines to
+ * show them of WHAT — in exactly the spot where a scholar already intervened
+ * because the heuristics failed. Dropping the feature makes that
+ * inconsistency permanent.
+ *
+ * @param start
+ * @param anaphor
+ * @param predicate
+ *
+ * @returns
+ */
+function linkMatching(
+  start: HTMLElement | null,
+  anaphor: HTMLElement,
+  predicate: (_: HTMLElement) => boolean
+): void {
+  // We consider all candidates, regardless of parentheses.
+  const candidate: HTMLElement | undefined = backtrack(start)
+    .filter(antecede)
+    .take(MAX_CANDIDATES)
+    .find(predicate);
+
+  if (!candidate) {
+    return;
+  }
+  link(anaphor, candidate);
 }
 
 /**
@@ -2356,9 +2452,7 @@ function findAntecedent(start: Node | null | html.Context): HTMLElement | null {
   let nest: Nesting = { depth: 0, enclosed: false };
 
   for (const node of candidates) {
-    // (Normally we would use `Element` in the check above, but we use
-    // `HTMLElement` to appease the linter and avoid a few type casts below.)
-    if (node instanceof HTMLElement && node.matches(ANTECEDENT_QUERY)) {
+    if (antecede(node)) {
       if (nest.depth === 0 || nest.enclosed) {
         // The walk stands at the anaphor's own level, so this candidate is the
         // outer one. It resumes the running citation — and wins — unless it is

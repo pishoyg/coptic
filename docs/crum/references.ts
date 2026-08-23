@@ -175,6 +175,23 @@ export class Reference {
   }
 
   /**
+   * Check whether the given span is a reference that bears the exact same key
+   * as this reference.
+   * NOTE: Non-load-bearing postfixes are also accounted for in the comparison.
+   * This method evaluates to true only if all key components are identical.
+   *
+   * @param span
+   *
+   * @returns
+   */
+  public sameKey(span: HTMLElement): boolean {
+    return (
+      span.classList.contains(cls.REFERENCE) &&
+      Reference.fromSpan(span).key() === this.key()
+    );
+  }
+
+  /**
    *
    * @param span
    * @returns
