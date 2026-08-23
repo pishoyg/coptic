@@ -163,6 +163,7 @@ figcaption {
 
   /* Center the block horizontally */
   margin: 0 auto;
+  padding: 0 0.25em;
 }
 
 .front {
