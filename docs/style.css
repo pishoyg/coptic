@@ -148,6 +148,11 @@ input:not(.android .card) {
   font-family: overrides, Antinoou, 'Noto Sans', sans-serif;
 }
 
+input[type='checkbox'],
+label:has(> input[type='checkbox']) {
+  cursor: pointer;
+}
+
 input[type='checkbox'] {
   accent-color: var(--bright-sky-blue);
 }
