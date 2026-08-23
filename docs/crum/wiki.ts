@@ -13,6 +13,7 @@ import * as clip from '../clip.js';
 import * as paths from '../paths.js';
 import * as css from '../css.js';
 import * as cls from './cls.js';
+import * as ccls from '../cls.js';
 import * as log from '../logger.js';
 import * as bib from './bible.js';
 import * as ann from './annotations.js';
@@ -1704,6 +1705,9 @@ function handleFootnotes(root: HTMLElement): void {
 }
 
 /**
+ * Wire each addendum's mark. The mark shows a tooltip linking to the addenda
+ * page, and is itself a link to the same page, so that it can be followed
+ * directly rather than through the tooltip.
  *
  * @param root
  */
@@ -1712,7 +1716,9 @@ function handleAddenda(root: HTMLElement): void {
     .querySelectorAll<HTMLElement>(css.c(cls.ADDENDUM))
     .forEach((elem: HTMLElement): void => {
       const key: string = elem.dataset[DATA_PAGE]!;
-      tool.addTooltip(elem.querySelector(`:scope > .${cls.MARK}`)!, [
+      const mark: HTMLElement = elem.querySelector(`:scope > .${cls.MARK}`)!;
+      html.linkify(mark, paths.crumScan(key), ccls.HOVER_LINK);
+      tool.addTooltip(mark, [
         html.anchor(
           paths.crumScan(key),
           'Addenda (',
