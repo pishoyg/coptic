@@ -34,6 +34,10 @@ const WORKS = `
     <em><a href="https://coptic-dictionary.org/" target="_blank">Coptic Dictionary Online</a></em>, ed. by the <a href="https://kellia.uni-goettingen.de/" target="_blank">Koptische/Coptic Electronic Language and Literature International Alliance (KELLIA)</a>.
   </li>
 
+  <li><em><span dir="rtl">قاموس قبطي عربي لكلمات اللهجة البحيرية والكلمات المأخوذة من اللغة اليونانية</span></em>, by <span dir="rtl">دير القديس أنبا مقار ببرية شيهيت</span> (the Monastery of St. Macarius the Great, Scetis).</li>
+
+  <li><em>ⲡⲓⲁⲛⲥⲁϫⲓ ⲛ̀ϯⲁⲥⲡⲓ ⲛ̀ⲣⲉⲙⲛ̀ⲭⲏⲙⲓ | <span dir="rtl">قاموس اللغة القبطية للهجتين البحيرية والصعيدية</span></em>, by <span dir="rtl">معوض داود عبدالنور</span> (Moawad Dawoud Abd al-Nour).</li>
+
   <li><em><a href="https://copticscriptorium.org/" target="_blank">Coptic Scriptorium</a></em>, by Caroline T. Schroeder, Amir Zeldes, et al.</li>
 
   <li><em><a href="https://coptot.manuscriptroom.com/" target="_blank">Digital Edition of the Coptic Old Testament</a></em>, by the Göttingen Academy of Sciences and Humanities in Lower Saxony.</li>
