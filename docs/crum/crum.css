@@ -88,6 +88,17 @@ figcaption {
   }
 }
 
+/* Page references link to the scan of the page they name: the inline ones in
+ * the Wiki text, and the folio labels heading a page's worth of entries. They
+ * carry the default link color, so their hover background is a light tint of
+ * it. */
+.page,
+.crum-page {
+  &:hover {
+    background-color: #e8f4fc; /* light sky */
+  }
+}
+
 .card {
   font-size: 18px;
 }
@@ -356,7 +367,9 @@ figcaption {
   .amharic,
   .demotic,
   .hieroglyphic,
-  .annotation
+  .annotation,
+  .page,
+  .crum-page
 ) {
   border-radius: 2px;
 
