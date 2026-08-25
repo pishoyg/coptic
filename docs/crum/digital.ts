@@ -399,7 +399,7 @@ function addCheckboxTooltips(): void {
       ['Use regular expressions (', examples, ', ', cheatSheet, ' )'],
     ],
     [id.MARCION_CHECKBOX, ['Only search the summary']],
-    [id.WIKI_CHECKBOX, ['Only search the full text']],
+    [id.WIKI_CHECKBOX, ['Only search the text']],
   ];
 
   for (const [checkbox, content] of tooltips) {
