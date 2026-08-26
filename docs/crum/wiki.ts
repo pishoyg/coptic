@@ -1726,8 +1726,12 @@ function handleFootnotes(root: HTMLElement): void {
 
 /**
  * Wire each addendum's mark. The mark shows a tooltip linking to the addenda
- * page, and is itself a link to the same page, so that it can be followed
- * directly rather than through the tooltip.
+ * page, and - on a device that can hover - is itself a link to the same page,
+ * so that it can be followed directly rather than through the tooltip.
+ *
+ * On a touchscreen, a tap is the only way to summon the tooltip, so the mark
+ * must not be a link there; following it would preempt the tooltip, leaving no
+ * way to see it.
  *
  * @param root
  */
@@ -1737,14 +1741,12 @@ function handleAddenda(root: HTMLElement): void {
     .forEach((elem: HTMLElement): void => {
       const key: string = elem.dataset[DATA_PAGE]!;
       const mark: HTMLElement = elem.querySelector(`:scope > .${cls.MARK}`)!;
-      html.linkify(mark, paths.crumScan(key), ccls.HOVER_LINK);
+      const url: string = paths.crumScan(key);
+      if (browser.hoverable()) {
+        html.linkify(mark, url, ccls.HOVER_LINK);
+      }
       tool.addTooltip(mark, [
-        html.anchor(
-          paths.crumScan(key),
-          'Addenda (',
-          ...scan.prettyPage(key),
-          ')'
-        ),
+        html.anchor(url, 'Addenda (', ...scan.prettyPage(key), ')'),
       ]);
     });
 }

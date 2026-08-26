@@ -51,6 +51,19 @@ export function smallScreen(): boolean {
 }
 
 /**
+ * @returns Whether the primary pointing device can hover, which in practice
+ * means a mouse or a trackpad rather than a touchscreen.
+ *
+ * Hover-invoked affordances (tooltips, most notably) are only reachable by
+ * tapping on a device that can't hover, so anything that would otherwise
+ * consume that tap has to step aside there. A browser that doesn't support
+ * the media query falls through to `false`, which keeps the tap free.
+ */
+export function hoverable(): boolean {
+  return window.matchMedia('(hover: hover)').matches;
+}
+
+/**
  * @returns Whether focusing a text input is likely to summon an on-screen
  * keyboard.A hybrid laptop with a
  * touchscreen and a mouse has touch input, but focusing an input does *not*
