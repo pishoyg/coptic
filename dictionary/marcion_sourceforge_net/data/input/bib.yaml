@@ -48,6 +48,17 @@
 #    - Use Markdown notation for lists. Each item should be preceded by `- `.
 # For all of the above, see examples throughout the files.
 
+# NOTE: (#671) CONSOLIDATED POSTFIXES. Crum often repeats only the postfix of a
+# citation in the _ibidem_ that follows it ('ManiK …, ib K …'), and a bare
+# postfix is not a parsable key. Where an entry's postfixes merely name parts
+# of one work, we therefore CONSOLIDATE it: each postfix description moves into
+# the entry's own `description`, introduced by its bold siglum (`**K**: …`),
+# and the `postfixes` key is left with an empty interpretation. Every postfixed
+# form then shares the entry's full tooltip, so it no longer matters whether
+# the parser read the postfix as part of the key. See `Mani` and `Pcod`.
+# Postfixes that name a DISTINCT source stay interpreted; the handful of
+# _ibidem_ citations they strand are marked by hand in `wiki.tsv`.
+
 # TODO: (#522) Populate missing references, variants, postfixes, descriptions,
 # ...etc.
 

@@ -1965,6 +1965,16 @@ function handleManualAux(manual: HTMLElement): Iterable<Node> | Node {
 }
 
 /**
+ * NOTE: KNOWN UNHANDLED CASE (#671): Crum often repeats only the POSTFIX of the
+ * antecedent after the 'ib' — "BMOr 8775 …, ib Or 8775 113", "ManiK …, ib K
+ * …". A bare postfix is not a key, so the text after the 'ib' either stays
+ * unenriched or resolves to an unrelated reference ('K' is Kircher). The
+ * generic fix — retrying the antecedent's key with successively shorter
+ * postfix chains — was implemented for `Mani` and reverted: it produced more
+ * false positives than true ones. Instead:
+ * 1. Consolidate the source in `bib.yaml`, so that the postfix stops being
+ *    load-bearing. See the postfix NOTE there.
+ * 2. Mark the few survivors by hand, as `{_ib_ Or 8775 113}{BMOr}`.
  *
  * @param context
  * @returns

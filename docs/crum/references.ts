@@ -271,9 +271,18 @@ abstract class Fix {
   protected abstract lookup(): HTMLElement[];
 
   /**
-   * NOTE: A fix whose interpretation is null in `bib.yaml` — a declared
-   * placeholder, such as `Vi`'s `K:` or `Mani`'s `1:` / `2:` — contributes
-   * NOTHING here. This makes correct output look broken, and it is worth
+   * NOTE: A fix whose interpretation is null in `bib.yaml` contributes
+   * NOTHING here. A null could be one of the following:
+   * 1. A postfix that simply has no tooltip-worthy interpretation, such as one
+   *    referring to a chapter within a book.
+   * 2. A postfix emptied ON PURPOSE by consolidation (#671), such as `Mani`'s
+   *    `K:` or `Pcod`'s `F:`. Its text was not lost: it moved into the
+   *    entry's own `description`, under its bold siglum, so that every
+   *    citation shares the same tooltip, regardless of postfixes. See the
+   *    postfix NOTE in `bib.yaml`.
+   * 3. A placeholder that still needs to be filled out (#522).
+   *
+   * Either way, this makes correct output look broken, and it is worth
    * knowing before reporting a postfix as mis-parsed. `ShViK 9100 229` (under
    * ⲟⲩⲟⲉⲓⲛ, page 1) parses exactly right: `Sh` carries a real `Vi K` postfix,
    * and the longest-first match in `ENRICHMENT_RE` takes the whole `ShViK`.
