@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project
 
-[ⲣⲉⲙⲛ̀Ⲭⲏⲙⲓ](https://remnqymi.com/) — a platform to make the Coptic language more learnable. It processes multiple dictionary sources (Crum, KELLIA, Andreas, Dawoud), a Bible corpus, and Anki flashcard generation into a static website hosted on GitHub Pages.
+[ⲣⲉⲙⲛ̀Ⲭⲏⲙⲓ](https://remnqymi.com/) — a platform to make the Coptic language more learnable. It processes multiple dictionary sources (Crum, KELLIA, Andreas), a Bible corpus, and Anki flashcard generation into a static website hosted on GitHub Pages.
 
 ## Common Commands
 
@@ -19,6 +19,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 | `make anki` | Generate the Anki flashcard package |
 | `make bible` | Run the Bible pipeline |
 | `make all` | Run all pipelines + test |
+| `make stats` | Collect repo statistics into `data/stats.tsv` and commit them |
 
 Running pipelines individually (scripts must be invoked from the repo root):
 ```sh
@@ -29,16 +30,15 @@ Running pipelines individually (scripts must be invoked from the repo root):
 ./bible/stshenouda_org/main.py
 ```
 
-TypeScript unit tests and E2E tests:
+Type checking and E2E tests:
 ```sh
-npx bun test --preload ./bun.ts   # unit tests
 npx playwright test               # E2E tests (Chromium + Mobile Chrome)
 npx tsc                           # type check only
 ```
 
 ## Playwright MCP
 
-The Playwright MCP server is enabled for this project (see `.claude/settings.json`), so Claude Code can drive a live browser to inspect, interact with, and screenshot the site. Typical uses: verifying UI changes after editing `.ts`/`.css`/`.html` in `docs/`, reproducing bugs, and visually confirming behavior that unit tests and `tsc` cannot catch.
+The Playwright MCP server is enabled for this project (see `.mcp.json`), so Claude Code can drive a live browser to inspect, interact with, and screenshot the site. Typical uses: verifying UI changes after editing `.ts`/`.css`/`.html` in `docs/`, reproducing bugs, and visually confirming behavior that the E2E suite and `tsc` cannot catch.
 
 - Before exercising the site, check whether a dev server is already running
   (e.g. `curl -sf http://localhost:$PORT/ >/dev/null`) and reuse it; only run
@@ -61,11 +61,11 @@ Each dictionary source has its own pipeline directory. Pipelines are independent
 - `dictionary/marcion_sourceforge_net/` — Crum dictionary processing
 - `dictionary/kellia_uni_goettingen_de/` — KELLIA/TLA dictionary processing
 - `dictionary/stmacariusmonastery_org/` — Andreas dictionary processing
-- `dictionary/copticocc_org/` — Dawoud dictionary
 - `bible/stshenouda_org/` — Bible corpus processing
 - `flashcards/` — Anki deck generation
 - `morphology/` — Morphological inflection generation
 - `docs/` — Static website output (TypeScript + HTML + CSS + generated JSON/HTML)
+- `xooxle/` — Search-index generation, shared by the dictionary pipelines
 - `utils/` — Shared Python utilities (paths, logging, validation, orthography)
 - `test/` — Playwright E2E tests
 
@@ -104,8 +104,7 @@ All file paths are centralized:
 ### TypeScript
 
 - 80-character line limit
-- Group all CSS class names in a `CLS` enum
-- Group event listener registrations in functions named `addEventListeners*`
+- Group all CSS class names in a `CLS` enum or `cls.ts` file
 - Use `querySelector`/`querySelectorAll` (not `getElementsBy*`); use `getElementById` for ID lookups
 - Prefer `element.addEventListener('click', ...)` over `element.onclick = ...`
 - TypeScript is transpiled to JS via `make transpile`; never edit `.js` files directly
@@ -122,7 +121,7 @@ All file paths are centralized:
 [#ISSUE][COMPONENT/SUBCOMPONENT] DESCRIPTION
 ```
 
-Use `fix #ISSUE` to auto-close an issue. Components: `Crum`, `KELLIA`, `Andreas`, `Dawoud`, `Bible`, `Lexicon`, `Site`, `Morphology`, `platform`, `Community`.
+Use `fix #ISSUE` to auto-close an issue. Components: `Crum`, `KELLIA`, `Andreas`, `Bible`, `Lexicon`, `Site`, `Morphology`, `platform`, `Community`, `App`, `Keyboard`.
 
 ### Pre-commit Hooks
 

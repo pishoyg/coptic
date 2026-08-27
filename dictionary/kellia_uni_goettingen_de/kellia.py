@@ -1,5 +1,28 @@
 #!/usr/bin/env python3
-"""Process KELLIA's dictionary."""
+"""Process KELLIA's dictionary.
+
+The dictionary combines the TLA / DDGLC / CDO core data (see `COMPREHENSIVE`)
+with supplemental forms maintained by Coptic Scriptorium (see
+`BOHAIRIC_SUPPLEMENTAL_SHEET_URL` and `SAHIDIC_SUPPLEMENTAL`).
+
+We based this logic on the CDO's `dictionary_reader.py`:
+  https://github.com/KELLIA/dictionary/blob/master/utils/dictionary_reader.py
+Parts of it, particularly those pertaining to supplemental forms, are derived
+from pieces that, as of October 2025, live in the `dev` version of the file:
+  https://github.com/KELLIA/dictionary/blob/dev/utils/dictionary_reader.py
+
+The original code is very badly written and is completely unmaintainable, and
+it has several (small) bugs. Our code has since significantly diverged from the
+original, and there is little overlap left.
+
+There are artifacts that we chose to ignore in our own pipeline:
+- Egyptian etymologies:
+  https://github.com/KELLIA/dictionary/blob/dev/utils/egyptian_etymologies.tab
+- Entity types:
+  https://github.com/KELLIA/dictionary/blob/edac2731c86fb02819436d39d127344e4e0bf514/utils/dictionary_reader.py#L14
+- `oRef` tags:
+  https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-oRef.html
+"""
 
 # TODO: (#525) Consider using the same HTML structure as Crum.
 
@@ -33,7 +56,14 @@ TEI_NS: str = "{http://www.tei-c.org/ns/1.0}"
 
 _SCRIPT_DIR: pathlib.Path = pathlib.Path(__file__).parent
 # COMPREHENSIVE is the path to the dataset that contains both Greek and Egyptian
-# words.
+# words. It comprises the core of the dictionary, and is retrieved from
+# "Comprehensive Coptic Lexicon: Including Loanwords from Ancient Greek v 1.2":
+# https://refubium.fu-berlin.de/handle/fub188/27813
+# Commit 84c1044282faa12daf748858351b989376f82018 integrates some changes made
+# by Coptic Scriptorium to the CDO's copy of the XML:
+# https://github.com/KELLIA/dictionary/blob/master/xml/Comprehensive_Coptic_Lexicon-v1.2-2020.xml
+# We may have made some changes afterwards. Use `git log` or `git diff` to find
+# them.
 COMPREHENSIVE: pathlib.Path = (
     _SCRIPT_DIR
     / "data"
@@ -56,6 +86,15 @@ _SENSE_CHILDREN: list[_SenseChild] = [
 FORM_RE: re.Pattern[str] = re.compile(r"[Ⲁ-ⲱϢ-ϯⳈⳉ]+[†⸗\-]?")
 PURE_COPTIC_RE: re.Pattern[str] = re.compile("[Ⲁ-ⲱϢ-ϯⳈⳉ]+")
 
+# Coptic Scriptorium has attempted to grow the data by adding supplemental
+# forms. As of the time of writing, the CDO is capable of expanding an entry by
+# adding variant forms, but it can't add any new entries that lack an ID.
+#
+# BOHAIRIC_SUPPLEMENTAL_SHEET_URL is the sheet, maintained by Coptic
+# Scriptorium, from which we retrieve the Bohairic supplemental forms directly.
+# The data that the CDO actually uses is unavailable to us, but it's derived
+# from this sheet:
+# https://github.com/KELLIA/dictionary/blob/edac2731c86fb02819436d39d127344e4e0bf514/utils/dictionary_reader.py#L591
 BOHAIRIC_SUPPLEMENTAL_SHEET_URL: str = (
     # pylint: disable-next=line-too-long
     "https://docs.google.com/spreadsheets/d/1r9J5nuQFQxgInLpX1Gm-I20nunIBjmGFR3CfFgK0THU/export?format=tsv"
@@ -63,6 +102,10 @@ BOHAIRIC_SUPPLEMENTAL_SHEET_URL: str = (
 # BOHAIRIC_SUPPLEMENTAL_VERIFIED is the number of verified entries in the
 # Bohairic supplemental data. Only this subset will be processed.
 BOHAIRIC_SUPPLEMENTAL_VERIFIED: int = 999
+# SAHIDIC_SUPPLEMENTAL is a snapshot, taken in October 2025, of the CDO's
+# `inflections.tab`. As of the time of writing, it remains on the CDO's `dev`
+# branch:
+# https://github.com/KELLIA/dictionary/blob/dev/utils/inflections.tab
 SAHIDIC_SUPPLEMENTAL: pathlib.Path = (
     _SCRIPT_DIR / "data" / "raw" / "inflections.tab"
 )
@@ -851,17 +894,26 @@ def _words() -> abc.Generator[Word]:
             assert entry.tag == TEI_NS + "entry"
             if deprecated(entry):
                 continue
-            try:
-                yield _process_entry(entry)
-            # pylint: disable-next=broad-exception-caught
-            except Exception as e:
-                log.fatal(
-                    "Error processing entry",
-                    entry.attrib[XML_NS + "id"],
-                    e,
-                )
+            yield _process_entry(entry)
 
 
+# NOTE: Supplemental forms have been, well, problematic! They seem to be poorly
+# maintained by Coptic Scriptorium. As of October 2025, besides the difficulty
+# of accessing the latest data or a stable snapshot (see
+# `BOHAIRIC_SUPPLEMENTAL_SHEET_URL` and `SAHIDIC_SUPPLEMENTAL`), their
+# processing code seems to also suffer from at least the following:
+# - Parts-of-speech of supplemental forms are completely ignored.
+# - Markers of prenominal (`-`), pronominal (`⸗`), and qualitative (`†`)
+#   forms are omitted.
+# - For a given entry, Bohairic supplemental forms are taken on an
+#   all-or-nothing basis. No deduplication or merging is performed:
+# https://github.com/KELLIA/dictionary/blob/edac2731c86fb02819436d39d127344e4e0bf514/utils/dictionary_reader.py#L467
+#
+# Lexicon therefore often doesn't show the same set of supplemental forms that
+# the CDO shows. The CDO doesn't seem to be under active development at the
+# moment, and the above issues aren't expected to be resolved. We are
+# considering reverting the addition of supplemental forms, and relying only on
+# the core data. See #305.
 def _augmented_words() -> abc.Generator[Word]:
     """Augment the stream of words with supplemental forms.
 

@@ -26,7 +26,6 @@ that aims to make the Coptic language more **learnable**.
     - [Commits](#commits)
   - [Guidelines](#guidelines)
     - [Languages](#languages)
-  - [`stats`](#stats)
 - [Project-specific](#project-specific)
   - [`dictionary/`](#dictionary)
     - [Marcion](#marcion)
@@ -35,10 +34,10 @@ that aims to make the Coptic language more **learnable**.
         - [Technical Guidelines](#technical-guidelines)
     - [KELLIA](#kellia)
   - [`bible/`](#bible)
-    - [St. Shenouda Coptic Society](#st-shenouda-coptic-society)
   - [`flashcards/`](#flashcards)
   - [`morphology/`](#morphology)
   - [`docs/`](#docs)
+  - [`xooxle/`](#xooxle)
 - [Data Collection](#data-collection)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -103,19 +102,14 @@ for traffic tracking and analysis.
    appropriately):
    ```sh
    coptic_source_hook() {
-   if [[ "$PWD" == "$PATH_TO_COPTIC_REPO" ]]; then
-     source ./.env
-     PROMPT_COMMAND=${PROMPT_COMMAND//coptic_source_hook;}/
-   fi
+     if [[ "$PWD" == "${PATH_TO_COPTIC_REPO}" ]]; then
+       source ./.env
+       PROMPT_COMMAND=${PROMPT_COMMAND//coptic_source_hook;/}
+     fi
    }
 
    PROMPT_COMMAND="coptic_source_hook; $PROMPT_COMMAND"
    ```
-
-   Keep in mind that the Python `venv` will continue to be activated afterwards,
-   and the environment variables will still be set, as long as you're in the same
-   shell session. You can deactivate the Python `venv` by running `deactivate`.
-   Alternatively, you can just exit the shell window and start a new one.
 
 1. Running `make install` should take care of most of the installations.
    Sourcing `.env` is necessary for this to work. Though `make install` only
@@ -185,8 +179,10 @@ square brackets.
 1. Lexicon: [ⲡⲓⲖⲉⲝⲓⲕⲟⲛ](http://remnqymi.com/crum/)
 1. Site: [Our website](http://remnqymi.com/)
 1. Morphology: Our morphological analysis pipelines
-1. platform: The development platform and tooling.
-1. Community: Community of contributors and users.
+1. platform: development platform and tooling
+1. Community: Community of contributors and users
+1. App
+1. Keyboard
 
 ### [Milestones](https://github.com/pishoyg/coptic/milestones?direction=asc&sort=due_date&state=open)
 
@@ -195,7 +191,7 @@ draw our project path, and what it is that we're trying to achieve in the long
 run. Milestones are a translation of the project's mission.
 
 - Besides the more specific milestones that represent concrete goals, we have
-  `(Backlog)` milestones, that represent miscellaneous pending improvements,
+  `(backlog)` milestones, that represent miscellaneous pending improvements,
 technical debt, optimizations, or desired changes; but which don't block the
 achievement of one of the project's main goals.
 
@@ -204,7 +200,7 @@ achievement of one of the project's main goals.
 - The number of milestones should remain _under control_.
 
 - When work on a milestone is good enough, it's closed, the achievement is
-celebrated, and its remaining issues move to an appropriate backlog milestone.
+celebrated, and its remaining issues move to a corresponding `backlog` milestone.
 
 - As much as possible, each milestone should be concerned with a given
 _component_.
@@ -214,11 +210,9 @@ _component_.
 - Every issue [must belong to a
 milestone](https://github.com/pishoyg/coptic/issues/?q=is%3Aissue%20state%3Aopen%20no%3Amilestone).
 
-- Issues need to be as specific and isolated as possible. Most of the time, they
-span a single component and involve a local change or set of local changes,
-although they can sometimes work mainly in one component and spill to others,
-and sometimes they're generic and span one aspect of multiple components (such
-as the conventions set for the whole repo).
+- Issues need to be specific and isolated, with a clear definition-of-done. They
+ideally span a single component and involve a local change or set of local
+changes, although they can sometimes span multiple components.
 
 - High-priority issues are marked in a number of ways:
    - The [`favorable` label](https://github.com/pishoyg/coptic/labels/favorable).
@@ -286,9 +280,9 @@ message, though make sure that the more important docs live in the code.
 
 ## Guidelines
 
-1. Add excessive in-code assertions, and validate your assumptions whenever
-   possible. This is our first line of defense, and has been the champion when
-it comes to ensuring correctness and catching bugs.
+1. Add excessive in-code assertions, and always validate your assumptions. This
+   is our first line of defense, and has been the champion when it comes to
+ensuring correctness and catching bugs.
 
 1. When it comes to error checking:
    - Employ assertions for sanity checks, such as catching logic errors, or
@@ -309,19 +303,21 @@ it comes to ensuring correctness and catching bugs.
    - [Python](utils/paths.py)
    - [TypeScript](docs/paths.ts)
 
-1. Document the code extensively.
+1. Document the code appropriately, though not verbosely, especially where not
+   intuitive or where known issues should be called out.
 
 1. Use type hints extensively.
 
-1. Minimize dependence on HTML, and implement behaviours in TypeScript when
-   possible.
+1. Prefer implementing features using browser JavaScript, instead of keeping
+   them in the HTML. However, prefer storing any visible text in HTML, and
+invisible elements (such as tooltips) in JavaScript.
 
 1. Avoid using a generic `utils` package. It can easily become a catch-all for
 unrelated logic, grow excessively large, and lose clear purpose. Instead,
 organize utilities into purpose-specific packages based on functionality.
 
-1. Some of our projects have a `data` subdirectory. Pay attention to the following
-distinction:
+1. Some of our projects have a `data` directory. This can contain subdirectories
+   as follows:
 
    - `raw/`: Data that is **copied** from elsewhere. This would, for example,
    include the Marcion SQL tables copied as is, unmodified. The contents of this
@@ -338,54 +334,38 @@ distinction:
    1. What elements are retrieved from the document.
 
    Therefore, whenever possible, try to abide by the following:
-   1. Group all classes in a `CLS` enum.
-   2. Group event listener registrations to one `addEventListeners` function (or a use function name
-   that starts with this prefix, so it's easy to find in search).
-   3. Also prefer the following syntax:
+   1. Group all classes in a `cls.ts` file or a `CLS` enum.
+   1. Prefer the following syntax:
       ```ts
-      element.addEventListeners('click', () => {});
+      element.addEventListener('click', () => {});
       ```
       over this:
       ```ts
       element.onclick = () => {};
       ```
-   4. Use `querySelector` or `querySelectorAll` instead of such methods as
+   1. Use `querySelector` or `querySelectorAll` instead of such methods as
       `getElementsByClassName` or `getElementsByTagName`. The only exception is
       when retrieving an element by ID, in which case we enforce
    `getElementById`.
 
 ### Languages
 
-- Our pipelines are primarily written in Python. There is minimal logic in
-  Bash.
+- Our pipelines are primarily written in **Python**.
 
-- We have a strong bias for Python over Bash. Use Bash if you expect the number
-of lines of code of an equivalent Python piece to be significantly more.
+- **Bash** is occasionally employed when Python would be significantly more
+verbose.
 
-- We use TypeScript for static site logic. It then gets transpiled to
-JavaScript by running `make transpile`. We don't write JavaScript directly.
+- We use **TypeScript** for static site logic. It then gets transpiled to
+JavaScript by running `make transpile`. Never write JavaScript directly.
 
-- We expect to make a similar platform-specific expansion into another
-territory for the app.
+- Had we had better foresight, or anticipated the growth of the project to what
+it is today, pipelines would've been implemented in TypeScript as well, and
+Python wouldn't have been employed altogether. Maintaining two languages adds
+overhead, and results in much regrettable duplication. A complete migration to
+TypeScript is being contemplated (#561, #183). Prefer TypeScript where possible.
 
-- In the past, we voluntarily used Java (for an archived project). Won't happen
-again! We also used VBA and JS for Microsoft Excel and Google Sheet macros
-(also archived at the moment) because they were required by the platform.
-
-- It is desirable to strike a balance between the benefits of focusing on a
-small number of languages, and the different powers that different language can
-uniquely exhibit. We won't compromise the latter for the former. Use the
-*right* language for a task. When two languages can do a job equally well,
-uncompromisingly choose the one that is more familiar.
-
-## [`stats`](data/stats.tsv)
-
-- We collect extensive stats, and we remind you of them using a pre-commit. The
-primary targets of our statistics are:
-  - The size of our code (represented by the number of lines of code). We also
-  collect this stat for each subproject or pipeline step independently.
-  - The number of data items we've collected for data collection tasks.
-  - We also record the number of commits, and the number of contributors.
+- Never extend the set of languages beyond the above unless required by the
+platform.
 
 # Project-specific
 
@@ -399,55 +379,37 @@ This directory contains the data and logic for processing our dictionaries.
 
 ##### Why?
 
-There are many reasons we have decided to add pictures to our dictionary, and
+There are many reasons we have decided to add images to our dictionary, and
 heavily invested in the image pipeline. They have become one of the integral
 pieces of our dictionary framework.
 
-1. The meaning of a word is much more strongly and concretely conveyed by an
-   image than by a word. Learning is not about knowing vocabulary or grammar.
-Learning is ultimately about creating the neural pathways that enable language
-to flow out of you naturally. A given word needs to settle and connect with
-nodes in your [associative
+1. The meaning of a word is more strongly and concretely conveyed by an image
+   than by a word. Learning is ultimately about creating the neural pathways
+that enable language to flow naturally. A given word needs to settle and connect
+with nodes in your [associative
 memory](https://en.wikipedia.org/wiki/Associative_memory_(psychology)) in order
-for you to be able to use it. If our goal is to create or strengthen the neural
-pathways between a Coptic word and related nodes in your brain, then it aids
-the learning process to achieve as much neural activation as possible during
-learning. This is much better achieved by an image than by a mere translation,
-given the way human brains work. After all, the visual processing areas of
-our brains are bigger, faster, and far more ancient and primordial (even
-reptiles can see) compared to the language processing areas. You will often
-find that, when you learn a new word, the associated images pop up in your
-brain more readily than the translation. Thus the use of images essentially
-revolutionizes the language learning process.
+for you to be able to use it. It aids the learning process to achieve as much
+neural activation as possible during learning. This is much better achieved by
+an image than by a mere English translation. Visual processing areas of our
+brains are bigger, faster, and more primordial, than language processing areas.
+The use of images make vocabulary learning more effective and efficient.
 
-2. Oftentimes, the words describe an entity or concept that is unfamiliar to
-   many users. Things like ancient crafts, plant or fish species, farmer's
-tools, and the like, are unfamiliar. Showing a user the English translation of
-a word doesn't suffice for the user to understand what it is, and they would
-often look up images themselves in order to find out what the word actually
-means. By embedding the pictures in the dictionary, we save users some time so
-they don't have to look it up themselves.
+2. Oftentimes, words describe concepts that are unfamiliar to readers. Embedding
+   images saves readers the time they would take to otherwise look up and
+learn about the word.
 
-3. Translations are often taken lightly by users. Pictures are not. When a
-   dictionary author translates a given Coptic word into different English
-words, for example, the extra translations are often seen by users as
-auxiliary - tokens added there to convey a meaning that the dictionary author
-couldn't convey using fewer words.
+3. Images are taken more seriously by readers than words. Where a Coptic word
+   covers a wide semantic range with many senses, those senses are often
+dismissed by readers who tend to focus on one sense and see the others as
+auxiliary. Use of images legitimizes senses in the eyes of readers, and
+persuades them to accept and recognize the wider semantic range that the Coptic
+word has.
 
-   That's not the case for pictures. Pictures are taken seriously by users, and
-   are more readily accepted as bearing a true, authentic, independent meaning
-   of the word. Listing images (especially after we have started ascribing each
-   image to a *sense* that the word conveys) is a way to recognize and
-   legitimize those different senses and meanings that a word possesses.
-
-   It's for this reason that images must be deeply contemplated, and a word must
-   be digested well, before we add explanatory images for it. Collecting images
-   is tantamount to authoring a dictionary.
+   Images therefore must be deeply contemplated and carefully selected.
+   Collecting images is comparable to the very authoring itself of the
+   dictionary.
 
 ##### Technical Guidelines
-
-Our experience collecting images has taught us a few lessons. We tend to
-follow the following guidelines when we search for pictures:
 
 1. Each image ends up being resized to a width of 300 pixel and a height
 proportional to the original. We prefer images with a minimum width of 300
@@ -469,96 +431,28 @@ simplifies the process.
 situations when it's otherwise hard to describe a word using an image
 ([example](https://remnqymi.com/crum/11.html)).
 
-1. This hasn't been contemplated, but when given a choice, prefer an ancient
-Egyptian explanatory image, followed by an old (not necessarily Egyptian)
-image, followed by a modern image ([example](
-https://remnqymi.com/crum/1436.html)). We prefer to keep the images as close
-as possible to their reflections in the mind of a native speaker. We also want
-to stress the fact that those Coptic words can be equally used to refer to
-entities from other cultures, or modern entities.
+1. When given a choice, prefer an ancient Egyptian explanatory image, followed
+   by an old (not necessarily Egyptian) image, followed by a modern image
+([example]( https://remnqymi.com/crum/1436.html)). We prefer to keep the images
+as close as possible to their reflections in the mind of a native speaker. We
+also want to stress the fact that those Coptic words can be equally used to
+refer to entities from other cultures, or modern entities.
 
    This could be revisited later.
 
 ### [KELLIA](dictionary/kellia_uni_goettingen_de)
 
-**[TLA](https://aaew.bbaw.de/tla/)/[DDGLC](https://dioskoros.org/)/[CDO](https://coptic-dictionary.org/) data:**
+The core of this dictionary is the [TLA](https://aaew.bbaw.de/tla/) and
+[DDGLC](https://dioskoros.org/); and, as of the time of writing, supplemental
+forms added by [Coptic Scriptorium](https://copticscriptorium.org/) to
+[CDO](https://coptic-dictionary.org/).
 
-The
-[TLA](https://aaew.bbaw.de/tla/)/[DDGLC](https://dioskoros.org/)/[CDO](https://coptic-dictionary.org/)
-data, which comprises the core of the dictionary, is retrieved from
-[Comprehensive Coptic Lexicon: Including Loanwords from Ancient Greek v
-1.2](https://refubium.fu-berlin.de/handle/fub188/27813).
-   - [84c104](https://github.com/pishoyg/coptic/commit/84c1044282faa12daf748858351b989376f82018)
-   integrates some changes made by Coptic Scriptorium to [CDO's copy of the
-   XML](https://github.com/KELLIA/dictionary/blob/master/xml/Comprehensive_Coptic_Lexicon-v1.2-2020.xml).
-   - We may have made some changes afterwards. Use `git log` or `git diff` to
-   find them.
-
-**Supplemental forms:**
-
-Coptic Scriptorium has attempted to grow the data by adding supplemental forms.
-As of the time of writing, CDO is capable of expanding an entry by adding
-variant forms, but it can't add any new entries that lack an ID.
-
-1. Bohairic supplemental forms are being directly retrieved from [the
-sheet](https://docs.google.com/spreadsheets/d/1r9J5nuQFQxgInLpX1Gm-I20nunIBjmGFR3CfFgK0THU)
-maintained by Coptic Scriptorium. The data that CDO [actually
-uses](https://github.com/KELLIA/dictionary/blob/edac2731c86fb02819436d39d127344e4e0bf514/utils/dictionary_reader.py#L591)
-is unavailable to us, but it's derived from the sheet.
-
-1. Sahidic supplemental forms have been snapshotted from the CDO's
-[`inflections.tab`](https://github.com/KELLIA/dictionary/blob/dev/utils/inflections.tab)
-in October 2025. As of the time of writing, they remain the CDO's `dev` branch.
-
-Supplemental forms have been, well, problematic! They seem to be poorly
-maintained by Coptic Scriptorium. As of October 2025, besides the issues above
-with accessing the latest data or a stable snapshot, their processing code seems
-to also suffer from at least the following:
-- Parts-of-speech of supplemental forms are completely ignored.
-- Markers of prenominal (`-`), pronominal (`⸗`), and qualitative (`†`) forms,
-are omitted.
-- For a given entry, Bohairic supplemental forms are taken [on an all-or-nothing
-basis](https://github.com/KELLIA/dictionary/blob/edac2731c86fb02819436d39d127344e4e0bf514/utils/dictionary_reader.py#L467).
-No deduplication or merging is performed.
-
-As of the time of writing, [Lexicon](http://remnqymi.com/crum/) often doesn't
-show the same set of supplemental forms that
-[CDO](https://coptic-dictionary.org/) shows. CDO doesn't seem to be under active
-development at the moment, and the above issues aren't expected to be resolved.
-We are considering reverting the addition of supplemental forms, and relying
-only on the core data.
-
-**Code:**
-
-We based [our processing
-logic](./dictionary/kellia_uni_goettingen_de/kellia.py) on the CDO's
-[`dictionary_reader.py`](https://github.com/KELLIA/dictionary/blob/master/utils/dictionary_reader.py).
-Parts of the logic, particularly those pertaining to supplemental forms, are
-derived from pieces that, as of October 2025, lives in [the `dev` version of the
-file](https://github.com/KELLIA/dictionary/blob/dev/utils/dictionary_reader.py).
-
-The original code is very badly written and is completely unmaintainable, and it
-has several (small) bugs. Our code has since significantly diverged from the
-original, and there is little overlap left.
-
-There are artifacts that we chose to ignore in our own pipeline, such as
-[Egyptian
-Etymologies](https://github.com/KELLIA/dictionary/blob/dev/utils/egyptian_etymologies.tab),
-[entity
-types](https://github.com/KELLIA/dictionary/blob/edac2731c86fb02819436d39d127344e4e0bf514/utils/dictionary_reader.py#L14),
-and [`oRef`
-tags](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-oRef.html).
+See [`kellia.py`](dictionary/kellia_uni_goettingen_de/kellia.py) for current
+status and documentation.
 
 ## [`bible/`](bible/)
 
 This directory contains the data and logic for processing the Bible corpus.
-
-### [St. Shenouda Coptic Society](bible/stshenouda_org/)
-
-There are several published versions of the Coptic Bible. The most
-recent, and most complete, is that of [St. Shenouda the Archmandrite
-Coptic Society](http://stshenouda.org). It is the Coptic Bible project that is
-most worthy of investment at the moment.
 
 ## [`flashcards/`](flashcards/)
 
@@ -575,6 +469,15 @@ dictionaries (to support inflections).
 ## [`docs/`](docs/)
 
 This directory contains the static data for [our website](http://remnqymi.com/).
+It contains the TypeScript source tree, CSS, some hand-written HTML, and many
+generated artifacts. See
+[`pre-commit/docs_structure.py`](pre-commit/docs_structure.py) for the
+contents of the directory.
+
+## [`xooxle/`](xooxle/)
+
+This directory contains the search index generator. Its front-end counterpart is
+[`docs/xooxle.ts`](docs/xooxlets).
 
 # Data Collection
 
