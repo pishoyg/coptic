@@ -2268,6 +2268,8 @@
 #   https://remnqymi.com/crum/1554.html
 # Keep in mind that 'Tur' conflicts 'Turin', so we omit 'Tur' as a variant of
 # 'Turin'.
+# TODO: (#522) It might be better to handle this instance of `Tur l c`
+# differently, perhaps using manual labels.
 
 - title: "B. Turaief"
   description:
