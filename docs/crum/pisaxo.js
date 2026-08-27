@@ -1518,14 +1518,15 @@ export const DATA = [
   {
     "title": "Papyruscodex saec. vi-vii… Cheltenham, ed. Crum, 1915, acc to pp. of printed book",
     "description": [
-      "Crum, W. E. (1915). <em><a href=\"https://archive.org/details/derpapyruscodexs00crum/page/n7/mode/2up\">Der Papyruscodex saec. VI-VII der Phillippsbibliothek in Cheltenham: Koptische theologische Schriften</a></em>. Strassburg: Karl J. Trübner."
+      "Crum, W. E. (1915). <em><a href=\"https://archive.org/details/derpapyruscodexs00crum/page/n7/mode/2up\">Der Papyruscodex saec. VI-VII der Phillippsbibliothek in Cheltenham: Koptische theologische Schriften</a></em>. Strassburg: Karl J. Trübner.",
+      "<strong>F</strong>: Fayyûmic text of same, ed. W. Erichsen (Danish Acad., 1932). <ul> <li>Erichsen, W. (1932). <em><a href=\"https://archive.org/details/faijumischefragm0000agat/page/n1/mode/2up\">Faijumische Fragmente der Reden des Agathonicus Bischofs von Tarsus</a></em>. (Det Kgl. Danske Videnskabernes Selskab, Historisk-filologiske Meddelelser, XIX, 1). København: Andr. Fred. Høst &amp; søn.</li> </ul>"
     ],
     "variants": [
-      "P cod",
-      "P Cod"
+      "Pcod",
+      "PCod"
     ],
     "postfixes": {
-      "F": "Fayyûmic text of same, ed. W. Erichsen (Danish Acad., 1932) <ul> <li>Erichsen, W. (1932). <em><a href=\"https://archive.org/details/faijumischefragm0000agat/page/n1/mode/2up\">Faijumische Fragmente der Reden des Agathonicus Bischofs von Tarsus</a></em>. (Det Kgl. Danske Videnskabernes Selskab, Historisk-filologiske Meddelelser, XIX, 1). København: Andr. Fred. Høst &amp; søn.</li> </ul>"
+      "F": null
     }
   },
   {
