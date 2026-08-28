@@ -769,7 +769,8 @@ export const DATA = [
       "Horner, G. (1902). <em><a href=\"https://archive.org/details/serviceforconsec00hornuoft/page/n3/mode/2up\">The Service for the Consecration of a Church and Altar According to the Coptic Rite, Edited with Translations from a Coptic and Arabic Manuscript of A.D. 1307 for the Bishop of Salisbury</a></em>. London: Harrison and Sons."
     ],
     "variants": [
-      "H Cons"
+      "H Cons",
+      "H Con"
     ]
   },
   {
