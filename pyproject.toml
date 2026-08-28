@@ -2,8 +2,12 @@
 line-length = 79
 
 [tool.ruff.lint]
-# Ignore unused imports (`F401`).
-ignore = ["F401", "F541"]
+# See https://docs.astral.sh/ruff/rules/
+ignore = [
+  "F401", # unused-import
+  "F541", # f-string-missing-placeholders
+  "FLY002", # static-join-to-f-string
+]
 
 [tool.ruff.format]
 docstring-code-format = true
