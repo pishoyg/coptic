@@ -66,6 +66,33 @@ const DOM_GLOBALS: readonly string[] = [
   'TreeWalker',
 ];
 
+/**
+ * The media queries the engine asks about, and the answers this dump is built
+ * on.
+ * `jsdom` implements no `matchMedia` whatsoever, so an unanswered query
+ * surfaces as a `TypeError` from inside enrichment.
+ *
+ * Answering a query is choosing a media reader.
+ */
+const MEDIA: Readonly<Record<string, boolean>> = {
+  // The dump describes the page as a hover-capable device sees it, which is
+  // likely the richer rendering.
+  // As of the time of writing, the dump would turn out identical either way.
+  '(hover: hover)': true,
+};
+
+/**
+ *
+ * @param query
+ *
+ * @returns
+ */
+function matchMedia(query: string): { matches: boolean } {
+  const matches: boolean | undefined = MEDIA[query];
+  log.ensure(matches !== undefined, 'Unanswered media query:', query);
+  return { matches };
+}
+
 /** The enriched-span kinds. */
 const KINDS: readonly string[] = [
   cls.BIBLE,
@@ -240,6 +267,8 @@ function install(): void {
   });
   const win = dom.window as unknown as Record<string, unknown>;
   const glob = globalThis as unknown as Record<string, unknown>;
+  // `matchMedia` is queries through `window` throughout our repository.
+  win['matchMedia'] = matchMedia;
   glob['window'] = dom.window;
   glob['document'] = dom.window.document;
   glob['localStorage'] = dom.window.localStorage;

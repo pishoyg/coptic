@@ -82,10 +82,7 @@ export function virtualKeyboardLikely(): boolean {
   // Negating this gives us a permissive default: phones, tablets, and any
   // browser that doesn't support these media queries all fall through to
   // `true`.
-  return (
-    !window.matchMedia('(pointer: fine)').matches ||
-    !window.matchMedia('(hover: hover)').matches
-  );
+  return !hoverable() || !window.matchMedia('(pointer: fine)').matches;
 }
 
 /**
