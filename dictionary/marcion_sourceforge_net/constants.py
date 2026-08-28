@@ -46,7 +46,7 @@ DIALECTS_RE: re.Pattern[str] = re.compile(
     r"\(({d}(,{d})*)\)".format(d=f"({"|".join(DIALECTS)})"),
 )
 
-CRUM_RE: re.Pattern[str] = re.compile(r"^(\d{1,3}|[xiv]+)(a|b)$")
+CRUM_RE: re.Pattern[str] = re.compile(r"(\d{1,3}|[xiv]+)(a|b)")
 _OUTSIDE_BRACKETS: str = r"(?![^()]*\)|[^{}]*\}|[^\[\]]*\])"
 COMMA_OUTSIDE_BRACKETS_RE: re.Pattern[str] = re.compile(
     "," + _OUTSIDE_BRACKETS,
@@ -400,6 +400,13 @@ class Column:
     def __init__(self, name: str, end: str) -> None:
         self.name: str = name
         self.end: lexical.Column = lexical.Column(end)
+
+    @property
+    def page(self) -> str:
+        assert self.name[-1] in ("a", "b")
+        p: str = self.name[:-1]
+        assert re.fullmatch("[xvi]+", p)
+        return p
 
 
 COLUMN_RANGES: list[Column] = [

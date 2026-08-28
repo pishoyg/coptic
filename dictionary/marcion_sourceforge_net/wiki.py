@@ -587,9 +587,11 @@ class Wiki:
             ban=["{", "}"],
         )
         # An addendum takes the form `//deleted//inserted//`, either half of
-        # which may be empty. See `replace_addendum` for how one is written.
+        # which may be empty, optionally followed by the page that the
+        # correction comes from. See `replace_addendum` for how one is
+        # written.
         yield Substitution(
-            "//(.*?)//(.*?)//",
+            f"//(.*?)//(.*?)//({constants.CRUM_RE})?",
             self.replace_addendum,
             ban=["//"],
         )
@@ -602,9 +604,10 @@ class Wiki:
         of ours. Its two halves are the removed and the added text, either of
         which may be empty.
 
-        The rules below govern how one is written into the sheet. The first two
-        are enforced by `_validate_addendum_group`; the rest are matters of
-        judgement, and are checked by review rather than by code.
+        The rules below govern how one is written into the sheet. The first
+        two are enforced by `_validate_addendum_group`, and the last by the
+        substitution's own pattern; 3 through 5 are matters of judgement, and
+        are checked by review rather than by code.
 
         1. Neither half may begin or end with a space, which would strand the
            space immediately inside the `<del>` or `<ins>` tag.
@@ -640,10 +643,19 @@ class Wiki:
            `//Ge 1 1, 1//Ge 1 1, 2//`. Note that this does not license the
            broken form in 4: numbers left unlabeled inside an addendum are an
            error whatever their length.
+        6. An addendum may name the page it comes from, written immediately
+           after the closing `//`, e.g. `//[[ⲁ]]//[[ⲃ]]//717a`. It is optional,
+           and is left out in the ordinary case, where the column in the
+           Additions and Corrections is inferred from the page of the entry
+           being corrected (see `addenda_page`). Write it out when that
+           inference goes wrong; or when the correction comes from the body of
+           the book rather than from the frontmatter, which no inference over
+           the addenda columns could ever reach.
 
         Args:
-            match: The addendum match, whose two groups are the removed and the
-                added text.
+            match: The addendum match. Its first two groups are the removed
+                and the added text; its third, when present, is the page that
+                the correction comes from.
 
         Returns:
             The addendum's HTML.
@@ -676,16 +688,18 @@ class Wiki:
         self,
         match: regex.Match[str],
     ) -> abc.Generator[str]:
-        yield f'<span class="{cls.ADDENDUM}" {DATA_PAGE}="{self.addenda_page}">'
-        g1, g2 = match.group(1), match.group(2)
-        self._validate_addendum_group(g1)
-        self._validate_addendum_group(g2)
-        if g1:
-            yield f"<del>{g1}</del>"
-        if g1 and g2:
+        delete, insert, page = match.group(1), match.group(2), match.group(3)
+        self._validate_addendum_group(delete)
+        self._validate_addendum_group(insert)
+        yield f'<span class="{cls.ADDENDUM}" {DATA_PAGE}="{
+            page or self.addenda_page
+        }">'
+        if delete:
+            yield f"<del>{delete}</del>"
+        if delete and insert:
             yield " "
-        if g2:
-            yield f"<ins>{g2}</ins>"
+        if insert:
+            yield f"<ins>{insert}</ins>"
         yield _ADDENDUM_MARK
         yield "</span>"
 

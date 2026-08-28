@@ -1746,6 +1746,9 @@ function handleAddenda(root: HTMLElement): void {
         html.linkify(mark, url, ccls.HOVER_LINK);
       }
       tool.addTooltip(mark, [
+        // TODO: (#0) Additions and corrections can now come from the body of
+        // the book, not just the front matter. Use of the word `Addenda` in the
+        // tooltip may be inaccurate in such instances.
         html.anchor(url, 'Addenda (', ...scan.prettyPage(key), ')'),
       ]);
     });
