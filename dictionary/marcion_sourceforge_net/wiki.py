@@ -591,7 +591,7 @@ class Wiki:
         # correction comes from. See `replace_addendum` for how one is
         # written.
         yield Substitution(
-            f"//(.*?)//(.*?)//({constants.CRUM_RE})?",
+            f"//(.*?)//(.*?)//({constants.CRUM_RE.pattern})?",
             self.replace_addendum,
             ban=["//"],
         )
