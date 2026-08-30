@@ -215,8 +215,8 @@ _TITLE_COP_EN: str = f"{_TITLE_COP} | Coptic Bible"
 _AUTHOR: str = "Saint Shenouda The Archimandrite Coptic Society"
 _LANG: str = "cop"
 
-# The Jinkim is represented by the Combining Overline, not the Combining
-# Conjoining Msacron.
+# The superlinear stroke is represented by the Combining Overline, not the
+# Combining Conjoining Msacron.
 _NORMALIZATION: dict[Language, dict[str, str]] = {
     "Bohairic": {
         chr(0xFE26): chr(  # Combining Conjoining Macron
