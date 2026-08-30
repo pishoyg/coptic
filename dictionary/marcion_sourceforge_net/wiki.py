@@ -35,6 +35,27 @@ RAW_RE: regex.Pattern[str] = regex.compile(
     r"\[\[.*?\]\]|[\p{Latin}\P{Letter}ʿβ]",
 )
 
+# Coptic combining marks.
+#
+# Coptic uses two contrastive supralinear strokes, and Unicode gives each its
+# own encoding (The Unicode Standard, ch. 7, "Supralineation"): U+0305 after
+# every letter for a stroke that runs edge to edge, and U+FE24 / U+FE26 /
+# U+FE25 for the shorter one that spans from the middle of the first letter to
+# the middle of the last. Both occur in Crum, and they are not interchangeable.
+_COPTIC_MARKS: str = (
+    "\u0301"  # Acute accent, over ϩ́ and in ⲉⲃⲥⲉ́ⲛⲓ.
+    "\u0304"  # Macron, the syllabic stroke over a lone consonant: ⲛ̄.
+    "\u0305"  # Overline, for numerals (ⲕ̅ = 20) and abbreviations (⳪̅).
+    "\u0307"  # Dot above, in ⲁ̇ⲡⲟⲕⲣⲁϫⲱⲛ.
+    "\u0308"  # Diaeresis, over ⲓ̈.
+    "\u0314"  # Reversed comma above, the rough breathing: ⲣ̔ⲏⲓ, ⲉⲟ̔ⲩⲛ.
+    "\u0323"  # Dot below, marking a letter read as uncertain: ⲁ̣, ⲛ̣.
+    "\u0345"  # Greek ypogegrammeni, only in ⲇͅⲇͅ, for δεῖνα δεῖνος.
+    "\ufe24"  # Macron left half, opening a nomen sacrum's stroke.
+    "\ufe25"  # Macron right half, closing it.
+    "\ufe26"  # Conjoining macron, continuing it: ⲡ︤ⲛ︦ⲁ︥.
+)
+
 # A headword may optionally be wrapped in parentheses to mark it as an
 # unattested form. It may also contain internal parentheses that mark
 # optional letters (e.g. ϩⲟ(ⲉ)ⲓⲧⲉ). The two alternatives below ensure that
@@ -47,7 +68,10 @@ RAW_RE: regex.Pattern[str] = regex.compile(
 # instead of by the trailing `\)?` — yielding an imbalanced capture.
 # NOTE: The pattern remains somewhat permissive, as it allows combinations that
 # don't occur in reality.
-_HEADWORD_RE_AUX: str = r"-?([ⲁ-ⲱϣ-ϯⳉ \p{Mark}()\[\]]+?)(?:-|⸗|†|\[|\[\.\])?"
+# A headword is Coptic, but a far narrower slice of it than an entry's text.
+_HEADWORD_RE_AUX: str = (
+    rf"-?([{_COPTIC_MARKS}ⲁ-ⲱϣ-ϯⳉ ()\[\]]+?)(?:-|⸗|†|\[|\[\.\])?"
+)
 _HEADWORD_RE: regex.Pattern[str] = regex.compile(
     rf"{_HEADWORD_RE_AUX}|\({_HEADWORD_RE_AUX}\)",
 )
@@ -129,6 +153,9 @@ def bracketed(exp: str, repeat: int = 2) -> str:
     return r"(?<!\[)" + r"\[" * repeat + exp + r"\]" * repeat + r"(?!\])"
 
 
+# The languages we recognize. Each name is spelled as it appears in the
+# Unicode names of the characters belonging to the language, because
+# `_language` identifies a text by searching those names for it.
 Language: typing.TypeAlias = typing.Literal[
     "GREEK",
     "COPTIC",
@@ -142,79 +169,192 @@ Language: typing.TypeAlias = typing.Literal[
     "DEMOTIC",
 ]
 
-# LANGS maps language names, as they appear in the Unicode names of characters
-# belonging to the language, to a tuple containing:
-# - The HTML class used for the language.
-# - A validation regular expression for text marked as belonging to this
-# language.
+
+# A language's alphabet is the character-class atoms — single characters,
+# ranges, and Unicode property classes — that its text may be built from. Text
+# belongs to a language when every one of its characters is drawn from that
+# language's alphabet.
 #
-# Each validation pattern accepts a sequence of tokens, where a token is a
-# single allowed character optionally followed by combining marks (`\p{M}*`).
-# The allowed characters are the letters of the relevant Unicode script, plus
-# the punctuation and separators that actually occur in that language's text.
-# TODO: (#0) You can simplify the structure by deduplicating `regex.compile` and
-# `(?:...)+`, retaining only the core of the regex in each entry.
-LANGS: dict[Language, tuple[str, regex.Pattern[str]]] = {
-    # NOTE: Since Greek can contain Coptic, it's important for the Greek to
-    # precede Coptic in the list, so that a text will be tested for being Greek
-    # first.
-    # NOTE: Superfluous spaces were inserted in some expressions below in order
-    # to separate groups within the regex, and make the expression more
-    # readable.
+# NOTE: We spell the alphabets out, rather than reaching for `\p{Script=...}`
+# and `\p{M}`, so that the pipeline enforces a limited, reviewed inventory. A
+# character that nobody has vetted fails validation instead of slipping in
+# unnoticed, and `_ALPHABETS` doubles as the record of what our transcription
+# actually employs.
+# The exception to this rule is a number of scripts that are less common in our
+# corpus and are deemed less critical, so they're simply expressed using Unicode
+# property classes.
+#
+# NOTE: Entry order is load-bearing for language determination. Greek may
+# contain Coptic, (and, in a singleton instance, Coptic Arabic), so GREEK must
+# precede COPTIC (and COPTIC ARABIC).
+# NOTE: An atom is inserted into a character class verbatim, so a literal `-`,
+# `]` or `^` has to be written escaped. Order within a character class is
+# meaningless.
+_ALPHABETS: dict[Language, tuple[str, ...]] = {
     "GREEK": (
-        cls.GREEK,
-        regex.compile(
-            # \U0001018E is 𐆎 (Nomisma Sign).
-            # TODO: (#503) Ideally, the comma should be removed.
-            r"(?:[α-ω ϛ 𐅵\U0001018E ʹʹ ' ⲁ-ⲱϣ-ϯ ⸝/ \[\]() \-,.?·—…]\p{M}*)+",
-            regex.IGNORECASE,
-        ),
+        "α-ω",  # The Greek letters, final sigma included,
+        "Α-Ρ",  # and their capitals, split in two because U+03A2
+        "Σ-Ω",  # is unassigned.
+        "ϕ",  # Phi symbol, used interchangeably with φ.
+        "ϛ",  # Stigma, the numeral 6.
+        "Ⲁ-ⲱ",  # The Coptic letters, either case,
+        "Ϣ-ϯ",  # and those of them borrowed from Demotic.
+        "𐅵",  # Greek one half sign.
+        "\U0001018e",  # 𐆎, the nomisma sign. See `replace_stack`.
+        "\u0374",  # Greek numeral sign, the keraia, which is what the
+        "\u02b9",  # source holds; NFD folds it to modifier letter prime,
+        # so it is the prime that this class actually matches.
+        "\u0300",  # Grave accent.
+        "\u0301",  # Acute accent.
+        "\u0305",  # Overline, for numerals: γ̅ πεδιάδες.
+        "\u0308",  # Diaeresis.
+        "\u0313",  # Comma above, the smooth breathing.
+        "\u0314",  # Reversed comma above, the rough breathing.
+        "\u0323",  # Dot below, marking an uncertain letter.
+        "\u0342",  # Perispomeni.
+        "\u0345",  # Ypogegrammeni.
+        "\ufe24",  # The stroke over a nomen sacrum, which Crum writes
+        "\ufe26",  # in his Greek as well as in his Coptic: θ︤ν︥, π︤ν︦α︥.
+        "\ufe25",
+        "⸝",  # Right low paraphrase bracket.
+        "—",  # Em dash. Coptic uses the horizontal bar instead.
+        "…",
+        "·",
+        "'",
+        " ",
+        # TODO: (#503) Ideally, the comma should be removed.
+        ",",
+        ".",
+        "?",
+        "/",
+        "(",
+        ")",
+        "\\-",
+        "\\[",
+        "\\]",
     ),
+    # NOTE: Besides the familiar letters, Coptic employs ⳪ and ⳨ passim,
+    # and ⳗ, ⳓ and ⳙ under ϫ: https://remnqymi.com/crum/3415.html
     "COPTIC": (
-        cls.COPTIC,
-        # TODO: (#503) Ideally, the comma should be removed. A Coptic block of
-        # comma-separated words should instead be represented as a
+        _COPTIC_MARKS,
+        "ⲁ-ⲱ",  # The Coptic letters,
+        "ϣ-ϯ",  # those of them borrowed from Demotic,
+        "ⳉ",  # and Akhmimic khei.
+        "⳪",  # Shima sima, Crum's abbreviation for ϫⲟⲉⲓⲥ.
+        "⳨",  # Tau ro, the staurogram.
+        "ⳗ",  # Old Coptic gangia,
+        "ⳓ",  # hei,
+        "ⳙ",  # and dja.
+        "ع",  # Arabic ain, which turns up inside a Coptic word:
+        # https://remnqymi.com/crum/371.html
+        "Ꞩ",  # Latin S with oblique stroke, transcribing a sort
+        # that seems to be absent from the Coptic Unicode.
+        "⸗",  # Double oblique hyphen, marking a pronominal form,
+        "†",  # and dagger, marking a qualitative one.
+        "―",  # Horizontal bar, standing in for a repeated headword.
+        # See `_LANGUAGE_OVERRIDES`.
+        "⸪",  # Two dots over one dot punctuation.
+        "…",
+        "·",
+        " ",
+        # TODO: (#503) Ideally, the comma should be removed. A Coptic block
+        # of comma-separated words should instead be represented as a
         # comma-separated list of one-word Coptic blocks.
-        # NOTE: We intentionally spell out the Coptic characters employed,
-        # instead of simply using `\p{Script=Coptic}`, in order to make sure
-        # we're aware of all used characters.
-        # As of the time of writing, besides the familiar letters, the following
-        # Coptic characters are employed:
-        # - ⳪, ⳨ (passim)
-        # - ⳗ, ⳓ, ⳙ (under ϫ: https://remnqymi.com/crum/3415.html)
-        regex.compile(
-            r"(?:[ⲁ-ⲱϣ-ϯⳉ⳪⳨ⳗⳓⳙ ع Ꞩ \-⸗† () \[\] … ⸪ ― ,.:/?·]\p{M}*)+",
-        ),
+        ",",
+        ".",
+        ":",
+        "?",
+        "/",
+        "(",
+        ")",
+        "\\-",
+        "\\[",
+        "\\]",
     ),
     "ARABIC": (
-        cls.ARABIC,
-        # ء-ي covers standard Arabic letters
-        # ﹰ-ﻼ covers presentation forms-B (including isolated diacritics)
-        # گݣ covers the two Persian letters that occur in our transcription. We
-        # intentional refrain from supporting the entire Persian range.
-        regex.compile(r"(?:[ء-ي ﹰ-ﻼ گݣ ()?\-.\]…،]\p{M}*)+"),
+        "ء-ي",  # The standard Arabic letters.
+        "ﹰ-ﻼ",  # Presentation forms-B, isolated diacritics included.
+        "گ",  # Gaf and
+        "ݣ",  # keheh with three dots above: the two Persian letters
+        # that occur in our transcription. We intentionally refrain
+        # from supporting the entire Persian range.
+        "\u064b",  # Fathatan.
+        "\u064e",  # Fatha.
+        "\u064f",  # Damma.
+        "\u0650",  # Kasra.
+        "\u0651",  # Shadda.
+        "\u0652",  # Sukun.
+        "،",  # Arabic comma.
+        "…",
+        " ",
+        ".",
+        "?",
+        "(",
+        ")",
+        "\\-",
+        "\\]",
     ),
-    "HEBREW": (cls.HEBREW, regex.compile(r"(?:[\p{Hebrew} ]\p{M}*)+")),
-    "SYRIAC": (cls.ARAMAIC, regex.compile(r"(?:[\p{Syriac} …]\p{M}*)+")),
-    "ETHIOPIC": (cls.AMHARIC, regex.compile(r"\p{Ethiopic}+")),
-    "HIEROGLYPH": (
-        cls.HIEROGLYPHIC,
-        regex.compile(r"\p{Egyptian_Hieroglyphs}+"),
+    "HEBREW": (
+        r"\p{Hebrew}",  # The letters, and their points, which share a script.
+        "\u034f",  # Grapheme joiner, which does not, so it needs listing.
+        " ",
     ),
+    "SYRIAC": (
+        r"\p{Syriac}",  # The letters, and their points, which share a script.
+        " ",
+        "…",
+    ),
+    "ETHIOPIC": (r"\p{Ethiopic}",),
+    "HIEROGLYPH": (r"\p{Egyptian_Hieroglyphs}",),
     # NOTE: Demotic is not detectable using a character's Unicode name.
+    # NOTE: Demotic is transcribed with precomposed Latin throughout, so
+    # it bears no combining marks.
     "DEMOTIC": (
-        cls.DEMOTIC,
-        regex.compile(r"(?:\p{Latin}\p{M}*|[()ꜣꜥʾʿ ·'\-.])+"),
+        r"\p{Latin}",
+        "ꜣ",  # Egyptological alef and
+        "ꜥ",  # ain, which are Latin-scripted.
+        "ʾ",  # Modifier letter right half ring and
+        "ʿ",  # left half ring, which are not.
+        "·",
+        "'",
+        " ",
+        ".",
+        "(",
+        ")",
+        "\\-",
     ),
+}
+
+# The HTML class used for each language.
+_CLASSES: dict[Language, str] = {
+    "GREEK": cls.GREEK,
+    "COPTIC": cls.COPTIC,
+    "ARABIC": cls.ARABIC,
+    "HEBREW": cls.HEBREW,
+    "SYRIAC": cls.ARAMAIC,
+    "ETHIOPIC": cls.AMHARIC,
+    "HIEROGLYPH": cls.HIEROGLYPHIC,
+    "DEMOTIC": cls.DEMOTIC,
+}
+
+ensure.equal_sets(typing.get_args(Language), _ALPHABETS.keys(), "alphabets")
+ensure.equal_sets(typing.get_args(Language), _CLASSES.keys(), "classes")
+
+# The validation pattern for text marked as belonging to each language.
+_VALIDATORS: dict[Language, regex.Pattern[str]] = {
+    language: regex.compile("".join(("[", *alphabet, "]+")))
+    for language, alphabet in _ALPHABETS.items()
 }
 
 
 def _normalize_for_validation(language: Language, text: str) -> str:
     # Greek and Coptic are allowed to have superscripts and stacks within.
-    # Greek is often transcribed with precomposed characters, which are not
-    # represented in our regex, so we NFD-normalize it.
     if language in ["COPTIC", "GREEK"]:
         text = _IN_LANG_TAGS.sub("", text)
+    # Greek is often transcribed with precomposed characters, which are not
+    # represented in our regex, so we NFD-normalize it.
+    # NOTE: The Greek alphabet constrains the decomposed form only: a
+    # precomposed Greek letter whose parts are all listed passes unvetted.
     if language == "GREEK":
         text = orth.normalize(text)
     return text
@@ -246,7 +386,7 @@ def _language(text: str) -> Language:
     if text in _LANGUAGE_OVERRIDES:
         return _LANGUAGE_OVERRIDES[text]
     text = orth.clean_diacritics(text)
-    for language in LANGS:
+    for language in _ALPHABETS:
         if lang.has_lang(language, text):
             return language
     return "DEMOTIC"
@@ -264,19 +404,17 @@ def replace_bracketed(match: regex.Match[str]) -> str:
 
     language: Language = _language(text)
 
-    klass: str
-    expression: regex.Pattern[str]
-    klass, expression = LANGS[language]
-
     ensure.ensure(
-        expression.fullmatch(_normalize_for_validation(language, text)),
+        _VALIDATORS[language].fullmatch(
+            _normalize_for_validation(language, text),
+        ),
         "invalid",
         language,
         "text:",
         repr(text),
     )
 
-    return f'<span class="{klass}">{text}</span>'
+    return f'<span class="{_CLASSES[language]}">{text}</span>'
 
 
 _SIGLA: list[str] = [
