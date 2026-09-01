@@ -1,6 +1,6 @@
 ---
 description: Review Crum Wiki enrichment the way Ambrose (ⲡⲓⲥⲁϧⲟ) would
-argument-hint: "[Crum page ID, e.g. 1 — or several: 1 442 2610 — or a commit]"
+argument-hint: "[empty for origin/master..master — or Crum page IDs: 1 442 2610 — or a commit]"
 allowed-tools: Read, Glob, Grep, Bash(git diff:*), Bash(git show:*), Bash(git log:*)
 ---
 
@@ -131,19 +131,24 @@ which it was, the sheet snapshot tells you.
 
 ## Procedure
 
-Review each page ID in `$ARGUMENTS`. If none is given, ask for one.
+Dispatch on `$ARGUMENTS` first:
 
-**When the argument is a commit or a change** — a SHA, a ref, `HEAD`, a branch,
-a range, or the uncommitted working tree — **review the diff, not the pages.**
-Get it with `git show` / `git diff` over
-`dictionary/marcion_sourceforge_net/data/output/wiki/`, and confine every
-finding to text the diff actually touched. The rest of a changed page is out of
-scope even though the dump prints it: the question is whether *this change* is
-right, not whether the page is clean. Read a changed line word-wise — a
-one-token change sits inside an otherwise identical long line. Open the
-surrounding dump only for the context a hunk needs — the antecedent of a changed
-`ib`, the paragraph a changed suffix sits in — and say so when a finding rests
-on it. Everything below applies unchanged within that scope.
+- **Page IDs** — one, or several (`1 442 2610`) — review each of those pages.
+- **A commit or a change** — a SHA, a ref, `HEAD`, a branch, a range, or the
+  uncommitted working tree — review its diff.
+- **Empty** — review `origin/master..master`: the commits on the local branch
+  that are not yet on the remote (`git log origin/master..master`). If that
+  range touches no dump, say so and stop; do not fall back to reviewing pages.
+
+**Reviewing a diff — review the diff, not the pages.** Get it with `git show` /
+`git diff` over `dictionary/marcion_sourceforge_net/data/output/wiki/`, and
+confine every finding to text the diff actually touched. The rest of a changed
+page is out of scope even though the dump prints it: the question is whether
+*this change* is right, not whether the page is clean. Read a changed line
+word-wise — a one-token change sits inside an otherwise identical long line.
+Open the surrounding dump only for the context a hunk needs — the antecedent of
+a changed `ib`, the paragraph a changed suffix sits in — and say so when a
+finding rests on it. Everything below applies unchanged within that scope.
 
 **Read the entry as a scholar, not a linter.** Go through the dump start to
 finish. Ask of every marker whether Crum meant it, and of every unmarked token
