@@ -79,6 +79,20 @@
 # Postfixes that name a DISTINCT source stay interpreted; the handful of
 # _ibidem_ citations they strand are marked by hand in `wiki.tsv`.
 
+# NOTE: Concerning authors of works mentioned in Crum's List of Abbreviations,
+# which tend to have short abbreviations (such as 'B' for 'Budge' and 'L' for
+# 'Lemm'), we retain each of their works as separate entries, mimicking the
+# structure of Crum's List of Abbreviations, and affording each work the room
+# it needs to define its own prefixes and postfixes.
+# This also reduces the chances of collision.
+# We do the opposite for authors who are not mentioned in Crum's List of
+# Abbreviations, and who tend to be referred with their last name and initials
+# (such as 'C H Becker' for 'Carl Heinrich Becker'). The author takes a single
+# entry, and each of their works is expressed as a postfix.
+# Such works tend to be cited less often. And the lower frequency and longer
+# abbreviations minimize the chances of collision.
+# These conventions are often broken. Use your judgement.
+
 ################################################################################
 ##### Section 1 lists the sources from Crum's list of abbreviations.
 ################################################################################
@@ -155,6 +169,11 @@
   description:
   variants:
     - "Alex"
+  postfixes:
+    # NOTE: "Alex Botti" is (likely) a publication, rather than a manuscript,
+    # but we still treat it as a postfix of "Alex," the interpretation of which
+    # is "MSS. &c. in Graeco-Roman Museum, Alexandria".
+    Botti:
 
 # TODO: (#522) Consider merging Almk 1 and Almk 2 using postfixes.
 
@@ -185,6 +204,7 @@
       Digitalizzati](http://periodici.librari.beniculturali.it/PeriodicoScheda.aspx?id_testata=30&Start=0)."
   variants:
     - "ALR"
+    - "RAL"
     - "Rendiconti"
 
 - title: "H. Hyvernat, *Actes des Martyrs*, 1886"
@@ -216,6 +236,8 @@
   variants:
     - "AP"
   postfixes:
+    Berl Sitz:
+    Berl Sitzb:
     Einl: "Einleitung"
 
 - title: "H. Asmus, *Über Fragmente im mitteläg. Dialekt* (Dissert.), 1904, acc. to
@@ -391,6 +413,11 @@
       Documents, Vol. 2). London: Christophers."
   variants:
     - "Blake"
+    - "R P Blake"
+    - "Epiph De Gem"
+    - "Epiph De Gemm"
+    - "Epiphan. De Gemm."
+    - "Epiphan De Gem"
 
 - title: "British Museum, *Catalogue of Coptic MSS.*, 1905, acc. to numbers"
   description:
@@ -423,6 +450,9 @@
   description:
   variants:
     - "BMEA"
+  postfixes:
+    Hartwell pap:
+    P Hartwell:
 
 - title: "Budge, *Miscellaneous Coptic Texts*, 1915"
   description:
@@ -448,6 +478,7 @@
     P:
     Hunt:
     Marsh: "Marshall Collection"
+    Or: "Oriental"
     Marsh Or: "Marshall Oriental Collection"
 
 - title: "Codex Borgianus (where not printed by Zoega)"
@@ -530,15 +561,18 @@
 - title: "MSS. &c. in Coptic Museum, Cairo"
   description:
   variants:
-    - "(Cai)CoptMus"
     - "Cai Copt Mus"
     - "Copt Mus Cai"
     - "Copt Mus"
   postfixes:
+    ostr: "ostracon"
     tablet:
-    # TODO: (#522) Is the catalogue published?
-    Catal: "Catalogue"
+    Catal 1: "M. Simaika, [Dalīl al-Matḥaf al-Qibṭī, vol. 1](https://coptic-treasures.com/book/%D8%AF%D9%84%D9%8A%D9%84-%D8%A7%D9%84%D9%85%D8%AA%D8%AD%D9%81-%D8%A7%D9%84%D9%82%D8%A8%D8%B7%D9%8A-%D9%88-%D8%A3%D9%87%D9%85-%D8%A7%D9%84%D9%83%D9%86%D8%A7%D8%A6%D8%B3-%D9%88-%D8%A7%D9%84%D8%A3%D8%AF/),
+      1930"
+    Guide 1: "M. Simaika, [Dalīl al-Matḥaf al-Qibṭī, vol. 1](https://coptic-treasures.com/book/%D8%AF%D9%84%D9%8A%D9%84-%D8%A7%D9%84%D9%85%D8%AA%D8%AD%D9%81-%D8%A7%D9%84%D9%82%D8%A8%D8%B7%D9%8A-%D9%88-%D8%A3%D9%87%D9%85-%D8%A7%D9%84%D9%83%D9%86%D8%A7%D8%A6%D8%B3-%D9%88-%D8%A7%D9%84%D8%A3%D8%AF/),
+      1930"
   prefixes:
+    Lect: !lookup
     tablet:
     P: !lookup
     MS: !lookup
@@ -705,6 +739,8 @@
   postfixes:
     Index:
     Indices:
+  prefixes:
+    Griffith:
 
 - title: "R. Dozy, *Supplém. aux diet. arabes*, 1881"
   description:
@@ -720,9 +756,6 @@
   description:
   variants:
     - "EES"
-  postfixes:
-    Report:
-    Antinoe:
   prefixes:
     ostr: !lookup
 
@@ -761,6 +794,7 @@
     - "Ep"
   postfixes:
     App: "Appendix"
+    Append: "Appendix"
 
 - title: "Études… dédiées à C. Leemans, 1885"
   description:
@@ -771,6 +805,7 @@
   variants:
     - "Et Leem"
     - "Ét Leem"
+    - "Études Leemans"
 
 - title: "*New Texts from the Monastery of St. Macarius*, ed. H. G. Evelyn White,
     1926; or his copies of MSS from Nitria (in Coptic Museum, Cairo)"
@@ -870,6 +905,7 @@
       (1932). London: Egypt Exploration Society."
   variants:
     - "Griff Stu"
+    - "Griff St"
 
 - title: "I. Guidi, *Frammenti Copti* I-VII (from ALR 1887 ff.), acc. to continuous
     pagination"
@@ -932,6 +968,7 @@
   variants:
     - "H Cons"
     - "H Con"
+    - "H Const"
 
 - title: "W. Hengstenberg in Beiträge z. Forschung… Heft III, J. Rosenthal, München,
     1914"
@@ -962,6 +999,8 @@
   variants:
     - "HL"
     - "Hist Laus"
+    - "Hist. Laus."
+    - "HL Butler"
 
 - title: "Griffith, *The Old Coptic Horoscope*, in AZ 38 76 ff., acc. to pp. of publication"
   description:
@@ -975,6 +1014,9 @@
   description:
   variants:
     - "HT"
+  postfixes:
+    Copt Palimp:
+    Gosp of Jo:
   prefixes:
     Pap: !lookup
 
@@ -1001,6 +1043,7 @@
       Rome."
   variants:
     - "Ig R"
+    - "Ign R"
 
 - title: "Imperial Russian Archaeolog. Soc. xviii, 1907 (Turaief)"
   description:
@@ -1023,7 +1066,13 @@
   variants:
     - "J"
   postfixes:
+    # TODO: (#522) `J Leip` is edited in a publication below. See `J Sch`.
     Leip: "two such papyri in Leipzig University, Aegyptologisches Institut (cf below)"
+    # TODO: (#522) Crum seems to reference `J MMA 24 2 3` only. That is:
+    # https://www.metmuseum.org/art/collection/search/475050
+    # It's also edited in `J Sch`:
+    # https://archive.org/details/in.ernet.dli.2015.44575/page/n32/mode/1up
+    MMA: !lookup
     Index:
 
 - title: "*Journal Asiatique*, acc. to year, vol. & page"
@@ -1056,9 +1105,10 @@
   description:
     - "Jernstedt, P. (1930). Koptische Papyri des Asiatischen Museums. *Сборник египтологического
       кружка при Ленинградском Государственном Университете*, VI, 21–44. [If you know
-      of a digital copy, please [ contact me](https://www.coptist.com/contact-%e2%b2%a7%e2%b2%81%e2%b2%99%e2%b2%9f%e2%b2%93/)]"
+      of a digital copy, please [contact me](https://www.coptist.com/contact-%e2%b2%a7%e2%b2%81%e2%b2%99%e2%b2%9f%e2%b2%93/)]"
   variants:
     - "Jern"
+    - "Soc Egypt Univ Leningrad"
 
 - title: "H. Junker, *Koptische Poesie*, 1908, 1911 (from *Oriens Christianus*.)"
   description:
@@ -1193,6 +1243,15 @@
   description:
   variants:
     - "Lag"
+    - "Lagarde"
+  # TODO: (#522) Populate postfixes below.
+  postfixes:
+    Ges Abh:
+    Ges. Abh.:
+    Gesam. Abh.:
+    Onom Sacr:
+    Mitteil.:
+    Mitth:
 
 - title: "*Kitâb al-Lakân*, Cairo, 1921"
   description:
@@ -1202,6 +1261,7 @@
       ⲛⲉⲙ ϯⲡⲁⲛⲧⲏⲕⲟⲥⲧⲏ]*. Cairo: Heliopolis Press."
   variants:
     - "Lakan"
+    - "Lakân"
 
 - title: "Lemm, *Der Alexanderroman*"
   description:
@@ -1217,9 +1277,10 @@
       Traktat des 4. Jahrhunderts unter Zugrundelegung erstmaliger Edition des koptisch-sahidischen
       Handschriftenfragments der Bibliothèque Nationale zu Paris Copte-sahidique 129,
       14 (75-82) ins Deutsche übersetzt und untersucht*. Beirut. [If you know of a
-      digital copy, please [ contact me](https://www.coptist.com/contact-%e2%b2%a7%e2%b2%81%e2%b2%99%e2%b2%9f%e2%b2%93/)]"
+      digital copy, please [contact me](https://www.coptist.com/contact-%e2%b2%a7%e2%b2%81%e2%b2%99%e2%b2%9f%e2%b2%93/)]"
   variants:
     - "Lammayer"
+    - "Lammeyer"
 
 - title: "A. van Lantschoot, *Recueil de Colophons… sahidiques*, 1929, acc. to numbers;
     also copies by"
@@ -1348,6 +1409,8 @@
       Deuxième édition. Beyrouth: Imprimerie Catholique."
   variants:
     - "Mallon"
+  postfixes:
+    Chrest: "Chrestomathie"
 
 - title: "Manichaean"
   description:
@@ -1483,6 +1546,9 @@
       with some additional volumes via US access."
   variants:
     - "Mus"
+  postfixes:
+    # TODO: (#522) Does the nouvelle série have a distinct hyperlink?
+    NS: "nouvelle série"
 
 - title: "*Le Mystère des Lettres grecques*, ed. A. Hebbelynck (from *Muséon*, 1900,
     1901)"
@@ -1551,7 +1617,7 @@
     - "Bilabel, F., & Grohmann, A. (1934). *Griechische, koptische und arabische Texte
       zur Religion und religiösen Literatur in Ägyptens Spätzeit*. (Veröffentlichungen
       aus den badischen Papyrus-Sammlungen, Heft 5). Heidelberg: Verlag der Universitätsbibliothek.
-      [If you know of a digital copy, please [ contact me](https://www.coptist.com/contact-%e2%b2%a7%e2%b2%81%e2%b2%99%e2%b2%9f%e2%b2%93/)]"
+      [If you know of a digital copy, please [contact me](https://www.coptist.com/contact-%e2%b2%a7%e2%b2%81%e2%b2%99%e2%b2%9f%e2%b2%93/)]"
     - "The texts of Heft 5 are catalogued as volume 5 of the *p.bad* series on [papyri.info](https://papyri.info/search?SERIES=p.bad&VOLUME=5)."
   variants:
     - "Orat Cyp"
@@ -1582,6 +1648,8 @@
   variants:
     - "Ostr.Chicago"
     - "Ostr Chicago"
+    - "Chicago Ostr"
+    - "Chicago ostr"
 
 - title: "MSS. in the Bibliothèque Nationale, Paris (Crum’s copies)"
   description:
@@ -1589,6 +1657,8 @@
     - "P"
   postfixes:
     ar: "Arabic"
+  prefixes:
+    Lect: !lookup
 
 - title: "Papyri in Museum at Alexandria, ed. de Ricci & Winstedt in *Sphinx* x, also
     Crum’s copies"
@@ -1633,12 +1703,15 @@
   variants:
     - "Pas Lect"
     - "Pasc Lect"
+    - "Pas Lec"
 
 - title: "Papyri in collection of Mr. Chester Beatty, London (Crum’s copies)"
   description:
   variants:
     - "P. Beatty"
     - "P Beatty"
+    - "Beatty"
+    - "C Beatty"
 
 - title: "Coptic legal papyrus _olim penes_ Sir E. A. W. Budge (Crum’s copy), now
     at Columbia University"
@@ -1725,6 +1798,7 @@
       Band II. Leipzig: B. G. Teubner."
   variants:
     - "PGM"
+    - "PMG"
 
 - title: "Papyri formerly in W. Golenischeff’s collection, from photographs sent by
     O. von Lemm"
@@ -1746,6 +1820,8 @@
   description:
   variants:
     - "P Lich"
+    - "P Lichatschov (Jern)"
+    - "PLichatschev (Jernstedt)"
 
 - title: "*Greek Papyri in British Museum*, ed. Kenyon & Bell, acc. to pp"
   description:
@@ -1791,6 +1867,8 @@
     # TODO: (#522) Populate the following postfixes.
     wooden tablet:
     Pasc Lect:
+    Pasch Lect:
+    Paschal Lect:
 
 - title: "*Byzantinische Papyri… zu München*, ed. Heisenberg & Wenger, 1914, acc.
     to pp"
@@ -1844,7 +1922,7 @@
       Heidelberg: Selbstverlag des Herausgebers."
   variants:
     - "Preisigke"
-    - "Preis."
+    - "Preis"
     - "Pr"
 
 - title: "*Pistis Sophia*, ed. C. Schmidt (= *Coptica* II), 1925"
@@ -1935,7 +2013,10 @@
   variants:
     - "Ricci"
   postfixes:
+    Acta Colluthi:
+    MS (Colluthus):
     L:
+    (Mirac Marci):
 
 - title: "F. Rossi, *Un Nuovo Cod. Copto* (Memorie Accad. Lincei, 1893), acc. to pp.
     of separate publication"
@@ -2030,17 +2111,21 @@
     Berl Or: !lookup
     Berl Sitz: !lookup
     BIF: !lookup
+    BKU: !lookup
     Bor: !lookup
     C: !lookup
     Cai Copt Mus: !lookup
-    Cai Copt Mus Catal: !lookup
+    Cai Copt Mus Catal 1: !lookup
+    Cambr Univ Libr Add: !lookup
+    Cambr Univ Add: !lookup
+    Columb Univ: !lookup
     C O: !lookup
     Cai: !lookup
     Cl Pr: !lookup
     Ep: !lookup
     HT: !lookup
     IF: !lookup
-    Louvre:
+    Louvre: !lookup
     Leyd: !lookup
     L Mis: !lookup
     MIE: !lookup
@@ -2049,6 +2134,7 @@
     Mich 550: !lookup
     Ming: !lookup
     Miss: !lookup
+    Mus: !lookup
     Mun: !lookup
     P: !lookup
     P Stras: !lookup
@@ -2060,6 +2146,8 @@
     Vi K: !lookup
     Wess: !lookup
     Z: !lookup
+    # TODO: (#522) Populate.
+    hom ed Burmester:
 
 - title: "G. P. G. Sobhy, *Le Martyre de St. Hélias*, Cairo, 1919"
   description:
@@ -2126,6 +2214,8 @@
       Orientaliste L. Durbecq."
   variants:
     - "Synax"
+  postfixes:
+    Forget:
 
 - title: "H. Tattam, *Lexicon Aegyptiaco-Latinum*, 1835"
   description:
@@ -2135,6 +2225,7 @@
       Oxonii: E Typographeo Academico."
   variants:
     - "Tatt"
+    - "Tattam"
 
 - title: "Tuki, *Diurnum Alexandrinum*, 1750"
   description:
@@ -2143,6 +2234,7 @@
       Romae: Typis Sacrae Congregatio de Propaganda Fide."
   variants:
     - "T Di"
+    - "T Diurn"
 
 - title: "Tuki, *Pontificale et Euchologium*, 1761"
   # NOTE: In Crum's list, this appears as ‘do., Pontificale et Euchologium,
@@ -2228,6 +2320,7 @@
       e Filologiche*, Ser. 5, 9(3–4), pp. 223-264."
   variants:
     - "Tst Ab"
+    - "Tst Abr"
 
 - title: "Crum, *Theolog. Texts from Coptic Papyri*, 1913"
   description:
@@ -2338,6 +2431,7 @@
     - "Vienna"
   postfixes:
     K:
+    Nat Bibl:
 
 - title: "C. Wessely, *Studien z. Paläographie &c.*, acc. to vol. & page"
   description:
@@ -2426,19 +2520,344 @@
 - title:
   description:
   variants:
-    - "Abû Ṣâliḥ"
-    - "Abû Ṣâlih"
+    - "A Delatte Textes grecs"
 
 - title:
   description:
   variants:
+    - "A J Butler Babylon of Egypt"
+
+- title:
+  description:
+  variants:
+    - "A Möhle"
+    - "Möhle"
+
+- title:
+  description:
+  variants:
+    - "A S Hunt"
+
+- title:
+  description:
+  variants:
+    - "A Schiller"
+  postfixes:
+    Krit Viertelj f Gesetzg:
+
+- title:
+  description:
+  variants:
+    - "Acta SS"
+    - "ASS"
+  postfixes:
+    Maii:
+    Sept:
+
+- title:
+  description:
+  variants:
+    - "Aberdeen Univ Libr"
+    - "Aberdeen Univ"
+  prefixes:
+    P: !lookup
+
+- title:
+  description:
+  variants:
+    - "Abû Ṣâliḥ"
+    - "Abû Ṣâlih"
+  postfixes:
+    Churches:
+
+- title:
+  description:
+  variants:
+    - "Abû'l-Barakât"
+
+- title:
+  description:
+  variants:
+    - "Acta Andr"
+
+- title:
+  description:
+  variants:
+    - "Acta Or"
+  prefixes:
+    Stricker:
+    L Keimer:
+
+- title:
+  description:
+  variants:
+    - "Alexandr. Patriarchengesch. (Hamburg)"
+
+- title:
+  description:
+  variants:
+    - "Patr History ed Seybold"
+
+- title:
+  description:
+  variants:
+    - "Allberry"
+
+- title:
+  description:
+  variants:
+    - "Amer J Philol"
+
+- title:
+  description:
+  variants:
+    - "Amer Journ Theol"
+
+- title:
+  description:
+  variants:
+    - "Amer School Or Research"
+    - "Amer School Or Res"
+
+- title:
+  description:
+  variants:
+    - "Amél"
     - "Amélineau"
-    - "Amélineau Géog"
+  postfixes:
+    Géog:
+    Contes:
+
+- title:
+  description:
+  variants:
+    - "Anal Boll"
+
+- title:
+  description:
+  variants:
+    - "Anaph Basil"
+
+- title:
+  description:
+  variants:
+    - "Ancient Eg."
+
+- title:
+  description:
+  variants:
+    - "Apophthegmata"
+
+- title:
+  description:
+  variants:
+    - "Arch Religwiss"
+
+- title:
+  description:
+  variants:
+    - "Arch du Mus d'Hist Nat Lyon"
+
+- title:
+  description:
+  variants:
+    - "Arch. f. Pap"
+
+- title:
+  description:
+  variants:
+    - "Archaiol Ephem"
+
+- title:
+  description:
+  variants:
+    - "Archiv Or"
+    - "Archiv Orient"
+
+- title:
+  description:
+  variants:
+    - "Ashmolean Mus"
+
+- title:
+  description:
+  variants:
+    - "Athanas Apol. c. Ar."
+
+- title:
+  description:
+  variants:
+    - "B Groterjahn"
+    - "B. Groterjahn"
+
+- title:
+  description:
+  variants:
+    - "B H Stricker"
+    - "Stricker"
+
+- title:
+  description:
+  variants:
+    - "B P Grenfell"
+
+- title:
+  description:
+  variants:
+    - "BGU"
+
+- title:
+  description:
+  variants:
+    - "BM Quarterly"
+
+- title:
+  description:
+  variants:
+    - "Bardelli"
+
+- title:
+  description:
+  variants:
+    - "Bargès Hom s St Marc"
+    - "Bargès St Marc"
+
+- title:
+  description:
+  variants:
+    - "Bartholomä Altiran. Wbuch"
+
+- title:
+  description:
+  variants:
+    - "Baudissin"
+
+- title:
+  description:
+  variants:
+    - "Beatty's Isaiah"
+    - "CBeatty gloss on Gk"
+    - "Ch. Beatty's Isaiah glosses"
+    - "Beatty-Merton"
+    - "Beatty-Merton Isaiah glosses"
+    - "Chester Beatty Bibl. Pap."
+
+- title:
+  description:
+  variants:
+    - "Berl Ak Abh"
+    - "Berl Akad Abh"
+
+- title:
+  description:
+  variants:
+    - "Berl P"
+
+- title:
+  description:
+  variants:
+    # TODO: (#522) Same as `Rahlfs Psalt`?
+    - "Berl Psalt"
+
+- title:
+  description:
+  variants:
+    - "Berthelot Chim du Moyen Âge"
+
+- title:
+  description:
+  variants:
+    - "Bibl Marciana Or"
+    - "Marciana Or"
+
+- title:
+  description:
+  variants:
+    - "Biblica"
+
+- title:
+  description:
+  variants:
+    - "Blümner"
+
+- title:
+  description:
+  variants:
+    - "Bonjour Monum"
+
+- title:
+  description:
+  variants:
+    - "Bristol Mus H"
+    - "Bristol Mus ostr H"
+    - "Bristol Mus Ostr H"
+    - "Ostr Bristol Mus H"
+
+- title:
+  description:
+  variants:
+    - "Brit Acad Proc"
+
+- title:
+  description:
+  variants:
+    - "Brockelmann Lex"
+
+- title:
+  description:
+  variants:
+    - "Brooke"
+
+- title:
+  description:
+  variants:
+    - "Brooks Sel Lett Severus"
+    - "Brooks Sel Let Severus"
+    - "Brooks Select Let Severus"
+
+- title:
+  description:
+  variants:
+    - "Brugsch Aegyptologie"
+
+- title:
+  description:
+  variants:
+    - "Bsciai"
+
+- title:
+  description:
+  variants:
+    - "Bucheum"
+
+- title:
+  description:
+  variants:
+    - "Bull Soc Ling"
+
+- title:
+  description:
+  variants:
+    - "Burmester"
+
+- title:
+  description:
+  variants:
+    - "Bute MornServ"
+
+- title:
+  description:
+  variants:
+    - "Byz Z"
+    - "Byzant Z"
 
 - title:
   description:
   variants:
     - "C Baynes"
+    - "C A Baynes"
+  postfixes:
+    Gnostic Treatise:
 
 - title:
   description:
@@ -2459,22 +2878,236 @@
 - title:
   description:
   variants:
+    - "Brussels Mus Cinq"
+    - "Brussels Mus Cinquant"
     - "Brussels Musée Cinqu"
+  postfixes:
+    E:
 
 - title:
   description:
   variants:
     - "Budge"
+  postfixes:
+    Bibl Texts:
+    George of Lydda:
+    Paradise:
+    St George of Lydda:
+
+- title: "Carl Heinrich Becker"
+  description:
+  variants:
+    - "C H Becker"
+  postfixes:
+    Beiträge:
+    P Schott-Reinh: !lookup
+
+- title:
+  description:
+  variants:
+    - "C Schmidt"
+    - "C Schm"
+    - "Schmidt"
+
+- title:
+  description:
+  variants:
+    - "CR Acad Leningrad"
+    - "CR Russian Acad"
+    - "CR Russ Acad"
+    - "Russian Acad Nauk"
+
+- title:
+  description:
+  variants:
+    - "Calice"
+
+- title:
+  description:
+  variants:
+    - "Callinicus Vita Hypat"
+
+- title:
+  description:
+  variants:
+    - "Cambr Univ Libr"
+    - "Cambr Univ Libr Add"
+    - "Cambr Univ Add"
+    - "Cambridge Univ Libr"
+
+- title:
+  description:
+  variants:
+    - "Rev C Campbell"
+
+- title:
+  description:
+  variants:
+    - "Can Ancyr"
+
+- title:
+  description:
+  variants:
+    - "Casanova"
+
+- title:
+  description:
+  variants:
+    - "Cathol Encycl"
 
 - title:
   description:
   variants:
     - "Chassinat"
 
+- title:
+  description:
+  variants:
+    - "Christian. Vostok"
+
+- title:
+  description:
+  variants:
+    - "Chron Pasch"
+
+- title:
+  description:
+  variants:
+    - "Ciasca"
+
+- title:
+  description:
+  variants:
+    - "Class Philol"
+
+- title:
+  description:
+  variants:
+    # TODO: (#522) Verify that the following refer to the same item.
+    - "Cod Leningrad"
+    - "Cod Tischendorf"
+
+- title:
+  description:
+  variants:
+    # TODO: (#522) Editio Octava Critica Maior?
+    - "Tischendorf"
+
+- title:
+  description:
+  variants:
+    # TOOD: (#522) Evangelia Apocrypha?
+    - "Gk Tischend."
+
+- title:
+  description:
+  variants:
+    - "Coisl"
+
+- title:
+  description:
+  variants:
+    - "Columb Univ"
+
+- title:
+  description:
+  variants:
+    - "Commentar Philol I Pomialovski"
+
+- title:
+  description:
+  variants:
+    - "Confessio Cypr"
+
 - title: "*Apostolic Constitutions*"
   description:
   variants:
     - "Const Ap"
+
+- title:
+  description:
+  variants:
+    - "Corpus Cambridge"
+
+- title:
+  description:
+  variants:
+    - "Crum"
+
+- title:
+  description:
+  variants:
+    - "Černý"
+
+- title:
+  description:
+  variants:
+    - "D'Arcy Thompson"
+
+- title:
+  description:
+  variants:
+    - "Deir el-Gebrawi"
+    - "D. el-Gebrawi"
+    - "El Gebrawi"
+
+- title:
+  description:
+  variants:
+    - "Damîrî"
+
+- title:
+  description:
+  variants:
+    - "N de G Davies"
+    - "N. de G. Davies"
+
+- title:
+  description:
+  variants:
+    - "De Bock Matér"
+
+- title:
+  description:
+  variants:
+    - "De Sacy"
+
+- title:
+  description:
+  variants:
+    - "Descensus in Infern."
+
+- title:
+  description:
+  variants:
+    - "Deubner Kosm. u. Dam."
+
+- title:
+  description:
+  variants:
+    - "Dict Arch Chrét"
+
+- title:
+  description:
+  variants:
+    - "Dioscorides"
+    - "Diosc"
+    - "Dioscor"
+
+- title:
+  description:
+  variants:
+    - "Drioton"
+
+- title:
+  description:
+  variants:
+    - "Du Cange"
+
+- title:
+  description:
+  variants:
+    - "Dulaurier"
 
 - title: "Edwyn Clement Hoskyns"
   description:
@@ -2490,19 +3123,55 @@
   description:
   variants:
     - "Dévaud"
-    - "Dévaud Ét"
-    - "Dévaud Études"
+  postfixes:
+    Ét:
+    Études:
 
 - title:
   description:
   variants:
+    - "E R Ayrton"
+
+- title:
+  description:
+  variants:
+    - "Edgerton"
+
+- title:
+  description:
+  variants:
+    - "Edrisi ed Dozy & De Goeje"
+
+- title:
+  description:
+  variants:
+    - "EES An Report"
+    - "EES Report"
+
+- title:
+  description:
+  variants:
+    - "Enc. Bibl."
+    - "Encycl Bibl"
     - "Encycl. Bibl."
 
 - title:
   description:
   variants:
-    - "Epiphan. De Gemm."
-    - "Epiphan De Gem"
+    - "Epiph Ancorat."
+
+- title:
+  description:
+  variants:
+    - "Epist Ammon"
+
+- title:
+  description:
+  variants:
+    - "Erman"
+  postfixes:
+    Gr:
+    Aegypt. Relig.:
 
 - title:
   description:
@@ -2512,12 +3181,140 @@
 - title:
   description:
   variants:
-    - "Festschr Ebers"
+    - "Esaias Scet"
+    - "Esaias Abbas"
+
+- title:
+  description:
+  variants:
+    - "Euseb"
+    - "Eusebius"
+  postfixes:
+    HE:
+
+- title:
+  description:
+  variants:
+    # TODO: (#522) This is Part II of the same work by Evelyn White. Consider
+    # merging them using postfixes. See `EW`.
+    - "EW Hist"
+    - "EW Hist Mon"
+    - "EW Hist Monast Nitria"
+    - "EW History"
+
+- title:
+  description:
+  variants:
+    # TODO: (#522) This is Part III of the same work by Evelyn White. Consider
+    # merging them using postfixes. See `EW`.
+    - "EW The Monasteries: Architecture"
+
+- title:
+  description:
+  variants:
+    - "Pereira Abba Samuel"
+    - "F M E Pereira Vida do Abba Samuel"
+
+- title:
+  description:
+  variants:
+    - "Pereira Abba Daniel"
+
+- title:
+  description:
+  variants:
+    - "Petrie"
+    - "F Petrie"
+    - "Fl Petrie"
+  postfixes:
+    Gizeh & Rifeh:
+    Hawara:
 
 - title:
   description:
   variants:
     - "F Petrie frag Athribis"
+    - "F Petrie fragm Athribis"
+    - "F Petrie MS Athribis"
+
+- title:
+  description:
+  variants:
+    - "F X Kraus Realencycl"
+
+- title:
+  description:
+  variants:
+    - "Farina"
+
+- title:
+  description:
+  variants:
+    # TODO: (#522) Same as `P Fay`?
+    - "Fay Towns"
+
+- title:
+  description:
+  variants:
+    - "Festschr Ebers"
+
+- title:
+  description:
+  variants:
+    - "Festschr F C Andreas"
+
+- title:
+  description:
+  variants:
+    # TODO: (#522) Same as `Hex` / `Hexap`?
+    - "Field Hex"
+
+- title:
+  description:
+  variants:
+    - "Fitzwilliam Cambr stele"
+
+- title:
+  description:
+  variants:
+    - "Fleischer De Glossis"
+    - "Fleischer De Gloss"
+    - "Fleischer De Glos"
+
+- title:
+  description:
+  variants:
+    - "Fotheringham"
+    - "J K Fotheringham"
+
+- title:
+  description:
+  variants:
+    - "Fraenkel"
+
+- title:
+  description:
+  variants:
+    - "G Horner"
+    - "Horner"
+
+- title:
+  description:
+  variants:
+    - "G Jéquier"
+    - "G. Jéquier"
+    - "Jéquier"
+  prefixes:
+    Ostr: !lookup
+
+- title:
+  description:
+  variants:
+    - "Raccolta Lombroso"
+    - "Raccolta ...Lumbroso"
+    - "Raccolta G. Lumbroso"
+    - "Raccolta...GLumbroso"
+    - "Racc Lombroso"
 
 - title:
   description:
@@ -2528,8 +3325,62 @@
 - title:
   description:
   variants:
-    # TODO: (#522) Verify the following postfixes.
+    - "G R Driver"
+
+- title:
+  description:
+  variants:
+    - "Galen-Kühn"
+    - "Galen-Kuhn"
+
+- title:
+  description:
+  variants:
+    - "Gardiner"
+  postfixes:
+    Gram:
+
+- title:
+  description:
+  variants:
+    - "R G Gayer Anderson"
+    - "R G Gayer-Anderson"
+  prefixes:
+    Pap: !lookup
+
+- title:
+  description:
+  variants:
+    - "St Paul Girard"
+
+- title:
+  description:
+  variants:
+    - "Giron Légendes"
+
+- title:
+  description:
+  variants:
+    - "Gnomon"
+
+- title:
+  description:
+  variants:
+    - "Golenischef"
+    - "Golenischeff"
+  prefixes:
+    MS: !lookup
+
+- title:
+  description:
+  variants:
+    - "Göteborg Stadsbibl"
+
+- title:
+  description:
+  variants:
     - "Gött"
+    - "Götting"
   postfixes:
     Ar: "Arabic"
     ar: "Arabic"
@@ -2539,11 +3390,97 @@
   description:
   variants:
     - "Grohmann"
+    - "A Grohmann"
+  postfixes:
+    Aperçu:
+    Ar Papyri:
+
+- title:
+  description:
+  variants:
+    - "Gött Anz"
+    - "Gött G A"
+    - "Gött G Anz"
+
+- title:
+  description:
+  variants:
+    - "Graz Univ Libr"
+
+- title:
+  description:
+  variants:
+    - "Greg Naz"
+
+- title:
+  description:
+  variants:
+    - "Griffith"
+    - "Griff"
+  postfixes:
+    Stories:
+
+- title:
+  description:
+  variants:
+    - "Grossouw"
+
+- title:
+  description:
+  variants:
+    - "Guest"
 
 - title:
   description:
   variants:
     - "Guide"
+
+- title:
+  description:
+  variants:
+    - "Gunn"
+
+- title:
+  description:
+  variants:
+    - "Gwynn"
+
+- title:
+  description:
+  variants:
+    - "W C Hall"
+
+- title:
+  description:
+  variants:
+    - "Winkler"
+    - "H A Winkler"
+  postfixes:
+    Bauern:
+    Volkskunde:
+    Volksk.:
+
+- title:
+  description:
+  variants:
+    - "Lange"
+    - "H O Lange"
+  postfixes:
+    Amenemope:
+    Amenope:
+
+- title:
+  description:
+  variants:
+    - "H Ranke"
+    - "Ranke"
+  postfixes:
+    Karâra:
+
+- title:
+  description:
+  variants:
+    - "H Schäfer"
 
 - title: "W. Till, *Koptische Heiligen- und Märtyrerlegenden*, 1935-36"
   description:
@@ -2561,9 +3498,95 @@
 - title:
   description:
   variants:
+    - "Hauler"
+
+- title:
+  description:
+  variants:
+    - "Hermas Sim"
+
+- title:
+  description:
+  variants:
+    - "Hess"
+    - "J J Hess"
+  postfixes:
+    Setne:
+
+- title:
+  description:
+  variants:
+    # TODO: (#522) Same as `Field Hex`?
+    - "Hex"
+    - "Hexap"
+
+- title:
+  description:
+  variants:
+    - "Syro-Hexap"
+
+- title:
+  description:
+  variants:
+    - "Hippolytus Philos"
+
+- title:
+  description:
+  variants:
+    - "Holmyard"
+
+- title:
+  description:
+  variants:
+    - "Horae Semit"
+    - "Horae Sem"
+    - "Hor Semit"
+    - "Hor Sem"
+    - "Lewis Horae Sem"
+    - "A S Lewis"
+
+- title:
+  description:
+  variants:
+    - "Horapollo"
+
+- title:
+  description:
+  variants:
+    - "Hunain b. Ishaq"
+
+- title:
+  description:
+  variants:
+    - "Hyvernat"
+  postfixes:
+    Alb:
+
+- title:
+  description:
+  variants:
+    - "IF Epiph De Gemm"
     - "Inst franç Epiph De Gemm"
   prefixes:
     MS: !lookup
+
+- title:
+  description:
+  variants:
+    - "Ibn Duḳmâḳ"
+
+- title:
+  description:
+  variants:
+    - "Ibn Giʿân"
+    - "Ibn Giân"
+    - "Ibn Gi'ân"
+
+- title:
+  description:
+  variants:
+    - "J G Smyly"
+    - "Smyly"
 
 - title:
   description:
@@ -2572,6 +3595,49 @@
   postfixes:
     # NOTE: Only in manual labels (#668).
     Bodl: !lookup
+
+- title:
+  description:
+  variants:
+    - "J de Morgan Catal"
+    - "J de Morgan Cat"
+
+- title:
+  description:
+  variants:
+    - "Jernstedt"
+
+- title:
+  description:
+  variants:
+    - "JEA"
+
+- title:
+  description:
+  variants:
+    - "Jablonski"
+
+- title:
+  description:
+  variants:
+    - "James Apocr Anecd"
+    - "Apocr Anecd"
+
+- title:
+  description:
+  variants:
+    - "Journ Philol"
+
+- title:
+  description:
+  variants:
+    - "Journ Soc Or Res"
+    - "Journ Soc Or Research"
+
+- title:
+  description:
+  variants:
+    - "K. al-Taʿâza al-Rûḥîyah"
 
 - title:
   description:
@@ -2586,7 +3652,46 @@
 - title:
   description:
   variants:
+    - "Kazimirski"
+
+- title:
+  description:
+  variants:
+    - "Keimer"
+    - "L Keimer"
+  postfixes:
+    Gartenpfl:
+
+- title:
+  description:
+  variants:
+    - "Kémi"
+
+- title:
+  description:
+  variants:
     - "Klio"
+
+- title:
+  description:
+  variants:
+    - "Klunzinger Bilder"
+
+- title:
+  description:
+  variants:
+    - "Krall"
+
+- title:
+  description:
+  variants:
+    - "Kremer Beitr"
+    - "Kremer"
+
+- title:
+  description:
+  variants:
+    - "Kuentz"
 
 - title:
   description:
@@ -2607,7 +3712,23 @@
 - title:
   description:
   variants:
+    - "Ladeuze Pachôme"
+
+- title:
+  description:
+  variants:
+    - "Munich Landesbibl"
+    - "Landesbibl Munich"
+  postfixes:
+    Kopt:
+
+- title:
+  description:
+  variants:
     - "Lane"
+  postfixes:
+    Mod Eg:
+    Lexicon:
 
 - title:
   description:
@@ -2617,32 +3738,217 @@
 - title:
   description:
   variants:
-    - "Lat & Syr"
+    - "Lauchert Physiologus"
 
 - title:
   description:
   variants:
     - "Lect Instit Cath Paris"
+    - "Lect Inst Cath Paris"
+    - "Paris Inst Cath"
+
+- title:
+  description:
+  variants:
+    - "Lefort"
+
+- title:
+  description:
+  variants:
+    - "Leipoldt Schen"
+    - "Leipoldt"
+
+- title:
+  description:
+  variants:
+    - "Lemm"
+    - "Lemm Patriarchengesch"
+
+- title:
+  description:
+  variants:
+    - "Leont Neap Gelzer"
+
+- title:
+  description:
+  variants:
+    - "Lepsius"
+    - "Lepsius Denkm"
+    - "Lepsius Denk"
+
+- title:
+  description:
+  variants:
+    - "Liddell & Scott"
+
+- title:
+  description:
+  variants:
+    - "Lipsius"
+
+- title:
+  description:
+    - "Loret, V. (1900). [Les livres III et IV (animaux et végétaux) de la Scala Magna
+      de Schams-Ar-Riâsah](https://archive.org/details/AnnalesDuServiceDesAntiquitsDeLegyptevolume1/page/n63/mode/2up).
+      *Annales du Service des antiquités de l’Égypte*, 1, 48-63 (edition), 215-229
+      (indices)."
+  variants:
+    # TODO: (#522) Verify that the above work is correct for the two occurrences
+    # of `Loret` in the text.
+    - "Loret"
+
+- title:
+  description:
+  variants:
+    - "Louvain"
+  postfixes:
+    Univ:
+    Bibl Univ:
+    C:
+  prefixes:
+    P: !lookup
+    MS: !lookup
+
+- title:
+  description:
+  variants:
+    - "Louvre"
+  postfixes:
+    R:
+    E:
+    SN:
+    ostr:
+  prefixes:
+    Ostr: !lookup
+    ostr: !lookup
 
 - title:
   description:
   variants:
     - "Ludolf"
+  postfixes:
+    Comment.:
+
+- title:
+  description:
+  variants:
+    - "M R James Lost Aproc"
+
+- title:
+  description:
+  variants:
+    - "Mingana"
+
+- title:
+  description:
+  variants:
+    - "Moskow ostr"
+    - "Ostr Moskow"
+    - "Ostr Moscow Mus"
+    - "MS Moscow Mus"
+
+- title:
+  description:
+  variants:
+    - "Maggs Bros"
 
 - title:
   description:
   variants:
     - "Mart Viktor"
+    - "Mart. d. heil. Viktor"
 
 - title:
   description:
   variants:
-    - "Masp."
+    - "Marucchi Mus Eg Vatican"
+    - "Marucchi Mus Eg Vat"
 
 - title:
   description:
   variants:
-    - "MélCh Moeller"
+    - "Masp"
+    - "Maspero"
+
+- title:
+  description:
+  variants:
+    - "Masꜥûdi"
+
+- title:
+  description:
+  variants:
+    - "Meyerhof"
+
+- title:
+  description:
+  variants:
+    - "Mél Ch Moeller"
+    - "Mél Charles Mœller"
+    - "Mélanges Ch. Moeller"
+
+- title:
+  description:
+  variants:
+    - "Mém Soc Ling Paris"
+
+- title:
+  description:
+  variants:
+    - "Mélanges de Harlez"
+
+- title:
+  description:
+  variants:
+    - "Miscel Vatic"
+
+- title:
+  description:
+  variants:
+    - "Mitteis Grundz"
+
+- title:
+  description:
+  variants:
+    - "Möller"
+
+- title:
+  description:
+  variants:
+    - "Munier"
+
+- title:
+  description:
+  variants:
+    - "Murray Engl Nub Dict"
+    - "Murray Engl. Nub. Dict."
+
+- title:
+  description:
+  variants:
+    - "N Peters Ecclesiasticus Hebraice"
+
+- title:
+  description:
+  variants:
+    - "N Reich"
+
+- title:
+  description:
+  variants:
+    - "New York Hist Soc"
+
+- title:
+  description:
+  variants:
+    - "Ny Carlsberg"
+    - "Ny Karlsberg"
+
+- title:
+  description:
+  variants:
+    - "O Wulff Altchr...Bildwerke"
+    - "O Wulf Altchr...Bildw."
 
 - title:
   description:
@@ -2652,7 +3958,252 @@
 - title:
   description:
   variants:
+    - "Od Solom"
+    - "Odes Solom"
+    - "Odes of Solom"
+    # TODO: (#522) The numbering next to the variant below suggests that it
+    # likely refers to a different work.
+    - "Harris & Mingana Odes Solom"
+
+- title:
+  description:
+  variants:
+    - "Or Chr Period"
+    - "Ora Chr Period"
+
+- title:
+  description:
+  variants:
+    - "Orat Manas"
+
+- title:
+  description:
+  variants:
+    - "Oribasius"
+
+- title:
+  description:
+  variants:
+    - "Ostr Nicholson"
+
+- title:
+  description:
+  variants:
+    # TODO: (#522) The variants below likely refer to different items.
+    - "MS Antinoe penes EES"
+    - "P Antinoe EES"
+    - "P Antinoe (penes EES)"
+    - "ostr EES Antinoe"
+
+- title:
+  description:
+  variants:
+    # TODO: (#522) `HT` is `Herbert Thompson`.
+    - "Pap HT (Antinoe)"
+    - "Pap Antinoe penes HT"
+
+- title:
+  description:
+  variants:
+    - "P Lille"
+    - "P Dém Lille"
+    - "P Lille (Sottas)"
+
+- title:
+  description:
+  variants:
+    - "P Dundee Mus"
+    - "Pap Dundee Mus"
+
+- title:
+  description:
+  variants:
+    - "P Ebers"
+
+- title:
+  description:
+  variants:
+    - "P Eleph"
+
+- title:
+  description:
+  variants:
+    # TODO: (#522) Same as `Fay Towns`?
+    - "P Fay"
+
+- title:
+  description:
+  variants:
+    - "P Fior"
+    - "P Fiorent"
+
+- title:
+  description:
+  variants:
+    - "P Frankfurt"
+
+- title:
+  description:
+  variants:
+    - "P Giss"
+
+- title:
+  description:
+  variants:
+    - "P Goodspeed"
+
+- title:
+  description:
+  variants:
+    - "P Grenf"
+
+- title:
+  description:
+  variants:
+    - "P Hauswaldt"
+
+- title:
+  description:
+  variants:
+    - "P Heidelb"
+    - "P mag Heidelb"
+
+- title:
+  description:
+  variants:
+    - "P Hib"
+    - "P Hibeh"
+
+- title:
+  description:
+  variants:
+    - "P Holkham"
+
+- title:
+  description:
+  variants:
+    - "P Holm"
+
+- title:
+  description:
+  variants:
+    - "P Kerameus"
+    - "P. Kerameus"
+
+- title:
+  description:
+  variants:
+    - "P Leip"
+
+- title:
+  description:
+  variants:
+    - "P Leyd"
+
+- title:
+  description:
+  variants:
+    - "P Liverpool Mus"
+    - "Pap Liverpool Mus"
+    - "Pap. Liverpool Mus"
+
+- title:
+  description:
+  variants:
+    - "P Merton"
+
+- title:
+  description:
+  variants:
+    - "P Mimaut"
+
+- title:
+  description:
+  variants:
+    - "P Mus Guimet"
+
+- title:
+  description:
+  variants:
+    - "P Oslo"
+
+- title:
+  description:
+  variants:
+    - "P Ross-Georg"
+    - "P Ross Geor"
+    - "P Russ Georg"
+
+- title:
+  description:
+  variants:
+    - "P Schott-Reinhardt"
+    - "P Schott-Reinh"
+
+- title:
+  description:
+  variants:
+    - "PRE3"
+
+- title:
+  description:
+  variants:
+    - "Pauly-Wissowa"
+
+- title:
+  description:
+  variants:
+    - "PSI"
+
+- title:
+  description:
+  variants:
+    - "Pachomiana Latina"
+
+- title:
+  description:
+  variants:
+    - "Paris Cabinet d. Méd."
+
+- title:
+  description:
+  variants:
+    - "Peet Abydos"
+
+- title:
+  description:
+  variants:
+    - "Pey Gr"
+    - "Pey Gram"
+
+- title:
+  description:
+  variants:
     - "Pliny"
+
+- title:
+  description:
+  variants:
+    - "Plutarch"
+
+- title:
+  description:
+  variants:
+    - "Polotsky"
+
+- title:
+  description:
+  variants:
+    - "Pomialovski"
+    - "Pomialowski"
+  postfixes:
+    Paisia:
+    Zhitie Prepod Paêsie:
+
+- title:
+  description:
+  variants:
+    - "Preisigke Sammelb"
 
 - title: "Preisigke, F. (1922). *Wörterbuch der griechischen Papyrusurkunden: mit
     Einschluss der griechischen Inschriften, Ausschriften, Ostraka, Mumienschilder
@@ -2661,6 +4212,55 @@
   variants:
     - "Preisigke W. buch"
     - "Preisigke W buch"
+    - "Preisigke Wb"
+    - "Preisigke Wörterb"
+
+- title:
+  description:
+  variants:
+    - "Preuschen Pallad u Rufin"
+    - "Preuschen Pall. u. Ruf."
+
+- title:
+  description:
+  variants:
+    - "Preuschen-Bauer"
+
+- title:
+  description:
+  variants:
+    - "Qalqashandî"
+
+- title:
+  description:
+  variants:
+    - "Quatr"
+    - "Quatrem."
+    - "Quatremère"
+  postfixes:
+    Mém:
+    Rech:
+
+- title:
+  description:
+  variants:
+    - "R McKenzie"
+
+- title:
+  description:
+  variants:
+    - "Raabe Petrus d. Iberer"
+
+- title:
+  description:
+  variants:
+    - "Rahlfs"
+  postfixes:
+    # TODO: (#522) is `Rahlfs Psalt(er)` the same as `Berl Psalt`?
+    Psalt:
+    Psalter:
+    Septuag Stud:
+    Sept Stu:
 
 - title:
   description:
@@ -2672,7 +4272,9 @@
 - title:
   description:
   variants:
+    - "Reil Beitr"
     - "Reil Beiträge"
+    - "Th Reil Beiträge"
 
 - title:
   description:
@@ -2692,7 +4294,75 @@
 - title:
   description:
   variants:
+    - "Ryl Bull"
+    - "Ryl Bulletin"
+
+- title:
+  description:
+  variants:
+    - "Religionsgesch. Vers. u. Vorarb."
+
+- title:
+  description:
+  variants:
+    - "Renaudot Lit"
+    - "Renau. Lit"
+    - "Renaudot"
+
+- title:
+  description:
+  variants:
+    - "Rev Bibl"
+
+- title:
+  description:
+  variants:
+    - "Rev Épigr"
+    - "Rev Epigr"
+
+- title:
+  description:
+  variants:
+    - "Rev Ég Anc"
+
+- title:
+  description:
+  variants:
+    - "Rev Sémit"
+
+- title:
+  description:
+  variants:
+    - "Rev. d'Ég"
+
+- title:
+  description:
+  variants:
+    - "Revillout"
+
+- title:
+  description:
+  variants:
+    - "Riedel Kirchenr"
+    - "Riedel Kirchenrechtsq"
+
+- title:
+  description:
+  variants:
     - "Samannûdi's Scala"
+
+- title:
+  description:
+  variants:
+    - "Schermann Prophet Vitae"
+
+- title:
+  description:
+  variants:
+    - "Schnebel"
+    - "Schnebel Landw"
+    - "Schnebel Landwirtsch"
+    - "Schnebel Landwirtschaft"
 
 - title:
   description:
@@ -2709,11 +4379,31 @@
     Assemani"
   description:
   variants:
+    - "Assemani Ac Mar"
+    - "Assemani Ac Mart Or"
+    - "Assemani Ac Sanct Mart"
     - "SE Assemani Ac Mart Or"
+    - "SE Assemani Acta Mart"
 
 - title:
   description:
   variants:
+    - "Sethe"
+
+- title:
+  description:
+  variants:
+    - "Sethe, _Amun u. die 8 Götter"
+
+- title:
+  description:
+  variants:
+    - "Sethe Untersuch."
+
+- title:
+  description:
+  variants:
+    - "Sethe Verb"
     - "Sethe Verbum"
 
 - title: "*Demotische Urkunden zum ägyptischen Bürgschaftsrechte vorzüglich der
@@ -2721,6 +4411,27 @@
   description:
   variants:
     - "Sethe Dem Urk"
+    - "Sethe Dem Bürgsch"
+
+- title:
+  description:
+  variants:
+    - "Sethe Von Zahlen"
+
+- title:
+  description:
+  variants:
+    - "Sitz Bayr Ak"
+
+- title:
+  description:
+  variants:
+    - "Sophocles"
+
+- title:
+  description:
+  variants:
+    - "Spg & Preisigke Inschr... Gebel Silsile"
 
 - title: "*Aegyptische und griechische Eigennamen aus Mumienetiketten der römischen
     Kaiserzeit*, auf Grund von grossenteils unveröffentlichtem Material, gesammelt
@@ -2728,11 +4439,57 @@
   description:
   variants:
     - "Spg Aeg u Gr Eigennamen"
+    - "Spg Eigenn."
 
 - title:
   description:
   variants:
     - "Spg Mythus"
+
+- title:
+  description:
+  variants:
+    - "Spg Aeg Mitteil"
+
+- title:
+  description:
+  variants:
+    - "Spg Dem Gr"
+    - "Spg Dem Gram"
+
+- title:
+  description:
+  variants:
+    - "Spg Dem Stud"
+
+- title:
+  description:
+  variants:
+    - "Spg Demotica"
+
+- title:
+  description:
+  variants:
+    - "Spg Etym"
+    - "Spg Kopt Etym"
+
+- title:
+  description:
+  variants:
+    - "Spg Krugtexte"
+
+- title:
+  description:
+  variants:
+    - "Spg Petub"
+    - "Spg Petubastis"
+
+- title:
+  description:
+  variants:
+    - "Spiegelberg"
+  postfixes:
+    Orakelglossar:
 
 - title: "Socrates Spiro, *An Arabic-English vocabulary of the colloquial Arabic of
     Egypt*"
@@ -2743,7 +4500,39 @@
 - title:
   description:
   variants:
+    - "Steinwenter"
+
+- title:
+  description:
+  variants:
+    - "Cai Kopt Kunst"
     - "Strzygowski Kopt Kunst"
+    - "Strzygowski Kopt. Kunst"
+
+- title:
+  description:
+  variants:
+    - "Studi ... A Albertoni"
+
+- title:
+  description:
+  variants:
+    - "Suidas"
+
+- title:
+  description:
+  variants:
+    - "Synax Cpolit"
+
+- title:
+  description:
+  variants:
+    - "Tait"
+
+- title:
+  description:
+  variants:
+    - "Tatt Proph Maj"
 
 - title:
   description:
@@ -2755,7 +4544,28 @@
   description:
   variants:
     - "T Mina Epima"
+    - "T Mena Epima"
     - "Mina"
+
+- title:
+  description:
+  variants:
+    - "Th Whittemore"
+
+- title:
+  description:
+  variants:
+    - "Theophrastus"
+
+- title:
+  description:
+  variants:
+    - "Till Dialektgram"
+
+- title:
+  description:
+  variants:
+    - "Till Schutzbriefe"
 
 - title:
   description:
@@ -2776,6 +4586,11 @@
 
 - title:
   description:
+  variants:
+    - "Vi Denkschr"
+
+- title:
+  description:
     # NOTE: `Vi` is also a standalone reference variant.
     - "*[Sitzungsberichte / Akademie der Wissenschaften in Wien, Philosophisch-Historische
       Klasse Sitzungsberichte der Philosophisch-Historischen Classe der Kaiserlichen
@@ -2783,11 +4598,41 @@
   variants:
     - "Vi Sitz"
     - "V Sitz"
+    - "Vi Satz"
+    - "Sitz Vi"
+  prefixes:
+    Psalt:
 
 - title:
   description:
   variants:
+    - "Vita Pach"
     - "Vita Pachom"
+    - "Pachom Vita Tertia"
+
+- title:
+  description:
+  variants:
+    - "Vassiliev Anecd Gr Byz"
+
+- title:
+  description:
+  variants:
+    - "Vict & Alb Mus"
+    - "Vict & Albert Mus"
+  postfixes:
+    T:
+    stele:
+
+- title:
+  description:
+  variants:
+    - "Ostr Stras Viereck"
+
+- title:
+  description:
+  variants:
+    - "Vita Anton"
 
 - title:
   description:
@@ -2798,12 +4643,100 @@
 - title:
   description:
   variants:
+    - "Worrell Copt Sounds"
     - "Worrell Coptic Sounds"
 
 - title:
   description:
   variants:
+    - "Worrell's Prov"
+
+- title:
+  description:
+  variants:
+    - "Worrell"
+
+- title:
+  description:
+  variants:
+    - "Vizant Vrem"
+    - "Vizant Vremen"
+
+- title:
+  description:
+  variants:
+    - "Vollers Katal"
+    - "Vollers"
+
+- title:
+  description:
+  variants:
+    - "Vulg"
+
+- title:
+  description:
+  variants:
+    - "medical MS penes W. Erichsen"
+
+- title:
+  description:
+  variants:
+    - "Waszinski Bodenpacht"
+
+- title:
+  description:
+  variants:
+    - "Pap olim penes Wessely"
+
+- title:
+  description:
+  variants:
+    - "Wilcken Ostr"
+    - "Wilcken"
+
+- title:
+  description:
+  variants:
     - "Wilkins"
+
+- title:
+  description:
+  variants:
+    - "Woide"
+
+- title:
+  description:
+  variants:
+    - "Yassa Abd al-Masîh"
+
+- title:
+  description:
+  variants:
+    - "Z Deut Paläst Ver"
+
+- title:
+  description:
+  variants:
+    - "Z f Semit"
+    - "Z. f. Semit"
+    - "Zeits f Semit"
+    - "Z f Semitistik"
+
+- title:
+  description:
+  variants:
+    - "Zeits f Kircheng"
+    - "Z. f. Kirchengesch."
+
+- title:
+  description:
+  variants:
+    - "ZDMG"
+
+- title:
+  description:
+  variants:
+    - "Zahn"
 
 - title:
   description:
@@ -2828,3 +4761,21 @@
   variants:
     - "Z f Assyr"
     - "Z Assyr"
+
+# This seems distinct from 'Imp Russ Ar S', which specifically refers to the
+# 1907 publication by Turaief.
+
+- title:
+  description:
+  variants:
+    - "Zap Imp Russ Arkheol Obš"
+
+- title:
+  description:
+  variants:
+    - "b. Baitâr"
+
+- title:
+  description:
+  variants:
+    - "ꜤAbd al-Latîf"
