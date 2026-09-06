@@ -71,7 +71,10 @@ export const DATA = [
     "description": null,
     "variants": [
       "Alex"
-    ]
+    ],
+    "postfixes": {
+      "Botti": null
+    }
   },
   {
     "title": "H. Almkvist, <span class=\"title\">Kleine Beitr. z. Lexikographie d. vulg. Arabischen</span>, 8th Or. Congr., 1891",
@@ -98,6 +101,7 @@ export const DATA = [
     ],
     "variants": [
       "ALR",
+      "RAL",
       "Rendiconti"
     ]
   },
@@ -129,6 +133,8 @@ export const DATA = [
       "AP"
     ],
     "postfixes": {
+      "Berl Sitz": null,
+      "Berl Sitzb": null,
       "Einl": "Einleitung"
     }
   },
@@ -260,7 +266,12 @@ export const DATA = [
       "Blake, R. P., &amp; de Vis, H. (Eds.). (1934). <span class=\"title\"><a href=\"https://archive.org/details/MN41447ucmf_1/page/n7/mode/2up\">Epiphanius de gemmis: The Old Georgian Version and the Fragments of the Armenian Version</a></span> by R. P. Blake, and <span class=\"title\">The Coptic-Sahidic Fragments</span> by H. de Vis. (Studies and Documents, Vol. 2). London: Christophers."
     ],
     "variants": [
-      "Blake"
+      "Blake",
+      "R P Blake",
+      "Epiph De Gem",
+      "Epiph De Gemm",
+      "Epiphan. De Gemm.",
+      "Epiphan De Gem"
     ]
   },
   {
@@ -296,7 +307,11 @@ export const DATA = [
     "description": null,
     "variants": [
       "BMEA"
-    ]
+    ],
+    "postfixes": {
+      "Hartwell pap": null,
+      "P Hartwell": null
+    }
   },
   {
     "title": "Budge, <span class=\"title\">Miscellaneous Coptic Texts</span>, 1915",
@@ -325,6 +340,7 @@ export const DATA = [
       "P": null,
       "Hunt": null,
       "Marsh": "Marshall Collection",
+      "Or": "Oriental",
       "Marsh Or": "Marshall Oriental Collection"
     }
   },
@@ -400,16 +416,18 @@ export const DATA = [
     "title": "MSS. &amp;c. in Coptic Museum, Cairo",
     "description": null,
     "variants": [
-      "(Cai)CoptMus",
       "Cai Copt Mus",
       "Copt Mus Cai",
       "Copt Mus"
     ],
     "postfixes": {
+      "ostr": "ostracon",
       "tablet": null,
-      "Catal": "Catalogue"
+      "Catal 1": "M. Simaika, <a href=\"https://coptic-treasures.com/book/%D8%AF%D9%84%D9%8A%D9%84-%D8%A7%D9%84%D9%85%D8%AA%D8%AD%D9%81-%D8%A7%D9%84%D9%82%D8%A8%D8%B7%D9%8A-%D9%88-%D8%A3%D9%87%D9%85-%D8%A7%D9%84%D9%83%D9%86%D8%A7%D8%A6%D8%B3-%D9%88-%D8%A7%D9%84%D8%A3%D8%AF/\">Dalīl al-Matḥaf al-Qibṭī, vol. 1</a>, 1930",
+      "Guide 1": "M. Simaika, <a href=\"https://coptic-treasures.com/book/%D8%AF%D9%84%D9%8A%D9%84-%D8%A7%D9%84%D9%85%D8%AA%D8%AD%D9%81-%D8%A7%D9%84%D9%82%D8%A8%D8%B7%D9%8A-%D9%88-%D8%A3%D9%87%D9%85-%D8%A7%D9%84%D9%83%D9%86%D8%A7%D8%A6%D8%B3-%D9%88-%D8%A7%D9%84%D8%A3%D8%AF/\">Dalīl al-Matḥaf al-Qibṭī, vol. 1</a>, 1930"
     },
     "prefixes": {
+      "Lect": LOOKUP,
       "tablet": null,
       "P": LOOKUP,
       "MS": LOOKUP
@@ -561,6 +579,9 @@ export const DATA = [
     "postfixes": {
       "Index": null,
       "Indices": null
+    },
+    "prefixes": {
+      "Griffith": null
     }
   },
   {
@@ -579,10 +600,6 @@ export const DATA = [
     "variants": [
       "EES"
     ],
-    "postfixes": {
-      "Report": null,
-      "Antinoe": null
-    },
     "prefixes": {
       "ostr": LOOKUP
     }
@@ -614,7 +631,8 @@ export const DATA = [
       "Ep"
     ],
     "postfixes": {
-      "App": "Appendix"
+      "App": "Appendix",
+      "Append": "Appendix"
     }
   },
   {
@@ -624,7 +642,8 @@ export const DATA = [
     ],
     "variants": [
       "Et Leem",
-      "Ét Leem"
+      "Ét Leem",
+      "Études Leemans"
     ]
   },
   {
@@ -719,7 +738,8 @@ export const DATA = [
       "<span class=\"title\"><a href=\"https://archive.org/details/studiespresented0000egyp/page/n7/mode/2up\">Studies Presented to F. Ll. Griffith</a></span>. (1932). London: Egypt Exploration Society."
     ],
     "variants": [
-      "Griff Stu"
+      "Griff Stu",
+      "Griff St"
     ]
   },
   {
@@ -771,7 +791,8 @@ export const DATA = [
     ],
     "variants": [
       "H Cons",
-      "H Con"
+      "H Con",
+      "H Const"
     ]
   },
   {
@@ -792,7 +813,9 @@ export const DATA = [
     ],
     "variants": [
       "HL",
-      "Hist Laus"
+      "Hist Laus",
+      "Hist. Laus.",
+      "HL Butler"
     ]
   },
   {
@@ -810,6 +833,10 @@ export const DATA = [
     "variants": [
       "HT"
     ],
+    "postfixes": {
+      "Copt Palimp": null,
+      "Gosp of Jo": null
+    },
     "prefixes": {
       "Pap": LOOKUP
     }
@@ -837,7 +864,8 @@ export const DATA = [
       "Rossi, I. (1808). <span class=\"title\"><a href=\"https://archive.org/details/bub_gb_IWhHswE1yv0C/page/n3/mode/2up\">Etymologiae Aegyptiacae</a></span>. Rome."
     ],
     "variants": [
-      "Ig R"
+      "Ig R",
+      "Ign R"
     ]
   },
   {
@@ -861,6 +889,7 @@ export const DATA = [
     ],
     "postfixes": {
       "Leip": "two such papyri in Leipzig University, Aegyptologisches Institut (cf below)",
+      "MMA": LOOKUP,
       "Index": null
     }
   },
@@ -896,10 +925,11 @@ export const DATA = [
   {
     "title": "P. Jernstedt, <span class=\"title\">Kopt. Papyri d. Asiat. Mus.</span> (Soc. Egyptol. Univ. Leningrad, no. 6, 1930), acc. to numbers",
     "description": [
-      "Jernstedt, P. (1930). Koptische Papyri des Asiatischen Museums. <span class=\"title\">Сборник египтологического кружка при Ленинградском Государственном Университете</span>, VI, 21–44. [If you know of a digital copy, please <a href=\"https://www.coptist.com/contact-%e2%b2%a7%e2%b2%81%e2%b2%99%e2%b2%9f%e2%b2%93/\"> contact me</a>]"
+      "Jernstedt, P. (1930). Koptische Papyri des Asiatischen Museums. <span class=\"title\">Сборник египтологического кружка при Ленинградском Государственном Университете</span>, VI, 21–44. [If you know of a digital copy, please <a href=\"https://www.coptist.com/contact-%e2%b2%a7%e2%b2%81%e2%b2%99%e2%b2%9f%e2%b2%93/\">contact me</a>]"
     ],
     "variants": [
-      "Jern"
+      "Jern",
+      "Soc Egypt Univ Leningrad"
     ]
   },
   {
@@ -1024,8 +1054,17 @@ export const DATA = [
     "title": "P. de Lagarde, his editions of Coptic texts",
     "description": null,
     "variants": [
-      "Lag"
-    ]
+      "Lag",
+      "Lagarde"
+    ],
+    "postfixes": {
+      "Ges Abh": null,
+      "Ges. Abh.": null,
+      "Gesam. Abh.": null,
+      "Onom Sacr": null,
+      "Mitteil.": null,
+      "Mitth": null
+    }
   },
   {
     "title": "<span class=\"title\">Kitâb al-Lakân</span>, Cairo, 1921",
@@ -1033,7 +1072,8 @@ export const DATA = [
       "Father Bāḫūm al-Baramūsī, &amp; Deacon ʿUryān Faraj. (1921). <span class=\"title\"><a href=\"https://digitale-sammlungen.ulb.uni-bonn.de/content/titleinfo/3209362\">Kitāb al-Laqān wa-l-Saǧdah</a>. [كتاب اللقان والسجدة — ⲡ̀ϫⲱⲙ ⲛ̀ⲧⲉ ϯⲗⲁⲕⲁⲛⲏ ⲛⲉⲙ ⲡⲓϫⲓⲛⲟⲩⲱϣⲧ ⲫⲏⲉⲧⲉⲣⲁ̀ⲙⲁϩⲓ ⲉ̀ϫⲉⲛ ϯⲗⲁⲕⲁⲛⲏ ⲛ̀ⲧⲉ ⲡ̀ϣⲁⲓ ⲙ̀ⲡ̀ϫⲓⲛⲱⲙⲥ : ⲛⲉⲙ ⲡⲓⲉ︦ ⲛ̀ⲛⲓϣϯ : ⲛⲉⲙ ⲛⲉⲛⲓⲟϯ ⲛ̀ⲁ̀ⲡⲟⲥⲧⲟⲗⲟⲥ : ⲛⲉⲙ ϯⲡⲁⲛⲧⲏⲕⲟⲥⲧⲏ]</span>. Cairo: Heliopolis Press."
     ],
     "variants": [
-      "Lakan"
+      "Lakan",
+      "Lakân"
     ]
   },
   {
@@ -1048,10 +1088,11 @@ export const DATA = [
   {
     "title": "<span class=\"title\">Die sogen. Gnomen d. Concils v. Nicaea</span> (Dissert.), Beirut, 1912",
     "description": [
-      "Lammeyer, J. (1912). <span class=\"title\">Die sogenannten Gnomen des Konzils von Nicaea. Ein homiletischer Traktat des 4. Jahrhunderts unter Zugrundelegung erstmaliger Edition des koptisch-sahidischen Handschriftenfragments der Bibliothèque Nationale zu Paris Copte-sahidique 129, 14 (75-82) ins Deutsche übersetzt und untersucht</span>. Beirut. [If you know of a digital copy, please <a href=\"https://www.coptist.com/contact-%e2%b2%a7%e2%b2%81%e2%b2%99%e2%b2%9f%e2%b2%93/\"> contact me</a>]"
+      "Lammeyer, J. (1912). <span class=\"title\">Die sogenannten Gnomen des Konzils von Nicaea. Ein homiletischer Traktat des 4. Jahrhunderts unter Zugrundelegung erstmaliger Edition des koptisch-sahidischen Handschriftenfragments der Bibliothèque Nationale zu Paris Copte-sahidique 129, 14 (75-82) ins Deutsche übersetzt und untersucht</span>. Beirut. [If you know of a digital copy, please <a href=\"https://www.coptist.com/contact-%e2%b2%a7%e2%b2%81%e2%b2%99%e2%b2%9f%e2%b2%93/\">contact me</a>]"
     ],
     "variants": [
-      "Lammayer"
+      "Lammayer",
+      "Lammeyer"
     ]
   },
   {
@@ -1189,7 +1230,10 @@ export const DATA = [
     ],
     "variants": [
       "Mallon"
-    ]
+    ],
+    "postfixes": {
+      "Chrest": "Chrestomathie"
+    }
   },
   {
     "title": "Manichaean",
@@ -1331,7 +1375,10 @@ export const DATA = [
     ],
     "variants": [
       "Mus"
-    ]
+    ],
+    "postfixes": {
+      "NS": "nouvelle série"
+    }
   },
   {
     "title": "<span class=\"title\">Le Mystère des Lettres grecques</span>, ed. A. Hebbelynck (from <span class=\"title\">Muséon</span>, 1900, 1901)",
@@ -1394,7 +1441,7 @@ export const DATA = [
   {
     "title": "<span class=\"title\">Oratio Cypriani</span> in <span class=\"title\">Veröffentl. a. d. badischen Papyrussamml.</span>, Heft 5, 1934, p. 305 ff",
     "description": [
-      "Bilabel, F., &amp; Grohmann, A. (1934). <span class=\"title\">Griechische, koptische und arabische Texte zur Religion und religiösen Literatur in Ägyptens Spätzeit</span>. (Veröffentlichungen aus den badischen Papyrus-Sammlungen, Heft 5). Heidelberg: Verlag der Universitätsbibliothek. [If you know of a digital copy, please <a href=\"https://www.coptist.com/contact-%e2%b2%a7%e2%b2%81%e2%b2%99%e2%b2%9f%e2%b2%93/\"> contact me</a>]",
+      "Bilabel, F., &amp; Grohmann, A. (1934). <span class=\"title\">Griechische, koptische und arabische Texte zur Religion und religiösen Literatur in Ägyptens Spätzeit</span>. (Veröffentlichungen aus den badischen Papyrus-Sammlungen, Heft 5). Heidelberg: Verlag der Universitätsbibliothek. [If you know of a digital copy, please <a href=\"https://www.coptist.com/contact-%e2%b2%a7%e2%b2%81%e2%b2%99%e2%b2%9f%e2%b2%93/\">contact me</a>]",
       "The texts of Heft 5 are catalogued as volume 5 of the <span class=\"title\">p.bad</span> series on <a href=\"https://papyri.info/search?SERIES=p.bad&amp;VOLUME=5\">papyri.info</a>."
     ],
     "variants": [
@@ -1431,7 +1478,9 @@ export const DATA = [
     "description": null,
     "variants": [
       "Ostr.Chicago",
-      "Ostr Chicago"
+      "Ostr Chicago",
+      "Chicago Ostr",
+      "Chicago ostr"
     ]
   },
   {
@@ -1442,6 +1491,9 @@ export const DATA = [
     ],
     "postfixes": {
       "ar": "Arabic"
+    },
+    "prefixes": {
+      "Lect": LOOKUP
     }
   },
   {
@@ -1479,7 +1531,8 @@ export const DATA = [
     ],
     "variants": [
       "Pas Lect",
-      "Pasc Lect"
+      "Pasc Lect",
+      "Pas Lec"
     ]
   },
   {
@@ -1487,7 +1540,9 @@ export const DATA = [
     "description": null,
     "variants": [
       "P. Beatty",
-      "P Beatty"
+      "P Beatty",
+      "Beatty",
+      "C Beatty"
     ]
   },
   {
@@ -1578,7 +1633,8 @@ export const DATA = [
       "Preisendanz, K. (1931). <span class=\"title\"><a href=\"https://digi.ub.uni-heidelberg.de/diglit/heidhs3763IIA-51bd2\">Papyri Graecae Magicae: Die griechischen Zauberpapyri</a></span>, Band II. Leipzig: B. G. Teubner."
     ],
     "variants": [
-      "PGM"
+      "PGM",
+      "PMG"
     ]
   },
   {
@@ -1606,7 +1662,9 @@ export const DATA = [
     "title": "Papyri belonging to N. P. Lichatschev (P. Jernstedt’s copies)",
     "description": null,
     "variants": [
-      "P Lich"
+      "P Lich",
+      "P Lichatschov (Jern)",
+      "PLichatschev (Jernstedt)"
     ]
   },
   {
@@ -1645,7 +1703,9 @@ export const DATA = [
     ],
     "postfixes": {
       "wooden tablet": null,
-      "Pasc Lect": null
+      "Pasc Lect": null,
+      "Pasch Lect": null,
+      "Paschal Lect": null
     }
   },
   {
@@ -1698,7 +1758,7 @@ export const DATA = [
     ],
     "variants": [
       "Preisigke",
-      "Preis.",
+      "Preis",
       "Pr"
     ]
   },
@@ -1796,7 +1856,10 @@ export const DATA = [
       "Ricci"
     ],
     "postfixes": {
-      "L": null
+      "Acta Colluthi": null,
+      "MS (Colluthus)": null,
+      "L": null,
+      "(Mirac Marci)": null
     }
   },
   {
@@ -1884,17 +1947,21 @@ export const DATA = [
       "Berl Or": LOOKUP,
       "Berl Sitz": LOOKUP,
       "BIF": LOOKUP,
+      "BKU": LOOKUP,
       "Bor": LOOKUP,
       "C": LOOKUP,
       "Cai Copt Mus": LOOKUP,
-      "Cai Copt Mus Catal": LOOKUP,
+      "Cai Copt Mus Catal 1": LOOKUP,
+      "Cambr Univ Libr Add": LOOKUP,
+      "Cambr Univ Add": LOOKUP,
+      "Columb Univ": LOOKUP,
       "C O": LOOKUP,
       "Cai": LOOKUP,
       "Cl Pr": LOOKUP,
       "Ep": LOOKUP,
       "HT": LOOKUP,
       "IF": LOOKUP,
-      "Louvre": null,
+      "Louvre": LOOKUP,
       "Leyd": LOOKUP,
       "L Mis": LOOKUP,
       "MIE": LOOKUP,
@@ -1903,6 +1970,7 @@ export const DATA = [
       "Mich 550": LOOKUP,
       "Ming": LOOKUP,
       "Miss": LOOKUP,
+      "Mus": LOOKUP,
       "Mun": LOOKUP,
       "P": LOOKUP,
       "P Stras": LOOKUP,
@@ -1913,7 +1981,8 @@ export const DATA = [
       "Ryl": LOOKUP,
       "Vi K": LOOKUP,
       "Wess": LOOKUP,
-      "Z": LOOKUP
+      "Z": LOOKUP,
+      "hom ed Burmester": null
     }
   },
   {
@@ -1986,7 +2055,10 @@ export const DATA = [
     ],
     "variants": [
       "Synax"
-    ]
+    ],
+    "postfixes": {
+      "Forget": null
+    }
   },
   {
     "title": "H. Tattam, <span class=\"title\">Lexicon Aegyptiaco-Latinum</span>, 1835",
@@ -1994,7 +2066,8 @@ export const DATA = [
       "Tattam, H. (1835). <span class=\"title\"><a href=\"https://archive.org/details/lexicongyptiaco01tattgoog/page/n10/mode/2up\">Lexicon Ægyptiaco-Latinum ex Veteribus Linguæ Ægyptiacæ Monumentis, et ex Operibus La Crozii, Woidii, et aliorum Summo Studio Congestum cum Indice Vocum Latinarum</a></span>. Oxonii: E Typographeo Academico."
     ],
     "variants": [
-      "Tatt"
+      "Tatt",
+      "Tattam"
     ]
   },
   {
@@ -2003,7 +2076,8 @@ export const DATA = [
       "Bishop Rūfāʾīl al-Ṭūḫī. (1750). <span class=\"title\"><a href=\"https://digitale-sammlungen.ulb.uni-bonn.de/content/titleinfo/244155\">ⲟⲩϫⲱⲙ ⲛ̀ⲧⲉ ⲛⲓⲉⲩⲭⲏ ⲙ̀ⲡⲓⲉ̀ϩⲟⲟⲩ ⲛⲉⲙ ⲡⲓⲉ̀ϫⲱⲣϩ ⲛ̀ⲍ︦ — كتاب الصلوات النهارية والليلية السبعة</a></span>. Romae: Typis Sacrae Congregatio de Propaganda Fide."
     ],
     "variants": [
-      "T Di"
+      "T Di",
+      "T Diurn"
     ]
   },
   {
@@ -2086,7 +2160,8 @@ export const DATA = [
       "Guidi, I. (1900). <a href=\"http://periodici.librari.beniculturali.it/visualizzatore.aspx?anno=1900&amp;ID_testata=30&amp;ID_periodico=9057\">Il testamento di Isacco e il testamento di Giacobbe</a>. <span class=\"title\">Rendiconti della Reale Accademia dei Lincei. Classe di Scienze Morali, Storiche e Filologiche</span>, Ser. 5, 9(3–4), pp. 223-264."
     ],
     "variants": [
-      "Tst Ab"
+      "Tst Ab",
+      "Tst Abr"
     ]
   },
   {
@@ -2195,7 +2270,8 @@ export const DATA = [
       "Vienna"
     ],
     "postfixes": {
-      "K": null
+      "K": null,
+      "Nat Bibl": null
     }
   },
   {
@@ -2282,24 +2358,469 @@ export const DATA = [
     "title": null,
     "description": null,
     "variants": [
+      "A Delatte Textes grecs"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "A J Butler Babylon of Egypt"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "A Möhle",
+      "Möhle"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "A S Hunt"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "A Schiller"
+    ],
+    "postfixes": {
+      "Krit Viertelj f Gesetzg": null
+    }
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Acta SS",
+      "ASS"
+    ],
+    "postfixes": {
+      "Maii": null,
+      "Sept": null
+    }
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Aberdeen Univ Libr",
+      "Aberdeen Univ"
+    ],
+    "prefixes": {
+      "P": LOOKUP
+    }
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
       "Abû Ṣâliḥ",
       "Abû Ṣâlih"
+    ],
+    "postfixes": {
+      "Churches": null
+    }
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Abû'l-Barakât"
     ]
   },
   {
     "title": null,
     "description": null,
     "variants": [
-      "Amélineau",
-      "Amélineau Géog"
+      "Acta Andr"
     ]
   },
   {
     "title": null,
     "description": null,
     "variants": [
-      "C Baynes"
+      "Acta Or"
+    ],
+    "prefixes": {
+      "Stricker": null,
+      "L Keimer": null
+    }
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Alexandr. Patriarchengesch. (Hamburg)"
     ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Patr History ed Seybold"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Allberry"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Amer J Philol"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Amer Journ Theol"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Amer School Or Research",
+      "Amer School Or Res"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Amél",
+      "Amélineau"
+    ],
+    "postfixes": {
+      "Géog": null,
+      "Contes": null
+    }
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Anal Boll"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Anaph Basil"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Ancient Eg."
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Apophthegmata"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Arch Religwiss"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Arch du Mus d'Hist Nat Lyon"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Arch. f. Pap"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Archaiol Ephem"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Archiv Or",
+      "Archiv Orient"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Ashmolean Mus"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Athanas Apol. c. Ar."
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "B Groterjahn",
+      "B. Groterjahn"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "B H Stricker",
+      "Stricker"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "B P Grenfell"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "BGU"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "BM Quarterly"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Bardelli"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Bargès Hom s St Marc",
+      "Bargès St Marc"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Bartholomä Altiran. Wbuch"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Baudissin"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Beatty's Isaiah",
+      "CBeatty gloss on Gk",
+      "Ch. Beatty's Isaiah glosses",
+      "Beatty-Merton",
+      "Beatty-Merton Isaiah glosses",
+      "Chester Beatty Bibl. Pap."
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Berl Ak Abh",
+      "Berl Akad Abh"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Berl P"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Berl Psalt"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Berthelot Chim du Moyen Âge"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Bibl Marciana Or",
+      "Marciana Or"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Biblica"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Blümner"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Bonjour Monum"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Bristol Mus H",
+      "Bristol Mus ostr H",
+      "Bristol Mus Ostr H",
+      "Ostr Bristol Mus H"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Brit Acad Proc"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Brockelmann Lex"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Brooke"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Brooks Sel Lett Severus",
+      "Brooks Sel Let Severus",
+      "Brooks Select Let Severus"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Brugsch Aegyptologie"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Bsciai"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Bucheum"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Bull Soc Ling"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Burmester"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Bute MornServ"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Byz Z",
+      "Byzant Z"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "C Baynes",
+      "C A Baynes"
+    ],
+    "postfixes": {
+      "Gnostic Treatise": null
+    }
   },
   {
     "title": null,
@@ -2327,14 +2848,107 @@ export const DATA = [
     "title": null,
     "description": null,
     "variants": [
+      "Brussels Mus Cinq",
+      "Brussels Mus Cinquant",
       "Brussels Musée Cinqu"
-    ]
+    ],
+    "postfixes": {
+      "E": null
+    }
   },
   {
     "title": null,
     "description": null,
     "variants": [
       "Budge"
+    ],
+    "postfixes": {
+      "Bibl Texts": null,
+      "George of Lydda": null,
+      "Paradise": null,
+      "St George of Lydda": null
+    }
+  },
+  {
+    "title": "Carl Heinrich Becker",
+    "description": null,
+    "variants": [
+      "C H Becker"
+    ],
+    "postfixes": {
+      "Beiträge": null,
+      "P Schott-Reinh": LOOKUP
+    }
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "C Schmidt",
+      "C Schm",
+      "Schmidt"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "CR Acad Leningrad",
+      "CR Russian Acad",
+      "CR Russ Acad",
+      "Russian Acad Nauk"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Calice"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Callinicus Vita Hypat"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Cambr Univ Libr",
+      "Cambr Univ Libr Add",
+      "Cambr Univ Add",
+      "Cambridge Univ Libr"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Rev C Campbell"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Can Ancyr"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Casanova"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Cathol Encycl"
     ]
   },
   {
@@ -2345,10 +2959,205 @@ export const DATA = [
     ]
   },
   {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Christian. Vostok"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Chron Pasch"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Ciasca"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Class Philol"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Cod Leningrad",
+      "Cod Tischendorf"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Tischendorf"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Gk Tischend."
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Coisl"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Columb Univ"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Commentar Philol I Pomialovski"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Confessio Cypr"
+    ]
+  },
+  {
     "title": "<span class=\"title\">Apostolic Constitutions</span>",
     "description": null,
     "variants": [
       "Const Ap"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Corpus Cambridge"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Crum"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Černý"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "D'Arcy Thompson"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Deir el-Gebrawi",
+      "D. el-Gebrawi",
+      "El Gebrawi"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Damîrî"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "N de G Davies",
+      "N. de G. Davies"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "De Bock Matér"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "De Sacy"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Descensus in Infern."
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Deubner Kosm. u. Dam."
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Dict Arch Chrét"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Dioscorides",
+      "Diosc",
+      "Dioscor"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Drioton"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Du Cange"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Dulaurier"
     ]
   },
   {
@@ -2369,15 +3178,48 @@ export const DATA = [
     "title": null,
     "description": null,
     "variants": [
-      "Dévaud",
-      "Dévaud Ét",
-      "Dévaud Études"
+      "Dévaud"
+    ],
+    "postfixes": {
+      "Ét": null,
+      "Études": null
+    }
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "E R Ayrton"
     ]
   },
   {
     "title": null,
     "description": null,
     "variants": [
+      "Edgerton"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Edrisi ed Dozy & De Goeje"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "EES An Report",
+      "EES Report"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Enc. Bibl.",
+      "Encycl Bibl",
       "Encycl. Bibl."
     ]
   },
@@ -2385,15 +3227,126 @@ export const DATA = [
     "title": null,
     "description": null,
     "variants": [
-      "Epiphan. De Gemm.",
-      "Epiphan De Gem"
+      "Epiph Ancorat."
     ]
   },
   {
     "title": null,
     "description": null,
     "variants": [
+      "Epist Ammon"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Erman"
+    ],
+    "postfixes": {
+      "Gr": null,
+      "Aegypt. Relig.": null
+    }
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
       "Erman-Lange Pap. Lansing"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Esaias Scet",
+      "Esaias Abbas"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Euseb",
+      "Eusebius"
+    ],
+    "postfixes": {
+      "HE": null
+    }
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "EW Hist",
+      "EW Hist Mon",
+      "EW Hist Monast Nitria",
+      "EW History"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "EW The Monasteries: Architecture"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Pereira Abba Samuel",
+      "F M E Pereira Vida do Abba Samuel"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Pereira Abba Daniel"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Petrie",
+      "F Petrie",
+      "Fl Petrie"
+    ],
+    "postfixes": {
+      "Gizeh & Rifeh": null,
+      "Hawara": null
+    }
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "F Petrie frag Athribis",
+      "F Petrie fragm Athribis",
+      "F Petrie MS Athribis"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "F X Kraus Realencycl"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Farina"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Fay Towns"
     ]
   },
   {
@@ -2407,7 +3360,76 @@ export const DATA = [
     "title": null,
     "description": null,
     "variants": [
-      "F Petrie frag Athribis"
+      "Festschr F C Andreas"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Field Hex"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Fitzwilliam Cambr stele"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Fleischer De Glossis",
+      "Fleischer De Gloss",
+      "Fleischer De Glos"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Fotheringham",
+      "J K Fotheringham"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Fraenkel"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "G Horner",
+      "Horner"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "G Jéquier",
+      "G. Jéquier",
+      "Jéquier"
+    ],
+    "prefixes": {
+      "Ostr": LOOKUP
+    }
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Raccolta Lombroso",
+      "Raccolta ...Lumbroso",
+      "Raccolta G. Lumbroso",
+      "Raccolta...GLumbroso",
+      "Racc Lombroso"
     ]
   },
   {
@@ -2422,7 +3444,83 @@ export const DATA = [
     "title": null,
     "description": null,
     "variants": [
-      "Gött"
+      "G R Driver"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Galen-Kühn",
+      "Galen-Kuhn"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Gardiner"
+    ],
+    "postfixes": {
+      "Gram": null
+    }
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "R G Gayer Anderson",
+      "R G Gayer-Anderson"
+    ],
+    "prefixes": {
+      "Pap": LOOKUP
+    }
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "St Paul Girard"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Giron Légendes"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Gnomon"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Golenischef",
+      "Golenischeff"
+    ],
+    "prefixes": {
+      "MS": LOOKUP
+    }
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Göteborg Stadsbibl"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Gött",
+      "Götting"
     ],
     "postfixes": {
       "Ar": "Arabic",
@@ -2434,7 +3532,60 @@ export const DATA = [
     "title": null,
     "description": null,
     "variants": [
-      "Grohmann"
+      "Grohmann",
+      "A Grohmann"
+    ],
+    "postfixes": {
+      "Aperçu": null,
+      "Ar Papyri": null
+    }
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Gött Anz",
+      "Gött G A",
+      "Gött G Anz"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Graz Univ Libr"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Greg Naz"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Griffith",
+      "Griff"
+    ],
+    "postfixes": {
+      "Stories": null
+    }
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Grossouw"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Guest"
     ]
   },
   {
@@ -2442,6 +3593,70 @@ export const DATA = [
     "description": null,
     "variants": [
       "Guide"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Gunn"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Gwynn"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "W C Hall"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Winkler",
+      "H A Winkler"
+    ],
+    "postfixes": {
+      "Bauern": null,
+      "Volkskunde": null,
+      "Volksk.": null
+    }
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Lange",
+      "H O Lange"
+    ],
+    "postfixes": {
+      "Amenemope": null,
+      "Amenope": null
+    }
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "H Ranke",
+      "Ranke"
+    ],
+    "postfixes": {
+      "Karâra": null
+    }
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "H Schäfer"
     ]
   },
   {
@@ -2458,6 +3673,97 @@ export const DATA = [
     "title": null,
     "description": null,
     "variants": [
+      "Hauler"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Hermas Sim"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Hess",
+      "J J Hess"
+    ],
+    "postfixes": {
+      "Setne": null
+    }
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Hex",
+      "Hexap"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Syro-Hexap"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Hippolytus Philos"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Holmyard"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Horae Semit",
+      "Horae Sem",
+      "Hor Semit",
+      "Hor Sem",
+      "Lewis Horae Sem",
+      "A S Lewis"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Horapollo"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Hunain b. Ishaq"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Hyvernat"
+    ],
+    "postfixes": {
+      "Alb": null
+    }
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "IF Epiph De Gemm",
       "Inst franç Epiph De Gemm"
     ],
     "prefixes": {
@@ -2468,11 +3774,94 @@ export const DATA = [
     "title": null,
     "description": null,
     "variants": [
+      "Ibn Duḳmâḳ"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Ibn Giʿân",
+      "Ibn Giân",
+      "Ibn Gi'ân"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "J G Smyly",
+      "Smyly"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
       "J G Wilkinson"
     ],
     "postfixes": {
       "Bodl": LOOKUP
     }
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "J de Morgan Catal",
+      "J de Morgan Cat"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Jernstedt"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "JEA"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Jablonski"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "James Apocr Anecd",
+      "Apocr Anecd"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Journ Philol"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Journ Soc Or Res",
+      "Journ Soc Or Research"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "K. al-Taʿâza al-Rûḥîyah"
+    ]
   },
   {
     "title": null,
@@ -2492,7 +3881,61 @@ export const DATA = [
     "title": null,
     "description": null,
     "variants": [
+      "Kazimirski"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Keimer",
+      "L Keimer"
+    ],
+    "postfixes": {
+      "Gartenpfl": null
+    }
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Kémi"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
       "Klio"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Klunzinger Bilder"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Krall"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Kremer Beitr",
+      "Kremer"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Kuentz"
     ]
   },
   {
@@ -2515,8 +3958,30 @@ export const DATA = [
     "title": null,
     "description": null,
     "variants": [
-      "Lane"
+      "Ladeuze Pachôme"
     ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Munich Landesbibl",
+      "Landesbibl Munich"
+    ],
+    "postfixes": {
+      "Kopt": null
+    }
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Lane"
+    ],
+    "postfixes": {
+      "Mod Eg": null,
+      "Lexicon": null
+    }
   },
   {
     "title": null,
@@ -2529,42 +3994,286 @@ export const DATA = [
     "title": null,
     "description": null,
     "variants": [
-      "Lat & Syr"
+      "Lauchert Physiologus"
     ]
   },
   {
     "title": null,
     "description": null,
     "variants": [
-      "Lect Instit Cath Paris"
+      "Lect Instit Cath Paris",
+      "Lect Inst Cath Paris",
+      "Paris Inst Cath"
     ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Lefort"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Leipoldt Schen",
+      "Leipoldt"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Lemm",
+      "Lemm Patriarchengesch"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Leont Neap Gelzer"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Lepsius",
+      "Lepsius Denkm",
+      "Lepsius Denk"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Liddell & Scott"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Lipsius"
+    ]
+  },
+  {
+    "title": null,
+    "description": [
+      "Loret, V. (1900). <a href=\"https://archive.org/details/AnnalesDuServiceDesAntiquitsDeLegyptevolume1/page/n63/mode/2up\">Les livres III et IV (animaux et végétaux) de la Scala Magna de Schams-Ar-Riâsah</a>. <span class=\"title\">Annales du Service des antiquités de l’Égypte</span>, 1, 48-63 (edition), 215-229 (indices)."
+    ],
+    "variants": [
+      "Loret"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Louvain"
+    ],
+    "postfixes": {
+      "Univ": null,
+      "Bibl Univ": null,
+      "C": null
+    },
+    "prefixes": {
+      "P": LOOKUP,
+      "MS": LOOKUP
+    }
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Louvre"
+    ],
+    "postfixes": {
+      "R": null,
+      "E": null,
+      "SN": null,
+      "ostr": null
+    },
+    "prefixes": {
+      "Ostr": LOOKUP,
+      "ostr": LOOKUP
+    }
   },
   {
     "title": null,
     "description": null,
     "variants": [
       "Ludolf"
+    ],
+    "postfixes": {
+      "Comment.": null
+    }
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "M R James Lost Aproc"
     ]
   },
   {
     "title": null,
     "description": null,
     "variants": [
-      "Mart Viktor"
+      "Mingana"
     ]
   },
   {
     "title": null,
     "description": null,
     "variants": [
-      "Masp."
+      "Moskow ostr",
+      "Ostr Moskow",
+      "Ostr Moscow Mus",
+      "MS Moscow Mus"
     ]
   },
   {
     "title": null,
     "description": null,
     "variants": [
-      "MélCh Moeller"
+      "Maggs Bros"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Mart Viktor",
+      "Mart. d. heil. Viktor"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Marucchi Mus Eg Vatican",
+      "Marucchi Mus Eg Vat"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Masp",
+      "Maspero"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Masꜥûdi"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Meyerhof"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Mél Ch Moeller",
+      "Mél Charles Mœller",
+      "Mélanges Ch. Moeller"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Mém Soc Ling Paris"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Mélanges de Harlez"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Miscel Vatic"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Mitteis Grundz"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Möller"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Munier"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Murray Engl Nub Dict",
+      "Murray Engl. Nub. Dict."
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "N Peters Ecclesiasticus Hebraice"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "N Reich"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "New York Hist Soc"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Ny Carlsberg",
+      "Ny Karlsberg"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "O Wulff Altchr...Bildwerke",
+      "O Wulf Altchr...Bildw."
     ]
   },
   {
@@ -2578,7 +4287,334 @@ export const DATA = [
     "title": null,
     "description": null,
     "variants": [
+      "Od Solom",
+      "Odes Solom",
+      "Odes of Solom",
+      "Harris & Mingana Odes Solom"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Or Chr Period",
+      "Ora Chr Period"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Orat Manas"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Oribasius"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Ostr Nicholson"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "MS Antinoe penes EES",
+      "P Antinoe EES",
+      "P Antinoe (penes EES)",
+      "ostr EES Antinoe"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Pap HT (Antinoe)",
+      "Pap Antinoe penes HT"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "P Lille",
+      "P Dém Lille",
+      "P Lille (Sottas)"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "P Dundee Mus",
+      "Pap Dundee Mus"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "P Ebers"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "P Eleph"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "P Fay"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "P Fior",
+      "P Fiorent"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "P Frankfurt"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "P Giss"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "P Goodspeed"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "P Grenf"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "P Hauswaldt"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "P Heidelb",
+      "P mag Heidelb"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "P Hib",
+      "P Hibeh"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "P Holkham"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "P Holm"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "P Kerameus",
+      "P. Kerameus"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "P Leip"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "P Leyd"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "P Liverpool Mus",
+      "Pap Liverpool Mus",
+      "Pap. Liverpool Mus"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "P Merton"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "P Mimaut"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "P Mus Guimet"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "P Oslo"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "P Ross-Georg",
+      "P Ross Geor",
+      "P Russ Georg"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "P Schott-Reinhardt",
+      "P Schott-Reinh"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "PRE3"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Pauly-Wissowa"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "PSI"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Pachomiana Latina"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Paris Cabinet d. Méd."
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Peet Abydos"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Pey Gr",
+      "Pey Gram"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
       "Pliny"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Plutarch"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Polotsky"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Pomialovski",
+      "Pomialowski"
+    ],
+    "postfixes": {
+      "Paisia": null,
+      "Zhitie Prepod Paêsie": null
+    }
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Preisigke Sammelb"
     ]
   },
   {
@@ -2586,8 +4622,72 @@ export const DATA = [
     "description": null,
     "variants": [
       "Preisigke W. buch",
-      "Preisigke W buch"
+      "Preisigke W buch",
+      "Preisigke Wb",
+      "Preisigke Wörterb"
     ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Preuschen Pallad u Rufin",
+      "Preuschen Pall. u. Ruf."
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Preuschen-Bauer"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Qalqashandî"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Quatr",
+      "Quatrem.",
+      "Quatremère"
+    ],
+    "postfixes": {
+      "Mém": null,
+      "Rech": null
+    }
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "R McKenzie"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Raabe Petrus d. Iberer"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Rahlfs"
+    ],
+    "postfixes": {
+      "Psalt": null,
+      "Psalter": null,
+      "Septuag Stud": null,
+      "Sept Stu": null
+    }
   },
   {
     "title": null,
@@ -2602,7 +4702,9 @@ export const DATA = [
     "title": null,
     "description": null,
     "variants": [
-      "Reil Beiträge"
+      "Reil Beitr",
+      "Reil Beiträge",
+      "Th Reil Beiträge"
     ]
   },
   {
@@ -2619,7 +4721,99 @@ export const DATA = [
     "title": null,
     "description": null,
     "variants": [
+      "Ryl Bull",
+      "Ryl Bulletin"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Religionsgesch. Vers. u. Vorarb."
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Renaudot Lit",
+      "Renau. Lit",
+      "Renaudot"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Rev Bibl"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Rev Épigr",
+      "Rev Epigr"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Rev Ég Anc"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Rev Sémit"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Rev. d'Ég"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Revillout"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Riedel Kirchenr",
+      "Riedel Kirchenrechtsq"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
       "Samannûdi's Scala"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Schermann Prophet Vitae"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Schnebel",
+      "Schnebel Landw",
+      "Schnebel Landwirtsch",
+      "Schnebel Landwirtschaft"
     ]
   },
   {
@@ -2639,13 +4833,39 @@ export const DATA = [
     "title": "<span class=\"title\">Acta Sanctorum Martyrum Orientalium et Occidentalium</span>, by Stefano Evodio Assemani",
     "description": null,
     "variants": [
-      "SE Assemani Ac Mart Or"
+      "Assemani Ac Mar",
+      "Assemani Ac Mart Or",
+      "Assemani Ac Sanct Mart",
+      "SE Assemani Ac Mart Or",
+      "SE Assemani Acta Mart"
     ]
   },
   {
     "title": null,
     "description": null,
     "variants": [
+      "Sethe"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Sethe, _Amun u. die 8 Götter"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Sethe Untersuch."
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Sethe Verb",
       "Sethe Verbum"
     ]
   },
@@ -2653,14 +4873,44 @@ export const DATA = [
     "title": "<span class=\"title\">Demotische Urkunden zum ägyptischen Bürgschaftsrechte vorzüglich der Ptolemäerzeit</span>",
     "description": null,
     "variants": [
-      "Sethe Dem Urk"
+      "Sethe Dem Urk",
+      "Sethe Dem Bürgsch"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Sethe Von Zahlen"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Sitz Bayr Ak"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Sophocles"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Spg & Preisigke Inschr... Gebel Silsile"
     ]
   },
   {
     "title": "<span class=\"title\">Aegyptische und griechische Eigennamen aus Mumienetiketten der römischen Kaiserzeit</span>, auf Grund von grossenteils unveröffentlichtem Material, gesammelt und erläutert von Wilhelm Spiegelberg",
     "description": null,
     "variants": [
-      "Spg Aeg u Gr Eigennamen"
+      "Spg Aeg u Gr Eigennamen",
+      "Spg Eigenn."
     ]
   },
   {
@@ -2669,6 +4919,68 @@ export const DATA = [
     "variants": [
       "Spg Mythus"
     ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Spg Aeg Mitteil"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Spg Dem Gr",
+      "Spg Dem Gram"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Spg Dem Stud"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Spg Demotica"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Spg Etym",
+      "Spg Kopt Etym"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Spg Krugtexte"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Spg Petub",
+      "Spg Petubastis"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Spiegelberg"
+    ],
+    "postfixes": {
+      "Orakelglossar": null
+    }
   },
   {
     "title": "Socrates Spiro, <span class=\"title\">An Arabic-English vocabulary of the colloquial Arabic of Egypt</span>",
@@ -2681,7 +4993,51 @@ export const DATA = [
     "title": null,
     "description": null,
     "variants": [
-      "Strzygowski Kopt Kunst"
+      "Steinwenter"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Cai Kopt Kunst",
+      "Strzygowski Kopt Kunst",
+      "Strzygowski Kopt. Kunst"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Studi ... A Albertoni"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Suidas"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Synax Cpolit"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Tait"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Tatt Proph Maj"
     ]
   },
   {
@@ -2697,7 +5053,36 @@ export const DATA = [
     "description": null,
     "variants": [
       "T Mina Epima",
+      "T Mena Epima",
       "Mina"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Th Whittemore"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Theophrastus"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Till Dialektgram"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Till Schutzbriefe"
     ]
   },
   {
@@ -2724,19 +5109,66 @@ export const DATA = [
   },
   {
     "title": null,
+    "description": null,
+    "variants": [
+      "Vi Denkschr"
+    ]
+  },
+  {
+    "title": null,
     "description": [
       "<span class=\"title\"><a href=\"https://viewer.acdh.oeaw.ac.at/viewer/image/PH_172_1913/346/\">Sitzungsberichte / Akademie der Wissenschaften in Wien, Philosophisch-Historische Klasse Sitzungsberichte der Philosophisch-Historischen Classe der Kaiserlichen Akademie der Wissenschaften, Wien, 172. Band, (Jahrgang 1913)</a></span>"
     ],
     "variants": [
       "Vi Sitz",
-      "V Sitz"
+      "V Sitz",
+      "Vi Satz",
+      "Sitz Vi"
+    ],
+    "prefixes": {
+      "Psalt": null
+    }
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Vita Pach",
+      "Vita Pachom",
+      "Pachom Vita Tertia"
     ]
   },
   {
     "title": null,
     "description": null,
     "variants": [
-      "Vita Pachom"
+      "Vassiliev Anecd Gr Byz"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Vict & Alb Mus",
+      "Vict & Albert Mus"
+    ],
+    "postfixes": {
+      "T": null,
+      "stele": null
+    }
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Ostr Stras Viereck"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Vita Anton"
     ]
   },
   {
@@ -2751,6 +5183,7 @@ export const DATA = [
     "title": null,
     "description": null,
     "variants": [
+      "Worrell Copt Sounds",
       "Worrell Coptic Sounds"
     ]
   },
@@ -2758,7 +5191,126 @@ export const DATA = [
     "title": null,
     "description": null,
     "variants": [
+      "Worrell's Prov"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Worrell"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Vizant Vrem",
+      "Vizant Vremen"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Vollers Katal",
+      "Vollers"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Vulg"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "medical MS penes W. Erichsen"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Waszinski Bodenpacht"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Pap olim penes Wessely"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Wilcken Ostr",
+      "Wilcken"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
       "Wilkins"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Woide"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Yassa Abd al-Masîh"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Z Deut Paläst Ver"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Z f Semit",
+      "Z. f. Semit",
+      "Zeits f Semit",
+      "Z f Semitistik"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Zeits f Kircheng",
+      "Z. f. Kirchengesch."
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "ZDMG"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Zahn"
     ]
   },
   {
@@ -2784,6 +5336,27 @@ export const DATA = [
     "variants": [
       "Z f Assyr",
       "Z Assyr"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "Zap Imp Russ Arkheol Obš"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "b. Baitâr"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
+      "ꜤAbd al-Latîf"
     ]
   }
 ];
