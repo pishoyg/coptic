@@ -15,7 +15,7 @@ const TEST_CASES: {
   {
     key: '2', // ϯ
     want: {
-      [cls.REFERENCE]: 310,
+      [cls.REFERENCE]: 311,
       [cls.BIBLE]: 238,
       [cls.DIALECT]: 804,
       [cls.ANNOTATION]: 245,
@@ -24,25 +24,25 @@ const TEST_CASES: {
   {
     key: '54', // ⲃⲱⲗ
     want: {
-      [cls.REFERENCE]: 419,
+      [cls.REFERENCE]: 420,
       [cls.BIBLE]: 305,
       [cls.DIALECT]: 835,
-      [cls.ANNOTATION]: 238,
+      [cls.ANNOTATION]: 237,
     },
   },
   {
     key: '71', // ϩⲟ
     want: {
-      [cls.REFERENCE]: 294,
+      [cls.REFERENCE]: 300,
       [cls.BIBLE]: 220,
       [cls.DIALECT]: 666,
-      [cls.ANNOTATION]: 231,
+      [cls.ANNOTATION]: 230,
     },
   },
   {
     key: '122', // ϣⲱⲧ
     want: {
-      [cls.REFERENCE]: 255,
+      [cls.REFERENCE]: 256,
       [cls.BIBLE]: 166,
       [cls.DIALECT]: 571,
       [cls.ANNOTATION]: 204,
@@ -51,7 +51,7 @@ const TEST_CASES: {
   {
     key: '131', // ϭⲓ
     want: {
-      [cls.REFERENCE]: 324,
+      [cls.REFERENCE]: 326,
       [cls.BIBLE]: 201,
       [cls.DIALECT]: 725,
       [cls.ANNOTATION]: 193,
@@ -60,7 +60,7 @@ const TEST_CASES: {
   {
     key: '139', // ⲭⲱ
     want: {
-      [cls.REFERENCE]: 295,
+      [cls.REFERENCE]: 297,
       [cls.BIBLE]: 287,
       [cls.DIALECT]: 883,
       [cls.ANNOTATION]: 208,
@@ -69,10 +69,10 @@ const TEST_CASES: {
   {
     key: '369', // ⲧⲱⲣⲓ
     want: {
-      [cls.REFERENCE]: 373,
+      [cls.REFERENCE]: 376,
       [cls.BIBLE]: 303,
       [cls.DIALECT]: 982,
-      [cls.ANNOTATION]: 265,
+      [cls.ANNOTATION]: 263,
     },
   },
   {
@@ -130,7 +130,7 @@ const TEST_CASES: {
     // 2531 has a tricky Bible reference.
     key: '2531',
     want: {
-      [cls.REFERENCE]: 3,
+      [cls.REFERENCE]: 4,
       [cls.BIBLE]: 1,
       [cls.DIALECT]: 2,
       [cls.ANNOTATION]: 3,
@@ -173,7 +173,7 @@ const TEST_CASES: {
     // this exercises the fragile wrapper-climbing logic.
     key: '754',
     want: {
-      [cls.REFERENCE]: 5,
+      [cls.REFERENCE]: 6,
       [cls.BIBLE]: 7,
       [cls.ADDENDUM]: 2,
     },
