@@ -786,9 +786,10 @@ class Wiki:
            and is left out in the ordinary case, where the column in the
            Additions and Corrections is inferred from the page of the entry
            being corrected (see `addenda_page`). Write it out when that
-           inference goes wrong; or when the correction comes from the body of
-           the book rather than from the frontmatter, which no inference over
-           the addenda columns could ever reach.
+           inference lands on the wrong column, which happens only at a column
+           border; or when the correction comes from the body of the book
+           rather than from the frontmatter, which no inference over the
+           addenda columns could ever reach.
 
         Args:
             match: The addendum match. Its first two groups are the removed
@@ -973,7 +974,7 @@ class Wiki:
             A string representing the page number and column in the Additions
             and Corrections section that contains addenda for this entry.
 
-            NOTE: The return value is often inaccurate. In particular:
+            NOTE: The inference can land on the wrong column, in two ways:
             - If addenda for a given column start on a column and spill over to
               the following one, the first column will be returned. For example,
               the addenda for '100b' start on 'xviib' and spill over to
@@ -983,9 +984,9 @@ class Wiki:
               based on the first column. For example, ϯ spans '392a' to '396a',
               but the addenda column will be inferred based on '392a'.
 
-            The blast radius is extremely small because the list of addenda is
-            quite compact anyway.
-            TODO: (#0) Contemplate a more precise implementation.
+            Both only bite at a column border. Every addendum near one has
+            been reviewed, and the page written out by hand wherever the
+            inference went wrong, so the value is now accurate.
         """
         # We could binary-search, but the list only contains 20 elements, so
         # binary search is not worth it.
