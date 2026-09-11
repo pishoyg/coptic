@@ -68,23 +68,6 @@
 # Postfixes that name a DISTINCT source stay interpreted; the handful of
 # _ibidem_ citations they strand are marked by hand in `wiki.tsv`.
 
-# TODO: (#522) Populate missing references, variants, postfixes, descriptions,
-# ...etc.
-
-# TODO: (#522) Unify the `papyri.info` citations. They currently disagree on
-# the capitalization of the site name (`papyri.info` or `Papyri.info`), and on
-# whether the hyperlink sits on the series name or on the site name. The `Tor`
-# entry even uses both idioms within a single sentence.
-
-# TODO: (#522) Unify the punctuation of ranges (of pages, volumes, and years).
-# The file currently mixes hyphens and en dashes, sometimes within a single
-# entry. En dashes are the typographically correct choice.
-
-# TODO: (#522) Drop the `mode/` component from the `archive.org` paths. It
-# merely selects a viewer layout (`1up` or `2up`), so it doesn't belong in a
-# citation, and it leaves the reader with whichever layout we happened to
-# record.
-
 ################################################################################
 ##### Section 1 lists the sources from Crum's list of abbreviations.
 ################################################################################
@@ -162,7 +145,7 @@
   variants:
     - "Alex"
 
-# TODO: (#0) Consider merging Almk 1 and Almk 2 using postfixes.
+# TODO: (#522) Consider merging Almk 1 and Almk 2 using postfixes.
 
 - title: "H. Almkvist, Kleine Beitr. z. Lexikographie d. vulg. Arabischen, 8th Or.
     Congr., 1891"
@@ -497,6 +480,7 @@
     - "BSM"
 
 - title: "Corpus Scriptorum Christian. Oriental., acc. to the “numéros d’ ordre”"
+  # TODO: (#522) This description is unnecessarily huge.
   description:
     - |-
       **41**: *Sinuthii Vita*, ed. J. Leipoldt, 1906.
@@ -679,6 +663,7 @@
       four months) from the Manuscript in the John Rylands Library, Manchester, with
       fragments of a Difnar recently recovered at the Der Abu Makar in the Wadi n-Natrun](https://nrs.lib.harvard.edu/URN-3:FHCL:103551689:VIEW?n=5)*.
       London: Luzac & Co."
+    # TODO: (#522) The two links below are confusing!
     - "O’Leary, De L. (1928). *[The Difnar (Antiphonarium) of the Coptic Church](https://nrs.lib.harvard.edu/URN-3:FHCL:103551689:VIEW?n=137)[:
       Part II (second four months, Tubeh, Amshir, Barmahat and Barmuda) from the Vatican
       Codex Copt. Borgia 59](https://www.copticplace.org/files/Difnar2.pdf)*. London:
