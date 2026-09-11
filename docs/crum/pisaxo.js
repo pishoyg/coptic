@@ -1490,7 +1490,7 @@ export const DATA = [
     ]
   },
   {
-    "title": "Coptic legal papyrus olim penes Sir E. A. W. Budge (Crum’s copy), now at Columbia University",
+    "title": "Coptic legal papyrus <i>olim penes</i> Sir E. A. W. Budge (Crum’s copy), now at Columbia University",
     "description": null,
     "variants": [
       "P Bu"
@@ -1509,7 +1509,7 @@ export const DATA = [
     ]
   },
   {
-    "title": "Two medical papyri penes E. Chassinat",
+    "title": "Two medical papyri <i>penes</i> E. Chassinat",
     "description": null,
     "variants": [
       "P Chass",
@@ -2201,7 +2201,7 @@ export const DATA = [
     ]
   },
   {
-    "title": "a B MS penes the Rev. W. Hatch, Cambridge, Mass",
+    "title": "a <i><b>B</b></i> MS <i>penes</i> the Rev. W. Hatch, Cambridge, Mass",
     "description": null,
     "variants": [
       "W Hatch"
