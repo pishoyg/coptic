@@ -20,7 +20,6 @@ import * as ann from './annotations.js';
 import * as ref from './references.js';
 import * as tool from '../tooltip.js';
 import * as str from '../str.js';
-import * as white from './white.js';
 import * as dev from '../dev.js';
 import * as scan from '../scan.js';
 import * as dial from '../dialect.js';
@@ -74,8 +73,6 @@ const EXCLUDE: string = css.disjunction(
   cls.GREEK,
   cls.HEBREW,
   cls.HIEROGLYPHIC,
-  // TODO: (#522) The presence of the four classes below in the query will
-  // become unnecessary when the query is solely used during enrichment.
   cls.BIBLE,
   cls.REFERENCE,
   cls.ANNOTATION,
@@ -664,8 +661,6 @@ function handleAux(wiki: HTMLElement, full: boolean): void {
       }
 
       dev.play(() => {
-        white.warnPotentiallyMissingReferences(wiki, EXCLUDE);
-
         const endText: string = textContent(wiki);
         // This handler should only add tooltips without modifying text content
         // at all. Verify that the text content hasn't changed.

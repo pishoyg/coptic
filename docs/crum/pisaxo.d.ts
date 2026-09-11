@@ -30,7 +30,6 @@ export interface Source {
   /** variants is a list of abbreviation forms used to cite this source in
    * Crum's text. Sources were often cited inconsistently, which is why we
    * provide you with a list, so you can specify all alternatives.
-   * TODO: (#522) Record variants.
    */
   readonly variants: string[];
   /** postfixes is a list of all postfixes that this abbreviation can bear.

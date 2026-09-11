@@ -206,9 +206,7 @@ standing fix is an empty manual key.
   the likeliest missed abbreviation, and worth a sweep of its own. Mostly proper
   names (Jacob, Cyril, Apollo) and thus mostly noise, but this is exactly where
   an unrecognized abbreviation hides. Some sit bare by deliberate suppression;
-  judge the reading either way. `white.ts` already sweeps for this and warns,
-  and **its whitelist is a triage record** — grep it first: a token in it has
-  been examined and dismissed, one that isn't has not.
+  judge the reading either way.
 - Annotations deliberately kept out of the list because they'd cost more than
   they'd earn — each carries a `NOTE` in `annotations.ts` saying so. Where the
   reading is certain, label it by hand.
