@@ -28,7 +28,7 @@ import type * as zod from 'zod';
 import { z } from 'zod';
 import * as log from '../../docs/logger.js';
 import * as orth from '../../docs/orth.js';
-import { marked } from 'marked';
+import { Marked, type Tokens } from 'marked';
 import type * as sax from '../../docs/crum/pisaxo.js';
 
 import { fileURLToPath } from 'url';
@@ -71,10 +71,39 @@ const TAG_REGEX = /<([a-z]+)/gi;
 const VALID_TAGS: Set<string> = new Set<string>([
   'a',
   'strong',
+  'b',
   'em',
+  'i',
   'ul',
   'li',
 ]);
+
+// Markdown conflates its two delimiters at each level of emphasis, rendering
+// both `*…*` and `_…_` as `<em>`, and both `**…**` and `__…__` as `<strong>`.
+// We keep them apart, because the HTML elements they collapse into are not
+// interchangeable. The asterisk is the semantic delimiter, the underscore the
+// merely typographic one:
+// - `*…*` is stress emphasis, which is what `<em>` means; `_…_` is italics
+//   without emphasis, which is what `<i>` means: titles of works, foreign
+//   phrases, and the like — the bulk of a bibliography.
+// - `**…**` is strong importance, which is what `<strong>` means; `__…__` is
+//   boldface without importance, which is what `<b>` means: the sigla and
+//   abbreviations a description introduces.
+// The delimiter survives on the token's `raw` text, which is all the renderer
+// needs to tell them apart. Delimiters nest independently, so an `<i>` title
+// inside an `<em>` aside renders as written.
+const MARKED = new Marked({
+  renderer: {
+    em(token: Tokens.Em): string {
+      const tag: string = token.raw.startsWith('_') ? 'i' : 'em';
+      return `<${tag}>${this.parser.parseInline(token.tokens)}</${tag}>`;
+    },
+    strong(token: Tokens.Strong): string {
+      const tag: string = token.raw.startsWith('_') ? 'b' : 'strong';
+      return `<${tag}>${this.parser.parseInline(token.tokens)}</${tag}>`;
+    },
+  },
+});
 
 /**
  *
@@ -87,7 +116,7 @@ const VALID_TAGS: Set<string> = new Set<string>([
  * are well-formed.
  */
 function markdownToHTML(markdown: string): string {
-  const parsed: string = marked.parse(markdown, { async: false }).trim();
+  const parsed: string = MARKED.parse(markdown, { async: false }).trim();
 
   // Verify the input is inline: at most one paragraph. Multi-paragraph
   // input would have its paragraph boundaries dissolved by the `<p>`

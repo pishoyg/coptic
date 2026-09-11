@@ -25,14 +25,23 @@
 #    and each item in the description must follow on a line starting with `- ` (a
 #    hyphen followed by a space).
 # 5. Use Markdown syntax, specifically:
-#    - Single asterisks for emphasis (italic text):
-#        *italicized*
-#    - Double asterisks for bold text (rendered as `<strong>`):
-#        **bold**
-#      Use double asterisks exclusively for abbreviations, postfixes, or
-#      suffixes that occur within a description (e.g. the volume numbers or
-#      sigla a description introduces). Never use them to emphasize ordinary
-#      description text.
+#    - Single asterisks for emphasis (rendered as `<em>`):
+#        *emphasized*
+#      This is used for work titles.
+#    - Single underscores for italics that carry no emphasis (rendered as
+#      `<i>`):
+#        _italicized_
+#      This is used for italicized text that is not part of a work title,
+#      particularly Latin words such as _penes_, _olim penes_, etc.
+#    - Double asterisks for strong importance (rendered as `<strong>`):
+#        **strong**
+#      This is used for tokens that are part of the citation location, in
+#      particular volume numbers and postfixes.
+#      This helps the user locate citations more quickly in the description.
+#    - Double underscores for boldface that carries no importance (rendered as
+#      `<b>`):
+#        __bold__
+#      This is used for bold text that is not part of the citation location.
 #    - The bracket notation for hyperlinks:
 #        [name](https://example.com/)
 # 6. Double-quote all values.
@@ -320,8 +329,6 @@
 
 - title: "MSS. in the Staats(olim Kgl.)bibliothek, Berlin (Crum’s copies)"
   description:
-  # TODO: (#522) Should you add 'Berl'?
-  # See https://remnqymi.com/crum/1388.html#:~:text=Berl.
   variants:
     - "Berl Or"
     - "Berl.Or"
