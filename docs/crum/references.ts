@@ -28,6 +28,18 @@ export class Source {
   ) {}
 
   /**
+   *
+   * @param elem
+   */
+  private static strongToAbbreviation(elem: ParentNode): void {
+    elem.querySelectorAll('strong').forEach((strong: HTMLElement): void => {
+      strong.replaceWith(
+        html.classify(html.span(...strong.childNodes), cls.ABBREVIATION)
+      );
+    });
+  }
+
+  /**
    * @returns Deep copies of the parsed title's child nodes.
    */
   public title(): Iterable<Node> {
@@ -37,6 +49,7 @@ export class Source {
     if (!this.titleMemo) {
       this.titleMemo = new DocumentFragment();
       this.titleMemo.append(...html.parse(this.titleHTML));
+      Source.strongToAbbreviation(this.titleMemo);
     }
     return this.titleMemo.cloneNode(true).childNodes;
   }
@@ -56,12 +69,8 @@ export class Source {
         li.innerHTML = innerHTML;
         ul.append(li);
       });
-      ul.querySelectorAll('strong').forEach((strong: HTMLElement): void => {
-        strong.replaceWith(
-          html.classify(html.span(...strong.childNodes), cls.ABBREVIATION)
-        );
-      });
       this.descriptionMemo = ul;
+      Source.strongToAbbreviation(this.descriptionMemo);
     }
     return [this.descriptionMemo.cloneNode(true) as HTMLUListElement];
   }
