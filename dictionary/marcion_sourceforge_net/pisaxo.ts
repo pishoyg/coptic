@@ -27,6 +27,7 @@ import * as yaml from 'js-yaml';
 import type * as zod from 'zod';
 import { z } from 'zod';
 import * as log from '../../docs/logger.js';
+import * as cls from '../../docs/crum/cls.js';
 import * as orth from '../../docs/orth.js';
 import { Marked, type Tokens } from 'marked';
 import type * as sax from '../../docs/crum/pisaxo.js';
@@ -68,39 +69,39 @@ const SCHEMA: zod.ZodArray = z.array(
 );
 
 const TAG_REGEX = /<([a-z]+)/gi;
-const VALID_TAGS: Set<string> = new Set<string>([
-  'a',
-  'strong',
-  'b',
-  'em',
-  'i',
-  'ul',
-  'li',
-]);
+const VALID_TAGS: Set<string> = new Set<string>(['a', 'span', 'i', 'ul', 'li']);
 
 // Markdown conflates its two delimiters at each level of emphasis, rendering
 // both `*…*` and `_…_` as `<em>`, and both `**…**` and `__…__` as `<strong>`.
-// We keep them apart, because the HTML elements they collapse into are not
-// interchangeable. The asterisk is the semantic delimiter, the underscore the
-// merely typographic one:
-// - `*…*` is stress emphasis, which is what `<em>` means; `_…_` is italics
-//   without emphasis, which is what `<i>` means: titles of works, foreign
-//   phrases, and the like — the bulk of a bibliography.
-// - `**…**` is strong importance, which is what `<strong>` means; `__…__` is
-//   boldface without importance, which is what `<b>` means: the sigla and
-//   abbreviations a description introduces.
-// The delimiter survives on the token's `raw` text, which is all the renderer
-// needs to tell them apart. Delimiters nest independently, so an `<i>` title
-// inside an `<em>` aside renders as written.
+// We keep them apart at both levels. The delimiter survives on the token's
+// `raw` text, which is all the renderer needs to tell them apart.
+// A bibliography hardly ever means the stress emphasis that `<em>` and
+// `<strong>` mean, so three of the four readings are a class naming what the
+// run of text IS, rather than a phrasing element:
+// - `*…*` is a work TITLE, the bulk of a bibliography.
+// - `**…**` is a CLUE: a token of the citation location, such as a volume
+//   number or a postfix siglum, that helps the reader find the citation
+//   within the description.
+// - `__…__` is a dialect SIGLUM, which a handful of titles name when the
+//   manuscript they describe is known by its dialect. Crum's text carries no
+//   boldface, so the delimiter was free to take on the meaning.
+// Only `_…_` stays typographic: italics that carry no emphasis, which is what
+// `<i>` means — Latin words such as `penes`, and the like.
+// Delimiters nest independently, so a link or an italicized phrase inside a
+// title renders as written.
 const MARKED = new Marked({
   renderer: {
     em(token: Tokens.Em): string {
-      const tag: string = token.raw.startsWith('_') ? 'i' : 'em';
-      return `<${tag}>${this.parser.parseInline(token.tokens)}</${tag}>`;
+      const parsed = this.parser.parseInline(token.tokens);
+      if (token.raw.startsWith('_')) {
+        return `<i>${parsed}</i>`;
+      }
+      return `<span class="${cls.TITLE}">${parsed}</span>`;
     },
     strong(token: Tokens.Strong): string {
-      const tag: string = token.raw.startsWith('_') ? 'b' : 'strong';
-      return `<${tag}>${this.parser.parseInline(token.tokens)}</${tag}>`;
+      const parsed = this.parser.parseInline(token.tokens);
+      const klass: string = token.raw.startsWith('_') ? cls.DIALECT : cls.CLUE;
+      return `<span class="${klass}">${parsed}</span>`;
     },
   },
 });

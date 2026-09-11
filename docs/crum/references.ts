@@ -28,18 +28,6 @@ export class Source {
   ) {}
 
   /**
-   *
-   * @param elem
-   */
-  private static strongToAbbreviation(elem: ParentNode): void {
-    elem.querySelectorAll('strong').forEach((strong: HTMLElement): void => {
-      strong.replaceWith(
-        html.classify(html.span(...strong.childNodes), cls.ABBREVIATION)
-      );
-    });
-  }
-
-  /**
    * @returns Deep copies of the parsed title's child nodes.
    */
   public title(): Iterable<Node> {
@@ -49,7 +37,6 @@ export class Source {
     if (!this.titleMemo) {
       this.titleMemo = new DocumentFragment();
       this.titleMemo.append(...html.parse(this.titleHTML));
-      Source.strongToAbbreviation(this.titleMemo);
     }
     return this.titleMemo.cloneNode(true).childNodes;
   }
@@ -70,7 +57,6 @@ export class Source {
         ul.append(li);
       });
       this.descriptionMemo = ul;
-      Source.strongToAbbreviation(this.descriptionMemo);
     }
     return [this.descriptionMemo.cloneNode(true) as HTMLUListElement];
   }
@@ -286,7 +272,7 @@ abstract class Fix {
    *    referring to a chapter within a book.
    * 2. A postfix emptied ON PURPOSE by consolidation (#671), such as `Mani`'s
    *    `K:` or `Pcod`'s `F:`. Its text was not lost: it moved into the
-   *    entry's own `description`, under its bold siglum, so that every
+   *    entry's own `description`, under its own siglum, so that every
    *    citation shares the same tooltip, regardless of postfixes. See the
    *    postfix NOTE in `bib.yaml`.
    * 3. A placeholder that still needs to be filled out (#522).

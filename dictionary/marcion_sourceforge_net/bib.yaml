@@ -25,25 +25,35 @@
 #    and each item in the description must follow on a line starting with `- ` (a
 #    hyphen followed by a space).
 # 5. Use Markdown syntax, specifically:
-#    - Single asterisks for emphasis (rendered as `<em>`):
-#        *emphasized*
-#      This is used for work titles.
-#    - Single underscores for italics that carry no emphasis (rendered as
-#      `<i>`):
+#
+#    - Single asterisks for work titles (typically italicized):
+#        *title*
+#      This is used for the titles of works, which are the bulk of the
+#      bibliography.
+#
+#    - Single underscores for other italicized text:
 #        _italicized_
 #      This is used for italicized text that is not part of a work title,
 #      particularly Latin words such as _penes_, _olim penes_, etc.
-#    - Double asterisks for strong importance (rendered as `<strong>`):
-#        **strong**
+#
+#    - Double asterisks for clues:
+#        **clue**
 #      This is used for tokens that are part of the citation location, in
 #      particular volume numbers and postfixes.
 #      This helps the user locate citations more quickly in the description.
-#    - Double underscores for boldface that carries no importance (rendered as
-#      `<b>`):
-#        __bold__
-#      This is used for bold text that is not part of the citation location.
+#
+#    - Double underscores for dialects:
+#        __S__, __B__, etc.
+#      This is used where the text names the dialect of the manuscript it
+#      describes, be it in a title, or in a consolidated postfix whose siglum
+#      is a dialect (see the NOTE on postfixes below).
+#
+#      Crum's text doesn't use boldface, so we've conveniently repurposed both
+#      of markdown's strong delimiters, giving each a meaning of its own.
+#
 #    - The bracket notation for hyperlinks:
 #        [name](https://example.com/)
+#
 # 6. Double-quote all values.
 # 7. Don't double-quote any keys (such as `title`, `description`, etc., and
 #    postfix keys).
@@ -61,10 +71,11 @@
 # citation in the _ibidem_ that follows it ('ManiK …, ib K …'), and a bare
 # postfix is not a parsable key. Where an entry's postfixes merely name parts
 # of one work, we therefore CONSOLIDATE it: each postfix description moves into
-# the entry's own `description`, introduced by its bold siglum (`**K**: …`),
-# and the `postfixes` key is left with an empty interpretation. Every postfixed
-# form then shares the entry's full tooltip, so it no longer matters whether
-# the parser read the postfix as part of the key. See `Mani` and `Pcod`.
+# the entry's own `description`, introduced by its own siglum (`**K**: …` as a
+# clue, or `__F__: …` where the postfix names a dialect), and the `postfixes`
+# key is left with an empty interpretation. Every postfixed form then shares
+# the entry's full tooltip, so it no longer matters whether the parser read
+# the postfix as part of the key. See `Mani` and `Pcod`.
 # Postfixes that name a DISTINCT source stay interpreted; the handful of
 # _ibidem_ citations they strand are marked by hand in `wiki.tsv`.
 
@@ -1164,7 +1175,7 @@
   variants:
     - "Lab"
 
-- title: "fragments of Jo & Ap ___F___, copied by P. Lacau (_v_ *Bull. Corr. Hellén.*
+- title: "fragments of Jo & Ap __F__, copied by P. Lacau (_v_ *Bull. Corr. Hellén.*
     xxv 400)"
   description:
   variants:
@@ -1665,7 +1676,7 @@
       in Cheltenham: Koptische theologische Schriften](https://archive.org/details/derpapyruscodexs00crum/page/n7/mode/2up)*.
       Strassburg: Karl J. Trübner."
     - |-
-      **F**: Fayyûmic text of same, ed. W. Erichsen (Danish Acad., 1932).
+      __F__: Fayyûmic text of same, ed. W. Erichsen (Danish Acad., 1932).
 
       - Erichsen, W. (1932). *[Faijumische Fragmente der Reden des Agathonicus Bischofs von Tarsus](https://archive.org/details/faijumischefragm0000agat/page/n1/mode/2up)*. (Det Kgl. Danske Videnskabernes Selskab, Historisk-filologiske Meddelelser, XIX, 1). København: Andr. Fred. Høst & søn.
   variants:
@@ -2344,7 +2355,7 @@
   variants:
     - "Wess"
 
-- title: "a ___B___ MS _penes_ the Rev. W. Hatch, Cambridge, Mass"
+- title: "a __B__ MS _penes_ the Rev. W. Hatch, Cambridge, Mass"
   description:
   variants:
     - "W Hatch"

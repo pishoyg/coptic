@@ -42,6 +42,7 @@ figcaption {
 
 :root {
   --reference-green: #1f7a48; /* emerald */
+  --dialect-gold: #8c6a1e;
 }
 
 .wiki .gloss {
@@ -61,16 +62,19 @@ figcaption {
     padding-left: 2em;
   }
 
+  .title {
+    font-style: italic;
+  }
+
+  .clue,
   .abbreviation {
     color: var(--reference-green);
-    margin-right: 0.5em;
-    margin-left: 0.25em;
     font-size: 110%;
   }
 
-  li .abbreviation {
-    margin-right: 0;
-    margin-left: 0;
+  .abbreviation {
+    margin-right: 0.5em;
+    margin-left: 0.25em;
   }
 
   .ibidem {
@@ -214,13 +218,14 @@ figcaption {
   font-size: large;
 }
 
-/* siglum is the class of dialect siglum in Crum. */
+.dialect,
 .siglum {
   font-style: italic;
 }
 
 .dialect {
-  color: #8c6a1e; /* gold */
+  color: var(--dialect-gold);
+
   &:hover {
     background-color: #f3ecda; /* light gold */
   }

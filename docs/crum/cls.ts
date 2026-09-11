@@ -4,6 +4,10 @@
  * NOTE: Keep the content of this file sorted in alphabetical order.
  */
 
+/**
+ * ABBREVIATION is the class of the abbreviation that a tooltip explains,
+ * introducing its own interpretation. Contrast with `CLUE`.
+ */
 export const ABBREVIATION = 'abbreviation';
 
 export const AMHARIC = 'amharic';
@@ -23,6 +27,13 @@ export const BIBLE = 'bible';
  */
 export const BULLET = 'bullet';
 export const CATEGORIES = 'categories';
+/**
+ * CLUE is the class of a token of the citation location — a volume number, a
+ * postfix siglum — highlighted inside a source's title or description, so the
+ * user can locate the citation more quickly. Unlike an `ABBREVIATION`, a clue
+ * belongs to the surrounding text; it introduces nothing.
+ */
+export const CLUE = 'clue';
 export const COPTIC = 'coptic';
 export const COPY = 'copy';
 export const ADDENDUM = 'addendum';
@@ -105,6 +116,12 @@ export const STACK = 'stack';
 export const STACK_BOTTOM = 'stack-bottom';
 export const STACK_TOP = 'stack-top';
 export const SUBPARAGRAPH = 'subparagraph';
+/**
+ * TITLE is the class of the title of a cited work, appearing either in a
+ * source's own title or inside its description. It is what `bib.yaml` marks
+ * with `*…*`.
+ */
+export const TITLE = 'title';
 export const TYPE = 'type';
 export const WIKI = 'wiki';
 export const WORD = 'word';

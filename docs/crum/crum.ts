@@ -36,6 +36,9 @@ export function handle(
   highlighter: high.Highlighter,
   full = true
 ): void {
+  // NOTE: `handleDialect` must run early before Wiki enrichment, as Wiki
+  // enrichment introduces tooltips that contain dialect elements that we don't
+  // want to process.
   handleDialect(root, highlighter);
   addGreekLookups(root);
   wiki.handle(root, full);
