@@ -115,30 +115,46 @@ export class Dialect<C extends string, N extends string, K extends string> {
   }
 
   /**
-   * @returns An element containing a prettified dialect code.
+   * @returns A fresh element containing a prettified dialect code.
    */
   public siglum(): HTMLSpanElement {
     const siglum: HTMLSpanElement = document.createElement('span');
-    siglum.classList.add(CLS.SIGLUM);
+    this.prettify(siglum);
+    return siglum;
+  }
 
+  /**
+   * Turn the given element into this dialect's siglum, by marking it as a
+   * siglum, and replacing its content with the prettified code.
+   * Use this, rather than `siglum`, when the element bearing the raw code is
+   * already in place, and a wrapper would be a needless extra layer.
+   * @param el - The element bearing this dialect's code.
+   */
+  public prettify(el: HTMLElement): void {
+    el.classList.add(CLS.SIGLUM);
+    el.replaceChildren(...this.parts());
+  }
+
+  /**
+   * @returns The pieces of the prettified dialect code.
+   */
+  private parts(): (string | HTMLElement)[] {
     const first: string = this.code.slice(0, 1),
       second: string = this.code.slice(1);
     if (
-      first &&
-      second &&
-      str.isUpper(first) &&
-      (str.isLower(second) || str.isDigits(second))
+      !first ||
+      !second ||
+      !str.isUpper(first) ||
+      !(str.isLower(second) || str.isDigits(second))
     ) {
-      // This siglum has a second part that should be superscripted.
-      const sup = document.createElement('sup');
-      sup.textContent = second;
-      siglum.append(first, sup);
-      return siglum;
+      // This siglum doesn't possess a superscripted component.
+      return [this.code];
     }
 
-    // This siglum doesn't possess a superscripted component.
-    siglum.append(this.code);
-    return siglum;
+    // This siglum has a second part that should be superscripted.
+    const sup: HTMLElement = document.createElement('sup');
+    sup.textContent = second;
+    return [first, sup];
   }
 }
 

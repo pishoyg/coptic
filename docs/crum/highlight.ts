@@ -5,7 +5,6 @@ import * as css from '../css.js';
 import * as iam from '../iam.js';
 import * as cls from './cls.js';
 import * as dial from './dialect.js';
-import * as ddial from '../dialect.js';
 import * as browser from '../browser.js';
 import * as help from '../help.js';
 import * as high from '../highlight.js';
@@ -112,17 +111,12 @@ export class Highlighter extends high.DialectHighlighter<dial.DIALECT> {
     }
 
     // Some dialects are on, some are off.
-    // We do this through a CSS query that consists of two subqueries:
-    // 1. Dim all children of `word` elements, with the exception of:
+    // Dim all children of `word` elements, with the exception of:
     //   - Any element with the class of an active dialect.
     //   - Spellings that have no dialect classes whatsoever. We have no way to
     //     know whether they belong to one of the active dialects, so we just
     //     keep them on.
-    //   - Dialect codes contain tooltips as children. We don't want to dim the
-    //     tooltips, so we give those special handling in the second subquery.
-    // 2. For dialect codes of inactive dialects, dim only the sigla.
-    //    This keeps the tooltips bright.
-    return `.${cls.WORD} > :not(${css.disjunction(...active)}, .${cls.SPELLING}:not(${dial.ANY_DIALECT_QUERY}), .${cls.DIALECT}), .${cls.WORD} > .${cls.DIALECT}:not(${css.disjunction(...active)}) .${ddial.CLS.SIGLUM}`;
+    return `.${cls.WORD} > :not(${css.disjunction(...active)}, .${cls.SPELLING}:not(${dial.ANY_DIALECT_QUERY}))`;
   }
 
   /**

@@ -243,9 +243,10 @@ export function handleDialect(
       return;
     }
 
-    // 1. Render Visuals: Replace text with Siglum and add Tooltip.
-    const siglum: HTMLSpanElement = dialect.siglum();
-    el.replaceChildren(siglum);
+    // 1. Render Visuals: Prettify the code into a siglum, and add a Tooltip.
+    // The element doubles as its own siglum. A wrapper would buy us nothing,
+    // since the tooltip is a popover that lives under `body`.
+    dialect.prettify(el);
     tool.addTooltip(el, [dialect.name], [cls.DIALECT]);
 
     if (el.closest(`.${cls.WIKI}`) || !standard) {
@@ -255,8 +256,8 @@ export function handleDialect(
     }
 
     // 2. Add Interaction: Toggle highlighting on click.
-    siglum.classList.add(ccls.HOVER_ACTION);
-    siglum.addEventListener('click', () => {
+    el.classList.add(ccls.HOVER_ACTION);
+    el.addEventListener('click', () => {
       highlighter.toggle(code as dial.DIALECT);
     });
   });

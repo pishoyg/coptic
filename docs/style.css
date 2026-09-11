@@ -63,8 +63,12 @@ a figcaption {
   text-decoration: none;
 }
 
-.hover-link,
-.hover-action {
+/* Undo the link styling above, until the element is hovered over.
+ * NOTE: The reset is the two selectors that carry these classes.
+ * Unscoped, its `color: inherit` would also override the color of any other
+ * element wearing these classes. */
+:is(a, .link).hover-link,
+:is(a, .link).hover-action {
   color: inherit;
   cursor: inherit;
   text-decoration: inherit;
