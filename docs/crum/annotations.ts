@@ -357,10 +357,12 @@ export const DATA: Abbreviation[] = [
     variants: ['ll cc', 'll c', 'llc'],
     suffix: true,
   },
+  { fullForm: 'Lectionary', variants: ['Lect'], noCaseVariant: true },
   { fullForm: 'loquitur', variants: ['loq'] },
   { fullForm: 'liturgical', variants: ['liturg'] },
   { fullForm: 'Septuagint', variants: ['LXX'], noCaseVariant: true },
   { fullForm: 'Latin', variants: ['Lat'], noCaseVariant: true },
+  { fullForm: 'martyrdom', variants: ['Mart'], noCaseVariant: true },
   {
     fullForm: 'manuscript',
     variants: ['MS'],
@@ -447,6 +449,7 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'sic scriptum in manuscripto', variants: ['sic MS'] },
   { fullForm: 'sic scriptum in manuscriptis', variants: ['sic MSS'] },
   { fullForm: 'sic lege', variants: ['sic l'] },
+  { fullForm: 'Sitzungsberichte', variants: ['Sitz'], noCaseVariant: true },
   { fullForm: 'scilicet', variants: ['sc'] },
   { fullForm: 'status constructus', variants: ['st const'] },
   { fullForm: 'status pronominalis', variants: ['st pron'] },
@@ -484,13 +487,6 @@ export const DATA: Abbreviation[] = [
     noCaseVariant: true,
     noStyledParent: true,
   },
-
-  // SECTION 3: ABBREVIATIONS THAT MOSTLY APPEAR IN REFERENCE TITLES:
-  // TODO: (#522) Reconsider whether these abbreviations are needed when more
-  // references are covered.
-  { fullForm: 'Lectionary', variants: ['Lect'], noCaseVariant: true },
-  { fullForm: 'martyrdom', variants: ['Mart'], noCaseVariant: true },
-  { fullForm: 'Sitzungsberichte', variants: ['Sitz'], noCaseVariant: true },
 ];
 
 /**
