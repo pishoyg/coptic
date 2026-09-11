@@ -142,6 +142,7 @@ const DANGLING_SUFFIX_MARKERS: Record<string, boolean> = {
   'e g': true,
   nos: true,
   which: true,
+  with: false,
   in: false,
   for: false,
   ':': false,
