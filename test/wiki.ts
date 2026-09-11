@@ -111,7 +111,7 @@ const TEST_CASES: {
     key: '1082',
     want: {
       [cls.REFERENCE]: 2,
-      [cls.BIBLE]: 2,
+      [cls.BIBLE]: 3,
       [cls.DIALECT]: 13,
       [cls.ANNOTATION]: 9,
     },
