@@ -95,7 +95,7 @@ _NONEMPTY_LANGUAGES: list[Language] = [
 
 # The YAML is the human-friendly source of truth for the bibliography.
 # The pipeline renders it to the JSON artifact that the front-end consumes.
-_BIB_YAML: pathlib.Path = _SCRIPT_DIR / "data/bib.yaml"
+_BIB_YAML: pathlib.Path = _SCRIPT_DIR / "bib.yaml"
 _BIB_JSON: pathlib.Path = paths.BIBLE_DIR / "pisaxo.json"
 
 _RESOURCES: list[schema.Source] = file.loads(_BIB_YAML, list[schema.Source])
@@ -590,9 +590,7 @@ class Chapter(Item):
         for idx, v in enumerate(self.verses):
             if not v.num:
                 # No verse number!
-                if idx == 0:
-                    v.num = TIT
-                elif idx == 1 and self.verses[0].num == TIT:
+                if idx == 0 or idx == 1 and self.verses[0].num == TIT:
                     v.num = TIT
                 elif idx == len(self.verses) - 1:
                     v.num = SUBSCR

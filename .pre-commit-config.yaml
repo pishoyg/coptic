@@ -312,7 +312,7 @@ repos:
         name: format-pisaxo
         entry: pre-commit/format-pisaxo.sh
         language: system
-        files: ^dictionary/marcion_sourceforge_net/data/input/bib\.yaml$
+        files: ^dictionary/marcion_sourceforge_net/bib\.yaml$
 
   # Protobuf
   - repo: https://github.com/bufbuild/buf

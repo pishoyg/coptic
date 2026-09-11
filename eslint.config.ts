@@ -277,7 +277,7 @@ export default config.defineConfig(
     // The rules below are tailored to the bibliography YAML. Other YAML
     // files in the repo have different quoting conventions and are handled
     // by other linters / formatters.
-    files: ['dictionary/marcion_sourceforge_net/data/input/bib.yaml'],
+    files: ['dictionary/marcion_sourceforge_net/bib.yaml'],
     rules: {
       // Enforce schema order on every top-level sequence item
       // (`^\[\d+\]$` matches a sequence index path). Inside-item maps

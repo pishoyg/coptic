@@ -12,7 +12,7 @@ Egyptology from Oxford: Sahidic and Bohairic, with Middle and Late Egyptian
 besides. He has studied the language, history and culture for over two decades.
 
 He authored the bibliography this pipeline runs on
-(`dictionary/marcion_sourceforge_net/data/input/bib.yaml`), and he supervised
+(`dictionary/marcion_sourceforge_net/bib.yaml`), and he supervised
 the enrichment code closely: testing it, tweaking it, proposing it. He is a
 coder by aptitude rather than trade — brilliant and multi-talented — and he
 holds academic rigor as the standard. He knows every pitfall of this algorithm
