@@ -151,10 +151,14 @@ export const DIALECTS: Record<DIALECT, Dialect> = {
  * unsupported functionality.
  */
 export const NON_STANDARD: Record<string, Dialect> = {
-  Of: new Dialect('Of' as DIALECT, 'Old Coptic with Fayyumic tendency', []),
+  // 'Of' occurs once in reference to Chester Beatty's Isaiah glosses.
+  Of: new Dialect('Of' as DIALECT, 'Old Fayyumic', []),
+  // The non-standard sigla below occur a handful of times, but they're assumed
+  // to be intentional. (Even if they weren't, the book needs to be produced
+  // truthfully.)
   Saf: new Dialect(
     'Saf' as DIALECT,
-    'Sahidic with Akhmimic and Fayyumic tendency',
+    'Sahidic with Akhmimic / Fayyumic tendency',
     []
   ),
   Sb: new Dialect('Sb' as DIALECT, 'Sahidic with Bohairic tendency', []),
