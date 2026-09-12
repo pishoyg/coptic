@@ -1,8 +1,5 @@
 """Process coptic.wiki's Digital Version of Crum."""
 
-# TODO: (#0) Consider the following simplifications of the substitution rules:
-# - Use an actual newline character instead of the "\n" token.
-# - The headword notation is simply unnecessary.
 import enum
 import functools
 import typing
@@ -43,17 +40,23 @@ RAW_RE: regex.Pattern[str] = regex.compile(
 # U+FE25 for the shorter one that spans from the middle of the first letter to
 # the middle of the last. Both occur in Crum, and they are not interchangeable.
 _COPTIC_MARKS: str = (
-    "\u0301"  # Acute accent, over ϩ́ and in ⲉⲃⲥⲉ́ⲛⲓ.
+    # Supralineation:
     "\u0304"  # Macron, the syllabic stroke over a lone consonant: ⲛ̄.
     "\u0305"  # Overline, for numerals (ⲕ̅ = 20) and abbreviations (⳪̅).
-    "\u0307"  # Dot above, in ⲁ̇ⲡⲟⲕⲣⲁϫⲱⲛ.
-    "\u0308"  # Diaeresis, over ⲓ̈.
-    "\u0314"  # Reversed comma above, the rough breathing: ⲣ̔ⲏⲓ, ⲉⲟ̔ⲩⲛ.
-    "\u0323"  # Dot below, marking a letter read as uncertain: ⲁ̣, ⲛ̣.
-    "\u0345"  # Greek ypogegrammeni, only in ⲇͅⲇͅ, for δεῖνα δεῖνος.
     "\ufe24"  # Macron left half, opening a nomen sacrum's stroke.
     "\ufe25"  # Macron right half, closing it.
     "\ufe26"  # Conjoining macron, continuing it: ⲡ︤ⲛ︦ⲁ︥.
+    # Diacritics above:
+    "\u2cf0"  # Coptic combining spiritus asper.
+    "\u0301"  # Acute accent in ϩ́ (only under ϧ[1] and ϩⲱϩ[2] ATTOW).
+    "\u0307"  # Dot above, in ⲁ̇ (only in ⲁ̇ⲡⲟⲕⲣⲁϫⲱⲛ under ϫ[3] ATTOW).
+    "\u0308"  # Diaeresis, over ⲓ̈.
+    # Diacritics below:
+    "\u0323"  # Dot below.
+    "\u0345"  # Greek ypogegrammeni, only in ⲇͅⲇͅ, for δεῖνα δεῖνος.
+    # [1] https://remnqymi.com/crum/3413.html
+    # [2] https://remnqymi.com/crum/2341.html
+    # [3] https://remnqymi.com/crum/3415.html
 )
 
 # A headword may optionally be wrapped in parentheses to mark it as an
@@ -169,7 +172,6 @@ Language: typing.TypeAlias = typing.Literal[
     "DEMOTIC",
 ]
 
-
 # A language's alphabet is the character-class atoms — single characters,
 # ranges, and Unicode property classes — that its text may be built from. Text
 # belongs to a language when every one of its characters is drawn from that
@@ -190,6 +192,10 @@ Language: typing.TypeAlias = typing.Literal[
 # NOTE: An atom is inserted into a character class verbatim, so a literal `-`,
 # `]` or `^` has to be written escaped. Order within a character class is
 # meaningless.
+#
+# NOTE: You may need to update the documentation of Encoding Decisions if the
+# alphabets change:
+# https://docs.google.com/document/d/1VTUtwPsDyVjeTQLbgj_Ph59O_CdSacvysK-OY9A9Vkc
 _ALPHABETS: dict[Language, tuple[str, ...]] = {
     "GREEK": (
         "α-ω",  # The Greek letters, final sigma included,
