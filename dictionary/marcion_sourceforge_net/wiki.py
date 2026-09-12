@@ -223,7 +223,7 @@ _ALPHABETS: dict[Language, tuple[str, ...]] = {
         "\ufe26",  # in his Greek as well as in his Coptic: θ︤ν︥, π︤ν︦α︥.
         "\ufe25",
         "⸝",  # Right low paraphrase bracket.
-        "—",  # Em dash. Coptic uses the horizontal bar instead.
+        "⸺",  # Two-em dash.
         "…",
         "·",
         "'",
