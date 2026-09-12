@@ -741,6 +741,11 @@ i,
 
 .old.coptic {
   /* NOTE: The rule below merely prepends `old-coptic` to the general rule.
-   * See `docs/style.css`. */
+   * See `docs/style.css`.
+   *
+   * TODO: (#0) Consider creating an old Coptic variety of the Coptic Combining
+   * Spiritus Asper (U+2CF0), as the spiritus asper has a distinct appearance on
+   * the old Fayyumic ⲉⲃⲥⲉⲛ⳰ⲓ compared to the rest of Crum's text.
+   * */
   font-family: old-coptic, overrides, Antinoou, 'Noto Sans', sans-serif;
 }
