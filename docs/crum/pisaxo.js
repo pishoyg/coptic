@@ -2496,6 +2496,15 @@ export const DATA = [
   },
   {
     "title": null,
+    "description": [
+      "Labib, C. Y., <span class=\"title\">Ⲡⲓϩⲟⲩⲓⲧ ⲛ̀ⲧⲱⲧⲉⲣ ⲛ̀ⲛⲓϫⲱⲙ ⲛ̀ⲧⲉ Ⲡⲓⲁ̀ϧⲱⲙⲫⲁⲧ ⲉ̀ⲡ̀ϫⲓⲛϯⲥ̀ⲃⲱ ⲛ̀ϯⲁⲥⲡⲓ ⲛ̀ⲣⲉⲙⲛ̀ⲭⲏⲙⲓ ⲛ̀ⲧⲉ Ⲕⲗⲁⲩⲇⲓⲟⲥ Ⲓ. Ⲗⲁⲃⲓⲃ ⲁ̀ⲱⲡⲓ ⲁ̅ⲭ̅ⲙ̅ⲃ̅ — تمهيد لكتب أخوم فات في تعليم اللغة القبطية</span>"
+    ],
+    "variants": [
+      "Lab ⲡⲓϩⲟⲩⲓⲧ ⲛⲧⲱⲧⲉⲣ"
+    ]
+  },
+  {
+    "title": null,
     "description": null,
     "variants": [
       "Lane"
