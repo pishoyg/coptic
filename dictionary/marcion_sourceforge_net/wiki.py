@@ -11,7 +11,7 @@ import regex
 from dictionary import cls as dict_cls
 from dictionary.marcion_sourceforge_net import cls, constants
 from dictionary.marcion_sourceforge_net import lexical as lex
-from utils import ensure, file, lang, log, orth, paths
+from utils import ensure, file, lang, log, orth, page, paths
 
 # HTML data attribute names emitted in the Wiki HTML, and consumed by both the
 # TypeScript front-end and the Xooxle indexer.
@@ -354,9 +354,15 @@ _VALIDATORS: dict[Language, regex.Pattern[str]] = {
 
 
 def _normalize_for_validation(language: Language, text: str) -> str:
-    # Greek and Coptic are allowed to have superscripts and stacks within.
+    # Greek and Coptic are allowed to have superscripts and stacks within, and
+    # to mark a word as unattested.
     if language in ["COPTIC", "GREEK"]:
         text = _IN_LANG_TAGS.sub("", text)
+        # An asterisk marks a Coptic or Greek form as unattested (hypothetical).
+        # It belongs inside the span, but only at the beginning of a word. By
+        # the time the span is validated, the escaped asterisk has already been
+        # substituted by the HTML symbol.
+        text = text.removeprefix(page.ASTERISK)
     # Greek is often transcribed with precomposed characters, which are not
     # represented in our regex, so we NFD-normalize it.
     # NOTE: The Greek alphabet constrains the decomposed form only: a
@@ -538,7 +544,7 @@ _SUBSTITUTIONS: list[Substitution] = [
     # to use `&ast;`. However, using a plain asterisk risks conflicting with the
     # bold rule below. We therefore leave it up to our linters to replace
     # the occurrences of `&ask;` produced here with a literal asterisk.
-    Substitution(r"\\\*", "&ast;", ban=["*", "\\"]),
+    Substitution(r"\\\*", page.ASTERISK, ban=["*", "\\"]),
     Substitution(r"\\t", CLOSE_SUBPARAGRAPH + OPEN_SUBPARAGRAPH, ban=["\\"]),
     Substitution(
         r"__(.+?)__",
@@ -833,11 +839,11 @@ class Wiki:
         self,
         match: regex.Match[str],
     ) -> abc.Generator[str]:
-        delete, insert, page = match.group(1), match.group(2), match.group(3)
+        delete, insert, col = match.group(1), match.group(2), match.group(3)
         self._validate_addendum_group(delete)
         self._validate_addendum_group(insert)
         yield f'<span class="{cls.ADDENDUM}" {DATA_PAGE}="{
-            page or self.addenda_page
+            col or self.addenda_page
         }">'
         if delete:
             yield f"<del>{delete}</del>"
