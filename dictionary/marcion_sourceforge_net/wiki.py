@@ -28,8 +28,16 @@ COMMA_OR_SPACE: regex.Pattern[str] = regex.compile(r"[ ,]")
 # "ʿ" and "β" are added for singleton violations of this rule:
 # - https://remnqymi.com/crum/3387.html#:~:text=%CA%BFAmru%CC%82
 # - https://remnqymi.com/crum/3075.html#:~:text=%CE%B2
+# 'Lab ⲡⲓϩⲟⲩⲓⲧ ⲛⲧⲱⲧⲉⲣ' is the only non-Latin reference key in our bibliography,
+# and it must be given special treatment.
 RAW_RE: regex.Pattern[str] = regex.compile(
-    r"\[\[.*?\]\]|[\p{Latin}\P{Letter}ʿβ]",
+    "|".join(
+        (
+            r"\[\[.*?\]\]",
+            "Lab ⲡⲓϩⲟⲩⲓⲧ ⲛⲧⲱⲧⲉⲣ",
+            r"[\p{Latin}\P{Letter}ʿβ]",
+        ),
+    ),
 )
 
 # Coptic combining marks.
