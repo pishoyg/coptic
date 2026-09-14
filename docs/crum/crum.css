@@ -315,10 +315,10 @@ figcaption {
   .amharic,
   .demotic,
   .hieroglyphic {
-    color: #8a5a3c; /* sienna */
+    color: #8a4a4f; /* rosewood */
 
     &:hover {
-      background-color: #f3e9e1; /* light sienna */
+      background-color: #f3e6e7; /* light rosewood */
     }
 
     /* Isolates the span from the surrounding context, ensuring that pieces of
