@@ -402,7 +402,7 @@ const DIRECTION = '(?: (?:above|below))';
 // "P 130³, 83" — can not match. Only a suffix interrupted by a `<sup>` takes
 // that shape. See `suffixFollowups`.
 const SUFFIX = new RegExp(
-  `^\\.?(?:${NUMBER_GROUP}+${SUFFIX_END}${DIRECTION}?|${DIRECTION})(?:(?:,| [=&])${NOT_CONFUSABLE_REFERENCE}${NUMBER_GROUP}+${SUFFIX_END}${DIRECTION}?)*${str.ASSERT_NON_WORD.source}`,
+  `^\\.?(?:${NUMBER_GROUP}+${SUFFIX_END}${DIRECTION}?|${DIRECTION})(?:(?:,| [=&+])${NOT_CONFUSABLE_REFERENCE}${NUMBER_GROUP}+${SUFFIX_END}${DIRECTION}?)*${str.ASSERT_NON_WORD.source}`,
   'u'
 );
 
