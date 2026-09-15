@@ -1006,6 +1006,12 @@ class HTMLBuilder:
     def verse_group_end(self, num: str) -> abc.Generator[str]:
         raise NotImplementedError
 
+    def ungrouped_begin(self) -> abc.Generator[str]:
+        raise NotImplementedError
+
+    def ungrouped_end(self) -> abc.Generator[str]:
+        raise NotImplementedError
+
     def lang_begin(self, lang: Language) -> abc.Generator[str]:
         raise NotImplementedError
 
@@ -1069,14 +1075,17 @@ class HTMLBuilder:
             seen[num] = count + 1
             return num if not count else f"{num}_{count}"
 
-        def emit_group(group: abc.Iterable[Verse]) -> abc.Generator[str]:
-            for verse in group:
+        def emit_verses(verses: abc.Iterable[Verse]) -> abc.Generator[str]:
+            for verse in verses:
                 yield from self._verse_body_aux(
                     verse,
                     langs,
                     dedupe(verse.num),
                 )
 
+        # Each entry pairs a group number with the group's verses. An empty
+        # number means that the verses shouldn't be grouped.
+        groups: list[tuple[str, list[Verse]]] = []
         group: abc.Iterable[Verse]
         for num, group in itertools.groupby(chapter.verses, key=Verse.number):
             group = list(group)
@@ -1088,14 +1097,29 @@ class HTMLBuilder:
             #   in a group that has a numerical number, in order for lookups
             #   that use the non-suffixed number to resolve correctly.
             if not num or (len(group) == 1 and num == group[0].num):
-                yield from emit_group(group)
-                continue
+                num = ""
+            groups.append((num, group))
 
-            # Otherwise, create a group.
-            num = dedupe(num)
-            yield from self.verse_group_begin(num)
-            yield from emit_group(group)
-            yield from self.verse_group_end(num)
+        # Wrap each run of consecutive ungrouped verses, so that builders only
+        # open a container when there are verses to put in it.
+        grouped: bool
+        run: abc.Iterable[tuple[str, list[Verse]]]
+        for grouped, run in itertools.groupby(
+            groups,
+            key=lambda g: bool(g[0]),
+        ):
+            if not grouped:
+                yield from self.ungrouped_begin()
+                for _, group in run:
+                    yield from emit_verses(group)
+                yield from self.ungrouped_end()
+                continue
+            for num, group in run:
+                assert num
+                num = dedupe(num)
+                yield from self.verse_group_begin(num)
+                yield from emit_verses(group)
+                yield from self.verse_group_end(num)
 
         yield from self.chapter_end(chapter)
 
@@ -1388,6 +1412,14 @@ class FlowBuilder(HTMLBuilder):
         yield from []
 
     @typing.override
+    def ungrouped_begin(self) -> abc.Generator[str]:
+        yield from []
+
+    @typing.override
+    def ungrouped_end(self) -> abc.Generator[str]:
+        yield from []
+
+    @typing.override
     def lang_begin(
         self,
         lang: Language,  # dead: disable
@@ -1401,10 +1433,6 @@ class FlowBuilder(HTMLBuilder):
 
 class TableBuilder(HTMLBuilder):
     """TableBuilder provides a table format for the Bible."""
-
-    # NOTE: This table builder could potentially emit empty `<tbody></tbody>`
-    # elements in the output. This is benign, and is intentionally left to
-    # simplify the code.
 
     @typing.override
     def chapter_begin(
@@ -1431,7 +1459,6 @@ class TableBuilder(HTMLBuilder):
             yield "</th>"
         yield "</tr>"
         yield "</thead>"
-        yield "<tbody>"
 
     @typing.override
     def chapter_end(
@@ -1439,7 +1466,6 @@ class TableBuilder(HTMLBuilder):
         chapter: Chapter,  # dead: disable
     ) -> abc.Generator[str]:
         del chapter
-        yield "</tbody>"
         yield "</table>"
 
     @typing.override
@@ -1470,14 +1496,20 @@ class TableBuilder(HTMLBuilder):
 
     @typing.override
     def verse_group_begin(self, num: str) -> abc.Generator[str]:
-        yield "</tbody>"
         yield f'<tbody class="{cls.VERSE_GROUP}" id="v{num}">'
 
     @typing.override
     def verse_group_end(self, num: str) -> abc.Generator[str]:  # dead: disable
         del num
         yield "</tbody>"
+
+    @typing.override
+    def ungrouped_begin(self) -> abc.Generator[str]:
         yield "<tbody>"
+
+    @typing.override
+    def ungrouped_end(self) -> abc.Generator[str]:
+        yield "</tbody>"
 
     @typing.override
     def lang_begin(
