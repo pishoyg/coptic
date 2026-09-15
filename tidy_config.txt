@@ -1,6 +1,7 @@
 # https://api.html-tidy.org/#part_quickref
 add-meta-charset: yes
 break-before-br: yes
+drop-empty-elements: no
 enclose-block-text: yes
 enclose-text: yes
 indent-spaces: 2
