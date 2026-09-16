@@ -431,37 +431,26 @@ class Capture:
     def _get_children_simplified_html(self, tag: bs4.Tag) -> Generator[str]:
         for child in tag.children:
             if isinstance(child, bs4.NavigableString):
-                yield from self._get_navigable_string_text(child)
+                yield self._get_navigable_string_text(child)
             elif isinstance(child, bs4.Tag):
                 yield from self._get_tag_html(child)
 
     def _get_navigable_string_text(
         self,
         child: bs4.NavigableString,
-    ) -> Generator[str]:
-        raw: str = str(child)
-        del child
-        if not raw:
-            return
-        if raw.isspace():
-            yield " "
-            return
-        if raw[0].isspace():
-            yield " "
+    ) -> str:
         # NOTE: To simplify the pipeline, we intentionally avoid escaping
         # special characters in the text to make it HTML-safe. As of the time of
         # writing, this is not problematic, because no input text looks like a
         # tag. See the note in _get_tag_html. If that ever changes, the ensure
         # below will catch it loudly. TODO: (#0) Allow tag-like text.
-        text: str = " ".join(raw.split())
+        text: str = str(child)
         ensure.ensure(
             not page.TAG_RE.search(text),
             "Input text looks like a tag and would corrupt the index:",
             text,
         )
-        yield text
-        if raw[-1].isspace():
-            yield " "
+        return text
 
 
 class Xooxle:
@@ -507,13 +496,7 @@ class Xooxle:
             "astral combining mark in Xooxle line:",
             repr(stripped),
         )
-        text: str = orth.clean_diacritics(stripped)
-        ensure.ensure(
-            "  " not in text,
-            "double space in Xooxle line:",
-            repr(text),
-        )
-        return text
+        return orth.clean_diacritics(stripped)
 
     def line(self, html: str) -> Line:
         return html, self._diacritic_free_text(html)
