@@ -627,7 +627,9 @@ class Wiki:
         self.keys: list[int] = list(map(int, record[Col.MARCION].split(" ")))
         assert self.keys
         self.entry: str = record[Col.ENTRY]
-        # TODO: (#503) Ban superfluous space in the entry.
+        # TODO: (#503) Ban all superfluous space in the entry, then get rid of
+        # the line below.
+        self.entry = self.entry.replace("  ", " ").removesuffix(" ")
         ensure.ensure(self.entry, "Empty entry for Marcion keys:", self.keys)
 
         # headwords tracks the headwords encountered in the text. In extremely
