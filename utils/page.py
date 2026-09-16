@@ -88,10 +88,6 @@ def closing(tag: str, strict: bool = True) -> bool:
     return bool(match) and tag[1] == "/"
 
 
-def ensure_same(a: str, b: str) -> None:
-    ensure.ensure(name(a) == name(b), "Unbalanced tags!", a, "and ", b)
-
-
 def no_line_breaks(htm: str) -> str:
     return htm.replace(LINE_BREAK, " ")
 

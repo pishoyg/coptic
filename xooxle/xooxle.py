@@ -76,6 +76,7 @@ Concurrency
 import pathlib
 import typing
 from collections.abc import Generator, Iterable
+from itertools import groupby
 
 import bs4
 
@@ -206,6 +207,7 @@ class Capture:
         space_elements: set[str] | None = None,
         block_classes: set[str] | None = None,
         unit_tags: set[str] | None = None,
+        retain_empty: bool = False,
     ) -> None:
         # _name is name of the field.
         self._name: str = name
@@ -252,6 +254,10 @@ class Capture:
         # in the output. You can use this delimiter to separate the text into
         # meaningful units.
         self._unit_tags: set[str] = unit_tags or set()
+        # _retain_empty tells whether to retain the elements that are empty in
+        # the input. Their emptiness is usually accidental, but it's sometimes
+        # meaningful, as is the case for the elements that represent a gap.
+        self._retain_empty: bool = retain_empty
 
     @property
     def name(self) -> str:
@@ -278,34 +284,24 @@ class Capture:
         if not tag:
             return ""
         _ = tag.extract()
-        return self._get_simplified_html(tag)
+        return "".join(clean.clean(self._get_tag_html(tag)))
 
-    def _get_simplified_html(self, tag: bs4.Tag) -> str:
-        """Get a simplified version of a tag in plain HTML.
+    def _wrap(
+        self,
+        opening: str,
+        closing: str,
+        tokens: Iterable[str],
+    ) -> Generator[str]:
+        """Wrap each delimiter-free run of the tokens in the given tags.
 
-        Args:
-            tag: The tag to extract HTML from.
-
-        Returns:
-            HTML representing a simplified version of the tag.
-
-        """
-        parts: Iterable[str] = self._get_tag_html(tag)
-        parts = self._balance_lines(parts)
-        parts = clean.clean(parts)
-        return "".join(parts)
-
-    def _balance_lines(self, stream: Iterable[str]) -> Generator[str]:
-        """Make sure every unit and line in the stream has balanced tags.
-
-        For example, consider the following input:
-            <span class="wiki">
+        We wrap the runs rather than the whole stream, so that every unit and
+        line in the output is balanced. For example, consider an element whose
+        content is:
             hello
             <br>
             world
-            </span>
 
-        The output stream should look like this:
+        Wrapping it in `<span class="wiki">` gives:
             <span class="wiki">
             hello
             </span>
@@ -314,38 +310,38 @@ class Capture:
             world
             </span>
 
+        A run is only wrapped if it exists. An element that has no content
+        at all is a special case: it's only retained if the caller asks for
+        it. See the note below for the whitespace caveat.
+
         Args:
-            stream: A stream of Xooxle tokens.
+            opening: The opening tag.
+            closing: The closing tag.
+            tokens: The tokens representing the content of the element.
 
         Yields:
-            A stream of Xooxle tokens where every unit and line is guaranteed to
-            have balanced tags.
+            A stream of Xooxle tokens in which the delimiters are the only
+            tokens that live outside the given tags.
+
         """
-        stack: list[str] = []
-        for token in stream:
-
-            if token in [const.UNIT_DELIMITER, page.LINE_BREAK]:
-                # Close all tags on the stack.
-                for tag in reversed(stack):
-                    yield f"</{page.name(tag)}>"
-                # Yield the current token.
-                yield token
-                # Reopen all tags.
-                yield from stack
+        # NOTE: Emptiness is judged here, before cleanup, so a run that
+        # holds nothing but whitespace counts as content. We wrap such a run,
+        # cleanup then strips the whitespace, and an empty pair of tags
+        # survives in the output even when `_retain_empty` is false. Our
+        # generated HTML has no whitespace between the tags of a captured
+        # element, so this doesn't happen today.
+        empty: bool = True
+        for is_delimiter, run in groupby(tokens, const.is_delimiter):
+            if is_delimiter:
+                yield from run
                 continue
-
-            yield token
-
-            if page.closing(token, False):
-                _ = stack.pop()
-            elif page.opening(token, False):
-                stack.append(token)
-
-        ensure.ensure(
-            not stack,
-            "The input stream is not balanced! Remaining tags:",
-            stack,
-        )
+            empty = False
+            yield opening
+            yield from run
+            yield closing
+        if empty and self._retain_empty:
+            yield opening
+            yield closing
 
     def _get_tag_html(self, child: bs4.Tag) -> Generator[str]:
         # NOTE: The TAG_RE regex is used in the rebalancing and text extraction
@@ -405,16 +401,18 @@ class Capture:
                 "Invalid opening tag:",
                 opening,
             )
-            yield opening
             del attrs
-            yield from self._get_children_simplified_html(child)
             closing: str = f"</{name}>"
             ensure.ensure(
                 page.closing(closing),
                 "Invalid closing tag:",
                 closing,
             )
-            yield closing
+            yield from self._wrap(
+                opening,
+                closing,
+                self._get_children_simplified_html(child),
+            )
         else:
             # Neither the tag name nor any of its classes need retention, we
             # simply process the children.

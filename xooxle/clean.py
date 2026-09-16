@@ -6,12 +6,10 @@ Some assumptions are made about the structure of the iterable (for example,
 we assume that a tag is always a standalone string).
 """
 
-import typing
-from collections.abc import Generator, Iterable
+from collections.abc import Callable, Generator, Iterable
 from itertools import groupby
-from typing import Callable
 
-from utils import ensure, page
+from utils import page
 from xooxle import constants as const
 
 # pylint: disable-next=invalid-name
@@ -59,7 +57,7 @@ def _strip_field_start(tokens: Iterable[str]) -> Generator[str]:
 
 def _strip(
     tokens: Iterable[str],
-    strip_start: typing.Callable[[Iterable[str]], Iterable[str]],
+    strip_start: Callable[[Iterable[str]], Iterable[str]],
 ) -> Iterable[str]:
     # Strip the beginning.
     tokens = strip_start(tokens)
@@ -86,7 +84,6 @@ def _clean_line(line: Iterable[str]) -> Generator[str]:
     del parts
     # Perform additional tag-aware cleanup.
     line = _strip(line, _strip_line_start)
-    line = _filter_empty_tags(line)
     yield from line
 
 
@@ -111,41 +108,6 @@ def _strip_line_start(line: Iterable[str]) -> Generator[str]:
         # This is a space string, and we haven't encountered a non-space
         # string yet. Do nothing.
         assert token.isspace() and not found_non_space
-
-
-def _filter_empty_tags(line: Iterable[str]) -> list[str]:
-    """Eliminate opening tags immediately followed by their closing tags.
-
-    Args:
-        line: A stream of Xooxle tokens.
-
-    Returns:
-        A list representing the input stream, with empty tags omitted.
-    """
-    stack: list[str] = []
-    for token in line:
-        if not page.closing(token, False):
-            # Not a closing tag. Just append to the stack.
-            stack.append(token)
-            continue
-        # This is a closing tag. Check to see if the stack has a corresponding
-        # opening tag on top.
-        ensure.ensure(
-            stack,
-            "Unbalanced HTML! Encountered",
-            token,
-            "on an empty stack!",
-        )
-        if not page.opening(stack[-1], False):
-            # The stack top is not an opening tag.
-            stack.append(token)
-            continue
-        # An opening tag is immediately followed by the corresponding
-        # closing tag. Remove the opening tag from the stack, and skip adding
-        # the current token.
-        page.ensure_same(stack.pop(), token)
-
-    return stack
 
 
 def _is_unit_delimiter(token: str) -> bool:
