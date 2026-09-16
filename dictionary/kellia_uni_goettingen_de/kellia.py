@@ -225,7 +225,7 @@ class Etymology:
 
     def __init__(self, entry: ET.Element) -> None:
         self._greek_id: str | None = None
-        self.amir: str = "".join(self._amir(entry))
+        self.amir: str = " ".join(filter(None, self._amir(entry)))
 
     def _amir(self, entry: ET.Element) -> abc.Generator[str]:
         greek_dict: OrderedDict[str, str | None] = OrderedDict()
@@ -238,17 +238,17 @@ class Etymology:
             if child.tag == TEI_NS + "xr":
                 for ref in child:
                     # pylint: disable-next=line-too-long
-                    yield f"{child.attrib["type"]}. {ref.attrib["target"]}# {_text(ref)} "
+                    yield f"{child.attrib["type"]}. {ref.attrib["target"]}# {_text(ref)}"
                 continue
 
             assert child.tag == TEI_NS + "ref"
 
             if "type" in child.attrib and "target" in child.attrib:
-                yield f"{child.attrib["type"]}: {child.attrib["target"]} "
+                yield f"{child.attrib["type"]}: {child.attrib["target"]}"
                 continue
 
             if "targetLang" in child.attrib:
-                yield f"{child.attrib["targetLang"]}: {_text(child)} "
+                yield f"{child.attrib["targetLang"]}: {_text(child)}"
                 continue
 
             if "greek" in child.attrib.get("type", ""):
@@ -291,7 +291,7 @@ class Etymology:
                 ref_target: str = _clean(ref.attrib["target"])
                 assert ref_target
                 # pylint: disable-next=line-too-long
-                yield f"{xr.attrib["type"]}. #{ref_target}# {_text(ref)} "
+                yield f"{xr.attrib["type"]}. #{ref_target}# {_text(ref)}"
 
     def process(self) -> str:
         etym: str = "".join(self.amir)
