@@ -192,14 +192,11 @@ figcaption {
 }
 
 .wiki p {
+  text-indent: 1.7em;
   margin-top: 0;
   margin-bottom: 0.8em;
   text-align: justify;
   line-height: 1.7;
-}
-
-.wiki .subparagraph {
-  margin-left: 1.7em;
 }
 
 .bible {

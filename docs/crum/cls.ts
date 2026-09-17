@@ -115,7 +115,7 @@ export const SPELLING = 'spelling';
 export const STACK = 'stack';
 export const STACK_BOTTOM = 'stack-bottom';
 export const STACK_TOP = 'stack-top';
-export const SUBPARAGRAPH = 'subparagraph';
+export const TAB = 'tab';
 /**
  * TITLE is the class of the title of a cited work, appearing either in a
  * source's own title or inside its description. It is what `bib.yaml` marks

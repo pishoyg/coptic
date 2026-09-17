@@ -63,7 +63,7 @@ const TEST_CASES: {
       [cls.REFERENCE]: 292,
       [cls.BIBLE]: 287,
       [cls.DIALECT]: 883,
-      [cls.ANNOTATION]: 207,
+      [cls.ANNOTATION]: 208,
     },
   },
   {
@@ -236,26 +236,26 @@ play.test.describe('Copy Wiki Entry Text', () => {
         navigator.clipboard.readText()
       );
       play.expect(yanked).toBe(
-        `    ⲃⲁⲗ SB, ⲃⲉⲗ AA2F, DM bel nn m, eye: Job 16 20 SB, Ps 53 7 SB, ib 33 16 SA (Cl 22 6) B, Pro 4 25 SAB, Is 30 20 SBF, Lam 2 18 B, ὀφθαλμός; Sa 11 19 S, Mk 8 23 SB ὄμμα; ⲉⲓⲁⲧ Ge 18 2 S not true var, cf Ps 53 7, 91 11 S ⲁⲡⲁⲃ. ⲙⲉϩ ⲉⲓⲁⲧϥ, ib 90 8 B ϯ ⲛⲓⲁⲧⲕ ⲛⲛⲉⲕⲃ.
-    ⲕⲉⲕⲉ ⲛⲃ. Ps 16 8 S (B ⲁⲗⲟⲩ ⲛⲃ.) κόρη ὀφθ., which Glos 25 S = ϫⲛⲣⲱⲙⲉ ⲛⲛⲃ.; ⲃ. ⲛⲛⲉϩ S (l ⲛⲉⲛϩ) العين السفلا lower eye(lid ?) Scala frag EW 1921.
-    ⲃ. ⲉⲧⲕⲏⲕ PMéd 61 S, peeled, skinned eyes (disease), cf ⲕⲁⲕ ⲃ. πτίλος Lev 21 20 B & ? PLond 4 217 name Πκακουϩάλ; ⲃ. ⲉⲧⲱ (l ⲟ) ⲛⲥⲓⲟⲩ PMéd 64 S star-eyed (disease); ⲃ. ⲉⲧⲱ ⲛⲕⲁⲕⲉ ib 89 S darkened, obscured eye (disease), cf Ps 68 23, Lam 5 17 B; ϣⲟⲩⲃ. charm in Cambridge Univ Libr (Taylor-Schechter) B streaming eye (disease), cf ϣⲟⲩⲙⲏ; ϣⲧⲉⲙⲃⲉⲗ BM 524 F closing of eye (blindness ?), cf Is 33 15 F; other diseases v PMéd 331; eyes dazzled by light ⲛⲉⲁⲛⲉⲩⲃ. ϩⲧⲟⲙⲧⲙ PS 5, 8 S, cf Ge 48 10 S.
-    ⲃ. ⲃⲱⲛ, evil eye Va 61 93 B ⲁⲕⲟⲩⲱⲙ ϧⲉⲛⲟⲩⲃ. ⲃ. ⲛⲥⲁⲙⲡⲉⲧϩⲱⲟⲩ.
-    ⲙⲉⲧⲃ. ⲙⲃⲱⲕ ὀφθαλμοδουλεία Eph 6 6 B, Col 3 22 B = S ⲙⲛⲧⲉⲓⲁ ⲛϭⲁⲩⲟⲛ, cf Ps 122 2.
-    ⲃ. ⲛⲁⲃⲱⲕ κύαμος ἑλληνικός PMéd 267 S, Z 629 S, WS 52 S, cf DM 5 24 ⲃⲉⲗ n ⲉⲃⲱⲕ.
-    ⲃ. ⲛⲉⲙⲟⲩ S, cat's eye αἰλούρου ὀφθ., CR '87 376.
-    ⲃ. ⲛⲃⲛⲛⲉ S date's eye i e ? date stone, P 43 233 (ⲅⲓ)ⲅⲁⲣⲧⲟⲛ· ⲛⲃ. ⲛⲛⲃⲛⲛⲉ عيون اقماع البلح (though قمع is said to be the outer casing of a fruit). In P 44 80 ⲅⲏⲅⲁⲣⲧⲁ = عنب, in Nu 6 4 B = زبيب.
-    ⲣⲓⲕⲉ ⲙⲃ. ῥιπὴ ὀφθ. 1 Cor 15 52 SB, Miss 4 711 S, BMis 532 S, Va 69 124 B divinity of Only begotten not divided from humanity ⲛⲟⲩⲣ. ⲛⲃ.
-    ϭⲱⲣⲉⲙ ⲛⲃ. νεῦμα ὀφθ. Is 3 16 B = S ⲕⲓⲙ ⲛⲃ.
-    ⲥⲁⲓⲏ ⲛⲃ. S = B ⲥⲁⲓⲉ ⲃ. μετὰ κάλλους ὀφθ. 1 Kg 16 12, εὐόμματος Mélanges Ch. Moeller 3 S, Miss 4 738 S, C 43 63 B.
-    ϯ ⲱⲟⲩ ⲛⲃ. μακαρίζειν Ge 30 13 B, Job 29 11 B (cf ⲱⲟⲩ ⲛⲓⲁⲧ⸗).
-    ϥⲁⲓ ⲃ. ⲉⲡϣⲱⲓ B αἴρειν ὀφθ. Is 60 4, Zech 1 18, Lu 6 20 (all = S ϥⲓ ⲉⲓⲁⲧ⸗ ⲉϩⲣⲁⲓ).
-    ϩⲓ ⲛⲟⲩⲃ., cast a glance (from window) MG 25 128 B.
-    ⲧⲁⲥⲃ. S BAp 160, cf ⲙⲛⲧⲧⲁⲥⲃ. μετεωρισμὸς ὀφθ. Si 23 5 S = ib 26 9 ⲙⲛⲧϫⲁⲥⲓⲃ.
-    ϫⲁⲣⲃ. στηρίζων ὀφθ. Eccl 11 9 S (F ⲓⲱⲣϩ ⲛⲛⲃⲉⲗ) ὅρασις ὀφ., Pro 27 20 (A ⳉⲁⲣⲃⲉⲗ) στηρ. ὀφ.‡, Mor 37 78 S ἀναιδέστερος, BMis 521 S.
-    ⲁⲧⲃ. ἀναιδής Is 56 11 S (in Pro 25 23 S, Si 23 6 S = ⲁⲧϣⲓⲡⲉ A), ShZ 476 S.    ⲙⲛⲧⲁⲧⲃ. Pro 21 29 S (var ⲙⲛⲧⲁⲧϣⲓⲡⲉ, Gk adv), ShWess 18 142 S, ShMun 165 S.
-    ⲉⲧⲙⲉϩ ⲙⲃ. πολυόμματος CaiEuch 317 B = ⲉⲧⲟ ⲛϩⲁϩ ⲛⲃ. P 12920 127 S.
-    ⲛⲃ. ϩⲓⲃ. ὀφθ. κατ' ὀφθ. Nu 14 14 S (ⲃ. ⲟⲩⲃⲉⲃ. B).
-    In place-name τόπος Πταρϣβάλ (Preisigke).`
+        `      ⲃⲁⲗ SB, ⲃⲉⲗ AA2F, DM bel nn m, eye: Job 16 20 SB, Ps 53 7 SB, ib 33 16 SA (Cl 22 6) B, Pro 4 25 SAB, Is 30 20 SBF, Lam 2 18 B, ὀφθαλμός; Sa 11 19 S, Mk 8 23 SB ὄμμα; ⲉⲓⲁⲧ Ge 18 2 S not true var, cf Ps 53 7, 91 11 S ⲁⲡⲁⲃ. ⲙⲉϩ ⲉⲓⲁⲧϥ, ib 90 8 B ϯ ⲛⲓⲁⲧⲕ ⲛⲛⲉⲕⲃ.
+      ⲕⲉⲕⲉ ⲛⲃ. Ps 16 8 S (B ⲁⲗⲟⲩ ⲛⲃ.) κόρη ὀφθ., which Glos 25 S = ϫⲛⲣⲱⲙⲉ ⲛⲛⲃ.; ⲃ. ⲛⲛⲉϩ S (l ⲛⲉⲛϩ) العين السفلا lower eye(lid ?) Scala frag EW 1921.
+      ⲃ. ⲉⲧⲕⲏⲕ PMéd 61 S, peeled, skinned eyes (disease), cf ⲕⲁⲕ ⲃ. πτίλος Lev 21 20 B & ? PLond 4 217 name Πκακουϩάλ; ⲃ. ⲉⲧⲱ (l ⲟ) ⲛⲥⲓⲟⲩ PMéd 64 S star-eyed (disease); ⲃ. ⲉⲧⲱ ⲛⲕⲁⲕⲉ ib 89 S darkened, obscured eye (disease), cf Ps 68 23, Lam 5 17 B; ϣⲟⲩⲃ. charm in Cambridge Univ Libr (Taylor-Schechter) B streaming eye (disease), cf ϣⲟⲩⲙⲏ; ϣⲧⲉⲙⲃⲉⲗ BM 524 F closing of eye (blindness ?), cf Is 33 15 F; other diseases v PMéd 331; eyes dazzled by light ⲛⲉⲁⲛⲉⲩⲃ. ϩⲧⲟⲙⲧⲙ PS 5, 8 S, cf Ge 48 10 S.
+      ⲃ. ⲃⲱⲛ, evil eye Va 61 93 B ⲁⲕⲟⲩⲱⲙ ϧⲉⲛⲟⲩⲃ. ⲃ. ⲛⲥⲁⲙⲡⲉⲧϩⲱⲟⲩ.
+      ⲙⲉⲧⲃ. ⲙⲃⲱⲕ ὀφθαλμοδουλεία Eph 6 6 B, Col 3 22 B = S ⲙⲛⲧⲉⲓⲁ ⲛϭⲁⲩⲟⲛ, cf Ps 122 2.
+      ⲃ. ⲛⲁⲃⲱⲕ κύαμος ἑλληνικός PMéd 267 S, Z 629 S, WS 52 S, cf DM 5 24 ⲃⲉⲗ n ⲉⲃⲱⲕ.
+      ⲃ. ⲛⲉⲙⲟⲩ S, cat's eye αἰλούρου ὀφθ., CR '87 376.
+      ⲃ. ⲛⲃⲛⲛⲉ S date's eye i e ? date stone, P 43 233 (ⲅⲓ)ⲅⲁⲣⲧⲟⲛ· ⲛⲃ. ⲛⲛⲃⲛⲛⲉ عيون اقماع البلح (though قمع is said to be the outer casing of a fruit). In P 44 80 ⲅⲏⲅⲁⲣⲧⲁ = عنب, in Nu 6 4 B = زبيب.
+      ⲣⲓⲕⲉ ⲙⲃ. ῥιπὴ ὀφθ. 1 Cor 15 52 SB, Miss 4 711 S, BMis 532 S, Va 69 124 B divinity of Only begotten not divided from humanity ⲛⲟⲩⲣ. ⲛⲃ.
+      ϭⲱⲣⲉⲙ ⲛⲃ. νεῦμα ὀφθ. Is 3 16 B = S ⲕⲓⲙ ⲛⲃ.
+      ⲥⲁⲓⲏ ⲛⲃ. S = B ⲥⲁⲓⲉ ⲃ. μετὰ κάλλους ὀφθ. 1 Kg 16 12, εὐόμματος Mélanges Ch. Moeller 3 S, Miss 4 738 S, C 43 63 B.
+      ϯ ⲱⲟⲩ ⲛⲃ. μακαρίζειν Ge 30 13 B, Job 29 11 B (cf ⲱⲟⲩ ⲛⲓⲁⲧ⸗).
+      ϥⲁⲓ ⲃ. ⲉⲡϣⲱⲓ B αἴρειν ὀφθ. Is 60 4, Zech 1 18, Lu 6 20 (all = S ϥⲓ ⲉⲓⲁⲧ⸗ ⲉϩⲣⲁⲓ).
+      ϩⲓ ⲛⲟⲩⲃ., cast a glance (from window) MG 25 128 B.
+      ⲧⲁⲥⲃ. S BAp 160, cf ⲙⲛⲧⲧⲁⲥⲃ. μετεωρισμὸς ὀφθ. Si 23 5 S = ib 26 9 ⲙⲛⲧϫⲁⲥⲓⲃ.
+      ϫⲁⲣⲃ. στηρίζων ὀφθ. Eccl 11 9 S (F ⲓⲱⲣϩ ⲛⲛⲃⲉⲗ) ὅρασις ὀφ., Pro 27 20 (A ⳉⲁⲣⲃⲉⲗ) στηρ. ὀφ.‡, Mor 37 78 S ἀναιδέστερος, BMis 521 S.
+      ⲁⲧⲃ. ἀναιδής Is 56 11 S (in Pro 25 23 S, Si 23 6 S = ⲁⲧϣⲓⲡⲉ A), ShZ 476 S.      ⲙⲛⲧⲁⲧⲃ. Pro 21 29 S (var ⲙⲛⲧⲁⲧϣⲓⲡⲉ, Gk adv), ShWess 18 142 S, ShMun 165 S.
+      ⲉⲧⲙⲉϩ ⲙⲃ. πολυόμματος CaiEuch 317 B = ⲉⲧⲟ ⲛϩⲁϩ ⲛⲃ. P 12920 127 S.
+      ⲛⲃ. ϩⲓⲃ. ὀφθ. κατ' ὀφθ. Nu 14 14 S (ⲃ. ⲟⲩⲃⲉⲃ. B).
+      In place-name τόπος Πταρϣβάλ (Preisigke).`
       );
     }
   );

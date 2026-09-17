@@ -1414,7 +1414,7 @@ class Indexer(Mother):
         keys: list[str] = []
         types: list[list[str]] = []
         categories: list[list[str]] = []
-        for _, root in Crum.roots.items():
+        for root in Crum.roots.values():
             keys.append(root.key)
             types.append([root.type_name])
             categories.append(root.categories)
@@ -1469,7 +1469,7 @@ def indexer() -> Indexer:
 
 
 def notes_aux(dialects: set[str] | None = None) -> abc.Generator[deck.Note]:
-    for _, root in Crum.roots.items():
+    for root in Crum.roots.values():
         if dialects and not dialects.intersection(root.all_dialects):
             continue
         yield root.note(dialects)
@@ -1534,7 +1534,6 @@ XOOXLE: xooxle.Xooxle = xooxle.Xooxle(
                 cls.DEMOTIC,
                 cls.HIEROGLYPHIC,
                 cls.GLOSS,
-                cls.SUBPARAGRAPH,
                 cls.MANUAL,
                 cls.ADDENDUM,
                 # We retain marks to alert the user that there is a footnote.

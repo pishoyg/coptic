@@ -284,6 +284,7 @@ _ALPHABETS: dict[Language, tuple[str, ...]] = {
         "\\-",
         "\\[",
         "\\]",
+        "\u00a0",  # Non-breaking space is used for for lacunas.
     ),
     "ARABIC": (
         "ء-ي",  # The standard Arabic letters.
@@ -377,6 +378,7 @@ def _normalize_for_validation(language: Language, text: str) -> str:
     # precomposed Greek letter whose parts are all listed passes unvetted.
     if language == "GREEK":
         text = orth.normalize(text)
+    text = text.replace(page.NBSP, "\u00a0")
     return text
 
 
@@ -421,6 +423,10 @@ def replace_bracketed(match: regex.Match[str]) -> str:
         # shouldn't be classified as belonging to one of the languages, so we
         # simply return the text itself.
         return text
+
+    # Lacunas are encoded using `\t` in the input, and are substituted for with
+    # 6 non-breaking spaces.
+    text = text.replace(r"\t", page.NBSP * 6)
 
     language: Language = _language(text)
 
@@ -508,8 +514,6 @@ def replace_stack(match: regex.Match[str]) -> str:
     )
 
 
-OPEN_SUBPARAGRAPH: str = f'<span class="{cls.SUBPARAGRAPH}">'
-CLOSE_SUBPARAGRAPH: str = "</span>"
 OPEN_PARAGRAPH: str = "<p>"
 CLOSE_PARAGRAPH: str = "</p>"
 
@@ -553,7 +557,6 @@ _SUBSTITUTIONS: list[Substitution] = [
     # bold rule below. We therefore leave it up to our linters to replace
     # the occurrences of `&ask;` produced here with a literal asterisk.
     Substitution(r"\\\*", page.ASTERISK, ban=["*", "\\"]),
-    Substitution(r"\\t", CLOSE_SUBPARAGRAPH + OPEN_SUBPARAGRAPH, ban=["\\"]),
     Substitution(
         r"__(.+?)__",
         rf'<span class="{cls.GLOSS}">\1</span>',
@@ -578,13 +581,22 @@ _SUBSTITUTIONS: list[Substitution] = [
     Substitution(r"\^([-–—\w\p{Letter}]+)", r"<sup>\1</sup>", ban=["^"]),
     Substitution(
         r"\\n",
-        CLOSE_SUBPARAGRAPH
-        + CLOSE_PARAGRAPH
-        + OPEN_PARAGRAPH
-        + OPEN_SUBPARAGRAPH,
+        CLOSE_PARAGRAPH + OPEN_PARAGRAPH,
         ban=["\\"],
     ),
     Substitution(bracketed(r"(.*?)"), replace_bracketed, ban=["[[", "]]"]),
+    # NOTE: The language substitution must precede the tab substitution.
+    # All remaining tabs represent subparagraph separators, and are 6 spaces
+    # long. The use of regular spaces besides non-breaking spaces ensures that
+    # the spaces don't get collapsed, and that this long 6-character space is
+    # actually breaking.
+    # NOTE: A trailing space inside a span gets moved outside it by Tidy. ATTOW,
+    # this is benign.
+    Substitution(
+        r"\\t",
+        f'<span class="{cls.TAB}">' + (page.NBSP + " ") * 3 + "</span>",
+        ban=["\\"],
+    ),
 ]
 
 
@@ -771,10 +783,10 @@ class Wiki:
 
         1. Neither half may begin or end with a space, which would strand the
            space immediately inside the `<del>` or `<ins>` tag.
-        2. Neither half may contain a `\\n` or a `\\t` token. Paragraphing is
-           substituted before addenda are, so those tokens would already have
-           become tags, which would then spill out of the addendum element and
-           corrupt the nesting.
+        2. Neither half may contain a `\\n` token. Paragraphing is substituted
+           before addenda are, so the token would already have become
+           paragraph tags, which would then spill out of the addendum element
+           and corrupt the nesting.
         3. Punctuation belongs outside the block: prefer `//[[ⲁ]]//[[ⲃ]]//,` to
            `//[[ⲁ]],//[[ⲃ]],//`. The comma is as much a part of the corrected
            text as the word is, but the output reads better with it outside,
@@ -830,16 +842,13 @@ class Wiki:
             "has an addendum group with a space on the boundary:",
             group,
         )
-        # NOTE: An addendum may not contain a `\n` or a `\t` token. Those are
-        # substituted by paragraph and subparagraph boundaries, which
-        # would spill out of the addendum element and corrupt the HTML.
-        # NOTE: This assumes that paragraphing substitutions precede addenda
-        # substitutions.
+        # NOTE: An addendum may not contain a `\n`. Those are substituted by
+        # paragraph boundaries, which would spill out of the addendum element
+        # and corrupt the HTML.
+        # NOTE: This assumes that the paragraph substitution precedes the
+        # addenda substitution.
         ensure.ensure(
-            all(
-                token not in group
-                for token in (OPEN_PARAGRAPH, OPEN_SUBPARAGRAPH)
-            ),
+            OPEN_PARAGRAPH not in group,
             self,
             "has an addendum group containing paragraphing elements:",
             group,
@@ -974,14 +983,12 @@ class Wiki:
             classes.append(cls.VIDE)
         yield f'<div class="{" ".join(classes)}">'
         yield OPEN_PARAGRAPH
-        yield OPEN_SUBPARAGRAPH
 
         raw: str = self.entry
         for s in self.subs():
             raw = s.html(raw)
         yield raw
 
-        yield CLOSE_SUBPARAGRAPH
         yield CLOSE_PARAGRAPH
         yield "</div>"
 

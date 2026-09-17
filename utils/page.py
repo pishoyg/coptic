@@ -45,6 +45,7 @@ TAG_RE: re.Pattern[str] = re.compile(
 LINE_BREAK: str = "<br>"
 HORIZONTAL_RULE: str = "<hr>"
 ASTERISK: str = "&ast;"
+NBSP: str = "&nbsp;"
 
 _HTML_ID_RE: regex.Pattern[str] = regex.compile(
     r'(?<=<\w+[^>]*)\bid=".*?"(?=[^<]*>)',

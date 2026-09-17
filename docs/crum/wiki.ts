@@ -2107,18 +2107,13 @@ function replaceAnaphor(
   return;
 }
 
-/* eslint-disable complexity */
 /**
  * NOTE: This function assumes the following HTML structure:
  *   <p>
- *     <span class="subparagraph"> ...candidates </span>
- *     ...
- *     <span class="subparagraph"> ...candidates </span>
+ *     ...candidates
  *   </p>
  *   <p>
- *     <span class="subparagraph"> ...candidates </span>
- *     ...
- *     <span class="subparagraph"> ...candidates </span>
+ *     ...candidates
  *   </p>
  *   ...
  *
@@ -2159,14 +2154,14 @@ function replaceAnaphor(
  *     are careful not to wrap text that serves as the antecedent of a
  *     following `ib`, so a footnote never conceals a true antecedent.
  *
- * The last two branches hop to a container and then descend into it. Both
- * SELECT that container with `previousElementSibling` / `lastElementChild`, to
- * skip the whitespace text nodes between adjacent `<span>`s and `<p>`s — a text
- * node there has no children to walk into, so the hop would dead-end. But both
- * DESCEND with `lastChild`, deliberately, so that a subparagraph's trailing
- * text is walked rather than skipped: `findAntecedent` reads the text between
- * the candidates to track parenthesis nesting, and `lastElementChild` would
- * silently drop every parenthesis standing after a subparagraph's last element.
+ * The last branch hops to the previous paragraph and then descends into it. It
+ * SELECTS that paragraph with `previousElementSibling`, to skip the whitespace
+ * text node between adjacent `<p>`s — a text node there has no children to
+ * walk into, so the hop would dead-end. But it DESCENDS with `lastChild`,
+ * deliberately, so that a paragraph's trailing text is walked rather than
+ * skipped: `findAntecedent` reads the text between the candidates to track
+ * parenthesis nesting, and `lastElementChild` would silently drop every
+ * parenthesis standing after a paragraph's last element.
  *
  * Termination: every branch returns either null or a node that strictly
  * precedes `node` in document order. In particular the wrapper branch searches
@@ -2174,8 +2169,6 @@ function replaceAnaphor(
  * itself. (`closest` includes the element it is called on, so searching from
  * `node` would let a wrapper span return itself and spin `backtrack`'s walk
  * forever.) The strictly-decreasing position guarantees the walk halts.
- *
- * P.S. Subparagraphs were introduced in #693.
  *
  * @param node
  * @returns
@@ -2190,29 +2183,22 @@ function previous(node: Node | null): Node | null {
     // the flat chain. Searching from `parentElement` (not `node`) finds only an
     // enclosing wrapper, so this returns the wrapper for an element nested
     // inside one, and nothing for a plain flat element (whose parent is the
-    // subparagraph). See the note above on why this must be a strict ancestor.
+    // paragraph). See the note above on why this must be a strict ancestor.
     node?.parentElement?.closest(
       css.disjunction(cls.ADDENDUM, cls.FOOTNOTED)
     ) ??
-    // Move to the previous subparagraph. Use `previousElementSibling` to
-    // skip the whitespace text node between adjacent `<span>`s, but land on
-    // its `lastChild`. See the note below on the final step.
-    node?.parentElement?.previousElementSibling?.lastChild ??
     // Move to the previous paragraph. Use `previousElementSibling` to skip
-    // the whitespace between adjacent `<p>`s, and `lastElementChild` to
-    // skip trailing whitespace inside that previous `<p>` and descend into
-    // its last subparagraph.
+    // the whitespace between adjacent `<p>`s, but land on its `lastChild`.
+    // See the note above on the final step.
     // This cross-paragraph hop is suppressed when `crossParagraphs` is false.
     // This can be used on views where some paragraphs are dropped, making the
     // preceding `<p>` an unreliable antecedent.
     (ambient.crossParagraphs
-      ? node?.parentElement?.parentElement?.previousElementSibling
-          ?.lastElementChild?.lastChild
+      ? node?.parentElement?.previousElementSibling?.lastChild
       : null) ??
     null
   );
 }
-/* eslint-enable complexity */
 
 /**
  *
@@ -2235,9 +2221,8 @@ function* backtrack(
   //    elements are enriched outside the chain machinery, after all preceding
   //    chains have been spliced back into the live tree, so they have no
   //    in-progress fragment and pass none.
-  // 2. Everything before this chain — earlier siblings, subparagraphs, and
-  //    paragraphs — is still in the live document and is reached by walking up
-  //    from `node`.
+  // 2. Everything before this chain — earlier siblings and paragraphs — is
+  //    still in the live document and is reached by walking up from `node`.
   //
   // The two walks cannot overlap: walk 1 ranges only over the detached
   // fragment, walk 2 only over the live document, and a node belongs to exactly
@@ -2490,12 +2475,12 @@ function findAntecedent(start: Node | null | html.Context): HTMLElement | null {
  */
 function entryText(entry: Element): string {
   return Array.from(entry.querySelectorAll('p'))
-    .map((p: HTMLParagraphElement): string =>
-      Array.from(p.querySelectorAll(`.${cls.SUBPARAGRAPH}`))
+    .map(
+      (p: HTMLParagraphElement): string =>
         // Drop `<del>` tags, which are used for omissions.
-        .map((element: Element) => str.textContent(element))
-        .map((text: string): string => `    ${text}`)
-        .join('')
+        // Tabs are rendered with non-breaking spaces, but the copied text
+        // should only contain regular spaces.
+        `      ${str.textContent(p).replaceAll('\u00a0', ' ')}`
     )
     .join('\n');
 }

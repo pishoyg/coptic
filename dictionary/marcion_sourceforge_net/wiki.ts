@@ -213,7 +213,7 @@ const KNOWN_CLASSES: ReadonlySet<string> = new Set<string>([
   cls.DIALECT,
   cls.FOOTNOTED,
   cls.MARK,
-  cls.SUBPARAGRAPH,
+  cls.TAB,
   ...UNINTERESTING,
   ...SUBSUMED,
 ]);
@@ -533,8 +533,8 @@ class Serializer {
     if (LANGUAGES.some((c: string): boolean => el.classList.contains(c))) {
       return `⟨${kids()}⟩`;
     }
-    if (el.classList.contains(cls.SUBPARAGRAPH)) {
-      return `\n¶ ${kids()}`;
+    if (el.classList.contains(cls.TAB)) {
+      return '\n¶';
     }
 
     const strange: string = el.classList
@@ -576,8 +576,10 @@ class Serializer {
         return `--${kids()}--`;
       case 'INS':
         return `++${kids()}++`;
+      // A paragraph opens with a `¶`, as does every subsequent subparagraph
+      // (see the tab in `wrapper`).
       case 'P':
-        return `\n\n${kids()}\n\n`;
+        return `\n\n¶ ${kids()}\n\n`;
       // Carry no notation of their own: an `A` is always an enriched span,
       // handled above by kind, and a `SPAN` that reached here was classified
       // by `wrapper`.
