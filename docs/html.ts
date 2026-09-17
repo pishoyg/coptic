@@ -1,4 +1,11 @@
-/** Package html defines DOM manipulation helpers. */
+/** Package html defines DOM manipulation helpers.
+ *
+ * NOTE: Many helpers below, such as the Chain replacement logic and the
+ * linkifiers, break text fragment highlighting (`#:~:text=...` URLs) on
+ * Firefox, because they split and splice DOM nodes at page load. To avoid
+ * this, the generated HTML would have to contain the enriched elements up
+ * front, so that nothing needs restructuring during initialization.
+ * */
 import * as css from './css.js';
 import * as log from './logger.js';
 
