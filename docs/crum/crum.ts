@@ -23,7 +23,6 @@ import * as roots from './roots.js';
 import * as derivations from './derivations.js';
 
 const GREEK_WORD_RE = /^[\p{Script=Greek}][\p{Script=Greek}\p{Mark}]*$/u;
-const ENGLISH_RE = /[\p{Script=Latin}][\p{Script=Latin}\p{Mark}]*/u;
 
 /**
  * Handle all Crum elements.
@@ -46,6 +45,9 @@ export function handle(
   if (!full) {
     return;
   }
+
+  // TODO: (#658) Introduce a convenient way to copy / look up Coptic and
+  // English words.
   handleCategories(root);
   handleRootType(root);
   handleCrumPage(root);
@@ -55,8 +57,6 @@ export function handle(
   handleSisterKey(root);
   handleSisterView(root);
   handleAnkiNavigation(root);
-  addCopticLookups(root);
-  addEnglishLookups(root);
   handleNagHammadi(root);
   handleQuality(root);
 }
@@ -292,51 +292,11 @@ function handleAnkiNavigation(root: HTMLElement): void {
 /**
  *
  * @param root
- *
- * TODO: (#658) Instead of hyperlinks, words should have tooltips that contain
- * buttons to copy or look up the words.
- */
-function addCopticLookups(root: HTMLElement): void {
-  root.querySelectorAll(`.${cls.SPELLING}`).forEach((form: Element) => {
-    html.linkifyText(
-      form,
-      // If the word is fully surrounded by parentheses, drop them.
-      /(?=[^(]|\(\S+\)\S)\S+(?<=[^)]|\S\(\S+\))/,
-      (match: RegExpExecArray): string | null => {
-        // Skip words that don't contain any Coptic characters.
-        return /\p{Script=Coptic}/u.test(match[0])
-          ? paths.lexicon(match[0])
-          : null;
-      },
-      [ccls.HOVER_LINK]
-    );
-  });
-}
-
-/**
- *
- * @param root
  */
 export function addGreekLookups(root: HTMLElement): void {
   root.querySelectorAll(`.${cls.GREEK}`).forEach((greek: Element): void => {
     html.linkifyText(greek, /\S+/, (match: RegExpExecArray): string | null =>
       GREEK_WORD_RE.test(match[0]) ? paths.greekLookup(match[0]) : null
-    );
-  });
-}
-
-/**
- *
- * @param root
- */
-function addEnglishLookups(root: HTMLElement): void {
-  root.querySelectorAll(`.${cls.MEANING}`).forEach((el) => {
-    html.linkifyText(
-      el,
-      ENGLISH_RE,
-      (match: RegExpExecArray) => paths.lexicon(match[0]),
-      [ccls.HOVER_LINK],
-      [cls.PART_OF_SPEECH, cls.ROMAN, cls.HEADING, cls.LANG]
     );
   });
 }
