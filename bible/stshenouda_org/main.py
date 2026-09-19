@@ -4,7 +4,6 @@
 # NOTE: As a general convention, methods ending with _aux return generators,
 # rather than string literals.
 import argparse
-import functools
 import html
 import itertools
 import json
@@ -250,6 +249,9 @@ def _normalize(lang: Language, text: str) -> str:
     }.items():
         assert key != value
         text = text.replace(key, value)
+    # TODO: (#735) Fix the whitespace at the source, and stop
+    # collapsing it here.
+    text = " ".join(text.split())
     return text
 
 
@@ -626,8 +628,6 @@ class Chapter(Item):
     def _num(self, data: schema.Chapter) -> str:
         return data["sectionNameEnglish"] or "1"
 
-    # pylint: disable-next=method-cache-max-size-none
-    @functools.cache
     def has_lang(self, lang: Language, boundary_counts: bool = True) -> bool:
         return any(
             v.has(lang)
@@ -796,8 +796,6 @@ class Book(Item):
     def chapter_names(self) -> list[str]:
         return [c.num for c in self.chapters]
 
-    # pylint: disable-next=method-cache-max-size-none
-    @functools.cache
     def has_lang(self, lang: Language, boundary_counts: bool = True) -> bool:
         return any(c.has_lang(lang, boundary_counts) for c in self.chapters)
 
@@ -1030,7 +1028,7 @@ class HTMLBuilder:
         for lang in langs:
             yield from self.lang_begin(lang)
             if verse.has(lang) or not omit_empty:
-                yield from verse.recolored[lang]
+                yield verse.recolored[lang]
             yield from self.lang_end(lang)
         yield from self.verse_end(verse, num_override)
 
@@ -1549,6 +1547,9 @@ def _build_xooxle(bible: Bible, table_builder: TableBuilder) -> None:
                 _key(lang),
                 xooxle.Selector({"class_": _key(lang)}, False),
                 {cls.RED, cls.BLUE},
+                # Each capture is a single cell, so there are no cells to
+                # separate with spaces.
+                space_elements=set(),
             )
             for lang in _NONEMPTY_LANGUAGES
         ],
