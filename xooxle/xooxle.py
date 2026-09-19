@@ -90,6 +90,20 @@ _KEY: str = "KEY"
 
 _COLLAPSIBLE_SPACE: re.Pattern[str] = re.compile(r"\s{2,}", re.ASCII)
 
+# Text is used for two purposes:
+# - Search
+# - Text fragments
+# The HTML is used for presentation, and it's what actually ends up being
+# presented to the user.
+# Accordingly, replacing unusual characters in the index with more usual ones
+# can aid searchability; provided that the new character doesn't break text
+# fragments.
+_TEXT_NORMALIZATION: dict[int, str] = str.maketrans(
+    {
+        "\u00a0": " ",
+    },
+)
+
 
 BLOCK_ELEMENTS_DEFAULT: set[str] = {
     # Each table row goes to a block.
@@ -488,7 +502,7 @@ class Xooxle:
             [cap.name for cap in self._captures],
         ]
 
-    def _diacritic_free_text(self, html: str) -> str:
+    def _normalized_text(self, html: str) -> str:
         # NOTE: The HTML doesn't escape its special characters, so we don't need
         # to un-escape them during text extraction.
         stripped: str = page.TAG_RE.sub("", html)
@@ -501,16 +515,18 @@ class Xooxle:
             "astral combining mark in Xooxle line:",
             repr(stripped),
         )
+        # Remove all diacritics.
         text: str = orth.clean_diacritics(stripped)
         ensure.ensure(
             not _COLLAPSIBLE_SPACE.search(text),
             "collapsible space in Xooxle line:",
             repr(text),
         )
+        text = text.translate(_TEXT_NORMALIZATION)
         return text
 
     def line(self, html: str) -> Line:
-        return html, self._diacritic_free_text(html)
+        return html, self._normalized_text(html)
 
     def unit(self, html: str) -> Unit:
         if not html:
