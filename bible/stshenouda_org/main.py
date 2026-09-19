@@ -1547,9 +1547,6 @@ def _build_xooxle(bible: Bible, table_builder: TableBuilder) -> None:
                 _key(lang),
                 xooxle.Selector({"class_": _key(lang)}, False),
                 {cls.RED, cls.BLUE},
-                # Each capture is a single cell, so there are no cells to
-                # separate with spaces.
-                space_elements=set(),
             )
             for lang in _NONEMPTY_LANGUAGES
         ],

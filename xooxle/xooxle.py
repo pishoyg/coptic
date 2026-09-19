@@ -118,10 +118,6 @@ RETAIN_TAGS_DEFAULT: set[str] = {
     "del",
 }
 
-SPACE_ELEMENTS_DEFAULT: set[str] = {
-    "td",
-}
-
 
 Line: typing.TypeAlias = tuple[str, str]
 Unit: typing.TypeAlias = list[Line]
@@ -240,10 +236,8 @@ class Capture:
         retain_elements_for_classes: set[str] | None = None,
         retain_attributes: set[str] | None = None,
         block_elements: set[str] | None = None,
-        space_elements: set[str] | None = None,
         block_classes: set[str] | None = None,
         unit_tags: set[str] | None = None,
-        retain_empty: bool = False,
     ) -> None:
         # _name is name of the field.
         self._name: str = name
@@ -278,22 +272,11 @@ class Capture:
             if block_elements is not None
             else BLOCK_ELEMENTS_DEFAULT
         )
-        # _space_elements is the list of HTML tags that result in spaces in
-        # the output.
-        self._space_elements: set[str] = (
-            space_elements
-            if space_elements is not None
-            else SPACE_ELEMENTS_DEFAULT
-        )
         self._block_classes: set[str] = block_classes or set()
         # _units is a list of HTML tags that produce `UNIT_DELIMITER` delimiters
         # in the output. You can use this delimiter to separate the text into
         # meaningful units.
         self._unit_tags: set[str] = unit_tags or set()
-        # _retain_empty tells whether to retain the elements that are empty in
-        # the input. Their emptiness is usually accidental, but it's sometimes
-        # meaningful, as is the case for the elements that represent a gap.
-        self._retain_empty: bool = retain_empty
 
     @property
     def name(self) -> str:
@@ -361,17 +344,12 @@ class Capture:
             tokens that live outside the given tags.
 
         """
-        empty: bool = True
         for is_delimiter, run in groupby(tokens, const.is_delimiter):
             if is_delimiter:
                 yield from run
                 continue
-            empty = False
             yield opening
             yield from run
-            yield closing
-        if empty and self._retain_empty:
-            yield opening
             yield closing
 
     def _get_tag_html(self, child: bs4.Tag) -> Generator[str]:
@@ -390,8 +368,6 @@ class Capture:
             yield const.UNIT_DELIMITER
         elif child.name in self._block_elements:
             yield page.LINE_BREAK
-        elif child.name in self._space_elements:
-            yield " "
 
         classes: list[str] = child.get_attribute_list("class")
         if self._block_classes.intersection(classes):
@@ -456,8 +432,6 @@ class Capture:
             yield const.UNIT_DELIMITER
         elif child.name in self._block_elements:
             yield page.LINE_BREAK
-        elif child.name in self._space_elements:
-            yield " "
 
     def _get_children_simplified_html(self, tag: bs4.Tag) -> Generator[str]:
         for child in tag.children:

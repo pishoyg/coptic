@@ -1067,13 +1067,11 @@ XOOXLE: xooxle.Xooxle = xooxle.Xooxle(
             "ORTHS",
             xooxle.Selector({"id": ids.ORTHS}),
             retain_classes=_KELLIA_RETAIN_CLASSES,
-            space_elements=set(),
         ),
         xooxle.Capture(
             "SENSES",
             xooxle.Selector({"id": ids.SENSES}),
             retain_classes=_KELLIA_RETAIN_CLASSES,
-            space_elements=set(),
         ),
         xooxle.Capture(
             "TEXT",
