@@ -427,6 +427,9 @@ def replace_bracketed(match: regex.Match[str]) -> str:
     # Lacunas are encoded using `\t` in the input, and are substituted for with
     # 6 non-breaking spaces.
     text = text.replace(r"\t", page.NBSP * 6)
+    # A leading or trailing space is converted to a non-breaking space, so it
+    # will be preserved inside the span.
+    text = regex.sub("^ | $", page.NBSP, text)
 
     language: Language = _language(text)
 
