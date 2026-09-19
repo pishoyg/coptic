@@ -564,8 +564,7 @@ class DictionaryEntry:
             "Paragraph starts an entry but has no Coptic prefix:",
             p,
         )
-        if prefix.startswith("-"):
-            prefix = prefix[1:]
+        prefix = prefix.removeprefix("-")
         ensure.ensure(
             lang.is_lang("COPTIC", prefix[0]),
             "Coptic prefix doesn't start with Coptic text:",
@@ -596,9 +595,13 @@ class DictionaryEntry:
         # A paragraph of the definition is a block of its own. We wrap it here
         # rather than in `Paragraph.content`, so that an empty paragraph stays
         # empty: the checks below and in `back_aux` read that emptiness.
-        back: str = "\n".join(
-            f"<p>{b}</p>" if html else b for b in self.back_aux(html)
-        )
+        # In HTML, the paragraphs already separate the lines, so we don't
+        # separate them with newlines as well.
+        back: str
+        if html:
+            back = "".join(f"<p>{b}</p>" for b in self.back_aux(html))
+        else:
+            back = "\n".join(self.back_aux(html))
         if _CROSS_REFERENCE_RE.search(str(self)):
             # A cross-reference sends the reader to another entry rather than
             # defining anything, so it owes us neither a definition nor Arabic.
