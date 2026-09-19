@@ -164,9 +164,18 @@ class Form:
             A string representing the HTML of a <tr> element.
         """
         yield f'<tr class="{dict_cls.WORD} {self.geo}">'
-        yield self._td(self.orth, cls.ORTH, dict_cls.SPELLING)
-        yield self._td(self.geo, cls.GEO, dict_cls.DIALECT)
-        yield self._td(self.gram_grp or "", cls.GRAM_GRP, dict_cls.TYPE)
+        # We separate the nonempty cells with spaces, so they remain separated
+        # when the table gets flattened into text (as is the case in Xooxle).
+        separate: bool = False
+        for txt, classes in [
+            (self.orth, [cls.ORTH, dict_cls.SPELLING]),
+            (self.geo, [cls.GEO, dict_cls.DIALECT]),
+            (self.gram_grp or "", [cls.GRAM_GRP, dict_cls.TYPE]),
+        ]:
+            if separate and txt:
+                yield " "
+            separate = separate or bool(txt)
+            yield self._td(txt, *classes)
         yield "</tr>"
 
 
@@ -1058,11 +1067,13 @@ XOOXLE: xooxle.Xooxle = xooxle.Xooxle(
             "ORTHS",
             xooxle.Selector({"id": ids.ORTHS}),
             retain_classes=_KELLIA_RETAIN_CLASSES,
+            space_elements=set(),
         ),
         xooxle.Capture(
             "SENSES",
             xooxle.Selector({"id": ids.SENSES}),
             retain_classes=_KELLIA_RETAIN_CLASSES,
+            space_elements=set(),
         ),
         xooxle.Capture(
             "TEXT",
