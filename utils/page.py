@@ -68,10 +68,6 @@ def name(tag: str) -> str:
     return match.group(1).lower()
 
 
-def is_tag(token: str) -> bool:
-    return bool(TAG_RE.fullmatch(token))
-
-
 def opening(tag: str, strict: bool = True) -> bool:
     match: re.Match[str] | None = TAG_RE.fullmatch(tag)
     if strict:

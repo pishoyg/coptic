@@ -74,6 +74,7 @@ Concurrency
 """
 
 import pathlib
+import re
 import typing
 from collections.abc import Generator, Iterable
 from itertools import groupby
@@ -81,12 +82,13 @@ from itertools import groupby
 import bs4
 
 from utils import concur, ensure, file, orth, page
-from xooxle import clean
 from xooxle import constants as const
 
 # _KEY is the name of the key field in the output. This must match the name
 # expected by the Xooxle search logic.
 _KEY: str = "KEY"
+
+_COLLAPSIBLE_SPACE: re.Pattern[str] = re.compile(r"\s{2,}", re.ASCII)
 
 
 BLOCK_ELEMENTS_DEFAULT: set[str] = {
@@ -192,6 +194,40 @@ class Selector:
         return elem
 
 
+def _clean(tokens: Iterable[str]) -> Generator[str]:
+    """Remove empty units and lines, and redundant delimiters.
+
+    Leading and trailing delimiters are dropped. Every run of delimiters
+    between two pieces of content collapses into a single delimiter - a unit
+    delimiter if the run contains one, and a line break otherwise.
+
+    NOTE: Whitespace is retained as is. Whitespace-only tokens count as
+    content, so they are neither stripped nor collapsed.
+
+    Args:
+        tokens: A stream of Xooxle tokens. A token could be a tag, a piece of
+            text, or a delimiter.
+
+    Yields:
+        A cleaned subsequence of the input tokens, after eliminating
+        superfluous delimiters.
+    """
+    separator: str = ""
+    has_content: bool = False
+    for is_delimiter, run in groupby(tokens, const.is_delimiter):
+        if is_delimiter:
+            separator = (
+                const.UNIT_DELIMITER
+                if const.UNIT_DELIMITER in run
+                else page.LINE_BREAK
+            )
+            continue
+        if has_content:
+            yield separator
+        has_content = True
+        yield from run
+
+
 class Capture:
     """Capture a field from an HTML."""
 
@@ -284,7 +320,7 @@ class Capture:
         if not tag:
             return ""
         _ = tag.extract()
-        return "".join(clean.clean(self._get_tag_html(tag)))
+        return "".join(_clean(self._get_tag_html(tag)))
 
     def _wrap(
         self,
@@ -312,7 +348,8 @@ class Capture:
 
         A run is only wrapped if it exists. An element that has no content
         at all is a special case: it's only retained if the caller asks for
-        it. See the note below for the whitespace caveat.
+        it. A run that holds nothing but whitespace counts as content, and is
+        wrapped.
 
         Args:
             opening: The opening tag.
@@ -324,12 +361,6 @@ class Capture:
             tokens that live outside the given tags.
 
         """
-        # NOTE: Emptiness is judged here, before cleanup, so a run that
-        # holds nothing but whitespace counts as content. We wrap such a run,
-        # cleanup then strips the whitespace, and an empty pair of tags
-        # survives in the output even when `_retain_empty` is false. Our
-        # generated HTML has no whitespace between the tags of a captured
-        # element, so this doesn't happen today.
         empty: bool = True
         for is_delimiter, run in groupby(tokens, const.is_delimiter):
             if is_delimiter:
@@ -496,7 +527,13 @@ class Xooxle:
             "astral combining mark in Xooxle line:",
             repr(stripped),
         )
-        return orth.clean_diacritics(stripped)
+        text: str = orth.clean_diacritics(stripped)
+        ensure.ensure(
+            not _COLLAPSIBLE_SPACE.search(text),
+            "collapsible space in Xooxle line:",
+            repr(text),
+        )
+        return text
 
     def line(self, html: str) -> Line:
         return html, self._diacritic_free_text(html)
