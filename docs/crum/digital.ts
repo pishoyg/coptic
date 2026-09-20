@@ -284,6 +284,13 @@ class CrumSearchResult extends SearchResult {
   protected override unitsLimit(): number {
     return this.wiki() ? WIKI_UNITS_LIMIT : super.unitsLimit();
   }
+
+  /**
+   * @returns
+   */
+  protected override maxFragments(): number {
+    return 1;
+  }
 }
 
 /**

@@ -367,7 +367,7 @@ interface Result {
   matches: Match[];
   boundary(): Boundary;
   match: boolean;
-  fragment(context: number): string[];
+  fragment(context: number): Generator<string>;
   distance(): number;
 }
 
@@ -453,8 +453,10 @@ abstract class AggregateResult implements Result {
    * NOTE: As of the time of writing, the fragment needs to be computed only
    * once, so we don't memorize it.
    */
-  public fragment(context: number): string[] {
-    return this.results.flatMap((r: Result): string[] => r.fragment(context));
+  public *fragment(context: number): Generator<string> {
+    for (const r of this.results) {
+      yield* r.fragment(context);
+    }
   }
 
   /**
@@ -863,12 +865,22 @@ export class SearchResult extends AggregateResult {
    *
    * @returns
    */
+  protected maxFragments(): number {
+    return Infinity;
+  }
+
+  /**
+   *
+   * @returns
+   */
   private href(): string | undefined {
     const link: string | undefined = this.link();
     if (!link) {
       return undefined;
     }
-    const fragments: string[] = this.fragment(this.fragmentContext());
+    const fragments: string[] = this.fragment(this.fragmentContext())
+      .take(this.maxFragments())
+      .toArray();
     if (!fragments.length) {
       return link;
     }
@@ -890,17 +902,13 @@ export class SearchResult extends AggregateResult {
    * @param context - Words of surrounding context per fragment.
    * @returns The text fragments, in page order.
    */
-  public override fragment(context: number): string[] {
-    return [
-      ...super.fragment(context),
-      ...this.candidate.layers
-        .slice(this.layer + 1)
-        .flatMap((layer: Field[]): string[] =>
-          layer.flatMap((field: Field): string[] =>
-            field.search(this.regex, this.unitsLimit()).fragment(context)
-          )
-        ),
-    ];
+  public override *fragment(context: number): Generator<string> {
+    yield* super.fragment(context);
+    for (const layer of this.candidate.layers.slice(this.layer + 1)) {
+      for (const field of layer) {
+        yield* field.search(this.regex, this.unitsLimit()).fragment(context);
+      }
+    }
   }
 
   /**
@@ -1337,7 +1345,7 @@ class LineSearchResult implements Result {
    * @param context
    * @returns
    */
-  public fragment(context: number): string[] {
+  public *fragment(context: number): Generator<string> {
     // Expand each match to full words, merging overlapping ranges as we go.
     // Word expansion can make the ranges of distinct matches overlap (for
     // example, two matches that fall within the same word), and we want a
@@ -1355,13 +1363,13 @@ class LineSearchResult implements Result {
       }
     }
 
-    return ranges.map(({ start, end }: Range): string =>
-      browser.fragment(
+    for (const { start, end } of ranges) {
+      yield browser.fragment(
         this.text.substring(start, end),
         this.text.substring(this.traverseContext(start, context, -1), start),
         this.text.substring(end, this.traverseContext(end, context, 1))
-      )
-    );
+      );
+    }
   }
 
   /**

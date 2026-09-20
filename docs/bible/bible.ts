@@ -143,12 +143,13 @@ class SearchResult extends xoox.SearchResult {
    * @param context - Words of surrounding context per fragment.
    * @returns The text fragments for matches in active dialects.
    */
-  public override fragment(context: number): string[] {
-    return this.results.flatMap((r: xoox.FieldSearchResult): string[] =>
-      SearchResult.inactive?.includes(r.name as dial.Code)
-        ? []
-        : r.fragment(context)
-    );
+  public override *fragment(context: number): Generator<string> {
+    for (const r of this.results) {
+      if (SearchResult.inactive?.includes(r.name as dial.Code)) {
+        continue;
+      }
+      yield* r.fragment(context);
+    }
   }
 
   /**
