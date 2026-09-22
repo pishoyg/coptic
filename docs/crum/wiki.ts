@@ -1093,11 +1093,9 @@ export class Citation {
    *
    * @param remainder - The text remaining after the book abbreviation and the
    *   chapter/verse match (if any) were consumed.
-   * @param next - The sibling node that follows the text containing this
-   *   citation. Used as a signal by the disambiguation heuristic.
    * @returns
    */
-  public valid(remainder?: string, next?: Node | null): boolean {
+  public valid(remainder?: string): boolean {
     // NOTE: In most cases, we deliberately don't reject citations whose chapter
     // is missing from the Bible index — `anchor()` handles that case by
     // annotating with a tooltip but no hyperlink, and logging a warning.
@@ -1133,45 +1131,11 @@ export class Citation {
       return !this.chapter || (this.knownChapter() && !!this.verse);
     }
 
-    // "Is" and "He" are also English words that often occur in the text.
-    // This heuristic is based on known examples (#524), but other cases might
-    // turn up in the text that violate these rules. See #709.
-    // The check is skipped when the parse context is not provided.
-    // Where it rejects a true positive — a book cited bare, as in
-    // "Ps 62 2 (S ⲉ-), Is Hos l l c" (14) or "2 Cor He Thes" (31) — label it
-    // manually, repeating the abbreviation as the key: `{Is}{Is}`, `{He}{He}`.
-    // Manual labels bypass this method entirely, so the key restores the
-    // citation the heuristic threw away.
-    if (['He', 'Is'].includes(this.abb)) {
-      if (remainder === undefined) {
-        // We can not detect false positives without the context. Assume true
-        // positive.
-        return true;
-      }
-
-      if (this.chapter) {
-        // Followed by a chapter — true positive.
-        return true;
-      }
-
-      if (
-        [')', ' Kropp', ' om ', ' l c'].some((token: string): boolean =>
-          remainder.startsWith(token)
-        )
-      ) {
-        return true;
-      }
-
-      if (
-        remainder === ' ' &&
-        next?.nodeType === Node.ELEMENT_NODE &&
-        (next as Element).classList.contains(cls.DIALECT)
-      ) {
-        return true;
-      }
-
-      // Otherwise, false positive.
-      return false;
+    // "He" is also an English word. Whenever it's not followed by a chapter
+    // number or by 'l c', it's the English word.
+    // The few exceptions to this rule have been labelled manually.
+    if (this.abb === 'He') {
+      return !!this.chapter || !!remainder?.startsWith(' l c');
     }
 
     return true;
@@ -1332,7 +1296,7 @@ function replaceBible(context: html.Context): boolean {
     key
   );
 
-  if (!cit.valid(right, context.nextSibling)) {
+  if (!cit.valid(right)) {
     return false;
   }
 
@@ -1434,10 +1398,6 @@ function* suffixFollowups(context: html.Context): Generator<Node | string> {
 function replaceReference(context: html.Context): void {
   const key: string = context.match[0];
   const suffix: string | undefined = SUFFIX.exec(context.right)?.[0];
-  if (key === 'My' && !suffix && !context.right.startsWith(')')) {
-    // False positive.
-    return;
-  }
 
   const span: HTMLSpanElement = ref.MAPPING[key]!.span(
     context.munch(),
@@ -1529,11 +1489,11 @@ function walk(root: Node): Node[] {
  *    is why raising the recall of the higher-priority types also raises
  *    annotation precision (see the `noCaseVariant` note in `annotations.ts`).
  * 2. When a heuristic *declines* a match — a false-positive `Is`, `He`
- *    (`Citation.valid`), or `My` (`replaceReference`) — the token is passed
- *    over silently and no alternative reading is attempted. Only the ambiguous
- *    abbreviations listed below fall back from Bible to Reference. A wrong
- *    refusal therefore leaves no trace in the console: the only way to catch it
- *    is to read the text that came out unmarked.
+ *    (`Citation.valid`) — the token is passed over silently and no alternative
+ *    reading is attempted. Only the ambiguous abbreviations listed below fall
+ *    back from Bible to Reference. A wrong refusal therefore leaves no trace in
+ *    the console: the only way to catch it is to read the text that came out
+ *    unmarked.
  *
  * @param context
  */
