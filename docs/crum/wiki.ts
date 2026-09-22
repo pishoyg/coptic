@@ -1399,7 +1399,8 @@ function replaceReference(context: html.Context): void {
   const key: string = context.match[0];
   const suffix: string | undefined = SUFFIX.exec(context.right)?.[0];
 
-  const span: HTMLSpanElement = ref.MAPPING[key]!.span(
+  const reference: ref.Reference = ref.MAPPING[key]!;
+  const span: HTMLSpanElement = reference.span(
     context.munch(),
     suffix ? [...context.munch(suffix.length), ...suffixFollowups(context)] : []
   );
@@ -2161,27 +2162,24 @@ function previous(node: Node | null): Node | null {
 
 /**
  *
- * @param node
- * @param context
+ * @param start
  */
-function* backtrack(
-  node: Node | null,
-  context?: html.Context
-): Generator<Node> {
+function* backtrack(start: Node | html.Context | null): Generator<Node> {
   // Candidates are gathered from two roots, because the preceding elements are
   // split across two trees at this point in enrichment:
   // 1. The already-enriched elements of the CURRENT chain live in the
   //    in-progress `fragment`, which is detached from the document until
   //    `replaceNodes` splices it back at the very end. A DOM walk rooted at
-  //    `node` (the `ib` element, still in the live tree) therefore cannot see
-  //    them, so we take them directly: `elem` (the closest) and its
-  //    predecessors within the fragment.
-  //    This walk only applies when a `context` is given. Manually-marked
-  //    elements are enriched outside the chain machinery, after all preceding
-  //    chains have been spliced back into the live tree, so they have no
-  //    in-progress fragment and pass none.
+  //    the chain's first node (still in the live tree) therefore cannot see
+  //    them, so we take them directly: the fragment's last child (the
+  //    closest) and its predecessors.
+  //    This walk only applies when `start` is an `html.Context`.
+  //    Manually-marked elements are enriched outside the chain machinery,
+  //    after all preceding chains have been spliced back into the live tree,
+  //    so they have no in-progress fragment and pass a plain `Node`.
   // 2. Everything before this chain — earlier siblings and paragraphs — is
-  //    still in the live document and is reached by walking up from `node`.
+  //    still in the live document and is reached by walking up from `start`,
+  //    or from the context's first node.
   //
   // The two walks cannot overlap: walk 1 ranges only over the detached
   // fragment, walk 2 only over the live document, and a node belongs to exactly
@@ -2199,16 +2197,19 @@ function* backtrack(
   // antecedents (the wrapper's interior is its own chain) sitting at the
   // fragment's top level. Wrappers stay intact only in the live tree, which is
   // why only walk 2 has to climb out of and step over them.
-  for (
-    let child: Node | null | undefined = context?.fragmentLastChild;
-    child;
-    child = child.previousSibling
-  ) {
-    yield child;
+  if (start instanceof html.Context) {
+    for (
+      let child: Node | null = start.fragmentLastChild;
+      child;
+      child = child.previousSibling
+    ) {
+      yield child;
+    }
+    start = start.first();
   }
 
-  while ((node = previous(node))) {
-    yield node;
+  while ((start = previous(start))) {
+    yield start;
   }
 }
 
@@ -2319,17 +2320,19 @@ const MAX_CANDIDATES = 3;
  * @param anaphor
  * @param predicate
  *
+ * @param max
  * @returns
  */
 function linkMatching(
-  start: HTMLElement | null,
+  start: Node | html.Context | null,
   anaphor: HTMLElement,
-  predicate: (_: HTMLElement) => boolean
+  predicate: (_: HTMLElement) => boolean,
+  max: number = MAX_CANDIDATES
 ): void {
   // We consider all candidates, regardless of parentheses.
   const candidate: HTMLElement | undefined = backtrack(start)
     .filter(antecede)
-    .take(MAX_CANDIDATES)
+    .take(max)
     .find(predicate);
 
   if (!candidate) {
@@ -2395,18 +2398,13 @@ function linkMatching(
  *   have already been spliced back into the live tree (no fragment to consult).
  * @returns the antecedent, or null if none precedes `start`.
  */
-function findAntecedent(start: Node | null | html.Context): HTMLElement | null {
-  const candidates: Iterable<Node> =
-    start instanceof html.Context
-      ? backtrack(start.first(), start)
-      : backtrack(start);
-
+function findAntecedent(start: Node | html.Context | null): HTMLElement | null {
   // The nearest candidate, once the walk has found one buried in a parenthesis
   // and gone on looking for the outer one that may override it.
   let nearest: HTMLElement | null = null;
   let nest: Nesting = { depth: 0, enclosed: false };
 
-  for (const node of candidates) {
+  for (const node of backtrack(start)) {
     if (antecede(node)) {
       if (nest.depth === 0 || nest.enclosed) {
         // The walk stands at the anaphor's own level, so this candidate is the
