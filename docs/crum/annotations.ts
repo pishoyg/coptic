@@ -475,7 +475,7 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'ultimo', variants: ['ult'], suffix: true },
   { fullForm: 'uncatalogued', variants: ['uncatal'], suffix: true },
   { fullForm: 'unpublished', variants: ['unpubl'], suffix: true },
-  { fullForm: 'ut supra', variants: ['ut sup'], suffix: true },
+  { fullForm: 'ut supra', variants: ['ut sup'] },
   { fullForm: 'verbal', variants: ['vbal'] },
   { fullForm: 'verbs', variants: ['vbs'] },
   { fullForm: 'videlicet', variants: ['viz'] },
