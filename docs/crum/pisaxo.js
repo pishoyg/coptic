@@ -191,6 +191,7 @@ export const DATA = [
     "title": "MSS. in the Staats(<i>olim</i> Kgl.)bibliothek, Berlin (Crum’s copies)",
     "description": null,
     "variants": [
+      "Berl",
       "Berl Or",
       "Berl.Or"
     ]
