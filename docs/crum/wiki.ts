@@ -1954,13 +1954,6 @@ function handleManualAux(manual: HTMLElement): Iterable<Node> | Node {
  * @returns
  */
 function replaceIB(context: html.Context): void {
-  // NOTE: The antecedent must be resolved BEFORE the 'ib' is munched.
-  // `findAntecedent` walks the live tree starting at `context.first()`, which
-  // is the chain's first UNCONSUMED node. Munching an 'ib' that is the last
-  // node of its chain empties the chain, and `Chain.first` then returns
-  // undefined (it asserts non-null on an `at(-1)` that has nothing to return).
-  // `backtrack` short-circuits on that undefined, skipping the live-tree walk
-  // in its entirety and silently reporting no antecedent.
   const antecedent: HTMLElement | null = findAntecedent(context);
 
   // We expect the 'ib' match to be a clean 'ib' element.
@@ -2148,7 +2141,12 @@ function replaceAnaphor(
  * @param node
  * @returns
  */
-function previous(node: Node | null): Node | null {
+function previous(
+  node: {
+    readonly previousSibling: Node | null;
+    readonly parentElement: HTMLElement | null;
+  } | null
+): Node | null {
   // Try the element's previous sibling.
   return (
     node?.previousSibling ??
@@ -2193,8 +2191,10 @@ function* backtrack(start: Node | html.Context | null): Generator<Node> {
   //    after all preceding chains have been spliced back into the live tree,
   //    so they have no in-progress fragment and pass a plain `Node`.
   // 2. Everything before this chain — earlier siblings and paragraphs — is
-  //    still in the live document and is reached by walking up from `start`,
-  //    or from the context's first node.
+  //    still in the live document and is reached by walking up from `start`.
+  //    A context stands in for the chain as a whole, whose position in the
+  //    live tree is fixed at construction. (The chain's own nodes won't do: a
+  //    chain munched to its end has none left.)
   //
   // The two walks cannot overlap: walk 1 ranges only over the detached
   // fragment, walk 2 only over the live document, and a node belongs to exactly
@@ -2220,11 +2220,10 @@ function* backtrack(start: Node | html.Context | null): Generator<Node> {
     ) {
       yield child;
     }
-    start = start.first();
   }
 
-  while ((start = previous(start))) {
-    yield start;
+  for (let node: Node | null = previous(start); node; node = previous(node)) {
+    yield node;
   }
 }
 
@@ -2408,7 +2407,7 @@ function linkMatching(
  *
  * @param start - one of two forms, matching the two ways anaphors are enriched:
  * - An `html.Context`, for elements enriched inside the chain machinery. The
- *   walk begins at `context.first()` and additionally consults the fragment.
+ *   walk begins at the chain and additionally consults the fragment.
  * - A plain `Node`, for manually-marked elements enriched after their chains
  *   have already been spliced back into the live tree (no fragment to consult).
  * @returns the antecedent, or null if none precedes `start`.

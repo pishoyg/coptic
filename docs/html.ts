@@ -194,6 +194,7 @@ export class Chain {
   private readonly parentNode: Node;
   public readonly previousSibling: Node | null;
   public readonly nextSibling: Node | null;
+  public readonly parentElement: HTMLElement | null;
 
   /**
    * @param nodes
@@ -202,6 +203,7 @@ export class Chain {
     this.previousSibling = nodes[0]?.previousSibling ?? null;
     this.nextSibling = nodes[nodes.length - 1]?.nextSibling ?? null;
     this.parentNode = nodes[0]!.parentNode!;
+    this.parentElement = nodes[0]?.parentElement ?? null;
     // NOTE: `reverse` mutates the caller's array in place. This is OK for now
     // because the only caller discards the array right after constructing us.
     this.reversed = nodes.reverse();
@@ -210,7 +212,7 @@ export class Chain {
   /**
    * @returns
    */
-  public first(): Node {
+  private first(): Node {
     return this.reversed.at(-1)!;
   }
 
@@ -313,13 +315,6 @@ export class Context {
   }
 
   /**
-   * @returns
-   */
-  public first(): Node {
-    return this.chain.first();
-  }
-
-  /**
    * Consumes `length` characters from the chain and appends them to the
    * fragment.
    *
@@ -375,6 +370,13 @@ export class Context {
    */
   public get previousSibling(): Node | null {
     return this.chain.previousSibling;
+  }
+
+  /**
+   * @returns The parent element of the chain.
+   */
+  public get parentElement(): HTMLElement | null {
+    return this.chain.parentElement;
   }
 
   /**
