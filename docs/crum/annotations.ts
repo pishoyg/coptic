@@ -147,6 +147,7 @@ export const DATA: Abbreviation[] = [
   // encountered as an abbreviation for 'Genitive'.
   { fullForm: 'genitive', variants: ['gen'], noCaseVariant: true },
   { fullForm: 'Greek', variants: ['Gk'], noCaseVariant: true },
+  { fullForm: 'geographical', variants: ['geogr'], noCaseVariant: true },
   // NOTE: 'inf' is a source of false positives, as it sometimes means
   // 'infinitive'.
   { fullForm: 'infra', variants: ['inf', 'infra'], suffix: true },
