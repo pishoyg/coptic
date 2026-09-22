@@ -1024,20 +1024,30 @@ export class Citation {
     elem.dataset[Citation.DATA_CHAPTER] = this.chapter ?? '';
     elem.dataset[Citation.DATA_VERSE] = this.verse ?? '';
     const tooltip: (Node | string)[] = [];
-    if (ann.ib(elem.textContent)) {
-      tooltip.push(ann.ibidem(), ': ');
+    if (elem.textContent.endsWith(LOCO_CITATO)) {
+      // The numbers are all inherited, so we spell them out, parenthesized.
+      const annot: ann.Annotation = ann.MAPPING[LOCO_CITATO.trim()]!;
+      const numbers: string | undefined = this.numbers();
+      tooltip.push(this.book.name, ' ', html.maybeI(annot.fullForm, true));
+      if (numbers) {
+        tooltip.push(` (${numbers})`);
+      }
+    } else {
+      if (ann.ib(elem.textContent)) {
+        tooltip.push(ann.ibidem(), ': ');
+      }
+      tooltip.push(
+        // If this citation is explicit (all numbers are present in `raw`),
+        // then including them in the tooltip would be redundant.
+        // However, if some numbers are inherited, we include the numbers in
+        // the tooltip for readability.
+        // We also include the numbers if the verse number is a suffix, so we
+        // can spell it out.
+        !this.explicit || (this.verse && this.verse in ann.MAPPING)
+          ? this.name()
+          : this.book.name
+      );
     }
-    tooltip.push(
-      // If this citation is explicit (all numbers are present in `raw`), then
-      // including them in the tooltip would be redundant.
-      // However, if some numbers are inherited, we include the numbers in the
-      // tooltip for readability.
-      // We also include the numbers if the verse number is a suffix, so we can
-      // spell it out.
-      !this.explicit || (this.verse && this.verse in ann.MAPPING)
-        ? this.name()
-        : this.book.name
-    );
     tool.addTooltip(elem, tooltip, [cls.BIBLE]);
     return elem;
   }
@@ -1082,19 +1092,23 @@ export class Citation {
    * to.
    */
   public name(): string {
-    let name = this.book.name;
-    if (!this.chapter) {
-      return name;
-    }
-    name = `${name} ${this.chapter}`;
-    if (!this.verse) {
-      return name;
+    const numbers: string | undefined = this.numbers();
+    return numbers ? `${this.book.name} ${numbers}` : this.book.name;
+  }
+
+  /**
+   * @returns The chapter and verse, spelled out, or undefined if the citation
+   * has no chapter.
+   */
+  private numbers(): string | undefined {
+    if (!this.chapter || !this.verse) {
+      return this.chapter;
     }
     const annot: ann.Annotation | undefined = ann.MAPPING[this.verse];
     if (annot) {
-      return `${name} ${annot.fullForm}`;
+      return `${this.chapter} ${annot.fullForm}`;
     }
-    return `${name}:${this.verse}`;
+    return `${this.chapter}:${this.verse}`;
   }
 
   /**
@@ -1961,6 +1975,8 @@ function handleManualAux(manual: HTMLElement): Iterable<Node> | Node {
   if (match) {
     // We can infer the reference from the text.
     const reference: ref.Reference = ref.MAPPING[match[0]]!;
+    // TODO: (#0) Split the manual label into two pieces: the key, and the
+    // suffix. This should allow you to add suffix annotations in this branch.
     const span: HTMLSpanElement = reference.span(manual.childNodes);
     locoCitato(
       manual,
