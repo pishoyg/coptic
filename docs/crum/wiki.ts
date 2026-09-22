@@ -406,8 +406,6 @@ const SUFFIX = new RegExp(
   'u'
 );
 
-const LOCO_CITATO = /\bl c\b/;
-
 /**
  * CHAPTER_VERSE defines the regex used to parse the chapter and verse numbers
  * in a Bible citation.
@@ -950,6 +948,18 @@ export class Citation {
   }
 
   /**
+   *
+   * @param span
+   */
+  public inherit(span: HTMLSpanElement): void {
+    this.explicit = false;
+    const cit: Citation = Citation.fromAnchor(span);
+    log.ensure(this.book === cit.book);
+    this.chapter = cit.chapter;
+    this.verse = cit.verse;
+  }
+
+  /**
    * If the chapter is undefined, we return false.
    *
    * @returns
@@ -1280,6 +1290,8 @@ function parseBibleFollowups(
   }
 }
 
+const LOCO_CITATO = ' l c';
+
 /**
  *
  * @param context - A context whose `match` field is a Bible key.
@@ -1300,6 +1312,28 @@ function replaceBible(context: html.Context): boolean {
 
   if (!cit.valid(right)) {
     return false;
+  }
+
+  if (!match && RegExp(`${LOCO_CITATO}\\b`).test(context.remainder)) {
+    const antecedent: HTMLElement | undefined = backtrack(context)
+      .filter(antecede)
+      .find(cit.sameBook.bind(cit));
+    if (antecedent) {
+      cit.inherit(antecedent);
+      const anchor = cit.anchor(
+        ...context.munch(key.length + LOCO_CITATO.length)
+      );
+      context.insert(anchor);
+      link(anchor, antecedent);
+      // Loco Citato Bible citations have no followups. We can return
+      // immediately.
+      return true;
+    } else {
+      log.error(
+        "Unable to find antecedent for Bible 'l c' citation at",
+        context.remainder
+      );
+    }
   }
 
   // NOTE: This citation's anchor must be built before parsing followups,
@@ -1408,7 +1442,7 @@ function locoCitato(
   if (!suffix) {
     return;
   }
-  if (!LOCO_CITATO.test(suffix)) {
+  if (!/\bl c\b/.test(suffix)) {
     return;
   }
   const before: string = suffix.replace(/\bl c\b.*/, '').trim();
