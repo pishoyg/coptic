@@ -28,10 +28,8 @@ import * as log from '../../docs/logger.js';
 import * as tool from '../../docs/tooltip.js';
 import * as params from '../../docs/params.js';
 import * as css from '../../docs/css.js';
-// Types only: the engine itself has to be loaded at run time, after a DOM
-// exists. See the NOTE in `generate`.
-import type * as engine from '../../docs/crum/wiki.js';
-import type * as references from '../../docs/crum/references.js';
+import * as wiki from '../../docs/crum/wiki.js';
+import * as ref from '../../docs/crum/references.js';
 
 const PATH: string = fileURLToPath(import.meta.url);
 const DIRNAME: string = path.dirname(PATH);
@@ -244,16 +242,6 @@ const NO_LINK = 'NO-LINK';
 const BASE_URL = 'http://localhost';
 
 /**
- * The two engine classes that read an enriched element back into the decision
- * it was built from. They arrive as an argument because the engine can only be
- * loaded once a DOM exists; see the NOTE in `generate`.
- */
-interface Engine {
-  readonly citation: typeof engine.Citation;
-  readonly reference: typeof references.Reference;
-}
-
-/**
  * Install an empty DOM as the global one. Called once per process.
  *
  * NOTE: The document's own address only has to be well-formed. Nothing on the
@@ -324,19 +312,14 @@ class Serializer {
   /** The page being serialized, for error messages. */
   private readonly key: string;
 
-  /** See `Engine`. */
-  private readonly engine: Engine;
-
   /**
    * NOTE: Fields are assigned explicitly rather than declared as constructor
    * parameter properties, which Node's strip-only TypeScript loader rejects.
    *
    * @param key - See `key`.
-   * @param engine - See `engine`.
    */
-  public constructor(key: string, engine: Engine) {
+  public constructor(key: string) {
     this.key = key;
-    this.engine = engine;
     document
       .querySelectorAll<HTMLElement>(`.${tool.CLS.TOOLTIP}[popover]`)
       .forEach((tip: HTMLElement): void => {
@@ -597,7 +580,7 @@ class Serializer {
     }
 
     if (kind === cls.REFERENCE) {
-      return `${kind}: ${this.engine.reference.fromSpan(el).key()}`;
+      return `${kind}: ${ref.Reference.fromSpan(el).key()}`;
     }
 
     if (kind === cls.ANNOTATION) {
@@ -638,7 +621,7 @@ class Serializer {
    * also warns `Bible citation references unknown chapter` for each of those.
    */
   private bible(el: HTMLElement): string {
-    if (!this.engine.citation.tagged(el)) {
+    if (!wiki.Citation.tagged(el)) {
       // A `.bible` element carrying no citation data is an unnumbered book
       // link. See `Citation.tagged`.
       const href: string | null = el.getAttribute('href');
@@ -651,7 +634,7 @@ class Serializer {
       return books.join(' ');
     }
 
-    const name: string = this.engine.citation.fromAnchor(el).name();
+    const name: string = wiki.Citation.fromAnchor(el).name();
     // `Citation.anchor` builds a plain span, rather than an anchor, in exactly
     // the case it declines to link. See `NO_LINK`.
     // TODO: (#778) Mark unknown verses too. Only the chapter is checked against
@@ -736,18 +719,8 @@ function keys(): string[] {
  *
  * @param pages - Page keys.
  */
-async function generate(pages: readonly string[]): Promise<void> {
-  // The engine has to be imported *after* a DOM exists: `docs/crum/mode.js`,
-  // pulled in transitively, calls `document.getElementById` at module scope.
-  // TODO: (#0) Fix this anti-pattern, and import the engine in the top-level
-  // scope.
+function generate(pages: readonly string[]): void {
   install();
-  const wiki = await import('../../docs/crum/wiki.js');
-  const refs = await import('../../docs/crum/references.js');
-  const engine: Engine = {
-    citation: wiki.Citation,
-    reference: refs.Reference,
-  };
 
   for (const key of pages) {
     const file: string = path.join(LEXICON_DIR, `${key}.html`);
@@ -758,7 +731,7 @@ async function generate(pages: readonly string[]): Promise<void> {
       log.error('Failed to enrich', key, 'Cause:', cause);
     }
     // Some pages don't contain a `.wiki` element.
-    const text: string = new Serializer(key, engine).page();
+    const text: string = new Serializer(key).page();
     if (text) {
       fs.writeFileSync(path.join(OUTPUT_DIR, `${key}.txt`), text, 'utf8');
     }
@@ -781,13 +754,13 @@ async function main(): Promise<void> {
     const mine: readonly string[] = keys().filter(
       (_: string, i: number): boolean => i % jobs === index
     );
-    await generate(mine);
+    generate(mine);
     return;
   }
 
   if (args.length) {
     // Named pages, for a spot check. Leaves the rest of the dump alone.
-    await generate(args);
+    generate(args);
     return;
   }
 

@@ -22,9 +22,12 @@ export { type Mode, DIGITAL, BOOK, DAWOUD };
 const MODES: Mode[] = [DIGITAL, BOOK, DAWOUD];
 const DEFAULT: Mode = DIGITAL;
 
-const box: HTMLInputElement = document.getElementById(
-  id.SEARCH_BOX
-) as HTMLInputElement;
+/**
+ * @returns
+ */
+function searchBox(): HTMLInputElement {
+  return document.getElementById(id.SEARCH_BOX) as HTMLInputElement;
+}
 
 /**
  * Switch to the given mode: update the body class and URL parameter, and
@@ -46,7 +49,7 @@ export function set(mode: Mode): void {
     // appear, since that would cover the page.
     return;
   }
-  box.focus();
+  searchBox().focus();
 }
 
 /**
@@ -67,9 +70,8 @@ export function active(mode: Mode): boolean {
  * mode buttons.
  */
 export function init(): void {
-  // Restore the memorised query and wire the search box before we apply a
-  // mode, so that the very first `set` call can hand focus back to the
-  // search box via `box.focus()`.
+  const box: HTMLInputElement = searchBox();
+  // Restore the memorised query.
   // Only override the search box when the URL carries a query. Otherwise we
   // could clobber input that the user has already typed into the box.
   const query: string | null = browser.getParam(params.QUERY);
