@@ -106,6 +106,7 @@ key, and anything it does not cover must be read there.
 | `⟦text⟧{bible: Job 3:16}` | Book, chapter and verse in full. An `ib` that inherited the wrong chapter shows here. A book Crum left unnumbered resolves to no citation and lists the candidate books instead. |
 | `⟦text⟧{annotation: noun}` | An annotation, in full form. |
 | `⟦text⟧{page: 82a}` | A Crum page reference and the scan it resolved to. |
+| `⟦text⟧{…}↶n` | An anaphor, linked to the Bible or reference span `n` such spans back in the dump — `↶1` is the one immediately before. Read off what hovering the anaphor highlights, so it is the link the reader sees. Follow the hops to trace a chain. A `↶2` or more means the walk stepped over a nearer citation: always check why. |
 | `⟦;⟧` | A semicolon separating groups in meaning or usage. It carries no resolution because it always means the same thing. |
 | `⌈text«note»⌉` | Footnoted text, and the footnote — itself enriched. |
 | `--old--` `++new++` `«Addenda (xvii ‹b›)»` | An addendum: what Crum removed, what he added, and the Additions page it came from. |

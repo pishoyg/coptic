@@ -518,7 +518,7 @@ const BIBLE_RE = new RegExp(
   'u'
 );
 
-enum EVENT {
+export enum EVENT {
   VISIT = 'visit',
   LEAVE = 'leave',
 }
@@ -2212,7 +2212,7 @@ function* backtrack(
   }
 }
 
-const ANTECEDENTS: string[] = [cls.BIBLE, cls.REFERENCE];
+export const ANTECEDENTS: readonly string[] = [cls.BIBLE, cls.REFERENCE];
 const ANTECEDENT_QUERY: string = css.disjunction(...ANTECEDENTS);
 
 /**

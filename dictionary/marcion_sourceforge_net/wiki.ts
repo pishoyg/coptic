@@ -55,6 +55,9 @@ const SHARD_RE = new RegExp(`^${RegExp.escape(SHARD_FLAG)}=(\\d+)/(\\d+)$`);
  * enrichment path reads it.
  */
 const DOM_GLOBALS: readonly string[] = [
+  // Node.js has a `CustomEvent` of its own, which jsdom's `dispatchEvent`
+  // rejects.
+  'CustomEvent',
   'DocumentFragment',
   'Element',
   'HTMLElement',
@@ -99,6 +102,12 @@ const KINDS: readonly string[] = [
   cls.PAGE,
   cls.SEMICOLON,
 ];
+
+/**
+ * Suffixed to an anaphor, followed by how many chainable spans back its
+ * antecedent is, counted in dump order. See `Serializer.antecedent`.
+ */
+const BACK = '↶';
 
 /**
  * The classes whose content is a foreign script. The script is evident from
@@ -312,6 +321,9 @@ class Serializer {
   /** The page being serialized, for error messages. */
   private readonly key: string;
 
+  /** The chainable spans serialized so far, in dump order. */
+  private readonly chainable: HTMLElement[] = [];
+
   /**
    * NOTE: Fields are assigned explicitly rather than declared as constructor
    * parameter properties, which Node's strip-only TypeScript loader rejects.
@@ -465,7 +477,10 @@ class Serializer {
     if (kind !== undefined) {
       const resolution: string | undefined = this.resolution(el, kind);
       const suffix: string = resolution === undefined ? '' : `{${resolution}}`;
-      return `⟦${this.nodes(el.childNodes)}⟧${suffix}`;
+      const back: string = wiki.ANTECEDENTS.includes(kind)
+        ? this.antecedent(el)
+        : '';
+      return `⟦${this.nodes(el.childNodes)}⟧${suffix}${back}`;
     }
 
     return this.wrapper(el);
@@ -645,6 +660,53 @@ class Serializer {
     // The former is arguably unnecessary, and would inflate the enricher's
     // Bible index without real value.
     return el.nodeName === 'A' ? name : `${NO_LINK}: ${name}`;
+  }
+
+  /**
+   * Record a chainable span, and read back the antecedent it is linked to.
+   *
+   * @param el - A chainable span, not yet recorded.
+   * @returns `BACK` followed by how many chainable spans back its antecedent
+   * sits, counting in dump order — `↶1` for the span immediately before — or
+   * the empty string if the span refers back to nothing.
+   *
+   * NOTE: The engine records a link nowhere but in a pair of event listeners
+   * (`link` in `docs/crum/wiki.ts`), so the link is read back the way a reader
+   * finds it: by hovering the anaphor, and seeing what lights up. Unlike the
+   * resolutions, this is a reading of the rendering rather than of the
+   * decision — but the link has no existence beyond that rendering.
+   *
+   * The highlight is transitive, so what lights up is the whole chain back to
+   * its head. Every link points strictly backwards in document order, so the
+   * direct antecedent is the last of those serialized. Only the direct one is
+   * printed; the chain is followed hop by hop.
+   *
+   * The count is taken in dump order rather than document order, because the
+   * dump is what it is read against. The two differ only where a popover's
+   * content is serialized inline, at its mark.
+   */
+  private antecedent(el: HTMLElement): string {
+    const lit = (): Set<HTMLElement> =>
+      new Set(document.querySelectorAll<HTMLElement>(css.c(cls.ANTECEDENT)));
+
+    el.dispatchEvent(new CustomEvent(wiki.EVENT.VISIT));
+    const chain: Set<HTMLElement> = lit();
+    el.dispatchEvent(new CustomEvent(wiki.EVENT.LEAVE));
+    // Sanity check: leaving undoes the visit.
+    log.ensure(!lit().size, 'Stale', cls.ANTECEDENT, 'on page', this.key);
+
+    // Every member of the chain must already have been serialized. A member
+    // yet to come — `el` itself included — is a forward link or a cycle.
+    log.ensure(
+      [...chain].every((c: HTMLElement): boolean => this.chainable.includes(c)),
+      'Antecedent chain not strictly backwards on page',
+      this.key
+    );
+    const distance: number =
+      this.chainable.length -
+      this.chainable.findLastIndex((c: HTMLElement) => chain.has(c));
+    this.chainable.push(el);
+    return chain.size ? `${BACK}${String(distance)}` : '';
   }
 
   /**
