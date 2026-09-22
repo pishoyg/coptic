@@ -1404,6 +1404,21 @@ function replaceReference(context: html.Context): void {
     context.munch(),
     suffix ? [...context.munch(suffix.length), ...suffixFollowups(context)] : []
   );
+  if (suffix && /\bl c\b/.test(suffix)) {
+    const before: string = suffix.replace(/\bl c\b.*/, '').trim();
+    const regex: RegExp | null = before ? new RegExp(`\\b${before}\\b`) : null;
+    linkMatching(
+      context,
+      span,
+      (candidate: HTMLElement): boolean => {
+        return (
+          reference.isChildOf(candidate) &&
+          (regex?.test(candidate.textContent) ?? true)
+        );
+      },
+      Infinity
+    );
+  }
 
   context.insert(span);
 }
@@ -1796,7 +1811,7 @@ function interpretKey(manual: HTMLElement, key: string): Iterable<Node> | Node {
     // The blast radius is extremely small and both modes
     // of failure are benign, so we pick the one that keeps the code simpler.
     // TODO: (#0) Consider ignoring non-load-bearing postfixes.
-    linkMatching(manual, span, reference.sameKey.bind(reference));
+    linkMatching(manual, span, reference.isSiblingOf.bind(reference));
     return span;
   }
 

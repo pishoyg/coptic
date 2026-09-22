@@ -179,11 +179,32 @@ export class Reference {
    *
    * @returns
    */
-  public sameKey(span: HTMLElement): boolean {
+  public isSiblingOf(span: HTMLElement): boolean {
     return (
       span.classList.contains(cls.REFERENCE) &&
       Reference.fromSpan(span).key() === this.key()
     );
+  }
+
+  /**
+   *
+   * @param span
+   * @returns
+   */
+  public isChildOf(span: HTMLElement): boolean {
+    if (!span.classList.contains(cls.REFERENCE)) {
+      return false;
+    }
+    const key: string[] = this.key().split(' ');
+    const parts = Reference.fromSpan(span).key().split(' ');
+    for (let i = 0; i + key.length <= parts.length; ++i) {
+      if (
+        parts.slice(i, i + key.length).every((val, idx) => key[idx] === val)
+      ) {
+        return true;
+      }
+    }
+    return false;
   }
 
   /**
