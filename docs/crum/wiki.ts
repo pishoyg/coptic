@@ -1488,12 +1488,11 @@ function walk(root: Node): Node[] {
  *    the variant to `bib.yaml` fixes the false positive at its source, which
  *    is why raising the recall of the higher-priority types also raises
  *    annotation precision (see the `noCaseVariant` note in `annotations.ts`).
- * 2. When a heuristic *declines* a match — a false-positive `Is`, `He`
- *    (`Citation.valid`) — the token is passed over silently and no alternative
- *    reading is attempted. Only the ambiguous abbreviations listed below fall
- *    back from Bible to Reference. A wrong refusal therefore leaves no trace in
- *    the console: the only way to catch it is to read the text that came out
- *    unmarked.
+ * 2. When a heuristic *declines* a match, the token is passed over silently and
+ *    no alternative reading is attempted. Only the ambiguous abbreviations
+ *    listed below fall back from Bible to Reference. A wrong refusal therefore
+ *    leaves no trace in the console: the only way to catch it is to read the
+ *    text that came out unmarked.
  *
  * @param context
  */
