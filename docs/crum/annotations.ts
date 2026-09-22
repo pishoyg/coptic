@@ -135,7 +135,7 @@ export const DATA: Abbreviation[] = [
     variants: ['do'],
     noCaseVariant: true,
   },
-  { fullForm: 'especially', variants: ['esp'], suffix: true },
+  { fullForm: 'especially', variants: ['esp'] },
   {
     fullForm: 'feminine',
     variants: ['f', 'Fem'],
