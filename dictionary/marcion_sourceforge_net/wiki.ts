@@ -324,14 +324,6 @@ class Serializer {
   /** The page being serialized, for error messages. */
   private readonly key: string;
 
-  /**
-   * Accumulator, from element signature to an example page. Shared across the
-   * shard this process serializes, so that one pass reports every offender it
-   * meets rather than dying on the first. Workers do not pool theirs, so a
-   * signature that occurs on several shards is reported once per shard.
-   */
-  private readonly unknown: Map<string, string>;
-
   /** See `Engine`. */
   private readonly engine: Engine;
 
@@ -340,16 +332,10 @@ class Serializer {
    * parameter properties, which Node's strip-only TypeScript loader rejects.
    *
    * @param key - See `key`.
-   * @param unknown - See `unknown`.
    * @param engine - See `engine`.
    */
-  public constructor(
-    key: string,
-    unknown: Map<string, string>,
-    engine: Engine
-  ) {
+  public constructor(key: string, engine: Engine) {
     this.key = key;
-    this.unknown = unknown;
     this.engine = engine;
     document
       .querySelectorAll<HTMLElement>(`.${tool.CLS.TOOLTIP}[popover]`)
@@ -587,16 +573,7 @@ class Serializer {
       case 'SPAN':
         return kids();
       default:
-        // Outside `KNOWN_TAGS`. `check` has already recorded it, and the run
-        // fails once every offender is collected — so do not die here, or one
-        // pass would only ever name the first.
-        log.ensure(
-          !KNOWN_TAGS.has(el.nodeName),
-          el.nodeName,
-          'known but not explicitly handled, on page',
-          this.key
-        );
-        return kids();
+        log.fatal(el.nodeName, 'not explicitly handled, on page', this.key);
     }
   }
 
@@ -717,7 +694,7 @@ class Serializer {
   }
 
   /**
-   * Record an element this serializer does not understand. See
+   * Fail on an element this serializer does not understand. See
    * `KNOWN_CLASSES`.
    *
    * @param el - An element.
@@ -725,20 +702,21 @@ class Serializer {
   private check(el: HTMLElement): void {
     // CSS-selector shape. The tag name is always present. Only offending
     // classes are included.
-    const strange: string = el.classList
-      .values()
-      .filter((c: string): boolean => !KNOWN_CLASSES.has(c))
-      .map(css.c)
-      .toArray()
-      .join('');
-    if (KNOWN_TAGS.has(el.nodeName) && !strange) {
-      // Familiar tag and familiar classes! Nothing to do!
-      return;
-    }
-    const signature: string = el.nodeName.toLowerCase() + strange;
-    // `this.unknown` maps a signature to an example key – it doesn't matter
-    // which one.
-    this.unknown.set(signature, this.key);
+    const strange: string = css.conjunction(
+      ...el.classList
+        .values()
+        .filter((c: string): boolean => !KNOWN_CLASSES.has(c))
+    );
+    log.ensure(
+      KNOWN_TAGS.has(el.nodeName) && !strange,
+      'Unknown element',
+      el.nodeName.toLowerCase() + strange,
+      'on page',
+      this.key,
+      '. Teach',
+      path.basename(PATH),
+      'how to serialize it, then regenerate.'
+    );
   }
 }
 
@@ -757,11 +735,8 @@ function keys(): string[] {
  * Enrich the given pages and write their dumps.
  *
  * @param pages - Page keys.
- * @returns Unknown element signatures encountered, to an example page.
  */
-async function generate(
-  pages: readonly string[]
-): Promise<Map<string, string>> {
+async function generate(pages: readonly string[]): Promise<void> {
   // The engine has to be imported *after* a DOM exists: `docs/crum/mode.js`,
   // pulled in transitively, calls `document.getElementById` at module scope.
   // TODO: (#0) Fix this anti-pattern, and import the engine in the top-level
@@ -774,7 +749,6 @@ async function generate(
     reference: refs.Reference,
   };
 
-  const unknown: Map<string, string> = new Map<string, string>();
   for (const key of pages) {
     const file: string = path.join(LEXICON_DIR, `${key}.html`);
     load(fs.readFileSync(file, 'utf8'));
@@ -784,32 +758,11 @@ async function generate(
       log.error('Failed to enrich', key, 'Cause:', cause);
     }
     // Some pages don't contain a `.wiki` element.
-    const text: string = new Serializer(key, unknown, engine).page();
+    const text: string = new Serializer(key, engine).page();
     if (text) {
       fs.writeFileSync(path.join(OUTPUT_DIR, `${key}.txt`), text, 'utf8');
     }
   }
-  return unknown;
-}
-
-/**
- * Report unknown elements and fail, if there are any.
- *
- * @param unknown - Signatures to an example page.
- */
-function report(unknown: ReadonlyMap<string, string>): void {
-  if (!unknown.size) {
-    return;
-  }
-  for (const [signature, key] of unknown) {
-    log.error('Unknown element', signature, 'on page', key);
-  }
-  log.fatal(
-    unknown.size,
-    'unknown element(s). Teach',
-    path.basename(PATH),
-    'how to serialize them, then regenerate.'
-  );
 }
 
 /**
@@ -828,13 +781,13 @@ async function main(): Promise<void> {
     const mine: readonly string[] = keys().filter(
       (_: string, i: number): boolean => i % jobs === index
     );
-    report(await generate(mine));
+    await generate(mine);
     return;
   }
 
   if (args.length) {
     // Named pages, for a spot check. Leaves the rest of the dump alone.
-    report(await generate(args));
+    await generate(args);
     return;
   }
 
