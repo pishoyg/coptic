@@ -406,6 +406,8 @@ const SUFFIX = new RegExp(
   'u'
 );
 
+const LOCO_CITATO = /\bl c\b/;
+
 /**
  * CHAPTER_VERSE defines the regex used to parse the chapter and verse numbers
  * in a Bible citation.
@@ -1392,6 +1394,40 @@ function* suffixFollowups(context: html.Context): Generator<Node | string> {
 
 /**
  *
+ * @param start
+ * @param span
+ * @param reference
+ * @param suffix
+ */
+function locoCitato(
+  start: Node | html.Context | null,
+  span: HTMLSpanElement,
+  reference: ref.Reference,
+  suffix: string | undefined
+): void {
+  if (!suffix) {
+    return;
+  }
+  if (!LOCO_CITATO.test(suffix)) {
+    return;
+  }
+  const before: string = suffix.replace(/\bl c\b.*/, '').trim();
+  const regex: RegExp | null = before ? new RegExp(`\\b${before}\\b`) : null;
+  linkMatching(
+    start,
+    span,
+    (candidate: HTMLElement): boolean => {
+      return (
+        reference.isChildOf(candidate) &&
+        (regex?.test(candidate.textContent) ?? true)
+      );
+    },
+    Infinity
+  );
+}
+
+/**
+ *
  * @param context
  * @returns
  */
@@ -1404,21 +1440,7 @@ function replaceReference(context: html.Context): void {
     context.munch(),
     suffix ? [...context.munch(suffix.length), ...suffixFollowups(context)] : []
   );
-  if (suffix && /\bl c\b/.test(suffix)) {
-    const before: string = suffix.replace(/\bl c\b.*/, '').trim();
-    const regex: RegExp | null = before ? new RegExp(`\\b${before}\\b`) : null;
-    linkMatching(
-      context,
-      span,
-      (candidate: HTMLElement): boolean => {
-        return (
-          reference.isChildOf(candidate) &&
-          (regex?.test(candidate.textContent) ?? true)
-        );
-      },
-      Infinity
-    );
-  }
+  locoCitato(context, span, reference, suffix);
 
   context.insert(span);
 }
@@ -1904,7 +1926,15 @@ function handleManualAux(manual: HTMLElement): Iterable<Node> | Node {
 
   if (match) {
     // We can infer the reference from the text.
-    return ref.MAPPING[match[0]]!.span(manual.childNodes);
+    const reference: ref.Reference = ref.MAPPING[match[0]]!;
+    const span: HTMLSpanElement = reference.span(manual.childNodes);
+    locoCitato(
+      manual,
+      span,
+      reference,
+      span.textContent.slice(match[0].length)
+    );
+    return span;
   }
 
   // This is a dangling suffix.
