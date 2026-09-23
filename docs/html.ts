@@ -205,7 +205,7 @@ export class Chain {
     this.parentNode = nodes[0]!.parentNode!;
     this.parentElement = nodes[0]?.parentElement ?? null;
     // NOTE: `reverse` mutates the caller's array in place. This is OK for now
-    // because the only caller discards the array right after constructing us.
+    // because callers discard the array right after constructing us.
     this.reversed = nodes.reverse();
   }
 
@@ -237,10 +237,16 @@ export class Chain {
    * Consumes and returns nodes corresponding to the first `length` characters.
    * Modifies the internal `nodes` array.
    *
-   * @param length - The length of the text to consume.
+   * @param length - The length of the text to consume. If omitted, the rest of
+   * the chain is consumed, including any nodes that bear no text.
    * @returns The consumed nodes.
    */
-  public munch(length: number): Node[] {
+  public munch(length?: number): Node[] {
+    if (length === undefined) {
+      // Consume the remainder of the chain, whatever its text.
+      return this.reversed.splice(0).reverse();
+    }
+
     const result: Node[] = [];
 
     while (length) {

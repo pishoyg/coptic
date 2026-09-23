@@ -1855,12 +1855,6 @@ function interpretKey(manual: HTMLElement, key: string): Iterable<Node> | Node {
     );
   }
 
-  // NOTE: We don't split the suffix out of manually-labeled references, the
-  // whole text inside the manual tag is treated as a reference name (which
-  // is not true).
-  // As of the time of writing, the only side effect of this bug is that
-  // annotations don't reflect in the tooltip (#666). This is OK, because
-  // the number of manually-marked references is very small anyway.
   // The key is explicit. The possibilities are:
   // 1. The key is a page in the book scan.
   // 2. The key is a reference abbreviation.
@@ -1892,7 +1886,7 @@ function interpretKey(manual: HTMLElement, key: string): Iterable<Node> | Node {
   // automatically, since one number is neither zero numbers nor two.
   const reference: ref.Reference | undefined = ref.MAPPING[key];
   if (reference) {
-    const span: HTMLSpanElement = reference.span(manual.childNodes);
+    const span: HTMLSpanElement = reference.span([], manual.childNodes);
     // NOTE: `sameKey` may be too strict.
     // Non-load-bearing postfixes may be better ignored in this comparison.
     // The blast radius is extremely small and both modes
@@ -1975,11 +1969,15 @@ function interpretKey(manual: HTMLElement, key: string): Iterable<Node> | Node {
  * @returns
  */
 function handleManualAux(manual: HTMLElement): Iterable<Node> | Node {
-  // NOTE: Manual labels don't support suffix annotations. No manually-labeled
-  // references with suffix annotations are present in the data, as of the time
-  // of writing.
-  // Even if such cases were to be introduced, their frequency would be too low
-  // to be worth addressing.
+  // NOTE: When a manual label resolves to a reference through an explicit key
+  // or an antecedent, we can't tell which part of its text (if any) names the
+  // source, so we pass the entire text as the reference's suffix, in order for
+  // suffix annotations to show in the tooltip. This risks a false positive if
+  // the text also spells out a source abbreviation that doubles as a suffix
+  // annotation. We accept that risk, because such labels usually consist
+  // entirely of a suffix, and the alternative is a known false negative.
+  // When the reference is inferred from the text, the source abbreviation is
+  // known, and is split out precisely.
   const key: string | undefined = manual.dataset[DATA_KEY];
 
   if (key !== undefined) {
@@ -1994,15 +1992,11 @@ function handleManualAux(manual: HTMLElement): Iterable<Node> | Node {
   if (match) {
     // We can infer the reference from the text.
     const reference: ref.Reference = ref.MAPPING[match[0]]!;
-    // TODO: (#0) Split the manual label into two pieces: the key, and the
-    // suffix. This should allow you to add suffix annotations in this branch.
-    const span: HTMLSpanElement = reference.span(manual.childNodes);
-    locoCitato(
-      manual,
-      span,
-      reference,
-      span.textContent.slice(match[0].length)
-    );
+    const chain: html.Chain = new html.Chain([...manual.childNodes]);
+    const content: Node[] = chain.munch(match[0].length);
+    const suffix: Node[] = chain.munch();
+    const span: HTMLSpanElement = reference.span(content, suffix);
+    locoCitato(manual, span, reference, suffix.map(html.textContent).join(''));
     return span;
   }
 
@@ -2030,6 +2024,7 @@ function dangle(
 
   if (antecedent.classList.contains(cls.REFERENCE)) {
     const anaphor: HTMLSpanElement = ref.Reference.fromSpan(antecedent).span(
+      [],
       manual.childNodes
     );
     link(anaphor, antecedent);
