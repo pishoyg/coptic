@@ -2126,16 +2126,23 @@ export const DATA = [
     ]
   },
   {
-    "title": "B. Turaief",
-    "description": null,
-    "variants": [
-      "Tur"
+    "title": "B. Turaief, Materiali &amp;c. (v AZ 40 150, Orient. Bibliographie xv, no. 111 a), acc. to numbers",
+    "description": [
+      "Turayev, B. A. (1902). <a href=\"https://babel.hathitrust.org/cgi/pt?id=chi.102555010&seq=389\">Коптскіе тексты, пріобрѣтенные экспедиціей пок. В. Г. Бока въ Египтѣ</a> [Coptic texts, acquired by the expedition of the late V. G. Bok in Egypt]. In <span class=\"title\">Труды одиннадцатаго Археологическаго Съѣзда въ Кіевѣ</span> (1899), т. II, pp. 225–246. Москва."
     ],
-    "postfixes": {
-      "M": "Materiali &amp;c. (v AZ 40 150, Orient. Bibliographie xv, no. 111 a), acc. to numbers <ul> <li>Turayev, B. A. (1902). <a href=\"https://babel.hathitrust.org/cgi/pt?id=chi.102555010&seq=389\">Коптскіе тексты, пріобрѣтенные экспедиціей пок. В. Г. Бока въ Египтѣ</a> [Coptic texts, acquired by the expedition of the late V. G. Bok in Egypt]. In <span class=\"title\">Труды одиннадцатаго Археологическаго Съѣзда въ Кіевѣ</span> (1899), т. II, pp. 225–246. Москва.</li> </ul>",
-      "Mat": "Materiali &amp;c. (v AZ 40 150, Orient. Bibliographie xv, no. 111 a), acc. to numbers <ul> <li>Turayev, B. A. (1902). <a href=\"https://babel.hathitrust.org/cgi/pt?id=chi.102555010&seq=389\">Коптскіе тексты, пріобрѣтенные экспедиціей пок. В. Г. Бока въ Египтѣ</a> [Coptic texts, acquired by the expedition of the late V. G. Bok in Egypt]. In <span class=\"title\">Труды одиннадцатаго Археологическаго Съѣзда въ Кіевѣ</span> (1899), т. II, pp. 225–246. Москва.</li> </ul>",
-      "O": "Koptskia Ostraka… Golenishtshef (= Bull. Acad. Imp. x, no. 5, 1899) <ul> <li>Turayev, B. A. (1899). <a href=\"https://www.biodiversitylibrary.org/item/94351#page/503/mode/1up\">Коптскія ostraca коллекціи В. С. Голенищева</a> [Coptic ostraca from the collection of V. S. Golenishchev]. <span class=\"title\">Bulletin de l’Académie Impériale des Sciences de St.-Pétersbourg</span>, 5e série, T. X, no. 5, pp. 435–449.</li> </ul>"
-    }
+    "variants": [
+      "Tur M",
+      "Tur Mat"
+    ]
+  },
+  {
+    "title": "B. Turaief, Koptskia Ostraka… Golenishtshef (= Bull. Acad. Imp. x, no. 5, 1899)",
+    "description": [
+      "Turayev, B. A. (1899). <a href=\"https://www.biodiversitylibrary.org/item/94351#page/503/mode/1up\">Коптскія ostraca коллекціи В. С. Голенищева</a> [Coptic ostraca from the collection of V. S. Golenishchev]. <span class=\"title\">Bulletin de l’Académie Impériale des Sciences de St.-Pétersbourg</span>, 5e série, T. X, no. 5, pp. 435–449."
+    ],
+    "variants": [
+      "Tur O"
+    ]
   },
   {
     "title": "Museo Archeol., Turin",
