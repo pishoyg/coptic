@@ -87,10 +87,11 @@ _HEADWORD_RE: regex.Pattern[str] = regex.compile(
     rf"{_HEADWORD_RE_AUX}|\({_HEADWORD_RE_AUX}\)",
 )
 
-# Matches an opening tag immediately followed by a space, which signals stray
-# leading whitespace inside an element.
-_SPACE_AFTER_TAG_RE: regex.Pattern[str] = regex.compile(
-    r"<(?!/)[^>]+> .*?</[^>]+>",
+# Matches a space at either end of an element — immediately after an opening
+# tag, or immediately before a closing one — along with the text on its side of
+# the tag, for context.
+_SPACE_AT_TAG_BORDER_RE: regex.Pattern[str] = regex.compile(
+    r"<(?!/)[^>]+> [^<]*|[^<>]* </[^>]+>",
 )
 
 
@@ -780,7 +781,8 @@ class Wiki:
         which may be empty.
 
         The rules below govern how one is written into the sheet. The first
-        two are enforced by `_validate_addendum_group`, and the last by the
+        is enforced by the ban on spaces at either end of an element (see
+        `html`), the second by `_validate_addendum_group`, and the last by the
         substitution's own pattern; 3 through 5 are matters of judgement, and
         are checked by review rather than by code.
 
@@ -839,12 +841,6 @@ class Wiki:
         return "".join(self.replace_addendum_aux(match))
 
     def _validate_addendum_group(self, group: str) -> None:
-        ensure.ensure(
-            not (group.startswith(" ") or group.endswith(" ")),
-            self,
-            "has an addendum group with a space on the boundary:",
-            group,
-        )
         # NOTE: An addendum may not contain a `\n`. Those are substituted by
         # paragraph boundaries, which would spill out of the addendum element
         # and corrupt the HTML.
@@ -947,11 +943,11 @@ class Wiki:
                 html,
             )
         # TODO: (#756) This check belongs in a shared package.
-        invalid_tags: list[str] = _SPACE_AFTER_TAG_RE.findall(html)
+        invalid_tags: list[str] = _SPACE_AT_TAG_BORDER_RE.findall(html)
         ensure.ensure(
             not invalid_tags,
             self,
-            "contains an opening tag immediately followed by a space:",
+            "contains a space at either end of an element:",
             invalid_tags,
         )
         return html
