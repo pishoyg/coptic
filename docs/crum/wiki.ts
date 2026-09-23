@@ -133,6 +133,7 @@ const DANGLING_SUFFIX_MARKERS: Record<string, boolean> = {
   as: true,
   also: true,
   but: true,
+  esp: true,
   paral: true,
   var: true,
   varr: true,
@@ -1194,11 +1195,12 @@ export class Citation {
 function replaceDanglingSuffix(context: html.Context): void {
   context.advance(); // Skip the match (if it's not skipped already).
 
-  const confident = !!DANGLING_SUFFIX_MARKERS[context.match[0]];
   // If we're confident that this marker precedes dangling suffixes, a single
-  // number suffices. Otherwise, we only treat it as a dangling suffix if two
-  // numbers follow.
-  const regex = new RegExp(`^(?: \\d+(?!/\\d)){${confident ? 1 : 2}}\\b`);
+  // number suffices. Otherwise, we only treat it as a dangling suffix if at
+  // least two numbers follow.
+  const regex: RegExp = DANGLING_SUFFIX_MARKERS[context.match[0]]
+    ? /^ \d+(?!\/\d)\b/
+    : /^ \d+,? \d+(?!\/\d)\b/;
   if (!regex.test(context.remainder)) {
     // Not a dangling suffix!
     return;
