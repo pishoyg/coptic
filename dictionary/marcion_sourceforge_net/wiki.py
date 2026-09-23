@@ -593,11 +593,11 @@ _SUBSTITUTIONS: list[Substitution] = [
     # long. The use of regular spaces besides non-breaking spaces ensures that
     # the spaces don't get collapsed, and that this long 6-character space is
     # actually breaking.
-    # NOTE: A trailing space inside a span gets moved outside it by Tidy. ATTOW,
-    # this is benign.
+    # A trailing space inside a span is banned, and gets moved outside it by
+    # Tidy anyway.
     Substitution(
         r"\\t",
-        f'<span class="{cls.TAB}">' + (page.NBSP + " ") * 3 + "</span>",
+        f'<span class="{cls.TAB}">{page.NBSP} {page.NBSP} {page.NBSP}</span> ',
         ban=["\\"],
     ),
 ]
