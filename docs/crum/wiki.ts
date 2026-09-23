@@ -505,6 +505,9 @@ const PAGE_FOLLOWUP_RE = new RegExp(`^(, )${NUM_COL_LINE}`);
 // the branch from hijacking the keys below it: a bare Roman page would swallow
 // `v` (*vide*), which is an annotation.
 const MANUAL_PAGE_RE = /^[0-9]+[ab]$/;
+// MANUAL_DISTANCE_RE matches a manual key giving the distance to the
+// antecedent.
+const MANUAL_DISTANCE_RE = /^[0-9]+$/;
 
 // Roman-numeral pages of the Preface and the List of Abbreviations in the
 // Crum book scan. The `Index` override table in `crum/book.ts` resolves
@@ -1838,6 +1841,16 @@ function interpretKey(manual: HTMLElement, key: string): Iterable<Node> | Node {
     return manual.childNodes;
   }
 
+  if (MANUAL_DISTANCE_RE.test(key)) {
+    return dangle(
+      manual,
+      backtrack(manual)
+        .filter(antecede)
+        .drop(Number(key) - 1)
+        .next().value
+    );
+  }
+
   // NOTE: We don't split the suffix out of manually-labeled references, the
   // whole text inside the manual tag is treated as a reference name (which
   // is not true).
@@ -1935,6 +1948,8 @@ function interpretKey(manual: HTMLElement, key: string): Iterable<Node> | Node {
  *   `{108 a 2 above}{108a}` (368) makes 'above' part of the link, so keep
  *   the span down to the page reference itself unless the wider text is
  *   meant to be clickable.
+ * - `{text}{2}` forces the antecedent of a dangling suffix, by distance (as
+ *   in the dump's `↶2`).
  * - `{text}`, with no key, infers: a reference if the text opens with one,
  *   otherwise a dangling suffix resolved against its antecedent.
  *
@@ -1988,11 +2003,22 @@ function handleManualAux(manual: HTMLElement): Iterable<Node> | Node {
   }
 
   // This is a dangling suffix.
+  return dangle(manual, findAntecedent(manual));
+}
+
+/**
+ *
+ * @param manual
+ * @param antecedent
+ * @returns
+ */
+function dangle(
+  manual: HTMLElement,
+  antecedent: HTMLElement | null | undefined
+): Iterable<Node> | Node {
   // There are two possibilities:
   // 1. The antecedent is a Bible citation.
   // 2. The antecedent is a reference.
-  const antecedent: HTMLElement | null = findAntecedent(manual);
-
   if (!antecedent) {
     log.error('Unable to find antecedent for dangling manual suffix', manual);
     return manual.childNodes;
