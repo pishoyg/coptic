@@ -2751,6 +2751,13 @@ export const DATA = [
     "title": null,
     "description": null,
     "variants": [
+      "Worrell Coptic Sounds"
+    ]
+  },
+  {
+    "title": null,
+    "description": null,
+    "variants": [
       "Wilkins"
     ]
   },
