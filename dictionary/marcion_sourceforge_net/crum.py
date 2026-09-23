@@ -881,22 +881,22 @@ class Root(Row):
         ):
             yield f'<div id="{ids.SISTERS}" class="{cls.SISTERS}">'
             if self.sisters:
-                yield "<i>See also: </i>"
+                yield "<i>See also:</i> "
                 yield f'<table class="{cls.SISTERS_TABLE}">'
                 yield from _mother().gather_aux(self.sisters)
                 yield "</table>"
             if self.greek_sisters:
-                yield "<i>Greek: </i>"
+                yield "<i>Greek:</i> "
                 yield f'<table class="{cls.SISTERS_TABLE}">'
                 yield from _stepmother().gather_aux(self.greek_sisters)
                 yield "</table>"
             if self.antonyms:
-                yield "<i>Opposite: </i>"
+                yield "<i>Opposite:</i> "
                 yield f'<table class="{cls.SISTERS_TABLE}">'
                 yield from _mother().gather_aux(self.antonyms)
                 yield "</table>"
             if self.homonyms:
-                yield "<i>Homonyms: </i>"
+                yield "<i>Homonyms:</i> "
                 yield f'<table class="{cls.SISTERS_TABLE}">'
                 yield from _mother().gather_aux(self.homonyms)
                 yield "</table>"

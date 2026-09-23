@@ -2,6 +2,7 @@
 
 import enum
 import functools
+import itertools
 import re
 import typing
 
@@ -93,9 +94,10 @@ class Line:
         self._assumed: list[bool] = []
 
         if normalize_optional:
-            self._forms = sum(
-                [self._normalize_optional_letters(f) for f in self._forms],
-                [],
+            self._forms = list(
+                itertools.chain.from_iterable(
+                    self._normalize_optional_letters(f) for f in self._forms
+                ),
             )
 
         if normalize_assumed:
@@ -231,7 +233,7 @@ class Line:
             )
         # For historical reasons, we use the class "spelling" to refer to forms.
         # TODO: (#0) Consider updating the class name.
-        f = _span(", ", [cls.COMMA]).join(
+        f = (_span(",", [cls.COMMA]) + " ").join(
             _span(f, [dict_cls.SPELLING] + self._dialects)
             for f in self.forms(parenthesize_assumed)
             if f

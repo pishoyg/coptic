@@ -490,11 +490,11 @@ class Word:
         for d, e, f in zip(de.senses, en.senses, fr.senses):
             assert d.identify() == e.identify() == f.identify()
             merged.start_sense(*d.identify())
-            for row in e.explain(f'<span class="{cls.LANG}">(En.) </span>'):
+            for row in e.explain(f'<span class="{cls.LANG}">(En.)</span> '):
                 merged.add(*row)
-            for row in d.explain(f'<span class="{cls.LANG}">(De.) </span>'):
+            for row in d.explain(f'<span class="{cls.LANG}">(De.)</span> '):
                 merged.add(*row)
-            for row in f.explain(f'<span class="{cls.LANG}">(Fr.) </span>'):
+            for row in f.explain(f'<span class="{cls.LANG}">(Fr.)</span> '):
                 merged.add(*row)
             for row in d.give_references():
                 merged.add(*row)
