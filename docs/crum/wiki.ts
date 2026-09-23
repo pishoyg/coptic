@@ -1027,9 +1027,9 @@ export class Citation {
     elem.dataset[Citation.DATA_CHAPTER] = this.chapter ?? '';
     elem.dataset[Citation.DATA_VERSE] = this.verse ?? '';
     const tooltip: (Node | string)[] = [];
-    if (elem.textContent.endsWith(LOCO_CITATO)) {
+    if (LC.test(elem.textContent)) {
       // The numbers are all inherited, so we spell them out, parenthesized.
-      const annot: ann.Annotation = ann.MAPPING[LOCO_CITATO.trim()]!;
+      const annot: ann.Annotation = ann.MAPPING[LOCO_CITATO]!;
       const numbers: string | undefined = this.numbers();
       tooltip.push(this.book.name, ' ', html.maybeI(annot.fullForm, true));
       if (numbers) {
@@ -1164,7 +1164,7 @@ export class Citation {
     // number or by 'l c', it's the English word.
     // The few exceptions to this rule have been labelled manually.
     if (this.abb === 'He') {
-      return !!this.chapter || !!remainder?.startsWith(' l c');
+      return !!this.chapter || LC_NEXT.test(remainder ?? '');
     }
 
     return true;
@@ -1307,7 +1307,11 @@ function parseBibleFollowups(
   }
 }
 
-const LOCO_CITATO = ' l c';
+const LOCO_CITATO = 'l c';
+// Anywhere: a citation's own text, a reference suffix.
+const LC = /\bl c\b/;
+// Immediately following a book key.
+const LC_NEXT = /^ l c\b/;
 
 /**
  *
@@ -1331,15 +1335,14 @@ function replaceBible(context: html.Context): boolean {
     return false;
   }
 
-  if (!match && RegExp(`${LOCO_CITATO}\\b`).test(context.remainder)) {
+  const lc: RegExpExecArray | null = LC_NEXT.exec(right);
+  if (!match && lc) {
     const antecedent: HTMLElement | undefined = backtrack(context)
       .filter(antecede)
       .find(cit.sameBook.bind(cit));
     if (antecedent) {
       cit.inherit(antecedent);
-      const anchor = cit.anchor(
-        ...context.munch(key.length + LOCO_CITATO.length)
-      );
+      const anchor = cit.anchor(...context.munch(key.length + lc[0].length));
       context.insert(anchor);
       link(anchor, antecedent);
       // Loco Citato Bible citations have no followups. We can return
@@ -1459,10 +1462,11 @@ function locoCitato(
   if (!suffix) {
     return;
   }
-  if (!/\bl c\b/.test(suffix)) {
+  const match: RegExpMatchArray | null = LC.exec(suffix);
+  if (!match) {
     return;
   }
-  const before: string = suffix.replace(/\bl c\b.*/, '').trim();
+  const before: string = suffix.slice(0, match.index).trim();
   const regex: RegExp | null = before ? new RegExp(`\\b${before}\\b`) : null;
   linkMatching(
     start,
