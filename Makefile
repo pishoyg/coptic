@@ -139,14 +139,6 @@ crum: FORCE
 # the HTML that `crum` writes and does go stale when the Wiki data changes. It
 # depends on the transpiled JavaScript besides, which `crum` has no business
 # rebuilding. Run it yourself after either changes.
-#
-# NOTE: It reads the *transpiled* JavaScript under `docs/`, exactly as
-# `pisaxo.ts` does. After editing the enrichment TypeScript, run `make
-# transpile` (or `make javascript`) first, or the dump will faithfully describe
-# the previous version of the engine.
-#
-# NOTE: The HTML should be formatted prior to running the `wiki` recipe. In
-# particular, unformatted HTML changes the output due to #784.
 wiki: FORCE
 	# Generate the Crum Wiki enrichment dump.
 	./dictionary/marcion_sourceforge_net/wiki.ts
