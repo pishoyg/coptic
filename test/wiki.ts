@@ -15,7 +15,7 @@ const TEST_CASES: {
   {
     key: '2', // ϯ
     want: {
-      [cls.REFERENCE]: 308,
+      [cls.REFERENCE]: 310,
       [cls.BIBLE]: 238,
       [cls.DIALECT]: 804,
       [cls.ANNOTATION]: 245,
@@ -24,7 +24,7 @@ const TEST_CASES: {
   {
     key: '54', // ⲃⲱⲗ
     want: {
-      [cls.REFERENCE]: 404,
+      [cls.REFERENCE]: 419,
       [cls.BIBLE]: 305,
       [cls.DIALECT]: 835,
       [cls.ANNOTATION]: 238,
@@ -33,7 +33,7 @@ const TEST_CASES: {
   {
     key: '71', // ϩⲟ
     want: {
-      [cls.REFERENCE]: 293,
+      [cls.REFERENCE]: 294,
       [cls.BIBLE]: 220,
       [cls.DIALECT]: 666,
       [cls.ANNOTATION]: 231,
@@ -60,7 +60,7 @@ const TEST_CASES: {
   {
     key: '139', // ⲭⲱ
     want: {
-      [cls.REFERENCE]: 292,
+      [cls.REFERENCE]: 295,
       [cls.BIBLE]: 287,
       [cls.DIALECT]: 883,
       [cls.ANNOTATION]: 208,
@@ -69,7 +69,7 @@ const TEST_CASES: {
   {
     key: '369', // ⲧⲱⲣⲓ
     want: {
-      [cls.REFERENCE]: 371,
+      [cls.REFERENCE]: 373,
       [cls.BIBLE]: 303,
       [cls.DIALECT]: 982,
       [cls.ANNOTATION]: 265,
@@ -86,7 +86,7 @@ const TEST_CASES: {
     //   boundary).
     key: '1144',
     want: {
-      [cls.REFERENCE]: 7,
+      [cls.REFERENCE]: 8,
       [cls.BIBLE]: 6,
       [cls.DIALECT]: 9,
       [cls.ANNOTATION]: 11,

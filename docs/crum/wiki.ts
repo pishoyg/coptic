@@ -378,6 +378,10 @@ const SUFFIX_END = '(?<!\\b(?:p?l|(?<!\\bs )v|V|I(?= [a-z])))';
 // See SUFFIX ABSORPTION above.
 const DIRECTION = '(?: (?:above|below))';
 
+// SUFFIX_SEPARATOR splits a reference suffix into its components, capturing
+// the separators that precede the followups.
+const SUFFIX_SEPARATOR = /(,| [=&+])/;
+
 // SUFFIX matches a reference suffix together with any followups that trail it,
 // e.g. the whole " 44 66, 179" in "P 44 66, 179".
 //
@@ -402,7 +406,7 @@ const DIRECTION = '(?: (?:above|below))';
 // "P 130³, 83" — can not match. Only a suffix interrupted by a `<sup>` takes
 // that shape. See `suffixFollowups`.
 const SUFFIX = new RegExp(
-  `^\\.?(?:${NUMBER_GROUP}+${SUFFIX_END}${DIRECTION}?|${DIRECTION})(?:(?:,| [=&+])${NOT_CONFUSABLE_REFERENCE}${NUMBER_GROUP}+${SUFFIX_END}${DIRECTION}?)*${str.ASSERT_NON_WORD.source}`,
+  `^\\.?(?:${NUMBER_GROUP}+${SUFFIX_END}${DIRECTION}?|${DIRECTION})(?:${SUFFIX_SEPARATOR.source}${NOT_CONFUSABLE_REFERENCE}${NUMBER_GROUP}+${SUFFIX_END}${DIRECTION}?)*${str.ASSERT_NON_WORD.source}`,
   'u'
 );
 
@@ -1487,17 +1491,52 @@ function locoCitato(
  * @returns
  */
 function replaceReference(context: html.Context): void {
-  const key: string = context.match[0];
-  const suffix: string | undefined = SUFFIX.exec(context.right)?.[0];
+  insertReference(context, ref.MAPPING[context.match[0]]!, context.munch());
+}
 
-  const reference: ref.Reference = ref.MAPPING[key]!;
-  const span: HTMLSpanElement = reference.span(
-    context.munch(),
-    suffix ? [...context.munch(suffix.length), ...suffixFollowups(context)] : []
-  );
-  locoCitato(context, span, reference, suffix);
-
-  context.insert(span);
+/**
+ * Enrich a reference, together with the suffix that trails it.
+ *
+ * Every followup in the suffix (the ", 179" in "P 44 66, 179") gets a span of
+ * its own, as an anaphor of the component before it. The separators are left
+ * out as plain text.
+ *
+ * @param context
+ * @param reference
+ * @param content - The nodes that open the leading span: the reference key, or
+ * an `ib` carrier. Empty for a dangling suffix.
+ * @param antecedent - The citation that the leading span refers back to, if
+ * any.
+ */
+function insertReference(
+  context: html.Context,
+  reference: ref.Reference,
+  content: Node[],
+  antecedent?: HTMLElement
+): void {
+  const suffix: string | undefined = SUFFIX.exec(context.remainder)?.[0];
+  const components: string[] = suffix?.split(SUFFIX_SEPARATOR) ?? [''];
+  for (let i = 0; i < components.length; i += 2) {
+    context.advance(components[i - 1]?.length ?? 0);
+    const text: string = components[i]!;
+    // A leading space is plain text, unless something precedes it in the span.
+    const lead: number = !content.length && text.startsWith(' ') ? 1 : 0;
+    context.advance(lead);
+    const span: HTMLSpanElement = reference.span(content, [
+      ...context.munch(text.length - lead),
+      ...(suffix && i === components.length - 1
+        ? suffixFollowups(context)
+        : []),
+    ]);
+    if (antecedent) {
+      link(span, antecedent);
+    } else {
+      locoCitato(context, span, reference, text);
+    }
+    context.insert(span);
+    antecedent = span;
+    content = [];
+  }
 }
 
 /**
@@ -2148,16 +2187,12 @@ function replaceAnaphor(
   };
 
   if (antecedent.classList.contains(cls.REFERENCE)) {
-    const match: RegExpMatchArray | null = SUFFIX.exec(context.remainder);
-    const suffix: (Node | string)[] = match
-      ? [...munch(match), ...suffixFollowups(context)]
-      : [];
-    const anaphor: HTMLSpanElement = ref.Reference.fromSpan(antecedent).span(
+    insertReference(
+      context,
+      ref.Reference.fromSpan(antecedent),
       prefix,
-      suffix
+      antecedent
     );
-    context.insert(anaphor);
-    link(anaphor, antecedent);
     return;
   }
 
