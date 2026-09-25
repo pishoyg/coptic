@@ -1,10 +1,6 @@
 /* stylelint-disable color-named, color-no-hex */
 :root {
-  --hebrew: brown;
-}
-
-body.nightMode {
-  --hebrew: #d98c6c;
+  --hebrew: light-dark(brown, #d98c6c);
 }
 /* stylelint-enable color-named, color-no-hex */
 

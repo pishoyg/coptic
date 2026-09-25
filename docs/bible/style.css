@@ -2,13 +2,8 @@
 
 /* stylelint-disable color-no-hex */
 :root {
-  --blue: #05537d;
-  --red: #b00e23;
-}
-
-body.nightMode {
-  --blue: #6fb8e0;
-  --red: #ff6b7d;
+  --blue: light-dark(#05537d, #6fb8e0);
+  --red: light-dark(#b00e23, #ff6b7d);
 }
 /* stylelint-enable color-no-hex */
 

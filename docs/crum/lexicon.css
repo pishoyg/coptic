@@ -157,10 +157,16 @@ body.dawoud button#mode-dawoud {
  * ink light. `0.9` rather than `1` lands them near the night surface and text
  * colors, rather than glaring at full contrast.
  * The filter would invert the `figure img` border too, turning it light, so we
- * hide it (keeping its width, so the layout doesn't shift). */
-body.nightMode .scan {
-  filter: invert(0.9);
-  border-color: transparent;
+ * hide it (keeping its width, so the layout doesn't shift).
+ * NOTE: A filter isn't a color, so it can't follow the color scheme through
+ * `light-dark()` (see style.css). We query the system theme instead, which
+ * suffices because the Lexicon never makes it into the (Anki) flashcards,
+ * where a `nightMode` class could force night mode. */
+@media (prefers-color-scheme: dark) {
+  .scan {
+    filter: invert(0.9);
+    border-color: transparent;
+  }
 }
 
 .scan-frame figure {

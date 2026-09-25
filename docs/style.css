@@ -21,9 +21,9 @@ body.dev .developer {
 /********** Colors **********/
 
 /* All colors are defined as variables, named by role rather than by hue, so
- * that night mode (a `nightMode` class on <body>) can redefine them in one
- * place. Anki sets the same class on its cards when night mode is on, so the
- * flashcards follow suit.
+ * that night mode can redefine them in one place. Each variable holds its day
+ * and night values in a `light-dark()` pair, and the color scheme (see below)
+ * picks between them.
  *
  * Colors used by a single stylesheet (e.g. the Crum Wiki's span colors in
  * crum.css) are defined, along with their night values, in that stylesheet.
@@ -39,70 +39,65 @@ body.dev .developer {
   color-named,
   declaration-property-value-disallowed-list */
 :root {
-  /* Text. */
-  --text: #333;
-  --text-muted: gray;
-  --text-faint: rgb(0 0 0 / 30%);
-  --text-strong: #2c3e50; /* Headings, bold text, and navigation. */
+  /* Text. `--text-strong` is for headings, bold text, and navigation. */
+  --text: light-dark(#333, #d8d8d8);
+  --text-muted: light-dark(gray, #999);
+  --text-faint: light-dark(rgb(0 0 0 / 30%), rgb(255 255 255 / 30%));
+  --text-strong: light-dark(#2c3e50, #bccbdb);
 
-  /* Accent: links, and the elements that invite a click. */
-  --accent: #3498db;
-  --on-accent: white; /* Text on an accent-filled background. */
-  --accent-tint: #e6f2ff; /* Targeted elements, and accent-colored hovers. */
+  /* Accent: links, and the elements that invite a click. `--on-accent` is for
+   * text on an accent-filled background, and `--accent-tint` for targeted
+   * elements and accent-colored hovers. */
+  --accent: light-dark(#3498db, #5dade2);
+  --on-accent: light-dark(white, #0e1a24);
+  --accent-tint: light-dark(#e6f2ff, #1e3346);
 
-  /* Surfaces, from the page background to the hovered and selected states. */
-  --surface: #fcfcfc;
-  --surface-raised: white; /* Cards, tables, and focused inputs. */
-  --surface-floating: white; /* Tooltips, which float over the cards. */
-  --surface-subtle: #f8f9fa;
-  --surface-hover: #eef1f4;
-  --surface-strong: #dfe2e5;
-  --surface-translucent: rgb(255 255 255 / 90%);
-  --backdrop: rgb(0 0 0 / 50%);
+  /* Surfaces, from the page background to the hovered and selected states.
+   * `--surface-raised` is for cards, tables, and focused inputs, and
+   * `--surface-floating` for tooltips, which float over the cards. */
+  --surface: light-dark(#fcfcfc, #1a1b1e);
+  --surface-raised: light-dark(white, #232428);
+  --surface-floating: light-dark(white, #2e3035);
+  --surface-subtle: light-dark(#f8f9fa, #26282c);
+  --surface-hover: light-dark(#eef1f4, #303338);
+  --surface-strong: light-dark(#dfe2e5, #3b3e44);
+  --surface-translucent: light-dark(
+    rgb(255 255 255 / 90%),
+    rgb(26 27 30 / 90%)
+  );
+  --backdrop: light-dark(rgb(0 0 0 / 50%), rgb(0 0 0 / 60%));
 
-  /* Borders. */
-  --border-subtle: #eaeaea;
-  --border: #ddd;
-  --border-strong: #ccc; /* Inputs and buttons. */
+  /* Borders. `--border-strong` is for inputs and buttons. */
+  --border-subtle: light-dark(#eaeaea, #2e3034);
+  --border: light-dark(#ddd, #3c3f44);
+  --border-strong: light-dark(#ccc, #4c4f55);
 
-  /* Highlights. */
-  --highlight: #f0d4fc; /* Search matches and text fragments. */
-  --danger: firebrick;
+  /* Highlights. `--highlight` marks search matches and text fragments. */
+  --highlight: light-dark(#f0d4fc, #4f2f5f);
+  --danger: light-dark(firebrick, #ff7b72);
 
   /* Not a color, but shared all the same. */
   --transition-duration: 0.5s;
-}
-
-body.nightMode {
-  --text: #d8d8d8;
-  --text-muted: #999;
-  --text-faint: rgb(255 255 255 / 30%);
-  --text-strong: #bccbdb;
-  --accent: #5dade2;
-  --on-accent: #0e1a24;
-  --accent-tint: #1e3346;
-  --surface: #1a1b1e;
-  --surface-raised: #232428;
-  --surface-floating: #2e3035;
-  --surface-subtle: #26282c;
-  --surface-hover: #303338;
-  --surface-strong: #3b3e44;
-  --surface-translucent: rgb(26 27 30 / 90%);
-  --backdrop: rgb(0 0 0 / 60%);
-  --border-subtle: #2e3034;
-  --border: #3c3f44;
-  --border-strong: #4c4f55;
-  --highlight: #4f2f5f;
-  --danger: #ff7b72;
 }
 /* stylelint-enable
   color-no-hex,
   color-named,
   declaration-property-value-disallowed-list */
 
-/* Darken the browser's native controls, such as scrollbars and inputs. This
- * belongs on the root rather than on <body>, because the viewport's scrollbar
- * and canvas take their color scheme from the root element. */
+/* The color scheme picks the day or night half of each `light-dark()` pair,
+ * and darkens the browser's native controls, such as scrollbars and inputs.
+ * It belongs on the root rather than on <body>, because the viewport's
+ * scrollbar and canvas take their color scheme from the root element.
+ * On the site, it follows the system theme. Anki, however, sets the color
+ * scheme itself (on `:root`, from its own theme setting, which may disagree
+ * with the system's), so we use `:where()` to drop our specificity to zero,
+ * and let any such rule win. */
+:where(:root) {
+  color-scheme: light dark;
+}
+
+/* Anki forces night mode on its cards, when its own night mode is on, by
+ * setting a `nightMode` class on <body>. */
 :root:has(> body.nightMode) {
   color-scheme: dark;
 }

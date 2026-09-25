@@ -44,45 +44,25 @@ figcaption {
  * span takes as its background when it lights up. */
 /* stylelint-disable color-no-hex, color-named */
 :root {
-  --reference: #1f7a48; /* emerald */
-  --reference-tint: #e6f2ea;
-  --dialect: #8c6a1e; /* gold */
-  --dialect-tint: #f3ecda;
-  --gloss: #9a7b2e; /* muted ochre */
-  --gloss-tint: #f8f2df;
-  --greek: #573f90; /* amethyst */
-  --greek-tint: #ece7f6;
-  --bible: #2763aa; /* sapphire */
-  --bible-tint: #e6eef8;
-  --semicolon: #8a4434; /* terracotta */
-  --semicolon-tint: #f4e8e3;
-  --foreign: #8a4a4f; /* rosewood */
-  --foreign-tint: #f3e6e7;
-  --bullet: #b2473a; /* refined brick */
+  --reference: light-dark(#1f7a48, #5cc48a); /* emerald */
+  --reference-tint: light-dark(#e6f2ea, #1d3326);
+  --dialect: light-dark(#8c6a1e, #d6b25e); /* gold */
+  --dialect-tint: light-dark(#f3ecda, #3a311c);
+  --gloss: light-dark(#9a7b2e, #c9a95c); /* muted ochre */
+  --gloss-tint: light-dark(#f8f2df, #37301d);
+  --greek: light-dark(#573f90, #b39ddb); /* amethyst */
+  --greek-tint: light-dark(#ece7f6, #2f2842);
+  --bible: light-dark(#2763aa, #7fb0e8); /* sapphire */
+  --bible-tint: light-dark(#e6eef8, #1e2c3f);
+  --semicolon: light-dark(#8a4434, #e08c76); /* terracotta */
+  --semicolon-tint: light-dark(#f4e8e3, #3d2621);
+  --foreign: light-dark(#8a4a4f, #d9969b); /* rosewood */
+  --foreign-tint: light-dark(#f3e6e7, #3b2628);
+  --bullet: light-dark(#b2473a, #ec7f71); /* refined brick */
 
   /* The background of an addendum's insertions and deletions. */
-  --insertion: #ddf5dd; /* light green */
-  --deletion: lightpink; /* light red */
-}
-
-body.nightMode {
-  --reference: #5cc48a;
-  --reference-tint: #1d3326;
-  --dialect: #d6b25e;
-  --dialect-tint: #3a311c;
-  --gloss: #c9a95c;
-  --gloss-tint: #37301d;
-  --greek: #b39ddb;
-  --greek-tint: #2f2842;
-  --bible: #7fb0e8;
-  --bible-tint: #1e2c3f;
-  --semicolon: #e08c76;
-  --semicolon-tint: #3d2621;
-  --foreign: #d9969b;
-  --foreign-tint: #3b2628;
-  --bullet: #ec7f71;
-  --insertion: #1f4a2a;
-  --deletion: #5a2330;
+  --insertion: light-dark(#ddf5dd, #1f4a2a); /* light green */
+  --deletion: light-dark(lightpink, #5a2330); /* light red */
 }
 /* stylelint-enable color-no-hex, color-named */
 
