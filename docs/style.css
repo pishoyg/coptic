@@ -14,21 +14,97 @@ html {
 }
 
 body.dev .developer {
-  color: firebrick !important;
-  border: 1px solid firebrick;
+  color: var(--danger) !important;
+  border: 1px solid var(--danger);
 }
 
+/********** Colors **********/
+
+/* All colors are defined as variables, named by role rather than by hue, so
+ * that night mode (a `nightMode` class on <body>) can redefine them in one
+ * place. Anki sets the same class on its cards when night mode is on, so the
+ * flashcards follow suit.
+ *
+ * Colors used by a single stylesheet (e.g. the Crum Wiki's span colors in
+ * crum.css) are defined, along with their night values, in that stylesheet.
+ *
+ * Hex, named, and functional (`rgb()`, `hsl()`, etc.) colors are banned
+ * outside these definitions (see `.stylelintrc.json`), with one exception:
+ * plain shadows remain literal translucent `rgb()` blacks, which work on both
+ * backgrounds. A translucent variant of a variable, e.g. for a tinted shadow or
+ * glow, is derived with `color-mix()`. */
+
+/* stylelint-disable
+  color-no-hex,
+  color-named,
+  declaration-property-value-disallowed-list */
 :root {
-  --midnight-blue: #2c3e50;
-  --bright-sky-blue: #3498db;
-  --light-gray: #ddd;
-  --color-translucent: rgb(255 255 255 / 90%);
-  --color-overlay: rgb(0 0 0 / 50%);
-  --purple: #f0d4fc;
+  /* Text. */
+  --text: #333;
+  --text-muted: gray;
+  --text-faint: rgb(0 0 0 / 30%);
+  --text-strong: #2c3e50; /* Headings, bold text, and navigation. */
+
+  /* Accent: links, and the elements that invite a click. */
+  --accent: #3498db;
+  --on-accent: white; /* Text on an accent-filled background. */
+  --accent-tint: #e6f2ff; /* Targeted elements, and accent-colored hovers. */
+
+  /* Surfaces, from the page background to the hovered and selected states. */
+  --surface: #fcfcfc;
+  --surface-raised: white; /* Cards, tables, and focused inputs. */
+  --surface-floating: white; /* Tooltips, which float over the cards. */
+  --surface-subtle: #f8f9fa;
+  --surface-hover: #eef1f4;
+  --surface-strong: #dfe2e5;
+  --surface-translucent: rgb(255 255 255 / 90%);
+  --backdrop: rgb(0 0 0 / 50%);
+
+  /* Borders. */
+  --border-subtle: #eaeaea;
+  --border: #ddd;
+  --border-strong: #ccc; /* Inputs and buttons. */
+
+  /* Highlights. */
+  --highlight: #f0d4fc; /* Search matches and text fragments. */
+  --danger: firebrick;
+
+  /* Not a color, but shared all the same. */
   --transition-duration: 0.5s;
-  --anchor-highlight: #e6f2ff;
-  --background: #fcfcfc;
-  --tipper-gray: #f0f0f0;
+}
+
+body.nightMode {
+  --text: #d8d8d8;
+  --text-muted: #999;
+  --text-faint: rgb(255 255 255 / 30%);
+  --text-strong: #bccbdb;
+  --accent: #5dade2;
+  --on-accent: #0e1a24;
+  --accent-tint: #1e3346;
+  --surface: #1a1b1e;
+  --surface-raised: #232428;
+  --surface-floating: #2e3035;
+  --surface-subtle: #26282c;
+  --surface-hover: #303338;
+  --surface-strong: #3b3e44;
+  --surface-translucent: rgb(26 27 30 / 90%);
+  --backdrop: rgb(0 0 0 / 60%);
+  --border-subtle: #2e3034;
+  --border: #3c3f44;
+  --border-strong: #4c4f55;
+  --highlight: #4f2f5f;
+  --danger: #ff7b72;
+}
+/* stylelint-enable
+  color-no-hex,
+  color-named,
+  declaration-property-value-disallowed-list */
+
+/* Darken the browser's native controls, such as scrollbars and inputs. This
+ * belongs on the root rather than on <body>, because the viewport's scrollbar
+ * and canvas take their color scheme from the root element. */
+:root:has(> body.nightMode) {
+  color-scheme: dark;
 }
 
 /********** Home Page, and Generic **********/
@@ -40,7 +116,7 @@ h4,
 h5,
 h6,
 strong {
-  color: var(--midnight-blue);
+  color: var(--text-strong);
 }
 
 h4,
@@ -58,7 +134,7 @@ a,
 .link,
 a strong,
 a figcaption {
-  color: var(--bright-sky-blue);
+  color: var(--accent);
   cursor: pointer;
   text-decoration: none;
 }
@@ -85,12 +161,12 @@ a figcaption {
   }
 
   .hover-link:hover {
-    color: var(--bright-sky-blue);
+    color: var(--accent);
   }
 }
 
 em {
-  color: gray;
+  color: var(--text-muted);
 }
 
 .small-text {
@@ -104,14 +180,14 @@ figure {
 }
 
 figure img {
-  border: 2px solid var(--light-gray);
+  border: 2px solid var(--border);
   border-radius: 5px;
   box-shadow: 2px 2px 10px rgb(0 0 0 / 10%); /* Light shadow */
   margin: 0;
 }
 
 hr {
-  border: 1px solid var(--light-gray);
+  border: 1px solid var(--border);
   margin: 20px 0;
 }
 
@@ -124,8 +200,8 @@ body {
   margin: 0 auto;
   max-width: 1000px;
   padding: 10px;
-  background-color: var(--background);
-  color: #333;
+  background-color: var(--surface);
+  color: var(--text);
 }
 
 /* Although we strongly prefer Antinoou, it causes display jitter on AnkiDroid,
@@ -158,7 +234,7 @@ label:has(> input[type='checkbox']) {
 }
 
 input[type='checkbox'] {
-  accent-color: var(--bright-sky-blue);
+  accent-color: var(--accent);
 }
 
 table {
@@ -183,7 +259,7 @@ table {
 }
 
 ::target-text {
-  background-color: var(--purple);
+  background-color: var(--highlight);
 }
 
 /*************** Fonts ***************/

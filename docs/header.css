@@ -19,13 +19,13 @@
 
       @media (hover: hover) {
         &:hover {
-          background-color: #eef1f4;
+          background-color: var(--surface-hover);
         }
       }
     }
 
     & * {
-      color: var(--midnight-blue);
+      color: var(--text-strong);
       text-decoration: none;
     }
   }

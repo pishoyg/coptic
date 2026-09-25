@@ -1,5 +1,25 @@
 {
   "extends": [
     "stylelint-config-standard"
-  ]
+  ],
+  "rules": {
+    "color-no-hex": true,
+    "color-named": "never",
+    "declaration-property-value-disallowed-list": [
+      {
+        "/.*/": [
+          "/\\b(rgba?|hsla?|hwb|(ok)?lab|(ok)?lch|color)\\((?!0 0 0 )/"
+        ]
+      },
+      {
+        "message": "Expected no literal color function (other than a translucent black) outside the color definitions (use a variable, or `color-mix()` on one)"
+      }
+    ],
+    "selector-class-pattern": [
+      "^([a-z][a-z0-9]*)(-[a-z0-9]+)*$|^nightMode$",
+      {
+        "message": "Expected class selector \"%s\" to be kebab-case (or `nightMode`, which Anki dictates)"
+      }
+    ]
+  }
 }

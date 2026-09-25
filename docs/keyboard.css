@@ -5,7 +5,7 @@
 }
 
 #keyboard-list td {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid var(--border-strong);
   padding: 1rem;
   vertical-align: middle;
 }

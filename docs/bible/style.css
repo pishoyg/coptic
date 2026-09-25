@@ -1,11 +1,23 @@
 /* Styling for a Bible chapter (and index). */
 
+/* stylelint-disable color-no-hex */
+:root {
+  --blue: #05537d;
+  --red: #b00e23;
+}
+
+body.nightMode {
+  --blue: #6fb8e0;
+  --red: #ff6b7d;
+}
+/* stylelint-enable color-no-hex */
+
 .blue {
-  color: #05537d;
+  color: var(--blue);
 }
 
 .red {
-  color: #b00e23;
+  color: var(--red);
 }
 
 .siglum {
@@ -17,7 +29,7 @@
  * stay global to style both the parent and the popover. */
 .tray {
   font-style: italic;
-  color: var(--midnight-blue);
+  color: var(--text-strong);
 }
 
 .title {
@@ -27,9 +39,8 @@
 }
 
 table.verses {
-  /* Break long words. */
-  overflow-wrap: break-word;
-  word-break: break-word;
+  /* Break long words, even mid-word, and let the breaks narrow the columns. */
+  overflow-wrap: anywhere;
   width: 100%;
   border-collapse: collapse;
   box-shadow: 0 4px 6px rgb(0 0 0 / 5%);
@@ -41,7 +52,7 @@ table.verses {
   }
 
   & tbody tr:hover {
-    background-color: #f1f5f9;
+    background-color: var(--surface-hover);
   }
 
   & td {
@@ -49,7 +60,7 @@ table.verses {
     vertical-align: top;
 
     /* A very light, thin border */
-    border-bottom: 1px solid #eaeaea;
+    border-bottom: 1px solid var(--border-subtle);
 
     /* Add padding to give the text room to breathe. */
     padding: 1em 0.5em;
@@ -106,21 +117,20 @@ td:hover {
 #tray {
   float: right;
   padding: 0.5rem;
-  background: #f8f9fa;
+  background: var(--surface-subtle);
   border-radius: 8px;
   cursor: pointer;
 
-  /* On hover, deepen the background into a light tint of the tray's
-   * midnight-blue text. */
+  /* On hover, deepen the background. */
   &:hover {
-    background-color: #dfe2e5; /* light midnight-blue */
+    background-color: var(--surface-strong);
   }
 }
 
 .verse,
 .verse-group {
   &:target {
-    background-color: var(--anchor-highlight);
+    background-color: var(--accent-tint);
   }
 }
 

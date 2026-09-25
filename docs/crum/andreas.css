@@ -1,3 +1,13 @@
+/* stylelint-disable color-named, color-no-hex */
+:root {
+  --hebrew: brown;
+}
+
+body.nightMode {
+  --hebrew: #d98c6c;
+}
+/* stylelint-enable color-named, color-no-hex */
+
 /* The `arabic` class is used in other places in Lexicon, and we want the rule
  * below to only apply to Andreas notes, so we make it more specific.
  * It only applies in the Andreas Flashcards (`.card`), or in the Lexicon under
@@ -17,6 +27,6 @@ body.lexicon #andreas {
   }
 
   & .hebrew {
-    color: brown;
+    color: var(--hebrew);
   }
 }

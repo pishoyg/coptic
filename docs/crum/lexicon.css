@@ -10,7 +10,7 @@
 .explain-checkbox {
   text-align: center;
   font-style: italic;
-  color: gray;
+  color: var(--text-muted);
 }
 
 #kellia-header {
@@ -19,7 +19,7 @@
 
 #cdo-td,
 #dioskoros-td {
-  color: gray;
+  color: var(--text-muted);
   text-align: center;
   font-size: 1.1rem;
 }
@@ -77,13 +77,13 @@ body:not(.book, .dawoud) #header #next {
 body.digital button#mode-digital,
 body.book button#mode-book,
 body.dawoud button#mode-dawoud {
-  background-color: var(--light-gray);
-  border-color: var(--midnight-blue);
-  box-shadow: 0 2px 6px rgb(44 62 80 / 25%);
+  background-color: var(--surface-strong);
+  border-color: var(--text-strong);
+  box-shadow: 0 2px 6px color-mix(in srgb, var(--text-strong) 25%, transparent);
 }
 
 #header {
-  background-color: var(--color-translucent);
+  background-color: var(--surface-translucent);
 }
 
 #mode-switcher {
@@ -92,15 +92,15 @@ body.dawoud button#mode-dawoud {
   gap: 12px;
   width: 100%;
   padding: 10px 12px;
-  background-color: var(--color-translucent);
+  background-color: var(--surface-translucent);
   box-sizing: border-box;
 
   & button {
     padding: 10px 18px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--border-strong);
     border-radius: 10px;
-    background-color: #fafafa;
-    color: var(--midnight-blue);
+    background-color: var(--surface-subtle);
+    color: var(--text-strong);
     font-size: 1.15rem;
     cursor: pointer;
     transition:
@@ -109,7 +109,7 @@ body.dawoud button#mode-dawoud {
       box-shadow 0.15s ease-in-out;
 
     &:hover {
-      background-color: #eef1f4;
+      background-color: var(--surface-hover);
     }
   }
 }
@@ -153,6 +153,16 @@ body.dawoud button#mode-dawoud {
   box-shadow: none;
 }
 
+/* The scans are black-and-white, so inverting them turns the paper dark and the
+ * ink light. `0.9` rather than `1` lands them near the night surface and text
+ * colors, rather than glaring at full contrast.
+ * The filter would invert the `figure img` border too, turning it light, so we
+ * hide it (keeping its width, so the layout doesn't shift). */
+body.nightMode .scan {
+  filter: invert(0.9);
+  border-color: transparent;
+}
+
 .scan-frame figure {
   margin: 0;
 
@@ -164,7 +174,7 @@ body.dawoud button#mode-dawoud {
   position: relative;
 }
 
-/* Red rectangle overlay used to highlight column `a` (left half) or `b`
+/* Rectangle overlay used to highlight column `a` (left half) or `b`
  * (right half) of a dictionary page scan after the user searched with an
  * explicit column letter (e.g. `1a`). Hidden until the `Scroller` adds
  * the `a` / `b` modifier class. */
@@ -173,7 +183,7 @@ body.dawoud button#mode-dawoud {
   top: 0;
   bottom: 0;
   width: 50%;
-  border: 3px solid rgb(10 126 220 / 90%);
+  border: 3px solid color-mix(in srgb, var(--accent) 90%, transparent);
   box-sizing: border-box;
   pointer-events: none;
   display: none;

@@ -29,7 +29,7 @@
  * take precedence over it without needing any extra specificity of their own.
  * */
 :where(.tipper):hover {
-  background-color: var(--tipper-gray);
+  background-color: var(--surface-hover);
   border-radius: 2px;
 }
 
@@ -81,7 +81,7 @@
   overflow-y: auto;
 
   /* The tip has an opaque background to hide content behind it. */
-  background-color: white;
+  background-color: var(--surface-floating);
 
   /* Add some shade to make it pretty. */
   box-shadow: 0 8px 16px rgb(0 0 0 / 20%);

@@ -8,9 +8,9 @@ div {
 
 a.download,
 .download-list li a {
-  background-color: #3498db;
+  background-color: var(--accent);
   border-radius: 4px;
-  color: #fff;
+  color: var(--on-accent);
   display: inline-block;
   margin: 2px 0;
   padding: 2px;

@@ -4,7 +4,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: var(--color-overlay);
+  background-color: var(--backdrop);
   z-index: 1;
   display: none;
 }
@@ -20,7 +20,7 @@
   width: 80%;
   max-width: 600px;
   height: 70%;
-  background-color: var(--color-translucent);
+  background-color: var(--surface-translucent);
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0 4px 10px rgb(0 0 0 / 20%); /* Medium shadow */
@@ -33,8 +33,8 @@
   & ul {
     text-align: left;
     padding-left: 0;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
+    border-top: 1px solid currentcolor;
+    border-bottom: 1px solid currentcolor;
   }
 
   & li {
@@ -50,20 +50,20 @@
   border: none;
   font-size: 20px;
   font-weight: bold;
-  color: var(--midnight-blue);
+  color: var(--text-strong);
   cursor: pointer;
   transition: color 0.3s ease;
 }
 
 @media (hover: hover) {
   .close-btn:hover {
-    color: red;
+    color: var(--danger);
   }
 }
 
 tr.shortcut {
   & > td {
-    border: 1px solid black;
+    border: 1px solid currentcolor;
     padding: 8px;
   }
 
