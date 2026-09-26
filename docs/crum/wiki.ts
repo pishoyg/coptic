@@ -1988,7 +1988,7 @@ function interpretKey(manual: HTMLElement, key: string): Iterable<Node> | Node {
  *   the span down to the page reference itself unless the wider text is
  *   meant to be clickable.
  * - `{text}{2}` forces the antecedent of a dangling suffix, by distance (as
- *   in the dump's `↶2`).
+ *   in the dump's `{antecedent: ⟦…⟧, distance: 2}`).
  * - `{text}`, with no key, infers: a reference if the text opens with one,
  *   otherwise a dangling suffix resolved against its antecedent.
  *

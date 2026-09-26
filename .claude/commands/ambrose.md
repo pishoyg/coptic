@@ -106,7 +106,8 @@ key, and anything it does not cover must be read there.
 | `⟦text⟧{bible: Job 3:16}` | Book, chapter and verse in full. An `ib` that inherited the wrong chapter shows here. A book Crum left unnumbered resolves to no citation and lists the candidate books instead. |
 | `⟦text⟧{annotation: noun}` | An annotation, in full form. |
 | `⟦text⟧{page: 82a}` | A Crum page reference and the scan it resolved to. |
-| `⟦text⟧{…}↶n` | An anaphor, linked to the Bible or reference span `n` such spans back in the dump — `↶1` is the one immediately before. Read off what hovering the anaphor highlights, so it is the link the reader sees. Follow the hops to trace a chain. A `↶2` or more means the walk stepped over a nearer citation: always check why. |
+| `⟦text⟧{…}{antecedent: ⟦PS 8⟧}` | An anaphor, and its antecedent (a Bible or reference span) reproduced as it appears in the dump. When the same text occurs more than once, the antecedent is always the **last** Bible or reference span with that text before the anaphor — the serializer refuses to write a link that would read otherwise. Read off what hovering the anaphor highlights, so it is the link the reader sees. Follow the hops to trace a chain. |
+| `{antecedent: ⟦PS 8⟧, distance: d}` | The walk stepped over `d - 1` nearer Bible or reference spans to reach its antecedent: always check why. `d` counts the same way a `{text}{d}` manual label does, so it is the number to write when forcing a different one. Absent when the antecedent is the immediately preceding span. |
 | `⟦;⟧` | A semicolon separating groups in meaning or usage. It carries no resolution because it always means the same thing. |
 | `⌈text«note»⌉` | Footnoted text, and the footnote — itself enriched. |
 | `--old--` `++new++` `«Addenda (xvii ‹b›)»` | An addendum: what Crum removed, what he added, and the Additions page it came from. |
@@ -253,6 +254,13 @@ decision to weigh, not a failure to report.) Two places a wrong binding hides:
   true antecedent can sit. Where one sits near an `ib`, check that the
   assumption really holds — the code names the known counterexample, and names
   which of the two cases is upheld editorially rather than structurally.
+
+**Review every chain, hop by hop,** and flag both directions:
+- **False positives** — an `{antecedent: …}` that binds to the wrong span, or a
+  span that carries one but is a citation in its own right.
+- **False negatives** — a span that refers back but carries no
+  `{antecedent: …}`: a bare `ib` or `l c`, an abbreviated abbreviation, a
+  dangling suffix.
 
 **Do not report a documented limitation as a new bug.** Several inaccuracies are
 known, accepted and explained in the code — an inferred addendum page link, a

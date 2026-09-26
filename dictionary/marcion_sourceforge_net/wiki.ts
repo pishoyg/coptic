@@ -104,12 +104,6 @@ const KINDS: readonly string[] = [
 ];
 
 /**
- * Suffixed to an anaphor, followed by how many chainable spans back its
- * antecedent is, counted in dump order. See `Serializer.antecedent`.
- */
-const BACK = '↶';
-
-/**
  * The classes whose content is a foreign script. The script is evident from
  * the characters, so they are bracketed without a label.
  *
@@ -321,8 +315,17 @@ class Serializer {
   /** The page being serialized, for error messages. */
   private readonly key: string;
 
-  /** The chainable spans serialized so far, in dump order. */
-  private readonly chainable: HTMLElement[] = [];
+  /** Each anaphor's direct antecedent. See `links`. */
+  private readonly antecedents: Map<HTMLElement, HTMLElement>;
+
+  /** The chainable spans serialized so far, as serialized, in dump order. */
+  private readonly chainable: string[] = [];
+
+  /** The position of each chainable span serialized so far in `chainable`. */
+  private readonly positions: Map<HTMLElement, number> = new Map<
+    HTMLElement,
+    number
+  >();
 
   /**
    * NOTE: Fields are assigned explicitly rather than declared as constructor
@@ -340,6 +343,7 @@ class Serializer {
           this.tips.set(anchor, tip);
         }
       });
+    this.antecedents = this.links();
   }
 
   /**
@@ -477,10 +481,11 @@ class Serializer {
     if (kind !== undefined) {
       const resolution: string | undefined = this.resolution(el, kind);
       const suffix: string = resolution === undefined ? '' : `{${resolution}}`;
-      const back: string = wiki.ANTECEDENTS.includes(kind)
-        ? this.antecedent(el)
+      const span = `⟦${this.nodes(el.childNodes)}⟧`;
+      const link: string = wiki.ANTECEDENTS.includes(kind)
+        ? this.link(el, span)
         : '';
-      return `⟦${this.nodes(el.childNodes)}⟧${suffix}${back}`;
+      return `${span}${suffix}${link}`;
     }
 
     return this.wrapper(el);
@@ -663,12 +668,9 @@ class Serializer {
   }
 
   /**
-   * Record a chainable span, and read back the antecedent it is linked to.
+   * Read back every link the engine made on the page.
    *
-   * @param el - A chainable span, not yet recorded.
-   * @returns `BACK` followed by how many chainable spans back its antecedent
-   * sits, counting in dump order — `↶1` for the span immediately before — or
-   * the empty string if the span refers back to nothing.
+   * @returns Each anaphor's direct antecedent.
    *
    * NOTE: The engine records a link nowhere but in a pair of event listeners
    * (`link` in `docs/crum/wiki.ts`), so the link is read back the way a reader
@@ -677,36 +679,122 @@ class Serializer {
    * decision — but the link has no existence beyond that rendering.
    *
    * The highlight is transitive, so what lights up is the whole chain back to
-   * its head. Every link points strictly backwards in document order, so the
-   * direct antecedent is the last of those serialized. Only the direct one is
-   * printed; the chain is followed hop by hop.
-   *
-   * The count is taken in dump order rather than document order, because the
-   * dump is what it is read against. The two differ only where a popover's
-   * content is serialized inline, at its mark.
+   * its head. The direct antecedent is the one member of the chain whose own
+   * chain is the rest of it. That is read off the chains alone, so it holds
+   * whatever order the spans are later serialized in.
    */
-  private antecedent(el: HTMLElement): string {
+  private links(): Map<HTMLElement, HTMLElement> {
     const lit = (): Set<HTMLElement> =>
       new Set(document.querySelectorAll<HTMLElement>(css.c(cls.ANTECEDENT)));
 
-    el.dispatchEvent(new CustomEvent(wiki.EVENT.VISIT));
-    const chain: Set<HTMLElement> = lit();
-    el.dispatchEvent(new CustomEvent(wiki.EVENT.LEAVE));
-    // Sanity check: leaving undoes the visit.
-    log.ensure(!lit().size, 'Stale', cls.ANTECEDENT, 'on page', this.key);
+    const chains: Map<HTMLElement, Set<HTMLElement>> = new Map<
+      HTMLElement,
+      Set<HTMLElement>
+    >();
+    document
+      .querySelectorAll<HTMLElement>(css.disjunction(...wiki.ANTECEDENTS))
+      .forEach((el: HTMLElement): void => {
+        el.dispatchEvent(new CustomEvent(wiki.EVENT.VISIT));
+        chains.set(el, lit());
+        el.dispatchEvent(new CustomEvent(wiki.EVENT.LEAVE));
+        // Sanity check: leaving undoes the visit.
+        log.ensure(!lit().size, 'Stale', cls.ANTECEDENT, 'on page', this.key);
+      });
 
-    // Every member of the chain must already have been serialized. A member
-    // yet to come — `el` itself included — is a forward link or a cycle.
+    const links: Map<HTMLElement, HTMLElement> = new Map<
+      HTMLElement,
+      HTMLElement
+    >();
+    chains.forEach((chain: Set<HTMLElement>, el: HTMLElement): void => {
+      if (!chain.size) {
+        return;
+      }
+      const direct: readonly HTMLElement[] = [...chain].filter(
+        (c: HTMLElement): boolean => {
+          const rest: Set<HTMLElement> | undefined = chains.get(c);
+          return (
+            rest?.size === chain.size - 1 &&
+            [...rest].every((r: HTMLElement): boolean => chain.has(r))
+          );
+        }
+      );
+      // A chain is a path, so exactly one member heads the rest of it.
+      // Anything else is a cycle, a fork, or a link to a span of a kind the
+      // engine does not chain.
+      const [head] = direct;
+      log.ensure(
+        head && direct.length === 1,
+        'Antecedent chain is not a path on page',
+        this.key
+      );
+      links.set(el, head);
+    });
+    return links;
+  }
+
+  /**
+   * Record a chainable span, and print the antecedent it refers back to.
+   *
+   * @param el - A chainable span, not yet recorded.
+   * @param span - Its serialization, brackets included.
+   * @returns `{antecedent: ⟦text⟧}`, reproducing the antecedent as it was
+   * serialized — or the empty string if the span refers back to nothing.
+   *
+   * The antecedent is always the nearest preceding chainable span with that
+   * exact text, so the text alone identifies it: `⟦‹ib›⟧` or `⟦Mani 1⟧` may
+   * well occur several times on a page, but only the last occurrence before
+   * the anaphor is meant. That is not a property of the notation, and nothing
+   * in the walk guarantees it — the walk steps over addenda and footnotes, and
+   * a same-text span could sit in one of those. So it is enforced here: a link
+   * the notation would misread raises rather than reach the dump.
+   *
+   * Text, rather than a label, is reproduced so that the dump is stable under
+   * the changes it exists to review: a label would renumber every link after a
+   * newly discovered antecedent, where text changes only on the links that
+   * actually changed.
+   *
+   * The antecedent also carries its distance — how many chainable spans back
+   * it sits, the same count a `{text}{n}` manual label forces — but only when
+   * it is not the immediately preceding one. A distance of 1 is the
+   * unremarkable case; anything more means the walk stepped over a nearer
+   * citation, which is exactly what a reviewer must check.
+   *
+   * Counts are taken in dump order rather than document order, because the
+   * dump is what they are read against. The two differ only where a popover's
+   * content is serialized inline, at its mark.
+   */
+  private link(el: HTMLElement, span: string): string {
+    log.ensure(!this.positions.has(el), 'Span serialized twice on', this.key);
+    const position: number = this.chainable.length;
+    this.positions.set(el, position);
+    this.chainable.push(span);
+
+    const antecedent: HTMLElement | undefined = this.antecedents.get(el);
+    if (antecedent === undefined) {
+      return '';
+    }
+    // The antecedent must already have been serialized. One yet to come is a
+    // forward link.
+    const from: number | undefined = this.positions.get(antecedent);
     log.ensure(
-      [...chain].every((c: HTMLElement): boolean => this.chainable.includes(c)),
-      'Antecedent chain not strictly backwards on page',
+      from !== undefined && from < position,
+      'Antecedent not strictly backwards on page',
       this.key
     );
-    const distance: number =
-      this.chainable.length -
-      this.chainable.findLastIndex((c: HTMLElement) => chain.has(c));
-    this.chainable.push(el);
-    return chain.size ? `${BACK}${String(distance)}` : '';
+    const text: string | undefined = this.chainable[from];
+    log.ensure(
+      text && this.chainable.lastIndexOf(text, position - 1) === from,
+      'The antecedent of',
+      span,
+      'is not the last',
+      text,
+      'before it, on page',
+      this.key
+    );
+    const distance: number = position - from;
+    return distance > 1
+      ? `{antecedent: ${text}, distance: ${String(distance)}}`
+      : `{antecedent: ${text}}`;
   }
 
   /**
