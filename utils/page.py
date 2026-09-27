@@ -35,6 +35,16 @@ _GOOGLE_TAG: str = """
   </script>
 """
 
+_MICROSOFT_TAG: str = """
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "yoqqiwdoy7");
+  </script>
+"""
+
 # TAG_RE matches a single HTML tag (opening, closing, or self-closing) and
 # captures its tag name. We intentionally maintain a simplified, permissive
 # expression, which suffices for our purposes.
@@ -169,6 +179,7 @@ def html_head(
         yield f'<link href="{path}" rel="stylesheet" type="text/css">'
     yield _ICON_TAG
     yield _GOOGLE_TAG
+    yield _MICROSOFT_TAG
     if search:
         yield f'<link href="{search}" rel="search">'
     if next_href:
