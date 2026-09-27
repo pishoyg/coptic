@@ -40,6 +40,9 @@ _BANNED_TOP_LEVEL_DOMAINS = {
     "gstatic.com",
 }
 
+# NOTE: Whenever you add a new image source (such as an icon site) below,
+# update the image credits section in `docs/cited.ts` accordingly. Search
+# engines (Google, Bing) only lead us to sources, and need no credit.
 _QUERIERS_FMT: dict[str, list[str]] = {
     "g": ["https://www.google.com/search?q={query}&tbm=isch"],
     "b": ["https://www.bing.com/images/search?q={query}"],

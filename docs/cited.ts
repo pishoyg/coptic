@@ -3,7 +3,10 @@
 import * as html from './html.js';
 import * as help from './help.js';
 
-const TITLE = 'Cited Works';
+enum TITLE {
+  WORKS = 'Cited Works',
+  IMAGES = 'Image Credits',
+}
 
 enum ID {
   CITED_WORKS = 'cited-works',
@@ -55,10 +58,46 @@ const WORKS = `
 `;
 
 /**
+ * IMAGES credits the sites that the images on the lexicon pages are taken
+ * from, ordered by how often we use them.
+ *
+ * NOTE: Whenever a new image source is added to
+ * `dictionary/marcion_sourceforge_net/img_helper.py`, update this list
+ * accordingly. Search engines only lead us to sources, and need no credit.
+ *
+ * TODO: (#0) Wikimedia Commons (CC BY / CC BY-SA), Flaticon, Freepik, the Noun
+ * Project (CC BY 3.0), and Vecteezy all ask for per-image (or per-author)
+ * attribution, not just a site-level credit. The image source URLs are
+ * currently only recorded in the `alt` attribute. Surface them, along with
+ * author names, either next to each image or in a generated credits list.
+ */
+const IMAGES = `
+<ul>
+  <li><a href="https://commons.wikimedia.org/" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a>, images by their respective authors, used under their individual licenses (<a href="https://commons.wikimedia.org/wiki/Commons:Reusing_content_outside_Wikimedia" target="_blank" rel="noopener noreferrer">reuse policy</a>).</li>
+
+  <li><a href="https://www.flaticon.com/" target="_blank" rel="noopener noreferrer">Flaticon</a>, icons by their respective authors, used under the <a href="https://www.flaticon.com/legal" target="_blank" rel="noopener noreferrer">Flaticon free license</a>.</li>
+
+  <li><a href="https://thenounproject.com/" target="_blank" rel="noopener noreferrer">The Noun Project</a>, icons by their respective creators, used under <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener noreferrer">CC BY 3.0</a>.</li>
+
+  <li><a href="https://www.vecteezy.com/" target="_blank" rel="noopener noreferrer">Vecteezy</a>, images by their respective contributors, used under the <a href="https://www.vecteezy.com/licensing-agreement" target="_blank" rel="noopener noreferrer">Vecteezy free license</a>.</li>
+
+  <li><a href="https://www.freepik.com/" target="_blank" rel="noopener noreferrer">Freepik</a>, images by their respective authors, used under the <a href="https://www.freepik.com/legal/terms-of-use" target="_blank" rel="noopener noreferrer">Freepik free license</a>.</li>
+
+  <li><a href="https://uxwing.com/" target="_blank" rel="noopener noreferrer">UXWing</a>, icons used under the <a href="https://uxwing.com/license/" target="_blank" rel="noopener noreferrer">UXWing license</a>.</li>
+
+  <li><a href="https://www.svgrepo.com/" target="_blank" rel="noopener noreferrer">SVG Repo</a>, icons used under their individual licenses (<a href="https://www.svgrepo.com/page/licensing/" target="_blank" rel="noopener noreferrer">licensing</a>).</li>
+</ul>
+`;
+
+/**
  * Build the Cited Works panel, toggled by the page's Cited Works button.
  */
 export function init(): void {
-  new help.Panel(TITLE, document.getElementById(ID.CITED_WORKS)!).append(
-    ...html.parse(WORKS)
+  new help.Panel(
+    document.getElementById(ID.CITED_WORKS)!,
+    help.heading(TITLE.WORKS),
+    ...html.parse(WORKS),
+    help.heading(TITLE.IMAGES),
+    ...html.parse(IMAGES)
   );
 }

@@ -58,6 +58,20 @@ export function strong(...children: (Node | string)[]): HTMLElement {
 }
 
 /**
+ * @param tag - Heading level.
+ * @param children - Content of the heading.
+ * @returns A heading element.
+ */
+export function heading(
+  tag: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6',
+  ...children: (Node | string)[]
+): HTMLHeadingElement {
+  const h: HTMLHeadingElement = document.createElement(tag);
+  h.append(...children);
+  return h;
+}
+
+/**
  *
  * @param content
  * @param flag

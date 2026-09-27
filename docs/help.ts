@@ -32,6 +32,22 @@ enum ID {
 }
 
 /**
+ * @param content - Content of the heading.
+ * @returns A heading, titling a group of content in a panel.
+ */
+export function heading(...content: (Node | string)[]): HTMLHeadingElement {
+  return html.heading('h2', ...content);
+}
+
+/**
+ * @param content - Content of the subheading.
+ * @returns A subheading, titling a section under a panel heading.
+ */
+export function subheading(...content: (Node | string)[]): HTMLHeadingElement {
+  return html.heading('h3', ...content);
+}
+
+/**
  * A panel. See the package documentation.
  */
 export class Panel {
@@ -39,10 +55,11 @@ export class Panel {
   private readonly panel: HTMLDivElement;
 
   /**
-   * @param title - Title displayed at the top of the panel.
    * @param trigger - Element whose clicks toggle the panel.
+   * @param content - Content of the panel, typically one or more `heading`s,
+   * each followed by the content it titles.
    */
-  public constructor(title: string, trigger: HTMLElement) {
+  public constructor(trigger: HTMLElement, ...content: (Node | string)[]) {
     // Create the overlay background.
     this.overlay = document.createElement('div');
     this.overlay.classList.add(CLS.OVERLAY_BACKGROUND);
@@ -53,16 +70,14 @@ export class Panel {
     this.panel.classList.add(CLS.INFO_PANEL);
     document.body.append(this.panel);
 
-    // Add the panel title.
-    const h2: HTMLHeadingElement = document.createElement('h2');
-    h2.textContent = title;
-    this.panel.append(h2);
-
     // Add the panel close button.
     const closeButton: HTMLButtonElement = document.createElement('button');
     closeButton.classList.add(CLS.CLOSE_BTN);
     closeButton.textContent = '×';
     this.panel.append(closeButton);
+
+    // Add the panel content.
+    this.panel.append(...content);
 
     this.addEventListeners(trigger, closeButton);
     this.hide(); // Hidden by default.
@@ -328,7 +343,7 @@ export class Shortcut {
 export class Section {
   /**
    *
-   * @param title
+   * @param title - Title.
    * @param shortcuts - A record mapping a key to a list of shortcuts invoked by
    * this key.
    * Notice that, although we allow a single event to be triggered in response
@@ -347,9 +362,7 @@ export class Section {
   public html(): HTMLDivElement {
     const div = document.createElement('div');
 
-    const title = document.createElement('h3');
-    title.textContent = this.title;
-    div.appendChild(title);
+    div.appendChild(subheading(this.title));
 
     const table = document.createElement('table');
 
@@ -452,7 +465,7 @@ export class Help {
         return span;
       })();
 
-    this.panel = new Panel(TITLE, help);
+    this.panel = new Panel(help, heading(TITLE));
 
     this.addEventListeners();
   }
