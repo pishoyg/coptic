@@ -55,8 +55,9 @@ for domain registration and DNS.
 - [Google
 Drive](https://drive.google.com/drive/folders/17jI92CKumjYQTXghThaaejPeD8ZbifPm?usp=drive_link) and [Google Cloud](https://console.cloud.google.com/welcome) for cloud storage.
 - [Google Analytics](https://analytics.google.com/) and [Google Search
-Console](https://search.google.com/search-console?resource_id=sc-domain%3Aremnqymi.com)
-for traffic tracking and analysis.
+Console](https://search.google.com/search-console?resource_id=sc-domain%3Aremnqymi.com),
+and [Microsoft Clarity](https://clarity.microsoft.com/) for traffic tracking and
+analysis.
 
 ## Getting started
 
