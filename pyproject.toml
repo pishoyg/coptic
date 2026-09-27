@@ -4,6 +4,9 @@ line-length = 79
 [tool.ruff.lint]
 # See https://docs.astral.sh/ruff/rules/
 ignore = [
+  # Pylint's broad-exception-caught already enforces this, and yesqa strips
+  # ruff-only `noqa` comments, so intentional catches can only be marked once.
+  "BLE001", # blind-except
   "F401", # unused-import
   "F541", # f-string-missing-placeholders
   "FLY002", # static-join-to-f-string

@@ -12,6 +12,7 @@ import glob
 import os
 import pathlib
 import shutil
+import sys
 import urllib
 from collections import abc
 
@@ -323,25 +324,25 @@ def main():
 
     if args.batch:
         _batch(args)
-        exit()
+        sys.exit()
 
     if args.rm:
         for stem in args.rm:
             _rm(stem)
-        exit()
+        sys.exit()
 
     if args.mv:
         _mv(*args.mv)
-        exit()
+        sys.exit()
 
     if args.cp:
         _cp(*args.cp)
-        exit()
+        sys.exit()
 
     if args.convert:
         for stem in args.convert:
             _convert(_stem_to_img(stem))
-        exit()
+        sys.exit()
 
     _Prompter(args).prompt()
 
@@ -684,8 +685,8 @@ class _Prompter:
             # Exiting the program upon encountering an assertion is a way to
             # flag their presence to us so we will replace them with exceptions
             # that have meaningful error messages.
-            except AssertionError as e:
-                raise e
+            except AssertionError:
+                raise
             # pylint: disable-next=broad-exception-caught
             except Exception as e:
                 log.error(e)
@@ -747,7 +748,8 @@ class _Prompter:
             )
             params = [p for p in params if p.startswith("http")]
             ensure.ensure(params, "No source given!")
-            self.sources[files[0]] = sum(_infer_urls(*params), [])
+            reference, download = _infer_urls(*params)
+            self.sources[files[0]] = reference + download
             return True
 
         if command in _QUERIERS_FMT:
