@@ -1,4 +1,4 @@
-"use strict";import*as e from"./html.js";import*as a from"./help.js";const i="Cited Works";var r=(t=>(t.CITED_WORKS="cited-works",t))(r||{});const o=`
+"use strict";import*as t from"./html.js";import*as e from"./help.js";var a=(r=>(r.WORKS="Cited Works",r.IMAGES="Image Credits",r))(a||{}),n=(i=>(i.CITED_WORKS="cited-works",i))(n||{});const o=`
 <ul>
   <li><em><a href="https://marcion.sourceforge.net/" target="_blank">Marcion</a></em>, by Milan Konvicka.</li>
 
@@ -28,5 +28,21 @@
 
   <li><em><a href="https://coptot.manuscriptroom.com/" target="_blank">Digital Edition of the Coptic Old Testament</a></em>, by the G\xF6ttingen Academy of Sciences and Humanities in Lower Saxony.</li>
 </ul>
-`;export function init(){new a.Panel(i,document.getElementById("cited-works")).append(...e.parse(o))}
+`,l=`
+<ul>
+  <li><a href="https://commons.wikimedia.org/" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a>, images by their respective authors, used under their individual licenses (<a href="https://commons.wikimedia.org/wiki/Commons:Reusing_content_outside_Wikimedia" target="_blank" rel="noopener noreferrer">reuse policy</a>).</li>
+
+  <li><a href="https://www.flaticon.com/" target="_blank" rel="noopener noreferrer">Flaticon</a>, icons by their respective authors, used under the <a href="https://www.flaticon.com/legal" target="_blank" rel="noopener noreferrer">Flaticon free license</a>.</li>
+
+  <li><a href="https://thenounproject.com/" target="_blank" rel="noopener noreferrer">The Noun Project</a>, icons by their respective creators, used under <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener noreferrer">CC BY 3.0</a>.</li>
+
+  <li><a href="https://www.vecteezy.com/" target="_blank" rel="noopener noreferrer">Vecteezy</a>, images by their respective contributors, used under the <a href="https://www.vecteezy.com/licensing-agreement" target="_blank" rel="noopener noreferrer">Vecteezy free license</a>.</li>
+
+  <li><a href="https://www.freepik.com/" target="_blank" rel="noopener noreferrer">Freepik</a>, images by their respective authors, used under the <a href="https://www.freepik.com/legal/terms-of-use" target="_blank" rel="noopener noreferrer">Freepik free license</a>.</li>
+
+  <li><a href="https://uxwing.com/" target="_blank" rel="noopener noreferrer">UXWing</a>, icons used under the <a href="https://uxwing.com/license/" target="_blank" rel="noopener noreferrer">UXWing license</a>.</li>
+
+  <li><a href="https://www.svgrepo.com/" target="_blank" rel="noopener noreferrer">SVG Repo</a>, icons used under their individual licenses (<a href="https://www.svgrepo.com/page/licensing/" target="_blank" rel="noopener noreferrer">licensing</a>).</li>
+</ul>
+`;export function init(){new e.Panel(document.getElementById("cited-works"),e.heading("Cited Works"),...t.parse(o),e.heading("Image Credits"),...t.parse(l))}
 //# sourceMappingURL=cited.js.map
