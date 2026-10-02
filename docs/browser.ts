@@ -279,15 +279,34 @@ export function removeFragment(): void {
   window.location.reload();
 }
 
+const HEX = 16;
+
+// Characters that `encodeURIComponent` leaves intact, but that are unsafe to
+// leave unencoded in text fragments. The dash is unsafe except as part of the
+// `-,` and `,-` separators; since `encodeURIComponent` escapes commas, every
+// dash in an encoded component qualifies. The rest break the URL in plain-text
+// contexts. For example, a `)` terminates a Markdown link (`[text](url)`), and
+// some apps (e.g. Telegram) end the auto-detected link at such characters.
+const FRAGMENT_UNSAFE_RE = /[!'()*]|(?<!,)-(?!,)/g;
+
 /**
- * Copies the current page URL to the clipboard.
+ * @param c - A single ASCII character.
+ * @returns The percent-encoded character.
+ */
+function percentEncode(c: string): string {
+  return `%${c.charCodeAt(0).toString(HEX).toUpperCase()}`;
+}
+
+/**
+ * Returns the current page URL, re-encoding its Text Fragment, if any.
  * It specifically looks for an existing Text Fragment (#:~:text=) in the URL.
  * If found, it ensures that any dashes (-) within the text content are encoded
  * to %2D to comply with specific encoding requirements, while preserving
  * the syntax separators (-, and ,-).
  * This is to work around an issue in Chromium:
  * https://issues.chromium.org/issues/462468375
- * @returns
+ * It also encodes the other characters in `FRAGMENT_UNSAFE_RE`.
+ * @returns The URL, with the Text Fragment (if any) encoded.
  */
 export function urlWithFragment(): string {
   const href: string = window.location.href;
@@ -303,7 +322,8 @@ export function urlWithFragment(): string {
     return href;
   }
 
-  return `${baseURL}#:~:text=${frag.replace(/(?<!,)-(?!,)/g, '%2D')}`;
+  frag = frag.replace(FRAGMENT_UNSAFE_RE, percentEncode);
+  return `${baseURL}#:~:text=${frag}`;
 }
 
 /**
@@ -373,10 +393,7 @@ export function fragment(textStart: string, prefix = '', suffix = ''): string {
    * @returns
    */
   function encode(text: string): string {
-    // The dash requires special handling, because it doesn't get encoded by
-    // default, and it needs to be encoded in order for text fragments to work
-    // correctly.
-    return encodeURIComponent(text).replaceAll('-', '%2D');
+    return encodeURIComponent(text).replace(FRAGMENT_UNSAFE_RE, percentEncode);
   }
 
   textStart = textStart.trim();
