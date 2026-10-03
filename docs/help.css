@@ -30,14 +30,21 @@
   position: fixed;
   overflow-y: auto;
 
-  & ul {
+  & p {
+    text-align: left;
+  }
+
+  & :is(ul, ol) {
     text-align: left;
     padding-left: 0;
-    border-bottom: 1px solid currentcolor;
   }
 
   & li {
     padding: 8px;
+  }
+
+  & .inline-logo {
+    height: 20px;
   }
 }
 

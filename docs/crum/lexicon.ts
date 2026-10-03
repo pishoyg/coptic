@@ -12,9 +12,9 @@
  *   - `book.ts`    — Crum scan init
  *   - `dawoud.ts`  — Dawoud scan init
  *
- * The footer's Cited Works panel is wired up here as well.
+ * The footer's panels are wired up here as well.
  */
-import * as cited from '../cited.js';
+import * as about from '../about.js';
 import * as mode from './mode.js';
 import * as digital from './digital.js';
 import * as book from './book.js';
@@ -27,7 +27,7 @@ async function main(): Promise<void> {
   // Wire the Digital / Book / Dawoud switcher and the shared search box
   // before any view-specific init runs.
   mode.init();
-  cited.init();
+  about.init();
   await Promise.all([digital.init(), book.init(), dawoud.init()]);
 }
 

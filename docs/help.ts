@@ -55,7 +55,8 @@ export class Panel {
   private readonly panel: HTMLDivElement;
 
   /**
-   * @param trigger - Element whose clicks toggle the panel.
+   * @param trigger - Element whose clicks (or Enter / Space presses) toggle
+   * the panel.
    * @param content - Content of the panel, typically one or more `heading`s,
    * each followed by the content it titles.
    */
@@ -116,7 +117,8 @@ export class Panel {
 
   /**
    * Add event listeners for the panel.
-   * @param trigger - Element whose clicks toggle the panel.
+   * @param trigger - Element whose clicks (or Enter / Space presses) toggle
+   * the panel.
    * @param closeButton - Close button.
    */
   private addEventListeners(
@@ -128,6 +130,18 @@ export class Panel {
 
     // Clicking the trigger toggles the panel display.
     trigger.addEventListener('click', this.toggle.bind(this));
+
+    // Triggers are typically spans or images, which are neither focusable nor
+    // operable from the keyboard. Make the trigger behave like a button: it
+    // joins the tab order, and Enter or Space toggles the panel.
+    trigger.tabIndex = 0;
+    trigger.setAttribute('role', 'button');
+    trigger.addEventListener('keydown', (e: KeyboardEvent): void => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault(); // Space would otherwise scroll the page.
+        this.toggle();
+      }
+    });
 
     // A click on the overlay background hides the panel.
     this.overlay.addEventListener('click', this.hide.bind(this));

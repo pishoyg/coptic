@@ -1,29 +1,53 @@
-/** Package cited defines the panel listing the works cited on this site. */
+/**
+ * Package about defines the Credits, Contact, Donate, and Code panels, each
+ * toggled by its button in the page footer. The Credits panel also carries
+ * the cited works, the image credits, and the licenses.
+ *
+ * TODO: (#0) The anchors in `CREDITS` and `WORKS` open in a new tab without
+ * carrying `rel="noopener noreferrer"`, unlike the anchors built by
+ * `html.anchor`. Add the attribute.
+ */
 
 import * as html from './html.js';
 import * as help from './help.js';
 
 enum TITLE {
+  CREDITS = 'Credits',
   WORKS = 'Cited Works',
   IMAGES = 'Image Credits',
+  LICENSE = 'License',
+  CONTACT = 'Contact',
+  DONATE = 'Donate',
+  CODE = 'Code',
 }
 
 enum ID {
   CITED_WORKS = 'cited-works',
+  CONTACT = 'contact',
+  DONATE = 'donate',
+  CODE = 'code',
 }
+
+/**
+ * CREDITS thanks the people whose dedication made this work possible.
+ */
+const CREDITS = `
+<p>This work is made possible through the dedication of:</p>
+
+<ol>
+  <li>Milan Konvicka, creator of <a href="https://marcion.sourceforge.net/" target="_blank">Marcion</a>.</li>
+
+  <li>Randy Komforty, creator of <a href="https://coptic.wiki/" target="_blank">CopticWiki</a>.</li>
+
+  <li>Dr. Hany Takla, founder of <a href="http://stshenouda.org" target="_blank">St. Shenouda the Archimandrite Coptic Society</a>.</li>
+</ol>
+`;
 
 /**
  * WORKS is the list of works that our data is derived from.
  *
- * NOTE: This markup duplicates the "Cited Works" section of `docs/index.html`.
- * The two are kept in sync manually, so any change here must be mirrored there
- * (and vice versa). The duplication is deliberate: the homepage is a static
- * page that loads no scripts, while this panel is built at runtime on pages
- * that have no such section.
- *
- * TODO: (#0) The anchors below open in a new tab without carrying
- * `rel="noopener noreferrer"`, unlike the anchors built by `html.anchor`. Add
- * the attribute, here and in `docs/index.html`.
+ * TODO: (#305) Link the new version of the Comprehensive Coptic Lexicon, once
+ * available.
  */
 const WORKS = `
 <ul>
@@ -90,14 +114,87 @@ const IMAGES = `
 `;
 
 /**
- * Build the Cited Works panel, toggled by the page's Cited Works button.
+ * CONTACT lists the ways to reach us.
  */
-export function init(): void {
-  new help.Panel(
-    document.getElementById(ID.CITED_WORKS)!,
+const CONTACT = `
+<ul>
+  <li>Email us at 📧 <a href="mailto:remnqymi@gmail.com">remnqymi@gmail.com</a>.</li>
+
+  <li>File a <a href="https://github.com/pishoyg/coptic/issues/new" target="_blank" rel="noopener noreferrer">ticket</a> or a <a href="https://docs.google.com/forms/d/e/1FAIpQLSeNVAjxtJcAR7i6AwBI3SFlzRWC5DQ09G6LfbySbZGvZCdpIg/viewform?usp=pp_url&amp;entry.1382006920=http://remnqymi.com/" target="_blank" rel="noopener noreferrer">report</a>.</li>
+</ul>
+
+<p>Feedback is welcome.</p>
+`;
+
+/**
+ * DONATE lists the causes that we encourage our users to support.
+ */
+const DONATE = `
+<ul>
+  <li>You can support <a href="http://coptic.wiki/" target="_blank" rel="noopener noreferrer">CopticWiki</a>, who provide Lexicon data, through:
+    <ul>
+      <li><a href="https://www.patreon.com/c/CopticWiki/posts" target="_blank" rel="noopener noreferrer">Patreon <img class="inline-logo" alt="Patreon" src="/img/logos/patreon.png"></a></li>
+
+      <li><a href="https://buymeacoffee.com/copticwiki" target="_blank" rel="noopener noreferrer">Buy Me a Coffee <img class="inline-logo" alt="Buy Me a Coffee" src="/img/logos/buy-me-a-coffee.png"></a></li>
+
+      <li><a href="https://ko-fi.com/copticwiki" target="_blank" rel="noopener noreferrer">Ko-fi <img class="inline-logo" alt="Ko-fi" src="/img/logos/ko-fi.png"></a></li>
+    </ul>
+  </li>
+
+  <li>Please also consider donating to <a href="https://copticorphans.org/" target="_blank" rel="noopener noreferrer">Coptic Orphans <img class="inline-logo" alt="Coptic Orphans" src="/img/logos/coptic-orphans.png"></a></li>
+</ul>
+`;
+
+/**
+ * LICENSE states the licenses that our data and code are released under.
+ */
+const LICENSE = `
+<ul>
+  <li>Lexicon data is released under <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a>. <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer"><img class="inline-logo" alt="CC BY-SA 4.0" src="/img/logos/cc-by-sa.png"></a></li>
+
+  <li><a href="https://github.com/pishoyg/coptic/" target="_blank" rel="noopener noreferrer">Code</a> is released under <a href="https://www.gnu.org/licenses/gpl-3.0.en.html#license-text" target="_blank" rel="noopener noreferrer">GPL-3.0.</a> <a href="https://www.gnu.org/licenses/gpl-3.0.en.html#license-text" target="_blank" rel="noopener noreferrer"><img class="inline-logo" alt="GPL-3.0" src="/img/logos/gplv3.png"></a></li>
+</ul>
+`;
+
+/**
+ * CODE states where our code lives.
+ */
+const CODE = `
+<p>Code lives at <a href="https://github.com/pishoyg/coptic/" target="_blank" rel="noopener noreferrer">github.com/pishoyg/coptic <img class="inline-logo" alt="https://github.com" src="/img/logos/github.png"></a>.
+We are in need of contributors. If this work interests you, please reach out.</p>
+`;
+
+/**
+ * PANELS maps the ID of each panel's trigger to the panel's content.
+ */
+const PANELS: Record<ID, () => (Node | string)[]> = {
+  [ID.CITED_WORKS]: () => [
+    help.heading(TITLE.CREDITS),
+    ...html.parse(CREDITS),
+    document.createElement('hr'),
     help.heading(TITLE.WORKS),
     ...html.parse(WORKS),
+    document.createElement('hr'),
     help.heading(TITLE.IMAGES),
-    ...html.parse(IMAGES)
-  );
+    ...html.parse(IMAGES),
+    document.createElement('hr'),
+    help.heading(TITLE.LICENSE),
+    ...html.parse(LICENSE),
+  ],
+  [ID.CONTACT]: () => [help.heading(TITLE.CONTACT), ...html.parse(CONTACT)],
+  [ID.DONATE]: () => [help.heading(TITLE.DONATE), ...html.parse(DONATE)],
+  [ID.CODE]: () => [help.heading(TITLE.CODE), ...html.parse(CODE)],
+};
+
+/**
+ * Build a panel for each panel trigger present on the page. A page picks its
+ * panels by carrying (or omitting) their triggers.
+ */
+export function init(): void {
+  Object.values(ID).forEach((id: ID): void => {
+    const trigger: HTMLElement | null = document.getElementById(id);
+    if (trigger) {
+      new help.Panel(trigger, ...PANELS[id]());
+    }
+  });
 }
