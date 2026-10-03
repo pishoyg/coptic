@@ -51,26 +51,24 @@ Rationale:
 
 Concurrency
 
-    In our experimentation, ProcessPoolExecutor was initially found to be
-    roughly 5 times faster than ThreadPoolExecutor. At that point, users were
-    required to provide a directory of HTML files to index.
-    Later on, we started supporting a generator object, which allows us to
-    receive content dynamically, without it being persisted to files.
-    In our first use case with a generator object, ProcessPoolExecutor was found
-    to be around 20 times slower than ThreadPoolExecutor!
-    While we're not certain that this is the culprit, the user used a cache
-    implementation that wasn't process-friendly, and the generator object was
-    provided from a module that relied heavily on static-scope initialization,
-    which get duplicated to each process!
-    It was concluded that some generator implementation can be problematic with
-    ProcessPoolExecutor, and we opted for using ThreadPoolExecutor instead to
-    make our module more versatile, thus sacrificing performance in case where
-    ProcessPoolExecutor can be much faster!
-    ProcessPoolExecutor may indeed be optimal, not just when the input is
-    provided in the form of a directory of HTML files, but also when the input
-    is a "friendly" generator object, although we don't have a concrete
-    definition of that yet, as our understanding of concurrency primitives is
-    still limited.
+    Building the index is CPU-bound pure-Python work (mostly HTML parsing).
+    Threads get serialized by the GIL, and were measured to be no faster than
+    sequential execution, so we use a process pool instead.
+
+    The parent process consumes the source, and sends plain (key, html) pairs
+    to the workers. Thus, the source can be any iterable, including a generator
+    that can't be pickled. The Xooxle object itself (minus the source) is
+    pickled and sent to the workers, so the selectors and captures must be
+    picklable (e.g. no lambdas in selector queries).
+
+    NOTE: Under the `spawn` start method (the default on macOS), each worker
+    re-imports the parent's `__main__` module. Entry points must keep their work
+    under `if __name__ == "__main__":`, and any module-level initialization
+    reachable from `__main__` gets duplicated into every worker.
+    As of the time of writing, the entry points that build an index are cheap
+    enough to import, and the re-imports overlap with the parent's production of
+    the source. Switching to `fork`, which skips the re-imports, brought no
+    measurable gain.
 """
 
 import pathlib
@@ -87,6 +85,11 @@ from xooxle import constants as const
 # _KEY is the name of the key field in the output. This must match the name
 # expected by the Xooxle search logic.
 _KEY: str = "KEY"
+
+# _CHUNK_SIZE is the number of documents sent to a worker process at once.
+# Batching amortizes the cost of pickling the task, which includes the Xooxle
+# object itself.
+_CHUNK_SIZE: int = 16
 
 _COLLAPSIBLE_SPACE: re.Pattern[str] = re.compile(r"\s{2,}", re.ASCII)
 
@@ -573,13 +576,23 @@ class Xooxle:
             return None
         return {_KEY: key} | data
 
+    def __getstate__(self) -> dict[str, typing.Any]:
+        # Worker processes receive this object (through the bound
+        # `process_file`), but they never need the source, which is often an
+        # unpicklable generator. The parent process consumes it, and sends the
+        # workers plain (key, html) pairs.
+        state: dict[str, typing.Any] = self.__dict__.copy()
+        del state["_source"]
+        return state
+
     def build(self) -> None:
-        with concur.thread_pool_executor() as executor:
+        with concur.process_pool_executor() as executor:
             data: Iterable[dict[str, Field | str]] = filter(
                 None,
                 executor.map(
                     self.process_file,
                     self._source,
+                    chunksize=_CHUNK_SIZE,
                 ),
             )
         json: Index = {

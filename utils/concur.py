@@ -72,7 +72,9 @@ class SequentialExecutor:
         self,
         fn: typing.Callable[[T], R],
         *iterables: abc.Iterable[T],
+        chunksize: int = 1,
     ) -> abc.Iterator[R]:
+        del chunksize  # Only meaningful for ProcessPoolExecutor.
         return map(fn, *iterables)
 
     def __enter__(self):
