@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["home.ts"],
+  "sourcesContent": ["/**\n * Home page orchestrator. It wires up the footer's panels.\n */\nimport * as about from './about.js';\n\n/**\n *\n */\nfunction main(): void {\n  about.init();\n}\n\nmain();\n"],
+  "mappings": "aAGA,UAAYA,MAAW,aAKvB,SAASC,GAAa,CACpBD,EAAM,KAAK,CACb,CAEAC,EAAK",
+  "names": ["about", "main"]
+}
