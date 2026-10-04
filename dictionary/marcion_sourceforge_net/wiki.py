@@ -484,14 +484,9 @@ def replace_manual(match: regex.Match[str]) -> str:
     that what remains is usually an inconsistency in Crum's text that no
     heuristic can resolve.
 
-    NOTE: Footnotes share the brace notation with manual labels, so the same
-    token can not take both. A footnoted error therefore can not also have its
-    bad tooltip suppressed, which is why the unnumbered-book feature sits at
-    the precision it does (see the `UNNUMBERED_BIBLE_BOOK` note in `wiki.ts`).
-    Nor may a manual label be nested inside footnote text: the substitution
-    below runs after the footnote has been packed into the `data-footnote`
-    attribute, so it would rewrite the attribute's contents and inject
-    unescaped quotes, silently corrupting the HTML.
+    NOTE: Footnotes share the brace notation with manual labels, and the two
+    nest either way. A manual label may wrap a footnote, and a footnote's text
+    and note may each contain manual labels.
 
     Args:
         match: The manual label match, whose groups are the text and the
@@ -504,6 +499,13 @@ def replace_manual(match: regex.Match[str]) -> str:
     if key is None:
         return rf'<span class="{cls.MANUAL}">{text}</span>'
     return rf'<span class="{cls.MANUAL}" {DATA_KEY}="{key}">{text}</span>'
+
+
+_MANUAL: Substitution = Substitution(
+    r"{(.*?)}(?:{(.*?)})?",
+    replace_manual,
+    ban=["{", "}"],
+)
 
 
 def replace_stack(match: regex.Match[str]) -> str:
@@ -751,17 +753,15 @@ class Wiki:
         yield from _SUBSTITUTIONS
 
         yield Substitution(
-            r"{([^{}]*)}{{(.*?)}}",
+            # The text and the note may contain manual labels, so both are
+            # matched as balanced braces, by recursing into the text group.
+            r"{(?P<text>(?:[^{}]|{(?&text)})*)}{{(?P<note>(?&text))}}",
             self.replace_footnote,
             ban=["{", "}"],
         )
         # The substitution for manual labels must follow the substitution for
         # footnotes.
-        yield Substitution(
-            r"{(.*?)}(?:{(.*?)})?",
-            replace_manual,
-            ban=["{", "}"],
-        )
+        yield _MANUAL
         # An addendum takes the form `//deleted//inserted//`, either half of
         # which may be empty, optionally followed by the page that the
         # correction comes from. See `replace_addendum` for how one is
@@ -957,10 +957,13 @@ class Wiki:
         # error of Crum's; an addendum (`replace_addendum`) is a correction of
         # his own. Use a footnote to record what he got wrong and what he
         # meant. See `replace_manual` for the notation it shares with manual
-        # labels, and for the consequences of sharing it.
+        # labels.
         #
         # The footnote content is embedded in a `data-footnote` attribute on
         # the `.footnoted` wrapper. The rest is taken care of by JavaScript.
+        # The note's manual labels are rendered before it gets escaped, since
+        # the manual label substitution can't reach inside the attribute.
+        # The text's are left to it, as the text stays outside the attribute.
         # The inner `.mark` element keeps the footnote symbol visible to
         # flag the presence of a footnote.
         # We opt for inserting it in the HTML, instead of in TypeScript, to
@@ -968,10 +971,10 @@ class Wiki:
         # initial text. In other words, while TypeScript can enrich the text
         # through tooltips, styling, etc., it's not allowed to add any text that
         # wasn't there in the first place.
-        attr: str = escape(match.group(2), quote=True)
+        attr: str = escape(_MANUAL.html(match["note"]), quote=True)
         return (
             f'<span class="{cls.FOOTNOTED}" {DATA_FOOTNOTE}="{attr}">'
-            + match.group(1)
+            + match["text"]
             + _FOOTNOTE_MARK
             + "</span>"
         )
