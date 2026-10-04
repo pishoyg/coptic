@@ -2030,7 +2030,11 @@ function interpretKey(manual: HTMLElement, key: string): Iterable<Node> | Node {
     // The blast radius is extremely small and both modes
     // of failure are benign, so we pick the one that keeps the code simpler.
     // TODO: (#0) Consider ignoring non-load-bearing postfixes.
-    linkMatching(manual, span, reference.isSiblingOf.bind(reference));
+    if (!RegExp(str.regex([key])).test(span.textContent)) {
+      // If the reference key is absent from the text, this is likely an
+      // anaphor, so we try to find an antecedent.
+      linkMatching(manual, span, reference.isSiblingOf.bind(reference));
+    }
     return span;
   }
 
@@ -2047,7 +2051,11 @@ function interpretKey(manual: HTMLElement, key: string): Iterable<Node> | Node {
       MANUAL_CHAPTER_VERSE.exec(manual.textContent);
     const cit: Citation = new Citation(cv?.[1], cv?.[2], match[0]);
     const anchor: HTMLElement = cit.anchor(...manual.childNodes);
-    linkMatching(manual, anchor, cit.sameBook.bind(cit));
+    if (!RegExp(str.regex([match[0]])).test(anchor.textContent)) {
+      // If the book abbreviation is absent from the text, this is likely an
+      // anaphor, so we try to find an antecedent.
+      linkMatching(manual, anchor, cit.sameBook.bind(cit));
+    }
     return anchor;
   }
 
