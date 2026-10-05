@@ -799,7 +799,7 @@ export class SearchResult extends AggregateResult {
       // line.
       // This is very useful, especially for prepositions:
       // The line "ϧⲁϫⲉⲛ" contains the definition for the preposition ϧⲁϫⲉⲛ.
-      // The line "― ϧⲁϫⲉⲛ" simply tells that the verb can be used with this
+      // The line "⸺ ϧⲁϫⲉⲛ" simply tells that the verb can be used with this
       // preposition.
       // If a user searches for "ϧⲁϫⲉⲛ", they're probably interested in the
       // former.

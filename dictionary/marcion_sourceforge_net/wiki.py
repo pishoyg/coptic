@@ -232,7 +232,7 @@ _ALPHABETS: dict[Language, tuple[str, ...]] = {
         "\ufe26",  # in his Greek as well as in his Coptic: θ︤ν︥, π︤ν︦α︥.
         "\ufe25",
         "⸝",  # Right low paraphrase bracket.
-        "—",  # Em dash. Coptic uses the horizontal bar instead.
+        "—",  # Em dash. Coptic uses the two-em dash instead.
         "·",
         "'",
         " ",
@@ -265,7 +265,7 @@ _ALPHABETS: dict[Language, tuple[str, ...]] = {
         # that seems to be absent from the Coptic Unicode.
         "⸗",  # Double oblique hyphen, marking a pronominal form,
         "†",  # and dagger, marking a qualitative one.
-        "―",  # Horizontal bar, standing in for a repeated headword.
+        "⸺",  # Two-Em Dash, standing in for a repeated headword.
         # See `_LANGUAGE_OVERRIDES`.
         "⸪",  # Two dots over one dot punctuation.
         "·",
@@ -385,8 +385,8 @@ def _normalize_for_validation(language: Language, text: str) -> str:
 # characters below are the exceptions encountered so far, each mapped to the
 # language it belongs to.
 _LANGUAGE_OVERRIDES: dict[str, Language] = {
-    # The horizontal bar bears no script in its name, and is always Coptic.
-    "―": "COPTIC",
+    # The two-em dash bears no script in its name, and is always Coptic.
+    "⸺": "COPTIC",
     # The S with oblique stroke is a Latin letter, used to transcribe a
     # character that seems absent from the Coptic Unicode.
     "Ꞩ": "COPTIC",

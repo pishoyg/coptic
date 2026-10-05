@@ -274,9 +274,9 @@ DETACHED_TYPES: dict[str, lexical.Type] = {
 WORD_RE: re.Pattern[str] = re.compile(
     "|".join(
         [
-            # In Crum's dictionary, a horizontal bar (U+2015) means ‘same as
+            # In Crum's dictionary, a two-em dash (U+2E3A) means ‘same as
             # above’.
-            "―",
+            "⸺",
             # A Coptic morpheme could also be an abbreviation:
             "ⳤ",
             "⳥",
