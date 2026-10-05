@@ -233,7 +233,6 @@ _ALPHABETS: dict[Language, tuple[str, ...]] = {
         "\ufe25",
         "⸝",  # Right low paraphrase bracket.
         "—",  # Em dash. Coptic uses the horizontal bar instead.
-        "…",
         "·",
         "'",
         " ",
@@ -269,7 +268,6 @@ _ALPHABETS: dict[Language, tuple[str, ...]] = {
         "―",  # Horizontal bar, standing in for a repeated headword.
         # See `_LANGUAGE_OVERRIDES`.
         "⸪",  # Two dots over one dot punctuation.
-        "…",
         "·",
         " ",
         # TODO: (#503) Ideally, the comma should be removed. A Coptic block
@@ -301,7 +299,6 @@ _ALPHABETS: dict[Language, tuple[str, ...]] = {
         "\u0651",  # Shadda.
         "\u0652",  # Sukun.
         "،",  # Arabic comma.
-        "…",
         " ",
         ".",
         "?",
@@ -318,7 +315,7 @@ _ALPHABETS: dict[Language, tuple[str, ...]] = {
     "SYRIAC": (
         r"\p{Syriac}",  # The letters, and their points, which share a script.
         " ",
-        "…",
+        ".",
     ),
     "ETHIOPIC": (r"\p{Ethiopic}",),
     "HIEROGLYPH": (r"\p{Egyptian_Hieroglyphs}",),
