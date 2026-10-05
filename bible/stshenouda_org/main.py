@@ -184,6 +184,9 @@ class _CrumBook(typing.TypedDict):
     name: str
     path: str
     chapters: list[str]
+    # foreign maps the book's foreign chapters to the chapters that host them.
+    # TODO: (#0) Make this field optional, since it's mostly empty.
+    foreign: dict[str, str]
     crum: list[str]
 
 
@@ -360,7 +363,7 @@ class Verse:
 
     fast: bool = False
 
-    def __init__(self, data: schema.Verse, short_vn: bool) -> None:
+    def __init__(self, data: schema.Verse, short_vn: bool, host: str) -> None:
         self._raw: schema.Verse = data
         # NOTE: Normalization must take place after recoloring, because
         # recoloring uses the original text.
@@ -378,7 +381,9 @@ class Verse:
         }
 
         self.num: str = ""
-        self.chapter: str = ""
+        # A chapter may host verses from a foreign chapter, in which case this
+        # is the foreign chapter's number. See `Chapter`.
+        self.foreign: str = ""
         if data["verseNumber"]:
             pattern: re.Pattern[str] = (
                 _CHAPTERLESS_VERSE_NUMBER_RE if short_vn else _VERSE_NUMBER_RE
@@ -389,7 +394,9 @@ class Verse:
             ensure.ensure(match, "Invalid verseNumber format:", data)
             assert match
             self.num = match.group(2) or ""
-            self.chapter = match.group(1) or ""
+            if match.group(1) and match.group(1) != host:
+                self.foreign = match.group(1)
+                ensure.ensure(self.num, self, "has a foreign chapter only!")
         if not self.num:
             # If the `verseNumber` field provides no number, verify that the
             # text doesn't carry a number either.
@@ -418,15 +425,28 @@ class Verse:
                 repr(text),
             )
 
-    def number(self) -> str:
+    def _id(self, num: str) -> str:
+        # A foreign verse's ID is prefixed with its chapter (e.g. `B_1`), so
+        # that it doesn't collide with the host chapter's own verses.
+        return f"{self.foreign}_{num}" if self.foreign else num
+
+    def id(self) -> str:
         """
         Returns:
-            Verse number, stripping any trailing letters.
+            Verse ID, which is unique within the chapter, except for
+            duplicate verse numbers in the source.
+        """
+        return self._id(self.num)
+
+    def group_id(self) -> str:
+        """
+        Returns:
+            Verse ID, stripping any trailing letters from the number.
         """
         if self.num in ["", TIT, SUBSCR] or self.num.isdigit():
-            return self.num
+            return self._id(self.num)
         ensure.ensure(re.fullmatch(r"\d+[a-z]", self.num))
-        return self.num[:-1]
+        return self._id(self.num[:-1])
 
     def has(self, lang: Language) -> bool:
         return self._has[lang]
@@ -518,6 +538,21 @@ class Item:
         return name.lower().replace(" ", "_").replace(".", "_")
 
 
+# _FOREIGN maps the chapters that host verses from foreign chapters, to the
+# foreign chapters. A foreign verse's ID is prefixed with its chapter (e.g.
+# `vB_1`).
+# NOTE: Reconciling this structure with Crum's numbering is the job of the
+# Lexicon (see `docs/crum/septuagint.ts`).
+_FOREIGN: dict[str, set[str]] = {
+    # The Prayer of Azarias and the Song of the Three Children.
+    "daniel_3": {"B"},
+    # Artaxerxes' letter against the Jews.
+    "esther_3": {"B"},
+    # Artaxerxes' letter in favor of the Jews.
+    "esther_8": {"E"},
+}
+
+
 class Chapter(Item):
     """A Bible chapter."""
 
@@ -528,7 +563,9 @@ class Chapter(Item):
         short_vn: bool,
     ) -> None:
         self.num: str = self._num(data)
-        self.verses: list[Verse] = [Verse(v, short_vn) for v in data["data"]]
+        self.verses: list[Verse] = [
+            Verse(v, short_vn, self.num) for v in data["data"]
+        ]
         self._prev: Chapter | None = None
         self._next: Chapter | None = None
         self._is_first: bool = False
@@ -546,31 +583,12 @@ class Chapter(Item):
         else:
             assert self.num.isdigit()
 
-        # NOTE: Daniel 3, in our data, hosts both Daniel 3 and Daniel B. We
-        # override the numbers to form a single sequence.
-        # P.S. This is how the book happens to be cited in Crum, although the
-        # resulting sequence seems to be aligned with Crum's up to 52 or 53,
-        # then it starts being off by 1 from 53 or 54 onward, and then being off
-        # by 2 from the late 50s or early 60s and all the way to the end!
-        # TODO: (#677) Implement this override in a cleaner, more visible
-        # location.
-        # TODO: (#677) Handle other oddly-numbered or interleaved chapters.
-        if self.id() == "daniel_3":
-            for idx, v in enumerate(self.verses[1:], 1):
-                v.num = str(idx)
-        else:
-            foreign: set[str] = {
-                v.chapter
-                for v in self.verses
-                if v.chapter and v.chapter != self.num
-            }
-            # TODO: (#677) Change the following error to an assertion.
-            if foreign:
-                log.error(
-                    self,
-                    "contains verses from a foreign chapter:",
-                    foreign,
-                )
+        ensure.equal_sets(
+            {v.foreign for v in self.verses if v.foreign},
+            _FOREIGN.get(self.id(), set()),
+            self,
+            "has unexpected foreign chapters:",
+        )
 
         if len(self.verses) <= 1:
             return
@@ -604,12 +622,12 @@ class Chapter(Item):
                         v,
                     )
                 continue
-            if v.num in seen:
-                dupes.add(v.num)
-                if self.verses[idx - 1].num != v.num:
-                    non_consec.add(v.num)
+            if v.id() in seen:
+                dupes.add(v.id())
+                if self.verses[idx - 1].id() != v.id():
+                    non_consec.add(v.id())
                 continue
-            seen.add(v.num)
+            seen.add(v.id())
 
         if non_consec:
             # TODO: (#677) If possible, change the following error to an
@@ -796,6 +814,27 @@ class Book(Item):
     def chapter_names(self) -> list[str]:
         return [c.num for c in self.chapters]
 
+    def foreign(self) -> dict[str, str]:
+        """
+        Returns:
+            A mapping of the book's foreign chapters to the chapters that host
+            them.
+        """
+        foreign: dict[str, str] = {}
+        for c in self.chapters:
+            for f in {v.foreign for v in c.verses if v.foreign}:
+                ensure.ensure(f not in foreign, self, f, "has two hosts!")
+                foreign[f] = c.num
+        # The Lexicon resolves a chapter as foreign before looking it up among
+        # the pages, so a foreign chapter that is also a page would shadow it.
+        ensure.ensure(
+            foreign.keys().isdisjoint(self.chapter_names()),
+            self,
+            "has foreign chapters that are also pages:",
+            foreign,
+        )
+        return foreign
+
     def has_lang(self, lang: Language, boundary_counts: bool = True) -> bool:
         return any(c.has_lang(lang, boundary_counts) for c in self.chapters)
 
@@ -892,6 +931,7 @@ class Bible:
                 name=book.name,
                 path=book.id(),
                 chapters=sorted(book.chapter_names()),
+                foreign=book.foreign(),
                 crum=book.crum,
             )
             for book in self.chain_books()
@@ -1078,14 +1118,17 @@ class HTMLBuilder:
                 yield from self._verse_body_aux(
                     verse,
                     langs,
-                    dedupe(verse.num),
+                    dedupe(verse.id()),
                 )
 
         # Each entry pairs a group number with the group's verses. An empty
         # number means that the verses shouldn't be grouped.
         groups: list[tuple[str, list[Verse]]] = []
         group: abc.Iterable[Verse]
-        for num, group in itertools.groupby(chapter.verses, key=Verse.number):
+        for num, group in itertools.groupby(
+            chapter.verses,
+            key=Verse.group_id,
+        ):
             group = list(group)
             # Avoid grouping the verses if:
             # - The group verses have no number (`verse.num` is the empty
@@ -1094,7 +1137,7 @@ class HTMLBuilder:
             #   If, otherwise, the group has an alphabetical suffix, we wrap it
             #   in a group that has a numerical number, in order for lookups
             #   that use the non-suffixed number to resolve correctly.
-            if not num or (len(group) == 1 and num == group[0].num):
+            if not num or (len(group) == 1 and num == group[0].id()):
                 num = ""
             groups.append((num, group))
 
@@ -1473,7 +1516,7 @@ class TableBuilder(HTMLBuilder):
         num: str | None = None,
     ) -> abc.Generator[str]:
         if num is None:
-            num = verse.num
+            num = verse.id()
         if not num:
             yield f'<tr class="{cls.VERSE}">'
             return
@@ -1528,7 +1571,7 @@ def _build_xooxle(bible: Bible, table_builder: TableBuilder) -> None:
         for chapter in bible.chain_chapters():
             path: str = chapter.path(is_epub=False)
             for verse in chapter.verses:
-                key: str = f"{path}#v{verse.num}" if verse.num else path
+                key: str = f"{path}#v{verse.id()}" if verse.num else path
                 # In Xooxle, we use the raw verse numbers, even if duplicate or
                 # suffixed numbers are present. Duplicate keys are acceptable in
                 # Xooxle. The complex verse number deduplication / grouping
