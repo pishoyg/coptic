@@ -919,6 +919,30 @@ export class Citation {
   }
 
   /**
+   * @returns The chapter whose page hosts the cited verse, and the verse's ID
+   * on it. These differ from `target` for a foreign chapter, which is hosted
+   * within another, and whose verse IDs are prefixed with it (e.g. `B_1`).
+   *
+   * TODO: (#0) Nothing verifies the location. The enrichment dump records the
+   * citation's `name()`, which derives from `target`, and whether it links,
+   * but not where it links to. So a wrong host or verse ID here would leave
+   * the dump unchanged. Test the hyperlinks of foreign chapters, and verify
+   * that the verse IDs exist on the host pages (see #778).
+   */
+  private location(): {
+    chapter: string | undefined;
+    verse: string | undefined;
+  } {
+    const { chapter, verse } = this.target();
+    const host: string | undefined = chapter && this.book.foreign[chapter];
+    if (chapter && host) {
+      // A citation of a foreign chapter as a whole lands on its first verse.
+      return { chapter: host, verse: `${chapter}_${verse ?? '1'}` };
+    }
+    return { chapter, verse };
+  }
+
+  /**
    * Update the citation with new numbers. The book is the same.
    *
    * @param first - First number within the text.
@@ -974,7 +998,7 @@ export class Citation {
     // TODO: (#0) Add a developer-mode check that the list of chapters is sorted
     // in lexicographical order.
 
-    const chapter: string | undefined = this.target().chapter;
+    const chapter: string | undefined = this.location().chapter;
     if (chapter === undefined) {
       return false;
     }
@@ -1007,7 +1031,7 @@ export class Citation {
    */
   public anchor(...content: (Node | string)[]): HTMLElement {
     let elem: HTMLElement;
-    const { chapter, verse } = this.target();
+    const { chapter, verse } = this.location();
     // The `chapter` guard is required because we want to hyperlink
     // chapter-less citations normally.
     if (chapter && !this.knownChapter()) {
