@@ -24,6 +24,7 @@ import * as dev from '../dev.js';
 import * as scan from '../scan.js';
 import * as dial from '../dialect.js';
 import * as book from './book.js';
+import * as sept from './septuagint.js';
 
 /**
  * The Bible book mapping, keyed by every Crum abbreviation. It's derived from
@@ -78,90 +79,6 @@ const EXCLUDE: string = css.disjunction(
   cls.ANNOTATION,
   cls.PAGE
 );
-
-// NOTE: In all Bible numbering mappings below, notice that Crum didn't use a
-// single numbering convention consistently throughout his book.
-
-/**
- * DAN_OVERRIDE defines special Book names used by Crum to refer to chapters in
- * the Book of Daniel.
- * - 'Su' refers to the chapter that St. Shenouda refers to as A.
- * - 'Bel' refers to the chapter that St. Shenouda refers to as C.
- * - 'Dan Vis 14' refers to the chapter that St. Shenouda refers to as D.
- */
-const DAN_OVERRIDE: Record<string, string> = {
-  Su: 'A',
-  Bel: 'C',
-  'Dan Vis 14': 'D',
-  'Dan vis 14': 'D',
-  'Dan Vis xiv': 'D', // Only once.
-  'Dan vis xiv': 'D', // Does not occur, added for completion!
-};
-
-/**
- * CHAPTER_OVERRIDE maps Crum's chapters to the chapters that SSACS numbers
- * differently, keyed by book path. VERSE_OVERRIDE takes precedence over it.
- * Where Crum departs from the mappings below, the citation carries a manual
- * label in `wiki.tsv` (e.g. `{Ps 114 3}{Ps 115 3}`).
- */
-const CHAPTER_OVERRIDE: Record<string, Record<string, string>> = {
-  jeremiah: {
-    // - SSACS's Jeremiah 51a is cited by Crum as 'Jer 51'.
-    // - SSACS's Jeremiah 51b is handled below in VERSE_OVERRIDE.
-    '51': '51a',
-  },
-  psalms: {
-    // - Crum's citations of 'Ps 115' mostly correspond to SSACS's Psalms 115a,
-    // hence the override below. Crum's 'Ps 115 10–19' continue the numbering
-    // past 115a into 115b (see VERSE_OVERRIDE).
-    // - Crum's citations of 'Ps 114' mostly correspond to SSACS's Psalms 114,
-    // hence no override is needed for most cases. Crum occasionally uses 'Ps
-    // 114' to refer to SSACS's Psalms 115a.
-    '115': '115a',
-    // - SSACS's Psalms 115b is cited by Crum as '116'. SSACS's Psalms 116
-    // consists of only 2 verses, and doesn't appear to be cited by Crum at all.
-    '116': '115b',
-  },
-};
-
-/**
- * VERSE_OVERRIDE maps verses of Crum's chapters that continue into the next
- * part of a chapter that SSACS splits, to their chapter and verse in SSACS.
- * It takes precedence over CHAPTER_OVERRIDE, which maps the rest.
- */
-const VERSE_OVERRIDE: Record<
-  string,
-  Record<string, Record<string, [string, string]>>
-> = {
-  jeremiah: {
-    // SSACS's Jeremiah 51a has 30 verses (51 1—30), and 51b has the remaining
-    // 5 (51 31—35, as its Greek column is numbered).
-    '51': {
-      '31': ['51b', '1'],
-      '32': ['51b', '2'],
-      '33': ['51b', '3'],
-      '34': ['51b', '4'],
-      '35': ['51b', '5'],
-    },
-  },
-  psalms: {
-    // SSACS's Psalms 115a has 9 verses. The mapping past them isn't a plain
-    // offset, because SSACS's 115b merges verses 13-14 into its verse 4, and
-    // verses 17-19 into its verse 7.
-    '115': {
-      '10': ['115b', '1'],
-      '11': ['115b', '2'],
-      '12': ['115b', '3'],
-      '13': ['115b', '4'],
-      '14': ['115b', '4'],
-      '15': ['115b', '5'],
-      '16': ['115b', '6'],
-      '17': ['115b', '7'],
-      '18': ['115b', '7'],
-      '19': ['115b', '7'],
-    },
-  },
-};
 
 // UNNUMBERED_BIBLE_BOOK is a set of names of multi-part Bible books, with the
 // numbers removed.
@@ -237,7 +154,7 @@ const ENRICHMENT_RE = new RegExp(
   str.regex([
     // Bible:
     ...Object.keys(BIBLE_MAPPING),
-    ...Object.keys(DAN_OVERRIDE),
+    ...Object.keys(sept.DAN),
     // References:
     ...Object.keys(ref.MAPPING),
     // Pages:
@@ -590,7 +507,7 @@ const LIST_OF_ABBREVIATIONS_PAGE = 'xi';
 
 const REFERENCE_RE = new RegExp(`^${str.regex(Object.keys(ref.MAPPING))}`, 'u');
 const BIBLE_RE = new RegExp(
-  `^${str.regex([...Object.keys(BIBLE_MAPPING), ...Object.keys(DAN_OVERRIDE)])}`,
+  `^${str.regex([...Object.keys(BIBLE_MAPPING), ...Object.keys(sept.DAN)])}`,
   'u'
 );
 
@@ -968,9 +885,9 @@ export class Citation {
     private verse: string | undefined,
     key: string
   ) {
-    if (key in DAN_OVERRIDE) {
+    if (key in sept.DAN) {
       this.verse = this.chapter;
-      this.chapter = DAN_OVERRIDE[key];
+      this.chapter = sept.DAN[key];
       key = 'Dan';
       this.explicit = false;
     }
@@ -998,20 +915,7 @@ export class Citation {
     chapter: string | undefined;
     verse: string | undefined;
   } {
-    const override: [string, string] | undefined =
-      this.chapter && this.verse
-        ? VERSE_OVERRIDE[this.book.path]?.[this.chapter]?.[this.verse]
-        : undefined;
-    if (override) {
-      const [chapter, verse] = override;
-      return { chapter, verse };
-    }
-    return {
-      chapter:
-        this.chapter &&
-        (CHAPTER_OVERRIDE[this.book.path]?.[this.chapter] ?? this.chapter),
-      verse: this.verse,
-    };
+    return sept.remap(this.book.path, this.chapter, this.verse);
   }
 
   /**
@@ -1767,7 +1671,7 @@ function replaceMatch(context: html.Context): void {
     return;
   }
 
-  if (key in BIBLE_MAPPING || key in DAN_OVERRIDE) {
+  if (key in BIBLE_MAPPING || key in sept.DAN) {
     replaceBible(context);
     return;
   }
