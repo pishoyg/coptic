@@ -25,7 +25,7 @@ const MAPPING: Record<string, string> = Object.fromEntries(
   ])
 );
 
-const KEY_RE = /^(.*?)_(\d+[ab]?|[a-f])\.html(?:#v(\d+)[a-z]?)?$/;
+const KEY_RE = /^(.*?)_(\d+[ab]?|[a-f])\.html(?:#v(?:([A-Z])_)?(\d+)[a-z]?)?$/;
 const FRAGMENT_CONTEXT = 10;
 
 const ID = {
@@ -171,18 +171,19 @@ class SearchResult extends xoox.SearchResult {
       log.error('Key has invalid format:', this.key);
       return super.view();
     }
-    const [basename, chapter, verse]: [string, string, string | undefined] = [
-      match[1]!,
-      match[2]!,
-      match[3],
-    ];
+    const [basename, chapter, foreign, verse]: [
+      string,
+      string,
+      string | undefined,
+      string | undefined,
+    ] = [match[1]!, match[2]!, match[3], match[4]];
     const abbreviation: string | undefined = MAPPING[basename];
     if (!abbreviation) {
       log.error('Unfamiliar basename:', basename);
       return super.view();
     }
 
-    return `${abbreviation} ${chapter.toUpperCase()}${verse ? `:${verse}` : ''}`;
+    return `${abbreviation} ${(foreign ?? chapter).toUpperCase()}${verse ? `:${verse}` : ''}`;
   }
 
   /**
