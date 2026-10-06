@@ -28,19 +28,22 @@ enum ID {
   CODE = 'code',
 }
 
+const EMAIL: string = ((email: string) =>
+  html.anchor(`mailto:${email}`, email))('remnqymi@gmail.com').outerHTML;
+
 /**
  * CREDITS thanks the people whose dedication made this work possible.
  */
 const CREDITS = `
 <p>This work is made possible through the dedication of:</p>
 
-<ol>
-  <li>Milan Konvicka, creator of <a href="https://marcion.sourceforge.net/" target="_blank">Marcion</a>.</li>
-
+<ul>
   <li>Randy Komforty, creator of <a href="https://coptic.wiki/" target="_blank">CopticWiki</a>.</li>
 
+  <li>Milan Konvicka, creator of <a href="https://marcion.sourceforge.net/" target="_blank">Marcion</a>.</li>
+
   <li>Dr. Hany Takla, founder of <a href="http://stshenouda.org" target="_blank">St. Shenouda the Archimandrite Coptic Society</a>.</li>
-</ol>
+</ul>
 `;
 
 /**
@@ -118,42 +121,38 @@ const IMAGES = `
  */
 const CONTACT = `
 <ul>
-  <li>Email us at 📧 <a href="mailto:remnqymi@gmail.com">remnqymi@gmail.com</a>.</li>
+  <li>Email us at 📧 ${EMAIL}.</li>
 
   <li>File a <a href="https://github.com/pishoyg/coptic/issues/new" target="_blank" rel="noopener noreferrer">ticket</a> or a <a href="https://docs.google.com/forms/d/e/1FAIpQLSeNVAjxtJcAR7i6AwBI3SFlzRWC5DQ09G6LfbySbZGvZCdpIg/viewform?usp=pp_url&amp;entry.1382006920=http://remnqymi.com/" target="_blank" rel="noopener noreferrer">report</a>.</li>
 </ul>
 
-<p>Feedback is welcome.</p>
+<p>Feedback is appreciated.</p>
 `;
 
 /**
- * DONATE lists the causes that we encourage our users to support.
+ * DONATE names the causes that we encourage our users to support.
  */
 const DONATE = `
+<p>You can support <a href="https://coptic.wiki/" target="_blank" rel="noopener noreferrer">CopticWiki</a>, who provide Lexicon data, through:</p>
+
 <ul>
-  <li>You can support <a href="http://coptic.wiki/" target="_blank" rel="noopener noreferrer">CopticWiki</a>, who provide Lexicon data, through:
-    <ul>
-      <li><a href="https://www.patreon.com/c/CopticWiki/posts" target="_blank" rel="noopener noreferrer">Patreon <img class="inline-logo" alt="Patreon" src="/img/logos/patreon.png"></a></li>
+  <li><a href="https://www.patreon.com/c/CopticWiki/posts" target="_blank" rel="noopener noreferrer">Patreon <img class="inline-logo" alt="Patreon" src="/img/logos/patreon.png"></a></li>
 
-      <li><a href="https://buymeacoffee.com/copticwiki" target="_blank" rel="noopener noreferrer">Buy Me a Coffee <img class="inline-logo" alt="Buy Me a Coffee" src="/img/logos/buy-me-a-coffee.png"></a></li>
+  <li><a href="https://buymeacoffee.com/copticwiki" target="_blank" rel="noopener noreferrer">Buy Me a Coffee <img class="inline-logo" alt="Buy Me a Coffee" src="/img/logos/buy-me-a-coffee.png"></a></li>
 
-      <li><a href="https://ko-fi.com/copticwiki" target="_blank" rel="noopener noreferrer">Ko-fi <img class="inline-logo" alt="Ko-fi" src="/img/logos/ko-fi.png"></a></li>
-    </ul>
-  </li>
-
-  <li>Please also consider donating to <a href="https://copticorphans.org/" target="_blank" rel="noopener noreferrer">Coptic Orphans <img class="inline-logo" alt="Coptic Orphans" src="/img/logos/coptic-orphans.png"></a></li>
+  <li><a href="https://ko-fi.com/copticwiki" target="_blank" rel="noopener noreferrer">Ko-fi <img class="inline-logo" alt="Ko-fi" src="/img/logos/ko-fi.png"></a></li>
 </ul>
+
+<p>Please also consider donating to <a href="https://copticorphans.org/" target="_blank" rel="noopener noreferrer">Coptic Orphans <img class="inline-logo" alt="Coptic Orphans" src="/img/logos/coptic-orphans.png"></a>.</p>
 `;
 
 /**
  * LICENSE states the licenses that our data and code are released under.
  */
 const LICENSE = `
-<ul>
-  <li>Lexicon data is released under <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a>. <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer"><img class="inline-logo" alt="CC BY-SA 4.0" src="/img/logos/cc-by-sa.png"></a></li>
+<p>Lexicon data is released under <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a>. <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer"><img class="inline-logo" alt="CC BY-SA 4.0" src="/img/logos/cc-by-sa.png"></a></p>
 
-  <li><a href="https://github.com/pishoyg/coptic/" target="_blank" rel="noopener noreferrer">Code</a> is released under <a href="https://www.gnu.org/licenses/gpl-3.0.en.html#license-text" target="_blank" rel="noopener noreferrer">GPL-3.0.</a> <a href="https://www.gnu.org/licenses/gpl-3.0.en.html#license-text" target="_blank" rel="noopener noreferrer"><img class="inline-logo" alt="GPL-3.0" src="/img/logos/gplv3.png"></a></li>
-</ul>
+<p><a href="https://github.com/pishoyg/coptic/" target="_blank" rel="noopener noreferrer">Code</a> is released under <a href="https://www.gnu.org/licenses/gpl-3.0.en.html#license-text" target="_blank" rel="noopener noreferrer">GPL-3.0</a>. <a href="https://www.gnu.org/licenses/gpl-3.0.en.html#license-text" target="_blank" rel="noopener noreferrer"><img class="inline-logo" alt="GPL-3.0" src="/img/logos/gplv3.png"></a></p>
 `;
 
 /**
@@ -161,7 +160,7 @@ const LICENSE = `
  */
 const CODE = `
 <p>Code lives at <a href="https://github.com/pishoyg/coptic/" target="_blank" rel="noopener noreferrer">github.com/pishoyg/coptic <img class="inline-logo" alt="https://github.com" src="/img/logos/github.png"></a>.
-We are in need of contributors. If this work interests you, please reach out.</p>
+We are in need of contributors. If this work interests you, please reach out at ${EMAIL}.</p>
 `;
 
 /**
