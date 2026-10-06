@@ -922,12 +922,6 @@ export class Citation {
    * @returns The chapter whose page hosts the cited verse, and the verse's ID
    * on it. These differ from `target` for a foreign chapter, which is hosted
    * within another, and whose verse IDs are prefixed with it (e.g. `B_1`).
-   *
-   * TODO: (#0) Nothing verifies the location. The enrichment dump records the
-   * citation's `name()`, which derives from `target`, and whether it links,
-   * but not where it links to. So a wrong host or verse ID here would leave
-   * the dump unchanged. Test the hyperlinks of foreign chapters, and verify
-   * that the verse IDs exist on the host pages (see #778).
    */
   private location(): {
     chapter: string | undefined;

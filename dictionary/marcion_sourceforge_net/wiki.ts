@@ -15,6 +15,7 @@
  * `.claude/commands/ambrose.md`. If it were to change, Ambrose needs to be
  * informed.
  */
+/* eslint-disable max-lines */
 
 import * as childProcess from 'node:child_process';
 import * as fs from 'node:fs';
@@ -34,7 +35,9 @@ import * as ref from '../../docs/crum/references.js';
 const PATH: string = fileURLToPath(import.meta.url);
 const DIRNAME: string = path.dirname(PATH);
 // TODO: (#0) Move paths to a shared package, similar to `utils/paths.py`.
-const LEXICON_DIR: string = path.join(DIRNAME, '..', '..', 'docs', 'crum');
+// The site root, against which root-relative hrefs resolve to files.
+const DOCS_DIR: string = path.join(DIRNAME, '..', '..', 'docs');
+const LEXICON_DIR: string = path.join(DOCS_DIR, 'crum');
 const OUTPUT_DIR: string = path.join(DIRNAME, 'data', 'output', 'wiki');
 
 // A lexicon page. The directory also holds category pages (`adjective.html`)
@@ -235,12 +238,28 @@ const RULE = '___';
 const NO_LINK = 'NO-LINK';
 
 /**
+ * Emitted when a Bible citation links to a chapter page that has no element
+ * for its verse. The link works, but lands at the top of the chapter rather
+ * than on the verse.
+ *
+ * The check is against the chapter page itself, rather than against an index:
+ * a fragment either names an element ID on the page or it does not, and the
+ * page is the only place that is spelled out with certainty — verse IDs carry
+ * foreign-chapter prefixes, suffixed verses are grouped under an unsuffixed
+ * ID, and duplicates are disambiguated (see `bible/stshenouda_org/main.py`).
+ * The enricher itself does not check verses, so as to keep its Bible index
+ * small.
+ */
+const NO_VERSE = 'NO-VERSE';
+
+/**
  * The base that page hrefs are resolved against.
  *
  * NOTE: A base is not optional. `SITE_URL` in `docs/paths.ts` is empty off an
  * Anki card, so every link a page carries is root-relative — `/crum?query=…`,
  * `/bible?book=…` — and `new URL` throws on those unless given one. Which base
- * is immaterial: only the query string is ever read.
+ * is immaterial: only the path, query string and fragment are ever read, and
+ * those of a root-relative href do not depend on it.
  */
 const BASE_URL = 'http://localhost';
 
@@ -638,8 +657,9 @@ class Serializer {
   /**
    * @param el - A `.bible` element.
    * @returns The citation it resolved to, in full — book, chapter and verse —
-   * prefixed by `NO_LINK` when it resolved to no hyperlink. Generating the dump
-   * also warns `Bible citation references unknown chapter` for each of those.
+   * prefixed by `NO_LINK` when it resolved to no hyperlink, or by `NO_VERSE`
+   * when the hyperlink misses its verse. Generating the dump also warns `Bible
+   * citation references unknown chapter` for each of the former.
    */
   private bible(el: HTMLElement): string {
     if (!wiki.Citation.tagged(el)) {
@@ -658,14 +678,10 @@ class Serializer {
     const name: string = wiki.Citation.fromAnchor(el).name();
     // `Citation.anchor` builds a plain span, rather than an anchor, in exactly
     // the case it declines to link. See `NO_LINK`.
-    // TODO: (#778) Mark unknown verses too. Only the chapter is checked against
-    // the book's index, so a citation naming a verse the chapter does not have
-    // still links — and nothing, the enrichment dump included, reports it.
-    // Decide whether to check verses in the enricher as well (which we were
-    // reluctant to do to avoid inflating it), or only here in the materializer.
-    // The former is arguably unnecessary, and would inflate the enricher's
-    // Bible index without real value.
-    return el.nodeName === 'A' ? name : `${NO_LINK}: ${name}`;
+    if (el.nodeName !== 'A') {
+      return `${NO_LINK}: ${name}`;
+    }
+    return lands(el.getAttribute('href')!) ? name : `${NO_VERSE}: ${name}`;
   }
 
   /**
@@ -852,6 +868,50 @@ class Serializer {
       'how to serialize it, then regenerate.'
     );
   }
+}
+
+/** The element IDs on each site page read so far, by path. See `ids`. */
+const IDS: Map<string, ReadonlySet<string>> = new Map<
+  string,
+  ReadonlySet<string>
+>();
+
+/**
+ * @param file - A site page.
+ * @returns The element IDs it carries.
+ *
+ * A regex is enough here, and much cheaper than a DOM: the pages are written by
+ * our own pipeline, which always double-quotes its attributes.
+ */
+function ids(file: string): ReadonlySet<string> {
+  if (!IDS.has(file)) {
+    IDS.set(
+      file,
+      new Set<string>(
+        fs
+          .readFileSync(file, 'utf8')
+          .matchAll(/\sid="([^"]*)"/g)
+          .map((match: RegExpExecArray): string => match[1]!)
+      )
+    );
+  }
+
+  return IDS.get(file)!;
+}
+
+/**
+ * @param href - A root-relative hyperlink to a site page.
+ * @returns Whether the page carries the element its fragment names. A link with
+ * no fragment lands on the page itself, so it always does.
+ */
+function lands(href: string): boolean {
+  const url: URL = new URL(href, BASE_URL);
+  return (
+    !url.hash ||
+    ids(path.join(DOCS_DIR, url.pathname)).has(
+      decodeURIComponent(url.hash.slice(1))
+    )
+  );
 }
 
 /**

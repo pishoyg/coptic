@@ -140,7 +140,8 @@ key, and anything it does not cover must be read there.
 | `‹text›` `^(text)` | Italics and superscript — the `STYLED` pair, on which `styledParent` and `noStyledParent` turn. A superscript carrying a tooltip prints it as `^(text=gist)`. |
 | `⟨text⟩` `⟨gloss: …⟩` `⟨bullet: …⟩` | An excluded span: a foreign script, unlabelled, or one of the labelled Latin ones. |
 | `⟪B⟫` | A dialect code. Also excluded. |
-| `NO-LINK` | The one failure marker, inside a `{bible: …}`. A citation that resolved, but to a chapter our Bible index does not have. Always worth a look. |
+| `NO-LINK` | A failure marker, inside a `{bible: …}`. A citation that resolved, but to a chapter our Bible index does not have. Always worth a look. |
+| `NO-VERSE` | The other failure marker, inside a `{bible: …}`. A citation that links to its chapter, but names a verse the chapter page does not have, so the link lands at the top of the chapter. Always worth a look. |
 
 Every marker uses a character Crum never wrote, so nothing in the dump is
 ambiguous. Square brackets in particular are *his* — editorial restorations
@@ -216,11 +217,14 @@ and bring it with you.
 against Crum's text: the dump renders a wrong binding, a swallowed annotation
 and a missed abbreviation exactly as confidently as it renders a right one.
 
-**`NO-LINK` inside a `{bible: …}`.** The one self-announcing failure, and the
-marker names the problem chapter. A citation with no chapter at all still links,
-to the book, so this always means the chapter itself is wrong. Nothing checks
-the *verse* — it is printed, but a wrong one raises no marker, so read it
-against Crum yourself.
+**`NO-LINK` or `NO-VERSE` inside a `{bible: …}`.** The self-announcing
+failures. `NO-LINK` names a chapter our Bible lacks; a citation with no chapter
+at all still links, to the book, so this always means the chapter itself is
+wrong. `NO-VERSE` names a verse the chapter page lacks: the citation may have
+inherited the wrong number, or Crum's numbering may differ from our Bible's
+(the Septuagint's verse and chapter boundaries, say) — or our Bible may have a
+gap or a misnumbered verse. A verse that exists but is the *wrong* one raises no
+marker, so read the numbers against Crum yourself.
 
 **False positives — enriched, but shouldn't be.** An abbreviation that is also
 an ordinary English word, a Latin letter, or a proper name. The individual
