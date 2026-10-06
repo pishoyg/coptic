@@ -934,7 +934,7 @@ export class Citation {
     verse: string | undefined;
   } {
     const { chapter, verse } = this.target();
-    const host: string | undefined = chapter && this.book.foreign[chapter];
+    const host: string | undefined = chapter && this.book.foreign?.[chapter];
     if (chapter && host) {
       // A citation of a foreign chapter as a whole lands on its first verse.
       return { chapter: host, verse: `${chapter}_${verse ?? '1'}` };

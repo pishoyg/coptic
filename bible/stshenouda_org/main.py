@@ -185,8 +185,8 @@ class _CrumBook(typing.TypedDict):
     path: str
     chapters: list[str]
     # foreign maps the book's foreign chapters to the chapters that host them.
-    # TODO: (#0) Make this field optional, since it's mostly empty.
-    foreign: dict[str, str]
+    # It's omitted when empty, as is the case for most books.
+    foreign: typing.NotRequired[dict[str, str]]
     crum: list[str]
 
 
@@ -838,6 +838,17 @@ class Book(Item):
     def has_lang(self, lang: Language, boundary_counts: bool = True) -> bool:
         return any(c.has_lang(lang, boundary_counts) for c in self.chapters)
 
+    def crum_book(self) -> _CrumBook:
+        book: _CrumBook = _CrumBook(
+            name=self.name,
+            path=self.id(),
+            chapters=sorted(self.chapter_names()),
+            crum=self.crum,
+        )
+        if foreign := self.foreign():
+            book["foreign"] = foreign
+        return book
+
     @typing.override
     def id(self) -> str:
         return self.to_id(self.name)
@@ -927,15 +938,7 @@ class Bible:
         # List of Abbreviation.
         ensure.unique(key for book in self.chain_books() for key in book.crum)
         books: list[_CrumBook] = [
-            _CrumBook(
-                name=book.name,
-                path=book.id(),
-                chapters=sorted(book.chapter_names()),
-                foreign=book.foreign(),
-                crum=book.crum,
-            )
-            for book in self.chain_books()
-            if book.crum
+            book.crum_book() for book in self.chain_books() if book.crum
         ]
         # This JavaScript code is needed by our website due to difficulties
         # getting Anki to read a JSON.

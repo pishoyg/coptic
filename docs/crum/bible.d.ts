@@ -22,7 +22,7 @@ export interface Book {
   chapters: string[];
   // foreign maps the book's foreign chapters, which have no pages of their own,
   // to the chapters that host them.
-  foreign: Record<string, string>;
+  foreign?: Record<string, string>;
   crum: string[];
 }
 export const BOOKS: Book[];
