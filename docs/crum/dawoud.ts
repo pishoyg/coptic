@@ -1,10 +1,15 @@
 /** Init function for the Dawoud scan view. */
 
+import * as browser from '../browser.js';
+import * as cls from './cls.js';
 import * as scan from '../scan.js';
 import * as lang from '../lang.js';
+import * as orth from '../orth.js';
 import * as mode from './mode.js';
 import * as id from './id.js';
+import * as params from './params.js';
 import * as str from '../str.js';
+import * as tool from '../tooltip.js';
 
 const MODE: mode.Mode = mode.DAWOUD;
 
@@ -17,8 +22,38 @@ const OFFSET = 17;
 const DATA_DIR = '../dawoud/';
 
 // Paths to our indexes.
-// TODO: (#640) Support looking up the Greek and Arabic indexes.
+// TODO: (#640) Add the Arabic index once it's populated.
 const COPTIC: string = str.joinPaths(DATA_DIR, 'coptic.tsv');
+const GREEK: string = str.joinPaths(DATA_DIR, 'greek.tsv');
+
+// GREEK_TO_COPTIC maps a Greek letter to its Coptic counterpart.
+const GREEK_TO_COPTIC: Record<string, string> = {
+  α: 'ⲁ',
+  β: 'ⲃ',
+  γ: 'ⲅ',
+  δ: 'ⲇ',
+  ε: 'ⲉ',
+  ζ: 'ⲍ',
+  η: 'ⲏ',
+  θ: 'ⲑ',
+  ι: 'ⲓ',
+  κ: 'ⲕ',
+  λ: 'ⲗ',
+  μ: 'ⲙ',
+  ν: 'ⲛ',
+  ξ: 'ⲝ',
+  ο: 'ⲟ',
+  π: 'ⲡ',
+  ρ: 'ⲣ',
+  σ: 'ⲥ',
+  ς: 'ⲥ',
+  τ: 'ⲧ',
+  υ: 'ⲩ',
+  φ: 'ⲫ',
+  χ: 'ⲭ',
+  ψ: 'ⲯ',
+  ω: 'ⲱ',
+};
 
 /**
  * Dawoud gives ⲟⲩ special handling in his dictionary.
@@ -64,6 +99,44 @@ export class DawoudWord extends lang.Coptic implements lang.Word {
 }
 
 /**
+ * Dawoud spells the words in his Greek index in Coptic letters, and sorts them
+ * like Coptic words. A word in Greek letters is transliterated to Coptic, so it
+ * can be looked up in the index as well.
+ *
+ * NOTE: Lookups in Greek letters are secondary, so the transliteration is
+ * deliberately dumb: a letter-for-letter substitution, with the diacritics
+ * dropped. It knows nothing of Greek orthography, only of how Copticized Greek
+ * words are spelled. For example:
+ * - The rough breathing expressed using ϩ in Coptic (e.g. αἵρεσις ->
+ *   ϩⲁⲓⲣⲉⲥⲓⲥ), is simply dropped.
+ * - τι is never contracted into ϯ (e.g. στιχάριον > ⲥϯⲭⲁⲣⲓⲟⲛ).
+ * Such words land on the wrong page, and should be typed in Coptic letters
+ * instead.
+ */
+export class DawoudGreek extends lang.Coptic implements lang.Word {
+  /**
+   * @param word - The string representation of the word, in Coptic or Greek
+   * letters.
+   */
+  public constructor(word: string) {
+    super(
+      Array.from(
+        orth.cleanDiacritics(word.toLowerCase()),
+        (c: string): string => GREEK_TO_COPTIC[c] ?? c
+      ).join('')
+    );
+  }
+}
+
+/**
+ * @param path - Path to a TSV index.
+ * @returns The content of the index.
+ */
+async function fetchText(path: string): Promise<string> {
+  return fetch(path).then((res: Response): Promise<string> => res.text());
+}
+
+/**
  * Initialise the Dawoud scan view: build the index, wire the scroller,
  * and hand the shared search box to the `Dictionary` so it searches on
  * every keystroke.
@@ -78,16 +151,30 @@ export async function init(): Promise<void> {
 
   const isActive: scan.IsActive = () => mode.active(MODE);
 
+  const [coptic, greek]: [string, string] = await Promise.all([
+    fetchText(COPTIC),
+    fetchText(GREEK),
+  ]);
+
+  const lookup = new scan.Lookup({
+    [lang.Language.COPTIC]: new scan.Index(coptic, DawoudWord),
+    [lang.Language.GREEK]: new scan.Index(greek, DawoudGreek),
+  });
+
+  // The Greek checkbox forces the interpretation of Coptic letters as Greek
+  // ones, searching them in the Greek index. Its state is mirrored to the
+  // `?greek=` URL parameter, and restored from it before the first search.
+  const greekCheckbox = document.getElementById(
+    id.GREEK_CHECKBOX
+  ) as HTMLInputElement;
+  if (browser.getParam(params.GREEK)) {
+    greekCheckbox.checked = true;
+    lookup.alias(lang.Language.COPTIC, lang.Language.GREEK);
+  }
+
   new scan.ZoomerDragger(form, isActive);
-  new scan.Dictionary(
-    new scan.Lookup({
-      [lang.Language.COPTIC]: new scan.Index(
-        await fetch(COPTIC).then((res: Response): Promise<string> =>
-          res.text()
-        ),
-        DawoudWord
-      ),
-    }),
+  const dictionary = new scan.Dictionary(
+    lookup,
     new scan.Scroller({
       start: MIN_PAGE_NUM,
       end: MAX_PAGE_NUM,
@@ -99,4 +186,34 @@ export async function init(): Promise<void> {
     }),
     document.getElementById(id.SEARCH_BOX) as HTMLInputElement
   );
+
+  wireGreekCheckbox(greekCheckbox, dictionary);
+}
+
+/**
+ * Explain the Greek checkbox in a tooltip, and mirror its state to the URL and
+ * the dictionary whenever it changes.
+ *
+ * @param checkbox - The Greek checkbox.
+ * @param dictionary - The Dawoud dictionary.
+ */
+function wireGreekCheckbox(
+  checkbox: HTMLInputElement,
+  dictionary: scan.Dictionary
+): void {
+  tool.addTooltip(
+    document.querySelector<HTMLLabelElement>(`label[for="${checkbox.id}"]`)!,
+    ["Search Dawoud's Greek Appendix"],
+    [cls.EXPLAIN_CHECKBOX]
+  );
+
+  checkbox.addEventListener('change', (): void => {
+    // TODO: (#640) Remove the parameter from the URL on mode switches. It only
+    // applies to Dawoud, but it currently lingers in the other modes.
+    browser.setParam(params.GREEK, checkbox.checked);
+    dictionary.alias(
+      lang.Language.COPTIC,
+      checkbox.checked ? lang.Language.GREEK : undefined
+    );
+  });
 }

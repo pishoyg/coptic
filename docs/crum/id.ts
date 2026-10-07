@@ -63,6 +63,9 @@ export const NEXT = 'next';
 export const PREV = 'prev';
 export const RESET = 'reset';
 
+// GREEK_CHECKBOX forces Dawoud to interpret Coptic letters as Greek ones.
+export const GREEK_CHECKBOX = 'greek-checkbox';
+
 // NOTE IDs:
 export const CATEGORIES = 'categories';
 export const DERIVATIONS = 'derivations';

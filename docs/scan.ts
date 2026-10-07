@@ -332,6 +332,10 @@ export class Index {
  * Lookup resolves search queries to pages, using a book's indexes.
  */
 export class Lookup {
+  // Maps a language to another, whose index searches the words written in the
+  // letters of the former.
+  private readonly aliases = new Map<lang.Language, lang.Language>();
+
   /**
    * @param indexes - The book's indexes, keyed by language. A word query is
    * searched in the index of its language, which is detected automatically.
@@ -357,6 +361,23 @@ export class Lookup {
   ) {}
 
   /**
+   * Search the words written in the letters of one language in the index of
+   * another language. This is useful for a dictionary that spells the words of
+   * a language in the letters of another (e.g. Greek in Coptic letters).
+   *
+   * @param from - The language of the letters.
+   * @param to - The language whose index to search, or `undefined` to search
+   * the index of `from` itself.
+   */
+  public alias(from: lang.Language, to?: lang.Language): void {
+    if (to) {
+      this.aliases.set(from, to);
+    } else {
+      this.aliases.delete(from);
+    }
+  }
+
+  /**
    * Resolve a search query to a `Target` (page number + optional
    * column).
    *
@@ -372,8 +393,9 @@ export class Lookup {
    *      first decimal run and parse it, along with the column letter.
    *   4. **Word.** Detect the language of the first letter in the query,
    *      extract all letters in that language, and binary-search the
-   *      index of that language. Columns are not inferred from word
-   *      searches, so a word's trailing `a` or `b` stays part of it.
+   *      index of that language (or of its alias, see `alias`). Columns are
+   *      not inferred from word searches, so a word's trailing `a` or `b`
+   *      stays part of it.
    *
    * Column priority: an override value's column wins over a column
    * the user typed at the top level. When both are present and
@@ -440,7 +462,7 @@ export class Lookup {
   }
 
   /**
-   * Search for a word in the index of its language.
+   * Search for a word in the index of its language, or of its alias.
    *
    * @param query - A normalized search query.
    * @returns The page containing the word in the query, or `undefined` if the
@@ -454,7 +476,8 @@ export class Lookup {
     if (!language) {
       return undefined;
     }
-    const index: Index | undefined = this.indexes[language];
+    const index: Index | undefined =
+      this.indexes[this.aliases.get(language) ?? language];
     if (!index) {
       return undefined;
     }
@@ -1015,6 +1038,27 @@ export class Dictionary {
     // landing page otherwise. The `Scroller` opens nothing until told to,
     // so exactly one scan is ever fetched.
     this.scroller.update(this.search() ?? { page: this.landingPage });
+  }
+
+  /**
+   * Alias a language to another in the lookup (see `Lookup.alias`).
+   *
+   * The scan only moves if the alias changes where the query resolves. So a
+   * query that the alias doesn't concern, such as a page number, leaves the
+   * reader on the page they are on, even if they have since navigated away
+   * from the query's page.
+   *
+   * @param from - The language of the letters.
+   * @param to - The language whose index to search, or `undefined` to search
+   * the index of `from` itself.
+   */
+  public alias(from: lang.Language, to?: lang.Language): void {
+    const before: Target | undefined = this.search();
+    this.lookup.alias(from, to);
+    const after: Target | undefined = this.search();
+    if (after?.page !== before?.page || after?.column !== before?.column) {
+      this.scroller.update(after);
+    }
   }
 
   /**

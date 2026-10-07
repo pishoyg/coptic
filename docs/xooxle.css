@@ -173,6 +173,7 @@ body.dev {
 
 input#search-box {
   width: 100%;
+  box-sizing: border-box;
   padding: 10px 16px;
   border: 1px solid var(--border-strong);
   border-radius: 20px;

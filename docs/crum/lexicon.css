@@ -7,6 +7,7 @@
 
 #wiki-checkbox-td,
 #marcion-checkbox-td,
+#greek-checkbox-td,
 .explain-checkbox {
   text-align: center;
   font-style: italic;
@@ -47,6 +48,15 @@
  *                                        `#prev` / `#next` respectively.
  *   - `#prev` / `#next`                — scan-navigation buttons that
  *                                        only make sense over a scan.
+ *   - `#greek-checkbox-td > label`     — forces the interpretation of
+ *                                        Coptic letters as Greek ones,
+ *                                        which only Dawoud supports. Only
+ *                                        the label is hidden: the cell
+ *                                        stays, so the search box never
+ *                                        stretches into its room.
+ *   - `#keyboard-td`                   — the keyboard link, which yields
+ *                                        its room to `#greek-checkbox-td`
+ *                                        under Dawoud.
  *
  * SPECIFICITY CAUTION: each header-element selector is qualified with
  * `#header` not for semantic clarity but to win a specificity fight
@@ -70,7 +80,9 @@ body:not(.dawoud) #dawoud,
 body:not(.digital) #header #help,
 body:not(.digital) #header .developer,
 body:not(.book, .dawoud) #header #prev,
-body:not(.book, .dawoud) #header #next {
+body:not(.book, .dawoud) #header #next,
+body:not(.dawoud) #greek-checkbox-td > label,
+body:not(.digital, .book) #keyboard-td {
   display: none;
 }
 
