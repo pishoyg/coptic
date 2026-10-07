@@ -18,9 +18,6 @@ const LANDING = MIN_PAGE_NUM - OFFSET;
 
 const DATA_DIR = 'crum/';
 
-/* COPTIC defines the path to the dictionary index. */
-const COPTIC = str.joinPaths(DATA_DIR, 'coptic.tsv');
-
 /* HEADWORDS defines the path to the headword-to-column index. */
 const HEADWORDS = str.joinPaths(DATA_DIR, 'headwords.json');
 
@@ -359,8 +356,37 @@ export class Word implements lang.Word {
   }
 }
 
+/* WORD_TYPES maps the language of each of the book's indexes to the type of
+ * its words. The index of a language lives at `${DATA_DIR}${language}.tsv`. */
+const WORD_TYPES: Record<lang.Language, lang.WordType> = {
+  [lang.Language.COPTIC]: Word,
+  [lang.Language.GREEK]: lang.Greek,
+  [lang.Language.ARABIC]: lang.Arabic,
+  [lang.Language.ENGLISH]: lang.English,
+};
+
 /**
- * Initialise the Crum scan view: build the index, wire the scroller, and
+ * @returns The book's indexes, keyed by language.
+ */
+async function fetchIndexes(): Promise<Record<lang.Language, scan.Index>> {
+  const languages: lang.Language[] = Object.values(lang.Language);
+  const tsvs: string[] = await Promise.all(
+    languages.map((language: lang.Language): Promise<string> =>
+      fetch(str.joinPaths(DATA_DIR, `${language}.tsv`)).then(
+        (res: Response): Promise<string> => res.text()
+      )
+    )
+  );
+  return Object.fromEntries(
+    languages.map((language: lang.Language, idx: number) => [
+      language,
+      new scan.Index(tsvs[idx]!, WORD_TYPES[language]),
+    ])
+  ) as Record<lang.Language, scan.Index>;
+}
+
+/**
+ * Initialise the Crum scan view: build the indexes, wire the scroller, and
  * hand the shared search box to the `Dictionary` so it searches on every
  * keystroke.
  */
@@ -374,14 +400,16 @@ export async function init(): Promise<void> {
 
   const isActive: scan.IsActive = () => mode.active(MODE);
 
-  const [coptic, headwords]: [string, Record<string, string>] =
-    await Promise.all([
-      fetch(COPTIC).then((res: Response): Promise<string> => res.text()),
-      fetch(HEADWORDS).then(
-        (res: Response): Promise<Record<string, string>> =>
-          res.json() as Promise<Record<string, string>>
-      ),
-    ]);
+  const [indexes, headwords]: [
+    Record<lang.Language, scan.Index>,
+    Record<string, string>,
+  ] = await Promise.all([
+    fetchIndexes(),
+    fetch(HEADWORDS).then(
+      (res: Response): Promise<Record<string, string>> =>
+        res.json() as Promise<Record<string, string>>
+    ),
+  ]);
 
   const romanOverrides: Record<string, string> = Object.fromEntries(
     ROMAN_PAGES.map((item: string, idx: number): [string, string] => [
@@ -393,10 +421,7 @@ export async function init(): Promise<void> {
   new scan.ZoomerDragger(form, isActive);
 
   new scan.Dictionary(
-    new scan.Lookup(
-      { [lang.Language.COPTIC]: new scan.Index(coptic, Word) },
-      { ...headwords, ...romanOverrides }
-    ),
+    new scan.Lookup(indexes, { ...headwords, ...romanOverrides }),
     new scan.Scroller({
       start: MIN_PAGE_NUM,
       end: MAX_PAGE_NUM,
