@@ -3,7 +3,7 @@
 // NOTE: This package is used in the browser, and also during validation. So we
 // allow it to assert correctness, instead of trying to always fail gracefully.
 import * as log from './logger.js';
-import * as copt from './coptic.js';
+import * as lang from './lang.js';
 import * as orth from './orth.js';
 import * as dev from './dev.js';
 import * as str from './str.js';
@@ -122,29 +122,12 @@ function bounded(scale: number): number {
  */
 export type IsActive = () => boolean;
 
-/**
- * Word represents a word that can be used in the book scan context.
- * TODO: (640) Implement Greek and Arabic word classes, as well as Coptic.
- */
-export interface Word {
-  /**
-   * Lexicographically compare two words.
-   * @param other - The word we're comparing to.
-   * @returns The truth value of `this <= other`.
-   */
-  leq(other: Word): boolean;
-  /**
-   * @returns The string representation of the word.
-   */
-  get word(): string;
-}
-
 /** Entry represents a dictionary page, where each page has a defined range,
  * specified by the so-called *guide words*.
  */
 export interface Page {
-  start: Word;
-  end: Word;
+  start: lang.Word;
+  end: lang.Word;
   page: number;
 }
 
@@ -231,7 +214,7 @@ export class Index {
    */
   public constructor(
     index: string,
-    private readonly wordType: new (s: string) => Word,
+    private readonly wordType: lang.WordType,
     private readonly overrides: Record<string, string> = {}
   ) {
     const lines = index.trim().split('\n');
@@ -347,8 +330,9 @@ export class Index {
     // If any Coptic characters are present, extract them all and search
     // the concatenation as a single word. Otherwise fall back to digit
     // extraction to interpret the query as a page number.
-    // TODO: (640) Extend to other word classes (Greek, Arabic).
-    const coptic: string = Array.from(query).filter(copt.isCoptic).join('');
+    const coptic: string = Array.from(query)
+      .filter((c: string): boolean => lang.detect(c) === lang.Language.COPTIC)
+      .join('');
     if (coptic) {
       return { page: this.binarySearch(new this.wordType(coptic)) };
     }
@@ -367,7 +351,7 @@ export class Index {
    * @param target - The word being searched for.
    * @returns The number of the matching page.
    */
-  private binarySearch(target: Word): number {
+  private binarySearch(target: lang.Word): number {
     let left = 0;
     let right = this.pages.length - 1;
     while (left < right) {

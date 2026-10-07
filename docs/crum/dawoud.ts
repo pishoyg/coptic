@@ -1,7 +1,7 @@
 /** Init function for the Dawoud scan view. */
 
 import * as scan from '../scan.js';
-import * as copt from '../coptic.js';
+import * as lang from '../lang.js';
 import * as mode from './mode.js';
 import * as id from './id.js';
 import * as str from '../str.js';
@@ -26,7 +26,7 @@ const COPTIC: string = str.joinPaths(DATA_DIR, 'coptic.tsv');
  * dictionary between ⲟ and ⲡ.
  * We reimplement sorting for Dawoud!
  */
-export class DawoudWord extends copt.Word implements scan.Word {
+export class DawoudWord extends lang.Coptic implements lang.Word {
   /**
    * Lexicographically compare two words in Dawoud's dictionary.
    * @param other - Word to compare.
