@@ -75,6 +75,7 @@ import pathlib
 import re
 import typing
 from collections.abc import Generator, Iterable
+from html import escape
 from itertools import groupby
 
 import bs4
@@ -375,12 +376,13 @@ class Capture:
         # conclude successfully, we add checks here to ensure that all tags
         # match it, and that text never does.
         # This means that the pipeline will crash if the input text contains
-        # substrings that look like a tag, or if a retained attribute has a
-        # value containing a double quote (TAG_RE accepts neither). This is not
-        # ideal. However, we don't have such input at the moment, so we don't
-        # bother to fix this. The fix is easy: html-escape the text during
-        # processing, and unescape it during text extraction at the end.
-        # TODO: (#0) Allow tag-like text and arbitrary attribute values.
+        # substrings that look like a tag. This is not ideal. However, we don't
+        # have such input at the moment, so we don't bother to fix this. The
+        # fix is easy: html-escape the text during processing, and unescape it
+        # during text extraction at the end.
+        # Attribute values, on the other hand, are escaped below, so they may
+        # contain arbitrary text, including HTML.
+        # TODO: (#0) Allow tag-like text.
         if child.name in self._unit_tags:
             yield const.UNIT_DELIMITER
         elif child.name in self._block_elements:
@@ -398,7 +400,10 @@ class Capture:
                 continue
             if isinstance(val, list):
                 val = " ".join(val)
-            attrs[key] = val
+            # BeautifulSoup hands us the unescaped value. Escape it, otherwise
+            # a quote or a `>` in the value would terminate the attribute or
+            # the tag, corrupting both the index HTML and the extracted text.
+            attrs[key] = escape(val)
         retained_classes: set[str] = self._retain_classes.intersection(classes)
         if retained_classes:
             attrs["class"] = " ".join(sorted(retained_classes))
