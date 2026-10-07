@@ -1,7 +1,7 @@
 {
   "version": 3,
   "sources": ["params.ts"],
-  "sourcesContent": ["export const WIKI = 'wiki';\nexport const MARCION = 'marcion';\n"],
-  "mappings": "aAAO,aAAM,KAAO,OACP,QAAU",
+  "sourcesContent": ["export const WIKI = 'wiki';\nexport const MARCION = 'marcion';\n// GREEK forces Dawoud to interpret Coptic letters as Greek ones.\nexport const GREEK = 'greek';\n"],
+  "mappings": "aAAO,aAAM,KAAO,OACP,QAAU,UAEV,MAAQ",
   "names": []
 }
