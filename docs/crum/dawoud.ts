@@ -22,9 +22,15 @@ const OFFSET = 17;
 const DATA_DIR = '../dawoud/';
 
 // Paths to our indexes.
-// TODO: (#640) Add the Arabic index once it's populated.
 const COPTIC: string = str.joinPaths(DATA_DIR, 'coptic.tsv');
 const GREEK: string = str.joinPaths(DATA_DIR, 'greek.tsv');
+// TODO: (#640) Dawoud ignores the definite article when sorting, but we
+// don't. Remove it from the sentinels الدسقولية (page 950), المُتزعزع (page
+// 1006), and المُنبَثِق (page 1026) in the index sheet.
+const ARABIC: string = str.joinPaths(DATA_DIR, 'arabic.tsv');
+
+// GLOSS matches a parenthesized gloss trailing an Arabic word.
+const GLOSS = / \(.*\)$/u;
 
 // GREEK_TO_COPTIC maps a Greek letter to its Coptic counterpart.
 const GREEK_TO_COPTIC: Record<string, string> = {
@@ -129,6 +135,23 @@ export class DawoudGreek extends lang.Coptic implements lang.Word {
 }
 
 /**
+ * Dawoud's Arabic index often follows a word with a parenthesized gloss (e.g.
+ * تحرير (كتابة)), which plays no role in the sorting, so we drop it.
+ *
+ * Unlike the generic Arabic ordering, Dawoud sorts a hamza seated on a wāw as
+ * the wāw itself (e.g. مُنشَرِح < مُؤامرة < مُوَلَّد).
+ */
+export class DawoudArabic extends lang.Arabic implements lang.Word {
+  /**
+   * @param word - The string representation of the word.
+   */
+  public constructor(word: string) {
+    // The word is normalized first, so a decomposed ؤ gets replaced as well.
+    super(word.replace(GLOSS, '').normalize('NFC').replaceAll('ؤ', 'و'));
+  }
+}
+
+/**
  * @param path - Path to a TSV index.
  * @returns The content of the index.
  */
@@ -151,14 +174,16 @@ export async function init(): Promise<void> {
 
   const isActive: scan.IsActive = () => mode.active(MODE);
 
-  const [coptic, greek]: [string, string] = await Promise.all([
+  const [coptic, greek, arabic]: [string, string, string] = await Promise.all([
     fetchText(COPTIC),
     fetchText(GREEK),
+    fetchText(ARABIC),
   ]);
 
   const lookup = new scan.Lookup({
     [lang.Language.COPTIC]: new scan.Index(coptic, DawoudWord),
     [lang.Language.GREEK]: new scan.Index(greek, DawoudGreek),
+    [lang.Language.ARABIC]: new scan.Index(arabic, DawoudArabic),
   });
 
   // The Greek checkbox forces the interpretation of Coptic letters as Greek
