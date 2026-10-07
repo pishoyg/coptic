@@ -611,7 +611,7 @@ class Serializer {
    * reading of how the decision was rendered. The other two kinds record their
    * decision nowhere else: an annotation's tooltip holds its full form and
    * nothing besides, and a `.page` carries only the search query it forwards
-   * to the scan — `scan.Index` resolves that to a folio at read time — so both
+   * to the scan — `scan.Lookup` resolves that to a folio at read time — so both
    * are taken verbatim from there.
    */
   private resolution(el: HTMLElement, kind: string): string | undefined {

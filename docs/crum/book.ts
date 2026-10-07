@@ -2,7 +2,7 @@
 // TODO: (#641) Fix the sorting logic. The current heuristic often doesn't align
 // with Crum.
 import * as scan from '../scan.js';
-import type * as lang from '../lang.js';
+import * as lang from '../lang.js';
 import * as log from '../logger.js';
 import * as dev from '../dev.js';
 import * as mode from './mode.js';
@@ -393,10 +393,10 @@ export async function init(): Promise<void> {
   new scan.ZoomerDragger(form, isActive);
 
   new scan.Dictionary(
-    new scan.Index(coptic, Word, {
-      ...headwords,
-      ...romanOverrides,
-    }),
+    new scan.Lookup(
+      { [lang.Language.COPTIC]: new scan.Index(coptic, Word) },
+      { ...headwords, ...romanOverrides }
+    ),
     new scan.Scroller({
       start: MIN_PAGE_NUM,
       end: MAX_PAGE_NUM,

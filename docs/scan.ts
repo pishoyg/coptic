@@ -181,7 +181,7 @@ interface Target {
 }
 
 /**
- * A dictionary index.
+ * A dictionary index, in a single language.
  */
 export class Index {
   private pages: Page[];
@@ -193,29 +193,13 @@ export class Index {
    * 2. Page start word
    * 3. Page end word
    *
-   * @param wordType - The type of words in this dictionary. This should be a
+   * @param wordType - The type of words in this index. This should be a
    * constructor type that takes as input the string representation of the word,
    * which is retrieved from the index columns.
-   *
-   * @param overrides - Map from a query string to its target page
-   * identifier. The value is a string that may itself carry a trailing
-   * column letter (`a` / `b`), and may also be another override key
-   * (e.g. a Roman-numeral page like `xv`); `getPage` recurses to
-   * resolve it. Looked up early on, so callers can route non-canonical query
-   * forms to a specific page.
-   *
-   * Keys may include a column suffix (e.g. `xva`) for finer control;
-   * `getPage` first tries the full query, then falls back to the
-   * column-chopped form. Any column letter on the resolved value
-   * propagates out of `getPage` and is honored over a user-typed
-   * column letter — see the `getPage` JSDoc for the priority rules.
-   *
-   * Defaults to no overrides.
    */
   public constructor(
     index: string,
-    private readonly wordType: lang.WordType,
-    private readonly overrides: Record<string, string> = {}
+    private readonly wordType: lang.WordType
   ) {
     const lines = index.trim().split('\n');
     const header: string[] = Index.toColumns(lines[0]!);
@@ -253,96 +237,11 @@ export class Index {
   }
 
   /**
-   * Resolve a search query to a `Target` (page number + optional
-   * column).
-   *
-   * Resolution order (first match wins):
-   *   1. **Override, exact match.** If the normalized query is itself
-   *      a key in `overrides`, recurse on the override value. A column
-   *      letter at the tail of the query is part of the lookup, so a
-   *      key like `xva` can be registered independently of `xv`.
-   *   2. **Override, column-chopped.** Strip the trailing column letter
-   *      (if any) and look the base up in `overrides`. Used so that
-   *      both `xv`, `xva`, and `xvb` resolve via the same override.
-   *   3. **Coptic word.** Extract all Coptic characters and binary-
-   *      search the index. Columns are not inferred from Coptic
-   *      searches.
-   *   4. **Page number.** Extract the first decimal run and parse it.
-   *
-   * Column priority: an override value's column wins over a column
-   * the user typed at the top level. When both are present and
-   * disagree, a warning is logged. Rationale: override entries
-   * encode curator-supplied knowledge about which column a headword
-   * lives in, so they should not be overridden by an incidental
-   * typed suffix.
-   *
-   * @param query - The raw search query (any case, any whitespace).
-   * @returns The resolved `Target`, or `undefined` when no rule fires.
+   * @param word - The string representation of a word in this index.
+   * @returns The number of the page that the word belongs to.
    */
-  public getPage(query: string): Target | undefined {
-    // Normalize the query.
-    query = query.toLowerCase();
-    query = orth.cleanDiacritics(query);
-    // For all our use cases, spaces don't make any difference.
-    query = query.replace(/\s/g, '');
-
-    if (!query) {
-      return undefined;
-    }
-
-    let column: Column;
-    let override: string | undefined;
-    // 1. Check overrides with the query as-is first.
-    override = this.overrides[query];
-    if (override) {
-      return this.getPage(override);
-    }
-
-    // Check overrides with the trailing column letter chopped, so queries like
-    // `xva` resolve to the override registered for `xv`. The override value is
-    // itself a page identifier — possibly with its own column suffix, or itself
-    // another override key — so we recurse through `getPage` to resolve it, and
-    // propagate whatever column the chain ends on.
-    [query, column] = chopColumn(query);
-    override = this.overrides[query];
-    if (override) {
-      const result: Target | undefined = this.getPage(override);
-      if (!result) {
-        log.error('Override', override, 'does not resolve for query', query);
-        return result;
-      }
-      if (result.column && column) {
-        log.warn(
-          'Override',
-          override,
-          'resolves column',
-          result.column,
-          'while the query',
-          query,
-          'was followed by column',
-          column
-        );
-      }
-      result.column ??= column;
-      return result;
-    }
-
-    // If any Coptic characters are present, extract them all and search
-    // the concatenation as a single word. Otherwise fall back to digit
-    // extraction to interpret the query as a page number.
-    const coptic: string = Array.from(query)
-      .filter((c: string): boolean => lang.detect(c) === lang.Language.COPTIC)
-      .join('');
-    if (coptic) {
-      return { page: this.binarySearch(new this.wordType(coptic)) };
-    }
-
-    const number: RegExpMatchArray | null = query.match(/-?\d+/g);
-    if (number) {
-      return { page: parseInt(number[0]), column };
-    }
-
-    return undefined;
+  public pageOf(word: string): number {
+    return this.binarySearch(new this.wordType(word));
   }
 
   /**
@@ -426,6 +325,145 @@ export class Index {
       'pages has too many swaps:',
       swaps
     );
+  }
+}
+
+/**
+ * Lookup resolves search queries to pages, using a book's indexes.
+ */
+export class Lookup {
+  /**
+   * @param indexes - The book's indexes, keyed by language. A word query is
+   * searched in the index of its language, which is detected automatically.
+   *
+   * @param overrides - Map from a query string to its target page
+   * identifier. The value is a string that may itself carry a trailing
+   * column letter (`a` / `b`), and may also be another override key
+   * (e.g. a Roman-numeral page like `xv`); `getPage` recurses to
+   * resolve it. Looked up early on, so callers can route non-canonical query
+   * forms to a specific page.
+   *
+   * Keys may include a column suffix (e.g. `xva`) for finer control;
+   * `getPage` first tries the full query, then falls back to the
+   * column-chopped form. Any column letter on the resolved value
+   * propagates out of `getPage` and is honored over a user-typed
+   * column letter — see the `getPage` JSDoc for the priority rules.
+   *
+   * Defaults to no overrides.
+   */
+  public constructor(
+    private readonly indexes: Partial<Record<lang.Language, Index>>,
+    private readonly overrides: Record<string, string> = {}
+  ) {}
+
+  /**
+   * Resolve a search query to a `Target` (page number + optional
+   * column).
+   *
+   * Resolution order (first match wins):
+   *   1. **Override, exact match.** If the normalized query is itself
+   *      a key in `overrides`, recurse on the override value. A column
+   *      letter at the tail of the query is part of the lookup, so a
+   *      key like `xva` can be registered independently of `xv`.
+   *   2. **Override, column-chopped.** Strip the trailing column letter
+   *      (if any) and look the base up in `overrides`. Used so that
+   *      both `xv`, `xva`, and `xvb` resolve via the same override.
+   *   3. **Page number.** If the query contains digits, extract the
+   *      first decimal run and parse it, along with the column letter.
+   *   4. **Word.** Detect the language of the first letter in the query,
+   *      extract all letters in that language, and binary-search the
+   *      index of that language. Columns are not inferred from word
+   *      searches, so a word's trailing `a` or `b` stays part of it.
+   *
+   * Column priority: an override value's column wins over a column
+   * the user typed at the top level. When both are present and
+   * disagree, a warning is logged. Rationale: override entries
+   * encode curator-supplied knowledge about which column a headword
+   * lives in, so they should not be overridden by an incidental
+   * typed suffix.
+   *
+   * @param query - The raw search query (any case, any whitespace).
+   * @returns The resolved `Target`, or `undefined` when no rule fires.
+   */
+  public getPage(query: string): Target | undefined {
+    // For all our use cases, case and spaces don't make any difference.
+    query = query.toLowerCase().replace(/\s/g, '');
+    // Diacritics don't make a difference in overrides and page numbers.
+    // Words, however, are left for their language to normalize.
+    const clean: string = orth.cleanDiacritics(query);
+
+    if (!clean) {
+      return undefined;
+    }
+
+    // 1. Check overrides with the query as-is first.
+    let override: string | undefined = this.overrides[clean];
+    if (override) {
+      return this.getPage(override);
+    }
+
+    // Check overrides with the trailing column letter chopped, so queries like
+    // `xva` resolve to the override registered for `xv`. The override value is
+    // itself a page identifier — possibly with its own column suffix, or itself
+    // another override key — so we recurse through `getPage` to resolve it, and
+    // propagate whatever column the chain ends on.
+    const [base, column]: [string, Column] = chopColumn(clean);
+    override = this.overrides[base];
+    if (override) {
+      const result: Target | undefined = this.getPage(override);
+      if (!result) {
+        log.error('Override', override, 'does not resolve for query', base);
+        return result;
+      }
+      if (result.column && column) {
+        log.warn(
+          'Override',
+          override,
+          'resolves column',
+          result.column,
+          'while the query',
+          base,
+          'was followed by column',
+          column
+        );
+      }
+      result.column ??= column;
+      return result;
+    }
+
+    const number: RegExpMatchArray | null = base.match(/-?\d+/g);
+    if (number) {
+      return { page: parseInt(number[0]), column };
+    }
+
+    return this.search(query);
+  }
+
+  /**
+   * Search for a word in the index of its language.
+   *
+   * @param query - A normalized search query.
+   * @returns The page containing the word in the query, or `undefined` if the
+   * query has no letters in a language that we have an index for.
+   */
+  private search(query: string): Target | undefined {
+    const chars: string[] = Array.from(query.normalize('NFC'));
+    const language: lang.Language | undefined = chars
+      .map(lang.detect)
+      .find((l: lang.Language | undefined): boolean => !!l);
+    if (!language) {
+      return undefined;
+    }
+    const index: Index | undefined = this.indexes[language];
+    if (!index) {
+      return undefined;
+    }
+    // Extract all letters in the language, and search the concatenation as a
+    // single word.
+    const word: string = chars
+      .filter((c: string): boolean => lang.detect(c) === language)
+      .join('');
+    return { page: index.pageOf(word) };
   }
 }
 
@@ -555,7 +593,7 @@ export class Scroller {
    * Update the display to the given target page.
    *
    * @param target - Page to open, plus an optional column. Pass `undefined`
-   * — as an unresolved `Index.getPage` returns — to leave the scan where it
+   * — as an unresolved `Lookup.getPage` returns — to leave the scan where it
    * is, so that a query resolving nowhere does not yank the reader off the
    * page they are on.
    * @param target.page - Page number to open. Capped to our page range.
@@ -951,8 +989,8 @@ export class ZoomerDragger {
  */
 export class Dictionary {
   /**
-   * @param index - The dictionary index. Given a (well-formed) search query,
-   * the index should supply us with the number of the page containing the
+   * @param lookup - The dictionary lookup. Given a (well-formed) search query,
+   * the lookup should supply us with the number of the page containing the
    * definition of the word in the query.
    *
    * @param scroller - The scroller updates the scan image given a page
@@ -963,7 +1001,7 @@ export class Dictionary {
    * nowhere, including the empty query. Defaults to 1.
    */
   public constructor(
-    private readonly index: Index,
+    private readonly lookup: Lookup,
     private readonly scroller: Scroller,
     private readonly searchBox: HTMLInputElement,
     private readonly landingPage = 1
@@ -984,6 +1022,6 @@ export class Dictionary {
    * `undefined` when the query resolves nowhere.
    */
   private search(): Target | undefined {
-    return this.index.getPage(this.searchBox.value);
+    return this.lookup.getPage(this.searchBox.value);
   }
 }

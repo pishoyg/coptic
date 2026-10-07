@@ -80,10 +80,14 @@ export async function init(): Promise<void> {
 
   new scan.ZoomerDragger(form, isActive);
   new scan.Dictionary(
-    new scan.Index(
-      await fetch(COPTIC).then((res: Response): Promise<string> => res.text()),
-      DawoudWord
-    ),
+    new scan.Lookup({
+      [lang.Language.COPTIC]: new scan.Index(
+        await fetch(COPTIC).then((res: Response): Promise<string> =>
+          res.text()
+        ),
+        DawoudWord
+      ),
+    }),
     new scan.Scroller({
       start: MIN_PAGE_NUM,
       end: MAX_PAGE_NUM,
