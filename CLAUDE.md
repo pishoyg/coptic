@@ -126,10 +126,10 @@ All file paths are centralized:
 [#ISSUE][COMPONENT/SUBCOMPONENT] DESCRIPTION
 ```
 
-Use `fix #ISSUE` to auto-close an issue. Components: `Crum`, `KELLIA`, `Andreas`, `Bible`, `Lexicon`, `Site`, `Morphology`, `Xooxle`, `platform`, `AI`, `Community`, `App`, `Keyboard`.
+Use `fix #ISSUE` to auto-close an issue. Components: `Crum`, `KELLIA`, `Andreas`, `Bible`, `Lexicon`, `Flashcards`, `Site`, `Morphology`, `Xooxle`, `platform`, `AI`, `Community`, `App`, `Keyboard`.
 
 ### Pre-commit Hooks
 
-50+ hooks run on every commit (enforced, not optional). `make test` iterates until they all pass. Includes mypy, pylint, ruff, black, isort, tsc, eslint, stylelint, prettier, codespell, gitleaks, and more.
+50+ hooks run on every commit (enforced, not optional). `make test` iterates until they all pass. Includes mypy, pylint, ruff, black, isort, tsc, eslint, stylelint, prettier, gitleaks, and more.
 
 There is exactly one `README.md` in the repo (enforced by a pre-commit hook). Technical documentation lives there.
