@@ -1,0 +1,8 @@
+- [Screenshots go in /tmp/](screenshots-go-in-tmp.md) — store screenshots under `/tmp/`, never in the repo
+- [Empty-source tooltips are suppressed on purpose](references-empty-source-tooltip.md) — the `!this.source` guard in references.ts is policy, not a bug
+- [Auto mode lives in user settings only](auto-mode-user-settings-only.md) — repo keeps inert duplicates on purpose; harmless since v2.1.283
+- [Crum's ϫⲟⲉⲓⲥ abbreviation sorts](crum-joeis-abbreviation-sorts.md) — ⳪ vs ⲟ︤ⲥ︥ vs ϭ︤ⲥ︥: one ink blob or two
+- [Crum scan page offset](crum-scan-page-offset.md) — wiki.tsv cites the headword's printed page; entries run onto later scans
+- [Transpile before running pipelines](transpile-before-pipelines.md) — TS pipelines import transpiled `docs/` JS; stale or `undefined` otherwise
+- [wiki.tsv is a Google Sheet snapshot](wiki-tsv-is-sheet-snapshot.md) — `make crum` re-downloads it; label/typo fixes go in the sheet
+- [Crum numbers Dan 3 by Swete's Theodotion](crum-daniel-3-swete-numbering.md) — Vaticanus order (54 depths; 71,72,69,70); check Swete before blaming Crum

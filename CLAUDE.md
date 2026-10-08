@@ -13,6 +13,35 @@ decisions, risks, surprises, and anything you couldn't do or verify. Give
 completion and evidence of correctness a line or two. Don't restate the diff
 or list what came out fine.
 
+## Memory
+
+Project memory lives in `.claude/memory/`, one fact per file, indexed by
+`.claude/memory/MEMORY.md` (imported below). Save knowledge about this repo
+there, not in your auto-memory directory under `$HOME`, and add a one-line
+pointer to the index.
+
+Each file has this frontmatter, followed by the fact. For `feedback` and
+`project`, add **Why:** and **How to apply:** lines. Link related memories
+with `[[name]]`.
+
+```markdown
+---
+name: <kebab-case-slug, same as the filename>
+description: <one line, used to judge relevance>
+metadata:
+  type: feedback | project | reference
+---
+```
+
+This repo is public. Anything saved in `.claude/memory/` gets committed and
+published. Keep these in the user's auto-memory instead:
+
+- Facts about the user's machine, network, or employer
+- Personal preferences that aren't conventions for this repo
+- Anything private, credentials, or contact details
+
+@.claude/memory/MEMORY.md
+
 ## Common Commands
 
 | Command | Purpose |
@@ -131,5 +160,14 @@ Use `fix #ISSUE` to auto-close an issue. Components: `Crum`, `KELLIA`, `Andreas`
 ### Pre-commit Hooks
 
 50+ hooks run on every commit (enforced, not optional). `make test` iterates until they all pass. Includes mypy, pylint, ruff, black, isort, tsc, eslint, stylelint, prettier, gitleaks, and more.
+
+Generated artifacts only diff meaningfully after the formatting hooks have run on them. To run a hook on just the changed files (staged, unstaged, and untracked; some filenames contain spaces):
+
+```sh
+{ git diff -z --name-only HEAD; git ls-files -z --others --exclude-standard; } \
+  | xargs -0 pre-commit run <hook> --files
+```
+
+Run the formatters by name (`prettier`, `tidy-html`, `search-tidy-html`, `tidy-xml`, `black`, `isort`, `ruff`, `format-pisaxo`) rather than every hook: `playwright` runs on any non-TypeScript change under `docs/` or `test/`.
 
 There is exactly one `README.md` in the repo (enforced by a pre-commit hook). Technical documentation lives there.
