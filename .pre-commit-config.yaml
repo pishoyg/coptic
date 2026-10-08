@@ -64,6 +64,22 @@ repos:
         language: system
         files: ^docs/.*
         pass_filenames: false
+      # The script finds modified pages by diffing against HEAD, rather than
+      # relying on the files passed by pre-commit, so that `--all-files` won't
+      # bump every page. It always runs, because pre-commit doesn't pass
+      # deleted files, so a deletion-only commit would otherwise skip it.
+      # To keep it fast, we short-circuit when none of its inputs differ from
+      # HEAD. (In Git pathspecs, `*` matches `/`, so `docs/*.html` covers
+      # nested pages.) If `git diff` fails, we fall through to the script.
+      - id: sitemap
+        name: sitemap
+        entry: >-
+          bash -c 'git diff --quiet HEAD --
+          "docs/*.html" docs/sitemap.xml sitemap.py utils/paths.py
+          || ./sitemap.py'
+        language: system
+        always_run: true
+        pass_filenames: false
 
   # TypeScript and JavaScript
   - repo: local

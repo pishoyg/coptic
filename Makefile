@@ -254,7 +254,3 @@ woff2: FORCE
 	set -o pipefail; \
 	find "$${SITE_DIR}/fonts" -name "*.ttf" -print0 \
 		| xargs -0 -n 1 woff2/woff2_compress
-
-########## SITEMAP ##########
-sitemap: FORCE
-	./sitemap.py
