@@ -6,6 +6,13 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 [ⲣⲉⲙⲛ̀Ⲭⲏⲙⲓ](https://remnqymi.com/) — a platform to make the Coptic language more learnable. It processes multiple dictionary sources (Crum, KELLIA, Andreas), a Bible corpus, and Anki flashcard generation into a static website hosted on GitHub Pages.
 
+## Reports
+
+Keep reports short. Lead with what needs the developer's attention:
+decisions, risks, surprises, and anything you couldn't do or verify. Give
+completion and evidence of correctness a line or two. Don't restate the diff
+or list what came out fine.
+
 ## Common Commands
 
 | Command | Purpose |
@@ -36,15 +43,13 @@ npx playwright test               # E2E tests (Chromium + Mobile Chrome)
 npx tsc                           # type check only
 ```
 
-## Playwright MCP
+## Browser Checks
 
-The Playwright MCP server is enabled for this project (see `.mcp.json`), so Claude Code can drive a live browser to inspect, interact with, and screenshot the site. Typical uses: verifying UI changes after editing `.ts`/`.css`/`.html` in `docs/`, reproducing bugs, and visually confirming behavior that the E2E suite and `tsc` cannot catch.
-
-- Before exercising the site, check whether a dev server is already running
-  (e.g. `curl -sf http://localhost:$PORT/ >/dev/null`) and reuse it; only run
-  `make server` if nothing is listening. If you need an isolated instance,
-  start one on another port with `PORT=8001 make server`.
-- For automated regression tests, prefer the existing Playwright suite under `test/` over ad-hoc MCP sessions.
+To inspect UI changes in `docs/` in a live browser, reuse a running dev server
+(`curl -sf http://localhost:$PORT/ >/dev/null`). Only run `make server` if
+nothing is listening, or start an isolated one with `PORT=8001 make server`.
+For regression tests, extend the Playwright suite under `test/` instead of
+relying on ad-hoc browser sessions.
 
 ## Architecture
 
@@ -121,7 +126,7 @@ All file paths are centralized:
 [#ISSUE][COMPONENT/SUBCOMPONENT] DESCRIPTION
 ```
 
-Use `fix #ISSUE` to auto-close an issue. Components: `Crum`, `KELLIA`, `Andreas`, `Bible`, `Lexicon`, `Site`, `Morphology`, `platform`, `Community`, `App`, `Keyboard`.
+Use `fix #ISSUE` to auto-close an issue. Components: `Crum`, `KELLIA`, `Andreas`, `Bible`, `Lexicon`, `Site`, `Morphology`, `Xooxle`, `platform`, `AI`, `Community`, `App`, `Keyboard`.
 
 ### Pre-commit Hooks
 
