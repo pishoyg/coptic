@@ -9,6 +9,9 @@ import * as dev from './dev.js';
 import * as str from './str.js';
 import * as head from './header.js';
 
+// WORD_START matches a word that starts with a letter.
+const WORD_START = /^\p{L}/u;
+
 // WANT_COLUMNS is the list of the first columns we expect to find in the TSV.
 const WANT_COLUMNS = ['page', 'start', 'end'];
 
@@ -182,6 +185,13 @@ interface Target {
 
 /**
  * A dictionary index, in a single language.
+ *
+ * NOTE: The index is parsed, and its words are normalized into sort keys, on
+ * page load, rather than in an offline pipeline that would ship ready-made
+ * keys. The scan indexes are tiny (~60 KB of TSV, ~2,000 pages across both
+ * books, normalized in a few milliseconds), and negligible next to the
+ * Xooxle indexes loaded on the same page (tens of megabytes), so it's not
+ * worth the complexity of optimizing.
  */
 export class Index {
   private pages: Page[];
@@ -195,32 +205,34 @@ export class Index {
    *
    * @param wordType - The type of words in this index. This should be a
    * constructor type that takes as input the string representation of the word,
-   * which is retrieved from the index columns.
+   * which is retrieved from the index columns. The index words must be spelled
+   * only in the characters of the type (see `lang.WordType`), which is
+   * verified in development only.
    */
   public constructor(
     index: string,
     private readonly wordType: lang.WordType
   ) {
-    const lines = index.trim().split('\n');
-    const header: string[] = Index.toColumns(lines[0]!);
-    // Verify that the header has the expected column names.
-    log.ensure(
-      WANT_COLUMNS.every((col: string, idx: number) => header[idx] === col),
-      header.slice(0, WANT_COLUMNS.length),
-      'do not match the list of wanted columns',
-      WANT_COLUMNS
-    );
+    const [header = [], ...rows]: string[][] = index
+      .trim()
+      .split('\n')
+      .map((row: string): string[] => Index.toColumns(row));
 
-    this.pages = lines
-      .slice(1) // Skip the header.
-      .map((row) => {
-        const [page, start, end] = Index.toColumns(row);
-        return {
-          page: parseInt(page!),
-          start: new wordType(start!),
-          end: new wordType(end!),
-        };
-      });
+    dev.play(() => {
+      // Verify that the header has the expected column names.
+      log.ensure(
+        WANT_COLUMNS.every((col: string, idx: number) => header[idx] === col),
+        header.slice(0, WANT_COLUMNS.length),
+        'do not match the list of wanted columns',
+        WANT_COLUMNS
+      );
+    });
+
+    this.pages = rows.map(([page, start, end]: string[]): Page => ({
+      page: parseInt(page!),
+      start: new wordType(start!),
+      end: new wordType(end!),
+    }));
 
     dev.play(this.validate.bind(this));
   }
@@ -237,11 +249,15 @@ export class Index {
   }
 
   /**
-   * @param word - The string representation of a word in this index.
-   * @returns The number of the page that the word belongs to.
+   * @param query - A lowercased search query. Characters that the words of
+   * this index can't contain are ignored, so capital letters are lost unless
+   * the word type admits them.
+   * @returns The number of the page that the word in the query belongs to, or
+   * `undefined` if the query has no characters of this index.
    */
-  public pageOf(word: string): number {
-    return this.binarySearch(new this.wordType(word));
+  public pageOf(query: string): number | undefined {
+    const word: string = lang.restrict(query, this.wordType.CHARS);
+    return word.trim() ? this.binarySearch(new this.wordType(word)) : undefined;
   }
 
   /**
@@ -265,6 +281,25 @@ export class Index {
   }
 
   /**
+   * Verify that the words of a page start with a letter, and are spelled in the
+   * characters of their type (see `lang.WordType`).
+   *
+   * @param page - A page of this index.
+   */
+  private validateSpelling(page: Page): void {
+    for (const word of [page.start.word, page.end.word]) {
+      log.ensure(
+        WORD_START.test(word) &&
+          lang.restrict(word, this.wordType.CHARS) === word.normalize('NFD'),
+        'word on page',
+        page.page,
+        'does not start with a letter, or has foreign characters:',
+        word
+      );
+    }
+  }
+
+  /**
    * Perform some validations on the index.
    * Some validations are strict, and would throw an exception if unmet.
    * Other types of errors are expected to be present, and would simply log a
@@ -275,6 +310,7 @@ export class Index {
     for (const [i, cur] of this.pages.entries()) {
       // Verify that the page number was parsed correctly.
       log.ensure(!isNaN(cur.page), 'Invalid page number at position', i);
+      this.validateSpelling(cur);
 
       // Verify the word order on this page.
       if (!cur.start.leq(cur.end)) {
@@ -345,7 +381,9 @@ export class Lookup {
    * column letter (`a` / `b`), and may also be another override key
    * (e.g. a Roman-numeral page like `xv`); `getPage` recurses to
    * resolve it. Looked up early on, so callers can route non-canonical query
-   * forms to a specific page.
+   * forms to a specific page. Keys are matched against the query after it's
+   * lowercased and stripped of spaces and diacritics, so they must be written
+   * in that form.
    *
    * Keys may include a column suffix (e.g. `xva`) for finer control;
    * `getPage` first tries the full query, then falls back to the
@@ -392,10 +430,10 @@ export class Lookup {
    *   3. **Page number.** If the query contains digits, extract the
    *      first decimal run and parse it, along with the column letter.
    *   4. **Word.** Detect the language of the first letter in the query,
-   *      extract all letters in that language, and binary-search the
-   *      index of that language (or of its alias, see `alias`). Columns are
-   *      not inferred from word searches, so a word's trailing `a` or `b`
-   *      stays part of it.
+   *      and search the index of that language (or of its alias, see
+   *      `alias`), which ignores the characters that its words can't
+   *      contain. Columns are not inferred from word searches, so a word's
+   *      trailing `a` or `b` stays part of it.
    *
    * Column priority: an override value's column wins over a column
    * the user typed at the top level. When both are present and
@@ -408,11 +446,12 @@ export class Lookup {
    * @returns The resolved `Target`, or `undefined` when no rule fires.
    */
   public getPage(query: string): Target | undefined {
-    // For all our use cases, case and spaces don't make any difference.
-    query = query.toLowerCase().replace(/\s/g, '');
-    // Diacritics don't make a difference in overrides and page numbers.
-    // Words, however, are left for their language to normalize.
-    const clean: string = orth.cleanDiacritics(query);
+    // For all our use cases, neither case nor the kind of space makes any
+    // difference.
+    query = query.toLowerCase().replaceAll(/\s/g, ' ');
+    // Neither spaces nor diacritics make a difference in overrides and page
+    // numbers. Words, however, are left for their language to normalize.
+    const clean: string = orth.cleanDiacritics(query.replaceAll(' ', ''));
 
     if (!clean) {
       return undefined;
@@ -464,29 +503,21 @@ export class Lookup {
   /**
    * Search for a word in the index of its language, or of its alias.
    *
-   * @param query - A normalized search query.
+   * @param query - A lowercased search query.
    * @returns The page containing the word in the query, or `undefined` if the
-   * query has no letters in a language that we have an index for.
+   * query has no letters in a language that we have an index for, or no
+   * characters that the words of that index can contain.
    */
   private search(query: string): Target | undefined {
-    const chars: string[] = Array.from(query.normalize('NFC'));
-    const language: lang.Language | undefined = chars
+    const language: lang.Language | undefined = Array.from(query)
       .map(lang.detect)
       .find((l: lang.Language | undefined): boolean => !!l);
     if (!language) {
       return undefined;
     }
-    const index: Index | undefined =
-      this.indexes[this.aliases.get(language) ?? language];
-    if (!index) {
-      return undefined;
-    }
-    // Extract all letters in the language, and search the concatenation as a
-    // single word.
-    const word: string = chars
-      .filter((c: string): boolean => lang.detect(c) === language)
-      .join('');
-    return { page: index.pageOf(word) };
+    const page: number | undefined =
+      this.indexes[this.aliases.get(language) ?? language]?.pageOf(query);
+    return page === undefined ? undefined : { page };
   }
 }
 

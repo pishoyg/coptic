@@ -4,6 +4,7 @@
 import * as scan from '../scan.js';
 import * as lang from '../lang.js';
 import * as log from '../logger.js';
+import * as orth from '../orth.js';
 import * as dev from '../dev.js';
 import * as mode from './mode.js';
 import * as id from './id.js';
@@ -107,9 +108,8 @@ const LETTER_MAPPING: Record<string, string> = LETTERS.reduce<
 }, {});
 
 /**
- *
- * @param word
- * @returns
+ * @param word - A word in Crum's dictionary.
+ * @returns The word, with each double letter spelled out as its two letters.
  */
 function normalize(word: string): string {
   // For all purposes, some pairs are identical in Crum and can be safely
@@ -263,17 +263,21 @@ class Sequence {
 }
 
 /**
- * Word represents a word in Crum's dictionary.
+ * Coptic represents a word in Crum's Coptic index.
  */
-export class Word implements lang.Word {
+class Coptic implements lang.Word {
+  /* CHARS matches a letter of Crum's Coptic index. Unlike Dawoud, Crum has no
+   * ⲋ. */
+  public static readonly CHARS = /[ⲁⲃⲅⲇⲉⲍⲏⲑⲓⲕⲗⲙⲛⲝⲟⲡⲣⲥⲧⲩⲫⲭⲯⲱϣϥⳉϧϩϫϭϯ]/u;
+
   private readonly start: Letter;
   private readonly consonants: Sequence;
   private readonly vowels: Sequence;
   private readonly vowelSuffix: Sequence;
 
   /**
-   *
-   * @param word
+   * @param word - The string representation of the word, spelled only in
+   * `CHARS` (see `lang.WordType`).
    */
   public constructor(public readonly word: string) {
     word = normalize(word);
@@ -334,7 +338,7 @@ export class Word implements lang.Word {
    * @param other - Word to compare.
    * @returns The truth value of `this <= other`, based on Crum's ordering.
    */
-  public leq(other: Word): boolean {
+  public leq(other: Coptic): boolean {
     if (this.word === other.word) {
       // These words are identical in all aspects.
       return true;
@@ -356,13 +360,78 @@ export class Word implements lang.Word {
   }
 }
 
+/**
+ * Arabic represents a word in Crum's Arabic index. Diacritics are ignored, but
+ * a hamza seated on a wāw or a yāʾ sorts as a bare hamza, rather than as its
+ * seat.
+ */
+class Arabic extends lang.Keyed {
+  /* CHARS matches an Arabic letter (excluding tatweel) or a diacritic. */
+  public static readonly CHARS = /[ء-غف-ي\p{M}]/u;
+
+  /**
+   * @param word - The string representation of the word.
+   */
+  public constructor(word: string) {
+    super(word, (w: string): string =>
+      // The seated hamzas must be replaced before the diacritics are cleaned,
+      // otherwise they decompose into their seats. The word is normalized
+      // first, so decomposed ones get replaced as well.
+      orth
+        .cleanDiacritics(w.normalize('NFC').replaceAll(/[ؤئ]/gu, 'ء'))
+        // TODO: (#640) Normalize the following in the index if possible. The
+        // generic substitution may be inaccurate.
+        .replaceAll('ى', 'ي')
+        .replaceAll('ة', 'ه')
+    );
+  }
+}
+
+/**
+ * English represents a word or phrase in Crum's English index.
+ *
+ * A phrase sorts word by word (nothing before something), so punctuation is a
+ * word boundary like a space, which sorts before any letter. For example,
+ * *mild, make* and *music-room* precede *mildew* and *musical*.
+ */
+class English extends lang.Keyed {
+  /* CHARS matches a small English letter, or the punctuation of index entries
+   * such as *mercy, have*, *music-room*, or *orach (atriplex)*. */
+  public static readonly CHARS = /[a-z ,()-]/u;
+
+  /**
+   * @param word - The string representation of the word.
+   */
+  public constructor(word: string) {
+    super(word, (w: string): string => w.replaceAll(/[(),-]/gu, ' '));
+  }
+}
+
+/**
+ * Greek represents a word in Crum's Greek index. Case and diacritics are
+ * ignored, and the final sigma is identical to the medial one.
+ */
+class Greek extends lang.Keyed {
+  /* CHARS matches a Greek letter or a diacritic. */
+  public static readonly CHARS = /[α-ωΑ-Ω\p{M}]/u;
+
+  /**
+   * @param word - The string representation of the word.
+   */
+  public constructor(word: string) {
+    super(word, (w: string): string =>
+      orth.cleanDiacritics(w.toLowerCase()).replaceAll('ς', 'σ')
+    );
+  }
+}
+
 /* WORD_TYPES maps the language of each of the book's indexes to the type of
  * its words. The index of a language lives at `${DATA_DIR}${language}.tsv`. */
 const WORD_TYPES: Record<lang.Language, lang.WordType> = {
-  [lang.Language.COPTIC]: Word,
-  [lang.Language.GREEK]: lang.Greek,
-  [lang.Language.ARABIC]: lang.Arabic,
-  [lang.Language.ENGLISH]: lang.English,
+  [lang.Language.COPTIC]: Coptic,
+  [lang.Language.GREEK]: Greek,
+  [lang.Language.ARABIC]: Arabic,
+  [lang.Language.ENGLISH]: English,
 };
 
 /**

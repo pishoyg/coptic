@@ -29,9 +29,6 @@ const GREEK: string = str.joinPaths(DATA_DIR, 'greek.tsv');
 // 1006), and المُنبَثِق (page 1026) in the index sheet.
 const ARABIC: string = str.joinPaths(DATA_DIR, 'arabic.tsv');
 
-// GLOSS matches a parenthesized gloss trailing an Arabic word.
-const GLOSS = / \(.*\)$/u;
-
 // GREEK_TO_COPTIC maps a Greek letter to its Coptic counterpart.
 const GREEK_TO_COPTIC: Record<string, string> = {
   α: 'ⲁ',
@@ -67,13 +64,13 @@ const GREEK_TO_COPTIC: Record<string, string> = {
  * dictionary between ⲟ and ⲡ.
  * We reimplement sorting for Dawoud!
  */
-export class DawoudWord extends lang.Coptic implements lang.Word {
+class Coptic extends lang.Coptic implements lang.Word {
   /**
    * Lexicographically compare two words in Dawoud's dictionary.
    * @param other - Word to compare.
    * @returns The truth value of `this <= other`, based on Dawoud's ordering.
    */
-  public override leq(other: DawoudWord): boolean {
+  public override leq(other: Coptic): boolean {
     if (this.ou() === other.ou()) {
       // Either both words start with ⲟⲩ, or neither does.
       // Either way, lexicographic comparison should work.
@@ -119,44 +116,72 @@ export class DawoudWord extends lang.Coptic implements lang.Word {
  * Such words land on the wrong page, and should be typed in Coptic letters
  * instead.
  */
-export class DawoudGreek extends lang.Coptic implements lang.Word {
+class Greek extends lang.Coptic implements lang.Word {
+  /* CHARS matches a small Coptic or Greek letter. */
+  public static override readonly CHARS = new RegExp(
+    `${lang.Coptic.CHARS.source}|[α-ω]`,
+    'u'
+  );
+
   /**
    * @param word - The string representation of the word, in Coptic or Greek
    * letters.
    */
   public constructor(word: string) {
     super(
-      Array.from(
-        orth.cleanDiacritics(word.toLowerCase()),
-        (c: string): string => GREEK_TO_COPTIC[c] ?? c
-      ).join('')
+      Array.from(word, (c: string): string => GREEK_TO_COPTIC[c] ?? c).join('')
     );
   }
 }
 
 /**
- * Dawoud's Arabic index often follows a word with a parenthesized gloss (e.g.
- * تحرير (كتابة)), which plays no role in the sorting, so we drop it.
+ * Arabic represents a word in Dawoud's Arabic index. Diacritics and
+ * tatweel (e.g. بـِ) are ignored. A hamza seated on a wāw sorts as the wāw
+ * itself (e.g. مُنشَرِح < مُؤامرة < مُوَلَّد), but one seated on a yāʾ sorts as
+ * a bare hamza.
  *
- * Unlike the generic Arabic ordering, Dawoud sorts a hamza seated on a wāw as
- * the wāw itself (e.g. مُنشَرِح < مُؤامرة < مُوَلَّد).
+ * The index often follows a word with a parenthesized gloss (e.g. تحرير
+ * (كتابة)), which breaks ties between homographs. The parentheses are word
+ * boundaries, so the gloss sorts as a word of its own.
  */
-export class DawoudArabic extends lang.Arabic implements lang.Word {
+class Arabic extends lang.Keyed {
+  /* CHARS matches an Arabic letter (including tatweel), a diacritic, a space,
+   * or a parenthesis. */
+  public static readonly CHARS = /[ء-غـ-ي\p{M} ()]/u;
+
   /**
    * @param word - The string representation of the word.
    */
   public constructor(word: string) {
-    // The word is normalized first, so a decomposed ؤ gets replaced as well.
-    super(word.replace(GLOSS, '').normalize('NFC').replaceAll('ؤ', 'و'));
+    super(word, (w: string): string =>
+      // The seated hamzas must be replaced before the diacritics are cleaned,
+      // otherwise they decompose into their seats. The word is normalized
+      // first, so decomposed ones get replaced as well.
+      orth
+        .cleanDiacritics(
+          w.normalize('NFC').replaceAll('ؤ', 'و').replaceAll('ئ', 'ء')
+        )
+        .replaceAll(/[()]/gu, ' ')
+        .replaceAll('ـ', '')
+        // TODO: (#640) Normalize the following in the index if possible. The
+        // generic substitution may be inaccurate.
+        .replaceAll('ى', 'ي')
+        .replaceAll('ة', 'ه')
+    );
   }
 }
 
 /**
  * @param path - Path to a TSV index.
- * @returns The content of the index.
+ * @param wordType - The type of words in the index.
+ * @returns The index.
  */
-async function fetchText(path: string): Promise<string> {
-  return fetch(path).then((res: Response): Promise<string> => res.text());
+async function fetchIndex(
+  path: string,
+  wordType: lang.WordType
+): Promise<scan.Index> {
+  const res: Response = await fetch(path);
+  return new scan.Index(await res.text(), wordType);
 }
 
 /**
@@ -174,16 +199,17 @@ export async function init(): Promise<void> {
 
   const isActive: scan.IsActive = () => mode.active(MODE);
 
-  const [coptic, greek, arabic]: [string, string, string] = await Promise.all([
-    fetchText(COPTIC),
-    fetchText(GREEK),
-    fetchText(ARABIC),
-  ]);
+  const [coptic, greek, arabic]: [scan.Index, scan.Index, scan.Index] =
+    await Promise.all([
+      fetchIndex(COPTIC, Coptic),
+      fetchIndex(GREEK, Greek),
+      fetchIndex(ARABIC, Arabic),
+    ]);
 
   const lookup = new scan.Lookup({
-    [lang.Language.COPTIC]: new scan.Index(coptic, DawoudWord),
-    [lang.Language.GREEK]: new scan.Index(greek, DawoudGreek),
-    [lang.Language.ARABIC]: new scan.Index(arabic, DawoudArabic),
+    [lang.Language.COPTIC]: coptic,
+    [lang.Language.GREEK]: greek,
+    [lang.Language.ARABIC]: arabic,
   });
 
   // The Greek checkbox forces the interpretation of Coptic letters as Greek

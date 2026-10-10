@@ -1,6 +1,5 @@
 /** Package lang defines linguistic entities for the languages we deal with. */
 
-import * as log from './logger.js';
 import * as orth from './orth.js';
 
 /** Language enumerates the languages we know how to deal with. */
@@ -31,8 +30,40 @@ export interface Word {
 /**
  * WordType is the type of a `Word` constructor, which takes as input the
  * string representation of the word.
+ *
+ * The constructor expects a nonempty word spelled only in `CHARS`, in either
+ * normalization form (NFC or NFD), since index words arrive as typed in the
+ * index, and queries arrive decomposed by `restrict`. It need not handle any
+ * other character (including the capital form of a letter that `CHARS` only
+ * admits in small form), which may corrupt the sort.
  */
-export type WordType = new (word: string) => Word;
+export interface WordType {
+  new (word: string): Word;
+  /**
+   * CHARS matches a single character that a word may contain, once decomposed
+   * (NFD). Queries are stripped of all other characters (see `restrict`), and
+   * index words may contain no others (verified in development only, see
+   * `scan.Index`). A type may admit a character only to ignore it when
+   * sorting, such as the parentheses around a gloss in Dawoud.
+   */
+  // Word types implement CHARS as a static readonly member, which the naming
+  // convention requires to be UPPER_CASE, unlike interface members.
+  /* eslint-disable-next-line @typescript-eslint/naming-convention */
+  readonly CHARS: RegExp;
+}
+
+/**
+ * @param text - Text to restrict.
+ * @param chars - Matches a single character.
+ * @returns The characters of the text, decomposed (NFD) into base letters and
+ * diacritics, that match `chars`. The case is preserved, so a capital letter
+ * is dropped unless `chars` admits it.
+ */
+export function restrict(text: string, chars: RegExp): string {
+  return Array.from(text.normalize('NFD'))
+    .filter((c: string): boolean => chars.test(c))
+    .join('');
+}
 
 // Coptic letters live in two Unicode blocks, and the alphabetical order doesn't
 // follow the code-point order:
@@ -108,31 +139,26 @@ export function detect(char: string): Language | undefined {
 }
 
 /**
- * @param text - Text to normalize.
- * @returns The letters of the text, lowercased and without diacritics.
- */
-function foldLetters(text: string): string {
-  return orth.cleanDiacritics(text.toLowerCase()).replaceAll(/\P{L}/gu, '');
-}
-
-/**
  * Keyed is a word that sorts by a key, derived from the word by
  * language-specific normalization. Two words compare by their keys, using
- * the plain `<=` operator.
+ * the plain `<=` operator. A run of spaces in the key is a single word
+ * boundary, and spaces at either end are ignored.
  */
-abstract class Keyed implements Word {
+export abstract class Keyed implements Word {
   private readonly key: string;
 
   /**
    * @param word - The string representation of the word.
-   * @param key - Derives the sort key from the word.
+   * @param key - Derives the sort key from the word, which is spelled only in
+   * the characters of its type, in either normalization form (see
+   * `WordType`). The key may drop or fold some of those characters (e.g.
+   * turn punctuation into spaces), and need not handle any others.
    */
   protected constructor(
     public readonly word: string,
     key: (word: string) => string
   ) {
-    log.ensure(!!word, 'constructing a word with the empty string!');
-    this.key = key(word);
+    this.key = key(word).replaceAll(/ +/gu, ' ').trim();
   }
 
   /**
@@ -151,61 +177,17 @@ abstract class Keyed implements Word {
  * letters to characters that sort correctly.
  */
 export class Coptic extends Keyed {
-  /**
-   * @param word - The string representation of the word.
-   */
-  public constructor(word: string) {
-    super(word.toLowerCase(), (w: string): string =>
-      Array.from(w)
-        .map((c: string): string | undefined => COPTIC_MAPPING[c])
-        .join('')
-    );
-  }
-}
+  /* CHARS matches a small Coptic letter. */
+  public static readonly CHARS = /[ⲁⲃⲅⲇⲉⲋⲍⲏⲑⲓⲕⲗⲙⲛⲝⲟⲡⲣⲥⲧⲩⲫⲭⲯⲱϣϥⳉϧϩϫϭϯ]/u;
 
-/**
- * Greek represents a Greek word. Diacritics are ignored, and the final sigma
- * is identical to the medial one.
- */
-export class Greek extends Keyed {
-  /**
-   * @param word - The string representation of the word.
-   */
-  public constructor(word: string) {
-    super(word, (w: string): string => foldLetters(w).replaceAll('ς', 'σ'));
-  }
-}
-
-/**
- * Arabic represents an Arabic word. Diacritics are ignored, but a hamza
- * seated on a wāw or a yāʾ sorts as a bare hamza, rather than as its seat.
- */
-export class Arabic extends Keyed {
   /**
    * @param word - The string representation of the word.
    */
   public constructor(word: string) {
     super(word, (w: string): string =>
-      // The seated hamzas must be replaced before the diacritics are
-      // cleaned, otherwise they decompose into their seats.
-      foldLetters(w.normalize('NFC').replaceAll(/[ؤئ]/gu, 'ء'))
-        .replaceAll('ـ', '') // Tatweel is a letter, according to Unicode!
-        // TODO: (#640) Normalize the following in the index if possible. The
-        // generic substitution may be inaccurate.
-        .replaceAll('ى', 'ي')
-        .replaceAll('ة', 'ه')
+      Array.from(w, (c: string): string | undefined => COPTIC_MAPPING[c]).join(
+        ''
+      )
     );
-  }
-}
-
-/**
- * English represents an English word. Case and diacritics are ignored.
- */
-export class English extends Keyed {
-  /**
-   * @param word - The string representation of the word.
-   */
-  public constructor(word: string) {
-    super(word, foldLetters);
   }
 }
