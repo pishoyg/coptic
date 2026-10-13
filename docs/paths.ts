@@ -10,9 +10,10 @@ export const LEXICON = `${SITE_URL}/crum`;
 export const BIBLE = `${SITE_URL}/bible`;
 export const KEYBOARD = `${SITE_URL}/keyboard.html`;
 
-export type Mode = 'digital' | 'book' | 'dawoud';
+export type Mode = 'digital' | 'book' | 'kasser' | 'dawoud';
 export const DIGITAL: Mode = 'digital';
 export const BOOK: Mode = 'book';
+export const KASSER: Mode = 'kasser';
 export const DAWOUD: Mode = 'dawoud';
 
 /**

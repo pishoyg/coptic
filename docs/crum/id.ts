@@ -58,6 +58,8 @@ export const REPORTS = 'reports';
 
 export const CRUM_SCAN = 'crum-scan';
 export const DAWOUD_SCAN = 'dawoud-scan';
+export const COMPLEMENTS_SCAN = 'complements-scan';
+export const MORPHOLOGIQUES_SCAN = 'morphologiques-scan';
 
 export const NEXT = 'next';
 export const PREV = 'prev';
@@ -65,6 +67,9 @@ export const RESET = 'reset';
 
 // GREEK_CHECKBOX forces Dawoud to interpret Coptic letters as Greek ones.
 export const GREEK_CHECKBOX = 'greek-checkbox';
+// MORPHOLOGIQUES_CHECKBOX switches Kasser from his Compléments to his
+// Compléments morphologiques.
+export const MORPHOLOGIQUES_CHECKBOX = 'morphologiques-checkbox';
 
 // NOTE IDs:
 export const CATEGORIES = 'categories';

@@ -195,6 +195,13 @@ export function makeHelpPanel(
     ],
     2: [new help.Shortcut('Crum', ['lexicon'], mode.set.bind(null, mode.BOOK))],
     3: [
+      new help.Shortcut(
+        'Kasser',
+        ['lexicon'],
+        mode.set.bind(null, mode.KASSER)
+      ),
+    ],
+    4: [
       new help.Shortcut('داود', ['lexicon'], mode.set.bind(null, mode.DAWOUD)),
     ],
     C: [

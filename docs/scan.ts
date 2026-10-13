@@ -226,6 +226,11 @@ export class Index {
         'do not match the list of wanted columns',
         WANT_COLUMNS
       );
+      // Verify the spelling of the words as typed in the index, rather than
+      // as constructed, since a word type may rewrite them.
+      for (const [page = '', ...words] of rows) {
+        this.validateSpelling(page, words);
+      }
     });
 
     this.pages = rows.map(([page, start, end]: string[]): Page => ({
@@ -256,6 +261,10 @@ export class Index {
    * `undefined` if the query has no characters of this index.
    */
   public pageOf(query: string): number | undefined {
+    // TODO: (#0) A type may admit characters that it drops (see
+    // `lang.WordType.CHARS`), so a nonempty `word` may still construct an
+    // empty one, which is fatal. Kasser's query `ⲋ-` restricts to `-`, which
+    // its type strips. Require a letter instead (`/\p{L}/u.test(word)`).
     const word: string = lang.restrict(query, this.wordType.CHARS);
     return word.trim() ? this.binarySearch(new this.wordType(word)) : undefined;
   }
@@ -284,15 +293,16 @@ export class Index {
    * Verify that the words of a page start with a letter, and are spelled in the
    * characters of their type (see `lang.WordType`).
    *
-   * @param page - A page of this index.
+   * @param page - The page number, as typed in the index.
+   * @param words - The words of the page, as typed in the index.
    */
-  private validateSpelling(page: Page): void {
-    for (const word of [page.start.word, page.end.word]) {
+  private validateSpelling(page: string, words: string[]): void {
+    for (const word of words) {
       log.ensure(
         WORD_START.test(word) &&
           lang.restrict(word, this.wordType.CHARS) === word.normalize('NFD'),
         'word on page',
-        page.page,
+        page,
         'does not start with a letter, or has foreign characters:',
         word
       );
@@ -310,7 +320,6 @@ export class Index {
     for (const [i, cur] of this.pages.entries()) {
       // Verify that the page number was parsed correctly.
       log.ensure(!isNaN(cur.page), 'Invalid page number at position', i);
-      this.validateSpelling(cur);
 
       // Verify the word order on this page.
       if (!cur.start.leq(cur.end)) {

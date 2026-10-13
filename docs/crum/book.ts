@@ -265,7 +265,7 @@ class Sequence {
 /**
  * Coptic represents a word in Crum's Coptic index.
  */
-class Coptic implements lang.Word {
+export class Coptic implements lang.Word {
   /* CHARS matches a letter of Crum's Coptic index. Unlike Dawoud, Crum has no
    * ⲋ. */
   public static readonly CHARS = /[ⲁⲃⲅⲇⲉⲍⲏⲑⲓⲕⲗⲙⲛⲝⲟⲡⲣⲥⲧⲩⲫⲭⲯⲱϣϥⳉϧϩϫϭϯ]/u;

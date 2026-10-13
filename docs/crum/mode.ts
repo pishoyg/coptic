@@ -1,7 +1,7 @@
 /**
- * Package mode handles switching between the three lexicon views — the
- * digital dictionaries, the Crum book scan, and the Dawoud book scan — that
- * coexist on the lexicon page.
+ * Package mode handles switching between the four lexicon views — the
+ * digital dictionaries, the Crum book scan, the Kasser book scans, and the
+ * Dawoud book scan — that coexist on the lexicon page.
  *
  * The current mode is reflected by a class on the document body. CSS can use
  * this class to show / hide the corresponding view. The mode is also mirrored
@@ -12,14 +12,14 @@ import * as browser from '../browser.js';
 import * as id from './id.js';
 import * as params from '../params.js';
 
-import { type Mode, DIGITAL, BOOK, DAWOUD } from '../paths.js';
+import { type Mode, DIGITAL, BOOK, KASSER, DAWOUD } from '../paths.js';
 
 // The `Mode` type and values live in `paths.ts`, which owns the lexicon URL
 // contract. They are re-exported here so consumers continue to spell
 // `mode.Mode`, etc.
-export { type Mode, DIGITAL, BOOK, DAWOUD };
+export { type Mode, DIGITAL, BOOK, KASSER, DAWOUD };
 
-const MODES: Mode[] = [DIGITAL, BOOK, DAWOUD];
+const MODES: Mode[] = [DIGITAL, BOOK, KASSER, DAWOUD];
 const DEFAULT: Mode = DIGITAL;
 
 /**
@@ -66,7 +66,7 @@ export function active(mode: Mode): boolean {
  * immediately.
  *
  * Initialise mode switching. Reads the initial mode from the URL (falling
- * back to `digital`), applies it, and attaches click listeners to the three
+ * back to `digital`), applies it, and attaches click listeners to the four
  * mode buttons.
  */
 export function init(): void {
