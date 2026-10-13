@@ -198,6 +198,16 @@ dawoud_sentinels: FORCE
 	curl -L "$${PUB}&gid=2057030060" > "$${DIR}/greek.tsv"; \
 	curl -L "$${PUB}&gid=1482232549" > "$${DIR}/arabic.tsv";
 
+########## KASSER ##########
+kasser_sentinels: FORCE
+	# Download a new version of Kasser's sentinels sheet.
+	# - Compléments au dictionnaire copte de Crum (IFAO, 1964).
+	# - Compléments morphologiques au dictionnaire de Crum (BIFAO 64, 1966).
+	PUB="https://docs.google.com/spreadsheets/d/1QUY4DUUPWdwj7Ty4ivLjYg-ow2N0RPUnxlMzuwUojgE/export?format=tsv"; \
+	DIR="docs/kasser"; \
+	curl -L "$${PUB}&gid=0" > "$${DIR}/complements.tsv"; \
+	curl -L "$${PUB}&gid=246546302" > "$${DIR}/morphologiques.tsv";
+
 ########## Andreas ##########
 andreas: FORCE
 	# Generate the Andreas lexicon artefacts.
