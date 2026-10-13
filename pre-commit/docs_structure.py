@@ -111,6 +111,8 @@ PATTERNS: list[Pattern] = [
     Pattern(["dawoud/*.tsv"]),
     Pattern(["dawoud/*.png"]),
     Pattern(["kasser/*.tsv"]),
+    Pattern(["kasser/complements/*.png"]),
+    Pattern(["kasser/morphologiques/*.png"]),
     Pattern(["crum/crum/*.png"]),
     Pattern(["img/**"]),
     Pattern(["fonts/**"]),
