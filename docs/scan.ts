@@ -1,9 +1,9 @@
 /** Package scan defines the logic for a dictionary scan. */
+/* eslint-disable max-lines */
 
 // NOTE: This package is used in the browser, and also during validation. So we
 // allow it to assert correctness, instead of trying to always fail gracefully.
 import * as log from './logger.js';
-import * as lang from './lang.js';
 import * as orth from './orth.js';
 import * as dev from './dev.js';
 import * as str from './str.js';
@@ -125,12 +125,119 @@ function bounded(scale: number): number {
  */
 export type IsActive = () => boolean;
 
+/** Language enumerates the languages we know how to deal with. */
+export enum Language {
+  COPTIC = 'coptic',
+  GREEK = 'greek',
+  ARABIC = 'arabic',
+  ENGLISH = 'english',
+}
+
+/* SCRIPTS pairs each language with its script. */
+const SCRIPTS: readonly [Language, RegExp][] = [
+  [Language.COPTIC, /\p{Script=Coptic}/u],
+  [Language.GREEK, /\p{Script=Greek}/u],
+  [Language.ARABIC, /\p{Script=Arabic}/u],
+  [Language.ENGLISH, /\p{Script=Latin}/u],
+];
+
+/**
+ * Word represents a word that is lexicographically comparable to another word
+ * of the same language.
+ */
+export interface Word {
+  /**
+   * Lexicographically compare two words.
+   * @param other - The word we're comparing to.
+   * @returns The truth value of `this <= other`.
+   */
+  leq(other: Word): boolean;
+  /**
+   * @returns The string representation of the word.
+   */
+  get word(): string;
+}
+
+/**
+ * WordType is the type of a `Word` constructor, which takes as input the
+ * string representation of the word.
+ *
+ * The constructor expects a nonempty word spelled only in `CHARS`, in either
+ * normalization form (NFC or NFD), since index words arrive as typed in the
+ * index, and queries arrive decomposed by `restrict`. It need not handle any
+ * other character (including the capital form of a letter that `CHARS` only
+ * admits in small form), which may corrupt the sort.
+ */
+export interface WordType {
+  new (word: string): Word;
+  /**
+   * CHARS matches a single character that a word may contain, once decomposed
+   * (NFD). Queries are stripped of all other characters (see `restrict`), and
+   * index words may contain no others (verified in development only, see
+   * `Index`). A type may admit a character only to ignore it when
+   * sorting, such as the parentheses around a gloss in Dawoud.
+   */
+  // Word types implement CHARS as a static readonly member, which the naming
+  // convention requires to be UPPER_CASE, unlike interface members.
+  /* eslint-disable-next-line @typescript-eslint/naming-convention */
+  readonly CHARS: RegExp;
+}
+
+/**
+ * @param text - Text to restrict.
+ * @param chars - Matches a single character.
+ * @returns The characters of the text, decomposed (NFD) into base letters and
+ * diacritics, that match `chars`. The case is preserved, so a capital letter
+ * is dropped unless `chars` admits it.
+ */
+export function restrict(text: string, chars: RegExp): string {
+  return Array.from(text.normalize('NFD'))
+    .filter((c: string): boolean => chars.test(c))
+    .join('');
+}
+
+/* MAPPING_START is the first printable ASCII character after the space. */
+export const MAPPING_START = '!'.charCodeAt(0);
+
+/**
+ * Keyed is a word that sorts by a key, derived from the word by
+ * language-specific normalization. Two words compare by their keys, using
+ * the plain `<=` operator.
+ */
+export abstract class Keyed implements Word {
+  private readonly key: string;
+
+  /**
+   * @param word - The string representation of the word.
+   * @param key - Derives the sort key from the word, which is spelled only in
+   * the characters of its type, in either normalization form (see
+   * `WordType`). The key may drop or fold some of those characters (e.g.
+   * turn punctuation into spaces), and need not handle any others. Keys
+   * compare as they are, so a key whose word boundaries vary in spelling
+   * (e.g. a run of spaces) should normalize them.
+   */
+  protected constructor(
+    public readonly word: string,
+    key: (word: string) => string
+  ) {
+    this.key = key(word);
+  }
+
+  /**
+   * @param other - The word we're comparing to.
+   * @returns The truth value of `this <= other`.
+   */
+  public leq(other: Keyed): boolean {
+    return this.key <= other.key;
+  }
+}
+
 /** Entry represents a dictionary page, where each page has a defined range,
  * specified by the so-called *guide words*.
  */
 export interface Page {
-  start: lang.Word;
-  end: lang.Word;
+  start: Word;
+  end: Word;
   page: number;
 }
 
@@ -206,12 +313,12 @@ export class Index {
    * @param wordType - The type of words in this index. This should be a
    * constructor type that takes as input the string representation of the word,
    * which is retrieved from the index columns. The index words must be spelled
-   * only in the characters of the type (see `lang.WordType`), which is
+   * only in the characters of the type (see `WordType`), which is
    * verified in development only.
    */
   public constructor(
     index: string,
-    private readonly wordType: lang.WordType
+    private readonly wordType: WordType
   ) {
     const [header = [], ...rows]: string[][] = index
       .trim()
@@ -262,10 +369,10 @@ export class Index {
    */
   public pageOf(query: string): number | undefined {
     // TODO: (#0) A type may admit characters that it drops (see
-    // `lang.WordType.CHARS`), so a nonempty `word` may still construct an
+    // `WordType.CHARS`), so a nonempty `word` may still construct an
     // empty one, which is fatal. Kasser's query `ⲋ-` restricts to `-`, which
     // its type strips. Require a letter instead (`/\p{L}/u.test(word)`).
-    const word: string = lang.restrict(query, this.wordType.CHARS);
+    const word: string = restrict(query, this.wordType.CHARS);
     return word.trim() ? this.binarySearch(new this.wordType(word)) : undefined;
   }
 
@@ -275,7 +382,7 @@ export class Index {
    * @param target - The word being searched for.
    * @returns The number of the matching page.
    */
-  private binarySearch(target: lang.Word): number {
+  private binarySearch(target: Word): number {
     let left = 0;
     let right = this.pages.length - 1;
     while (left < right) {
@@ -291,7 +398,7 @@ export class Index {
 
   /**
    * Verify that the words of a page start with a letter, and are spelled in the
-   * characters of their type (see `lang.WordType`).
+   * characters of their type (see `WordType`).
    *
    * @param page - The page number, as typed in the index.
    * @param words - The words of the page, as typed in the index.
@@ -300,7 +407,7 @@ export class Index {
     for (const word of words) {
       log.ensure(
         WORD_START.test(word) &&
-          lang.restrict(word, this.wordType.CHARS) === word.normalize('NFD'),
+          restrict(word, this.wordType.CHARS) === word.normalize('NFD'),
         'word on page',
         page,
         'does not start with a letter, or has foreign characters:',
@@ -379,7 +486,7 @@ export class Index {
 export class Lookup {
   // Maps a language to another, whose index searches the words written in the
   // letters of the former.
-  private readonly aliases = new Map<lang.Language, lang.Language>();
+  private readonly aliases = new Map<Language, Language>();
 
   /**
    * @param indexes - The book's indexes, keyed by language. A word query is
@@ -403,7 +510,7 @@ export class Lookup {
    * Defaults to no overrides.
    */
   public constructor(
-    private readonly indexes: Partial<Record<lang.Language, Index>>,
+    private readonly indexes: Partial<Record<Language, Index>>,
     private readonly overrides: Record<string, string> = {}
   ) {}
 
@@ -416,7 +523,7 @@ export class Lookup {
    * @param to - The language whose index to search, or `undefined` to search
    * the index of `from` itself.
    */
-  public alias(from: lang.Language, to?: lang.Language): void {
+  public alias(from: Language, to?: Language): void {
     if (to) {
       this.aliases.set(from, to);
     } else {
@@ -438,11 +545,12 @@ export class Lookup {
    *      both `xv`, `xva`, and `xvb` resolve via the same override.
    *   3. **Page number.** If the query contains digits, extract the
    *      first decimal run and parse it, along with the column letter.
-   *   4. **Word.** Detect the language of the first letter in the query,
-   *      and search the index of that language (or of its alias, see
-   *      `alias`), which ignores the characters that its words can't
-   *      contain. Columns are not inferred from word searches, so a word's
-   *      trailing `a` or `b` stays part of it.
+   *   4. **Word.** For each language whose script occurs in the query, in
+   *      the order of `SCRIPTS`, search the index of that language (or of
+   *      its alias, see `alias`), which ignores the characters that its
+   *      words can't contain. The first language that yields a page wins.
+   *      Columns are not inferred from word searches, so a word's trailing
+   *      `a` or `b` stays part of it.
    *
    * Column priority: an override value's column wins over a column
    * the user typed at the top level. When both are present and
@@ -506,27 +614,20 @@ export class Lookup {
       return { page: parseInt(number[0]), column };
     }
 
-    return this.search(query);
-  }
+    // Search for a word in the index of its language, or of its alias.
+    for (const [language, regex] of SCRIPTS) {
+      if (!regex.test(query)) {
+        continue;
+      }
+      const page: number | undefined =
+        this.indexes[this.aliases.get(language) ?? language]?.pageOf(query);
 
-  /**
-   * Search for a word in the index of its language, or of its alias.
-   *
-   * @param query - A lowercased search query.
-   * @returns The page containing the word in the query, or `undefined` if the
-   * query has no letters in a language that we have an index for, or no
-   * characters that the words of that index can contain.
-   */
-  private search(query: string): Target | undefined {
-    const language: lang.Language | undefined = Array.from(query)
-      .map(lang.detect)
-      .find((l: lang.Language | undefined): boolean => !!l);
-    if (!language) {
-      return undefined;
+      if (page !== undefined) {
+        return { page };
+      }
     }
-    const page: number | undefined =
-      this.indexes[this.aliases.get(language) ?? language]?.pageOf(query);
-    return page === undefined ? undefined : { page };
+
+    return undefined;
   }
 }
 
@@ -1092,7 +1193,7 @@ export class Dictionary {
    * @param to - The language whose index to search, or `undefined` to search
    * the index of `from` itself.
    */
-  public alias(from: lang.Language, to?: lang.Language): void {
+  public alias(from: Language, to?: Language): void {
     const before: Target | undefined = this.search();
     this.lookup.alias(from, to);
     const after: Target | undefined = this.search();

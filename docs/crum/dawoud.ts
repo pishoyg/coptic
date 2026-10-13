@@ -3,7 +3,6 @@
 import * as browser from '../browser.js';
 import * as cls from './cls.js';
 import * as scan from '../scan.js';
-import * as lang from '../lang.js';
 import * as orth from '../orth.js';
 import * as mode from './mode.js';
 import * as id from './id.js';
@@ -29,44 +28,88 @@ const GREEK: string = str.joinPaths(DATA_DIR, 'greek.tsv');
 // 1006), and المُنبَثِق (page 1026) in the index sheet.
 const ARABIC: string = str.joinPaths(DATA_DIR, 'arabic.tsv');
 
-// GREEK_TO_COPTIC maps a Greek letter to its Coptic counterpart.
-const GREEK_TO_COPTIC: Record<string, string> = {
-  α: 'ⲁ',
-  β: 'ⲃ',
-  γ: 'ⲅ',
-  δ: 'ⲇ',
-  ε: 'ⲉ',
-  ζ: 'ⲍ',
-  η: 'ⲏ',
-  θ: 'ⲑ',
-  ι: 'ⲓ',
-  κ: 'ⲕ',
-  λ: 'ⲗ',
-  μ: 'ⲙ',
-  ν: 'ⲛ',
-  ξ: 'ⲝ',
-  ο: 'ⲟ',
-  π: 'ⲡ',
-  ρ: 'ⲣ',
-  σ: 'ⲥ',
-  ς: 'ⲥ',
-  τ: 'ⲧ',
-  υ: 'ⲩ',
-  φ: 'ⲫ',
-  χ: 'ⲭ',
-  ψ: 'ⲯ',
-  ω: 'ⲱ',
-};
+// Coptic letters live in two Unicode blocks, and the alphabetical order doesn't
+// follow the code-point order:
+//   https://en.wikipedia.org/wiki/Coptic_(Unicode_block)
+//   https://en.wikipedia.org/wiki/Greek_and_Coptic
+// The ranges below are listed in alphabetical order. The Greek and Coptic
+// run is split around the Akhmimic Khei (added later, in the Coptic block),
+// which sorts between ϥ and ϧ.
+const RANGES: [string, string][] = [
+  // Each capital letter immediately precedes its small counterpart, so a
+  // range runs from a capital letter (pair[0]) to a small one (pair[1]).
+  // As of the time of writing, capital letters are unused, because the input is
+  // always lower-cased. But they're retained for completeness.
+  ['Ⲁ', 'ⲱ'],
+  ['Ϣ', 'ϥ'],
+  ['Ⳉ', 'ⳉ'],
+  ['Ϧ', 'ϯ'],
+];
 
 /**
- * Dawoud gives ⲟⲩ special handling in his dictionary.
- * All words starting with ⲟⲩ are grouped together, under a section in the
- * dictionary between ⲟ and ⲡ.
- * We reimplement sorting for Dawoud!
+ * COPTIC_MAPPING maps a Coptic letter to a printable ASCII character, such
+ * that the mappings sort in the alphabetical order of the letters. The
+ * mappings start right after the space, which leaves room for 94 letters.
  */
-class Coptic extends lang.Coptic implements lang.Word {
+const COPTIC_MAPPING: Readonly<Record<string, string>> = RANGES.map(
+  ([start, end]: [string, string]): [number, number] => [
+    start.charCodeAt(0),
+    end.charCodeAt(0),
+  ]
+)
+  .flatMap(([start, end]: [number, number]): string[] =>
+    Array.from({ length: end + 1 - start }, (_: unknown, i: number): string =>
+      String.fromCharCode(start + i)
+    )
+  )
+  .reduce<Record<string, string>>(
+    (
+      acc: Record<string, string>,
+      letter: string,
+      index: number
+    ): Record<string, string> => {
+      acc[letter] = String.fromCharCode(scan.MAPPING_START + index);
+      return acc;
+    },
+    {}
+  );
+
+/**
+ * The two unicode blocks for Coptic are swapped (the lexicographically smaller
+ * range have higher Unicode values!) We hack around it by mapping the letters
+ * to characters that sort correctly.
+ *
+ * @param word - A word spelled in Coptic letters.
+ * @returns The sort key of the word.
+ */
+function copticKey(word: string): string {
+  return Array.from(
+    word,
+    (c: string): string | undefined => COPTIC_MAPPING[c]
+  ).join('');
+}
+
+/**
+ * Coptic represents a word in Dawoud's Coptic index.
+ */
+class Coptic extends scan.Keyed implements scan.Word {
+  /* CHARS matches a small Coptic letter. */
+  public static readonly CHARS = /[ⲁⲃⲅⲇⲉⲋⲍⲏⲑⲓⲕⲗⲙⲛⲝⲟⲡⲣⲥⲧⲩⲫⲭⲯⲱϣϥⳉϧϩϫϭϯ]/u;
+
+  /**
+   * @param word - The string representation of the word.
+   */
+  public constructor(word: string) {
+    super(word, copticKey);
+  }
+
   /**
    * Lexicographically compare two words in Dawoud's dictionary.
+   *
+   * Dawoud gives ⲟⲩ special handling in his dictionary.
+   * All words starting with ⲟⲩ are grouped together, under a section in the
+   * dictionary between ⲟ and ⲡ.
+   *
    * @param other - Word to compare.
    * @returns The truth value of `this <= other`, based on Dawoud's ordering.
    */
@@ -101,10 +144,43 @@ class Coptic extends lang.Coptic implements lang.Word {
   }
 }
 
+// GREEK_TO_COPTIC maps a Greek letter to its Coptic counterpart.
+const GREEK_TO_COPTIC: Readonly<Record<string, string>> = {
+  α: 'ⲁ',
+  β: 'ⲃ',
+  γ: 'ⲅ',
+  δ: 'ⲇ',
+  ε: 'ⲉ',
+  ζ: 'ⲍ',
+  η: 'ⲏ',
+  θ: 'ⲑ',
+  ι: 'ⲓ',
+  κ: 'ⲕ',
+  λ: 'ⲗ',
+  μ: 'ⲙ',
+  ν: 'ⲛ',
+  ξ: 'ⲝ',
+  ο: 'ⲟ',
+  π: 'ⲡ',
+  ρ: 'ⲣ',
+  σ: 'ⲥ',
+  ς: 'ⲥ',
+  τ: 'ⲧ',
+  υ: 'ⲩ',
+  φ: 'ⲫ',
+  χ: 'ⲭ',
+  ψ: 'ⲯ',
+  ω: 'ⲱ',
+};
+
 /**
  * Dawoud spells the words in his Greek index in Coptic letters, and sorts them
  * like Coptic words. A word in Greek letters is transliterated to Coptic, so it
  * can be looked up in the index as well.
+ *
+ * Unlike his Coptic index, Dawoud's Greek index doesn't group the words
+ * starting with ⲟⲩ into a section of their own (e.g. ⲟⲩⲟⲓ < ⲟⲯⲱⲛⲓⲟⲛ), so
+ * they sort like any other word.
  *
  * NOTE: Lookups in Greek letters are secondary, so the transliteration is
  * deliberately dumb: a letter-for-letter substitution, with the diacritics
@@ -116,10 +192,10 @@ class Coptic extends lang.Coptic implements lang.Word {
  * Such words land on the wrong page, and should be typed in Coptic letters
  * instead.
  */
-class Greek extends lang.Coptic implements lang.Word {
+class Greek extends scan.Keyed implements scan.Word {
   /* CHARS matches a small Coptic or Greek letter. */
-  public static override readonly CHARS = new RegExp(
-    `${lang.Coptic.CHARS.source}|[α-ω]`,
+  public static readonly CHARS = new RegExp(
+    `${Coptic.CHARS.source}|[α-ω]`,
     'u'
   );
 
@@ -128,8 +204,10 @@ class Greek extends lang.Coptic implements lang.Word {
    * letters.
    */
   public constructor(word: string) {
-    super(
-      Array.from(word, (c: string): string => GREEK_TO_COPTIC[c] ?? c).join('')
+    super(word, (w: string): string =>
+      copticKey(
+        Array.from(w, (c: string): string => GREEK_TO_COPTIC[c] ?? c).join('')
+      )
     );
   }
 }
@@ -144,7 +222,7 @@ class Greek extends lang.Coptic implements lang.Word {
  * (كتابة)), which breaks ties between homographs. The parentheses are word
  * boundaries, so the gloss sorts as a word of its own.
  */
-class Arabic extends lang.Keyed {
+class Arabic extends scan.Keyed {
   /* CHARS matches an Arabic letter (including tatweel), a diacritic, a space,
    * or a parenthesis. */
   public static readonly CHARS = /[ء-غـ-ي\p{M} ()]/u;
@@ -161,12 +239,13 @@ class Arabic extends lang.Keyed {
         .cleanDiacritics(
           w.normalize('NFC').replaceAll('ؤ', 'و').replaceAll('ئ', 'ء')
         )
-        .replaceAll(/[()]/gu, ' ')
         .replaceAll('ـ', '')
         // TODO: (#640) Normalize the following in the index if possible. The
         // generic substitution may be inaccurate.
         .replaceAll('ى', 'ي')
         .replaceAll('ة', 'ه')
+        .replaceAll(/[ ()]+/gu, ' ')
+        .trim()
     );
   }
 }
@@ -178,7 +257,7 @@ class Arabic extends lang.Keyed {
  */
 async function fetchIndex(
   path: string,
-  wordType: lang.WordType
+  wordType: scan.WordType
 ): Promise<scan.Index> {
   const res: Response = await fetch(path);
   return new scan.Index(await res.text(), wordType);
@@ -207,9 +286,9 @@ export async function init(): Promise<void> {
     ]);
 
   const lookup = new scan.Lookup({
-    [lang.Language.COPTIC]: coptic,
-    [lang.Language.GREEK]: greek,
-    [lang.Language.ARABIC]: arabic,
+    [scan.Language.COPTIC]: coptic,
+    [scan.Language.GREEK]: greek,
+    [scan.Language.ARABIC]: arabic,
   });
 
   // The Greek checkbox forces the interpretation of Coptic letters as Greek
@@ -220,7 +299,7 @@ export async function init(): Promise<void> {
   ) as HTMLInputElement;
   if (browser.getParam(params.GREEK)) {
     greekCheckbox.checked = true;
-    lookup.alias(lang.Language.COPTIC, lang.Language.GREEK);
+    lookup.alias(scan.Language.COPTIC, scan.Language.GREEK);
   }
 
   new scan.ZoomerDragger(form, isActive);
@@ -263,8 +342,8 @@ function wireGreekCheckbox(
     // applies to Dawoud, but it currently lingers in the other modes.
     browser.setParam(params.GREEK, checkbox.checked);
     dictionary.alias(
-      lang.Language.COPTIC,
-      checkbox.checked ? lang.Language.GREEK : undefined
+      scan.Language.COPTIC,
+      checkbox.checked ? scan.Language.GREEK : undefined
     );
   });
 }

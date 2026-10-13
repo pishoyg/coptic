@@ -2,7 +2,6 @@
 // TODO: (#641) Fix the sorting logic. The current heuristic often doesn't align
 // with Crum.
 import * as scan from '../scan.js';
-import * as lang from '../lang.js';
 import * as log from '../logger.js';
 import * as orth from '../orth.js';
 import * as dev from '../dev.js';
@@ -60,8 +59,8 @@ export const ROMAN_PAGES: string[] = [
 const LETTER = /ⲉⲓ|ⲟⲩ|./g;
 
 /* LETTERS is a list of all letters used in Crum's dictionary in lexicographic
- * order. */
-const LETTERS: string[] = [
+ * order, along with the letters that Kasser adds to Crum's alphabet. */
+const LETTERS: readonly string[] = [
   'ⲁ',
   'ⲃ',
   'ⲅ',
@@ -73,9 +72,13 @@ const LETTERS: string[] = [
   'ⲉⲓ',
   'ⲓ',
   'ⲕ',
+  'ⳤ', // Kasser
+  'ⲹ', // Kasser
   'ⲗ',
   'ⲙ',
   'ⲛ',
+  'ⲻ', // Kasser
+  'ⲳ', // Kasser
   'ⲟ',
   'ⲡ',
   'ⲣ',
@@ -87,6 +90,8 @@ const LETTERS: string[] = [
   'ⲭ',
   'ⲱ',
   'ϣ',
+  'ⳋ', // Kasser
+  'ⳓ', // Kasser
   'ϥ',
   'ⳉ',
   'ϧ',
@@ -100,10 +105,10 @@ const LETTERS: string[] = [
  * the mapping of A is lexicographically smaller than the mapping of B
  * (according to Crum's ordering).
  */
-const LETTER_MAPPING: Record<string, string> = LETTERS.reduce<
+export const LETTER_MAPPING: Readonly<Record<string, string>> = LETTERS.reduce<
   Record<string, string>
 >((acc: Record<string, string>, value: string, index: number) => {
-  acc[value] = String.fromCharCode('a'.charCodeAt(0) + index);
+  acc[value] = String.fromCharCode(scan.MAPPING_START + index);
   return acc;
 }, {});
 
@@ -265,7 +270,7 @@ class Sequence {
 /**
  * Coptic represents a word in Crum's Coptic index.
  */
-export class Coptic implements lang.Word {
+export class Coptic implements scan.Word {
   /* CHARS matches a letter of Crum's Coptic index. Unlike Dawoud, Crum has no
    * ⲋ. */
   public static readonly CHARS = /[ⲁⲃⲅⲇⲉⲍⲏⲑⲓⲕⲗⲙⲛⲝⲟⲡⲣⲥⲧⲩⲫⲭⲯⲱϣϥⳉϧϩϫϭϯ]/u;
@@ -277,7 +282,7 @@ export class Coptic implements lang.Word {
 
   /**
    * @param word - The string representation of the word, spelled only in
-   * `CHARS` (see `lang.WordType`).
+   * `CHARS` (see `scan.WordType`).
    */
   public constructor(public readonly word: string) {
     word = normalize(word);
@@ -365,7 +370,7 @@ export class Coptic implements lang.Word {
  * a hamza seated on a wāw or a yāʾ sorts as a bare hamza, rather than as its
  * seat.
  */
-class Arabic extends lang.Keyed {
+class Arabic extends scan.Keyed {
   /* CHARS matches an Arabic letter (excluding tatweel) or a diacritic. */
   public static readonly CHARS = /[ء-غف-ي\p{M}]/u;
 
@@ -394,7 +399,7 @@ class Arabic extends lang.Keyed {
  * word boundary like a space, which sorts before any letter. For example,
  * *mild, make* and *music-room* precede *mildew* and *musical*.
  */
-class English extends lang.Keyed {
+class English extends scan.Keyed {
   /* CHARS matches a small English letter, or the punctuation of index entries
    * such as *mercy, have*, *music-room*, or *orach (atriplex)*. */
   public static readonly CHARS = /[a-z ,()-]/u;
@@ -403,7 +408,7 @@ class English extends lang.Keyed {
    * @param word - The string representation of the word.
    */
   public constructor(word: string) {
-    super(word, (w: string): string => w.replaceAll(/[(),-]/gu, ' '));
+    super(word, (w: string): string => w.replaceAll(/[ (),-]+/gu, ' ').trim());
   }
 }
 
@@ -411,7 +416,7 @@ class English extends lang.Keyed {
  * Greek represents a word in Crum's Greek index. Case and diacritics are
  * ignored, and the final sigma is identical to the medial one.
  */
-class Greek extends lang.Keyed {
+class Greek extends scan.Keyed {
   /* CHARS matches a Greek letter or a diacritic. */
   public static readonly CHARS = /[α-ωΑ-Ω\p{M}]/u;
 
@@ -427,31 +432,31 @@ class Greek extends lang.Keyed {
 
 /* WORD_TYPES maps the language of each of the book's indexes to the type of
  * its words. The index of a language lives at `${DATA_DIR}${language}.tsv`. */
-const WORD_TYPES: Record<lang.Language, lang.WordType> = {
-  [lang.Language.COPTIC]: Coptic,
-  [lang.Language.GREEK]: Greek,
-  [lang.Language.ARABIC]: Arabic,
-  [lang.Language.ENGLISH]: English,
+const WORD_TYPES: Record<scan.Language, scan.WordType> = {
+  [scan.Language.COPTIC]: Coptic,
+  [scan.Language.GREEK]: Greek,
+  [scan.Language.ARABIC]: Arabic,
+  [scan.Language.ENGLISH]: English,
 };
 
 /**
  * @returns The book's indexes, keyed by language.
  */
-async function fetchIndexes(): Promise<Record<lang.Language, scan.Index>> {
-  const languages: lang.Language[] = Object.values(lang.Language);
+async function fetchIndexes(): Promise<Record<scan.Language, scan.Index>> {
+  const languages: scan.Language[] = Object.values(scan.Language);
   const tsvs: string[] = await Promise.all(
-    languages.map((language: lang.Language): Promise<string> =>
+    languages.map((language: scan.Language): Promise<string> =>
       fetch(str.joinPaths(DATA_DIR, `${language}.tsv`)).then(
         (res: Response): Promise<string> => res.text()
       )
     )
   );
   return Object.fromEntries(
-    languages.map((language: lang.Language, idx: number) => [
+    languages.map((language: scan.Language, idx: number) => [
       language,
       new scan.Index(tsvs[idx]!, WORD_TYPES[language]),
     ])
-  ) as Record<lang.Language, scan.Index>;
+  ) as Record<scan.Language, scan.Index>;
 }
 
 /**
@@ -470,7 +475,7 @@ export async function init(): Promise<void> {
   const isActive: scan.IsActive = () => mode.active(MODE);
 
   const [indexes, headwords]: [
-    Record<lang.Language, scan.Index>,
+    Record<scan.Language, scan.Index>,
     Record<string, string>,
   ] = await Promise.all([
     fetchIndexes(),

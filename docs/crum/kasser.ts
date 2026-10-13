@@ -13,7 +13,6 @@ import * as browser from '../browser.js';
 import * as book from './book.js';
 import * as cls from './cls.js';
 import * as scan from '../scan.js';
-import * as lang from '../lang.js';
 import * as mode from './mode.js';
 import * as id from './id.js';
 import * as params from './params.js';
@@ -94,19 +93,6 @@ const MORPHOLOGIQUES: Book = {
   offset: -19,
 };
 
-/* LETTERS maps a letter that Kasser's index uses, but Crum's alphabet lacks,
- * to the letter whose section Kasser files it right before. The index only
- * spells these letters on their own, so each sorts as the smallest word of the
- * following section, which keeps the index in order.
- * TODO: (#786) Add these letters to the alphabet, so we can sort them without
- * mapping, and detect them as Coptic in queries. */
-const LETTERS: Record<string, string> = {
-  ⳤ: 'ⲗ',
-  ⲻ: 'ⲟ',
-  ⲳ: 'ⲟ',
-  ⳋ: 'ϥ',
-};
-
 /**
  * Coptic represents a word in Kasser's Coptic index, which Kasser sorts like
  * Crum.
@@ -117,14 +103,14 @@ const LETTERS: Record<string, string> = {
  * ϣⲗⲓ[.... They play no role in sorting, so they are dropped.
  */
 class Coptic extends book.Coptic {
-  /* CHARS matches a letter of Crum's Coptic index, a letter of `LETTERS`, or a
-   * character of Kasser's annotations. */
+  /* ALPHABET matches a letter of Kasser's dictionary. */
+  private static readonly ALPHABET =
+    /[ⲁⲃⲅⲇⲉⲍⲏⲑⲓⲕⳤⲹⲗⲙⲛⲻⲳⲝⲟⲡⲣⲥⲧⲩⲫⲭⲯⲱϣⳋⳓϥⳉϧϩϫϭϯ]/u;
+
+  /* CHARS matches a letter of `ALPHABET`, or a character of Kasser's
+   * annotations. */
   public static override readonly CHARS = new RegExp(
-    [
-      book.Coptic.CHARS.source,
-      `[${Object.keys(LETTERS).join('')}]`,
-      '[-()[\\].⸗†\\p{M}]',
-    ].join('|'),
+    [Coptic.ALPHABET.source, '[-()[\\].⸗†\\p{M}]'].join('|'),
     'u'
   );
 
@@ -132,12 +118,7 @@ class Coptic extends book.Coptic {
    * @param word - The string representation of the word.
    */
   public constructor(word: string) {
-    super(
-      lang.restrict(
-        Array.from(word, (c: string): string => LETTERS[c] ?? c).join(''),
-        book.Coptic.CHARS
-      )
-    );
+    super(scan.restrict(word, Coptic.ALPHABET));
   }
 }
 
@@ -162,7 +143,7 @@ async function initBook(b: Book, isActive: scan.IsActive): Promise<void> {
 
   new scan.ZoomerDragger(form, isActive);
   new scan.Dictionary(
-    new scan.Lookup({ [lang.Language.COPTIC]: index }, b.overrides),
+    new scan.Lookup({ [scan.Language.COPTIC]: index }, b.overrides),
     new scan.Scroller({
       start: START,
       end: b.end,
