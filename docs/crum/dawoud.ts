@@ -12,11 +12,13 @@ import * as tool from '../tooltip.js';
 
 const MODE: mode.Mode = mode.DAWOUD;
 
-// Our dictionary pages are '0.png' to '1055.png', with '18.jpg' holding page 1.
+// Our dictionary pages are '0.png' to '1055.png', with '18.png' holding page 1.
 const MIN_PAGE_NUM = 0;
 const MAX_PAGE_NUM = 1055;
 const EXT = 'png';
 const OFFSET = 17;
+// By default, land on the first page in the scan ("0.png").
+const LANDING = MIN_PAGE_NUM - OFFSET;
 
 const DATA_DIR = '../dawoud/';
 
@@ -314,7 +316,8 @@ export async function init(): Promise<void> {
       directory: DATA_DIR,
       isActive,
     }),
-    document.getElementById(id.SEARCH_BOX) as HTMLInputElement
+    document.getElementById(id.SEARCH_BOX) as HTMLInputElement,
+    LANDING
   );
 
   wireGreekCheckbox(greekCheckbox, dictionary);
