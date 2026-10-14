@@ -1161,8 +1161,8 @@ export class Dictionary {
    * number.
    * @param searchBox - The shared search box. The `Dictionary` listens to
    * its `input` event and searches on every keystroke.
-   * @param landingPage - Page to open when the initial query resolves
-   * nowhere, including the empty query. Defaults to 1.
+   * @param landingPage - Page to open when the query is empty, or when the
+   * initial query resolves nowhere. Defaults to 1.
    */
   public constructor(
     private readonly lookup: Lookup,
@@ -1171,9 +1171,12 @@ export class Dictionary {
     private readonly landingPage = 1
   ) {
     this.searchBox.addEventListener('input', (): void => {
-      // A query that resolves nowhere leaves the scan where it is, so that
-      // clearing the box does not yank the reader off the page they are on.
-      this.scroller.update(this.search());
+      // Clearing the box returns to the landing page. A nonempty query that
+      // resolves nowhere, however, leaves the scan where it is, so that a
+      // half-typed or foreign query does not yank the reader off their page.
+      this.scroller.update(
+        this.searchBox.value.trim() ? this.search() : { page: this.landingPage }
+      );
     });
     // Open the first scan: the initial query's page when it resolves, the
     // landing page otherwise. The `Scroller` opens nothing until told to,
