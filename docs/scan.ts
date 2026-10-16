@@ -241,21 +241,44 @@ export interface Page {
   page: number;
 }
 
+// LATIN_COLUMNS maps the Latin column letters, read as a column after any
+// character (e.g. the Roman numeral in `xva`).
+const LATIN_COLUMNS: Readonly<Record<string, NonNullable<Column>>> = {
+  a: 'a',
+  b: 'b',
+};
+
+// COPTIC_GREEK_COLUMNS maps the Coptic and Greek column letters, read as a
+// column only after a digit: override keys include Coptic headwords, many
+// ending in `ⲁ` / `ⲃ`, so chopping after any letter would send `ϣⲁⲣⲁ` to
+// the override for `ϣⲁⲣ`.
+const COPTIC_GREEK_COLUMNS: Readonly<Record<string, NonNullable<Column>>> = {
+  ⲁ: 'a',
+  ⲃ: 'b',
+  α: 'a',
+  β: 'b',
+};
+
 /**
  * We often use the notation "${NUM}${COL}" to refer to a given column in a
  * page. For example, "1a" refers to the left column of page 1.
  * chopColumn removes the column from the page, if present, returning the page
  * number.
  *
+ * The column may be typed as `a` / `b`, or, after a digit, as `ⲁ` / `ⲃ` or
+ * `α` / `β` (see `COPTIC_GREEK_COLUMNS` for why). Either way, it is
+ * returned as `a` / `b`.
+ *
  * @param page - A page number, potentially containing a column.
  * @returns - The page number without the column.
  */
 export function chopColumn(page: string): [string, Column] {
+  const base: string = page.slice(0, -1);
   const col: string = page.slice(-1);
-  if (col === 'a' || col === 'b') {
-    return [page.slice(0, -1), col];
-  }
-  return [page, undefined];
+  const column: Column =
+    LATIN_COLUMNS[col] ??
+    (/\d$/.test(base) ? COPTIC_GREEK_COLUMNS[col] : undefined);
+  return column ? [base, column] : [page, undefined];
 }
 
 /**
