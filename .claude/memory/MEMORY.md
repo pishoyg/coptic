@@ -6,3 +6,4 @@
 - [Transpile before running pipelines](transpile-before-pipelines.md) — TS pipelines import transpiled `docs/` JS; stale or `undefined` otherwise
 - [wiki.tsv is a Google Sheet snapshot](wiki-tsv-is-sheet-snapshot.md) — `make crum` re-downloads it; label/typo fixes go in the sheet
 - [Crum numbers Dan 3 by Swete's Theodotion](crum-daniel-3-swete-numbering.md) — Vaticanus order (54 depths; 71,72,69,70); check Swete before blaming Crum
+- [Kasser line numbers are old-style figures](kasser-oldstyle-line-numbers.md) — `49,11` is not `49,₁₁`; real subscripts only in sigla and `M₈`
