@@ -249,9 +249,9 @@ export function handleDialect(
     dialect.prettify(el);
     tool.addTooltip(el, [dialect.name], [cls.DIALECT]);
 
-    if (el.closest(`.${cls.WIKI}`) || !standard) {
-      // There is no highlighting in Wiki. And definitely not for nonstandard
-      // dialects.
+    if (el.closest(css.disjunction(cls.WIKI, cls.KASSER)) || !standard) {
+      // There is no highlighting in Wiki or Kasser. And definitely not for
+      // nonstandard dialects.
       return;
     }
 
