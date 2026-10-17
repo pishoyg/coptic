@@ -197,7 +197,7 @@ _SUBSCRIPTS: list[str] = [
     "o",
     "vl",
     "vl?",
-    "o · vl",
+    "o·vl",
     "(h)",
     "(hl)",
     "(qq)",
@@ -254,12 +254,17 @@ def replace_subscript(match: regex.Match[str]) -> str:
 
 
 _ITALIC_RE: regex.Pattern[str] = regex.compile(r"[\p{Latin} .',]+")
-# A gloss may contain italics, which are substituted later.
-# NOTE: A gloss can't contain square brackets, with which Kasser supplies a
-# word in a translation: «... mêlée à elle [l'eau froide]). This only occurs
-# once, in a gloss that Kasser leaves open without an ellipsis, which we
-# couldn't recognize anyway. See `replace_unclosed`.
-_GLOSS_RE: regex.Pattern[str] = regex.compile(r"[\p{Latin} ',\-.?!()_:]+")
+# A gloss may contain italics, and Greek words in double square brackets, which
+# are substituted (and validated) later: «... des deux cents [[κόλλαθον]]».
+# Only Greek is allowed, because bracketed Coptic marks a quotation:
+# «[[ϭⲁⲡⲉⲓ]] (?)».
+# NOTE: A gloss can't contain single square brackets, with which Kasser
+# supplies a word in a translation: «... mêlée à elle [l'eau froide]). This
+# only occurs once, in a gloss that Kasser leaves open without an ellipsis,
+# which we couldn't recognize anyway. See `replace_unclosed`.
+_GLOSS_RE: regex.Pattern[str] = regex.compile(
+    r"(?:[\p{Latin} ',\-.?!()_:]|\[\[[\p{Greek}\p{M} .]+\]\])+",
+)
 
 
 def replace_italic(match: regex.Match[str]) -> str:
