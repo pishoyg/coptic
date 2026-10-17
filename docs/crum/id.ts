@@ -73,11 +73,13 @@ export const MORPHOLOGIQUES_CHECKBOX = 'morphologiques-checkbox';
 
 // NOTE IDs:
 export const CATEGORIES = 'categories';
+export const COMPLEMENTS = 'complements';
 export const DERIVATIONS = 'derivations';
 export const FOOTER = 'footer';
 export const IMAGES = 'images';
 export const KEY = 'key';
 export const MEANING = 'meaning';
+export const MORPHOLOGIQUES = 'morphologiques';
 export const PRETTY = 'pretty';
 export const ROOT_TYPE = 'root-part-of-speech';
 export const SENSES = 'senses';

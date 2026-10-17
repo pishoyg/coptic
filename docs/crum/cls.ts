@@ -76,6 +76,7 @@ export const HIEROGLYPHIC = 'hieroglyphic';
 export const IBIDEM = 'ibidem';
 export const INDEX_TABLE = 'index-table';
 export const KASSER = 'kasser';
+export const KASSER_PAGE = 'kasser-page';
 /**
  * LANG is a language in a KELLIA meaning column (as of now, either "En", "Fr",
  * or "De").

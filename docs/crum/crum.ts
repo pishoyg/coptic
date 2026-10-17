@@ -51,6 +51,7 @@ export function handle(
   handleCategories(root);
   handleRootType(root);
   handleCrumPage(root);
+  handleKasserPage(root);
   handleExplanatory(root);
   handleDrvKey(root);
   handleExplanatoryKey(root);
@@ -112,6 +113,27 @@ function handleCrumPage(root: HTMLElement): void {
     el.replaceChildren(...scan.prettyPage(page));
     html.linkify(el, paths.crumScan(page));
   });
+}
+
+/**
+ *
+ * @param root
+ */
+function handleKasserPage(root: HTMLElement): void {
+  const ITER: [string, paths.Kasser][] = [
+    [id.COMPLEMENTS, 'complements'],
+    [id.MORPHOLOGIQUES, 'morphologiques'],
+  ];
+  for (const [elemID, mode] of ITER) {
+    root
+      .querySelector<HTMLElement>(`#${elemID}`)
+      ?.querySelectorAll<HTMLElement>(css.c(cls.KASSER_PAGE))
+      .forEach((el: HTMLElement): void => {
+        const page: string = el.textContent.trim();
+        el.replaceChildren(...scan.prettyPage(page));
+        html.linkify(el, paths.kasser(page, mode));
+      });
+  }
 }
 
 /**

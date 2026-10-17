@@ -2,6 +2,7 @@
 
 import * as iam from './iam.js';
 import * as params from './params.js';
+import * as crumParams from './crum/params.js';
 
 // remnqymi.com ownables:
 const SITE_URL = iam.amI('card') ? 'http://remnqymi.com' : '';
@@ -15,6 +16,7 @@ export const DIGITAL: Mode = 'digital';
 export const BOOK: Mode = 'book';
 export const KASSER: Mode = 'kasser';
 export const DAWOUD: Mode = 'dawoud';
+export type Kasser = 'complements' | 'morphologiques';
 
 /**
  *
@@ -202,4 +204,20 @@ export function rowUrl(worksheetUrl: string, rowNum: number | string): string {
  */
 export function crumScan(query: string): string {
   return lexicon(query, BOOK);
+}
+
+/**
+ *
+ * @param query
+ * @param mode
+ * @returns
+ */
+export function kasser(query: string, mode: Kasser = 'complements'): string {
+  return lexicon(
+    query,
+    KASSER,
+    mode === 'morphologiques'
+      ? { [crumParams.MORPHOLOGIQUES]: String(true) }
+      : {}
+  );
 }
