@@ -253,7 +253,7 @@ _BASES: list[str] = [
     "O",  # Old Coptic
 ]
 # NOTE: Kasser's X only occurs as a superscript.
-_SUPERSCRIPTS: list[str] = ["a", "f", "h", "x", "xm", "xs", "·a"]
+_SUPERSCRIPTS: list[str] = ["a", "f", "h", "x", "xm", "xs", "·a", "m"]
 _SUBSCRIPTS: list[str] = ["o", "vl", "(qq)", "(h)", "(vl ?)"]
 _CANONICAL: dict[str, str] = {"A^2": "L"}
 
