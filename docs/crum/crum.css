@@ -7,7 +7,7 @@ figcaption {
   font-size: small;
 }
 
-.wiki .folio {
+.folio {
   border: 1px solid var(--border);
   border-radius: 8px;
   padding: 0 20px;
@@ -66,7 +66,7 @@ figcaption {
 }
 /* stylelint-enable color-no-hex, color-named */
 
-.wiki .gloss {
+.gloss {
   font-style: italic;
   color: var(--gloss);
 
@@ -118,7 +118,8 @@ figcaption {
  * the Wiki text, and the folio labels heading a page's worth of entries. They
  * carry the accent color, so their hover background is a tint of it. */
 .page,
-.crum-page {
+.crum-page,
+.kasser-page {
   &:hover {
     background-color: var(--accent-tint);
   }
@@ -179,7 +180,9 @@ figcaption {
   float: right;
 }
 
-.wiki .crum-page {
+/* `.crum-page` is also used outside the Wiki, so it remains scoped. */
+.wiki .crum-page,
+.kasser-page {
   /* Make it behave like a block so we can center it */
   display: block;
 
@@ -212,8 +215,12 @@ figcaption {
   opacity: 0.65;
 }
 
+/* Kasser's paragraphs are not indented. */
 .wiki p {
   text-indent: 1.7em;
+}
+
+:is(.wiki, .kasser) p {
   margin-top: 0;
   margin-bottom: 0.8em;
   text-align: justify;
@@ -233,7 +240,7 @@ figcaption {
   color: var(--text-muted);
 }
 
-.wiki .headword {
+.headword {
   font-size: large;
 }
 
@@ -262,7 +269,7 @@ figcaption {
 }
 /* stylelint-enable selector-class-pattern */
 
-.wiki .coptic {
+.coptic {
   font-weight: bold;
 
   &:hover {
@@ -320,14 +327,38 @@ figcaption {
   }
 }
 
-.wiki {
+.demotic {
+  font-style: italic;
+}
+
+.bullet {
+  color: var(--bullet);
+  font-weight: bold;
+
+  /* Bullets are also used in cross references. For example, the following
+   * text is present under ⲃⲱⲗ[1] (with parentheses):
+   *   (v also I. a)
+   *   (v also II. a)
+   * We maintain a small margin, in order to avoid out-of-place large spaces.
+   * We rely on the distinctive color of the bullets to increase their
+   * visibility.
+   *
+   * We considered adopting a heuristic that tries to determine whether a
+   * given bullet should be spaced or not (for example, by looking at whether
+   * it's contained within parentheses). But we have an aversion of
+   * heuristics, and we have too many of them already. This is simpler and
+   * sufficient.
+   *
+   * [1] https://remnqymi.com/crum/54.html
+   * */
+  margin-left: 0.25em;
+}
+
+:is(.wiki, .kasser) {
   margin-top: 2em;
   margin-bottom: 2em;
 
-  .demotic {
-    font-style: italic;
-  }
-
+  /* Andreas also uses `.arabic` and `.hebrew`, so these remain scoped. */
   & .arabic,
   .aramaic,
   .hebrew,
@@ -348,29 +379,6 @@ figcaption {
      * doesn't need this rule, but it doesn't hurt to have it.
      * */
     unicode-bidi: isolate;
-  }
-
-  & .bullet {
-    color: var(--bullet);
-    font-weight: bold;
-
-    /* Bullets are also used in cross references. For example, the following
-     * text is present under ⲃⲱⲗ[1] (with parentheses):
-     *   (v also I. a)
-     *   (v also II. a)
-     * We maintain a small margin, in order to avoid out-of-place large spaces.
-     * We rely on the distinctive color of the bullets to increase their
-     * visibility.
-     *
-     * We considered adopting a heuristic that tries to determine whether a
-     * given bullet should be spaced or not (for example, by looking at whether
-     * it's contained within parentheses). But we have an aversion of
-     * heuristics, and we have too many of them already. This is simpler and
-     * sufficient.
-     *
-     * [1] https://remnqymi.com/crum/54.html
-     * */
-    margin-left: 0.25em;
   }
 }
 
@@ -394,7 +402,8 @@ figcaption {
   .hieroglyphic,
   .annotation,
   .page,
-  .crum-page
+  .crum-page,
+  .kasser-page
 ) {
   border-radius: 2px;
 
@@ -739,16 +748,16 @@ body.dev {
 /* Italic glyphs overhang their box; lifting italicized text onto its own
  * stacking context keeps the overhang from being concealed by an adjacent
  * element's background (e.g. `.match`, `::target-text`). */
-/* stylelint-disable selector-class-pattern */
+/* stylelint-disable selector-class-pattern, no-descending-specificity */
 i,
 .roman,
 .gram_grp,
-.wiki .gloss,
-.wiki .demotic {
+.gloss,
+.demotic {
   position: relative;
   z-index: 1;
 }
-/* stylelint-enable selector-class-pattern */
+/* stylelint-enable selector-class-pattern, no-descending-specificity */
 
 @font-face {
   font-family: old-coptic;
