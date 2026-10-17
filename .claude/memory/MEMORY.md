@@ -8,3 +8,4 @@
 - [Crum numbers Dan 3 by Swete's Theodotion](crum-daniel-3-swete-numbering.md) — Vaticanus order (54 depths; 71,72,69,70); check Swete before blaming Crum
 - [Kasser line numbers are old-style figures](kasser-oldstyle-line-numbers.md) — `49,11` is not `49,₁₁`; real subscripts only in sigla and `M₈`
 - [Kasser Compléments scan offset](kasser-complements-scan-offset.md) — `complements/N.png` is page N − 17; OCR with tesseract to locate entries
+- [Kasser's unbalanced lacuna brackets](kasser-unbalanced-lacuna-brackets.md) — `ⲧⲧⲓ]ⲙⲏ`, `ⲕⲟⲗⲗⲁⲑⲟ[ⲛ` are in the print; check the scan first
