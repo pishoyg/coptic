@@ -25,7 +25,6 @@ import * as scan from '../scan.js';
 import * as dial from '../dialect.js';
 import * as book from './book.js';
 import * as sept from './septuagint.js';
-import * as head from '../header.js';
 
 /**
  * The Bible book mapping, keyed by every Crum abbreviation. It's derived from
@@ -684,9 +683,7 @@ function addFinePrint(wiki: HTMLElement): void {
       paths.crumScan(LIST_OF_ABBREVIATIONS_PAGE),
       'list of abbreviations'
     ),
-    '. Please ',
-    html.anchor(head.reports(), 'report'),
-    ' errors.'
+    '.'
   );
   div.classList.add(cls.FINE_PRINT);
   wiki.insertAdjacentElement('beforeend', div);
