@@ -8,7 +8,7 @@ from collections import abc
 
 import pandas as pd
 
-from dictionary.marcion_sourceforge_net import constants, crum, wiki
+from dictionary.marcion_sourceforge_net import constants, crum, kasser, wiki
 from flashcards import deck
 from utils import concur, file, gcp, log, paths
 
@@ -24,6 +24,15 @@ _WIKI_SHEET_TSV_URL: str = (
     # pylint: disable-next=line-too-long
     "https://docs.google.com/spreadsheets/d/1lhjcnkHS-pA3p5Vys-6ohKu7Y4ZCJ5NO/export?format=tsv"
 )
+# The Kasser sheet has a tab for each book, and we take a snapshot of each.
+_KASSER_SHEET_TSV_URL: str = (
+    # pylint: disable-next=line-too-long
+    "https://docs.google.com/spreadsheets/d/1sGTjLGFtehosDszPNPur_isYfIDo-jRoAfKax9mJJbU/export?format=tsv"
+)
+_KASSER_SHEET_GIDS: dict[kasser.Book, int] = {
+    kasser.Book.COMPLEMENTS: 0,
+    kasser.Book.MORPHOLOGIQUES: 550010503,
+}
 
 _argparser = argparse.ArgumentParser("Generate Crum artifacts (by default).")
 
@@ -52,7 +61,7 @@ _ = _helpers.add_argument(
     "--tsv",
     action="store_true",
     default=False,
-    help="Refresh the Wiki TSV snapshot and exit.",
+    help="Refresh the Wiki and Kasser TSV snapshots and exit.",
 )
 
 _ = _helpers.add_argument(
@@ -78,7 +87,8 @@ _ = _argparser.add_argument(
     "--notsv",
     action="store_true",
     default=False,
-    help="Skip refreshing the Wiki TSV snapshot; read the tracked copy as is.",
+    help="Skip refreshing the Wiki and Kasser TSV snapshots; read the tracked"
+    " copies as is.",
 )
 
 
@@ -93,6 +103,19 @@ def _snapshot_wiki() -> None:
     """
     df: pd.DataFrame = gcp.tsv_spreadsheet(_WIKI_SHEET_TSV_URL)
     file.to_tsv(df[[col.value for col in wiki.Col]], paths.WIKI_TSV)
+
+
+def _snapshot_kasser() -> None:
+    """Refresh the local snapshots of the Kasser sheets, dropping the noise.
+
+    Like the Wiki snapshot, we only save the columns listed in the `kasser.Col`
+    enum.
+    """
+    for book, gid in _KASSER_SHEET_GIDS.items():
+        df: pd.DataFrame = gcp.tsv_spreadsheet(
+            f"{_KASSER_SHEET_TSV_URL}&gid={gid}",
+        )
+        file.to_tsv(df[[col.value for col in kasser.Col]], kasser.TSV[book])
 
 
 def _print_next_key(keys: abc.Container[str]) -> None:
@@ -225,6 +248,7 @@ def main():
         # caches the parsed records on its first call, so a stale read can not
         # be corrected later in the run.
         _snapshot_wiki()
+        _snapshot_kasser()
 
     if args.tsv:
         return

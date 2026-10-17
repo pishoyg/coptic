@@ -36,6 +36,14 @@ MORPHOLOGY: pathlib.Path = directory("morphology/")
 
 # Component Files
 WIKI_TSV: pathlib.Path = file(MARCION, "data/input/wiki.tsv")
+KASSER_COMPLEMENTS_TSV: pathlib.Path = file(
+    MARCION,
+    "data/input/kasser/complements.tsv",
+)
+KASSER_MORPHOLOGIQUES_TSV: pathlib.Path = file(
+    MARCION,
+    "data/input/kasser/morphologiques.tsv",
+)
 
 
 # Site Directories

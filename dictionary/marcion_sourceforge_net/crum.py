@@ -26,9 +26,16 @@ import yaml
 
 from dictionary import cls as dict_cls
 from dictionary.kellia_uni_goettingen_de import kellia
-from dictionary.marcion_sourceforge_net import cls, constants, ids
+
+# isort keeps the aliased import apart, splitting the others around it, while
+# ruff merges the others into one statement. Neither accepts the other's form.
+# TODO: (#0) Resolve hook conflicts.
+# isort: off
+from dictionary.marcion_sourceforge_net import cls, constants, ids, kasser
 from dictionary.marcion_sourceforge_net import lexical as lex
 from dictionary.marcion_sourceforge_net import parse, sheet, wiki
+
+# isort: on
 from flashcards import deck
 from xooxle import xooxle
 
@@ -872,6 +879,10 @@ class Root(Row):
             yield from self.wiki_html()
             yield "</div>"
 
+        # Kasser.
+        _verify_kasser_keys()
+        yield from kasser.root_html(self.key)
+
         # Sisters.
         if (
             self.sisters
@@ -1095,6 +1106,22 @@ def _verify_wiki_keys() -> None:
                 "for entry:",
                 w,
             )
+
+
+@functools.cache
+def _verify_kasser_keys() -> None:
+    for book in kasser.Book:
+        for w in kasser.wikis(book):
+            for key in w.keys:
+                ensure.ensure(
+                    str(key) in Crum.roots,
+                    "Unknown Marcion key:",
+                    key,
+                    "for",
+                    book,
+                    "entry:",
+                    w,
+                )
 
 
 def _img_aux(
