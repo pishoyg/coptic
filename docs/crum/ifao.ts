@@ -19,7 +19,7 @@ import * as params from './params.js';
 import * as str from '../str.js';
 import * as tool from '../tooltip.js';
 
-const MODE: mode.Mode = mode.KASSER;
+const MODE: mode.Mode = mode.IFAO;
 const EXT = 'png';
 // The first image of each book is "0.png".
 const START = 0;

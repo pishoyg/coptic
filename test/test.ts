@@ -38,8 +38,8 @@ const PAGES_TO_TEST: string[] = [
   // Crum scan
   paths.lexicon('v', paths.BOOK),
   // Kasser scans
-  paths.lexicon('ⲕⲱⲧⲉ', paths.KASSER),
-  paths.lexicon('ⲕⲱⲧⲉ', paths.KASSER, { [crum.MORPHOLOGIQUES]: String(true) }),
+  paths.lexicon('ⲕⲱⲧⲉ', paths.IFAO),
+  paths.lexicon('ⲕⲱⲧⲉ', paths.IFAO, { [crum.MORPHOLOGIQUES]: String(true) }),
   // Dawoud scan
   paths.lexicon('18', paths.DAWOUD),
 ];

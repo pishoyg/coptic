@@ -11,10 +11,10 @@ export const LEXICON = `${SITE_URL}/crum`;
 export const BIBLE = `${SITE_URL}/bible`;
 export const KEYBOARD = `${SITE_URL}/keyboard.html`;
 
-export type Mode = 'digital' | 'book' | 'kasser' | 'dawoud';
+export type Mode = 'digital' | 'book' | 'ifao' | 'dawoud';
 export const DIGITAL: Mode = 'digital';
 export const BOOK: Mode = 'book';
-export const KASSER: Mode = 'kasser';
+export const IFAO: Mode = 'ifao';
 export const DAWOUD: Mode = 'dawoud';
 export type Kasser = 'complements' | 'morphologiques';
 
@@ -212,10 +212,10 @@ export function crumScan(query: string): string {
  * @param mode
  * @returns
  */
-export function kasser(query: string, mode: Kasser = 'complements'): string {
+export function ifao(query: string, mode: Kasser = 'complements'): string {
   return lexicon(
     query,
-    KASSER,
+    IFAO,
     mode === 'morphologiques'
       ? { [crumParams.MORPHOLOGIQUES]: String(true) }
       : {}

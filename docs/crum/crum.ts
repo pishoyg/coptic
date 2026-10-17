@@ -131,7 +131,7 @@ function handleKasserPage(root: HTMLElement): void {
       .forEach((el: HTMLElement): void => {
         const page: string = el.textContent.trim();
         el.replaceChildren(...scan.prettyPage(page));
-        html.linkify(el, paths.kasser(page, mode));
+        html.linkify(el, paths.ifao(page, mode));
       });
   }
 }

@@ -10,7 +10,7 @@
  *
  *   - `digital.ts` — Xooxle / digital-lexicon init
  *   - `book.ts`    — Crum scan init
- *   - `kasser.ts`  — Kasser scans init
+ *   - `ifao.ts`    — Kasser scans init
  *   - `dawoud.ts`  — Dawoud scan init
  *
  * The footer's panels are wired up here as well.
@@ -19,7 +19,7 @@ import * as about from '../about.js';
 import * as mode from './mode.js';
 import * as digital from './digital.js';
 import * as book from './book.js';
-import * as kasser from './kasser.js';
+import * as ifao from './ifao.js';
 import * as dawoud from './dawoud.js';
 
 /**
@@ -30,12 +30,7 @@ async function main(): Promise<void> {
   // box before any view-specific init runs.
   mode.init();
   about.init();
-  await Promise.all([
-    digital.init(),
-    book.init(),
-    kasser.init(),
-    dawoud.init(),
-  ]);
+  await Promise.all([digital.init(), book.init(), ifao.init(), dawoud.init()]);
 }
 
 await main();

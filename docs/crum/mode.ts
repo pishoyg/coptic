@@ -12,14 +12,14 @@ import * as browser from '../browser.js';
 import * as id from './id.js';
 import * as params from '../params.js';
 
-import { type Mode, DIGITAL, BOOK, KASSER, DAWOUD } from '../paths.js';
+import { type Mode, DIGITAL, BOOK, IFAO, DAWOUD } from '../paths.js';
 
 // The `Mode` type and values live in `paths.ts`, which owns the lexicon URL
 // contract. They are re-exported here so consumers continue to spell
 // `mode.Mode`, etc.
-export { type Mode, DIGITAL, BOOK, KASSER, DAWOUD };
+export { type Mode, DIGITAL, BOOK, IFAO, DAWOUD };
 
-const MODES: Mode[] = [DIGITAL, BOOK, KASSER, DAWOUD];
+const MODES: Mode[] = [DIGITAL, BOOK, IFAO, DAWOUD];
 const DEFAULT: Mode = DIGITAL;
 
 /**
