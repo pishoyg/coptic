@@ -1533,6 +1533,7 @@ XOOXLE: xooxle.Xooxle = xooxle.Xooxle(
         xooxle.Selector({"id": ids.CATEGORIES}, force=False),
         xooxle.Selector({"id": ids.QUALITY}),
         xooxle.Selector({"id": ids.SENSES}, force=False),
+        xooxle.Selector({"class_": cls.KASSER_PAGE}, force=False),
     ],
     captures=[
         xooxle.Capture(

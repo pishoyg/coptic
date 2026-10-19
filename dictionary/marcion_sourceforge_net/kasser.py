@@ -612,7 +612,8 @@ def root_html(key: str) -> abc.Generator[str]:
         The Kasser element, or nothing if neither book has an entry for the
         root.
     """
-    # TODO: (#786) Index the Kasser entries in Xooxle.
+    # TODO: (#786) Index the Kasser entries in Xooxle. (They're currently in the
+    # `Appendix`, but may be more suitable for a separate layer.)
     books: dict[Book, list[Wiki]] = {
         book: by_marcion_key(book).get(key, []) for book in Book
     }
