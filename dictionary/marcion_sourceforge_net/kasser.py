@@ -360,6 +360,14 @@ _SUBSTITUTIONS: list[Substitution] = [
     # just "&". We ban the token "&amp;amp" to catch this error.
     Substitution("&", "&amp;", ban=["&amp;amp"]),
     Substitution(r"_(.+?)_", r"<i>\1</i>", ban=["_"]),
+    # A gloss is always surrounded by guillemets. They aren't part of the
+    # gloss, so they get a class of their own.
+    Substitution(
+        r"«(.*?)»",
+        f'<span class="{cls.GUILLEMET}">«</span>'
+        rf'<span class="{cls.GLOSS}">\1</span>'
+        f'<span class="{cls.GUILLEMET}">»</span>',
+    ),
     # A double-bracketed text that starts with a Latin letter (optionally
     # preceded by an asterisk) is a siglum. The siglum substitution must
     # precede the language one.
