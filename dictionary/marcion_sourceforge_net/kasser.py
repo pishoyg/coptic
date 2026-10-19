@@ -15,6 +15,7 @@ import functools
 import itertools
 import pathlib
 import typing
+import unicodedata
 from collections import abc, defaultdict
 
 import regex
@@ -25,13 +26,15 @@ from utils import ensure, file, lang, orth, page, paths
 
 # RAW_RE should match a raw entry.
 # All non-Latin text is expected to be surrounded by double square brackets.
-# Outside of double square brackets, there should remain only (1) Latin text, or
-# (2) non-letter characters. RAW_RE can be used to verify this structure.
+# Outside of double square brackets, there should remain only Latin text, drawn
+# from the alphabet below. RAW_RE can be used to verify this structure.
 RAW_RE: regex.Pattern[str] = regex.compile(
     "|".join(
         (
             r"\[\[.*?\]\]",
-            r"[\p{Latin}\P{Letter}]",
+            # The backslash is only used in our notation, but should be absent
+            # from the output.
+            r"[\p{Latin}0-9 *⟨⟩!–'(),\-./:;?\[\]_~«»\\]",
         ),
     ),
 )
@@ -40,14 +43,19 @@ RAW_RE: regex.Pattern[str] = regex.compile(
 #
 # Coptic uses two contrastive supralinear strokes, and Unicode gives each its
 # own encoding (The Unicode Standard, ch. 7, "Supralineation"). Kasser's body
-# only employs the syllabic stroke, which we encode with U+0304.
+# employs the syllabic stroke, which we encode with U+0304. The overline only
+# occurs in the texts he quotes, over numerals and nomina sacra.
 _COPTIC_MARKS: str = (
     # Supralineation:
-    "̄"  # Macron, the syllabic stroke: ⲕⲱⲗ̄ⲡ.
+    "\u0304"  # Macron, the syllabic stroke: ⲕⲱⲗ̄ⲡ.
+    "\u0305"  # Overline, for numerals: ⲓ̅ⲃ̅.
+    "\ufe24"  # Macron left half, opening a nomen sacrum's stroke.
+    "\ufe25"  # Macron right half, closing it.
+    "\ufe26"  # Conjoining macron, continuing it: ⲏ︤ⲗ︦ⲉ︦ⲙ︦ⲁ︦ⲥ︥.
     # Diacritics above:
-    "̈"  # Diaeresis, over ⲓ̈.
+    "\u0308"  # Diaeresis, over ⲓ̈.
     # Diacritics below:
-    "̣"  # Dot below, marking an uncertain letter: ⲗⲁⲕⲟ̣.ⲧ.
+    "\u0323"  # Dot below, marking an uncertain letter: ⲗⲁⲕⲟ̣.ⲧ.
 )
 
 _SPACE_AT_TAG_BORDER_RE: regex.Pattern[str] = regex.compile(
@@ -130,14 +138,15 @@ _ALPHABETS: dict[Language, tuple[str, ...]] = {
         "α-ω",  # The Greek letters, final sigma included,
         "Α-Ρ",  # and their capitals, split in two because U+03A2
         "Σ-Ω",  # is unassigned.
-        "̀",  # Grave accent.
-        "́",  # Acute accent.
-        "̈",  # Diaeresis.
-        "̓",  # Comma above, the smooth breathing.
-        "̔",  # Reversed comma above, the rough breathing.
-        "͂",  # Perispomeni.
-        "ͅ",  # Ypogegrammeni.
+        "\u0300",  # Grave accent.
+        "\u0301",  # Acute accent.
+        "\u0308",  # Diaeresis.
+        "\u0313",  # Comma above, the smooth breathing.
+        "\u0314",  # Reversed comma above, the rough breathing.
+        "\u0342",  # Perispomeni.
+        "\u0345",  # Ypogegrammeni.
         " ",
+        ".",  # A lacuna: ...θυμιῶσαι.
     ),
     "COPTIC": (
         _COPTIC_MARKS,
@@ -151,12 +160,21 @@ _ALPHABETS: dict[Language, tuple[str, ...]] = {
         "ⳋ",  # and hori.
         # TODO: (#786) Dialect P has a fifth letter, a kapa with a hook that
         # stands for ϭ (Morphologiques, p. 20). Pick a character for it.
+        "ⳓ",  # Old Coptic hei.
         "⸗",  # Double oblique hyphen, marking a pronominal form,
         "†",  # and dagger, marking a qualitative one.
         " ",
         ".",
+        "?",  # An uncertain lacuna: ⲛ[?].
+        "/",  # An abbreviation: ⲉⲅⲣⲁⲫ/.
         "(",
         ")",
+        # Angle brackets mark letters supplied by the editor: ⲛⲁ⟨ⲧ⟩ϩⲁⲡ.
+        # TODO: (#786) The materialization (`wiki.ts`) uses angle brackets to
+        # delimit a language span. If we were to materialize Kasser, it should
+        # perhaps pick a different symbol.
+        "⟨",
+        "⟩",
         "\\-",
         "\\[",  # Square brackets mark a lacuna, or, in the Morphologiques,
         "\\]",  # the Crum lemma that an entry falls under.
@@ -218,14 +236,10 @@ def replace_bracketed(match: regex.Match[str]) -> str:
         repr(text),
     )
 
-    ensure.ensure(
-        _VALIDATORS[language].fullmatch(
-            _normalize_for_validation(language, text),
-        ),
-        "invalid",
+    ensure.fullmatch(
+        _VALIDATORS[language],
+        _normalize_for_validation(language, text),
         language,
-        "text:",
-        repr(text),
     )
 
     return f'<span class="{_CLASSES[language]}">{asterisk}{text}</span>'
@@ -253,8 +267,34 @@ _BASES: list[str] = [
     "O",  # Old Coptic
 ]
 # NOTE: Kasser's X only occurs as a superscript.
-_SUPERSCRIPTS: list[str] = ["a", "f", "h", "x", "xm", "xs", "·a", "m"]
-_SUBSCRIPTS: list[str] = ["o", "vl", "(qq)", "(h)", "(vl ?)"]
+_SUPERSCRIPTS: list[str] = [
+    "a",
+    "f",
+    "h",
+    "m",
+    "o",
+    "s",
+    "x",
+    "sx",
+    "xm",
+    "xs",
+    "·a",
+    ":f",
+    ":sx",
+]
+_SUBSCRIPTS: list[str] = [
+    "o",
+    "vl",
+    "o · vl",
+    "(h)",
+    "(hl)",
+    "(qq)",
+    "(vl ?)",
+    "o(h)",
+    "o(h ?)",
+    "o(qq)",
+    "o(vl ?)",
+]
 _CANONICAL: dict[str, str] = {"A^2": "L"}
 
 
@@ -290,6 +330,47 @@ def replace_siglum(match: regex.Match[str]) -> str:
         html.append(f"<sub>{mark}</sub>")
     klass: str = _CANONICAL.get(base, base)
     return f'<span class="{dict_cls.DIALECT} {klass}">{"".join(html)}</span>'
+
+
+def replace_subscript(match: regex.Match[str]) -> str:
+    mark: str = match.group(1)
+    ensure.ensure(mark in _SUBSCRIPTS, "unknown subscript:", repr(mark))
+    return f"<sub>{mark}</sub>"
+
+
+_ITALIC_RE: regex.Pattern[str] = regex.compile(r"[\p{Latin} .',]+")
+# A gloss may contain italics, which are substituted later.
+_GLOSS_RE: regex.Pattern[str] = regex.compile(r"[\p{Latin} ',\-.?!()_]+")
+
+
+def replace_italic(match: regex.Match[str]) -> str:
+    italic: str = match.group(2)
+    ensure.fullmatch(_ITALIC_RE, italic, "italic")
+    return f"<i>{italic}</i>"
+
+
+# A gloss opens with a guillemet, and normally closes with one. Kasser leaves a
+# gloss open when it translates a quotation that breaks off, in which case it
+# ends in an ellipsis, and runs up to the parenthesis that encloses it:
+# (ManiP:208 [[...]] «creuse la terre avec la ...).
+# Requiring the ellipsis lets a forgotten guillemet trip the ban.
+# A gloss may itself contain parentheses: «(durée de la) vie».
+_GLOSS_SUB_RE: str = r"«((?:[^«»()]|\([^()]*\))*?)(»|(?<=\.\.\.)(?=\)))"
+
+
+def replace_gloss(match: regex.Match[str]) -> str:
+    # The guillemets aren't part of the gloss, so they get a class of their
+    # own. They are written as character references, so that a stray guillemet
+    # trips the ban.
+    gloss, close = match.groups()
+    ensure.fullmatch(_GLOSS_RE, gloss, "gloss")
+    html: str = (
+        f'<span class="{cls.GUILLEMET}">&laquo;</span>'
+        f'<span class="{cls.GLOSS}">{gloss}</span>'
+    )
+    if close:
+        html += f'<span class="{cls.GUILLEMET}">&raquo;</span>'
+    return html
 
 
 OPEN_PARAGRAPH: str = "<p>"
@@ -355,19 +436,12 @@ def _replace_addendum_aux(match: regex.Match[str]) -> abc.Generator[str]:
 
 
 _SUBSTITUTIONS: list[Substitution] = [
-    # Replace occurrences of ampersand with the HTML encoding.
-    # In some cases, we made the mistake of typing "&amp;" directly, instead of
-    # just "&". We ban the token "&amp;amp" to catch this error.
-    Substitution("&", "&amp;", ban=["&amp;amp"]),
-    Substitution(r"_(.+?)_", r"<i>\1</i>", ban=["_"]),
-    # A gloss is always surrounded by guillemets. They aren't part of the
-    # gloss, so they get a class of their own.
-    Substitution(
-        r"«(.*?)»",
-        f'<span class="{cls.GUILLEMET}">«</span>'
-        rf'<span class="{cls.GLOSS}">\1</span>'
-        f'<span class="{cls.GUILLEMET}">»</span>',
-    ),
+    # NOTE: The gloss substitution must precede the italic one, so that it
+    # sees the italics within it as typed.
+    Substitution(_GLOSS_SUB_RE, replace_gloss, ban=["«", "»"]),
+    # The transcription may italicize with a single underscore or a double one.
+    # Whatever the distinction it intends, we render both alike.
+    Substitution(r"(__?)(.+?)\1", replace_italic, ban=["_"]),
     # A double-bracketed text that starts with a Latin letter (optionally
     # preceded by an asterisk) is a siglum. The siglum substitution must
     # precede the language one.
@@ -376,14 +450,19 @@ _SUBSTITUTIONS: list[Substitution] = [
         replace_siglum,
         ban=["^"],
     ),
-    Substitution(
-        bracketed(r"(.*?)"),
-        replace_bracketed,
-        ban=["[[", "]]", "*"],
-    ),
-    # Outside sigla, a subscript only occurs in the manuscript numbers M₁ to
-    # M₁₀. The subscript substitution must follow the siglum one.
+    Substitution(bracketed(r"(.*?)"), replace_bracketed, ban=["[[", "]]"]),
+    # An asterisk may also occur outside brackets, e.g. before a reference:
+    # (*Jr Bal.146).
+    # NOTE: The asterisk substitution must follow the siglum and language ones,
+    # which expect to find the asterisk inside the brackets.
+    Substitution(r"\*", page.ASTERISK, ban=["*"]),
+    # Outside sigla, a subscript occurs in the manuscript numbers M₁ to M₁₀ and
+    # G₂ to G₄ (see Kasser's Sigles et Abréviations), and in a parenthesized
+    # qualifier that follows a form or a reference: [[ⲁⲁ]]~(h), (ManiP~(qq)).
+    # NOTE: The subscript substitutions must follow the siglum one.
     Substitution(r"M~([1-9]|10)(?!\d)", r"M<sub>\1</sub>", ban=["~"]),
+    Substitution(r"G~([2-4])(?!\d)", r"G<sub>\1</sub>", ban=["~"]),
+    Substitution(r"~(\([^()]+\))", replace_subscript, ban=["~"]),
     Substitution(
         r"\\n",
         CLOSE_PARAGRAPH + OPEN_PARAGRAPH,
@@ -448,7 +527,10 @@ class Wiki:
         self,
         record: dict[typing.Hashable, typing.Any],
     ) -> None:
-        self.entry: str = record[Col.ENTRY]
+        # NFC normalization simplifies some validations below. It allows us to
+        # use character classes for validation (e.g. \p{Latin}) without the
+        # need for \p{Mark}.
+        self.entry: str = unicodedata.normalize("NFC", record[Col.ENTRY])
         self.kasser: str = record[Col.KASSER]
 
         wip: str = record[Col.WIP]
@@ -513,8 +595,7 @@ class Wiki:
             )
 
         # Validate entry.
-        invalid: str = RAW_RE.sub(" ", self.entry)
-        invalid = ", ".join(invalid.split())
+        invalid: list[str] = [s for s in RAW_RE.split(self.entry) if s]
         ensure.ensure(
             not invalid,
             "contains invalid text:",

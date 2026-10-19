@@ -2,7 +2,10 @@
 
 import collections
 import pathlib
+import re
 from collections import abc
+
+import regex
 
 from utils import log
 
@@ -159,3 +162,11 @@ def child_path(child: str | pathlib.Path, parent: str | pathlib.Path) -> None:
         _ = child.relative_to(parent)
     except ValueError:
         log.fatal(child, "doesn't seem to be a child of", parent)
+
+
+def fullmatch(
+    pattern: re.Pattern[str] | regex.Pattern[str],
+    text: str,
+    name: str,
+) -> None:
+    ensure(pattern.fullmatch(text), repr(text), "invalid for", name)

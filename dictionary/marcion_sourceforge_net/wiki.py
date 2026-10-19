@@ -3,6 +3,7 @@
 import enum
 import functools
 import typing
+import unicodedata
 from collections import abc, defaultdict
 from html import escape
 
@@ -23,10 +24,10 @@ COMMA_OR_SPACE: regex.Pattern[str] = regex.compile(r"[ ,]")
 
 # RAW_RE should match a Wiki raw string.
 # All non-Latin text is expected to be surrounded by double square brackets.
-# Outside of double square brackets, there should remain only (1) Latin text, or
-# (2) non-letter characters. RAW_RE can be used to verify this structure.
-# "ʿ" and "β" are added for singleton violations of this rule:
-# - https://remnqymi.com/crum/3387.html#:~:text=%CA%BFAmru%CC%82
+# Outside of double square brackets, there should remain only Latin text, drawn
+# from the alphabet below. RAW_RE can be used to verify this structure.
+# "ʿ" is a modifier letter, rather than a Latin one, so it needs listing.
+# "β" is added for a singleton violation of this rule:
 # - https://remnqymi.com/crum/3075.html#:~:text=%CE%B2
 # 'Lab ⲡⲓϩⲟⲩⲓⲧ ⲛⲧⲱⲧⲉⲣ' is the only non-Latin reference key in our bibliography,
 # and it must be given special treatment.
@@ -35,7 +36,13 @@ RAW_RE: regex.Pattern[str] = regex.compile(
         (
             r"\[\[.*?\]\]",
             "Lab ⲡⲓϩⲟⲩⲓⲧ ⲛⲧⲱⲧⲉⲣ",
-            r"[\p{Latin}\P{Letter}ʿβ]",
+            (
+                r"[\p{Latin}ʿβ0-9"
+                "٠-٩"  # Arabic-Indic digits, citing the pages of Arabic books,
+                "۴"  # and the extended four, which they use for theirs.
+                r" !\"&'()*+,\-./:;=?\[\]\^_{}§°·½–‘’†"
+                r"\\]"  # The backslash of `\n`, `\t`, and `\*`.
+            ),
         ),
     ),
 )
@@ -431,14 +438,10 @@ def replace_bracketed(match: regex.Match[str]) -> str:
 
     language: Language = _language(text)
 
-    ensure.ensure(
-        _VALIDATORS[language].fullmatch(
-            _normalize_for_validation(language, text),
-        ),
-        "invalid",
+    ensure.fullmatch(
+        _VALIDATORS[language],
+        _normalize_for_validation(language, text),
         language,
-        "text:",
-        repr(text),
     )
 
     return f'<span class="{_CLASSES[language]}">{text}</span>'
@@ -517,6 +520,34 @@ def replace_stack(match: regex.Match[str]) -> str:
     )
 
 
+# A gloss may break off at a lacuna, as its Coptic does: __for [__.
+_GLOSS_RE: regex.Pattern[str] = regex.compile(
+    r"[\p{Latin}0-9 '‘’\-.,;?!&()\[]+",
+)
+_BULLET_RE: regex.Pattern[str] = regex.compile(r"[a-zA-Z]+\.?")
+# An italic may contain a superscript, which is substituted later:
+# _^e m_, _Actes 5^e Cong._
+_ITALIC_RE: regex.Pattern[str] = regex.compile(r"[\p{Latin}ʿ0-9 '\-.:?&\^]+")
+
+
+def replace_gloss(match: regex.Match[str]) -> str:
+    gloss: str = match.group(1)
+    ensure.fullmatch(_GLOSS_RE, gloss, "gloss")
+    return f'<span class="{cls.GLOSS}">{gloss}</span>'
+
+
+def replace_bullet(match: regex.Match[str]) -> str:
+    bullet: str = match.group(1)
+    ensure.fullmatch(_BULLET_RE, bullet, "bullet")
+    return f'<span class="{cls.BULLET}">{bullet}</span>'
+
+
+def replace_italic(match: regex.Match[str]) -> str:
+    italic: str = match.group(1)
+    ensure.fullmatch(_ITALIC_RE, italic, "italic")
+    return f"<i>{italic}</i>"
+
+
 OPEN_PARAGRAPH: str = "<p>"
 CLOSE_PARAGRAPH: str = "</p>"
 
@@ -548,33 +579,33 @@ _FOOTNOTE_MARK: str = _mark("※")
 # an `or` operator. We also add a comment explaining the rationale for the
 # override.
 _SUBSTITUTIONS: list[Substitution] = [
+    Substitution(r"__(.+?)__", replace_gloss, ban=["_"]),
+    Substitution(
+        # Bold text is simply bullets. We prefer using an explicit `bullet`
+        # class to mark them, instead of relying on `<b>`.
+        # NOTE: An escaped asterisk doesn't delimit a bullet. It is substituted
+        # later.
+        r"(?<!\\)\*(.+?)(?<!\\)\*",
+        replace_bullet,
+        ban=["*"],
+    ),
+    Substitution(r"_(.+?)_", replace_italic, ban=["_"]),
     # Replace occurrences of ampersand with the HTML encoding.
     # NOTE: While most browsers and pipelines can deal with a literal ampersand,
     # BeautifulSoup often misinterprets the combination "&c;" so we convert it
     # explicitly.
     # In some cases, we made the mistake of typing "&amp;" directly, instead of
     # just "&". We ban the token "&amp;amp" to catch this error.
+    # NOTE: The ampersand substitution follows the ones that validate Latin
+    # text, so that they see the text as typed.
     Substitution("&", "&amp;", ban=["&amp;amp"]),
     # The asterisk is not a reserved character in modern HTML, so we don't need
-    # to use `&ast;`. However, using a plain asterisk risks conflicting with the
-    # bold rule below. We therefore leave it up to our linters to replace
-    # the occurrences of `&ask;` produced here with a literal asterisk.
+    # to use `&ast;`. However, a plain asterisk would trip the ban of the bold
+    # rule above. We therefore leave it up to our linters to replace
+    # the occurrences of `&ast;` produced here with a literal asterisk.
+    # NOTE: The asterisk substitution must follow the ampersand one, which
+    # would otherwise escape the `&ast;` produced here.
     Substitution(r"\\\*", page.ASTERISK, ban=["*", "\\"]),
-    Substitution(
-        r"__(.+?)__",
-        rf'<span class="{cls.GLOSS}">\1</span>',
-        ban=["_"],
-    ),
-    Substitution(
-        # Bold text is simply bullets. We prefer using an explicit `bullet`
-        # class to mark them, instead of relying on `<b>`.
-        # We can use a stricter regex that only allows alphabetical characters
-        # (optionally followed by a period).
-        r"\*([a-zA-Z]+?\.?)\*",
-        rf'<span class="{cls.BULLET}">\1</span>',
-        ban=["*"],
-    ),
-    Substitution(r"_(.+?)_", r"<i>\1</i>", ban=["_"]),
     Substitution(
         bracketed(r"([SABFO])(?:\^(a|f|b|af|2))?"),
         replace_dialect,
@@ -641,7 +672,10 @@ class Wiki:
     ) -> None:
         self.keys: list[int] = list(map(int, record[Col.MARCION].split(" ")))
         assert self.keys
-        self.entry: str = record[Col.ENTRY]
+        # NFC normalization simplifies some validations below. It allows us to
+        # use character classes for validation (e.g. \p{Latin}, \p{Arabic},
+        # etc.) without the need for \p{Mark}.
+        self.entry: str = unicodedata.normalize("NFC", record[Col.ENTRY])
         # TODO: (#503) Ban all superfluous space in the entry, then get rid of
         # the line below.
         self.entry = self.entry.replace("  ", " ").removesuffix(" ")
@@ -673,9 +707,7 @@ class Wiki:
                 self.keys,
             )
 
-        # Validate entry.
-        invalid: str = RAW_RE.sub(" ", self.entry)
-        invalid = ", ".join(invalid.split())
+        invalid: list[str] = [s for s in RAW_RE.split(self.entry) if s]
         ensure.ensure(
             not invalid,
             "contains invalid text:",
