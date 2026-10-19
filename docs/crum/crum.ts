@@ -257,7 +257,9 @@ export function handleDialect(
       : dial.NON_STANDARD[code];
 
     if (!dialect) {
-      log.error(
+      // TODO: (#786) Raise the severity to `error` once Kasser's dialects are
+      // handled.
+      log.warn(
         'Unknown dialect',
         code,
         'should be added to non-standard dialect list'
