@@ -5,24 +5,17 @@ Kasser published two supplements to Crum's dictionary:
 - Compléments morphologiques au dictionnaire de Crum (BIFAO 64, 1966).
 """
 
-# TODO: (#786) This module was forked from `wiki.py`, and duplicates much of
-# it: `Substitution`, `bracketed`, `RAW_RE`, the alphabets and validators, the
-# addenda, and the `Column` rendering. Move the shared parts to a common
-# package, once the two have settled.
-
 import enum
 import functools
-import itertools
 import pathlib
 import typing
-import unicodedata
-from collections import abc, defaultdict
+from collections import abc
 
 import regex
 
 from dictionary import cls as dict_cls
-from dictionary.marcion_sourceforge_net import cls, ids
-from utils import ensure, file, lang, orth, page, paths
+from dictionary.marcion_sourceforge_net import cls, ids, randy
+from utils import ensure, file, page, paths
 
 # RAW_RE should match a raw entry.
 # All non-Latin text is expected to be surrounded by double square brackets.
@@ -34,82 +27,17 @@ RAW_RE: regex.Pattern[str] = regex.compile(
             r"\[\[.*?\]\]",
             # The backslash is only used in our notation, but should be absent
             # from the output.
+            # TODO: (#786) Mathematical angle brackets are used by the
+            # materialization. If Kasser were to get materialized, we might want
+            # to change the materializer's notation to avoid confusion.
             r"[\p{Latin}0-9 *⟨⟩!–'(),\-./:;?\[\]_~«»\\]",
         ),
     ),
 )
 
-# Coptic combining marks.
-#
-# Coptic uses two contrastive supralinear strokes, and Unicode gives each its
-# own encoding (The Unicode Standard, ch. 7, "Supralineation"). Kasser's body
-# employs the syllabic stroke, which we encode with U+0304. The overline only
-# occurs in the texts he quotes, over numerals and nomina sacra.
-_COPTIC_MARKS: str = (
-    # Supralineation:
-    "\u0304"  # Macron, the syllabic stroke: ⲕⲱⲗ̄ⲡ.
-    "\u0305"  # Overline, for numerals: ⲓ̅ⲃ̅.
-    "\ufe24"  # Macron left half, opening a nomen sacrum's stroke.
-    "\ufe25"  # Macron right half, closing it.
-    "\ufe26"  # Conjoining macron, continuing it: ⲏ︤ⲗ︦ⲉ︦ⲙ︦ⲁ︦ⲥ︥.
-    # Diacritics above:
-    "\u0308"  # Diaeresis, over ⲓ̈.
-    # Diacritics below:
-    "\u0323"  # Dot below, marking an uncertain letter: ⲗⲁⲕⲟ̣.ⲧ.
-)
-
-_SPACE_AT_TAG_BORDER_RE: regex.Pattern[str] = regex.compile(
-    r"<(?!/)[^>]+> [^<]*|[^<>]* </[^>]+>",
-)
-
-
-class Substitution:
-    """A class to represent a single regex substitution."""
-
-    def __init__(
-        self,
-        pattern: str,
-        repl: str | typing.Callable[[regex.Match[str]], str],
-        ban: list[str] | None = None,
-    ):
-        """Initializes a Substitution object.
-
-        Args:
-            pattern: The regular expression pattern to search for.
-            repl: The replacement string.
-            ban: A list of tokens that are used for substitution, and
-                can't be present in the HTML post-processing. Use this optional
-                field to verify that all substitutions are well-formed.
-        """
-        self.pattern: regex.Pattern[str] = regex.compile(pattern)
-        self.repl: str | typing.Callable[[regex.Match[str]], str] = repl
-        self.ban: list[str] = ban or []
-
-    def html(self, raw: str) -> str:
-        return self.pattern.sub(self.repl, raw)
-
-
-def bracketed(exp: str, repeat: int = 2) -> str:
-    """Construct a regex to match text surrounded by square brackets.
-
-    The expression will use negative lookbehind and lookahead to ensure that
-    whatever character follows or precedes is not a square bracket. This is
-    useful if your expression itself can contain brackets.
-
-    Args:
-        exp: Core of the expression.
-        repeat: How many square brackets need to be present on each side of the
-            expression.
-
-    Returns:
-        A string representing the full expression.
-    """
-    return r"(?<!\[)" + r"\[" * repeat + exp + r"\]" * repeat + r"(?!\])"
-
-
 # The languages we recognize. Each name is spelled as it appears in the
 # Unicode names of the characters belonging to the language, because
-# `_language` identifies a text by searching those names for it.
+# `randy.Languages.identify` identifies a text by searching those names for it.
 # Latin text inside brackets is a siglum, and is handled separately. See
 # `replace_siglum`.
 Language: typing.TypeAlias = typing.Literal[
@@ -149,7 +77,15 @@ _ALPHABETS: dict[Language, tuple[str, ...]] = {
         ".",  # A lacuna: ...θυμιῶσαι.
     ),
     "COPTIC": (
-        _COPTIC_MARKS,
+        # See The Unicode Standard, ch. 7, Supralineation:
+        # https://unicode.org/versions/Unicode16.0.0/core-spec/chapter-7/#G16256
+        "\u0304",  # Macron, the syllabic stroke: ⲕⲱⲗ̄ⲡ.
+        "\u0305",  # Overline, for numerals: ⲓ̅ⲃ̅.
+        "\ufe24",  # Macron left half, opening a nomen sacrum's stroke.
+        "\ufe25",  # Macron right half, closing it.
+        "\ufe26",  # Conjoining macron, continuing it: ⲏ︤ⲗ︦ⲉ︦ⲙ︦ⲁ︦ⲥ︥.
+        "\u0308",  # Diaeresis, over ⲓ̈.
+        "\u0323",  # Dot below, marking an uncertain letter: ⲗⲁⲕⲟ̣.ⲧ.
         "ⲁ-ⲱ",  # The Coptic letters,
         "ϣ-ϯ",  # those of them borrowed from Demotic,
         "ⳉ",  # Akhmimic khei,
@@ -181,38 +117,14 @@ _ALPHABETS: dict[Language, tuple[str, ...]] = {
     ),
 }
 
-# The HTML class used for each language.
-_CLASSES: dict[Language, str] = {
-    "GREEK": cls.GREEK,
-    "COPTIC": cls.COPTIC,
-}
-
-ensure.equal_sets(typing.get_args(Language), _ALPHABETS.keys(), "alphabets")
-ensure.equal_sets(typing.get_args(Language), _CLASSES.keys(), "classes")
-
-# The validation pattern for text marked as belonging to each language.
-_VALIDATORS: dict[Language, regex.Pattern[str]] = {
-    language: regex.compile("".join(("[", *alphabet, "]+")))
-    for language, alphabet in _ALPHABETS.items()
-}
-
-
-def _normalize_for_validation(language: Language, text: str) -> str:
-    # Greek is often transcribed with precomposed characters, which are not
-    # represented in our regex, so we NFD-normalize it.
-    # NOTE: The Greek alphabet constrains the decomposed form only: a
-    # precomposed Greek letter whose parts are all listed passes unvetted.
-    if language == "GREEK":
-        text = orth.normalize(text)
-    return text
-
-
-def _language(text: str) -> Language | None:
-    text = orth.clean_diacritics(text)
-    for language in _ALPHABETS:
-        if lang.has_lang(language, text):
-            return language
-    return None
+_LANGUAGES: randy.Languages[Language] = randy.Languages(
+    typing.get_args(Language),
+    _ALPHABETS,
+    {
+        "GREEK": cls.GREEK,
+        "COPTIC": cls.COPTIC,
+    },
+)
 
 
 def replace_bracketed(match: regex.Match[str]) -> str:
@@ -226,8 +138,7 @@ def replace_bracketed(match: regex.Match[str]) -> str:
         asterisk = page.ASTERISK
         text = text.removeprefix("*")
 
-    language: Language | None = _language(text)
-    ensure.ensure(language, "unknown language:", repr(text))
+    language: Language | None = _LANGUAGES.identify(text)
     assert language
 
     ensure.ensure(
@@ -236,13 +147,7 @@ def replace_bracketed(match: regex.Match[str]) -> str:
         repr(text),
     )
 
-    ensure.fullmatch(
-        _VALIDATORS[language],
-        _normalize_for_validation(language, text),
-        language,
-    )
-
-    return f'<span class="{_CLASSES[language]}">{asterisk}{text}</span>'
+    return _LANGUAGES.span(language, asterisk + text)
 
 
 # A siglum consists of an optional asterisk, a base, then any sequence of
@@ -373,112 +278,40 @@ def replace_gloss(match: regex.Match[str]) -> str:
     return html
 
 
-OPEN_PARAGRAPH: str = "<p>"
-CLOSE_PARAGRAPH: str = "</p>"
-
-
-def _mark(char: str) -> str:
-    return f'<span class="{cls.MARK}">{char}</span>'
-
-
-# The addenda marker is intentionally fixed, because some addenda result in
-# several edits throughout the text. Using numbered markers ([1], [2], ...)
-# gives the impression that the edits come from multiple addenda and corrigenda,
-# which is often incorrect.
-_ADDENDUM_MARK: str = _mark("‡")
-
-
-def _validate_addendum_group(group: str) -> None:
-    # NOTE: An addendum may not contain a `\n`. Those are substituted by
-    # paragraph boundaries, which would spill out of the addendum element
-    # and corrupt the HTML.
-    # NOTE: This assumes that the paragraph substitution precedes the
-    # addenda substitution.
-    ensure.ensure(
-        OPEN_PARAGRAPH not in group,
-        "addendum group contains paragraphing elements:",
-        group,
-    )
-
-
-def replace_addendum(match: regex.Match[str]) -> str:
-    """Render an addendum — a correction from Kasser's own addenda.
-
-    Its two halves are the removed and the added text, either of which may be
-    empty. Neither half may begin or end with a space, nor contain a `\\n`.
-
-    Unlike Crum's, Kasser's addenda are only two pages long, so we don't
-    record which page a correction comes from.
-
-    Args:
-        match: The addendum match. Its two groups are the removed and the added
-            text.
-
-    Returns:
-        The addendum's HTML.
-    """
-    return "".join(_replace_addendum_aux(match))
-
-
-def _replace_addendum_aux(match: regex.Match[str]) -> abc.Generator[str]:
-    delete, insert = match.group(1), match.group(2)
-    _validate_addendum_group(delete)
-    _validate_addendum_group(insert)
-    yield f'<span class="{cls.ADDENDUM}">'
-    if delete:
-        yield f"<del>{delete}</del>"
-    if delete and insert:
-        yield " "
-    if insert:
-        yield f"<ins>{insert}</ins>"
-    yield _ADDENDUM_MARK
-    yield "</span>"
-
-
-_SUBSTITUTIONS: list[Substitution] = [
+_SUBSTITUTIONS: list[randy.Substitution] = [
     # NOTE: The gloss substitution must precede the italic one, so that it
     # sees the italics within it as typed.
-    Substitution(_GLOSS_SUB_RE, replace_gloss, ban=["«", "»"]),
+    randy.Substitution(_GLOSS_SUB_RE, replace_gloss, ban=["«", "»"]),
     # The transcription may italicize with a single underscore or a double one.
     # Whatever the distinction it intends, we render both alike.
-    Substitution(r"(__?)(.+?)\1", replace_italic, ban=["_"]),
+    randy.Substitution(r"(__?)(.+?)\1", replace_italic, ban=["_"]),
     # A double-bracketed text that starts with a Latin letter (optionally
     # preceded by an asterisk) is a siglum. The siglum substitution must
     # precede the language one.
-    Substitution(
-        bracketed(r"(\*?\p{Latin}[^\[\]]*)"),
+    randy.Substitution(
+        randy.bracketed(r"(\*?\p{Latin}[^\[\]]*)"),
         replace_siglum,
         ban=["^"],
     ),
-    Substitution(bracketed(r"(.*?)"), replace_bracketed, ban=["[[", "]]"]),
+    randy.Substitution(
+        randy.bracketed(r"(.*?)"),
+        replace_bracketed,
+        ban=["[[", "]]"],
+    ),
     # An asterisk may also occur outside brackets, e.g. before a reference:
     # (*Jr Bal.146).
     # NOTE: The asterisk substitution must follow the siglum and language ones,
     # which expect to find the asterisk inside the brackets.
-    Substitution(r"\*", page.ASTERISK, ban=["*"]),
+    randy.Substitution(r"\*", page.ASTERISK, ban=["*"]),
     # Outside sigla, a subscript occurs in the manuscript numbers M₁ to M₁₀ and
     # G₂ to G₄ (see Kasser's Sigles et Abréviations), and in a parenthesized
     # qualifier that follows a form or a reference: [[ⲁⲁ]]~(h), (ManiP~(qq)).
     # NOTE: The subscript substitutions must follow the siglum one.
-    Substitution(r"M~([1-9]|10)(?!\d)", r"M<sub>\1</sub>", ban=["~"]),
-    Substitution(r"G~([2-4])(?!\d)", r"G<sub>\1</sub>", ban=["~"]),
-    Substitution(r"~(\([^()]+\))", replace_subscript, ban=["~"]),
-    Substitution(
-        r"\\n",
-        CLOSE_PARAGRAPH + OPEN_PARAGRAPH,
-        ban=["\\"],
-    ),
-    # An addendum takes the form `//deleted//inserted//`, either half of which
-    # may be empty.
-    # NOTE: The addendum substitution must follow the paragraph one. See
-    # `_validate_addendum_group`.
-    Substitution(r"//(.*?)//(.*?)//", replace_addendum, ban=["//"]),
+    randy.Substitution(r"M~([1-9]|10)(?!\d)", r"M<sub>\1</sub>", ban=["~"]),
+    randy.Substitution(r"G~([2-4])(?!\d)", r"G<sub>\1</sub>", ban=["~"]),
+    randy.Substitution(r"~(\([^()]+\))", replace_subscript, ban=["~"]),
+    randy.PARAGRAPH,
 ]
-
-_BANNED: set[str] = {token for sub in _SUBSTITUTIONS for token in sub.ban}
-
-# A page in the Compléments or the Morphologiques, followed by its column.
-_KASSER_PAGE_RE: regex.Pattern[str] = regex.compile(r"[1-9][0-9]*[ab]")
 
 
 class Col(enum.StrEnum):
@@ -492,9 +325,6 @@ class Col(enum.StrEnum):
     MARCION = "Marcion"
     VIDE = "_v_"
     ENTRY = "Entry"
-    # TODO: (#786) Drop the WIP column once the transcription is complete, and
-    # no entry is partially written.
-    WIP = "WIP"
 
 
 class Book(enum.StrEnum):
@@ -519,31 +349,40 @@ ID: dict[Book, str] = {
 ensure.equal_sets(Book, ID.keys(), "Kasser element ids")
 
 
+class _ComplementsColumn(randy.Column):
+    FIRST = 1
+    LAST = 115
+
+
+class _MorphologiquesColumn(randy.Column):
+    FIRST = 25
+    LAST = 66
+
+
+COLUMN: dict[Book, type[randy.Column]] = {
+    Book.COMPLEMENTS: _ComplementsColumn,
+    Book.MORPHOLOGIQUES: _MorphologiquesColumn,
+}
+ensure.equal_sets(Book, COLUMN.keys(), "Kasser columns")
+
+
 @typing.final
-class Wiki:
-    """Wiki represents an entry in the Kasser sheet."""
+class Entry(randy.Entry[randy.Column]):
+    """Entry represents an entry in the Kasser sheet."""
 
     def __init__(
         self,
         record: dict[typing.Hashable, typing.Any],
+        book: Book,
     ) -> None:
-        # NFC normalization simplifies some validations below. It allows us to
-        # use character classes for validation (e.g. \p{Latin}) without the
-        # need for \p{Mark}.
-        self.entry: str = unicodedata.normalize("NFC", record[Col.ENTRY])
-        self.kasser: str = record[Col.KASSER]
-
-        wip: str = record[Col.WIP]
-        ensure.ensure(
-            wip in ["", "*"],
-            self,
-            "has an invalid WIP entry:",
-            wip,
+        self.book: Book = book
+        super().__init__(
+            COLUMN[book](record[Col.KASSER]),
+            record[Col.ENTRY],
+            record[Col.MARCION],
+            record[Col.VIDE],
+            RAW_RE,
         )
-        if wip:
-            # A partially written entry is treated as if it were empty.
-            self.entry = ""
-        del wip
 
         ensure.ensure(
             self.entry == self.entry.strip(),
@@ -556,105 +395,47 @@ class Wiki:
             "has a double space",
         )
 
-        marcion: str = record[Col.MARCION]
+    @typing.override
+    def subs(self) -> abc.Generator[randy.Substitution]:
+        yield from _SUBSTITUTIONS
+        # Kasser's addenda span only two pages, without columns, so the page is
+        # always inferred, and an addendum can't name one.
+        yield self.addendum_substitution()
+
+    @property
+    @typing.override
+    def addenda_page(self) -> str:
+        # Only the Compléments has addenda. Those for pages up to 35 are on
+        # page 115, and those for pages from 47 onward are on page 116. Pages
+        # 36 to 46 have none.
         ensure.ensure(
-            not marcion or regex.fullmatch(r"\d+( \d+)*", marcion),
+            self.book == Book.COMPLEMENTS,
             self,
-            "has an invalid Marcion entry:",
-            marcion,
+            "has an addendum, but the",
+            self.book,
+            "has no addenda",
         )
-        self.keys: list[int] = (
-            list(map(int, marcion.split())) if marcion else []
-        )
-        del marcion
-
+        num: int = self.page.num()
+        if num <= 35:
+            return "115"
         ensure.ensure(
-            _KASSER_PAGE_RE.fullmatch(self.kasser)
-            or (not self.kasser and not self.entry),
+            num >= 47,
             self,
-            "has an invalid Kasser page:",
-            repr(self.kasser),
+            "has an addendum, but its page has no addenda",
         )
-
-        vide: str = record[Col.VIDE]
-        ensure.ensure(
-            vide in ["", "v"],
-            self,
-            "has an invalid vide entry:",
-            vide,
-        )
-        self.vide = bool(vide)
-        del vide
-
-        if len(self.keys) > 1:
-            ensure.ensure(
-                self.vide,
-                self,
-                "is non-vide but has several keys:",
-                self.keys,
-            )
-
-        # Validate entry.
-        invalid: list[str] = [s for s in RAW_RE.split(self.entry) if s]
-        ensure.ensure(
-            not invalid,
-            "contains invalid text:",
-            invalid,
-            "in:",
-            self.entry,
-        )
-
-    @functools.cached_property
-    def html(self) -> str:
-        ensure.ensure(self.entry, self, "has no entry to render")
-        html: str = "".join(self._html_aux())
-        for token in _BANNED:
-            ensure.ensure(
-                token not in html,
-                "Banned token",
-                token,
-                "found in entry",
-                self,
-                "output:",
-                html,
-            )
-        # TODO: (#756) This check belongs in a shared package.
-        invalid_tags: list[str] = _SPACE_AT_TAG_BORDER_RE.findall(html)
-        ensure.ensure(
-            not invalid_tags,
-            self,
-            "contains a space at either end of an element:",
-            invalid_tags,
-        )
-        return html
-
-    def _html_aux(self) -> abc.Generator[str]:
-        classes: list[str] = [cls.ENTRY]
-        if self.vide:
-            classes.append(cls.VIDE)
-        yield f'<div class="{" ".join(classes)}">'
-        yield OPEN_PARAGRAPH
-
-        raw: str = self.entry
-        for s in _SUBSTITUTIONS:
-            raw = s.html(raw)
-        yield raw
-
-        yield CLOSE_PARAGRAPH
-        yield "</div>"
+        return "116"
 
     @typing.override
     def __str__(self) -> str:
-        return f"{self.kasser} {self.entry}"
+        return f"{self.book} {self.page} {self.entry}"
 
 
 @functools.cache
-def wikis(book: Book) -> list[Wiki]:
+def entries(book: Book) -> list[Entry]:
     """Read the entries of a book's sheet snapshot.
 
     Every row is validated, but only those with an entry are returned. A row
-    with no entry is either not yet transcribed or partially written, and has
-    nothing to render.
+    with no entry is not yet transcribed, and has nothing to render.
 
     Args:
         book: The book whose snapshot to read.
@@ -665,30 +446,13 @@ def wikis(book: Book) -> list[Wiki]:
     records: list[dict[typing.Hashable, typing.Any]] = file.read_tsv(
         TSV[book],
     ).to_dict(orient="records")
-    ws: list[Wiki] = [w for w in map(Wiki, records) if w.entry]
-    for prev, cur in itertools.pairwise(ws):
-        ensure.ensure(
-            _page_key(prev.kasser) <= _page_key(cur.kasser),
-            book,
-            "is out of order:",
-            cur,
-            "follows",
-            prev,
-        )
-    return ws
-
-
-def _page_key(kasser: str) -> tuple[int, str]:
-    return int(kasser[:-1]), kasser[-1]
+    es: list[Entry] = [Entry(r, book) for r in records]
+    return [e for e in es if e.entry]
 
 
 @functools.cache
-def by_marcion_key(book: Book) -> dict[str, list[Wiki]]:
-    by_key: dict[str, list[Wiki]] = defaultdict(list)
-    for w in wikis(book):
-        for key in w.keys:
-            by_key[str(key)].append(w)
-    return by_key
+def by_marcion_key(book: Book) -> dict[str, list[Entry]]:
+    return randy.by_marcion_key(entries(book))
 
 
 def root_html(key: str) -> abc.Generator[str]:
@@ -703,37 +467,16 @@ def root_html(key: str) -> abc.Generator[str]:
     """
     # TODO: (#786) Index the Kasser entries in Xooxle. (They're currently in the
     # `Appendix`, but may be more suitable for a separate layer.)
-    books: dict[Book, list[Wiki]] = {
+    books: dict[Book, list[Entry]] = {
         book: by_marcion_key(book).get(key, []) for book in Book
     }
     if not any(books.values()):
         return
     yield f'<div class="{cls.KASSER}" id="{ids.KASSER}">'
-    for book, ws in books.items():
-        if not ws:
+    for book, es in books.items():
+        if not es:
             continue
         yield f'<div class="{book}" id="{ID[book]}">'
-        # `wikis` guarantees the order by page, so we can use `groupby`
-        # directly.
-        for kasser, group in itertools.groupby(ws, key=lambda w: w.kasser):
-            yield from Column(kasser, group).html_aux()
+        yield from randy.columns(cls.KASSER_PAGE, es)
         yield "</div>"
     yield "</div>"
-
-
-class Column:
-    """Column represents a group of Wikis that occur on the same column."""
-
-    def __init__(self, kasser: str, ws: abc.Iterable[Wiki]) -> None:
-        self.kasser: str = kasser
-        self.wikis: list[Wiki] = list(ws)
-        assert all(w.kasser == self.kasser for w in self.wikis)
-
-    def html_aux(self) -> abc.Generator[str]:
-        yield f'<div class="{cls.FOLIO}">'
-        yield f'<span class="{cls.KASSER_PAGE}">'
-        yield self.kasser
-        yield "</span>"
-        for w in self.wikis:
-            yield w.html
-        yield "</div>"

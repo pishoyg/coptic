@@ -69,7 +69,8 @@ Then read, in two tiers. The whole table is ~6,000 lines; the first tier is
 | `docs/crum/references.ts` | How variants, postfixes and prefixes become a lookup table — and what a tooltip is allowed to omit. Read the `NOTE` on `Fix.tooltip` before ever reporting a postfix as swallowed. |
 | `docs/crum/pisaxo.d.ts` | The shape of a source: the `variants` / `postfixes` / `prefixes` distinction, and why a postfix is not a suffix. |
 | `docs/crum/book.ts` | `OFFSET`, for finding a printed page in the scans. |
-| `dictionary/marcion_sourceforge_net/wiki.py` | How the raw sheet text becomes HTML. `replace_manual`, `replace_footnote` and `replace_addendum` are the three notations Ambrose writes his fixes in; `replace_addendum`'s docstring enumerates the rules an addendum must satisfy. |
+| `dictionary/marcion_sourceforge_net/wiki.py` | How the raw sheet text becomes HTML. `replace_manual` and `replace_footnote` are two of the three notations Ambrose writes his fixes in. |
+| `dictionary/marcion_sourceforge_net/randy.py` | The notation shared with Kasser. `replace_addendum` is the third notation Ambrose writes his fixes in, and its docstring enumerates the rules an addendum must satisfy. |
 | `bib.yaml` | The bibliography. Thousands of lines — **grep it**, never read it whole. |
 
 ## The two artifacts

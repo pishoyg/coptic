@@ -28,7 +28,7 @@ from dictionary import cls as dict_cls
 from dictionary.kellia_uni_goettingen_de import kellia
 from dictionary.marcion_sourceforge_net import cls, constants, ids, kasser
 from dictionary.marcion_sourceforge_net import lexical as lex
-from dictionary.marcion_sourceforge_net import parse, sheet, wiki
+from dictionary.marcion_sourceforge_net import parse, randy, sheet, wiki
 from flashcards import deck
 from xooxle import xooxle
 
@@ -191,8 +191,8 @@ class Row(gcp.Record):
         return sorted(combined)
 
     @functools.cached_property
-    def crum(self) -> lex.Column:
-        return lex.Column(self.get(sheet.COL.CRUM))
+    def crum(self) -> wiki.Column:
+        return wiki.Column(self.get(sheet.COL.CRUM))
 
 
 # NOTE: As of now, derivations are somewhat of second-class citizens in our
@@ -441,21 +441,15 @@ class Root(Row):
             stack.append(Drv(d.key, d.depth))
 
     @functools.cached_property
-    def wikis(self) -> list[wiki.Wiki]:
-        _verify_wiki_keys()
+    def wikis(self) -> list[wiki.Entry]:
+        _verify_keys()
         if self.key in _FROM_MARCION:
             return []
-        wikis: list[wiki.Wiki] = wiki.by_marcion_key()[self.key]
-        if all(w.vide for w in wikis):
+        entries: list[wiki.Entry] = wiki.by_marcion_key()[self.key]
+        if all(e.vide for e in entries):
             log.error(self, "consists entirely of vide entries!")
-        ensure.ensure(wikis, self, "has no Wiki entries populated!")
-        return wikis
-
-    def wiki_html(self) -> abc.Generator[str]:
-        # The input is guaranteed to be sorted by page number, so we can use
-        # `groupby` directly.
-        for col, group in itertools.groupby(self.wikis, key=lambda w: w.crum):
-            yield from wiki.Column(col, group).html_aux()
+        ensure.ensure(entries, self, "has no Wiki entries populated!")
+        return entries
 
     @functools.cached_property
     def images(self) -> list[Image]:
@@ -869,11 +863,11 @@ class Root(Row):
         # Wiki.
         if self.wikis:
             yield f'<div class="{cls.WIKI}" id="{ids.WIKI}">'
-            yield from self.wiki_html()
+            yield from randy.columns(cls.CRUM_PAGE, self.wikis)
             yield "</div>"
 
         # Kasser.
-        _verify_kasser_keys()
+        _verify_keys()
         yield from kasser.root_html(self.key)
 
         # Sisters.
@@ -1089,32 +1083,20 @@ def verify_relation_symmetry() -> None:
 
 
 @cache.run_once
-def _verify_wiki_keys() -> None:
-    for w in wiki.wikis():
-        for key in w.keys:
+def _verify_keys() -> None:
+    entries: abc.Iterable[randy.Entry[typing.Any]] = itertools.chain(
+        wiki.entries(),
+        *map(kasser.entries, kasser.Book),
+    )
+    for e in entries:
+        for key in e.keys:
             ensure.ensure(
                 str(key) in Crum.roots,
                 "Unknown Marcion key:",
                 key,
                 "for entry:",
-                w,
+                e,
             )
-
-
-@functools.cache
-def _verify_kasser_keys() -> None:
-    for book in kasser.Book:
-        for w in kasser.wikis(book):
-            for key in w.keys:
-                ensure.ensure(
-                    str(key) in Crum.roots,
-                    "Unknown Marcion key:",
-                    key,
-                    "for",
-                    book,
-                    "entry:",
-                    w,
-                )
 
 
 def _img_aux(
@@ -1573,7 +1555,7 @@ XOOXLE: xooxle.Xooxle = xooxle.Xooxle(
             retain_tags=xooxle.RETAIN_TAGS_DEFAULT | {"p"},
             retain_attributes={
                 wiki.DATA_KEY,
-                wiki.DATA_PAGE,
+                randy.DATA_PAGE,
                 wiki.DATA_FOOTNOTE,
             },
         ),

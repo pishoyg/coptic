@@ -1,9 +1,7 @@
 """A word in Crum's dictionary."""
 
 import enum
-import functools
 import itertools
-import re
 import typing
 
 from dictionary import cls as dict_cls
@@ -395,67 +393,3 @@ class Reference(Part):
     def string(self, use_coptic_symbol: bool) -> str:  # dead: disable
         del use_coptic_symbol
         return "; ".join(self.parts)
-
-
-@functools.total_ordering
-class Column:
-    """A column number in Crum's dictionary."""
-
-    def __init__(self, raw: str):
-        match: re.Match[str] | None = constants.CRUM_RE.fullmatch(raw)
-        assert match
-        assert len(match.groups()) == 2
-        self._num: str = match.group(1)
-        col: str = match.group(2)
-        assert col == "a" or col == "b"
-        self._col: typing.Literal["a", "b"] = col  # type: ignore[assignment]
-
-        # Validate.
-        if self._num.isdigit():
-            num: int = int(self._num)
-            assert num >= 0 and num <= constants.CRUM_LAST_PAGE
-        else:
-            # This is a Roman numeral.
-            assert self.roman()
-        assert self._col in {"a", "b"}
-
-    def num(self) -> int:
-        """Get an integer representing the page number.
-
-        NOTE: This is only available for pages from the body of the book.
-        Calling this method on an intro page results in an error.
-
-        Returns:
-            The page number as an integer.
-        """
-        return int(self._num)
-
-    def roman(self) -> bool:
-        return bool(re.fullmatch("[ivx]+", self._num))
-
-    @typing.override
-    def __eq__(self, other: object) -> bool:
-        assert isinstance(other, Column)
-        return (self._num, self._col) == (other._num, other._col)
-
-    def __lt__(self, other: typing.Self) -> bool:
-        return (self.num(), self._col) < (other.num(), other._col)
-
-    def __le__(self, other: typing.Self) -> bool:
-        return (self.num(), self._col) <= (other.num(), other._col)
-
-    def __bool__(self) -> bool:
-        return bool(self._num)
-
-    @typing.override
-    def __hash__(self):
-        return hash((self._num, self._col))
-
-    @typing.override
-    def __str__(self) -> str:
-        assert self
-        return self._num + self._col
-
-    @typing.override
-    def __repr__(self) -> str:
-        return self.__str__()

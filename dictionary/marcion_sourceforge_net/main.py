@@ -160,8 +160,8 @@ def _scan_index() -> abc.Generator[Page]:
     """
     last: Page | None = None
     for page_num, group_iter in itertools.groupby(
-        (w for w in wiki.wikis() if not w.addendum()),
-        key=lambda w: w.crum.num(),
+        (e for e in wiki.entries() if not e.addendum()),
+        key=lambda e: e.page.num(),
     ):
         assert 1 <= page_num <= constants.CRUM_LAST_PAGE
         if last:
@@ -227,13 +227,13 @@ def _write_sheet_index() -> None:
 
 def _write_headword_index() -> None:
     headword_to_page: dict[str, str] = {}
-    for w in wiki.wikis():
-        for headword in w.headword_variants():
+    for e in wiki.entries():
+        for headword in e.headword_variants():
             # Entries are processed in order, so the first occurrence has the
             # smallest page. In case there are duplicate headwords, we want to
             # retain the first Crum page encountered. Use `setdefault` to insert
             # only if the entry doesn't exist already.
-            _ = headword_to_page.setdefault(headword, str(w.crum))
+            _ = headword_to_page.setdefault(headword, str(e.page))
     file.write(str(headword_to_page), paths.CRUM_HEADWORD_PAGE_MAP)
 
 
@@ -244,7 +244,7 @@ def main():
         log.fatal("--notsv", "not allowed with", "--tsv")
 
     if not args.notsv:
-        # Refresh the snapshot before anything can read it. `wiki.wikis()`
+        # Refresh the snapshot before anything can read it. `wiki.entries()`
         # caches the parsed records on its first call, so a stale read can not
         # be corrected later in the run.
         _snapshot_wiki()

@@ -2,23 +2,21 @@
 
 import enum
 import functools
+import itertools
 import typing
-import unicodedata
-from collections import abc, defaultdict
+from collections import abc
 from html import escape
 
 import regex
 
 from dictionary import cls as dict_cls
-from dictionary.marcion_sourceforge_net import cls, constants
-from dictionary.marcion_sourceforge_net import lexical as lex
+from dictionary.marcion_sourceforge_net import cls, constants, randy
 from utils import ensure, file, lang, log, orth, page, paths
 
 # HTML data attribute names emitted in the Wiki HTML, and consumed by both the
 # TypeScript front-end and the Xooxle indexer.
 DATA_FOOTNOTE: str = "data-footnote"
 DATA_KEY: str = "data-key"
-DATA_PAGE: str = "data-page"
 
 COMMA_OR_SPACE: regex.Pattern[str] = regex.compile(r"[ ,]")
 
@@ -94,13 +92,6 @@ _HEADWORD_RE: regex.Pattern[str] = regex.compile(
     rf"{_HEADWORD_RE_AUX}|\({_HEADWORD_RE_AUX}\)",
 )
 
-# Matches a space at either end of an element — immediately after an opening
-# tag, or immediately before a closing one — along with the text on its side of
-# the tag, for context.
-_SPACE_AT_TAG_BORDER_RE: regex.Pattern[str] = regex.compile(
-    r"<(?!/)[^>]+> [^<]*|[^<>]* </[^>]+>",
-)
-
 
 def headword_variants(form: str) -> abc.Generator[str]:
     assert constants.COPTIC_LETTERS_OR_PARENTHESES_RE.fullmatch(form)
@@ -128,53 +119,9 @@ def headword_variants(form: str) -> abc.Generator[str]:
         )
 
 
-class Substitution:
-    """A class to represent a single regex substitution."""
-
-    def __init__(
-        self,
-        pattern: str,
-        repl: str | typing.Callable[[regex.Match[str]], str],
-        ban: list[str] | None = None,
-    ):
-        """Initializes a Substitution object.
-
-        Args:
-            pattern: The regular expression pattern to search for.
-            repl: The replacement string.
-            ban: A list of tokens that are used for substitution, and
-                can't be present in the HTML post-processing. Use this optional
-                field to verify that all substitutions are well-formed.
-        """
-        self.pattern: regex.Pattern[str] = regex.compile(pattern)
-        self.repl: str | typing.Callable[[regex.Match[str]], str] = repl
-        self.ban: list[str] = ban or []
-
-    def html(self, raw: str) -> str:
-        return self.pattern.sub(self.repl, raw)
-
-
-def bracketed(exp: str, repeat: int = 2) -> str:
-    """Construct a regex to match text surrounded by square brackets.
-
-    The expression will use negative lookbehind and lookahead to ensure that
-    whatever character follows or precedes is not a square bracket. This is
-    useful if your expression itself can contain brackets.
-
-    Args:
-        exp: Core of the expression.
-        repeat: How many square brackets need to be present on each side of the
-            expression.
-
-    Returns:
-        A string representing the full expression.
-    """
-    return r"(?<!\[)" + r"\[" * repeat + exp + r"\]" * repeat + r"(?!\])"
-
-
 # The languages we recognize. Each name is spelled as it appears in the
 # Unicode names of the characters belonging to the language, because
-# `_language` identifies a text by searching those names for it.
+# `randy.Languages.identify` identifies a text by searching those names for it.
 Language: typing.TypeAlias = typing.Literal[
     "GREEK",
     "COPTIC",
@@ -345,46 +292,47 @@ _ALPHABETS: dict[Language, tuple[str, ...]] = {
     ),
 }
 
-# The HTML class used for each language.
-_CLASSES: dict[Language, str] = {
-    "GREEK": cls.GREEK,
-    "COPTIC": cls.COPTIC,
-    "ARABIC": cls.ARABIC,
-    "HEBREW": cls.HEBREW,
-    "SYRIAC": cls.ARAMAIC,
-    "ETHIOPIC": cls.AMHARIC,
-    "HIEROGLYPH": cls.HIEROGLYPHIC,
-    "DEMOTIC": cls.DEMOTIC,
-}
 
-ensure.equal_sets(typing.get_args(Language), _ALPHABETS.keys(), "alphabets")
-ensure.equal_sets(typing.get_args(Language), _CLASSES.keys(), "classes")
+class Languages(randy.Languages[Language]):
+    """The languages that the bracketed text of a transcription may be in."""
 
-# The validation pattern for text marked as belonging to each language.
-_VALIDATORS: dict[Language, regex.Pattern[str]] = {
-    language: regex.compile("".join(("[", *alphabet, "]+")))
-    for language, alphabet in _ALPHABETS.items()
-}
+    @typing.override
+    def identify(self, text: str) -> Language:
+        if text in _LANGUAGE_OVERRIDES:
+            return _LANGUAGE_OVERRIDES[text]
+        # Demotic is not detectable using a character's Unicode name.
+        return super().identify(text) or "DEMOTIC"
+
+    @typing.override
+    def normalize_for_validation(self, language: Language, text: str) -> str:
+        text = super().normalize_for_validation(language, text)
+        # Greek and Coptic are allowed to have superscripts and stacks within,
+        # and to mark a word as unattested.
+        if language in ["COPTIC", "GREEK"]:
+            text = _IN_LANG_TAGS.sub("", text)
+            # An asterisk marks a Coptic or Greek form as unattested
+            # (hypothetical). It belongs inside the span, but only at the
+            # beginning of a word. By the time the span is validated, the
+            # escaped asterisk has already been substituted by the HTML symbol.
+            text = text.removeprefix(page.ASTERISK)
+        text = text.replace(page.NBSP, "\u00a0")
+        return text
 
 
-def _normalize_for_validation(language: Language, text: str) -> str:
-    # Greek and Coptic are allowed to have superscripts and stacks within, and
-    # to mark a word as unattested.
-    if language in ["COPTIC", "GREEK"]:
-        text = _IN_LANG_TAGS.sub("", text)
-        # An asterisk marks a Coptic or Greek form as unattested (hypothetical).
-        # It belongs inside the span, but only at the beginning of a word. By
-        # the time the span is validated, the escaped asterisk has already been
-        # substituted by the HTML symbol.
-        text = text.removeprefix(page.ASTERISK)
-    # Greek is often transcribed with precomposed characters, which are not
-    # represented in our regex, so we NFD-normalize it.
-    # NOTE: The Greek alphabet constrains the decomposed form only: a
-    # precomposed Greek letter whose parts are all listed passes unvetted.
-    if language == "GREEK":
-        text = orth.normalize(text)
-    text = text.replace(page.NBSP, "\u00a0")
-    return text
+_LANGUAGES: Languages = Languages(
+    typing.get_args(Language),
+    _ALPHABETS,
+    {
+        "GREEK": cls.GREEK,
+        "COPTIC": cls.COPTIC,
+        "ARABIC": cls.ARABIC,
+        "HEBREW": cls.HEBREW,
+        "SYRIAC": cls.ARAMAIC,
+        "ETHIOPIC": cls.AMHARIC,
+        "HIEROGLYPH": cls.HIEROGLYPHIC,
+        "DEMOTIC": cls.DEMOTIC,
+    },
+)
 
 
 # `lang.has_lang` determines a language from the Unicode names of a text's
@@ -401,22 +349,6 @@ _LANGUAGE_OVERRIDES: dict[str, Language] = {
     # neighbours bear (such as "GREEK INDICTION SIGN").
     "𐆎": "GREEK",
 }
-
-
-def _language(text: str) -> Language:
-    # We exclude diacritics from language determination because Coptic uses
-    # Greek diacritics in the expression ⲇͅⲇͅ - which is the abbreviation for
-    # the Greek phrase δεῖνα δεῖνος, translating to "so-and-so" or "NN".
-    # The diacritic used is Combining Greek Ypogegrammeni (U+0345), and we don't
-    # want use of this diacritic to cause the expression to be evaluated as
-    # Greek.
-    if text in _LANGUAGE_OVERRIDES:
-        return _LANGUAGE_OVERRIDES[text]
-    text = orth.clean_diacritics(text)
-    for language in _ALPHABETS:
-        if lang.has_lang(language, text):
-            return language
-    return "DEMOTIC"
 
 
 def replace_bracketed(match: regex.Match[str]) -> str:
@@ -436,15 +368,8 @@ def replace_bracketed(match: regex.Match[str]) -> str:
     # will be preserved inside the span.
     text = regex.sub("^ | $", page.NBSP, text)
 
-    language: Language = _language(text)
-
-    ensure.fullmatch(
-        _VALIDATORS[language],
-        _normalize_for_validation(language, text),
-        language,
-    )
-
-    return f'<span class="{_CLASSES[language]}">{text}</span>'
+    language: Language = _LANGUAGES.identify(text)
+    return _LANGUAGES.span(language, text)
 
 
 _SIGLA: list[str] = [
@@ -501,7 +426,7 @@ def replace_manual(match: regex.Match[str]) -> str:
     return rf'<span class="{cls.MANUAL}" {DATA_KEY}="{key}">{text}</span>'
 
 
-_MANUAL: Substitution = Substitution(
+_MANUAL: randy.Substitution = randy.Substitution(
     r"{(.*?)}(?:{(.*?)})?",
     replace_manual,
     ban=["{", "}"],
@@ -548,23 +473,13 @@ def replace_italic(match: regex.Match[str]) -> str:
     return f"<i>{italic}</i>"
 
 
-OPEN_PARAGRAPH: str = "<p>"
-CLOSE_PARAGRAPH: str = "</p>"
-
-
-def _mark(char: str) -> str:
-    return f'<span class="{cls.MARK}">{char}</span>'
-
-
-# The addenda marker is intentionally fixed, because some addenda result in
-# several edits throughout the text. Using numbered markers ([1], [2], ...)
-# gives the impression that the edits come from multiple addenda and corrigenda,
-# which is often incorrect.
-# This has the added advantage that a simple search query for the character
-# employed yields all occurrences of addenda or footnotes in the text.
-# Two characters are used which are not employed in Crum's text.
-_ADDENDUM_MARK: str = _mark("‡")
-_FOOTNOTE_MARK: str = _mark("※")
+# The footnote marker is fixed. We don't use an enumerated marker, for the
+# following reasons:
+# - The footnotes have no positional meaning.
+# - A simple search query for the character employed yields all occurrences of
+#   footnotes in the text. The character is not employed in Crum's text.
+# - An added or removed footnote Won't shift other footnotes in the text.
+_FOOTNOTE_MARK: str = randy.mark("※")
 
 # Coptic Wiki substitutions:
 #
@@ -578,9 +493,9 @@ _FOOTNOTE_MARK: str = _mark("※")
 # overriding replacement right before the Wiki replacement, separating them by
 # an `or` operator. We also add a comment explaining the rationale for the
 # override.
-_SUBSTITUTIONS: list[Substitution] = [
-    Substitution(r"__(.+?)__", replace_gloss, ban=["_"]),
-    Substitution(
+_SUBSTITUTIONS: list[randy.Substitution] = [
+    randy.Substitution(r"__(.+?)__", replace_gloss, ban=["_"]),
+    randy.Substitution(
         # Bold text is simply bullets. We prefer using an explicit `bullet`
         # class to mark them, instead of relying on `<b>`.
         # NOTE: An escaped asterisk doesn't delimit a bullet. It is substituted
@@ -589,7 +504,7 @@ _SUBSTITUTIONS: list[Substitution] = [
         replace_bullet,
         ban=["*"],
     ),
-    Substitution(r"_(.+?)_", replace_italic, ban=["_"]),
+    randy.Substitution(r"_(.+?)_", replace_italic, ban=["_"]),
     # Replace occurrences of ampersand with the HTML encoding.
     # NOTE: While most browsers and pipelines can deal with a literal ampersand,
     # BeautifulSoup often misinterprets the combination "&c;" so we convert it
@@ -598,27 +513,31 @@ _SUBSTITUTIONS: list[Substitution] = [
     # just "&". We ban the token "&amp;amp" to catch this error.
     # NOTE: The ampersand substitution follows the ones that validate Latin
     # text, so that they see the text as typed.
-    Substitution("&", "&amp;", ban=["&amp;amp"]),
+    randy.Substitution("&", "&amp;", ban=["&amp;amp"]),
     # The asterisk is not a reserved character in modern HTML, so we don't need
     # to use `&ast;`. However, a plain asterisk would trip the ban of the bold
     # rule above. We therefore leave it up to our linters to replace
     # the occurrences of `&ast;` produced here with a literal asterisk.
     # NOTE: The asterisk substitution must follow the ampersand one, which
     # would otherwise escape the `&ast;` produced here.
-    Substitution(r"\\\*", page.ASTERISK, ban=["*", "\\"]),
-    Substitution(
-        bracketed(r"([SABFO])(?:\^(a|f|b|af|2))?"),
+    randy.Substitution(r"\\\*", page.ASTERISK, ban=["*", "\\"]),
+    randy.Substitution(
+        randy.bracketed(r"([SABFO])(?:\^(a|f|b|af|2))?"),
         replace_dialect,
         ban=["[[", "]]", "^"],
     ),
-    Substitution(r"(\p{Letter})\^\^(\p{Letter})", replace_stack, ban=["^^"]),
-    Substitution(r"\^([-–—\w\p{Letter}]+)", r"<sup>\1</sup>", ban=["^"]),
-    Substitution(
-        r"\\n",
-        CLOSE_PARAGRAPH + OPEN_PARAGRAPH,
-        ban=["\\"],
+    randy.Substitution(
+        r"(\p{Letter})\^\^(\p{Letter})",
+        replace_stack,
+        ban=["^^"],
     ),
-    Substitution(bracketed(r"(.*?)"), replace_bracketed, ban=["[[", "]]"]),
+    randy.Substitution(r"\^([-–—\w\p{Letter}]+)", r"<sup>\1</sup>", ban=["^"]),
+    randy.PARAGRAPH,
+    randy.Substitution(
+        randy.bracketed(r"(.*?)"),
+        replace_bracketed,
+        ban=["[[", "]]"],
+    ),
     # NOTE: The language substitution must precede the tab substitution.
     # All remaining tabs represent subparagraph separators, and are 6 spaces
     # long. The use of regular spaces besides non-breaking spaces ensures that
@@ -626,7 +545,7 @@ _SUBSTITUTIONS: list[Substitution] = [
     # actually breaking.
     # A trailing space inside a span is banned, and gets moved outside it by
     # Tidy anyway.
-    Substitution(
+    randy.Substitution(
         r"\\t",
         f'<span class="{cls.TAB}">{page.NBSP} {page.NBSP} {page.NBSP}</span> ',
         ban=["\\"],
@@ -662,59 +581,79 @@ class Col(enum.StrEnum):
     ENTRY = "Entry"
 
 
+class Column(randy.Column):
+    """A column in Crum's dictionary.
+
+    The Roman pages are those of the Additions and Corrections.
+    """
+
+    FIRST = 1
+    LAST = constants.CRUM_LAST_PAGE
+    ROMAN = True
+
+
+# Each column of the Additions and Corrections, mapped to the last column whose
+# addenda it holds.
+_ADDENDA: dict[str, Column] = {
+    "xva": Column("9a"),
+    "xvb": Column("19b"),
+    "xvia": Column("40a"),
+    "xvib": Column("55b"),
+    "xviia": Column("77b"),
+    "xviib": Column("101b"),
+    "xviiia": Column("130b"),
+    "xviiib": Column("150a"),
+    "xixa": Column("190a"),
+    "xixb": Column("233a"),
+    "xxa": Column("261a"),
+    "xxb": Column("301b"),
+    "xxia": Column("336b"),
+    "xxib": Column("374b"),
+    "xxiia": Column("414a"),
+    "xxiib": Column("470b"),
+    "xxiiia": Column("531b"),
+    "xxiiib": Column("595b"),
+    "xxiva": Column("670b"),
+    "xxivb": Column("787b"),
+}
+assert all(a < b for a, b in itertools.pairwise(_ADDENDA.values()))
+
+
+# The entry that opens a letter, such as "[[[ⲃ]]], second letter of alphabet".
+# Crum sets the letter across the page, below which the columns restart.
+_LETTER_RE: regex.Pattern[str] = regex.compile(
+    r"\[\[\[\p{Coptic}\]\]\].*?\bletter of (the )?alphabet\b",
+)
+
+
 @typing.final
-class Wiki:
-    """Wiki represents an entry in the Wiki sheet."""
+class Entry(randy.Entry[Column]):
+    """Entry represents an entry in the Wiki sheet."""
 
     def __init__(
         self,
         record: dict[typing.Hashable, typing.Any],
     ) -> None:
-        self.keys: list[int] = list(map(int, record[Col.MARCION].split(" ")))
-        assert self.keys
-        # NFC normalization simplifies some validations below. It allows us to
-        # use character classes for validation (e.g. \p{Latin}, \p{Arabic},
-        # etc.) without the need for \p{Mark}.
-        self.entry: str = unicodedata.normalize("NFC", record[Col.ENTRY])
-        # TODO: (#503) Ban all superfluous space in the entry, then get rid of
-        # the line below.
-        self.entry = self.entry.replace("  ", " ").removesuffix(" ")
-        ensure.ensure(self.entry, "Empty entry for Marcion keys:", self.keys)
-
         # headwords tracks the headwords encountered in the text. In extremely
         # rare cases, there could be multiple, e.g. ϩⲁ, ϩⲟ:
         #  https://remnqymi.com/crum/2096.html
         self._headwords: list[str] = []
 
-        self.crum: lex.Column = lex.Column(record[Col.CRUM])
-        assert self.crum
-
-        vide: str = record[Col.VIDE]
-        ensure.ensure(
-            vide in ["", "v"],
-            self,
-            "has an invalid vide entry:",
-            vide,
+        super().__init__(
+            Column(record[Col.CRUM]),
+            record[Col.ENTRY],
+            record[Col.MARCION],
+            record[Col.VIDE],
+            RAW_RE,
         )
-        self.vide = bool(vide)
-        del vide
+        # TODO: (#503) Ban all superfluous space in the entry, then get rid of
+        # the line below.
+        self.entry = self.entry.replace("  ", " ").removesuffix(" ")
 
-        if len(self.keys) != 1:
-            ensure.ensure(
-                self.vide,
-                self,
-                "is non-vide but has several keys:",
-                self.keys,
-            )
-
-        invalid: list[str] = [s for s in RAW_RE.split(self.entry) if s]
-        ensure.ensure(
-            not invalid,
-            "contains invalid text:",
-            invalid,
-            "in:",
-            self.entry,
-        )
+    @property
+    @typing.override
+    def splits_page(self) -> bool:
+        return bool(_LETTER_RE.match(self.entry))
 
     def headwords(self) -> list[str]:
         ensure.ensure(self._headwords, "Headwords for", self, "not populated!")
@@ -744,16 +683,21 @@ class Wiki:
                 )
                 yield variant
 
-    def subs(self) -> abc.Generator[Substitution]:
-        yield Substitution(
+    @typing.override
+    def subs(self) -> abc.Generator[randy.Substitution]:
+        # NOTE: The substitutions populate some fields, such as headwords, so
+        # rendering an entry twice would be an error. Caching `html` prevents
+        # that.
+        assert not self._headwords
+        yield randy.Substitution(
             # Four square brackets mark special-font (old) Coptic.
-            bracketed("(.*?)", 4),
+            randy.bracketed("(.*?)", 4),
             rf'<span class="{cls.OLD} {cls.COPTIC}">\1</span>',
             ["[[[[", "]]]]"],
         )
         # The headword substitution (which uses triple brackets) must precede
         # the double-bracket substitution.
-        yield Substitution(
+        yield randy.Substitution(
             # Ensure the headword is preceded by the start of the string
             # (optionally with a single opening parenthesis for unattested
             # forms, or a double slash for entries removed in the addenda); by
@@ -774,14 +718,14 @@ class Wiki:
             # [2] https://remnqymi.com/crum/2096.html
             # [3] https://remnqymi.com/crum/1240.html
             # [4] https://remnqymi.com/crum/1727.html
-            r"(?<=^(?:\()?|]]], |//)" + bracketed("(.*?)", 3),
+            r"(?<=^(?:\()?|]]], |//)" + randy.bracketed("(.*?)", 3),
             self.replace_headword,
             ban=["[[[", "]]]"],
         )
 
         yield from _SUBSTITUTIONS
 
-        yield Substitution(
+        yield randy.Substitution(
             # The text and the note may contain manual labels, so both are
             # matched as balanced braces, by recursing into the text group.
             r"{(?P<text>(?:[^{}]|{(?&text)})*)}{{(?P<note>(?&text))}}",
@@ -791,115 +735,12 @@ class Wiki:
         # The substitution for manual labels must follow the substitution for
         # footnotes.
         yield _MANUAL
-        # An addendum takes the form `//deleted//inserted//`, either half of
-        # which may be empty, optionally followed by the page that the
-        # correction comes from. See `replace_addendum` for how one is
-        # written.
-        yield Substitution(
-            f"//(.*?)//(.*?)//({constants.CRUM_RE.pattern})?",
-            self.replace_addendum,
-            ban=["//"],
-        )
-
-    def replace_addendum(self, match: regex.Match[str]) -> str:
-        """Render an addendum — a correction of Crum's own.
-
-        An addendum records an emendation from Crum's Additions and
-        Corrections, as opposed to a footnote, which records an editorial note
-        of ours. Its two halves are the removed and the added text, either of
-        which may be empty.
-
-        The rules below govern how one is written into the sheet. The first
-        is enforced by the ban on spaces at either end of an element (see
-        `html`), the second by `_validate_addendum_group`, and the last by the
-        substitution's own pattern; 3 through 5 are matters of judgement, and
-        are checked by review rather than by code.
-
-        1. Neither half may begin or end with a space, which would strand the
-           space immediately inside the `<del>` or `<ins>` tag.
-        2. Neither half may contain a `\\n` token. Paragraphing is substituted
-           before addenda are, so the token would already have become
-           paragraph tags, which would then spill out of the addendum element
-           and corrupt the nesting.
-        3. Punctuation belongs outside the block: prefer `//[[ⲁ]]//[[ⲃ]]//,` to
-           `//[[ⲁ]],//[[ⲃ]],//`. The comma is as much a part of the corrected
-           text as the word is, but the output reads better with it outside,
-           and the duplication earns nothing. In the same spirit we take a
-           small liberty with the format of the output — occasionally
-           introducing a comma or a `\\t` of our own — and with the placement
-           of an addendum: one that pertains to a paragraph or a subparagraph
-           as a whole is appended at the very end of that subparagraph, rather
-           than wedged into the middle of it.
-        4. A citation is never split across the addendum boundary. To correct
-           `Ge 1 1` to `Ge 1 2`, write `//Ge 1 1//Ge 1 2//`, and not
-           `Ge 1 //1//2//`. The first yields two complete Bible citations, each
-           enriched and hyperlinked in its own right. The second yields a
-           citation of Genesis 1 trailed by two numbers that nothing ever
-           interprets: followups are read off the flat chain, and an addendum
-           is a wrapper on that chain that no followup handler descends into
-           (see `parseBibleFollowups` in `docs/crum/wiki.ts`). The same holds
-           for non-biblical references — leave the citation whole in both
-           halves even when that means repeating most of it. The redundancy is
-           the price of two working tooltips.
-        5. The exception to 4, when the duplication would otherwise be
-           unwieldy AND the correction falls in the followups rather than in
-           the main citation: label the followups by hand, so that they resolve
-           without a handler having to reach into the wrapper. Prefer
-           `Ge 1 1, //{1}//{2}//` to the merely verbose
-           `//Ge 1 1, 1//Ge 1 1, 2//`. Note that this does not license the
-           broken form in 4: numbers left unlabeled inside an addendum are an
-           error whatever their length.
-        6. An addendum may name the page it comes from, written immediately
-           after the closing `//`, e.g. `//[[ⲁ]]//[[ⲃ]]//717a`. It is optional,
-           and is left out in the ordinary case, where the column in the
-           Additions and Corrections is inferred from the page of the entry
-           being corrected (see `addenda_page`). Write it out when that
-           inference lands on the wrong column, which happens only at a column
-           border; or when the correction comes from the body of the book
-           rather than from the frontmatter, which no inference over the
-           addenda columns could ever reach.
-
-        Args:
-            match: The addendum match. Its first two groups are the removed
-                and the added text; its third, when present, is the page that
-                the correction comes from.
-
-        Returns:
-            The addendum's HTML.
-        """
-        return "".join(self.replace_addendum_aux(match))
-
-    def _validate_addendum_group(self, group: str) -> None:
-        # NOTE: An addendum may not contain a `\n`. Those are substituted by
-        # paragraph boundaries, which would spill out of the addendum element
-        # and corrupt the HTML.
-        # NOTE: This assumes that the paragraph substitution precedes the
-        # addenda substitution.
-        ensure.ensure(
-            OPEN_PARAGRAPH not in group,
-            self,
-            "has an addendum group containing paragraphing elements:",
-            group,
-        )
-
-    def replace_addendum_aux(
-        self,
-        match: regex.Match[str],
-    ) -> abc.Generator[str]:
-        delete, insert, col = match.group(1), match.group(2), match.group(3)
-        self._validate_addendum_group(delete)
-        self._validate_addendum_group(insert)
-        yield f'<span class="{cls.ADDENDUM}" {DATA_PAGE}="{
-            col or self.addenda_page
-        }">'
-        if delete:
-            yield f"<del>{delete}</del>"
-        if delete and insert:
-            yield " "
-        if insert:
-            yield f"<ins>{insert}</ins>"
-        yield _ADDENDUM_MARK
-        yield "</span>"
+        # An addendum may name the page that the correction comes from. Besides
+        # fixing the inference where it lands on the wrong column (see
+        # `addenda_page`), this lets a correction come from the body of the
+        # book rather than from the frontmatter, which no inference over the
+        # addenda columns could ever reach.
+        yield self.addendum_substitution(constants.CRUM_RE.pattern)
 
     def replace_headword(self, match: regex.Match[str]) -> str:
         headword: str = match.group(1)
@@ -922,7 +763,7 @@ class Wiki:
         Returns:
             True if this entry is an addendum, false otherwise.
         """
-        return self.crum.roman()
+        return self.page.roman()
 
     @functools.cached_property
     def lexicographic_key(self) -> str:
@@ -951,36 +792,6 @@ class Wiki:
 
         return headword
 
-    def _banned(self) -> set[str]:
-        return {token for sub in self.subs() for token in sub.ban}
-
-    @functools.cached_property
-    def html(self) -> str:
-        # NOTE: Each call to this method populates some fields, such as
-        # headwords. Calling it multiple times would be an error. Caching
-        # should prevent multiple executions on the same object.
-        assert not self._headwords
-        html: str = "".join(self._html_aux())
-        for token in self._banned():
-            ensure.ensure(
-                token not in html,
-                "Banned token",
-                token,
-                "found in entry",
-                self,
-                "output:",
-                html,
-            )
-        # TODO: (#756) This check belongs in a shared package.
-        invalid_tags: list[str] = _SPACE_AT_TAG_BORDER_RE.findall(html)
-        ensure.ensure(
-            not invalid_tags,
-            self,
-            "contains a space at either end of an element:",
-            invalid_tags,
-        )
-        return html
-
     def replace_footnote(self, match: regex.Match[str]) -> str:
         # A footnote — `{text}{{note}}` — is an editorial note of OURS on an
         # error of Crum's; an addendum (`replace_addendum`) is a correction of
@@ -1008,26 +819,12 @@ class Wiki:
             + "</span>"
         )
 
-    def _html_aux(self) -> abc.Generator[str]:
-        classes: list[str] = [cls.ENTRY]
-        if self.vide:
-            classes.append(cls.VIDE)
-        yield f'<div class="{" ".join(classes)}">'
-        yield OPEN_PARAGRAPH
-
-        raw: str = self.entry
-        for s in self.subs():
-            raw = s.html(raw)
-        yield raw
-
-        yield CLOSE_PARAGRAPH
-        yield "</div>"
-
     @typing.override
     def __str__(self) -> str:
         return self._headwords[0] if self._headwords else self.entry
 
     @functools.cached_property
+    @typing.override
     def addenda_page(self) -> str:
         """
         Returns:
@@ -1050,41 +847,20 @@ class Wiki:
         """
         # We could binary-search, but the list only contains 20 elements, so
         # binary search is not worth it.
-        for col in constants.COLUMN_RANGES:
-            if self.crum <= col.end:
-                return col.name
+        for name, end in _ADDENDA.items():
+            if self.page <= end:
+                return name
         log.fatal(self, "has no addenda page!")
 
 
 @functools.cache
-def wikis() -> list[Wiki]:
+def entries() -> list[Entry]:
     records: list[dict[typing.Hashable, typing.Any]] = file.read_tsv(
         paths.WIKI_TSV,
     ).to_dict(orient="records")
-    return list(map(Wiki, records))
+    return list(map(Entry, records))
 
 
 @functools.cache
-def by_marcion_key() -> dict[str, list[Wiki]]:
-    by_key: dict[str, list[Wiki]] = defaultdict(list)
-    for w in wikis():
-        for key in w.keys:
-            by_key[str(key)].append(w)
-    return by_key
-
-
-class Column:
-    """Column represents a group of Wikis that occur on the same column."""
-
-    def __init__(self, crum: lex.Column, ws: abc.Iterable[Wiki]) -> None:
-        self.crum: lex.Column = crum
-        self.wikis: list[Wiki] = list(ws)
-
-    def html_aux(self) -> abc.Generator[str]:
-        yield f'<div class="{cls.FOLIO}">'
-        yield f'<span class="{cls.CRUM_PAGE}">'
-        yield str(self.crum)
-        yield "</span>"
-        for w in self.wikis:
-            yield w.html
-        yield "</div>"
+def by_marcion_key() -> dict[str, list[Entry]]:
+    return randy.by_marcion_key(entries())
