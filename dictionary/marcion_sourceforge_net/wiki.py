@@ -368,8 +368,7 @@ def replace_bracketed(match: regex.Match[str]) -> str:
     # will be preserved inside the span.
     text = regex.sub("^ | $", page.NBSP, text)
 
-    language: Language = _LANGUAGES.identify(text)
-    return _LANGUAGES.span(language, text)
+    return _LANGUAGES.span(text)
 
 
 _SIGLA: list[str] = [
@@ -531,7 +530,7 @@ _SUBSTITUTIONS: list[randy.Substitution] = [
         replace_stack,
         ban=["^^"],
     ),
-    randy.Substitution(r"\^([-–—\w\p{Letter}]+)", r"<sup>\1</sup>", ban=["^"]),
+    randy.SUPERSCRIPT,
     randy.PARAGRAPH,
     randy.Substitution(
         randy.bracketed(r"(.*?)"),

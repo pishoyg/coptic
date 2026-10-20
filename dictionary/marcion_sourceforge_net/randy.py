@@ -66,6 +66,11 @@ PARAGRAPH: Substitution = Substitution(
     CLOSE_PARAGRAPH + OPEN_PARAGRAPH,
     ban=["\\"],
 )
+SUPERSCRIPT: Substitution = Substitution(
+    r"\^([-–—\w\p{Letter}]+)",
+    r"<sup>\1</sup>",
+    ban=["^"],
+)
 
 
 def mark(char: str) -> str:
@@ -150,7 +155,7 @@ class Column:
             )
         else:
             ensure.ensure(
-                self.roman() and self.ROMAN,
+                self.ROMAN,
                 type(self).__name__,
                 "invalid column:",
                 raw,
@@ -163,7 +168,7 @@ class Column:
         return self._num.isdigit()
 
     def roman(self) -> bool:
-        return all(c in "ivx" for c in self._num)
+        return not self.ordered()
 
     def num(self) -> int:
         return int(self._num)
@@ -193,7 +198,7 @@ class Column:
 class Entry[Col: Column](abc.ABC):
     """An entry in one of our transcriptions in Randy's notation.
 
-    The entry occurs on a column of type `P`.
+    The entry occurs on a column of type `Col`.
     """
 
     def __init__(
@@ -522,15 +527,14 @@ class Languages[L: str]:
         # Ypogegrammeni (U+0345), and we don't want use of this diacritic to
         # cause the expression to be evaluated as Greek.
         text = orth.clean_diacritics(text)
-        for language in self._validators:
-            if lang.has_lang(language, text):
-                ensure.fullmatch(
-                    self._validators[language],
-                    self.normalize_for_validation(language, text),
-                    language,
-                )
-                return language
-        return None
+        return next(
+            (
+                language
+                for language in self._validators
+                if lang.has_lang(language, text)
+            ),
+            None,
+        )
 
     def normalize_for_validation(self, language: L, text: str) -> str:
         # Greek is often transcribed with precomposed characters, which are not
@@ -539,5 +543,12 @@ class Languages[L: str]:
             text = orth.normalize(text)
         return text
 
-    def span(self, language: L, html: str) -> str:
-        return f'<span class="{self._classes[language]}">{html}</span>'
+    def span(self, text: str) -> str:
+        language: L | None = self.identify(text)
+        assert language
+        ensure.fullmatch(
+            self._validators[language],
+            self.normalize_for_validation(language, text),
+            language,
+        )
+        return f'<span class="{self._classes[language]}">{text}</span>'

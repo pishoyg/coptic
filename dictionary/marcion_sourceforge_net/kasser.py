@@ -15,7 +15,7 @@ import regex
 
 from dictionary import cls as dict_cls
 from dictionary.marcion_sourceforge_net import cls, ids, randy
-from utils import ensure, file, page, paths
+from utils import ensure, file, log, page, paths
 
 # RAW_RE should match a raw entry.
 # All non-Latin text is expected to be surrounded by double square brackets.
@@ -30,7 +30,7 @@ RAW_RE: regex.Pattern[str] = regex.compile(
             # TODO: (#786) Mathematical angle brackets are used by the
             # materialization. If Kasser were to get materialized, we might want
             # to change the materializer's notation to avoid confusion.
-            r"[\p{Latin}0-9 *⟨⟩!–'(),\-./:;?\[\]_~«»\\]",
+            r"[\p{Latin}=^0-9 *⟨⟩!–'(),\-./:;?\[\]_~«»\\°&]",
         ),
     ),
 )
@@ -109,6 +109,15 @@ _ALPHABETS: dict[Language, tuple[str, ...]] = {
         # TODO: (#786) The materialization (`wiki.ts`) uses angle brackets to
         # delimit a language span. If we were to materialize Kasser, it should
         # perhaps pick a different symbol.
+        # NOTE: Kasser also writes `⟨sim.⟩`, which "indique qu'une partie du
+        # mot a été omise (ou redoublée vraisemblablement par haplographie (ou
+        # dittographie), suivant ou précédant un groupe de lettres similaires"
+        # (Sigles et Abréviations). We have chosen to keep `⟨sim.⟩`, along with
+        # a hyphen that follows it, out of the Coptic word: `⟨sim.⟩[[ⲓⲛⲉ]]`,
+        # `[[ⲕⲧ]]⟨sim.⟩-`.
+        # TODO: (#786) Revisit this decision. `⟨sim.⟩` marks an omission or a
+        # repetition within the word, so it arguably belongs to the word, and
+        # the hyphen that follows it certainly does.
         "⟨",
         "⟩",
         "\\-",
@@ -117,7 +126,21 @@ _ALPHABETS: dict[Language, tuple[str, ...]] = {
     ),
 }
 
-_LANGUAGES: randy.Languages[Language] = randy.Languages(
+
+class Languages(randy.Languages[Language]):
+    """The languages that the bracketed text of a transcription may be in."""
+
+    @typing.override
+    def normalize_for_validation(self, language: Language, text: str) -> str:
+        text = super().normalize_for_validation(language, text)
+        # An asterisk marks a Coptic form as a reconstruction. It sits inside
+        # the brackets, at the very beginning, and is substituted later.
+        if language == "COPTIC":
+            text = text.removeprefix("*")
+        return text
+
+
+_LANGUAGES: Languages = Languages(
     typing.get_args(Language),
     _ALPHABETS,
     {
@@ -128,26 +151,7 @@ _LANGUAGES: randy.Languages[Language] = randy.Languages(
 
 
 def replace_bracketed(match: regex.Match[str]) -> str:
-    text: str = match.group(1)
-    del match
-
-    # An asterisk marks a Coptic form as a reconstruction. It sits inside the
-    # brackets, at the very beginning.
-    asterisk: str = ""
-    if text.startswith("*"):
-        asterisk = page.ASTERISK
-        text = text.removeprefix("*")
-
-    language: Language | None = _LANGUAGES.identify(text)
-    assert language
-
-    ensure.ensure(
-        not asterisk or language == "COPTIC",
-        "an asterisk may only precede Coptic or a siglum:",
-        repr(text),
-    )
-
-    return _LANGUAGES.span(language, asterisk + text)
+    return _LANGUAGES.span(match.group(1))
 
 
 # A siglum consists of an optional asterisk, a base, then any sequence of
@@ -174,6 +178,7 @@ _BASES: list[str] = [
 # NOTE: Kasser's X only occurs as a superscript.
 _SUPERSCRIPTS: list[str] = [
     "a",
+    "b",
     "f",
     "h",
     "m",
@@ -185,11 +190,13 @@ _SUPERSCRIPTS: list[str] = [
     "xs",
     "·a",
     ":f",
+    ":s",
     ":sx",
 ]
 _SUBSCRIPTS: list[str] = [
     "o",
     "vl",
+    "vl?",
     "o · vl",
     "(h)",
     "(hl)",
@@ -198,7 +205,10 @@ _SUBSCRIPTS: list[str] = [
     "o(h)",
     "o(h ?)",
     "o(qq)",
+    "o(vl)",
     "o(vl ?)",
+    "(vl)",
+    "vl·o",
 ]
 _CANONICAL: dict[str, str] = {"A^2": "L"}
 
@@ -245,7 +255,11 @@ def replace_subscript(match: regex.Match[str]) -> str:
 
 _ITALIC_RE: regex.Pattern[str] = regex.compile(r"[\p{Latin} .',]+")
 # A gloss may contain italics, which are substituted later.
-_GLOSS_RE: regex.Pattern[str] = regex.compile(r"[\p{Latin} ',\-.?!()_]+")
+# NOTE: A gloss can't contain square brackets, with which Kasser supplies a
+# word in a translation: «... mêlée à elle [l'eau froide]). This only occurs
+# once, in a gloss that Kasser leaves open without an ellipsis, which we
+# couldn't recognize anyway. See `replace_unclosed`.
+_GLOSS_RE: regex.Pattern[str] = regex.compile(r"[\p{Latin} ',\-.?!()_:]+")
 
 
 def replace_italic(match: regex.Match[str]) -> str:
@@ -254,34 +268,63 @@ def replace_italic(match: regex.Match[str]) -> str:
     return f"<i>{italic}</i>"
 
 
-# A gloss opens with a guillemet, and normally closes with one. Kasser leaves a
-# gloss open when it translates a quotation that breaks off, in which case it
-# ends in an ellipsis, and runs up to the parenthesis that encloses it:
-# (ManiP:208 [[...]] «creuse la terre avec la ...).
-# Requiring the ellipsis lets a forgotten guillemet trip the ban.
-# A gloss may itself contain parentheses: «(durée de la) vie».
-_GLOSS_SUB_RE: str = r"«((?:[^«»()]|\([^()]*\))*?)(»|(?<=\.\.\.)(?=\)))"
+# NOTE: Guillemets enclose either a gloss or a quotation, such as the text of
+# Crum's that a correction deletes or inserts.
+# We tell them apart by their content: whatever matches `_GLOSS_RE` is a gloss.
+# This is a heuristic that happens to be correct so far, although it's
+# possible that cases in the remainder of the book will violate it. A gloss
+# straying outside `_GLOSS_RE` would be taken for a quotation (which `_gloss`
+# reports), but a quotation that fits it would pass for a gloss unnoticed.
+_GUILLEMETS_SUB_RE: str = r"«((?:[^«»()]|\([^()]*\))*?)»"
+# Kasser leaves a gloss open when it translates a quotation that breaks off, in
+# which case it ends in an ellipsis. It runs no further than the parenthesis
+# that encloses it, though it may stop short of it.
+_UNCLOSED_SUB_RE: str = r"«((?:[^«»()]|\([^()]*\))*\.\.\.)?"
 
 
-def replace_gloss(match: regex.Match[str]) -> str:
-    # The guillemets aren't part of the gloss, so they get a class of their
-    # own. They are written as character references, so that a stray guillemet
-    # trips the ban.
-    gloss, close = match.groups()
-    ensure.fullmatch(_GLOSS_RE, gloss, "gloss")
-    html: str = (
-        f'<span class="{cls.GUILLEMET}">&laquo;</span>'
-        f'<span class="{cls.GLOSS}">{gloss}</span>'
+# The guillemets aren't part of the gloss, so they get a class of their own.
+# They are written as character references, so that a stray guillemet trips the
+# ban.
+_OPEN_GUILLEMET: str = f'<span class="{cls.GUILLEMET}">&laquo;</span>'
+_CLOSE_GUILLEMET: str = f'<span class="{cls.GUILLEMET}">&raquo;</span>'
+
+
+def _gloss(match: regex.Match[str]) -> str:
+    text: str = match.group(1)
+    if _GLOSS_RE.fullmatch(text):
+        return f'<span class="{cls.GLOSS}">{text}</span>'
+    # The guess may be wrong. See `_GUILLEMETS_SUB_RE`.
+    log.warn(
+        "guillemets taken for a quotation:",
+        repr(text),
+        "in",
+        match.string,
     )
-    if close:
-        html += f'<span class="{cls.GUILLEMET}">&raquo;</span>'
-    return html
+    return text
+
+
+def replace_guillemets(match: regex.Match[str]) -> str:
+    return _OPEN_GUILLEMET + _gloss(match) + _CLOSE_GUILLEMET
+
+
+def replace_unclosed(match: regex.Match[str]) -> str:
+    if match.group(1) is None:
+        log.warn("unclosed guillemet without an ellipsis:", match.string)
+        return _OPEN_GUILLEMET
+    return _OPEN_GUILLEMET + _gloss(match)
 
 
 _SUBSTITUTIONS: list[randy.Substitution] = [
-    # NOTE: The gloss substitution must precede the italic one, so that it
-    # sees the italics within it as typed.
-    randy.Substitution(_GLOSS_SUB_RE, replace_gloss, ban=["«", "»"]),
+    # Replace occurrences of ampersand with the HTML encoding.
+    # NOTE: The ampersand substitution must precede the substitutions that
+    # produce character references, which it would otherwise escape. As a
+    # result, the others see an ampersand as escaped.
+    randy.Substitution("&", "&amp;", ban=["&amp;amp"]),
+    # NOTE: The guillemet substitutions must precede the italic one, so that
+    # they see the italics within a gloss as typed. Closed guillemets must be
+    # substituted before unclosed ones.
+    randy.Substitution(_GUILLEMETS_SUB_RE, replace_guillemets, ban=["«", "»"]),
+    randy.Substitution(_UNCLOSED_SUB_RE, replace_unclosed, ban=["«", "»"]),
     # The transcription may italicize with a single underscore or a double one.
     # Whatever the distinction it intends, we render both alike.
     randy.Substitution(r"(__?)(.+?)\1", replace_italic, ban=["_"]),
@@ -304,13 +347,18 @@ _SUBSTITUTIONS: list[randy.Substitution] = [
     # which expect to find the asterisk inside the brackets.
     randy.Substitution(r"\*", page.ASTERISK, ban=["*"]),
     # Outside sigla, a subscript occurs in the manuscript numbers M₁ to M₁₀ and
-    # G₂ to G₄ (see Kasser's Sigles et Abréviations), and in a parenthesized
-    # qualifier that follows a form or a reference: [[ⲁⲁ]]~(h), (ManiP~(qq)).
+    # G₂ to G₄ (see Kasser's Sigles et Abréviations), and in a qualifier that
+    # follows a form or a reference, which is usually parenthesized:
+    # [[ⲁⲁ]]~(h), (ManiP~(qq)), (C 206,46 ~vl?).
     # NOTE: The subscript substitutions must follow the siglum one.
+    # TODO: (#0) Simplify subscript substitutions. A single substitution should
+    # suffice, even if it's more permissive than three narrow ones.
     randy.Substitution(r"M~([1-9]|10)(?!\d)", r"M<sub>\1</sub>", ban=["~"]),
     randy.Substitution(r"G~([2-4])(?!\d)", r"G<sub>\1</sub>", ban=["~"]),
-    randy.Substitution(r"~(\([^()]+\))", replace_subscript, ban=["~"]),
+    # TODO: (#0) Hardcoding 'vl?' below is not ideal.
+    randy.Substitution(r"~(\([^()]+\)|vl\?)", replace_subscript, ban=["~"]),
     randy.PARAGRAPH,
+    randy.SUPERSCRIPT,
 ]
 
 

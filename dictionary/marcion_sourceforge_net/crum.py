@@ -190,10 +190,6 @@ class Row(gcp.Record):
             combined.update(group)
         return sorted(combined)
 
-    @functools.cached_property
-    def crum(self) -> wiki.Column:
-        return wiki.Column(self.get(sheet.COL.CRUM))
-
 
 # NOTE: As of now, derivations are somewhat of second-class citizens in our
 # database. Many of the methods defined under `Root` may belong under the base
