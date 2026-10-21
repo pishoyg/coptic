@@ -42,8 +42,6 @@ findex () {
     -not -path "./.remember/*" \
     -not -path "./.mypy_cache/*" \
     -not -path "./.mypy_cache" \
-    -not -path "./.ruff_cache/*" \
-    -not -path "./.ruff_cache" \
     -not -path "./docs/crum/anki/*" \
     -not -path "./docs/crum/anki/" \
     -not -path "./docs/bible/epub/*" \

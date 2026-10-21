@@ -26,16 +26,9 @@ import yaml
 
 from dictionary import cls as dict_cls
 from dictionary.kellia_uni_goettingen_de import kellia
-
-# isort keeps the aliased import apart, splitting the others around it, while
-# ruff merges the others into one statement. Neither accepts the other's form.
-# TODO: (#0) Resolve hook conflicts.
-# isort: off
 from dictionary.marcion_sourceforge_net import cls, constants, ids, kasser
 from dictionary.marcion_sourceforge_net import lexical as lex
 from dictionary.marcion_sourceforge_net import parse, sheet, wiki
-
-# isort: on
 from flashcards import deck
 from xooxle import xooxle
 
@@ -1002,7 +995,7 @@ class Crum:
             if key_deriv == "0":
                 # This derivation has no parents.
                 return 0
-            d: int = 1 + derivations[key_deriv].depth  # noqa: F821
+            d: int = 1 + derivations[key_deriv].depth
             assert d <= constants.MAX_DERIVATION_DEPTH
             return d
 

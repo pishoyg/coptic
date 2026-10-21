@@ -22,7 +22,6 @@ node_modules
 
 # Pre-commit artifacts
 .mypy_cache
-.ruff_cache
 
 # Playwright artifacts
 test-results/

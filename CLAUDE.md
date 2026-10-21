@@ -159,7 +159,7 @@ Use `fix #ISSUE` to auto-close an issue. Components: `Crum`, `KELLIA`, `Andreas`
 
 ### Pre-commit Hooks
 
-50+ hooks run on every commit (enforced, not optional). `make test` iterates until they all pass. Includes mypy, pylint, ruff, black, isort, tsc, eslint, stylelint, prettier, gitleaks, and more.
+50+ hooks run on every commit (enforced, not optional). `make test` iterates until they all pass. Includes mypy, pylint, black, isort, tsc, eslint, stylelint, prettier, gitleaks, and more.
 
 Generated artifacts only diff meaningfully after the formatting hooks have run on them. To run a hook on just the changed files (staged, unstaged, and untracked; some filenames contain spaces):
 
@@ -168,6 +168,6 @@ Generated artifacts only diff meaningfully after the formatting hooks have run o
   | xargs -0 pre-commit run <hook> --files
 ```
 
-Run the formatters by name (`prettier`, `tidy-html`, `search-tidy-html`, `tidy-xml`, `black`, `isort`, `ruff`, `format-pisaxo`) rather than every hook: `playwright` runs on any non-TypeScript change under `docs/` or `test/`.
+Run the formatters by name (`prettier`, `tidy-html`, `search-tidy-html`, `tidy-xml`, `black`, `isort`, `format-pisaxo`) rather than every hook: `playwright` runs on any non-TypeScript change under `docs/` or `test/`.
 
 There is exactly one `README.md` in the repo (enforced by a pre-commit hook). Technical documentation lives there.
