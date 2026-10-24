@@ -355,7 +355,11 @@ _SUBSTITUTIONS: list[randy.Substitution] = [
     # suffice, even if it's more permissive than three narrow ones.
     randy.Substitution(r"M~([1-9]|10)(?!\d)", r"M<sub>\1</sub>", ban=["~"]),
     randy.Substitution(r"G~([2-4])(?!\d)", r"G<sub>\1</sub>", ban=["~"]),
-    # TODO: (#0) Hardcoding 'vl?' below is not ideal.
+    # TODO: (#786) Where the subscript represents a dialect subscript that
+    # simply happens to lack the siglum (e.g. `~(h)` instead of `S~h`), it may
+    # be appropriate to still give it the same treatment as a dialect siglum.
+    # This would also help us avoid hardcoding `vl?` below, since all orphan
+    # subscripts will be treated uniformly.
     randy.Substitution(r"~(\([^()]+\)|vl\?)", replace_subscript, ban=["~"]),
     randy.PARAGRAPH,
     randy.SUPERSCRIPT,
