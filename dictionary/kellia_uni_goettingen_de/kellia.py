@@ -773,7 +773,7 @@ def _pos_map(pos: str, subc: str, orthography: Orthography) -> str:
 
 
 @functools.cache
-def _bohairic_supplemental() -> dict[str, list[str]]:
+def _bohairic_supplemental() -> abc.Mapping[str, abc.Sequence[str]]:
     supp: defaultdict[str, list[str]] = defaultdict(list)
     df: pd.DataFrame = gcp.tsv_spreadsheet(
         BOHAIRIC_SUPPLEMENTAL_SHEET_URL,
@@ -823,7 +823,7 @@ def _bohairic_supplemental() -> dict[str, list[str]]:
 
 
 @functools.cache
-def _sahidic_supplemental() -> dict[str, set[str]]:
+def _sahidic_supplemental() -> abc.Mapping[str, abc.Set[str]]:
     supp: defaultdict[str, set[str]] = defaultdict(set)
 
     def clean(form: str) -> str:
@@ -929,16 +929,18 @@ def _augmented_words() -> abc.Generator[Word]:
     Yields:
         Word objects, with supplemental entries added.
     """
-    b_supp: dict[str, list[str]] = _bohairic_supplemental()
-    s_supp: dict[str, set[str]] = _sahidic_supplemental()
+    b_supp: abc.Mapping[str, abc.Sequence[str]] = _bohairic_supplemental()
+    s_supp: abc.Mapping[str, abc.Set[str]] = _sahidic_supplemental()
+    seen: set[str] = set()
     # TODO: (#305) Part-of-speech info is present in the source data. Use it
     # instead of using an empty gram_grp for all supplemental forms.
     for word in _words():
+        seen.add(word.entry_xml_id)
         # Add Sahidic entries before Bohairic ones.
         # Additionally, we sort Sahidic entries to make the output
         # deterministic.
         # TODO: (#305) Use the same sorting logic used for TLA forms.
-        for orth in sorted(s_supp.pop(word.entry_xml_id, [])):
+        for orth in sorted(s_supp.get(word.entry_xml_id, ())):
             if word.orthstring.has(orth):
                 # The word already has this orth.
                 continue
@@ -947,7 +949,7 @@ def _augmented_words() -> abc.Generator[Word]:
         # some order that would be corrupted if we were to reorder them below.
         # The lists retrieved have lamma forms first. We should order them by
         # form while retaining lemma forms at the beginning.
-        b: list[str] = b_supp.pop(word.entry_xml_id, [])
+        b: abc.Sequence[str] = b_supp.get(word.entry_xml_id, ())
         if any(f.geo == "B" for f in word.orthstring.forms):
             # This word already has some Bohairic forms. It's likely that the
             # supplemental entries are going to be redundant.
@@ -960,27 +962,38 @@ def _augmented_words() -> abc.Generator[Word]:
         yield word
 
     # Verify that all Sahidic supplemental entries have been consumed.
+    s_orphans: set[str] = s_supp.keys() - seen
     ensure.ensure(
-        not s_supp,
+        not s_orphans,
         "Some Sahidic inflections have invalid TLA IDs:",
-        s_supp,
+        s_orphans,
     )
 
     # Some Bohairic entries are not consumed.
     # TODO: (#305) Fix at the origin.
-    for tla_id, forms in b_supp.items():
-        log.error("Bohairic forms", forms, "have an invalid TLA ID", tla_id)
+    for tla_id in sorted(b_supp.keys() - seen):
+        log.error(
+            "Bohairic forms",
+            b_supp[tla_id],
+            "have an invalid TLA ID",
+            tla_id,
+        )
+
+
+@functools.cache
+def _comprehensive() -> dict[str, Word]:
+    return {w.entry_xml_id: w for w in _augmented_words()}
 
 
 # The `geos` parameter uses a tuple instead of a list because
 # `functools.cache` requires all arguments to be hashable.
+# Dialect-filtered views share the words of the unfiltered set, so the words
+# are parsed and augmented only once.
 @functools.cache
 def comprehensive(geos: tuple[str, ...] | None = None) -> dict[str, Word]:
-    return {
-        w.entry_xml_id: w
-        for w in _augmented_words()
-        if not geos or w.has_a_dialect(geos)
-    }
+    if not geos:
+        return _comprehensive()
+    return {k: w for k, w in _comprehensive().items() if w.has_a_dialect(geos)}
 
 
 @functools.cache
