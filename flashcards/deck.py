@@ -99,9 +99,9 @@ class Note:
         prv: str = "",
         nxt: str = "",
         search: str = "",
-        js_start: str = "",
         js_path: str = "",
         css: list[str] | None = None,
+        tags: list[str] | None = None,
         force_content: bool = True,
     ) -> None:
 
@@ -118,6 +118,7 @@ class Note:
         self.back: str = back
         self.js_path: str = js_path
         self.css: list[str] = css or []
+        self.tags: list[str] = tags or []
         self.html: str = page.html(
             page.html_head(
                 title=title,
@@ -135,7 +136,6 @@ class Note:
             self.back,
             "</div>",
         )
-        self.js_start: str = js_start
 
     def write(self, dir_: str | pathlib.Path) -> None:
         path: str = os.path.join(dir_, self.key + ".html")
@@ -301,9 +301,6 @@ class Deck:
         # We don't allow notes to have different JavaScript, because in our Anki
         # package, we define the JavaScript in the template.
         js_path: str = ensure.singleton(note.js_path for note in self.notes)
-        js_start: str = ensure.singleton(note.js_start for note in self.notes)
-
-        yield js_start
 
         if not js_path:
             return
@@ -354,6 +351,12 @@ class Deck:
             front = self._anki_html(note.front)
             back = self._anki_html(note.back)
             key = f"{self.name} - {note.key}"
-            deck.add_note(GenankiNote(model=model, fields=[front, back, key]))
+            deck.add_note(
+                GenankiNote(
+                    model=model,
+                    fields=[front, back, key],
+                    tags=note.tags,
+                ),
+            )
 
         return deck, self.media_files

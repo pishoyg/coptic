@@ -32,6 +32,24 @@ from utils import concur, ensure, file, log, paths
 # multiple decks.
 # The "key" field is used to key the notes.
 
+# NOTE: Each note lives in exactly one deck. Anki has no way for a deck to
+# reference notes that live in another deck, so we don't ship decks that are
+# subsets of other decks. Subsets are expressed as tags instead (e.g. `Crum::B`
+# for Crum entries that have a Bohairic form), and users can study them using
+# a filtered deck (e.g. `deck:"A Coptic Dictionary" tag:Crum::B`).
+# Disjoint subsets can still be shipped as sibling decks, with their parent
+# deck acting as the superset (e.g. `KELLIA::Egyptian` and `KELLIA::Greek`
+# under `KELLIA`).
+#
+# NOTE: The following deck IDs are retired. They belonged to subset decks that
+# used to duplicate notes. Do NOT reuse them:
+# - 1284010383: A Coptic Dictionary::Bohairic
+# - 1284010386: A Coptic Dictionary::Sahidic
+# - 1284010390: A Coptic Dictionary::Bohairic / Sahidic
+# - 1284010391: KELLIA::Comprehensive
+# - 1284010395: KELLIA::Greek::Bohairic
+# - 1284010396: KELLIA::Greek::Sahidic
+
 DECKS: list[deck.Deck] = [
     deck.Deck(
         "A Coptic Dictionary::All Dialects",
@@ -39,41 +57,11 @@ DECKS: list[deck.Deck] = [
         crum.notes_aux(),
     ),
     deck.Deck(
-        "A Coptic Dictionary::Bohairic",
-        1284010383,
-        crum.notes_aux({"B"}),
-    ),
-    deck.Deck(
-        "A Coptic Dictionary::Sahidic",
-        1284010386,
-        crum.notes_aux({"S"}),
-    ),
-    deck.Deck(
-        "A Coptic Dictionary::Bohairic / Sahidic",
-        1284010390,
-        crum.notes_aux({"B", "S"}),
-    ),
-    deck.Deck(
-        "KELLIA::Comprehensive",
-        1284010391,
-        kellia.notes_aux(kellia.comprehensive()),
-    ),
-    deck.Deck(
         "KELLIA::Egyptian",
         1284010392,
         kellia.notes_aux(kellia.egyptian()),
     ),
     deck.Deck("KELLIA::Greek", 1284010393, kellia.notes_aux(kellia.greek())),
-    deck.Deck(
-        "KELLIA::Greek::Bohairic",
-        1284010395,
-        kellia.notes_aux(kellia.greek(("B",)), ["B"]),
-    ),
-    deck.Deck(
-        "KELLIA::Greek::Sahidic",
-        1284010396,
-        kellia.notes_aux(kellia.greek(("S",)), ["S"]),
-    ),
     deck.Deck("Andreas of St. Macarius", 1284010394, andreas.notes_aux()),
 ]
 

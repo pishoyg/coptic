@@ -48,7 +48,7 @@ import pandas as pd
 from dictionary import cls as dict_cls
 from dictionary.kellia_uni_goettingen_de import cls, ids, sources
 from flashcards import deck
-from utils import ensure, file, gcp, javascript, log, page, paths, text
+from utils import ensure, file, gcp, log, page, paths, text
 from xooxle import xooxle
 
 XML_NS: str = "{http://www.w3.org/XML/1998/namespace}"
@@ -218,6 +218,9 @@ class Orthography:
 
     def has_dialect(self, geo: str) -> bool:
         return any(f.geo == geo for f in self.forms)
+
+    def dialects(self) -> list[str]:
+        return [geo for geo in GEOS if self.has_dialect(geo)]
 
     def table_aux(self) -> abc.Generator[str]:
         yield f'<table id="{ids.ORTHS}">'
@@ -502,12 +505,6 @@ class Word:
 
     def cdo(self) -> str:
         return paths.coptic_dictionary_online(self.entry_xml_id)
-
-    def has_dialect(self, geo: str) -> bool:
-        return self.orthstring.has_dialect(geo)
-
-    def has_a_dialect(self, geos: abc.Iterable[str]) -> bool:
-        return any(map(self.has_dialect, geos))
 
 
 def _geo(form: ET.Element) -> str:
@@ -972,34 +969,26 @@ def _augmented_words() -> abc.Generator[Word]:
         log.error("Bohairic forms", forms, "have an invalid TLA ID", tla_id)
 
 
-# The `geos` parameter uses a tuple instead of a list because
-# `functools.cache` requires all arguments to be hashable.
 @functools.cache
-def comprehensive(geos: tuple[str, ...] | None = None) -> dict[str, Word]:
-    return {
-        w.entry_xml_id: w
-        for w in _augmented_words()
-        if not geos or w.has_a_dialect(geos)
-    }
+def comprehensive() -> dict[str, Word]:
+    return {w.entry_xml_id: w for w in _augmented_words()}
 
 
 @functools.cache
-def egyptian(geos: tuple[str, ...] | None = None) -> dict[str, Word]:
+def egyptian() -> dict[str, Word]:
     words: dict[str, Word] = {
-        k: w for k, w in comprehensive(geos).items() if not w.is_greek
+        k: w for k, w in comprehensive().items() if not w.is_greek
     }
-    if not geos:
-        assert len(words) == NUM_EGYPTIAN, len(words)
+    assert len(words) == NUM_EGYPTIAN, len(words)
     return words
 
 
 @functools.cache
-def greek(geos: tuple[str, ...] | None = None) -> dict[str, Word]:
+def greek() -> dict[str, Word]:
     words: dict[str, Word] = {
-        k: w for k, w in comprehensive(geos).items() if w.is_greek
+        k: w for k, w in comprehensive().items() if w.is_greek
     }
-    if not geos:
-        assert len(words) == NUM_GREEK, len(words)
+    assert len(words) == NUM_GREEK, len(words)
     return words
 
 
@@ -1009,7 +998,6 @@ def _join(*parts: str) -> str:
 
 def notes_aux(
     words: dict[str, Word] | None = None,
-    dialects: abc.Iterable[str] | None = None,
 ) -> abc.Generator[deck.Note]:
     # Default to the comprehensive set, loaded lazily.
     # This allows callers to invoke `notes_aux(comprehensive())` without
@@ -1038,9 +1026,9 @@ def notes_aux(
             title=str(key),
             front=front,
             back=back,
-            js_start=javascript.dialects_js(dialects or set()),
             js_path=relpath(paths.KELLIA_JS),
             css=[relpath(paths.CRUM_CSS), relpath(paths.TOOLTIP_CSS)],
+            tags=[f"KELLIA::{geo}" for geo in word.orthstring.dialects()],
         )
 
 
