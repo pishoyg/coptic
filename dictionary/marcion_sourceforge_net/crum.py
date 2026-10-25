@@ -38,7 +38,7 @@ from xooxle import xooxle
 # isort: off
 # pylint: disable-next=ungrouped-imports
 from utils import cache, concur, ensure, file, gcp, log, page, paths, text
-from utils import numeral, markdown
+from utils import javascript, numeral, markdown
 
 _NUM_DRV_COLS: int = 10
 _HUNDRED: int = 100
@@ -712,7 +712,7 @@ class Root(Row):
             for _ in range(repetitions - 1):
                 yield ("", 0)
 
-    def note(self) -> deck.Note:
+    def note(self, dialects: set[str] | None = None) -> deck.Note:
         return deck.Note(
             key=self.key,
             front=self._front,
@@ -721,9 +721,9 @@ class Root(Row):
             nxt=f"{Crum.next_key(self)}.html",
             prv=f"{Crum.prev_key(self)}.html",
             search=SEARCH,
+            js_start=javascript.dialects_js(dialects or set()),
             js_path=JS,
             css=CSS,
-            tags=[f"Crum::{d}" for d in self.all_dialects],
         )
 
     @functools.cached_property
@@ -1466,9 +1466,11 @@ def indexer() -> Indexer:
     return Indexer(_key_to_sister(), SisterWithFrag)
 
 
-def notes_aux() -> abc.Generator[deck.Note]:
+def notes_aux(dialects: set[str] | None = None) -> abc.Generator[deck.Note]:
     for root in Crum.roots.values():
-        yield root.note()
+        if dialects and not dialects.intersection(root.all_dialects):
+            continue
+        yield root.note(dialects)
 
 
 # Xooxle search will work fine even if we don't retain any HTML tags, because it
