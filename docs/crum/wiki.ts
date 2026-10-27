@@ -25,6 +25,7 @@ import * as scan from '../scan.js';
 import * as dial from '../dialect.js';
 import * as book from './book.js';
 import * as sept from './septuagint.js';
+import * as randy from './randy.js';
 
 /**
  * The Bible book mapping, keyed by every Crum abbreviation. It's derived from
@@ -674,8 +675,8 @@ function handleAux(wiki: HTMLElement, full: boolean): void {
  * @param wiki
  */
 function addFinePrint(wiki: HTMLElement): void {
-  const div: HTMLDivElement = document.createElement('div');
-  div.append(
+  randy.addFinePrint(
+    wiki,
     'See ',
     html.anchor(paths.crumScan(PREFACE_PAGE), 'preface'),
     ' and ',
@@ -685,8 +686,6 @@ function addFinePrint(wiki: HTMLElement): void {
     ),
     '.'
   );
-  div.classList.add(cls.FINE_PRINT);
-  wiki.insertAdjacentElement('beforeend', div);
 }
 
 /**
@@ -1747,7 +1746,7 @@ function replaceMatch(context: html.Context): void {
  *
  * @param root
  */
-export function enrich(root: HTMLElement): void {
+function enrich(root: HTMLElement): void {
   const chains = function* (): Generator<Node[]> {
     let chain: Node[] = [];
     for (const node of walk(root)) {
