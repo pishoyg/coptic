@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["randy.ts"],
+  "sourcesContent": ["import * as cls from './cls.js';\n\n/**\n *\n * @param elem\n * @param {...any} content\n */\nexport function addFinePrint(\n  elem: HTMLElement,\n  ...content: (Node | string)[]\n): void {\n  const div: HTMLDivElement = document.createElement('div');\n  div.append(...content);\n  div.classList.add(cls.FINE_PRINT);\n  elem.insertAdjacentElement('beforeend', div);\n}\n"],
+  "mappings": "aAAA,UAAYA,MAAS,WAOd,gBAAS,aACdC,KACGC,EACG,CACN,MAAMC,EAAsB,SAAS,cAAc,KAAK,EACxDA,EAAI,OAAO,GAAGD,CAAO,EACrBC,EAAI,UAAU,IAAIH,EAAI,UAAU,EAChCC,EAAK,sBAAsB,YAAaE,CAAG,CAC7C",
+  "names": ["cls", "elem", "content", "div"]
+}
