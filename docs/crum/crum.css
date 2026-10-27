@@ -215,14 +215,25 @@ figcaption {
   opacity: 0.65;
 }
 
-/* Kasser's paragraphs are not indented. */
 .wiki p {
   text-indent: 1.7em;
+  margin-bottom: 0.8em;
+}
+
+/* Kasser's entries hang: the first line of the first paragraph protrudes to
+ * the left, and every other line, in every paragraph, is indented. The
+ * paragraphs are also set closer together. */
+.kasser p {
+  padding-left: 1em;
+  margin-bottom: 0.3em;
+
+  &:first-child {
+    text-indent: -1em;
+  }
 }
 
 :is(.wiki, .kasser) p {
   margin-top: 0;
-  margin-bottom: 0.8em;
   text-align: justify;
   line-height: 1.7;
 }
