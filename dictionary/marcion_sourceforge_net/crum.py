@@ -857,10 +857,7 @@ class Root(Row):
         yield self.drv_html_table().replace("{", "(").replace("}", ")")
 
         # Wiki.
-        if self.wikis:
-            yield f'<div class="{cls.WIKI}" id="{ids.WIKI}">'
-            yield from randy.columns(cls.CRUM_PAGE, self.wikis)
-            yield "</div>"
+        yield from randy.quire(cls.WIKI, ids.WIKI, cls.CRUM_PAGE, self.wikis)
 
         # Kasser.
         _verify_keys()
@@ -1520,6 +1517,7 @@ XOOXLE: xooxle.Xooxle = xooxle.Xooxle(
             # increase the size of the index more significantly, so we shouldn't
             # do it.
             retain_classes={
+                cls.QUIRE,
                 cls.WIKI,
                 dict_cls.DIALECT,
                 cls.HEADWORD,

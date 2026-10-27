@@ -6,7 +6,7 @@ import itertools
 import typing
 import unicodedata
 from collections import defaultdict
-from collections.abc import Generator, Iterable
+from collections.abc import Generator, Iterable, Sequence
 
 import regex
 
@@ -457,26 +457,35 @@ def by_marcion_key[E: Entry[typing.Any]](
     return by_key
 
 
-def columns(
+def quire(
+    class_: str,
+    id_: str,
     page_class: str,
-    entries: Iterable[Entry[typing.Any]],
+    entries: Sequence[Entry[typing.Any]],
 ) -> Generator[str]:
-    """Render entries, grouped by the column that they occur on.
+    """Render a book's entries, grouped into a folio per column.
 
     Args:
+        class_: The HTML class of the book, borne by the quire alongside
+            `cls.QUIRE`.
+        id_: The HTML id of the quire.
         page_class: The HTML class of the label that names a column's page.
         entries: The entries to render. The entries on a column must be
             contiguous.
 
     Yields:
-        The HTML of each column.
+        The HTML of the quire, or nothing if there are no entries.
     """
+    if not entries:
+        return
+    yield f'<div class="{cls.QUIRE} {class_}" id="{id_}">'
     for page, group in itertools.groupby(entries, key=lambda e: e.page):
         yield f'<div class="{cls.FOLIO}">'
         yield f'<span class="{page_class}">{page}</span>'
         for e in group:
             yield e.html
         yield "</div>"
+    yield "</div>"
 
 
 class Languages[L: str]:

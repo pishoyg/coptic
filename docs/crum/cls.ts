@@ -75,7 +75,6 @@ export const HEBREW = 'hebrew';
 export const HIEROGLYPHIC = 'hieroglyphic';
 export const IBIDEM = 'ibidem';
 export const INDEX_TABLE = 'index-table';
-export const KASSER = 'kasser';
 export const KASSER_PAGE = 'kasser-page';
 /**
  * LANG is a language in a KELLIA meaning column (as of now, either "En", "Fr",
@@ -98,6 +97,7 @@ export const NAVIGATE = 'navigate';
 export const OLD = 'old';
 export const PAGE = 'page';
 export const QUALITY = 'quality';
+export const QUIRE = 'quire';
 /**
  * REFERENCE is the class of a reference in the Crum Wiki.
  */

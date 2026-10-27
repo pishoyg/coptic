@@ -223,7 +223,7 @@ figcaption {
 /* Kasser's entries hang: the first line of the first paragraph protrudes to
  * the left, and every other line, in every paragraph, is indented. The
  * paragraphs are also set closer together. */
-.kasser p {
+:is(.complements, .morphologiques) p {
   padding-left: 1em;
   margin-bottom: 0.3em;
 
@@ -232,7 +232,7 @@ figcaption {
   }
 }
 
-:is(.wiki, .kasser) p {
+.quire p {
   margin-top: 0;
   text-align: justify;
   line-height: 1.7;
@@ -365,7 +365,7 @@ figcaption {
   margin-left: 0.25em;
 }
 
-:is(.wiki, .kasser) {
+.quire {
   margin-top: 2em;
   margin-bottom: 2em;
 

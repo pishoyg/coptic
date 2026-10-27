@@ -519,21 +519,15 @@ def root_html(key: str) -> abc.Generator[str]:
         key: The root's Marcion key.
 
     Yields:
-        The Kasser element, or nothing if neither book has an entry for the
-        root.
+        An element for each book that has entries for the root, structured like
+        the Wiki's.
     """
     # TODO: (#786) Index the Kasser entries in Xooxle. (They're currently in the
     # `Appendix`, but may be more suitable for a separate layer.)
-    books: dict[Book, list[Entry]] = {
-        book: by_marcion_key(book).get(key, []) for book in Book
-    }
-    if not any(books.values()):
-        return
-    yield f'<div class="{cls.KASSER}" id="{ids.KASSER}">'
-    for book, es in books.items():
-        if not es:
-            continue
-        yield f'<div class="{book}" id="{ID[book]}">'
-        yield from randy.columns(cls.KASSER_PAGE, es)
-        yield "</div>"
-    yield "</div>"
+    for book in Book:
+        yield from randy.quire(
+            book,
+            ID[book],
+            cls.KASSER_PAGE,
+            by_marcion_key(book).get(key, []),
+        )
