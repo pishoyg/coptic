@@ -17,6 +17,7 @@ import * as ccls from '../cls.js';
 import * as head from '../header.js';
 import * as log from '../logger.js';
 import * as wiki from './wiki.js';
+import * as kasser from './kasser.js';
 import * as tool from '../tooltip.js';
 import type * as dev from '../dev.js';
 import * as roots from './roots.js';
@@ -41,6 +42,7 @@ export function handle(
   handleDialect(root, highlighter);
   addGreekLookups(root);
   wiki.handle(root, full);
+  kasser.handle(root, full);
 
   if (!full) {
     return;
