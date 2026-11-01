@@ -75,6 +75,8 @@ _ALPHABETS: dict[Language, tuple[str, ...]] = {
         "\u0345",  # Ypogegrammeni.
         " ",
         ".",  # A lacuna: ...θυμιῶσαι.
+        "⟨",
+        "⟩",
     ),
     "COPTIC": (
         # See The Unicode Standard, ch. 7, Supralineation:
