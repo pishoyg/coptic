@@ -246,14 +246,6 @@ class Entry[Col: Column](abc.ABC):
         )
         self.vide: bool = bool(vide)
 
-        if len(self.keys) > 1:
-            ensure.ensure(
-                self.vide,
-                self,
-                "is non-vide but has several keys:",
-                self.keys,
-            )
-
         invalid: list[str] = [s for s in raw_re.split(self.entry) if s]
         ensure.ensure(
             not invalid,
