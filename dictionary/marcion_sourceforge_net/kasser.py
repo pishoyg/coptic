@@ -30,7 +30,7 @@ RAW_RE: regex.Pattern[str] = regex.compile(
             # TODO: (#786) Mathematical angle brackets are used by the
             # materialization. If Kasser were to get materialized, we might want
             # to change the materializer's notation to avoid confusion.
-            r"[\p{Latin}=^0-9 *⟨⟩!–'(),\-./:;?\[\]_~«»\\°&]",
+            r"[\p{Latin}=^0-9 *⟨⟩!–'(),\-./:;?\[\]_~«»\\°&—]",
         ),
     ),
 )
@@ -125,6 +125,8 @@ _ALPHABETS: dict[Language, tuple[str, ...]] = {
         "\\-",
         "\\[",  # Square brackets mark a lacuna, or, in the Morphologiques,
         "\\]",  # the Crum lemma that an entry falls under.
+        "{",
+        "}",
     ),
 }
 
@@ -188,6 +190,7 @@ _SUPERSCRIPTS: list[str] = [
     "s",
     "x",
     "sx",
+    "sf",
     "xm",
     "xs",
     "·a",
