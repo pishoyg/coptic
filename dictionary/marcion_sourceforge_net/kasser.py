@@ -182,6 +182,7 @@ _BASES: list[str] = [
 # NOTE: Kasser's X only occurs as a superscript.
 _SUPERSCRIPTS: list[str] = [
     "a",
+    "a2",
     "b",
     "f",
     "h",
