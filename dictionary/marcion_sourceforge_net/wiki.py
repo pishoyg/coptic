@@ -567,17 +567,18 @@ _IN_LANG_TAGS: regex.Pattern[str] = regex.compile(
 
 
 class Col(enum.StrEnum):
-    """Name of a column in the Wiki sheet that the pipeline reads.
+    """Name of a column in the Wiki sheet that the snapshot tracks.
 
-    This doubles as the whitelist for the tracked snapshot, and the member
-    order fixes the snapshot's column order, so reordering the members rewrites
-    the tracked file wholesale.
+    The pipeline reads all of these but `NOTES`, which we track for the benefit
+    of `diff` reviews. The member order fixes the snapshot's column order, so
+    reordering the members rewrites the tracked file wholesale.
     """
 
     MARCION = "Marcion"
     CRUM = "Crum"
     VIDE = "_v_"
     ENTRY = "Entry"
+    NOTES = "Notes"
 
 
 class Column(randy.Column):

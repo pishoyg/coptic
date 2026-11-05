@@ -378,16 +378,18 @@ _SUBSTITUTIONS: list[randy.Substitution] = [
 
 
 class Col(enum.StrEnum):
-    """Name of a column in the Kasser sheets that the pipeline reads.
+    """Name of a column in the Kasser sheets that the snapshots track.
 
-    Both sheets share the same columns. The order is that of the sheets, and
-    the snapshots retain it.
+    The pipeline reads all of these but `NOTES`, which we track for the benefit
+    of `diff` reviews. Both sheets share the same columns. The order is that of
+    the sheets, and the snapshots retain it.
     """
 
     KASSER = "Kasser"
     MARCION = "Marcion"
     VIDE = "_v_"
     ENTRY = "Entry"
+    NOTES = "Notes"
 
 
 class Book(enum.StrEnum):

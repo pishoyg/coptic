@@ -95,11 +95,10 @@ _ = _argparser.add_argument(
 def _snapshot_wiki() -> None:
     """Refresh the local snapshot of the Wiki sheet, dropping the noise.
 
-    We only save the columns used in the pipeline, which are listed in the
-    `wiki.Col` enum. The sheet's other columns are the contributors' own
-    bookkeeping, and they are pure noise in the snapshot: they would bloat the
-    tracked file and fill its `diff` with churn that has no bearing on the
-    output.
+    We only save the columns listed in the `wiki.Col` enum. The sheet's other
+    columns are the contributors' own bookkeeping, and they are pure noise in
+    the snapshot: they would bloat the tracked file and fill its `diff` with
+    churn that has no bearing on the output.
     """
     df: pd.DataFrame = gcp.tsv_spreadsheet(_WIKI_SHEET_TSV_URL)
     file.to_tsv(df[[col.value for col in wiki.Col]], paths.WIKI_TSV)
