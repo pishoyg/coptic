@@ -313,6 +313,7 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'equivalent', variants: ['equiv'] },
   { fullForm: 'etymology', variants: ['etymol'] },
   { fullForm: 'excluding', variants: ['exc'] },
+  { fullForm: 'explanation', variants: ['expl'] },
   { fullForm: 'figurative', variants: ['figur'] },
   {
     fullForm: 'and the following (pages / verses)',
@@ -320,7 +321,11 @@ export const DATA: Abbreviation[] = [
     noCaseVariant: true,
     suffix: true,
   },
-  { fullForm: 'fragment', variants: ['frag', 'fragm', 'fr'], suffix: true },
+  {
+    fullForm: 'fragment',
+    variants: ['frag', 'fragm', 'fr', 'fragt'],
+    suffix: true,
+  },
   { fullForm: 'future', variants: ['fut'] },
   { fullForm: 'Hebrew', variants: ['Heb', 'Hebr'], noCaseVariant: true },
   {
@@ -343,7 +348,7 @@ export const DATA: Abbreviation[] = [
   { fullForm: 'improbable', variants: ['improb'] },
   { fullForm: 'inscription', variants: ['inscr'], suffix: true },
   { fullForm: 'instrumental', variants: ['instr'] },
-  { fullForm: 'interpretation', variants: ['interpr'] },
+  { fullForm: 'interpretation', variants: ['interpr', 'interpret'] },
   { fullForm: 'in loco', variants: ['in loc'], suffix: true },
   { fullForm: 'indeclinable', variants: ['indecl'] },
   { fullForm: 'indefinite', variants: ['indef'] },
