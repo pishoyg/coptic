@@ -16,10 +16,9 @@ import * as browser from '../browser.js';
  *
  */
 function main(): void {
-  const manager: dial.Manager = new dial.Manager();
-
-  const highlighter = new high.Highlighter(manager, []);
-  const devHighlighter: dev.Highlighter = new dev.Highlighter();
+  const highlighter = new high.Highlighter(new dial.Manager());
+  // The developer-mode highlighter listens for the Dev event.
+  new dev.Highlighter();
 
   // We disable the help panel on Anki for the following reasons:
   // - There is no keyboard on mobile.
@@ -30,7 +29,7 @@ function main(): void {
   //   Anki platforms! (The panel used to create the `help` footer itself; the
   //   footer now comes from the note's HTML.)
   if (!iam.amI('card')) {
-    help.makeHelpPanel(highlighter, devHighlighter);
+    help.makeHelpPanel(highlighter);
   }
 
   crum.handle(document.body, highlighter);

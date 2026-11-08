@@ -12,7 +12,6 @@ import * as dial from './dialect.js';
 import * as paths from '../paths.js';
 import * as css from '../css.js';
 import * as xoox from '../xooxle.js';
-import type * as dev from '../dev.js';
 import * as cls from './cls.js';
 import * as head from '../header.js';
 import * as id from './id.js';
@@ -20,16 +19,14 @@ import * as mode from './mode.js';
 import * as html from '../html.js';
 
 /**
+ * Actions shared with the header (Reset, Dev, Help) dispatch the header's
+ * events, so the shortcut and the button behave alike.
  *
  * @param highlighter
- * @param devHighlighter
  * @returns
  */
 // eslint-disable-next-line max-lines-per-function
-export function makeHelpPanel(
-  highlighter: high.Highlighter,
-  devHighlighter: dev.Highlighter
-): help.Help {
+export function makeHelpPanel(highlighter: high.Highlighter): help.Help {
   const panel = new help.Help();
 
   const dialectHighlighting: Record<dial.DialectKey, help.Shortcut[]> =
@@ -59,7 +56,9 @@ export function makeHelpPanel(
       new help.Shortcut(
         'Developer mode',
         ['lexicon', 'note', 'index', 'index_index'],
-        devHighlighter.toggle.bind(devHighlighter)
+        (): void => {
+          head.dispatch(head.EVENT.DEV);
+        }
       ),
     ],
     R: [
@@ -93,7 +92,9 @@ export function makeHelpPanel(
       new help.Shortcut(
         'Toggle help panel',
         ['lexicon', 'note', 'index', 'index_index'],
-        panel.toggle.bind(panel)
+        (): void => {
+          head.dispatch(head.EVENT.HELP);
+        }
       ),
     ],
     o: [

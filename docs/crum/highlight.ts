@@ -56,7 +56,7 @@ export class Highlighter extends high.DialectHighlighter<dial.DIALECT> {
    */
   public constructor(
     manager: dial.Manager,
-    checkboxes: HTMLInputElement[],
+    checkboxes: HTMLInputElement[] = [],
     isActive?: () => boolean
   ) {
     super(

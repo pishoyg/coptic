@@ -531,7 +531,8 @@ export async function init(): Promise<void> {
     })
   );
 
+  // The developer-mode highlighter listens for the Dev event.
+  new dev.Highlighter(isActive);
   // Create the help panel.
-  const devHighlighter: dev.Highlighter = new dev.Highlighter(isActive);
-  help.makeHelpPanel(highlighter, devHighlighter);
+  help.makeHelpPanel(highlighter);
 }

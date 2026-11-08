@@ -533,13 +533,6 @@ export class Help {
   }
 
   /**
-   * Toggle the panel visibility.
-   */
-  public toggle(): void {
-    this.panel.toggle();
-  }
-
-  /**
    * Verify that each key triggers a single shortcut!
    */
   private verifyNoDuplicates(): void {
