@@ -10,6 +10,8 @@ import * as dial from './dialect.js';
 import type * as ddial from '../dialect.js';
 import * as css from '../css.js';
 import * as log from '../logger.js';
+import * as head from '../header.js';
+import * as dev from '../dev.js';
 
 enum ID {
   TRAY = 'tray',
@@ -152,6 +154,20 @@ async function handleSources(): Promise<void> {
  *
  */
 async function main(): Promise<void> {
+  // Mount before the first `await`. See the NOTE in `header.ts`.
+  head.mount(
+    'header',
+    head.prev(),
+    head.home(),
+    head.search(undefined, 'Bible'),
+    head.reset(),
+    head.reports(),
+    head.next()
+  );
+  head.mount('footer', head.dev());
+  // The highlighter toggles developer mode on the Dev button's event.
+  new dev.Highlighter();
+
   const controls: ddial.Control[] = dial.DIALECTS.map(
     (d: dial.Dialect): ddial.Control => d.control()
   );

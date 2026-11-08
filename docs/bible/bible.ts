@@ -14,6 +14,8 @@ import * as high from './highlight.js';
 import * as ddial from '../dialect.js';
 import * as map from '../crum/bible.js';
 import * as params from '../params.js';
+import * as head from '../header.js';
+import * as dev from '../dev.js';
 
 // TODO: (#0) It may be cleaner to export a separate mapping for this use
 // case, instead of reusing Crum's mapping.
@@ -381,6 +383,12 @@ function addEventListeners(
  *
  */
 async function main(): Promise<void> {
+  // Mount before the first `await`. See the NOTE in `header.ts`.
+  head.mount('header', head.home(), head.reset(), head.reports());
+  head.mount('footer', head.dev());
+  // The highlighter toggles developer mode on the Dev button's event.
+  new dev.Highlighter();
+
   handleBookTitles();
 
   // NOTE: We scroll to the book *before* loading the index, because loading the
