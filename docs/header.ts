@@ -38,6 +38,9 @@ enum CLS {
   /** EITHER is the class of a slot that holds alternative units, of which the
    * page shows one at a time. */
   EITHER = 'either',
+  /** LEGEND is the class of the text that explains a unit's icon, which a
+   * crowded nav on a small screen hides. See {@link iconAndLegend}. */
+  LEGEND = 'legend',
 }
 
 enum ID {
@@ -133,15 +136,39 @@ function anchor(
 }
 
 /**
- * @param text - The button label.
- * @param event - The event to dispatch on click, if any.
- * @param id
+ * A unit's content comes in one of two modes:
+ * - A unit with an icon and a legend shows both, except in a crowded nav on a
+ *   small screen, where it shows only the icon (see `header.css`). Its content
+ *   comes from this function.
+ * - A unit with a single mode (such as prev, next, and labels) shows the same
+ *   content everywhere. Its content is plain text.
+ *
+ * @param icon - The content that is always shown.
+ * @param legend - The text that explains the icon, which may be hidden.
+ * @returns The content of a unit.
+ */
+function iconAndLegend(icon: string, legend: string): Node[] {
+  const span: HTMLSpanElement = document.createElement('span');
+  span.classList.add(CLS.LEGEND);
+  // The space belongs to the legend, so it disappears along with it.
+  span.textContent = ` ${legend}`;
+  return [document.createTextNode(icon), span];
+}
+
+/**
+ * @param event - The event to dispatch on click.
+ * @param id - The button's ID.
+ * @param children - The button content.
  * @returns A button.
  */
-function button(text: string, event: EVENT, id: string): HTMLButtonElement {
+function button(
+  event: EVENT,
+  id: string,
+  ...children: (Node | string)[]
+): HTMLButtonElement {
   const b: HTMLButtonElement = document.createElement('button');
   b.type = 'button';
-  b.textContent = text;
+  b.append(...children);
   b.addEventListener('click', (): void => {
     dispatch(event);
   });
@@ -153,17 +180,20 @@ function button(text: string, event: EVENT, id: string): HTMLButtonElement {
  * @returns A link to the homepage.
  */
 export function home(): HTMLElement {
-  return anchor(paths.HOME, 'Home');
+  return anchor(paths.HOME, ...iconAndLegend('⌂', 'Home'));
 }
 
 /**
  * @param href - The link target. Defaults to the page's
  * `<link rel="search">`, which must then exist.
- * @param text - The link label.
+ * @param legend - The text that explains the search icon.
  * @returns A search link.
  */
-export function search(href?: string, text = 'Search'): HTMLElement {
-  return anchor(href ?? browser.getLinkHref('search')!, text);
+export function search(href?: string, legend = 'Search'): HTMLElement {
+  return anchor(
+    href ?? browser.getLinkHref('search')!,
+    ...iconAndLegend('⌕', legend)
+  );
 }
 
 /**
@@ -180,7 +210,7 @@ function neighbor(
   event: EVENT,
   id: string
 ): HTMLElement {
-  const b: HTMLButtonElement = button(text, event, id);
+  const b: HTMLButtonElement = button(event, id, text);
   // If the link is available, register a default listener.
   // On pages where a different listener is needed, the link should be absent,
   // and this listener won't be registered.
@@ -222,27 +252,24 @@ export function label(text: string, href?: string): HTMLElement {
 }
 
 /**
- * On a small screen, the unit shows a flag instead of the word, which wraps in
- * its column.
- *
  * @returns A link to the reports form, opening in a new tab.
  */
 export function reports(): HTMLElement {
-  return anchor(paths.reports(), browser.smallScreen() ? '⚑' : 'Reports');
+  return anchor(paths.reports(), ...iconAndLegend('⚑', 'Reports'));
 }
 
 /**
  * @returns A button that dispatches {@link EVENT.RESET}.
  */
 export function reset(): HTMLElement {
-  return button('Reset', EVENT.RESET, ID.RESET);
+  return button(EVENT.RESET, ID.RESET, ...iconAndLegend('⟳', 'Reset'));
 }
 
 /**
  * @returns A button that dispatches {@link EVENT.DEV}.
  */
 export function dev(): HTMLElement {
-  return button('Dev', EVENT.DEV, ID.DEV);
+  return button(EVENT.DEV, ID.DEV, ...iconAndLegend('λ', 'Dev'));
 }
 
 /**
@@ -252,7 +279,7 @@ export function dev(): HTMLElement {
  * @returns A button that dispatches {@link EVENT.HELP}.
  */
 export function help(): HTMLElement {
-  return button('Help', EVENT.HELP, ID.HELP);
+  return button(EVENT.HELP, ID.HELP, ...iconAndLegend('?', 'Help'));
 }
 
 /**

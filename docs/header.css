@@ -1,11 +1,19 @@
 /* The shared header and footer, mounted by `header.ts`.
  *
  * The rules are scoped to `> nav`, so they leave alone the static footers
- * that some pages have (such as the Lexicon's icons and logos). */
+ * that some pages have (such as the Lexicon's icons and logos).
+ *
+ * The units are small, borderless, and transparent until hovered, so they
+ * don't compete with the page's title and text. They inherit the page's font
+ * and take its strong text color. */
 :is(header, footer) {
-  --unit-font-size: 0.95rem;
+  --unit-font-size: 0.9rem;
   --unit-line-height: 1.6;
   --unit-padding-block: 6px;
+
+  /* Columns are narrow on a small screen, so the inline padding is kept to a
+   * minimum, leaving as much room as possible for text. */
+  --unit-padding-inline: 4px;
 }
 
 /* The header reserves the rendered height of its units, so mounting it never
@@ -16,17 +24,22 @@ header {
     var(--unit-font-size) * var(--unit-line-height) + 2 *
       var(--unit-padding-block)
   );
+  margin-bottom: 8px;
   position: relative;
   z-index: 10;
 }
 
 /* Each unit (or set of alternative units) gets a column of its own, and all
  * columns share the width equally. An empty slot keeps its column, so units
- * stay aligned. */
+ * stay aligned.
+ *
+ * A unit never wraps, even if it overflows its column: `minmax(0, 1fr)` keeps a
+ * long unit from widening its column (as a bare `1fr` would), and centering
+ * makes it overflow equally on both sides. */
 :is(header, footer) > nav {
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: 1fr;
+  grid-auto-columns: minmax(0, 1fr);
   place-items: center center;
   text-align: center;
 
@@ -37,19 +50,23 @@ header {
     border: none;
     border-radius: 6px;
     background: none;
-    padding: var(--unit-padding-block) 12px;
+    padding: var(--unit-padding-block) var(--unit-padding-inline);
     margin: 0;
+    white-space: nowrap;
     font-family: inherit;
     font-size: var(--unit-font-size);
     line-height: var(--unit-line-height);
     color: var(--text-strong);
     text-decoration: none;
     cursor: pointer;
-    transition: background-color 0.2s ease-in-out;
+    transition:
+      background-color 0.2s ease-in-out,
+      color 0.2s ease-in-out;
 
     @media (hover: hover) {
       &:is(a, button):hover {
         background-color: var(--surface-hover);
+        color: var(--text-strong);
       }
     }
   }
@@ -57,5 +74,16 @@ header {
   /* Labels without a target aren't clickable. */
   & > span:not(.either) {
     cursor: default;
+  }
+}
+
+/* In a crowded nav (6+ cells) on a small screen, a unit with an icon and a
+ * legend shows only the icon, since the legend may not fit in its column. A
+ * unit with a single mode has no legend, so it's unaffected. A set of
+ * alternative units counts as one cell. See `iconAndLegend` in `header.ts`.
+ * The breakpoint matches `SMALL_SCREEN_WIDTH` in `browser.ts`. */
+@media (width < 500px) {
+  :is(header, footer) > nav:has(> :nth-child(6)) .legend {
+    display: none;
   }
 }
