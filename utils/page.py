@@ -56,6 +56,11 @@ LINE_BREAK: str = "<br>"
 HORIZONTAL_RULE: str = "<hr>"
 ASTERISK: str = "&ast;"
 NBSP: str = "&nbsp;"
+# HEADER and FOOTER are the empty placeholders that `docs/header.ts` fills with
+# the shared header and footer. They never change: the page's data lives in
+# its `<head>`, and its entry point picks what goes in them.
+HEADER: str = "<header></header>"
+FOOTER: str = "<footer></footer>"
 
 _HTML_ID_RE: regex.Pattern[str] = regex.compile(
     r'(?<=<\w+[^>]*)\bid=".*?"(?=[^<]*>)',

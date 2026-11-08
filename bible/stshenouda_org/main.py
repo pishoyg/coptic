@@ -204,6 +204,7 @@ _INDEX_CSS: list[str] = [
     "../collapse.css",
     "../xooxle.css",  # Styles the search results.
     "../tooltip.css",  # Styles the dialect tooltips.
+    "../header.css",  # Styles the shared header.
 ]  # CSS for the index.
 for artifact in [_CHAPTER_JS, _INDEX_JS, _CHAPTER_CSS, *_INDEX_CSS]:
     assert (paths.BIBLE_DIR / artifact).is_file()
@@ -568,8 +569,6 @@ class Chapter(Item):
         ]
         self._prev: Chapter | None = None
         self._next: Chapter | None = None
-        self._is_first: bool = False
-        self._is_last: bool = False
         self.book: Book = book
 
         # Make sure we're aware of all special cases. See #524 (and #677).
@@ -652,15 +651,11 @@ class Chapter(Item):
             for v in (self.verses if boundary_counts else self.verses[1:-1])
         )
 
-    def prev(self):
-        if self._is_first:
-            return None
+    def prev(self) -> "Chapter":
         assert self._prev
         return self._prev
 
-    def next(self):
-        if self._is_last:
-            return None
+    def next(self) -> "Chapter":
         assert self._next
         return self._next
 
@@ -669,12 +664,6 @@ class Chapter(Item):
 
     def set_next(self, nxt: typing.Self):
         self._next = nxt
-
-    def set_first(self):
-        self._is_first = True
-
-    def set_last(self):
-        self._is_last = True
 
     @typing.override
     def id(self) -> str:
@@ -947,20 +936,14 @@ class Bible:
             paths.LEXICON_DIR / "bible.js",
         )
 
+    # _link_chapters links the chapters in a loop: the first chapter's previous
+    # is the last chapter, and vice versa.
     def _link_chapters(self) -> None:
-        iterator: abc.Iterator[Chapter] = iter(self.chain_chapters())
-        cur: Chapter | None = next(iterator, None)
-        if not cur:
-            return
-        cur.set_first()
-        while True:
-            nxt: Chapter | None = next(iterator, None)
-            if nxt is None:
-                cur.set_last()
-                break
+        chapters: list[Chapter] = list(self.chain_chapters())
+        for i, cur in enumerate(chapters):
+            nxt: Chapter = chapters[(i + 1) % len(chapters)]
             cur.set_next(nxt)
             nxt.set_prev(cur)
-            cur = nxt
 
     def chain_books(self) -> abc.Generator[Book]:
         for testament in self.testaments:
@@ -1290,7 +1273,11 @@ class HTMLBuilder:
 
         file.write(
             self._html(
-                self._toc_body_aux(bible, is_epub=False),
+                (
+                    page.HEADER,
+                    *self._toc_body_aux(bible, is_epub=False),
+                    page.FOOTER,
+                ),
                 title=_TITLE_COP_EN,
                 page_class=cls.BIBLE,
                 scripts=[_INDEX_JS],
@@ -1304,20 +1291,22 @@ class HTMLBuilder:
         chapter: Chapter,
         langs: list[Language],
     ) -> None:
-        nxt: Chapter | None = chapter.next()
-        prv: Chapter | None = chapter.prev()
-
         file.write(
             self._html(
-                self._chapter_body_aux(chapter, langs),
+                (
+                    page.HEADER,
+                    *self._chapter_body_aux(chapter, langs),
+                    page.FOOTER,
+                ),
                 title=chapter.title(),
                 page_class=cls.CHAPTER,
-                nxt=nxt.href(is_epub=False) if nxt else "",
-                prv=prv.href(is_epub=False) if prv else "",
+                nxt=chapter.next().href(is_epub=False),
+                prv=chapter.prev().href(is_epub=False),
                 scripts=[_CHAPTER_JS],
                 css=[
                     _CHAPTER_CSS,
                     os.path.relpath(paths.TOOLTIP_CSS, paths.BIBLE_DIR),
+                    os.path.relpath(paths.HEADER_CSS, paths.BIBLE_DIR),
                 ],
             ),
             paths.BIBLE_DIR / chapter.path(is_epub=False),
