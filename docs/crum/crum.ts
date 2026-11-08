@@ -14,12 +14,10 @@ import * as dial from './dialect.js';
 import * as cls from './cls.js';
 import * as id from './id.js';
 import * as ccls from '../cls.js';
-import * as head from '../header.js';
 import * as log from '../logger.js';
 import * as wiki from './wiki.js';
 import * as kasser from './kasser.js';
 import * as tool from '../tooltip.js';
-import type * as dev from '../dev.js';
 import * as roots from './roots.js';
 import * as derivations from './derivations.js';
 
@@ -407,16 +405,4 @@ function handleQuality(root: HTMLElement): void {
     .forEach((el: HTMLElement) => {
       html.linkify(el, paths.rowUrl(paths.CRUM_ROOTS_URL, rowNum));
     });
-}
-
-/**
- *
- * @param highlighter
- * TODO: (#203) This belongs in the header module.
- */
-export function handleDeveloper(highlighter: dev.Highlighter): void {
-  document.addEventListener(
-    head.EVENT.DEV,
-    highlighter.toggle.bind(highlighter)
-  );
 }

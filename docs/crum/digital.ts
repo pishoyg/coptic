@@ -538,7 +538,4 @@ export async function init(): Promise<void> {
   // Add event listener for reports.
   // TODO: (#203) This belongs in the (future) header module.
   html.linkify(document.getElementById(id.REPORTS)!, paths.reports());
-
-  // TODO: (#203) Implement in the `header` package.
-  crum.handleDeveloper(devHighlighter);
 }

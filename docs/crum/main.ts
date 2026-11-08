@@ -34,7 +34,6 @@ function main(): void {
 
   crum.handle(document.body, highlighter);
 
-  crum.handleDeveloper(devHighlighter);
   addReportsLink();
 }
 

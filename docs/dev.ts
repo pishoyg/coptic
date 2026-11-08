@@ -1,5 +1,6 @@
 /** Package dev defines developer-mode logic. */
 import * as high from './highlight.js';
+import * as head from './header.js';
 
 /**
  * VAR is the name of the local storage variable holding the status of the
@@ -91,6 +92,19 @@ export class Highlighter extends high.Highlighter {
   public override reset(): void {
     this.set(false);
     this.update();
+  }
+
+  /**
+   * Add the shared listeners, and toggle developer mode on
+   * {@link head.EVENT.DEV}. Unlike reset, the toggle ignores whether this
+   * highlighter is active: developer mode is global, and a page has one
+   * developer-mode highlighter.
+   */
+  protected override addEventListeners(): void {
+    super.addEventListeners();
+    document.addEventListener(head.EVENT.DEV, (): void => {
+      this.toggle();
+    });
   }
 
   /**
