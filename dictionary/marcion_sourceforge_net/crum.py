@@ -1196,27 +1196,33 @@ class Index:
 class IndexIndex:
     """IndexIndex is an index of deck indexes."""
 
-    def __init__(self, name: str, indexes: list[Index]) -> None:
+    def __init__(
+        self,
+        name: str,
+        indexes: list[Index],
+    ) -> None:
+        """Construct an index index.
+
+        Args:
+            name: The index index's name.
+            indexes: Its subindexes.
+        """
         self.name: str = name
         self.indexes: list[Index] = indexes
 
-    def _basename(self) -> str:
-        return file_name(self.name) + ".html"
+    @staticmethod
+    def basename(name: str) -> str:
+        return file_name(name) + ".html"
 
     def _iter_subindex_heads(self) -> abc.Generator[abc.Generator[str]]:
+        # The subindexes link in a loop, and search leads to their parent.
         for i, index in enumerate(self.indexes):
-            prv = self.indexes[i - 1].basename() if i > 0 else ""
-            nxt = (
-                self.indexes[i + 1].basename()
-                if i < len(self.indexes) - 1
-                else ""
-            )
             yield page.html_head(
                 title=index.title,
-                search=SEARCH,
+                search=IndexIndex.basename(self.name),
                 scripts=[JS],
-                prev_href=prv,
-                next_href=nxt,
+                prev_href=self.indexes[i - 1].basename(),
+                next_href=self.indexes[(i + 1) % len(self.indexes)].basename(),
                 css=CSS,
             )
 
@@ -1255,7 +1261,7 @@ class IndexIndex:
                 *self._body_aux(),
                 page.FOOTER,
             ),
-            os.path.join(dir_, self._basename()),
+            os.path.join(dir_, IndexIndex.basename(self.name)),
             report=False,
         )
 
