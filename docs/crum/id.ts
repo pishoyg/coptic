@@ -75,7 +75,6 @@ export const MORPHOLOGIQUES_CHECKBOX = 'morphologiques-checkbox';
 export const CATEGORIES = 'categories';
 export const COMPLEMENTS = 'complements';
 export const DERIVATIONS = 'derivations';
-export const FOOTER = 'footer';
 export const IMAGES = 'images';
 export const KEY = 'key';
 export const MEANING = 'meaning';

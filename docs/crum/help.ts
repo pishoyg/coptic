@@ -294,7 +294,7 @@ export function makeHelpPanel(
         'Footer',
         ['lexicon', 'note', 'index', 'index_index'],
         () => {
-          browser.scroll(id.FOOTER);
+          document.querySelector('footer')?.scrollIntoView();
         }
       ),
     ],

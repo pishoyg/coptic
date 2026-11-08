@@ -26,8 +26,9 @@ function main(): void {
   // - Many of the shortcuts simply don't work, for some reason.
   // - Anki on macOS (and possibly on other platforms) has its own shortcuts,
   //   which conflict with ours!
-  // - Elements created by the panel logic (such as the `help` footer) were
-  //   found to be duplicated on some Anki platforms!
+  // - Elements created by the panel logic were found to be duplicated on some
+  //   Anki platforms! (The panel used to create the `help` footer itself; the
+  //   footer now comes from the note's HTML.)
   if (!iam.amI('card')) {
     help.makeHelpPanel(highlighter, devHighlighter);
   }

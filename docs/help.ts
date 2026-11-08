@@ -1,7 +1,8 @@
 /**
  * Package help defines the keyboard shortcuts panel, along with the generic
  * `Panel` that backs it: a floating box, backed by a full-screen overlay, that
- * is hidden by default and toggled by a trigger element.
+ * is hidden by default and toggled by a trigger: an element, or a header
+ * event.
  *
  * Panels are unaware of one another, so a page can end up displaying two of
  * them at once, stacked on top of each other. The overlay swallows clicks, so
@@ -12,10 +13,10 @@
  */
 
 import * as iam from './iam.js';
-import * as cls from './cls.js';
 import * as log from './logger.js';
 import * as dev from './dev.js';
 import * as html from './html.js';
+import * as head from './header.js';
 
 const TITLE = 'Keyboard Shortcuts';
 
@@ -24,11 +25,6 @@ enum CLS {
   INFO_PANEL = 'info-panel',
   SHORTCUT = 'shortcut',
   CLOSE_BTN = 'close-btn',
-}
-
-enum ID {
-  HELP = 'help',
-  FOOTER = 'footer',
 }
 
 /**
@@ -55,12 +51,15 @@ export class Panel {
   private readonly panel: HTMLDivElement;
 
   /**
-   * @param trigger - Element whose clicks (or Enter / Space presses) toggle
-   * the panel.
+   * @param trigger - An element whose clicks (or Enter / Space presses)
+   * toggle the panel, or a header event that toggles it when dispatched.
    * @param content - Content of the panel, typically one or more `heading`s,
    * each followed by the content it titles.
    */
-  public constructor(trigger: HTMLElement, ...content: (Node | string)[]) {
+  public constructor(
+    trigger: HTMLElement | head.EVENT,
+    ...content: (Node | string)[]
+  ) {
     // Create the overlay background.
     this.overlay = document.createElement('div');
     this.overlay.classList.add(CLS.OVERLAY_BACKGROUND);
@@ -117,17 +116,42 @@ export class Panel {
 
   /**
    * Add event listeners for the panel.
-   * @param trigger - Element whose clicks (or Enter / Space presses) toggle
-   * the panel.
+   * @param trigger - An element whose clicks (or Enter / Space presses)
+   * toggle the panel, or a header event that toggles it when dispatched.
    * @param closeButton - Close button.
    */
   private addEventListeners(
-    trigger: HTMLElement,
+    trigger: HTMLElement | head.EVENT,
     closeButton: HTMLButtonElement
   ): void {
     // Clicking on the close button hides the panel.
     closeButton.addEventListener('click', this.hide.bind(this));
 
+    if (typeof trigger === 'string') {
+      // The event's dispatcher (typically a header button) handles clicks and
+      // keyboard activation.
+      document.addEventListener(trigger, this.toggle.bind(this));
+    } else {
+      this.addTriggerListeners(trigger);
+    }
+
+    // A click on the overlay background hides the panel.
+    this.overlay.addEventListener('click', this.hide.bind(this));
+
+    // A press on the Escape key hides the panel.
+    document.addEventListener('keydown', (e: KeyboardEvent): void => {
+      if (e.key === 'Escape') {
+        this.hide();
+      }
+    });
+  }
+
+  /**
+   * Make the given element toggle the panel.
+   * @param trigger - Element whose clicks (or Enter / Space presses) toggle
+   * the panel.
+   */
+  private addTriggerListeners(trigger: HTMLElement): void {
     // Clicking the trigger toggles the panel display.
     trigger.addEventListener('click', this.toggle.bind(this));
 
@@ -140,16 +164,6 @@ export class Panel {
       if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault(); // Space would otherwise scroll the page.
         this.toggle();
-      }
-    });
-
-    // A click on the overlay background hides the panel.
-    this.overlay.addEventListener('click', this.hide.bind(this));
-
-    // A press on the Escape key hides the panel.
-    document.addEventListener('keydown', (e: KeyboardEvent): void => {
-      if (e.key === 'Escape') {
-        this.hide();
       }
     });
   }
@@ -453,33 +467,11 @@ export class Help {
   private readonly panel: Panel;
 
   /**
-   * @returns
-   */
-  private static getOrCreateFooter(): HTMLElement {
-    let footer: HTMLElement | null = document.querySelector('footer');
-    if (footer) {
-      return footer;
-    }
-    footer = document.createElement('footer');
-    document.body.append(footer);
-    footer.id = ID.FOOTER;
-    return footer;
-  }
-
-  /**
+   * The panel toggles on {@link head.EVENT.HELP}, which the header's Help
+   * button dispatches.
    */
   public constructor() {
-    const help: HTMLElement =
-      document.getElementById(ID.HELP) ??
-      ((): HTMLElement => {
-        const span: HTMLSpanElement = document.createElement('span');
-        span.classList.add(cls.LINK);
-        span.textContent = 'help';
-        Help.getOrCreateFooter().append(span);
-        return span;
-      })();
-
-    this.panel = new Panel(help, heading(TITLE));
+    this.panel = new Panel(head.EVENT.HELP, heading(TITLE));
 
     this.addEventListeners();
   }
