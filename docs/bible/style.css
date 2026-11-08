@@ -38,7 +38,6 @@ table.verses {
   overflow-wrap: anywhere;
   width: 100%;
   border-collapse: collapse;
-  box-shadow: 0 4px 6px rgb(0 0 0 / 5%);
   border-radius: 8px;
   overflow: hidden;
 
@@ -138,5 +137,107 @@ td:hover {
 
   & .citation {
     font-style: italic;
+  }
+}
+
+/* A chapter's title, language tray, and verses sit in a single card, like
+ * Crum's folios (see `crum.css`). They're siblings in the body, so the body
+ * lays them out as a grid, and a pseudo-element spanning their rows draws the
+ * card behind them. This leaves the generated HTML, and the text nodes that
+ * text fragments match, untouched.
+ *
+ * Grid items ignore `float`, so the title and tray sit side by side in their
+ * own columns instead. */
+body.chapter {
+  /* The inline padding lines the title up with the text in the verse cells,
+   * whose padding is 0.5em of a 1.1rem font (see `table.verses`). */
+  --card-padding-block: 12px;
+  --card-padding-inline: 0.55rem;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+
+  /* Keep the card behind the content, but above the body's background. */
+  isolation: isolate;
+
+  & > * {
+    grid-column: 1 / -1;
+  }
+
+  & > header {
+    grid-row: 1;
+  }
+
+  & > .title {
+    grid-row: 2;
+    grid-column: 1;
+    align-self: center;
+    margin: 0;
+    padding: var(--card-padding-block) var(--card-padding-inline);
+  }
+
+  & > #tray {
+    grid-row: 2;
+    grid-column: 2;
+    align-self: center;
+    margin-inline-end: var(--card-padding-inline);
+  }
+
+  & > table.verses {
+    grid-row: 3;
+  }
+
+  & > footer {
+    grid-row: 4;
+  }
+
+  /* The card. The negative margin draws its border just outside the area, so
+   * the verses' hover background doesn't paint over it. */
+  &::before {
+    content: '';
+    grid-row: 2 / 4;
+    grid-column: 1 / -1;
+    z-index: -1;
+    margin: -1px;
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    background-color: var(--surface-raised);
+    box-shadow: 0 2px 8px rgb(0 0 0 / 5%);
+  }
+
+  /* The card's head: a tinted band holding the title, the language tray, and
+   * the column labels, set apart from the verses by a line. The band is drawn
+   * in two pieces that meet seamlessly: a pseudo-element behind the title row,
+   * and the background of the table's head. */
+  &::after {
+    content: '';
+    grid-row: 2;
+    grid-column: 1 / -1;
+    z-index: -1;
+    border-radius: 8px 8px 0 0;
+    background-color: var(--surface-subtle);
+  }
+
+  /* The tint goes on the row group rather than the cells, since a table paints
+   * cell backgrounds over it. That way, a cell's own hover background (see
+   * `.tipper` in `tooltip.css`) still shows. */
+  & > table.verses > thead {
+    background-color: var(--surface-subtle);
+
+    & th {
+      padding: 0 0.5em var(--card-padding-block);
+      border-bottom: 1px solid var(--border);
+    }
+  }
+
+  /* The tray's own background would vanish against the band, so it takes the
+   * card's instead. */
+  & > #tray:not(:hover) {
+    background-color: var(--surface-raised);
+  }
+
+  @media (width <= 500px) {
+    --card-padding-block: 8px;
+    --card-padding-inline: 8px;
   }
 }
