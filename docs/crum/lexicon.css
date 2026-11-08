@@ -43,7 +43,7 @@
  *   - `#digital` / `#book` / `#ifao` / `#dawoud`
  *                                      — the four result views.
  *
- *   - `#help` / `.developer`           — header buttons that only make
+ *   - `#help` / `#dev`           — header buttons that only make
  *                                        sense over the digital lexicon;
  *                                        they share a cell with
  *                                        `#prev` / `#next` respectively.
@@ -83,7 +83,7 @@ body:not(.book) #book,
 body:not(.ifao) #ifao,
 body:not(.dawoud) #dawoud,
 body:not(.digital) #header #help,
-body:not(.digital) #header .developer,
+body:not(.digital) #header #dev,
 body:not(.book, .ifao, .dawoud) #header #prev,
 body:not(.book, .ifao, .dawoud) #header #next,
 body:not(.dawoud) #scan-checkbox-td > label[for='greek-checkbox'],

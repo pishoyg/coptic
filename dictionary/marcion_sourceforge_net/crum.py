@@ -770,11 +770,11 @@ class Root(Row):
         yield "</td>"
         # Reset.
         yield "<td>"
-        yield f'<span class="{cls.RESET}">Reset</span>'
+        yield f'<span id="{ids.RESET}">Reset</span>'
         yield "</td>"
         # Dev.
         yield "<td>"
-        yield f'<span class="{cls.DEVELOPER}">Dev</span>'
+        yield f'<span id="{ids.DEV}">Dev</span>'
         yield "</td>"
         # Close the table.
         yield "</tr>"

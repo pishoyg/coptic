@@ -13,7 +13,7 @@ html {
   scroll-behavior: smooth;
 }
 
-body.dev .developer {
+body.dev #dev {
   color: var(--danger) !important;
   border: 1px solid var(--danger);
 }
