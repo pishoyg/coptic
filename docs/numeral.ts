@@ -1,8 +1,4 @@
-/** Package numeral converts integers to Coptic numerals.
- *
- * NOTE: A Python version of this file lives at `utils/numeral.py`. The two
- * should ideally stay in sync.
- * */
+/** Package numeral converts integers to Coptic numerals. */
 
 import * as log from './logger.js';
 

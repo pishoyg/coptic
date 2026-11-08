@@ -38,7 +38,7 @@ from xooxle import xooxle
 # isort: off
 # pylint: disable-next=ungrouped-imports
 from utils import cache, concur, ensure, file, gcp, log, page, paths, text
-from utils import javascript, numeral, markdown
+from utils import javascript, markdown
 
 _NUM_DRV_COLS: int = 10
 _HUNDRED: int = 100
@@ -53,6 +53,10 @@ _FROM_MARCION: set[str] = {"3381", "3382", "3385"}
 
 # TODO: (#399) Crum HTML logic should be deduplicated. The duplication causes
 # such issues as #398.
+
+# ITEMPROP_KEY is the `itemprop` of the `<meta>` that holds a note's Marcion
+# key. It must match the equivalent TypeScript constant.
+ITEMPROP_KEY: str = "key"
 
 INDEX_CLASS = "index"
 INDEX_INDEX_CLASS = "index_index"
@@ -82,7 +86,6 @@ CSS: list[str] = [
 JS: str = relpath(paths.CRUM_JS)
 
 SEARCH: str = relpath(paths.LEXICON_DIR)
-HOME: str = relpath(paths.SITE_DIR)
 
 
 class Row(gcp.Record):
@@ -731,54 +734,10 @@ class Root(Row):
         return "".join(self._front_aux())
 
     def _front_aux(self) -> abc.Generator[str]:
-        # Header.
-        # TODO: (#203) The header should be mostly implemented in TypeScript,
-        # rather than hardcoded in the HTML.
-        # Open the table.
-        yield f'<table id="{ids.HEADER}">'
-        yield "<tr>"
-        # Home
-        yield f'<td><a class="{cls.NAVIGATE}" href="../">Home</a></td>'
-        # Contact
-        yield "<td>"
-        yield f'<span id="{ids.REPORTS}">'
-        yield "Reports"
-        yield "</span>"
-        yield "</td>"
-        # Prev
-        yield "<td>"
-        prev = Crum.prev_key(self)
-        if prev:
-            yield f'<a class="{cls.NAVIGATE}" href="{prev}.html">⇐</a>'
-        del prev
-        yield "</td>"
-        # Key.
-        yield "<td>"
-        yield (
-            f'<a class="{cls.NAVIGATE}" id="{ids.KEY}" '
-            f'href="{self.key}.html">'
-        )
-        yield numeral.coptic(self.num)
-        yield "</a>"
-        yield "</td>"
-        # Next
-        yield "<td>"
-        nxt = Crum.next_key(self)
-        if nxt:
-            yield f'<a class="{cls.NAVIGATE}" href="{nxt}.html">⇒</a>'
-        del nxt
-        yield "</td>"
-        # Reset.
-        yield "<td>"
-        yield f'<span id="{ids.RESET}">Reset</span>'
-        yield "</td>"
-        # Dev.
-        yield "<td>"
-        yield f'<span id="{ids.DEV}">Dev</span>'
-        yield "</td>"
-        # Close the table.
-        yield "</tr>"
-        yield "</table>"
+        yield page.HEADER
+        # The key is about the note, not the header. It lives in the front
+        # field, so it also reaches Anki.
+        yield f'<meta itemprop="{ITEMPROP_KEY}" content="{self.key}">'
 
         # The word.
         yield f'<div id="{ids.PRETTY}" class="{cls.PRETTY}">'
@@ -892,6 +851,8 @@ class Root(Row):
                 yield from _mother().gather_aux(self.homonyms)
                 yield "</table>"
             yield "</div>"
+
+        yield page.FOOTER
 
     @typing.override
     def __str__(self) -> str:
@@ -1192,38 +1153,6 @@ class Mother:
             ).html_aux()
 
 
-# TODO: (#203) The header should be fully defined in TypeScript.
-class HeaderCell:
-    """HeaderCell represents a cell in the header table."""
-
-    def __init__(self, title: str, link: str) -> None:
-        self.title: str = title
-        self.link: str = link
-
-    def td(self) -> abc.Generator[str]:
-        yield "<td>"
-        yield f'<a class="{cls.NAVIGATE}" href="{self.link}">{self.title}</a>'
-        yield "</td>"
-
-
-class Headerer:
-    """Headerer can be used to generate a header."""
-
-    def __init__(self, base_cells: list[HeaderCell]) -> None:
-        self.cells: list[HeaderCell] = base_cells
-
-    def header(self) -> str:
-        return "".join(self.header_aux())
-
-    def header_aux(self) -> abc.Generator[str]:
-        yield f'<table id="{ids.HEADER}" class="{cls.HEADER}">'
-        yield "<tr>"
-        for cell in self.cells:
-            yield from cell.td()
-        yield "</tr>"
-        yield "</table>"
-
-
 def file_name(title: str) -> str:
     """Return the file name of an index.
 
@@ -1256,10 +1185,9 @@ class Index:
         self,
         dir_: str | pathlib.Path,
         head: abc.Generator[str],
-        header: str,
     ) -> None:
         file.write(
-            page.html(head, INDEX_CLASS, header, *self.body),
+            page.html(head, INDEX_CLASS, page.HEADER, *self.body, page.FOOTER),
             os.path.join(dir_, self.basename()),
             report=False,
         )
@@ -1271,16 +1199,6 @@ class IndexIndex:
     def __init__(self, name: str, indexes: list[Index]) -> None:
         self.name: str = name
         self.indexes: list[Index] = indexes
-
-        cells: list[HeaderCell] = []
-        cells.append(HeaderCell("Home", HOME))
-        cells.append(HeaderCell("Search", SEARCH))
-        self.header: str = Headerer(cells).header()
-        # The subindex header is the same as the index header, with one extra
-        # cell pointing to the index that this subindex belongs to.
-        cells.append(HeaderCell(self.name, self._basename()))
-        self.subindex_header: str = Headerer(cells).header()
-        del cells
 
     def _basename(self) -> str:
         return file_name(self.name) + ".html"
@@ -1307,11 +1225,9 @@ class IndexIndex:
         args: tuple[str | pathlib.Path, Index, abc.Generator[str]],
     ) -> None:
         dir_, subindex, head = args
-        subindex.write(dir_, head, self.subindex_header)
+        subindex.write(dir_, head)
 
     def write(self, dir_: str | pathlib.Path):
-        # A subindex header includes a link to the index that contains
-        # this subindex.
         with concur.thread_pool_executor() as executor:
             _ = list(
                 executor.map(
@@ -1335,8 +1251,9 @@ class IndexIndex:
                     css=CSS,
                 ),
                 INDEX_INDEX_CLASS,
-                *self.header,
+                page.HEADER,
                 *self._body_aux(),
+                page.FOOTER,
             ),
             os.path.join(dir_, self._basename()),
             report=False,
@@ -1491,7 +1408,6 @@ XOOXLE: xooxle.Xooxle = xooxle.Xooxle(
     source=((note.key, note.html) for note in notes_aux()),
     extract=[
         xooxle.Selector({"name": "title"}, force=False),
-        xooxle.Selector({"id": ids.HEADER}, force=False),
         xooxle.Selector({"class_": cls.DICTIONARY}, force=False),
         xooxle.Selector({"class_": cls.CRUM_PAGE}, force=False),
         xooxle.Selector({"class_": cls.DRV_KEY}, force=False),
