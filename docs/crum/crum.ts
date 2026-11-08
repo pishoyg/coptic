@@ -373,20 +373,33 @@ function handleNagHammadi(root: HTMLElement): void {
 }
 
 /**
- * @returns The Marcion database key of the current word.
+ * ITEMPROP_KEY is the `itemprop` of the `<meta>` that holds a note's Marcion
+ * key. It must match `ITEMPROP_KEY` in
+ * `dictionary/marcion_sourceforge_net/crum.py`.
+ *
+ * TODO: (#0) Move `itemprop` and `data-*` attribute names to their own
+ * modules, the way IDs and classes live in `id.ts` and `cls.ts` (and `ids.py`
+ * and `cls.py`).
  */
-function marcion(): number | undefined {
-  const keyCell: Element | null = document.getElementById(id.KEY);
-  if (!keyCell) {
+const ITEMPROP_KEY = 'key';
+
+/**
+ * @returns The Marcion database key of the current word, read from the note's
+ * key `<meta>`, or undefined on a non-note page.
+ */
+export function marcion(): number | undefined {
+  const meta: HTMLMetaElement | null = document.querySelector(
+    `meta[itemprop="${ITEMPROP_KEY}"]`
+  );
+  if (!meta) {
     // This is a non-note page.
     return undefined;
   }
-  const match = /(\d+)\.html$/.exec((keyCell as HTMLAnchorElement).href);
-  if (!match?.[1]) {
+  if (!/^\d+$/.test(meta.content)) {
+    log.error('Invalid note key:', meta.content);
     return undefined;
   }
-  const key: number = parseInt(match[1]);
-  return isNaN(key) ? undefined : key;
+  return parseInt(meta.content);
 }
 
 /**
