@@ -879,9 +879,9 @@ export class Scroller {
    * @param event - Keyboard event.
    */
   private handleKeyDown(event: KeyboardEvent): void {
-    // TODO: (#203) Part of this logic should live in the header module. You
-    // should add a listener to a `head.EVENT.NEXT` and `head.EVENT.PREV`
-    // events, which get triggered elsewhere.
+    // TODO: (#203) N and P should be Help-panel shortcuts that dispatch
+    // `head.EVENT.NEXT` and `head.EVENT.PREV`, like `r`, `d`, and `?`, so the
+    // scroller would only hear the events (see `addEventListeners`).
     if (!this.active()) {
       return;
     }

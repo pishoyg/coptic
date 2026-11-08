@@ -67,7 +67,6 @@ export const GLOSS = 'gloss';
  * HEADING is the class of a the word starting a paragraph in the meaning of a
  * word.
  */
-export const HEADER = 'header';
 export const HEADING = 'heading';
 export const HEADWORD = 'headword';
 export const HEBREW = 'hebrew';
@@ -90,8 +89,6 @@ export const GREEK = 'greek';
 export const MANUAL = 'manual';
 export const MEANING = 'meaning';
 export const NAG_HAMMADI = 'nag-hammadi';
-// TODO: (#203) Although this class's primary use is Anki, it might actually
-// belong in the header.
 export const NAVIGATE = 'navigate';
 /** OLD marks Coptic text that is rendered in the Old Coptic typeface. */
 export const OLD = 'old';

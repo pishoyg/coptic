@@ -54,16 +54,10 @@ export const WIKI_CHECKBOX = 'wiki-checkbox';
 export const CDO = 'cdo';
 export const DIOSKOROS = 'dioskoros';
 
-export const REPORTS = 'reports';
-
 export const CRUM_SCAN = 'crum-scan';
 export const DAWOUD_SCAN = 'dawoud-scan';
 export const COMPLEMENTS_SCAN = 'complements-scan';
 export const MORPHOLOGIQUES_SCAN = 'morphologiques-scan';
-
-export const NEXT = 'next';
-export const PREV = 'prev';
-export const RESET = 'reset';
 
 // GREEK_CHECKBOX forces Dawoud to interpret Coptic letters as Greek ones.
 export const GREEK_CHECKBOX = 'greek-checkbox';
@@ -76,7 +70,6 @@ export const CATEGORIES = 'categories';
 export const COMPLEMENTS = 'complements';
 export const DERIVATIONS = 'derivations';
 export const IMAGES = 'images';
-export const KEY = 'key';
 export const MEANING = 'meaning';
 export const MORPHOLOGIQUES = 'morphologiques';
 export const PRETTY = 'pretty';
