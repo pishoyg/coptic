@@ -115,10 +115,9 @@ function bounded(scale: number): number {
  * host page. It is supplied by callers so that this package does not need
  * to know about its host's mode-switching mechanism.
  *
- * Used by both `Scroller` (for the shared next / prev buttons and N / P
- * keydown) and `ZoomerDragger` (for the shared reset trigger dispatched
- * by `head.EVENT`), so each handler can early-return when its scan is
- * not the active view.
+ * Used by both `Scroller` (for `head.EVENT.PREV` / `NEXT` and N / P keydown)
+ * and `ZoomerDragger` (for `head.EVENT.RESET`), so each handler can
+ * early-return when its scan is not the active view.
  *
  * Omit on pages that host a single scan: an absent predicate is treated
  * as always active.
@@ -655,28 +654,6 @@ export class Lookup {
 }
 
 /**
- * Form holds the HTML elements used to drive a scan view.
- *
- * The search box and the wrapping <form> are NOT part of this — the
- * shared search box is wired by `docs/crum/mode.ts` (which owns the
- * `?query=` URL param and key handling), while each `Dictionary` listens
- * to it directly to run a search on every keystroke.
- *
- * `Form` is a behaviorless data holder, so it is exposed as an interface
- * rather than a class — callers construct one with an object literal.
- */
-export interface Form {
-  /** <img> element holding the book page. */
-  image: HTMLImageElement;
-  /** Button that navigates to the next page when clicked. */
-  nextButton: HTMLElement;
-  /** Button that navigates to the previous page when clicked. */
-  prevButton: HTMLElement;
-  /** Button that resets the display. */
-  resetButton: HTMLElement;
-}
-
-/**
  * Options used to construct a `Scroller`.
  */
 export interface ScrollerOptions {
@@ -686,8 +663,8 @@ export interface ScrollerOptions {
   end: number;
   /** File extension (e.g. `'png'`). */
   ext: string;
-  /** Input and output elements driven by the scroller. */
-  form: Form;
+  /** <img> element holding the book page. */
+  image: HTMLImageElement;
   /**
    * Offset of the first interesting page in the book (skipping the intro
    * and such). It lets logical page numbers (as used in the index and shown
@@ -733,7 +710,7 @@ export class Scroller {
   private readonly end: number;
   private readonly offset: number;
   private readonly ext: string;
-  private readonly form: Form;
+  private readonly image: HTMLImageElement;
   private readonly directory: string;
   private readonly isActive: IsActive | undefined;
   private readonly highlight: HTMLDivElement;
@@ -758,7 +735,7 @@ export class Scroller {
   public constructor(opts: ScrollerOptions) {
     this.offset = opts.offset ?? 0;
     this.ext = opts.ext;
-    this.form = opts.form;
+    this.image = opts.image;
     this.directory = opts.directory ?? '';
     this.isActive = opts.isActive;
 
@@ -771,7 +748,7 @@ export class Scroller {
     // so the highlight tracks the image automatically.
     this.highlight = document.createElement('div');
     this.highlight.classList.add(CLS.COLUMN_HIGHLIGHT);
-    this.form.image.insertAdjacentElement('afterend', this.highlight);
+    this.image.insertAdjacentElement('afterend', this.highlight);
 
     this.addEventListeners();
   }
@@ -840,13 +817,13 @@ export class Scroller {
       `${stem.toString()}.${this.ext}`
     );
 
-    this.form.image.alt = page.toString();
+    this.image.alt = page.toString();
 
     // Cancel any prior pending load so its stale callback can't apply
     // a highlight that no longer matches the latest navigation.
     this.pendingLoad?.abort();
 
-    if (newSrc === this.currentSrc && this.form.image.complete) {
+    if (newSrc === this.currentSrc && this.image.complete) {
       this.pendingLoad = undefined;
       onLoad();
       return;
@@ -854,11 +831,11 @@ export class Scroller {
 
     this.pendingLoad = new AbortController();
     this.currentSrc = newSrc;
-    this.form.image.addEventListener('load', onLoad, {
+    this.image.addEventListener('load', onLoad, {
       once: true,
       signal: this.pendingLoad.signal,
     });
-    this.form.image.src = newSrc;
+    this.image.src = newSrc;
   }
 
   /**
@@ -927,30 +904,20 @@ export class Scroller {
    * Register the scroller's event listeners.
    *
    * NOTE: When the host page mounts multiple scrollers (e.g. the combined
-   * Crum + Dawoud lexicon), each scroller registers its own document-level
-   * `keydown` listener and shares the same `#prev` / `#next` buttons. Every
-   * handler below therefore must early-return when `!this.active()`,
-   * otherwise inactive scrollers would react to keystrokes and clicks.
-   * This is a brittle pattern — every new handler must remember the guard.
-   *
-   * TODO: (#203) Re-express NEXT / PREV as custom DOM events dispatched
-   * by the host (or by the buttons themselves on the active scan's
-   * image). Each scroller would listen on its own image and so be
-   * inherently mode-scoped, eliminating the `active()` checks here. Search
-   * input is already handled directly by each `Dictionary` via the shared
-   * search box's `input` event; RESET already follows the custom-event
-   * shape via `head.EVENT`.
+   * Crum + Dawoud lexicon), every scroller hears every `head.EVENT.PREV` /
+   * `NEXT` on `document`, and registers its own document-level `keydown`
+   * listener. Every handler below therefore must early-return when
+   * `!this.active()`, otherwise one click or keystroke would turn every
+   * scan. See the TODO on `head.EVENT`.
    */
   private addEventListeners(): void {
-    // The next button scrolls to the next page.
-    this.form.nextButton.addEventListener('click', () => {
+    document.addEventListener(head.EVENT.NEXT, (): void => {
       if (this.active()) {
         this.incrementPage();
       }
     });
 
-    // The prev button scrolls to the previous page.
-    this.form.prevButton.addEventListener('click', () => {
+    document.addEventListener(head.EVENT.PREV, (): void => {
       if (this.active()) {
         this.decrementPage();
       }
@@ -984,24 +951,19 @@ export class ZoomerDragger {
   private readonly transformTarget: HTMLElement;
 
   /**
-   * @param form - Image + reset-button pair the dragger controls.
-   * @param form.image - <img> the dragger zooms and pans.
-   * @param form.resetButton - Button that resets the zoom / pan transform.
+   * @param image - <img> the dragger zooms and pans.
    * @param isActive - Predicate that answers whether this scan is the
    * active one on the host page. When the host serves multiple scans
    * behind a mode switcher, every scan's `ZoomerDragger` listens to the
-   * same `head.EVENT` dispatched by the shared reset button, so only the
-   * active one should perform the reset. Omit on single-scan pages.
+   * same `head.EVENT.RESET`, so only the active one should perform the
+   * reset. Omit on single-scan pages.
    */
   public constructor(
-    private readonly form: {
-      image: HTMLImageElement;
-      resetButton: HTMLElement;
-    },
+    private readonly image: HTMLImageElement,
     isActive?: IsActive
   ) {
     this.isActive = isActive ?? ((): boolean => true);
-    this.transformTarget = form.image.parentElement!;
+    this.transformTarget = image.parentElement!;
     this.addEventListeners();
   }
 
@@ -1014,23 +976,20 @@ export class ZoomerDragger {
    * true via a mousedown on a visible image; so neither group needs
    * mode gating.
    *
-   * The reset trigger is shared across scans (one `.reset` button, one
-   * `head.EVENT`), so we gate the listener with `isActive` to restrict
+   * The reset trigger is shared across scans (one `head.EVENT.RESET`), so we
+   * gate the listener with `isActive` to restrict
    * reset to whichever scan is currently in view.
    */
   private addEventListeners(): void {
     // Mouse wheel over the image zooms it. The listener is scoped to the
     // image (not the document) so that scrolling outside the image scrolls
     // the page normally.
-    this.form.image.addEventListener('wheel', this.handleZoom.bind(this), {
+    this.image.addEventListener('wheel', this.handleZoom.bind(this), {
       passive: false,
     });
 
     // A mouse click starts dragging the image.
-    this.form.image.addEventListener(
-      'mousedown',
-      this.startDragging.bind(this)
-    );
+    this.image.addEventListener('mousedown', this.startDragging.bind(this));
 
     // Moving the mouse drags the image around.
     document.addEventListener('mousemove', this.dragImage.bind(this));
@@ -1103,7 +1062,7 @@ export class ZoomerDragger {
     this.isDragging = true;
     this.startX = e.clientX - this.originX;
     this.startY = e.clientY - this.originY;
-    this.form.image.style.cursor = 'grabbing';
+    this.image.style.cursor = 'grabbing';
   }
 
   /**
@@ -1140,7 +1099,7 @@ export class ZoomerDragger {
     e.preventDefault();
     e.stopPropagation();
     this.isDragging = false;
-    this.form.image.style.cursor = 'grab';
+    this.image.style.cursor = 'grab';
   }
 
   /**

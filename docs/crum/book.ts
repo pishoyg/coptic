@@ -465,12 +465,7 @@ async function fetchIndexes(): Promise<Record<scan.Language, scan.Index>> {
  * keystroke.
  */
 export async function init(): Promise<void> {
-  const form: scan.Form = {
-    image: document.getElementById(id.CRUM_SCAN) as HTMLImageElement,
-    nextButton: document.getElementById(id.NEXT)!,
-    prevButton: document.getElementById(id.PREV)!,
-    resetButton: document.getElementById(id.RESET)!,
-  };
+  const image = document.getElementById(id.CRUM_SCAN) as HTMLImageElement;
 
   const isActive: scan.IsActive = () => mode.active(MODE);
 
@@ -492,7 +487,7 @@ export async function init(): Promise<void> {
     ])
   );
 
-  new scan.ZoomerDragger(form, isActive);
+  new scan.ZoomerDragger(image, isActive);
 
   new scan.Dictionary(
     new scan.Lookup(indexes, { ...headwords, ...romanOverrides }),
@@ -500,7 +495,7 @@ export async function init(): Promise<void> {
       start: MIN_PAGE_NUM,
       end: MAX_PAGE_NUM,
       ext: 'png',
-      form,
+      image,
       offset: OFFSET,
       directory: DATA_DIR,
       isActive,

@@ -271,12 +271,7 @@ async function fetchIndex(
  * every keystroke.
  */
 export async function init(): Promise<void> {
-  const form: scan.Form = {
-    image: document.getElementById(id.DAWOUD_SCAN) as HTMLImageElement,
-    nextButton: document.getElementById(id.NEXT)!,
-    prevButton: document.getElementById(id.PREV)!,
-    resetButton: document.getElementById(id.RESET)!,
-  };
+  const image = document.getElementById(id.DAWOUD_SCAN) as HTMLImageElement;
 
   const isActive: scan.IsActive = () => mode.active(MODE);
 
@@ -304,14 +299,14 @@ export async function init(): Promise<void> {
     lookup.alias(scan.Language.COPTIC, scan.Language.GREEK);
   }
 
-  new scan.ZoomerDragger(form, isActive);
+  new scan.ZoomerDragger(image, isActive);
   const dictionary = new scan.Dictionary(
     lookup,
     new scan.Scroller({
       start: MIN_PAGE_NUM,
       end: MAX_PAGE_NUM,
       ext: EXT,
-      form,
+      image,
       offset: OFFSET,
       directory: DATA_DIR,
       isActive,

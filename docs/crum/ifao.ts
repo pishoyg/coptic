@@ -131,24 +131,19 @@ class Coptic extends book.Coptic {
  * @param isActive - Whether the book is on view.
  */
 async function initBook(b: Book, isActive: scan.IsActive): Promise<void> {
-  const form: scan.Form = {
-    image: document.getElementById(b.image) as HTMLImageElement,
-    nextButton: document.getElementById(id.NEXT)!,
-    prevButton: document.getElementById(id.PREV)!,
-    resetButton: document.getElementById(id.RESET)!,
-  };
+  const image = document.getElementById(b.image) as HTMLImageElement;
 
   const res: Response = await fetch(str.joinPaths(DATA_DIR, `${b.name}.tsv`));
   const index = new scan.Index(await res.text(), Coptic);
 
-  new scan.ZoomerDragger(form, isActive);
+  new scan.ZoomerDragger(image, isActive);
   new scan.Dictionary(
     new scan.Lookup({ [scan.Language.COPTIC]: index }, b.overrides),
     new scan.Scroller({
       start: START,
       end: b.end,
       ext: EXT,
-      form,
+      image,
       offset: b.offset,
       directory: str.joinPaths(DATA_DIR, b.name),
       isActive,
