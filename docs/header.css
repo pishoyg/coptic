@@ -59,37 +59,3 @@ header {
     cursor: default;
   }
 }
-
-/* The legacy table header, until every page mounts the shared one. */
-#header {
-  vertical-align: center;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  table-layout: fixed;
-  width: 100%;
-  position: relative;
-  z-index: 10;
-
-  & td {
-    & > * {
-      border-radius: 6px;
-      padding: 6px 12px;
-      font-size: 0.95rem;
-      cursor: pointer;
-      transition: background-color 0.2s ease-in-out;
-      display: inline-block;
-
-      @media (hover: hover) {
-        &:hover {
-          background-color: var(--surface-hover);
-        }
-      }
-    }
-
-    & * {
-      color: var(--text-strong);
-      text-decoration: none;
-    }
-  }
-}

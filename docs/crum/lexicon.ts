@@ -13,9 +13,10 @@
  *   - `ifao.ts`    — Kasser scans init
  *   - `dawoud.ts`  — Dawoud scan init
  *
- * The footer's panels are wired up here as well.
+ * The header and the footer's panels are wired up here as well.
  */
 import * as about from '../about.js';
+import * as head from '../header.js';
 import * as mode from './mode.js';
 import * as digital from './digital.js';
 import * as book from './book.js';
@@ -26,6 +27,19 @@ import * as dawoud from './dawoud.js';
  * Boot the lexicon page.
  */
 async function main(): Promise<void> {
+  // Mount before the first `await`. See the NOTE in `header.ts`. Every button
+  // dispatches an event, so nothing here waits for the views. Help and Dev
+  // apply to the digital lexicon, and ⇐ and ⇒ to the scans; `lexicon.css`
+  // shows one of each pair, by mode.
+  head.mount(
+    'header',
+    head.home(),
+    head.either(head.help(), head.prev()),
+    head.reset(),
+    head.either(head.dev(), head.next()),
+    head.reports()
+  );
+
   // Wire the Digital / Book / Kasser / Dawoud switcher and the shared search
   // box before any view-specific init runs.
   mode.init();

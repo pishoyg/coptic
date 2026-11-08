@@ -11,7 +11,7 @@
 
 /* The panel sits below the page header. `top` is nudged down (and `height`
  * trimmed by the matching amount) to leave room for the lexicon's now
- * taller header — the mode-switcher bar above `#header` adds vertical
+ * taller header — the mode-switcher bar above the `<header>` adds vertical
  * real estate, and the panel would otherwise overlap it. */
 .info-panel {
   top: 20%;

@@ -43,9 +43,9 @@
  *   - `#digital` / `#book` / `#ifao` / `#dawoud`
  *                                      — the four result views.
  *
- *   - `#help` / `#dev`           — header buttons that only make
+ *   - `#help` / `#dev`                 — header buttons that only make
  *                                        sense over the digital lexicon;
- *                                        they share a cell with
+ *                                        they share a slot with
  *                                        `#prev` / `#next` respectively.
  *   - `#prev` / `#next`                — scan-navigation buttons that
  *                                        only make sense over a scan.
@@ -62,30 +62,19 @@
  *                                        its room to `#scan-checkbox-td`
  *                                        under Dawoud and Kasser.
  *
- * SPECIFICITY CAUTION: each header-element selector is qualified with
- * `#header` not for semantic clarity but to win a specificity fight
- * against `#header td > * { display: inline-block }` from `header.css`.
- * That third stylesheet contributes specificity (0,1,1); a naive
- * `body:not(.digital) #help` would be (0,2,0) and still lose on
- * `display`. Adding `#header` bumps us to (1,2,1) and consistently
- * overrides it.
- *
- * This is fragile: if `header.css` ever drops or generalises that
- * selector, these rules become unnecessarily heavy; if it gains more
- * specificity, these rules silently stop hiding the buttons.
- *
- * TODO: (#0) Add a single class (e.g. `.hidden-in-mode`) to the cells
- * we want to control and key the rule off that class, sidestepping the
- * cross-stylesheet arms race entirely.
+ * SPECIFICITY: `header.css` sets the units' `display` with
+ * `:is(header, footer) > nav > …`, at specificity (0,1,2). A mode rule
+ * such as `body:not(.digital) header #dev` is (1,1,2), so its ID wins. If
+ * `header.css` ever targets units by ID, recheck these rules.
  */
 body:not(.digital) #digital,
 body:not(.book) #book,
 body:not(.ifao) #ifao,
 body:not(.dawoud) #dawoud,
-body:not(.digital) #header #help,
-body:not(.digital) #header #dev,
-body:not(.book, .ifao, .dawoud) #header #prev,
-body:not(.book, .ifao, .dawoud) #header #next,
+body:not(.digital) header #help,
+body:not(.digital) header #dev,
+body:not(.book, .ifao, .dawoud) header #prev,
+body:not(.book, .ifao, .dawoud) header #next,
 body:not(.dawoud) #scan-checkbox-td > label[for='greek-checkbox'],
 body:not(.ifao) #scan-checkbox-td > label[for='morphologiques-checkbox'],
 body:not(.digital, .book) #keyboard-td {
@@ -108,7 +97,7 @@ body:not(:has(#morphologiques-checkbox:checked)) #morphologiques {
   display: none;
 }
 
-#header {
+header {
   background-color: var(--surface-translucent);
 }
 

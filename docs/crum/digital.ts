@@ -534,8 +534,4 @@ export async function init(): Promise<void> {
   // Create the help panel.
   const devHighlighter: dev.Highlighter = new dev.Highlighter(isActive);
   help.makeHelpPanel(highlighter, devHighlighter);
-
-  // Add event listener for reports.
-  // TODO: (#203) This belongs in the (future) header module.
-  html.linkify(document.getElementById(id.REPORTS)!, paths.reports());
 }
