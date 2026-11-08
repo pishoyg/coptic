@@ -1,7 +1,6 @@
 /**
  * Package highlight defines basic highlighting.
  */
-import * as ccls from './cls.js';
 import * as head from './header.js';
 import type * as dial from './dialect.js';
 import type * as help from './help.js';
@@ -142,16 +141,6 @@ export abstract class Highlighter {
       }
     });
 
-    // Reset buttons dispatch `head.EVENT.RESET`; we listen for it and
-    // reset only when this highlighter's view is the active one.
-    document
-      .querySelectorAll<HTMLElement>(`.${head.CLS.RESET}`)
-      .forEach((el: HTMLElement): void => {
-        el.classList.add(ccls.LINK);
-        el.addEventListener('click', (): void => {
-          head.dispatch(head.EVENT.RESET);
-        });
-      });
     document.addEventListener(head.EVENT.RESET, (): void => {
       if (this.isActive()) {
         this.reset();

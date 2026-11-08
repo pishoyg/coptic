@@ -8,7 +8,7 @@ import * as html from '../html.js';
 import * as high from './highlight.js';
 import * as crum from './crum.js';
 import * as id from './id.js';
-import * as head from '../header.js';
+import * as paths from '../paths.js';
 import * as dev from '../dev.js';
 import * as browser from '../browser.js';
 
@@ -55,7 +55,7 @@ function addReportsLink(): void {
     // is too long for the cell, and wraps on Anki!
     reports.textContent = '⚑';
   }
-  html.linkify(reports, head.reports());
+  html.linkify(reports, paths.reports());
 }
 
 main();

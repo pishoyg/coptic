@@ -1,3 +1,66 @@
+/* The shared header and footer, mounted by `header.ts`.
+ *
+ * The rules are scoped to `> nav`, so they leave alone the static footers
+ * that some pages have (such as the Lexicon's icons and logos). */
+:is(header, footer) {
+  --unit-font-size: 0.95rem;
+  --unit-line-height: 1.6;
+  --unit-padding-block: 6px;
+}
+
+/* The header reserves the rendered height of its units, so mounting it never
+ * moves the content below it. See the NOTE in `header.ts`. The footer is the
+ * last thing in the body, so it needs no reserved height. */
+header {
+  min-height: calc(
+    var(--unit-font-size) * var(--unit-line-height) + 2 *
+      var(--unit-padding-block)
+  );
+  position: relative;
+  z-index: 10;
+}
+
+/* Each unit (or set of alternative units) gets a column of its own, and all
+ * columns share the width equally. An empty slot keeps its column, so units
+ * stay aligned. */
+:is(header, footer) > nav {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  place-items: center center;
+  text-align: center;
+
+  /* A unit is a direct child of the nav, or one of a set of alternatives. */
+  & > :not(.either),
+  & > .either > * {
+    display: inline-block;
+    border: none;
+    border-radius: 6px;
+    background: none;
+    padding: var(--unit-padding-block) 12px;
+    margin: 0;
+    font-family: inherit;
+    font-size: var(--unit-font-size);
+    line-height: var(--unit-line-height);
+    color: var(--text-strong);
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+
+    @media (hover: hover) {
+      &:is(a, button):hover {
+        background-color: var(--surface-hover);
+      }
+    }
+  }
+
+  /* Labels without a target aren't clickable. */
+  & > span:not(.either) {
+    cursor: default;
+  }
+}
+
+/* The legacy table header, until every page mounts the shared one. */
 #header {
   vertical-align: center;
   align-items: center;

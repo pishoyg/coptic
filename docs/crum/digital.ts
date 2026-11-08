@@ -12,7 +12,6 @@ import * as css from '../css.js';
 import * as high from './highlight.js';
 import * as dial from './dialect.js';
 import * as help from './help.js';
-import * as head from '../header.js';
 import * as paths from '../paths.js';
 import * as crum from './crum.js';
 import * as tool from '../tooltip.js';
@@ -135,6 +134,7 @@ class SearchResult extends xoox.SearchResult {
     const active: dial.DIALECT[] | undefined = SearchResult.manager.active();
     if (!active?.length) {
       // There is no dialect highlighting. All results fall in the first bucket.
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-enum-assignment
       return 0;
     }
 
@@ -537,7 +537,7 @@ export async function init(): Promise<void> {
 
   // Add event listener for reports.
   // TODO: (#203) This belongs in the (future) header module.
-  html.linkify(document.getElementById(id.REPORTS)!, head.reports());
+  html.linkify(document.getElementById(id.REPORTS)!, paths.reports());
 
   // TODO: (#203) Implement in the `header` package.
   crum.handleDeveloper(devHighlighter);

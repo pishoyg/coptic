@@ -94,9 +94,9 @@ export function bible(
 }
 
 // Other pages that we own:
-export const REPORTS =
+const REPORTS =
   'https://docs.google.com/forms/d/e/1FAIpQLSeNVAjxtJcAR7i6AwBI3SFlzRWC5DQ09G6LfbySbZGvZCdpIg/viewform?usp=pp_url';
-export const REPORTS_PAGE_PARAM = 'entry.1382006920';
+const REPORTS_PAGE_PARAM = 'entry.1382006920';
 
 // Pages that we don't own:
 export const KELLIA = 'https://kellia.uni-goettingen.de/';
@@ -220,4 +220,13 @@ export function ifao(query: string, mode: Kasser = 'complements'): string {
       ? { [crumParams.MORPHOLOGIQUES]: String(true) }
       : {}
   );
+}
+
+/**
+ * @returns The URL of the reports form, prefilled with the current page.
+ */
+export function reports(): string {
+  const url = new URL(REPORTS);
+  url.searchParams.set(REPORTS_PAGE_PARAM, window.location.href);
+  return url.toString();
 }

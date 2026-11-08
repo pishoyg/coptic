@@ -1,15 +1,51 @@
-/** Package header defines the header logic. */
+/**
+ * Package header renders the shared page header and footer.
+ *
+ * A page that has a header contains an empty `<header></header>` at the top of
+ * its body, and an empty `<footer></footer>` at the end. Neither carries an ID
+ * or a class: there is at most one of each per page, so CSS and TypeScript
+ * refer to them by tag name. The placeholders never change; the page's data
+ * (such as `<link rel="prev|next|search">`) lives in `<head>`, and the page's
+ * entry point picks the units it wants and calls {@link mount}.
+ *
+ * NOTE: Text fragments (`#:~:text=`) constrain how we fill the placeholders
+ * (#740, #754, #702):
+ * 1. Call {@link mount} once per slot, synchronously, at module evaluation,
+ *    before the entry point's first `await` (never in a `setTimeout`). In
+ *    #740, a macrotask let the browser compute the text-fragment position
+ *    before we changed the page, so it scrolled to the wrong place. Entry
+ *    points that use top-level `await main()` must mount before the first
+ *    `await` inside `main`.
+ * 2. The header's height is reserved in CSS (see `header.css`), so mounting
+ *    never moves content. The footer is the last thing in the body, so
+ *    filling it can't move content above it.
+ * 3. Only add new nodes inside the placeholders. Never split or splice existing
+ *    text nodes (see the NOTE in `html.ts`, #754): that breaks Firefox's
+ *    fragment highlighting.
+ *
+ * NOTE: This module must not import, at runtime, anything that imports it back.
+ * In particular, it must not import `dev.ts` or `logger.ts`: the chain
+ * `logger.ts → dev.ts → highlight.ts → header.ts` exists, and `dev.ts` extends
+ * a class from `highlight.ts` while it loads, so a page that reached
+ * `highlight.ts` first would throw a `ReferenceError`. Hence, actions are
+ * events (see {@link EVENT}), and a missing placeholder is a silent no-op
+ * rather than a logged error.
+ */
 import * as paths from './paths.js';
+import * as browser from './browser.js';
 
-export enum CLS {
-  // TODO: (#203) Header cells should perhaps have IDs and not classes.
+enum CLS {
+  /** EITHER is the class of a slot that holds alternative units, of which the
+   * page shows one at a time. */
+  EITHER = 'either',
+}
 
-  /** RESET is the class of our reset buttons. */
+enum ID {
   RESET = 'reset',
-
-  /** DEVELOPER is the key of elements that toggle developer mode when
-   * clicked. */
-  DEVELOPER = 'developer',
+  DEV = 'dev',
+  HELP = 'help',
+  PREV = 'prev',
+  NEXT = 'next',
 }
 
 /**
@@ -20,9 +56,6 @@ export enum CLS {
  * Consumers gate their handlers however they see fit — e.g. RESET is
  * routed to whichever dictionary is currently in view by having each
  * listener check its own active-view predicate.
- *
- * Add new event types here as more shared header actions need a global
- * signal (e.g. NEXT / PREV, mode-change broadcasts, etc.).
  *
  * TODO: (#203) Contemplate a clean design for mode-guarded events.
  * Today every listener re-implements the same `if (this.isActive())`
@@ -38,6 +71,15 @@ export enum CLS {
 export enum EVENT {
   /** Triggered when the user asks to reset the current view. */
   RESET = 'reset',
+  /** Triggered when the user asks to toggle developer mode. */
+  DEV = 'dev',
+  /** Triggered when the user asks for the previous page of the current
+   * view. */
+  PREV = 'prev',
+  /** Triggered when the user asks for the next page of the current view. */
+  NEXT = 'next',
+  /** Triggered when the user asks to toggle the Help panel. */
+  HELP = 'help',
 }
 
 /**
@@ -49,10 +91,180 @@ export function dispatch(event: EVENT): void {
 }
 
 /**
+ * Fill the page's `<header>` or `<footer>` placeholder with a `<nav>` of the
+ * given units, in order.
+ *
+ * A missing placeholder is a silent no-op: some pages legitimately lack one,
+ * and the Playwright tests enforce presence where it's required.
+ *
+ * See the NOTE at the top of this module for when to call this.
+ *
+ * @param slot - The placeholder to fill.
+ * @param units - The units to place in it.
+ */
+export function mount(
+  slot: 'header' | 'footer',
+  ...units: HTMLElement[]
+): void {
+  const placeholder: HTMLElement | null = document.querySelector(slot);
+  if (!placeholder) {
+    return;
+  }
+  const nav: HTMLElement = document.createElement('nav');
+  nav.append(...units);
+  placeholder.append(nav);
+}
+
+/**
+ * @param href - The link target.
+ * @param children - The link content.
  * @returns
  */
-export function reports(): string {
-  const url = new URL(paths.REPORTS);
-  url.searchParams.set(paths.REPORTS_PAGE_PARAM, window.location.href);
-  return url.toString();
+function anchor(
+  href: string,
+  ...children: (Node | string)[]
+): HTMLAnchorElement {
+  const a: HTMLAnchorElement = document.createElement('a');
+  a.href = href;
+  a.target = '_blank';
+  a.rel = 'noopener noreferrer';
+  a.append(...children);
+  return a;
+}
+
+/**
+ * @param text - The button label.
+ * @param event - The event to dispatch on click, if any.
+ * @param id
+ * @returns A button.
+ */
+function button(text: string, event: EVENT, id: string): HTMLButtonElement {
+  const b: HTMLButtonElement = document.createElement('button');
+  b.type = 'button';
+  b.textContent = text;
+  b.addEventListener('click', (): void => {
+    dispatch(event);
+  });
+  b.id = id;
+  return b;
+}
+
+/**
+ * @returns A link to the homepage.
+ */
+export function home(): HTMLElement {
+  return anchor(paths.HOME, 'Home');
+}
+
+/**
+ * @param href - The link target. Defaults to the page's
+ * `<link rel="search">`, which must then exist.
+ * @param text - The link label.
+ * @returns A search link.
+ */
+export function search(href?: string, text = 'Search'): HTMLElement {
+  return anchor(href ?? browser.getLinkHref('search')!, text);
+}
+
+/**
+ *
+ * @param rel
+ * @param text
+ * @param event
+ * @param id
+ * @returns
+ */
+function neighbor(
+  rel: 'prev' | 'next',
+  text: string,
+  event: EVENT,
+  id: string
+): HTMLElement {
+  const b: HTMLButtonElement = button(text, event, id);
+  // If the link is available, register a default listener.
+  // On pages where a different listener is needed, the link should be absent,
+  // and this listener won't be registered.
+  const href: string | null = browser.getLinkHref(rel);
+  if (href) {
+    document.addEventListener(event, () => {
+      browser.open(href, false);
+    });
+  }
+  return b;
+}
+
+/**
+ * @returns A unit that goes to the previous page.
+ */
+export function prev(): HTMLElement {
+  return neighbor('prev', '⇐', EVENT.PREV, ID.PREV);
+}
+
+/**
+ * @returns A unit that goes to the next page.
+ */
+export function next(): HTMLElement {
+  return neighbor('next', '⇒', EVENT.NEXT, ID.NEXT);
+}
+
+/**
+ * @param text - The label, such as the page's key or title.
+ * @param href - The link target, if the label is a link.
+ * @returns A label.
+ */
+export function label(text: string, href?: string): HTMLElement {
+  if (href) {
+    return anchor(href, text);
+  }
+  const span: HTMLSpanElement = document.createElement('span');
+  span.textContent = text;
+  return span;
+}
+
+/**
+ * On a small screen, the unit shows a flag instead of the word, which wraps in
+ * its column.
+ *
+ * @returns A link to the reports form, opening in a new tab.
+ */
+export function reports(): HTMLElement {
+  return anchor(paths.reports(), browser.smallScreen() ? '⚑' : 'Reports');
+}
+
+/**
+ * @returns A button that dispatches {@link EVENT.RESET}.
+ */
+export function reset(): HTMLElement {
+  return button('Reset', EVENT.RESET, ID.RESET);
+}
+
+/**
+ * @returns A button that dispatches {@link EVENT.DEV}.
+ */
+export function dev(): HTMLElement {
+  return button('Dev', EVENT.DEV, ID.DEV);
+}
+
+/**
+ * The button only dispatches the event. The Help panel listens for it, so on a
+ * page without the panel, the button does nothing.
+ *
+ * @returns A button that dispatches {@link EVENT.HELP}.
+ */
+export function help(): HTMLElement {
+  return button('Help', EVENT.HELP, ID.HELP);
+}
+
+/**
+ * The slot renders all the units; the page's CSS shows only one of them at a
+ * time (for example, depending on the mode).
+ *
+ * @param units - The alternative units.
+ * @returns A slot that holds alternative units.
+ */
+export function either(...units: HTMLElement[]): HTMLElement {
+  const span: HTMLSpanElement = document.createElement('span');
+  span.classList.add(CLS.EITHER);
+  span.append(...units);
+  return span;
 }

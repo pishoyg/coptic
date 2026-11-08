@@ -415,10 +415,8 @@ function handleQuality(root: HTMLElement): void {
  * TODO: (#203) This belongs in the header module.
  */
 export function handleDeveloper(highlighter: dev.Highlighter): void {
-  document.body
-    .querySelectorAll<HTMLElement>(`.${head.CLS.DEVELOPER}`)
-    .forEach((el) => {
-      el.classList.add(ccls.LINK);
-      el.addEventListener('click', highlighter.toggle.bind(highlighter));
-    });
+  document.addEventListener(
+    head.EVENT.DEV,
+    highlighter.toggle.bind(highlighter)
+  );
 }

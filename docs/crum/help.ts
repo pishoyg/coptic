@@ -70,7 +70,7 @@ export function makeHelpPanel(
       new help.Shortcut(
         'File a Report',
         ['lexicon', 'note', 'index', 'index_index'],
-        browser.open.bind(null, head.reports(), true)
+        browser.open.bind(null, paths.reports(), true)
       ),
     ],
     H: [
