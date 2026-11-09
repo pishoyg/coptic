@@ -10,3 +10,4 @@
 - [Kasser Compléments scan offset](kasser-complements-scan-offset.md) — `complements/N.png` is page N − 17; OCR with tesseract to locate entries
 - [Kasser's unbalanced lacuna brackets](kasser-unbalanced-lacuna-brackets.md) — `ⲧⲧⲓ]ⲙⲏ`, `ⲕⲟⲗⲗⲁⲑⲟ[ⲛ` are in the print; check the scan first
 - [Kasser margins give Crum pages](kasser-margin-crum-pages.md) — margin and running head cite Crum page/column; use them to audit Marcion IDs
+- [Anki document outlives the card](anki-document-outlives-card.md) — card script re-runs per side; `document` listeners and `body` appends pile up
