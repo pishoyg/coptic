@@ -286,11 +286,16 @@ def replace_italic(match: regex.Match[str]) -> str:
 # possible that cases in the remainder of the book will violate it. A gloss
 # straying outside `_GLOSS_RE` would be taken for a quotation (which `_gloss`
 # reports), but a quotation that fits it would pass for a gloss unnoticed.
+# NOTE: We are forced to show some leniency in the treatment of guillemets, as
+# they represent actual text that may contain typos, rather than our in-house
+# notation.
 _GUILLEMETS_SUB_RE: str = r"«((?:[^«»()]|\([^()]*\))*?)»"
 # Kasser leaves a gloss open when it translates a quotation that breaks off, in
 # which case it ends in an ellipsis. It runs no further than the parenthesis
 # that encloses it, though it may stop short of it.
 _UNCLOSED_SUB_RE: str = r"«((?:[^«»()]|\([^()]*\))*\.\.\.)?"
+# The book contains unopened guillemets, so we permit them.
+_UNOPENED_SUB_RE: str = r"»"
 
 
 # The guillemets aren't part of the gloss, so they get a class of their own.
@@ -325,6 +330,11 @@ def replace_unclosed(match: regex.Match[str]) -> str:
     return _OPEN_GUILLEMET + _gloss(match)
 
 
+def replace_unopened(match: regex.Match[str]) -> str:
+    log.warn("unopened guillemet:", match.string)
+    return _CLOSE_GUILLEMET
+
+
 _SUBSTITUTIONS: list[randy.Substitution] = [
     # Replace occurrences of ampersand with the HTML encoding.
     # NOTE: The ampersand substitution must precede the substitutions that
@@ -336,6 +346,9 @@ _SUBSTITUTIONS: list[randy.Substitution] = [
     # substituted before unclosed ones.
     randy.Substitution(_GUILLEMETS_SUB_RE, replace_guillemets, ban=["«", "»"]),
     randy.Substitution(_UNCLOSED_SUB_RE, replace_unclosed, ban=["«", "»"]),
+    # NOTE: The stray guillemet substitution must follow the other guillemet
+    # substitutions, so that it only sees the unpaired ones.
+    randy.Substitution(_UNOPENED_SUB_RE, replace_unopened),
     # The transcription may italicize with a single underscore or a double one.
     # Whatever the distinction it intends, we render both alike.
     randy.Substitution(r"(__?)(.+?)\1", replace_italic, ban=["_"]),
