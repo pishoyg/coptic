@@ -87,10 +87,16 @@ export enum EVENT {
 
 /**
  * Dispatch the given header event on `document`.
+ *
+ * The event is cancelable, so that a listener whose action isn't idempotent
+ * can claim it with `preventDefault()`, and stale duplicates of that listener
+ * can skip it.
+ * On Anki, `document` outlives the card, so listeners pile up on it.
+ *
  * @param event - The event type to dispatch.
  */
 export function dispatch(event: EVENT): void {
-  document.dispatchEvent(new CustomEvent(event));
+  document.dispatchEvent(new CustomEvent(event, { cancelable: true }));
 }
 
 /**

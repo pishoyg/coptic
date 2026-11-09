@@ -112,8 +112,12 @@ function main(): void {
   // - Anki on macOS (and possibly on other platforms) has its own shortcuts,
   //   which conflict with ours!
   // - Elements created by the panel logic were found to be duplicated on some
-  //   Anki platforms! (The panel used to create its own footer; the footer now
-  //   comes from the header module.)
+  //   Anki platforms, likely because Anki keeps one `document` for the whole
+  //   session, and runs the card's script again on every side it shows, while
+  //   the panel appends its elements to `document.body`, which survives from
+  //   side to side.
+  //   For the same reason, listeners on `document` need to be careful not to
+  //   pile up.
   if (!iam.amI('card')) {
     help.makeHelpPanel(highlighter);
   }

@@ -97,12 +97,17 @@ export class Highlighter extends high.Highlighter {
   /**
    * Add the shared listeners, and toggle developer mode on
    * {@link head.EVENT.DEV}. Unlike reset, the toggle ignores whether this
-   * highlighter is active: developer mode is global, and a page has one
-   * developer-mode highlighter.
+   * highlighter is active: developer mode is global.
    */
   protected override addEventListeners(): void {
     super.addEventListeners();
-    document.addEventListener(head.EVENT.DEV, (): void => {
+    document.addEventListener(head.EVENT.DEV, (e: Event): void => {
+      // Make sure only one listener claims the event, in case the listener got
+      // registered multiple times.
+      if (e.defaultPrevented) {
+        return;
+      }
+      e.preventDefault();
       this.toggle();
     });
   }
