@@ -1,6 +1,6 @@
 ---
 name: wiki-tsv-is-sheet-snapshot
-description: "Crum's wiki.tsv is re-downloaded from a Google Sheet by `make crum`; local edits (e.g. manual labels) are overwritten"
+description: "Crum's wiki.tsv and the Kasser TSVs are re-downloaded from Google Sheets on every Crum pipeline run; local edits are overwritten"
 metadata:
   type: project
 ---
@@ -18,3 +18,8 @@ pulled into the diff.
 labels. Hand the user the exact edits to apply in the sheet. If `make crum`
 pulls in unrelated upstream changes, restore them to HEAD so the commit stays
 scoped.
+
+The Kasser snapshots (`data/input/kasser/complements.tsv`,
+`morphologiques.tsv`) work the same way, and `main.py` refreshes all of
+them on every run, `--html` included. To test a local fix before the sheet
+has it, pass `--notsv`.
