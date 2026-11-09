@@ -1,2 +1,2 @@
-"use strict";import*as i from"../about.js";import*as o from"./mode.js";import*as a from"./digital.js";import*as t from"./book.js";import*as m from"./ifao.js";import*as r from"./dawoud.js";async function n(){o.init(),i.init(),await Promise.all([a.init(),t.init(),m.init(),r.init()])}await n();
+"use strict";import*as o from"../about.js";import*as i from"../header.js";import*as t from"./mode.js";import*as r from"./digital.js";import*as a from"./book.js";import*as m from"./ifao.js";import*as e from"./dawoud.js";async function n(){i.mount("header",i.home(),i.either(i.help(),i.prev()),i.reset(),i.either(i.dev(),i.next()),i.reports()),t.init(),o.init(),await Promise.all([r.init(),a.init(),m.init(),e.init()])}await n();
 //# sourceMappingURL=lexicon.js.map
