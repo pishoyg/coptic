@@ -121,18 +121,40 @@ export function mount(
 /**
  * @param href - The link target.
  * @param children - The link content.
+ * @param external
  * @returns
  */
 function anchor(
   href: string,
-  ...children: (Node | string)[]
+  children: (Node | string)[] | Node | string,
+  external = true
 ): HTMLAnchorElement {
   const a: HTMLAnchorElement = document.createElement('a');
   a.href = href;
-  a.target = '_blank';
-  a.rel = 'noopener noreferrer';
-  a.append(...children);
+  append(a, children);
+  if (external) {
+    a.target = '_blank';
+    a.rel = 'noopener noreferrer';
+  }
   return a;
+}
+
+/**
+ *
+ * @param content
+ * @param klass
+ * @returns
+ */
+function span(
+  content: (Node | string)[] | Node | string,
+  klass?: string
+): HTMLSpanElement {
+  const s: HTMLSpanElement = document.createElement('span');
+  append(s, content);
+  if (klass) {
+    s.classList.add(klass);
+  }
+  return s;
 }
 
 /**
@@ -148,11 +170,24 @@ function anchor(
  * @returns The content of a unit.
  */
 function iconAndLegend(icon: string, legend: string): Node[] {
-  const span: HTMLSpanElement = document.createElement('span');
-  span.classList.add(CLS.LEGEND);
   // The space belongs to the legend, so it disappears along with it.
-  span.textContent = ` ${legend}`;
-  return [document.createTextNode(icon), span];
+  return [document.createTextNode(icon), span(` ${legend}`, CLS.LEGEND)];
+}
+
+/**
+ *
+ * @param element
+ * @param children
+ */
+function append(
+  element: Element,
+  children: (Node | string)[] | Node | string
+): void {
+  if (Array.isArray(children)) {
+    element.append(...children);
+  } else {
+    element.append(children);
+  }
 }
 
 /**
@@ -164,11 +199,11 @@ function iconAndLegend(icon: string, legend: string): Node[] {
 function button(
   event: EVENT,
   id: string,
-  ...children: (Node | string)[]
+  children: (Node | string)[] | Node | string
 ): HTMLButtonElement {
   const b: HTMLButtonElement = document.createElement('button');
   b.type = 'button';
-  b.append(...children);
+  append(b, children);
   b.addEventListener('click', (): void => {
     dispatch(event);
   });
@@ -180,19 +215,18 @@ function button(
  * @returns A link to the homepage.
  */
 export function home(): HTMLElement {
-  return anchor(paths.HOME, ...iconAndLegend('⌂', 'Home'));
+  return anchor(paths.HOME, iconAndLegend('⌂', 'Home'));
 }
 
 /**
  * @param href - The link target. Defaults to the page's
  * `<link rel="search">`, which must then exist.
- * @param legend - The text that explains the search icon.
  * @returns A search link.
  */
-export function search(href?: string, legend = 'Search'): HTMLElement {
+export function search(href?: string): HTMLElement {
   return anchor(
     href ?? browser.getLinkHref('search')!,
-    ...iconAndLegend('⌕', legend)
+    iconAndLegend('⌕', 'Search')
   );
 }
 
@@ -210,17 +244,11 @@ function neighbor(
   event: EVENT,
   id: string
 ): HTMLElement {
-  const b: HTMLButtonElement = button(event, id, text);
-  // If the link is available, register a default listener.
-  // On pages where a different listener is needed, the link should be absent,
-  // and this listener won't be registered.
+  // If the link is available, the button always points to it.
+  // Otherwise, create a button that fires the event, and let the host page add
+  // the required listener.
   const href: string | null = browser.getLinkHref(rel);
-  if (href) {
-    document.addEventListener(event, () => {
-      browser.open(href, false);
-    });
-  }
-  return b;
+  return href ? anchor(href, text, false) : button(event, id, text);
 }
 
 /**
@@ -243,33 +271,28 @@ export function next(): HTMLElement {
  * @returns A label.
  */
 export function label(text: string, href?: string): HTMLElement {
-  if (href) {
-    return anchor(href, text);
-  }
-  const span: HTMLSpanElement = document.createElement('span');
-  span.textContent = text;
-  return span;
+  return href ? anchor(href, text) : span(text);
 }
 
 /**
  * @returns A link to the reports form, opening in a new tab.
  */
 export function reports(): HTMLElement {
-  return anchor(paths.reports(), ...iconAndLegend('⚑', 'Reports'));
+  return anchor(paths.reports(), iconAndLegend('⚑', 'Contact'));
 }
 
 /**
  * @returns A button that dispatches {@link EVENT.RESET}.
  */
 export function reset(): HTMLElement {
-  return button(EVENT.RESET, ID.RESET, ...iconAndLegend('⟳', 'Reset'));
+  return button(EVENT.RESET, ID.RESET, iconAndLegend('⟳', 'Reset'));
 }
 
 /**
  * @returns A button that dispatches {@link EVENT.DEV}.
  */
 export function dev(): HTMLElement {
-  return button(EVENT.DEV, ID.DEV, ...iconAndLegend('λ', 'Dev'));
+  return button(EVENT.DEV, ID.DEV, iconAndLegend('λ', 'Dev'));
 }
 
 /**
@@ -279,7 +302,7 @@ export function dev(): HTMLElement {
  * @returns A button that dispatches {@link EVENT.HELP}.
  */
 export function help(): HTMLElement {
-  return button(EVENT.HELP, ID.HELP, ...iconAndLegend('?', 'Help'));
+  return button(EVENT.HELP, ID.HELP, iconAndLegend('?', 'Help'));
 }
 
 /**
@@ -290,8 +313,5 @@ export function help(): HTMLElement {
  * @returns A slot that holds alternative units.
  */
 export function either(...units: HTMLElement[]): HTMLElement {
-  const span: HTMLSpanElement = document.createElement('span');
-  span.classList.add(CLS.EITHER);
-  span.append(...units);
-  return span;
+  return span(units, CLS.EITHER);
 }

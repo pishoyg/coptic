@@ -159,7 +159,7 @@ async function main(): Promise<void> {
     'header',
     head.prev(),
     head.home(),
-    head.search(undefined, 'Bible'),
+    head.search(),
     head.reset(),
     head.reports(),
     head.next()
