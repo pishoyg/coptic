@@ -20,6 +20,13 @@
   grid-template-rows: 0fr;
   transition: grid-template-rows var(--transition-duration) ease-out;
 
+  /* Pin the single column to the container's width. Left implicit, the
+   * column is `auto`, which honours the content's intrinsic width; and a
+   * results table populated while hidden (e.g. a Lexicon search typed while
+   * a scan is on view) comes back with the viewport's width as its
+   * intrinsic width, overflowing the page until a reload. */
+  grid-template-columns: minmax(0, 1fr);
+
   /* `overflow: hidden` clips painting but, with a `<table>` descendant whose
    * intrinsic size ignores the 0-height grid track, the table's layout still
    * extends the document's scroll height. `contain: layout` isolates the
