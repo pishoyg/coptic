@@ -30,7 +30,7 @@ RAW_RE: regex.Pattern[str] = regex.compile(
             # TODO: (#786) Mathematical angle brackets are used by the
             # materialization. If Kasser were to get materialized, we might want
             # to change the materializer's notation to avoid confusion.
-            r"[\p{Latin}=^0-9 *⟨⟩!–'(),\-./:;?\[\]_~«»\\°&—]",
+            r"[\p{Latin}=^0-9 *⟨⟩!–'(),\-./:;?\[\]_~«»\\°&—±]",
         ),
     ),
 )
