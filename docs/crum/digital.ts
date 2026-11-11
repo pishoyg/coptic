@@ -311,22 +311,24 @@ class KELLIASearchResult extends SearchResult {
   /**
    * KELLIA results link to Coptic Dictionary Online, whose HTML we don't own.
    * A text fragment's prefix/suffix must appear verbatim and contiguously in
-   * the destination's rendered text for the fragment to match. Our markup is
-   * not identical to theirs, so the more context we add the likelier it is to
-   * fail to line up, yielding an invalid text fragment that the browser
-   * silently discards (leaving the link unanchored).
-   *
-   * Using no context at all, on the other hand, highlights only the first
-   * occurrence of a given word, which is unfortunate given that KELLIA
-   * duplicates forms that are shared across dialects.
-   *
-   * A single context word is a fair compromise. At the time of writing, it
-   * successfully highlights Coptic words and translations, though it may fail
-   * on less relevant elements such as dialects or bibliography entries.
+   * the destination's rendered text for the fragment to match. Our structure
+   * is very different from theirs, so any context risks failing to line up,
+   * yielding an invalid text fragment that the browser silently discards
+   * (leaving the link unanchored). We therefore use no context.
    *
    * @returns The number of context words per fragment.
    */
   protected override fragmentContext(): number {
+    return 0;
+  }
+
+  /**
+   * Without context, a fragment highlights only the first occurrence of its
+   * text, so further fragments add little. Highlighting one word suffices.
+   *
+   * @returns The maximum number of fragments.
+   */
+  protected override maxFragments(): number {
     return 1;
   }
 
