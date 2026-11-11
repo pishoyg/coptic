@@ -1452,7 +1452,7 @@ XOOXLE: xooxle.Xooxle = xooxle.Xooxle(
                 cls.ARAMAIC,
                 cls.DEMOTIC,
                 cls.HIEROGLYPHIC,
-                cls.GLOSS,
+                dict_cls.GLOSS,
                 cls.MANUAL,
                 cls.ADDENDUM,
                 # We retain marks to alert the user that there is a footnote.

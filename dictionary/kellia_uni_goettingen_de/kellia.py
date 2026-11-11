@@ -46,7 +46,7 @@ from collections import OrderedDict, abc, defaultdict
 import pandas as pd
 
 from dictionary import cls as dict_cls
-from dictionary.kellia_uni_goettingen_de import cls, ids, sources
+from dictionary.kellia_uni_goettingen_de import cls, ids, sources, trie
 from flashcards import deck
 from utils import ensure, file, gcp, javascript, log, page, paths, text
 from xooxle import xooxle
@@ -83,6 +83,9 @@ _SENSE_CHILDREN: list[_SenseChild] = [
     "ref",
     "xr",
 ]
+# A sense row is a tuple of (name, value, label). The label is an optional
+# HTML prefix, such as a language label, rendered before the value.
+_Row = tuple[_SenseChild, str, str]
 FORM_RE: re.Pattern[str] = re.compile(r"[Ⲁ-ⲱϢ-ϯⳈⳉ]+[†⸗\-]?")
 PURE_COPTIC_RE: re.Pattern[str] = re.compile("[Ⲁ-ⲱϢ-ϯⳈⳉ]+")
 
@@ -322,17 +325,20 @@ class Sense:
     def __init__(self, sense_n: int, sense_id: str) -> None:
         self._sense_n: int = sense_n
         self._sense_id: str = sense_id
-        self._content: list[tuple[_SenseChild, str]] = []
+        self._content: list[_Row] = []
 
-    def add(self, name: _SenseChild, value: str) -> None:
+    def add(self, name: _SenseChild, value: str, label: str = "") -> None:
         assert name in _SENSE_CHILDREN
         assert value
-        self._content.append((name, value))
+        self._content.append((name, value, label))
 
-    def format(self, pair: tuple[_SenseChild, str]) -> str:
-        if pair[0] == "bibl":
-            return page.LINE_BREAK.join(text.ssplit(pair[1], "; "))
-        return f'<span class="{pair[0]}">{pair[1]}</span>'
+    def format(self, row: _Row) -> str:
+        name, value, label = row
+        if name == "bibl":
+            assert not label
+            return page.LINE_BREAK.join(text.ssplit(value, "; "))
+        klass: str = dict_cls.GLOSS if name == "quote" else name
+        return f'{label}<span class="{klass}">{value}</span>'
 
     def identify(self) -> tuple[int, str]:
         return (self._sense_n, self._sense_id)
@@ -360,19 +366,32 @@ class Sense:
             yield "</td>"
             yield "</tr>"
 
-    def subset(self, *names: _SenseChild) -> list[tuple[_SenseChild, str]]:
+    def subset(self, *names: _SenseChild) -> list[_Row]:
         assert all(n in _SENSE_CHILDREN for n in names), names
-        return [pair for pair in self._content if pair[0] in names]
+        return [row for row in self._content if row[0] in names]
 
-    def explain(self, prefix: str = "") -> list[tuple[_SenseChild, str]]:
+    def single(self, name: _SenseChild) -> str:
+        """Return the value of the only child of the given type.
+
+        Args:
+            name: The type of the child.
+
+        Returns:
+            The value of the child.
+        """
+        ((_, value, _),) = self.subset(name)
+        return value
+
+    def explain(self, label: str = "") -> list[_Row]:
         explanation = self.subset("quote", "definition")
         if not explanation:
             return explanation
-        if prefix:
-            explanation[0] = (explanation[0][0], prefix + explanation[0][1])
+        if label:
+            name, value, _ = explanation[0]
+            explanation[0] = (name, value, label)
         return explanation
 
-    def give_references(self) -> list[tuple[_SenseChild, str]]:
+    def give_references(self) -> list[_Row]:
         return self.subset("bibl", "ref", "xr")
 
 
@@ -393,7 +412,12 @@ class Lang:
     def _last_sense(self) -> Sense:
         return self.senses[-1]
 
-    def add(self, name: _SenseChild, value: str | ET.Element) -> None:
+    def add(
+        self,
+        name: _SenseChild,
+        value: str | ET.Element,
+        label: str = "",
+    ) -> None:
         if name == "xr" and isinstance(value, ET.Element):
             for ref in value:
                 self._last_sense.add(
@@ -405,7 +429,7 @@ class Lang:
 
         if isinstance(value, ET.Element):
             value = _text(value)
-        self._last_sense.add(name, value)
+        self._last_sense.add(name, value, label)
 
     def table(self) -> str:
         return "".join(self.table_aux())
@@ -435,6 +459,60 @@ def _gloss_bibl(ref_bibl: str) -> str:
     for regex, repl in sources.SOURCES:
         ref_bibl = regex.sub(repl, ref_bibl)
     return ref_bibl
+
+
+def _tree_aux(
+    nodes: list[trie.Node],
+    senses: list[Sense],
+    top: bool,
+) -> abc.Generator[str]:
+    """Render trie nodes as list items.
+
+    Args:
+        nodes: The nodes to render.
+        senses: The senses of the word. Nodes refer to them by index.
+        top: Whether the nodes are top-level nodes. The first label of a
+            top-level node is the head of its senses. All other labels are
+            qualifiers, and get rendered as children, even when they are merged
+            into the same line as their parent.
+
+    Yields:
+        The HTML of the list items.
+    """
+    for idx, node in enumerate(nodes):
+        if idx:
+            # Separate siblings with a space, so their words don't fuse when
+            # the tree gets flattened into text (as is the case in Xooxle).
+            # Browsers ignore whitespace between list items.
+            yield " "
+        labels: list[str] = node.labels
+        parts: list[str] = []
+        if top:
+            parts.append(f'<span class="{dict_cls.GLOSS}">{labels[0]}</span>')
+            labels = labels[1:]
+        parts.extend(
+            f'<span class="{cls.CHILD}">({label})</span>' for label in labels
+        )
+        yield "<li>"
+        yield " ".join(parts)
+        if node.senses:
+            # A node can terminate several senses, if they are identical.
+            terminated: list[Sense] = [senses[i] for i in node.senses]
+            for s in terminated:
+                sense_n, sense_id = s.identify()
+                yield f"<!--sense_number:{sense_n}, sense_id:{sense_id}-->"
+            # The reference is separated from the preceding text by a CSS
+            # margin rather than a space, so no trailing space is left behind
+            # when Xooxle extracts it.
+            yield f'<span class="{cls.REF}">'
+            yield ", ".join(s.single("ref") for s in terminated)
+            yield "</span>"
+        if node.children:
+            # Likewise, separate a node from its children.
+            yield " <ul>"
+            yield from _tree_aux(list(node.children.values()), senses, False)
+            yield "</ul>"
+        yield "</li>"
 
 
 def _form_sort_key(form: ET.Element) -> tuple[str, str]:
@@ -490,23 +568,44 @@ class Word:
         for d, e, f in zip(de.senses, en.senses, fr.senses):
             assert d.identify() == e.identify() == f.identify()
             merged.start_sense(*d.identify())
-            explanation: list[tuple[_SenseChild, str]]
-            if self.is_greek:
-                # DDGLC entries only have English translations, so a language
-                # prefix would be redundant.
-                assert not d.explain() and not f.explain()
-                explanation = e.explain()
-            else:
-                explanation = [
-                    *e.explain(f'<span class="{cls.LANG}">(En.)</span> '),
-                    *d.explain(f'<span class="{cls.LANG}">(De.)</span> '),
-                    *f.explain(f'<span class="{cls.LANG}">(Fr.)</span> '),
-                ]
-            for row in explanation:
+            for row in e.explain(f'<span class="{cls.LANG}">(En.)</span> '):
+                merged.add(*row)
+            for row in d.explain(f'<span class="{cls.LANG}">(De.)</span> '):
+                merged.add(*row)
+            for row in f.explain(f'<span class="{cls.LANG}">(Fr.)</span> '):
                 merged.add(*row)
             for row in d.give_references():
                 merged.add(*row)
         return merged
+
+    def senses_html(self) -> str:
+        if self.is_greek:
+            return "".join(self._tree_aux())
+        return self.merge_langs().table()
+
+    def _tree_aux(self) -> abc.Generator[str]:
+        """Render the senses of a Greek word as a tree.
+
+        DDGLC senses only have English translations, so we use no language
+        labels. Each sense has a single translation, attributed to the DDGLC
+        (we omit the redundant attribution), and a single reference (a DDGLC
+        Coptic usage ID).
+
+        Yields:
+            The HTML of the tree.
+        """
+        de, en, fr = self.langs["de"], self.langs["en"], self.langs["fr"]
+        assert not any(s.explain() for s in [*de.senses, *fr.senses])
+        senses: list[Sense] = en.senses
+        assert not any(s.subset("definition", "xr") for s in senses)
+        assert all(s.single("bibl") == "DDGLC" for s in senses)
+        yield f'<ul id="{ids.SENSES}">'
+        yield from _tree_aux(
+            trie.build([s.single("quote") for s in senses]),
+            senses,
+            top=True,
+        )
+        yield "</ul>"
 
     def cdo(self) -> str:
         return paths.coptic_dictionary_online(self.entry_xml_id)
@@ -1042,7 +1141,7 @@ def notes_aux(
     for key, word in words.items():
         front: str = word.orthstring.table()
         back: str = _join(
-            word.merge_langs().table(),
+            word.senses_html(),
             word.etym_string.process(),
             page.HORIZONTAL_RULE,
             "<footer>",
@@ -1073,7 +1172,9 @@ _KELLIA_RETAIN_CLASSES = {
     cls.LANG,
     cls.GEO,
     cls.GRAM_GRP,
+    dict_cls.GLOSS,
 } | set(GEOS)
+
 
 XOOXLE: xooxle.Xooxle = xooxle.Xooxle(
     source=((note.key, note.html) for note in notes_aux()),
@@ -1093,6 +1194,17 @@ XOOXLE: xooxle.Xooxle = xooxle.Xooxle(
             "SENSES",
             xooxle.Selector({"id": ids.SENSES}),
             retain_classes=_KELLIA_RETAIN_CLASSES,
+            # Greek senses are rendered as a tree of nested lists, so we retain
+            # the list elements. We don't treat them as block elements, because
+            # Xooxle balances the HTML of each line: It closes the tags left
+            # open at the end of a line, and reopens them on the next one. Each
+            # list item would thus end up in a list of its own.
+            # The downside is that the whole tree occupies a single line, and
+            # since Xooxle searches the index one line at a time, it sees the
+            # text of all the senses concatenated.
+            # To keep words from fusing, the tree separates its nodes with
+            # spaces (see `_tree_aux`).
+            retain_tags=xooxle.RETAIN_TAGS_DEFAULT | {"ul", "li"},
         ),
         xooxle.Capture(
             "TEXT",

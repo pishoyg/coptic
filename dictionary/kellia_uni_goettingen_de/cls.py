@@ -1,6 +1,7 @@
 """KELLIA HTML class names."""
 
 BIBL: str = "bibl"
+CHILD: str = "child"
 ETYM: str = "etym"
 GEO: str = "geo"
 GRAM_GRP: str = "gram_grp"

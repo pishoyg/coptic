@@ -308,7 +308,7 @@ _CLOSE_GUILLEMET: str = f'<span class="{cls.GUILLEMET}">&raquo;</span>'
 def _gloss(match: regex.Match[str]) -> str:
     text: str = match.group(1)
     if _GLOSS_RE.fullmatch(text):
-        return f'<span class="{cls.GLOSS}">{text}</span>'
+        return f'<span class="{dict_cls.GLOSS}">{text}</span>'
     # The guess may be wrong. See `_GUILLEMETS_SUB_RE`.
     log.warn(
         "guillemets taken for a quotation:",

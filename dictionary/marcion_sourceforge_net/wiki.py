@@ -457,7 +457,7 @@ _ITALIC_RE: regex.Pattern[str] = regex.compile(r"[\p{Latin}ʿ0-9 '\-.:?&\^]+")
 def replace_gloss(match: regex.Match[str]) -> str:
     gloss: str = match.group(1)
     ensure.fullmatch(_GLOSS_RE, gloss, "gloss")
-    return f'<span class="{cls.GLOSS}">{gloss}</span>'
+    return f'<span class="{dict_cls.GLOSS}">{gloss}</span>'
 
 
 def replace_bullet(match: regex.Match[str]) -> str:
