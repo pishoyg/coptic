@@ -1474,6 +1474,28 @@ XOOXLE: xooxle.Xooxle = xooxle.Xooxle(
             },
         ),
         xooxle.Capture(
+            "KASSER",
+            [
+                xooxle.Selector({"id": kasser.ID[book]}, force=False)
+                for book in kasser.Book
+            ],
+            # Like Wiki's, Kasser's classes are retained for styling.
+            retain_classes={
+                cls.QUIRE,
+                *kasser.Book,
+                dict_cls.DIALECT,
+                cls.COPTIC,
+                cls.GREEK,
+                dict_cls.GLOSS,
+                cls.HANGING,
+                cls.ADDENDUM,
+                cls.MARK,
+            },
+            unit_tags={"p"},
+            retain_tags=xooxle.RETAIN_TAGS_DEFAULT | {"p"},
+            retain_attributes={randy.DATA_PAGE},
+        ),
+        xooxle.Capture(
             "MARCION",
             xooxle.Selector({"id": ids.PRETTY}),
             # This is the list of classes needed for highlighting. If the
@@ -1510,6 +1532,6 @@ XOOXLE: xooxle.Xooxle = xooxle.Xooxle(
             block_classes={cls.PART_OF_SPEECH},
         ),
     ],
-    layers=[["MARCION", "MEANING", "APPENDIX"], ["WIKI"]],
+    layers=[["MARCION", "MEANING", "APPENDIX"], ["WIKI"], ["KASSER"]],
     output=paths.LEXICON_DIR / "crum.json",
 )

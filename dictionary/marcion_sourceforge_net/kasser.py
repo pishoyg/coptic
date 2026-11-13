@@ -547,8 +547,6 @@ def root_html(key: str) -> abc.Generator[str]:
         An element for each book that has entries for the root, structured like
         the Wiki's.
     """
-    # TODO: (#786) Index the Kasser entries in Xooxle. (They're currently in the
-    # `Appendix`, but may be more suitable for a separate layer.)
     for book in Book:
         yield from randy.quire(
             book,
