@@ -385,6 +385,10 @@ _SUBSTITUTIONS: list[randy.Substitution] = [
     # This would also help us avoid hardcoding `vl?` below, since all orphan
     # subscripts will be treated uniformly.
     randy.Substitution(r"~(\([^()]+\)|vl\?)", replace_subscript, ban=["~"]),
+    # A double `\\n` is an unindented line break. Only the first line of a
+    # block can hang, so the break opens a paragraph, styled to hang without a
+    # gap. It must precede `PARAGRAPH`, which would consume its trailing `\n`.
+    randy.Substitution(r"\\\\n", f'</p><p class="{cls.HANGING}">'),
     randy.PARAGRAPH,
     randy.SUPERSCRIPT,
 ]

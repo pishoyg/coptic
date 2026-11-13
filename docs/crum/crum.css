@@ -222,13 +222,18 @@ figcaption {
 
 /* Kasser's entries hang: the first line of the first paragraph protrudes to
  * the left, and every other line, in every paragraph, is indented. The
- * paragraphs are also set closer together. */
+ * paragraphs are also set closer together. A `.hanging` paragraph is a line
+ * break: it hangs like the first, without a gap. */
 :is(.complements, .morphologiques) p {
   padding-left: 1em;
   margin-bottom: 0.3em;
 
-  &:first-child {
+  &:is(:first-child, .hanging) {
     text-indent: -1em;
+  }
+
+  &:has(+ .hanging) {
+    margin-bottom: 0;
   }
 }
 
