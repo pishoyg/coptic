@@ -1,5 +1,4 @@
 /** Package orth defines orthography logic. */
-import * as browser from './browser.js';
 
 /**
  * Use NFD normalization to split characters into their base character and
@@ -68,11 +67,6 @@ export function idempotent(tran: Translation): boolean {
   return tran.at(-1) === tran.length - 1;
 }
 
-// SAFARI_FRAGMENT_WORD_CHARS is a list of otherwise non-word characters that
-// are considered word characters for fragment purposes by Safari. See #286 for
-// context.
-const SAFARI_FRAGMENT_WORD_CHARS: Set<string> = new Set<string>(["'"]);
-
 /**
  *
  * @param char
@@ -85,17 +79,39 @@ export function isWordChar(char?: string): boolean {
   );
 }
 
+// FRAGMENT_WORD_CHARS are otherwise non-word characters that we treat as word
+// characters for fragment purposes.
+// Unicode word segmentation (https://unicode.org/reports/tr29/#WB6) lets
+// these join adjacent characters into one word: `108,21`, `3.14`, `bkr·t`,
+// and `don't` are each a single word, so a text fragment can't start or end
+// inside them. Browsers differ in how they apply these rules to letters (only
+// Safari joins `don't`; see #286), but treating these characters as word
+// characters unconditionally only ever widens a fragment to a boundary that
+// every browser recognizes.
+//
+// These are the MidLetter, MidNum, MidNumLet, and Single_Quote classes from
+// UAX #29.
+// NOTE: Several look identical to more common characters (e.g. U+037E GREEK
+// QUESTION MARK and the semicolon), so we write them as escapes.
+const FRAGMENT_WORD_CHARS: Set<string> = new Set<string>(
+  // MidLetter:
+  ':\u00B7\u0387\u055F\u05F4\u2027\uFE13\uFE55\uFF1A' +
+    // MidNum:
+    ',;\u037E\u0589\u060C\u060D\u066C\u07F8\u2044' +
+    '\uFE10\uFE14\uFE50\uFE54\uFF0C\uFF1B' +
+    // MidNumLet:
+    '.\u2018\u2019\u2024\uFE52\uFF07\uFF0E' +
+    // Single_Quote:
+    "'"
+);
+
 /**
- *
  * @param char
- * @returns
- * See #286 for context.
+ * @returns Whether `char` is part of a word, as far as text fragments are
+ * concerned.
  */
 export function isWordCharForFragments(char: string): boolean {
-  return (
-    isWordChar(char) ||
-    (SAFARI_FRAGMENT_WORD_CHARS.has(char) && browser.safari())
-  );
+  return isWordChar(char) || FRAGMENT_WORD_CHARS.has(char);
 }
 
 /**
