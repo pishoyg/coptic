@@ -248,7 +248,7 @@ class Capture:
     def __init__(
         self,
         name: str,
-        selector: Selector,
+        selectors: Selector | list[Selector],
         retain_classes: set[str] | None = None,
         retain_tags: set[str] | None = None,
         retain_elements_for_classes: set[str] | None = None,
@@ -260,8 +260,12 @@ class Capture:
         # _name is name of the field.
         self._name: str = name
         ensure.ensure(self._name != _KEY, _KEY, "is a reserved field name!")
-        # _selector is the selector that extracts the content.
-        self._selector: Selector = selector
+        # _selectors are the selectors that extract the content. Each selected
+        # element contributes units of its own to the field, in order.
+        self._selectors: list[Selector] = (
+            [selectors] if isinstance(selectors, Selector) else selectors
+        )
+        ensure.ensure(self._selectors, self._name, "has no selectors!")
         # _retain_classes is the HTML classes to retain in the output.
         self._retain_classes: set[str] = retain_classes or set()
         # _retain_tags is the list of HTML tags to retain in the output.
@@ -301,27 +305,35 @@ class Capture:
         return self._name
 
     def excise(self, soup: bs4.BeautifulSoup) -> str:
-        """Find an element using the selector, extract it, and return its HTML.
+        """Find elements using the selectors, extract them, and return their
+        HTML.
 
-        Use the selector to find an element matching the query, extract it
-        (remove it from the original soup), and return its simplified HTML.
+        Use each selector to find an element matching its query, extract it
+        (remove it from the original soup), and return the simplified HTML of
+        all the found elements, in the order of the selectors. A unit never
+        spans two elements.
 
-        If the selector doesn't provide an element, return the empty string. To
-        force a matching element to be found, configure the selector
-        accordingly.
+        If no selector provides an element, return the empty string. To force a
+        matching element to be found, configure the selector accordingly.
 
         Args:
             soup: The soup to search.
 
         Returns:
-            The simplified HTML version of the found tag.
+            The simplified HTML version of the found tags.
 
         """
-        tag = self._selector.select(soup)
-        if not tag:
-            return ""
-        _ = tag.extract()
-        return "".join(_clean(self._get_tag_html(tag)))
+        return "".join(_clean(self._excise_aux(soup)))
+
+    def _excise_aux(self, soup: bs4.BeautifulSoup) -> Generator[str]:
+        for selector in self._selectors:
+            tag = selector.select(soup)
+            if not tag:
+                continue
+            _ = tag.extract()
+            # Separate the elements. Leading delimiters get dropped by `_clean`.
+            yield const.UNIT_DELIMITER
+            yield from self._get_tag_html(tag)
 
     def _wrap(
         self,
