@@ -223,7 +223,7 @@ class CrumSearchResult extends SearchResult {
       // class.
       return super.bucket(row);
     }
-    // This is a Wiki entry. Dialects are irrelevant, but we have some
+    // This is a Wiki or Kasser entry. Dialects are irrelevant, but we have some
     // preferences.
     // Ideally, we would also prioritize Coptic words (forms) in the heading
     // over Coptic words in examples / explanation, but we currently don't mark
@@ -242,16 +242,22 @@ class CrumSearchResult extends SearchResult {
    * @returns
    */
   private marcion(): boolean {
-    // Marcion is layer 0.
-    return !this.layer;
+    return this.layer === 0;
+  }
+
+  /**
+   *
+   * @returns
+   */
+  private wiki(): boolean {
+    return this.layer === 1;
   }
 
   /**
    * @returns
    */
-  private wiki(): boolean {
-    // Wiki is layer 1.
-    return !!this.layer;
+  private kasser(): boolean {
+    return this.layer === 2;
   }
 
   /**
@@ -266,14 +272,15 @@ class CrumSearchResult extends SearchResult {
       // behavior.
       return super.filter();
     }
-    // Layer 0 is Marcion, layer 1 is Wiki.
+    // Layer 0 is Marcion, the rest are Wiki and Kasser.
     if (CrumSearchResult.marcionCheckbox.checked) {
       // If only the Marcion checkbox is checked, then only search Marcion.
       return this.marcion();
     }
     if (CrumSearchResult.wikiCheckbox.checked) {
-      // If only the Wiki checkbox is checked, then only search Wiki.
-      return this.wiki();
+      // If only the Wiki checkbox is checked, then only search Wiki and Kasser.
+      // TODO: (#0) Consider controlling Kasser using a separate checkbox.
+      return this.wiki() || this.kasser();
     }
     log.fatal('This is impossible!');
   }
