@@ -134,6 +134,7 @@ RETAIN_TAGS_DEFAULT: set[str] = {
     "sup",
     "ins",
     "del",
+    "sub",
 }
 
 
