@@ -34,6 +34,10 @@ There are artifacts that we chose to ignore in our own pipeline:
 # depends on the number of children. Instead of directly evaluating the truth
 # value of an `ET.Element | None`, use `is not None`.
 
+# NOTE: Our HTML uses classes rather than IDs, because Crum embeds KELLIA
+# entries in its pages, and several entries on one page would have the same
+# IDs.
+
 import functools
 import itertools
 import os
@@ -46,7 +50,7 @@ from collections import OrderedDict, abc, defaultdict
 import pandas as pd
 
 from dictionary import cls as dict_cls
-from dictionary.kellia_uni_goettingen_de import cls, ids, sources, trie
+from dictionary.kellia_uni_goettingen_de import cls, sources, trie
 from flashcards import deck
 from utils import ensure, file, gcp, javascript, log, page, paths, text
 from xooxle import xooxle
@@ -223,7 +227,7 @@ class Orthography:
         return any(f.geo == geo for f in self.forms)
 
     def table_aux(self) -> abc.Generator[str]:
-        yield f'<table id="{ids.ORTHS}">'
+        yield f'<table class="{cls.ORTHS}">'
         for line in self.forms:
             yield from line.tr_aux()
         yield "</table>"
@@ -435,7 +439,7 @@ class Lang:
         return "".join(self.table_aux())
 
     def table_aux(self) -> abc.Generator[str]:
-        yield f'<table id="{ids.SENSES}">'
+        yield f'<table class="{cls.SENSES}">'
         yield "<colgroup>"
         yield "<col>"
         yield "<col>"
@@ -599,7 +603,7 @@ class Word:
         senses: list[Sense] = en.senses
         assert not any(s.subset("definition", "xr") for s in senses)
         assert all(s.single("bibl") == "DDGLC" for s in senses)
-        yield f'<ul id="{ids.SENSES}">'
+        yield f'<ul class="{cls.SENSES}">'
         yield from _tree_aux(
             trie.build([s.single("quote") for s in senses]),
             senses,
@@ -1187,12 +1191,12 @@ XOOXLE: xooxle.Xooxle = xooxle.Xooxle(
     captures=[
         xooxle.Capture(
             "ORTHS",
-            xooxle.Selector({"id": ids.ORTHS}),
+            xooxle.Selector({"class_": cls.ORTHS}),
             retain_classes=_KELLIA_RETAIN_CLASSES,
         ),
         xooxle.Capture(
             "SENSES",
-            xooxle.Selector({"id": ids.SENSES}),
+            xooxle.Selector({"class_": cls.SENSES}),
             retain_classes=_KELLIA_RETAIN_CLASSES,
             # Greek senses are rendered as a tree of nested lists, so we retain
             # the list elements. We don't treat them as block elements, because

@@ -4,8 +4,6 @@ import os
 import re
 from collections import abc
 
-import regex
-
 from utils import ensure, paths
 
 _CHARSET_TAG: str = """
@@ -62,10 +60,6 @@ NBSP: str = "&nbsp;"
 HEADER: str = "<header></header>"
 FOOTER: str = "<footer></footer>"
 
-_HTML_ID_RE: regex.Pattern[str] = regex.compile(
-    r'(?<=<\w+[^>]*)\bid=".*?"(?=[^<]*>)',
-)
-
 assert TAG_RE.fullmatch(LINE_BREAK)
 assert TAG_RE.fullmatch(HORIZONTAL_RULE)
 
@@ -102,10 +96,6 @@ def closing(tag: str, strict: bool = True) -> bool:
 
 def no_line_breaks(htm: str) -> str:
     return htm.replace(LINE_BREAK, " ")
-
-
-def no_ids(htm: str) -> str:
-    return _HTML_ID_RE.sub("", htm)
 
 
 # NOTE: html_head is used by our HTML generation logic to generated the

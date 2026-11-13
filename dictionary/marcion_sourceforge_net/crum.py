@@ -1365,20 +1365,18 @@ def _mother() -> Mother:
 
 @functools.cache
 def _stepmother() -> Mother:
-    # NOTE: TLA sister elements possess IDs that are often identical, which
-    # we remove here in order to avoid having HTML element ID conflicts,
-    # given that, in this view, we can include several TLA entries in the
-    # same HTML page.
-    key_to_stepsister = {
-        key: Sister(
-            key,
-            page.no_ids(word.orthstring.table()),
-            page.no_ids(word.merge_langs().table()),
-            "",
-        )
-        for key, word in kellia.greek().items()
-    }
-    return Mother(key_to_stepsister, StepsisterWithFrag)
+    return Mother(
+        {
+            key: Sister(
+                key,
+                word.orthstring.table(),
+                word.senses_html(),
+                "",
+            )
+            for key, word in kellia.greek().items()
+        },
+        StepsisterWithFrag,
+    )
 
 
 @functools.cache

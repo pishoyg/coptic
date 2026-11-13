@@ -741,20 +741,20 @@ body.dev {
 }
 
 /* This rule applies to the meaning column in the senses table in KELLIA's
-   * cards. Other files have a `meaning` class, but it shouldn't be impacted by
-   * this rule. */
-#senses .meaning {
+ * cards. Other files have a `meaning` class, but it shouldn't be impacted by
+ * this rule. */
+.kellia-senses .meaning {
   width: 70%;
 }
 
 /* Greek senses in KELLIA's cards are rendered as a tree of nested lists. */
-ul#senses,
-#senses ul {
+ul.kellia-senses,
+.kellia-senses ul {
   margin: 0;
   padding-left: 1.5em;
 }
 
-#senses li .ref {
+.kellia-senses li .ref {
   margin-left: 0.5em;
   font-size: smaller;
 }

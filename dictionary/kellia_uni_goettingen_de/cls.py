@@ -8,5 +8,8 @@ GRAM_GRP: str = "gram_grp"
 HINT: str = "hint"
 LANG: str = "lang"
 ORTH: str = "orth"
+ORTHS: str = "orths"
 REF: str = "ref"
 REF_XR: str = "ref_xr"
+# SENSES is prefixed, because Crum uses `senses` for something else.
+SENSES: str = "kellia-senses"
