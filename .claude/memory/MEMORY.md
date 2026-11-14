@@ -11,3 +11,5 @@
 - [Kasser's unbalanced lacuna brackets](kasser-unbalanced-lacuna-brackets.md) — `ⲧⲧⲓ]ⲙⲏ`, `ⲕⲟⲗⲗⲁⲑⲟ[ⲛ` are in the print; check the scan first
 - [Kasser margins give Crum pages](kasser-margin-crum-pages.md) — margin and running head cite Crum page/column; use them to audit Marcion IDs
 - [Anki document outlives the card](anki-document-outlives-card.md) — card script re-runs per side; `document` listeners and `body` appends pile up
+- [Anki Desktop is Chrome 140](anki-desktop-tooltip-stretch.md) — tooltips once opened at height 0 there; test tooltip CSS in Anki, not just Playwright
+- [Anki Desktop remote debugging](anki-desktop-remote-debugging.md) — `QTWEBENGINE_REMOTE_DEBUGGING=9222` + CDP; render a card via `_showQuestion`
