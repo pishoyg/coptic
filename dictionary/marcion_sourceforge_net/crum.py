@@ -30,15 +30,20 @@ from dictionary.marcion_sourceforge_net import cls, constants, ids, kasser
 from dictionary.marcion_sourceforge_net import lexical as lex
 from dictionary.marcion_sourceforge_net import parse, randy, sheet, wiki
 from flashcards import deck
+from utils import (
+    cache,
+    concur,
+    ensure,
+    file,
+    gcp,
+    javascript,
+    log,
+    markdown,
+    page,
+    paths,
+    text,
+)
 from xooxle import xooxle
-
-# We can't put all imports on one line, because there is conflict between the
-# following pre-commit hooks: isort, add-trailing-comma, black
-# TODO: (#0) This is not ideal. Resolve hook conflicts.
-# isort: off
-# pylint: disable-next=ungrouped-imports
-from utils import cache, concur, ensure, file, gcp, log, page, paths, text
-from utils import javascript, markdown
 
 _NUM_DRV_COLS: int = 10
 _HUNDRED: int = 100
