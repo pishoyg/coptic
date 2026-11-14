@@ -396,7 +396,10 @@ repos:
       # running several times.
       - id: playwright
         name: playwright
-        entry: npx playwright test
+        # We skip some slow tests here, and agents run them when they touch the
+        # modules they cover. Playwright matches `--grep` against a string that
+        # includes the test's file name.
+        entry: npx playwright test --grep-invert 'tooltip\.ts'
         language: system
         types: [file]
         files: ^(docs|test)/.*

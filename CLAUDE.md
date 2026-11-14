@@ -72,6 +72,11 @@ npx playwright test               # E2E tests (Chromium + Mobile Chrome)
 npx tsc                           # type check only
 ```
 
+The `playwright` pre-commit hook skips some slow Playwright tests (see
+`--grep-invert` in `.pre-commit-config.yaml`). `npx playwright test` still runs
+them. After changing a module that one of them covers, verify it by running
+that test, e.g. `npx playwright test test/tooltip.ts`.
+
 ## Browser Checks
 
 To inspect UI changes in `docs/` in a live browser, reuse a running dev server
