@@ -158,6 +158,8 @@ repos:
     rev: 9.0.0b5
     hooks:
       - id: isort
+        # Agree with black on how to wrap long imports.
+        args: [--profile, black, --line-length, "79"]
 
   - repo: https://github.com/pre-commit/pygrep-hooks
     rev: v1.10.0
