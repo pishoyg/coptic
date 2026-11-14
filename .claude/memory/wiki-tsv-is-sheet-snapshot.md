@@ -1,6 +1,6 @@
 ---
 name: wiki-tsv-is-sheet-snapshot
-description: "Crum's wiki.tsv and the Kasser TSVs are re-downloaded from Google Sheets on every Crum pipeline run; local edits are overwritten"
+description: "Crum's wiki.tsv, the Kasser TSVs, and the Marcion roots/derivations TSVs are re-downloaded from Google Sheets on every Crum pipeline run; local edits are overwritten"
 metadata:
   type: project
 ---
@@ -21,5 +21,13 @@ scoped.
 
 The Kasser snapshots (`data/input/kasser/complements.tsv`,
 `morphologiques.tsv`) work the same way, and `main.py` refreshes all of
-them on every run, `--html` included. To test a local fix before the sheet
-has it, pass `--notsv`.
+them on every run, `--html` included. So do the Marcion snapshots
+(`data/input/marcion/roots.tsv`, `derivations.tsv`), which `Crum.roots`
+reads; only `Crum.read_roots(live=True)` (used by the helpers that write
+to the sheet) reads the sheet directly. To test a local fix before the sheet has
+it, pass `--notsv`.
+
+KELLIA's `main.py` follows the same convention (`--tsv`, `--notsv`) for
+`dictionary/kellia_uni_goettingen_de/data/input/bohairic_supplemental.tsv`,
+a third-party Coptic Scriptorium sheet; fixes there go upstream (#305). The
+Crum pipeline reads that snapshot (via Greek sisters) but doesn't refresh it.
