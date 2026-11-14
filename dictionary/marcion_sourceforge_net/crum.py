@@ -1506,7 +1506,6 @@ XOOXLE: xooxle.Xooxle = xooxle.Xooxle(
             # Kasser entries are short enough that they can be placed in a
             # single unit.
             block_elements=xooxle.BLOCK_ELEMENTS_DEFAULT | {"p"},
-            retain_tags=xooxle.RETAIN_TAGS_DEFAULT | {"p"},
             retain_attributes={randy.DATA_PAGE},
         ),
         xooxle.Capture(

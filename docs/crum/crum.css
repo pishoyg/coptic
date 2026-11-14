@@ -220,11 +220,17 @@ figcaption {
   margin-bottom: 0.8em;
 }
 
+.quire p {
+  margin-top: 0;
+  text-align: justify;
+  line-height: 1.7;
+}
+
 /* Kasser's entries hang: the first line of the first paragraph protrudes to
  * the left, and every other line, in every paragraph, is indented. The
  * paragraphs are also set closer together. A `.hanging` paragraph is a line
  * break: it hangs like the first, without a gap. */
-:is(.complements, .morphologiques) p {
+body:not(.lexicon) :is(.complements, .morphologiques) p {
   padding-left: 1em;
   margin-bottom: 0.3em;
 
@@ -235,12 +241,6 @@ figcaption {
   &:has(+ .hanging) {
     margin-bottom: 0;
   }
-}
-
-.quire p {
-  margin-top: 0;
-  text-align: justify;
-  line-height: 1.7;
 }
 
 .bible {
