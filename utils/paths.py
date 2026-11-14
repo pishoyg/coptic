@@ -35,6 +35,11 @@ KEYBOARD: pathlib.Path = directory("keyboard/")
 MORPHOLOGY: pathlib.Path = directory("morphology/")
 
 # Component Files
+MARCION_ROOTS_TSV: pathlib.Path = file(MARCION, "data/input/marcion/roots.tsv")
+MARCION_DERIVATIONS_TSV: pathlib.Path = file(
+    MARCION,
+    "data/input/marcion/derivations.tsv",
+)
 WIKI_TSV: pathlib.Path = file(MARCION, "data/input/wiki.tsv")
 KASSER_COMPLEMENTS_TSV: pathlib.Path = file(
     MARCION,

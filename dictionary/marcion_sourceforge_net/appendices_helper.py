@@ -434,7 +434,7 @@ class _Matriarch:
 
         # Googls Sheets uses 1-based indexing.
         # We also add 1 to account for the header row.
-        roots: dict[str, crum.Root] = crum.Crum.roots_live()
+        roots: dict[str, crum.Root] = crum.Crum.read_roots(live=True)
         key_to_family: dict[str, _Family] = {
             root.key: _Family(root.row) for root in roots.values()
         }
@@ -564,12 +564,12 @@ class Runner:
         if not self.args.keys:
             # If no keys are given, the ask is to print keys of words belonging
             # to a given category.
-            for root in crum.Crum.roots_live().values():
+            for root in crum.Crum.read_roots(live=True).values():
                 if any(c in self.args.cat for c in root.categories):
                     print(root.key)
             return
         # Assign the given categories to the given words.
-        roots: dict[str, crum.Root] = crum.Crum.roots_live()
+        roots: dict[str, crum.Root] = crum.Crum.read_roots(live=True)
         for key in self.args.keys:
             root = roots[key]
             if self.args.override_cat:
@@ -578,7 +578,7 @@ class Runner:
                 root.add_categories(self.args.cat)
 
     def categories_prompt(self) -> None:
-        for root in crum.Crum.roots_live().values():
+        for root in crum.Crum.read_roots(live=True).values():
             if root.num < self.args.first:
                 continue
             if root.categories:

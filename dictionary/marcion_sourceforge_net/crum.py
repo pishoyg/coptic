@@ -879,12 +879,15 @@ class Crum:
     @cache.StaticProperty
     @staticmethod
     def roots() -> dict[str, Root]:
-        """Retrieve a shared, static snapshot of the roots.
+        """Retrieve a shared, static copy of the roots.
+
+        The roots are read from the local snapshot of the sheet. Use
+        `read_roots(live=True)` if you intend to write to the sheet.
 
         Returns:
-            A shared, static snapshot of the roots.
+            A shared, static copy of the roots.
         """
-        return Crum.roots_live()
+        return Crum.read_roots(live=False)
 
     @cache.StaticProperty
     @staticmethod
@@ -924,14 +927,18 @@ class Crum:
     # whenever the origin is updated.
     # In general, any update method in your interface should both update the
     # sheet (a.k.a. origin or source of truth), as well as the local snapshot.
-    # This way, retrieving a new copy is unnecessary, and you can remove this
-    # method.
+    # This way, retrieving a new copy is unnecessary, and you can remove the
+    # `live` parameter.
     @staticmethod
-    def roots_live() -> dict[str, Root]:
-        """Retrieve a fresh snapshot of the roots.
+    def read_roots(live: bool) -> dict[str, Root]:
+        """Retrieve a fresh copy of the roots.
+
+        Args:
+            live: Read the sheet rather than the local snapshot. Do so if you
+                intend to write to the sheet.
 
         Returns:
-            A fresh snapshot of the roots.
+            A fresh copy of the roots.
         """
         derivations: dict[str, Derivation] = {}
 
@@ -950,7 +957,7 @@ class Crum:
         by_key_word: collections.defaultdict[str, list[Derivation]] = (
             collections.defaultdict(list)
         )
-        for record in sheet.derivations():
+        for record in sheet.derivations(live):
             d: Derivation = Derivation(
                 record.row_num,
                 record.row,
@@ -962,7 +969,7 @@ class Crum:
         del derivations
 
         roots: dict[str, Root] = {}
-        for record in sheet.roots():
+        for record in sheet.roots(live):
             key: str = record.row[sheet.COL.KEY.value]
             roots[key] = Root(
                 record.row_num,

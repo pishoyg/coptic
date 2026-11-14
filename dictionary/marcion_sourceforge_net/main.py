@@ -8,18 +8,19 @@ from collections import abc
 
 import pandas as pd
 
-from dictionary.marcion_sourceforge_net import constants, crum, kasser, wiki
+from dictionary.marcion_sourceforge_net import (
+    constants,
+    crum,
+    kasser,
+    sheet,
+    wiki,
+)
 from flashcards import deck
 from utils import concur, file, gcp, log, paths
 
-# There is an asymmetry in the pipeline. We read the Marcion data straight from
-# Google Sheets, but we take a snapshot of the Wiki sheet, track it in Git, and
-# read that. This is motivated by the desire to review Wiki changes carefully:
-# a snapshot turns a sheet edit into a `diff`.
-# The Marcion format is much simpler, and a `diff` review of the output HTML
-# serves it well enough.
-# TODO: (#0) Consider tracking the Marcion source of truth in a local TSV as
-# well.
+# Our sources of truth live in Google Sheets. We take a snapshot of each sheet,
+# track it in Git, and read that. This is motivated by the desire to review
+# changes carefully: a snapshot turns a sheet edit into a `diff`.
 _WIKI_SHEET_TSV_URL: str = (
     # pylint: disable-next=line-too-long
     "https://docs.google.com/spreadsheets/d/1lhjcnkHS-pA3p5Vys-6ohKu7Y4ZCJ5NO/export?format=tsv"
@@ -61,7 +62,7 @@ _ = _helpers.add_argument(
     "--tsv",
     action="store_true",
     default=False,
-    help="Refresh the Wiki and Kasser TSV snapshots and exit.",
+    help="Refresh the Crum, Wiki, and Kasser TSV snapshots and exit.",
 )
 
 _ = _helpers.add_argument(
@@ -87,8 +88,8 @@ _ = _argparser.add_argument(
     "--notsv",
     action="store_true",
     default=False,
-    help="Skip refreshing the Wiki and Kasser TSV snapshots; read the tracked"
-    " copies as is.",
+    help="Skip refreshing the Crum, Wiki, and Kasser TSV snapshots; read the"
+    " tracked copies as is.",
 )
 
 
@@ -243,9 +244,10 @@ def main():
         log.fatal("--notsv", "not allowed with", "--tsv")
 
     if not args.notsv:
-        # Refresh the snapshot before anything can read it. `wiki.entries()`
-        # caches the parsed records on its first call, so a stale read can not
-        # be corrected later in the run.
+        # Refresh the snapshots before anything can read them. `Crum.roots` and
+        # `wiki.entries()` cache the parsed records on their first call, so a
+        # stale read can not be corrected later in the run.
+        sheet.snapshot()
         _snapshot_wiki()
         _snapshot_kasser()
 

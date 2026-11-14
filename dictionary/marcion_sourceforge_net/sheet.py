@@ -1,11 +1,20 @@
-"""Basic helpers to interact with the Crum sheet through Google Sheets API."""
+"""Basic helpers to interact with the Crum sheet through Google Sheets API.
+
+The pipeline reads a local snapshot of the sheet, tracked in Git, so that a
+sheet edit shows up as a `diff`. The helpers that write to the sheet read it
+live instead, so that their writes land on the right rows.
+"""
 
 import enum
 import functools
+import pathlib
+import typing
+from collections import abc
 
 import gspread
+import pandas as pd
 
-from utils import ensure, gcp
+from utils import ensure, file, gcp, paths
 
 # TODO: (#0) Move to `utils/paths.py`.
 GSPREAD_URL: str = (
@@ -106,11 +115,57 @@ def _valid_drv_record(record: gcp.Record) -> None:
     )
 
 
-def roots() -> list[gcp.Record]:
-    records: list[gcp.Record] = [
-        gcp.Record(idx + 2, record)
-        for idx, record in enumerate(roots_sheet().get_all_records())
+_Worksheet = abc.Callable[[], gspread.worksheet.Worksheet]
+
+# Each worksheet, and the path of its local snapshot.
+_TSV: dict[_Worksheet, pathlib.Path] = {
+    roots_sheet: paths.MARCION_ROOTS_TSV,
+    derivations_sheet: paths.MARCION_DERIVATIONS_TSV,
+}
+
+
+def _fetch(worksheet: _Worksheet) -> list[dict[str, str]]:
+    return [
+        # Only retain used columns.
+        {k: v for k, v in gcp.to_str(row).items() if k in COL}
+        for row in worksheet().get_all_records(
+            numericise_ignore=["all"],  # Read the sheet cells as text.
+        )
     ]
+
+
+def snapshot() -> None:
+    """Refresh the local snapshots of the roots and derivations sheets.
+
+    We keep the sheet's column order, as well as its empty rows, which count
+    toward the row numbers.
+    """
+    for worksheet, tsv in _TSV.items():
+        file.to_tsv(pd.DataFrame(_fetch(worksheet)), tsv)
+
+
+def _records(worksheet: _Worksheet, live: bool) -> list[gcp.Record]:
+    # Pandas types the TSV records' keys as `Hashable`, but they are strings.
+    rows: abc.Iterable[abc.Mapping[typing.Any, str]] = (
+        _fetch(worksheet)
+        if live
+        else file.read_tsv(_TSV[worksheet]).to_dict("records")
+    )
+    # Google Sheets uses 1-based indexing, and row 1 is the header.
+    return [gcp.Record(num, row) for num, row in enumerate(rows, start=2)]
+
+
+def roots(live: bool) -> list[gcp.Record]:
+    """Retrieve the roots.
+
+    Args:
+        live: Read the sheet rather than the local snapshot. Do so if you
+            intend to write to the sheet.
+
+    Returns:
+        The roots.
+    """
+    records: list[gcp.Record] = _records(roots_sheet, live)
     _verify_balanced_brackets(records)
     ensure.ensure(
         _is_sorted_by_int_columns(records, _WRD_SORT_COLS),
@@ -121,13 +176,17 @@ def roots() -> list[gcp.Record]:
     return records
 
 
-def derivations() -> list[gcp.Record]:
-    records: list[gcp.Record] = [
-        gcp.Record(idx + 2, record)
-        for idx, record in enumerate(
-            derivations_sheet().get_all_records(),
-        )
-    ]
+def derivations(live: bool) -> list[gcp.Record]:
+    """Retrieve the derivations.
+
+    Args:
+        live: Read the sheet rather than the local snapshot. Do so if you
+            intend to write to the sheet.
+
+    Returns:
+        The derivations, with empty rows dropped.
+    """
+    records: list[gcp.Record] = _records(derivations_sheet, live)
     _verify_balanced_brackets(records)
 
     # Validate empty rows are inserted.
