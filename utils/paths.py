@@ -49,6 +49,10 @@ KASSER_MORPHOLOGIQUES_TSV: pathlib.Path = file(
     MARCION,
     "data/input/kasser/morphologiques.tsv",
 )
+KELLIA_BOHAIRIC_SUPPLEMENTAL_TSV: pathlib.Path = file(
+    KELLIA,
+    "data/input/bohairic_supplemental.tsv",
+)
 
 
 # Site Directories

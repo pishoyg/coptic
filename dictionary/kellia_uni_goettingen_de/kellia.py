@@ -109,6 +109,7 @@ BOHAIRIC_SUPPLEMENTAL_SHEET_URL: str = (
 # BOHAIRIC_SUPPLEMENTAL_VERIFIED is the number of verified entries in the
 # Bohairic supplemental data. Only this subset will be processed.
 BOHAIRIC_SUPPLEMENTAL_VERIFIED: int = 999
+_BOHAIRIC_SUPPLEMENTAL_COLS: list[str] = ["word", "lemma", "tla"]
 # SAHIDIC_SUPPLEMENTAL is a snapshot, taken in October 2025, of the CDO's
 # `inflections.tab`. As of the time of writing, it remains on the CDO's `dev`
 # branch:
@@ -883,9 +884,13 @@ def _pos_map(pos: str, subc: str, orthography: Orthography) -> str:
     return "?"
 
 
-@functools.cache
-def _bohairic_supplemental() -> abc.Mapping[str, abc.Sequence[str]]:
-    supp: defaultdict[str, list[str]] = defaultdict(list)
+def snapshot() -> None:
+    """Refresh the local snapshot of the Bohairic supplemental sheet.
+
+    The snapshot is tracked in Git, so that an upstream edit shows up as a
+    `diff`. Like the Crum snapshots, it only retains the data that we process:
+    the verified rows, and the columns that we read.
+    """
     df: pd.DataFrame = gcp.tsv_spreadsheet(
         BOHAIRIC_SUPPLEMENTAL_SHEET_URL,
         # We fail to parse the TSV when using the default engine, and the error
@@ -896,7 +901,18 @@ def _bohairic_supplemental() -> abc.Mapping[str, abc.Sequence[str]]:
         # TODO: (#305) Fix bad lines at the origin.
         on_bad_lines="warn",
     )
-    df = df[:BOHAIRIC_SUPPLEMENTAL_VERIFIED]
+    file.to_tsv(
+        df[:BOHAIRIC_SUPPLEMENTAL_VERIFIED][_BOHAIRIC_SUPPLEMENTAL_COLS],
+        paths.KELLIA_BOHAIRIC_SUPPLEMENTAL_TSV,
+    )
+
+
+@functools.cache
+def _bohairic_supplemental() -> abc.Mapping[str, abc.Sequence[str]]:
+    supp: defaultdict[str, list[str]] = defaultdict(list)
+    df: pd.DataFrame = file.read_tsv(
+        paths.KELLIA_BOHAIRIC_SUPPLEMENTAL_TSV,
+    )
     # Lemma forms should appear first.
     df = (
         df.assign(is_lemma=df["word"] == df["lemma"])
