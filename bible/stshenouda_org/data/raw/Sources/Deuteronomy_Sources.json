@@ -2,7 +2,7 @@
   "Bohairic": "Availability: All chapters\n\nSource: M.K.H. Peter. 1983. A Critical Edition of the Coptic Bohairic Pentateuch. Vol. 5. Deuteronomy. Atlanta.\n\nEditing: Diacritical signs modified by editor for grammatical accuracy.",
   "Sahidic": "There is no available Sahidic text",
   "Greek": "Availability: All chapters\n\nSource: Rahlfs, A. & Hanhart, R. (2006). Septuaginta: Complete Text without Apparatus.",
-  "English": "Availability: All chapters\n\nSource: Brenton, L. C. L. (1870). The Septuagint Version of the Old Testament: English Translation.",
+  "English": "Availability: All chapters\n\nSource: Rick Brannan, Ken M. Penner et al. (2019). The Lexham English Septuagint: A New Translation, Second Edition.\n\nVerses 23:2, 23:12 and 25:16, which the Lexham English Septuagint does not contain, are taken from: Brenton, L. C. L. (1870). The Septuagint Version of the Old Testament: English Translation.",
   "Akhmimic": "There is no available Akhmimic text",
   "Fayyumic": "There is no available Fayyumic text",
   "OldBohairic": "There is no available Old Bohairic text",
@@ -27,6 +27,11 @@
     },
     {
       "word": "Rahlfs, A. & Hanhart, R. (2006). Septuaginta: Complete Text without Apparatus.",
+      "light": "#05537d",
+      "dark": "#5bc8fa"
+    },
+    {
+      "word": "Rick Brannan, Ken M. Penner et al. (2019). The Lexham English Septuagint: A New Translation, Second Edition.",
       "light": "#05537d",
       "dark": "#5bc8fa"
     },
