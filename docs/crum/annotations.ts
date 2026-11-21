@@ -306,7 +306,7 @@ export const DATA: Abbreviation[] = [
     noStyledParent: true,
   },
   { fullForm: 'exempli gratia', variants: ['e g'] },
-  { fullForm: 'exemplorum gratia', variants: ['ee g'] },
+  { fullForm: 'exemplorum gratia', variants: ['ee g', 'e gg'] },
   { fullForm: 'edited / edition', variants: ['ed'], suffix: true },
   { fullForm: 'ethical dative', variants: ['ethic dat', 'ethic dative'] },
   { fullForm: 'Ethiopic', variants: ['Ethiop'] },
