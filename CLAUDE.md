@@ -164,7 +164,9 @@ Use `fix #ISSUE` to auto-close an issue. Components: `Crum`, `KELLIA`, `Andreas`
 
 ### Pre-commit Hooks
 
-50+ hooks run on every commit (enforced, not optional). `make test` iterates until they all pass. Includes mypy, pylint, black, isort, tsc, eslint, stylelint, prettier, gitleaks, and more.
+50+ hooks run on every commit. `make test` iterates until they all pass. Includes mypy, pylint, black, isort, tsc, eslint, stylelint, prettier, gitleaks, and more.
+
+Intermediate commits may skip the hooks (`git commit --no-verify`), e.g. when a slow or flaky hook blocks a fixup. Everything must pass before `git push`: run `pre-commit run --from-ref origin/master --to-ref HEAD` first.
 
 Generated artifacts only diff meaningfully after the formatting hooks have run on them. To run a hook on just the changed files (staged, unstaged, and untracked; some filenames contain spaces):
 
