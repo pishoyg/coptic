@@ -15282,15 +15282,16 @@
           </etym>
           <sense xml:id="CS376">
             <ref type="Greek">ψυχή, βαί (griech. Transkription)</ref>
+            <!-- NOTE: Moved the gloss of the example out of the translation. -->
             <cit type="example">
               <quote>ⲛⲉⲃⲃⲁⲓ</quote>
+              <quote>Herr der Seelen</quote>
             </cit>
             <cit type="translation">
               <quote xml:lang="de">Seele, Geist</quote>
               <quote xml:lang="en">spirit</quote>
               <quote xml:lang="fr">esprit, âme</quote>
               <!-- NOTE: Deleted empty tag: <quote xml:lang="fr" />-->
-              <quote xml:lang="de">Herr der Seelen</quote>
               <bibl>CD 28a; CED 20; KoptHWb 21; DELC 25</bibl>
             </cit>
           </sense>
@@ -16615,6 +16616,15 @@
           </sense>
         </entry>
         <entry xml:id="C11273">
+          <!-- NOTE: Added the missing lemma form, after the sibling C11274. -->
+          <form type="lemma" xml:id="CF32254">
+            <usg type="geo">S</usg>
+            <orth>ⲃⲁⲕ-</orth>
+            <gramGrp>
+              <pos>Adj.</pos>
+              <subc>Participium conjunctum</subc>
+            </gramGrp>
+          </form>
           <form type="inflected" xml:id="CF1591">
             <usg type="geo">S</usg>
             <orth>ⲃⲁⲕ-</orth>
@@ -224446,7 +224456,7 @@
           <orth>ⲁⲡⲟⲇⲉⲓⲝⲓⲥ</orth>
         </form>
         <form xml:id="CF19406">
-          <orth>ⲁⲡⲟⲇιⲝⲓⲥ</orth>
+          <orth>ⲁⲡⲟⲇⲓⲝⲓⲥ</orth>
           <usg type="geo">S</usg>
         </form>
         <form xml:id="CF19407">
@@ -227146,7 +227156,7 @@
           <ref type="greek_lemma::grl_ID">6538</ref>
           <ref type="greek_lemma::grl_lemma">ἀρείων</ref>
           <ref type="greek_lemma::grl_meaning">better, stouter, braver</ref>
-          <ref type="greek_lemma::grl_pos">Adjective</ref>
+          <ref type="greek_lemma::grl_pos">adjective</ref>
           <ref type="greek_lemma::grl_ref">LSJ 237b</ref>
         </etym>
         <sense xml:id="CS9748">
@@ -255379,7 +255389,7 @@
           <ref type="greek_lemma::grl_ID">6126</ref>
           <ref type="greek_lemma::grl_lemma">εὖγε / εὖ γε</ref>
           <ref type="greek_lemma::grl_meaning">well, rightly</ref>
-          <ref type="greek_lemma::grl_pos">Interjektionection</ref>
+          <ref type="greek_lemma::grl_pos">interjection</ref>
           <ref type="greek_lemma::grl_ref">LSJ 707b</ref>
         </etym>
         <sense xml:id="CS11170">
@@ -260020,7 +260030,7 @@
           <orth>ⲑⲗⲓⲯⲓⲥ</orth>
         </form>
         <form xml:id="CF22868">
-          <orth>ⲑⲗιⲯⲓⲥ</orth>
+          <orth>ⲑⲗⲓⲯⲓⲥ</orth>
           <usg type="geo">S</usg>
         </form>
         <form xml:id="CF22869">
@@ -261138,7 +261148,7 @@
           <ref type="greek_lemma::grl_ID">6526</ref>
           <ref type="greek_lemma::grl_lemma">ἱερατικός</ref>
           <ref type="greek_lemma::grl_meaning">priestly, sacerdotal; hieratic, sacred</ref>
-          <ref type="greek_lemma::grl_pos">Adjective</ref>
+          <ref type="greek_lemma::grl_pos">adjective</ref>
           <ref type="greek_lemma::grl_ref">LSJ 821a; Sophocles 593b</ref>
         </etym>
         <sense xml:id="CS11457">
@@ -266859,7 +266869,7 @@
           <ref type="greek_lemma::grl_ID">6533</ref>
           <ref type="greek_lemma::grl_lemma">καταπλάσσω</ref>
           <ref type="greek_lemma::grl_meaning">plaster over, poultice</ref>
-          <ref type="greek_lemma::grl_pos">Verb</ref>
+          <ref type="greek_lemma::grl_pos">verb</ref>
           <ref type="greek_lemma::grl_ref">LSJ 905b</ref>
         </etym>
         <sense xml:id="CS11743">
@@ -269906,7 +269916,8 @@
         <form type="lemma" xml:id="CF23816">
           <orth>ⲕⲏⲙⲏⲧⲉⲣⲓⲟⲛ</orth>
         </form>
-        <form type="lemma" xml:id="CF23817">
+        <!-- NOTE: Removed `type="lemma"`, which duplicated CF23816. -->
+        <form xml:id="CF23817">
           <orth>ⲕⲏⲙⲏⲧⲉⲣⲓⲟⲛ</orth>
           <usg type="geo">?</usg>
         </form>
@@ -270372,7 +270383,7 @@
           <ref type="greek_lemma::grl_ID">6535</ref>
           <ref type="greek_lemma::grl_lemma">κῦφι</ref>
           <ref type="greek_lemma::grl_meaning">an Egyptian compound incense</ref>
-          <ref type="greek_lemma::grl_pos">Noun</ref>
+          <ref type="greek_lemma::grl_pos">noun</ref>
           <ref type="greek_lemma::grl_ref">LSJ 1015a</ref>
         </etym>
         <sense xml:id="CS11927">
@@ -271264,7 +271275,7 @@
           <ref type="greek_lemma::grl_ID">6520</ref>
           <ref type="greek_lemma::grl_lemma">γλαύκιον</ref>
           <ref type="greek_lemma::grl_meaning">juice of the horned poppy, Glaucium corniculatum</ref>
-          <ref type="greek_lemma::grl_pos">Noun</ref>
+          <ref type="greek_lemma::grl_pos">noun</ref>
           <ref type="greek_lemma::grl_ref">LSJ 350b</ref>
         </etym>
         <sense xml:id="CS11968">
@@ -278311,7 +278322,7 @@
           <ref type="greek_lemma::grl_ID">6531</ref>
           <ref type="greek_lemma::grl_lemma">λειχήν</ref>
           <ref type="greek_lemma::grl_meaning">tree-moss, lichen</ref>
-          <ref type="greek_lemma::grl_pos">Noun</ref>
+          <ref type="greek_lemma::grl_pos">noun</ref>
           <ref type="greek_lemma::grl_ref">LSJ 1037a</ref>
         </etym>
         <sense xml:id="CS12321">
@@ -286290,7 +286301,7 @@
           <ref type="greek_lemma::grl_ID">6537</ref>
           <ref type="greek_lemma::grl_lemma">μαλάχη</ref>
           <ref type="greek_lemma::grl_meaning">mallow, Malva silvestris</ref>
-          <ref type="greek_lemma::grl_pos">Noun</ref>
+          <ref type="greek_lemma::grl_pos">noun</ref>
           <ref type="greek_lemma::grl_ref">LSJ 1077b</ref>
         </etym>
         <sense xml:id="CS12728">
@@ -289173,7 +289184,7 @@
           <orth>ⲛⲟⲙⲓⲥⲙⲁ</orth>
         </form>
         <form xml:id="CF25669">
-          <orth>ⲛο</orth>
+          <orth>ⲛⲟ</orth>
           <usg type="geo">S</usg>
         </form>
         <form xml:id="CF25670">
@@ -291054,7 +291065,7 @@
           <ref type="greek_lemma::grl_ID">6524</ref>
           <ref type="greek_lemma::grl_lemma">ὁμόῦ</ref>
           <ref type="greek_lemma::grl_meaning">at the same place, together</ref>
-          <ref type="greek_lemma::grl_pos">Adverb</ref>
+          <ref type="greek_lemma::grl_pos">adverb</ref>
           <ref type="greek_lemma::grl_ref">LSJ 1227b</ref>
         </etym>
         <sense xml:id="CS12948">
@@ -292131,7 +292142,7 @@
           <ref type="greek_lemma::grl_ID">6550</ref>
           <ref type="greek_lemma::grl_lemma">ὄρχος</ref>
           <ref type="greek_lemma::grl_meaning">a row of vines or fruit trees; rim of eyelid</ref>
-          <ref type="greek_lemma::grl_pos">Noun</ref>
+          <ref type="greek_lemma::grl_pos">noun</ref>
           <ref type="greek_lemma::grl_ref">LSJ 1258b</ref>
         </etym>
         <sense xml:id="CS13004">
@@ -292157,7 +292168,7 @@
           <ref type="greek_lemma::grl_ID">2553</ref>
           <ref type="greek_lemma::grl_lemma">οὐαί</ref>
           <ref type="greek_lemma::grl_meaning">ah! woe!</ref>
-          <ref type="greek_lemma::grl_pos">Interjektionection</ref>
+          <ref type="greek_lemma::grl_pos">interjection</ref>
           <ref type="greek_lemma::grl_ref">LSJ 1268a</ref>
         </etym>
         <sense xml:id="CS13005">
@@ -292183,13 +292194,13 @@
           <ref type="greek_lemma::grl_ID">2762</ref>
           <ref type="greek_lemma::grl_lemma">οὐά</ref>
           <ref type="greek_lemma::grl_meaning">ha! aha!</ref>
-          <ref type="greek_lemma::grl_pos">Interjektionection</ref>
+          <ref type="greek_lemma::grl_pos">interjection</ref>
           <ref type="greek_lemma::grl_ref">LSJ 1268a</ref>
         </etym>
         <sense xml:id="CS13006">
           <ref type="coptic_usage::cu_ID">616</ref>
           <cit type="translation">
-            <quote xml:lang="en">ha!, aha! (Interjektionection)</quote>
+            <quote xml:lang="en">ha!, aha! (interjection)</quote>
             <bibl>DDGLC</bibl>
           </cit>
         </sense>
@@ -296818,7 +296829,7 @@
           <ref type="greek_lemma::grl_ID">6542</ref>
           <ref type="greek_lemma::grl_lemma">παραποτάμιος</ref>
           <ref type="greek_lemma::grl_meaning">beside or near a river, lying or dwelling on a river</ref>
-          <ref type="greek_lemma::grl_pos">Adjective</ref>
+          <ref type="greek_lemma::grl_pos">adjective</ref>
           <ref type="greek_lemma::grl_ref">LSJ 1322a</ref>
         </etym>
         <sense xml:id="CS13239">
@@ -300284,7 +300295,7 @@
           <ref type="greek_lemma::grl_ID">6540</ref>
           <ref type="greek_lemma::grl_lemma">περιστερά</ref>
           <ref type="greek_lemma::grl_meaning">common pigeon</ref>
-          <ref type="greek_lemma::grl_pos">Noun</ref>
+          <ref type="greek_lemma::grl_pos">noun</ref>
           <ref type="greek_lemma::grl_ref">LSJ 1388b</ref>
         </etym>
         <sense xml:id="CS13426">
@@ -300355,7 +300366,7 @@
           <ref type="greek_lemma::grl_ID">6528</ref>
           <ref type="greek_lemma::grl_lemma">περιχρίω</ref>
           <ref type="greek_lemma::grl_meaning">to smear or cover over; to pour as unguent over, to anoint s.o.</ref>
-          <ref type="greek_lemma::grl_pos">Verb</ref>
+          <ref type="greek_lemma::grl_pos">verb</ref>
           <ref type="greek_lemma::grl_ref">LSJ 1394a</ref>
         </etym>
         <sense xml:id="CS13429">
@@ -300381,7 +300392,7 @@
           <ref type="greek_lemma::grl_ID">6528</ref>
           <ref type="greek_lemma::grl_lemma">περιχρίω</ref>
           <ref type="greek_lemma::grl_meaning">to smear or cover over; to pour as unguent over, to anoint s.o.</ref>
-          <ref type="greek_lemma::grl_pos">Verb</ref>
+          <ref type="greek_lemma::grl_pos">verb</ref>
           <ref type="greek_lemma::grl_ref">LSJ 1394a</ref>
         </etym>
         <sense xml:id="CS13430">
@@ -300816,7 +300827,7 @@
           <ref type="greek_lemma::grl_ID">6532</ref>
           <ref type="greek_lemma::grl_lemma">πίσσα</ref>
           <ref type="greek_lemma::grl_meaning">pitch</ref>
-          <ref type="greek_lemma::grl_pos">Noun</ref>
+          <ref type="greek_lemma::grl_pos">noun</ref>
           <ref type="greek_lemma::grl_ref">LSJ 1407b</ref>
         </etym>
         <sense xml:id="CS13448">
@@ -305154,7 +305165,7 @@
           <orth>ⲡⲟⲣⲛⲉⲓⲁ</orth>
         </form>
         <form xml:id="CF27160">
-          <orth>ⲡοⲣⲛⲓⲁ</orth>
+          <orth>ⲡⲟⲣⲛⲓⲁ</orth>
           <usg type="geo">L</usg>
         </form>
         <form xml:id="CF27161">
@@ -310696,7 +310707,7 @@
           <ref type="greek_lemma::grl_ID">6527</ref>
           <ref type="greek_lemma::grl_lemma">ψάω</ref>
           <ref type="greek_lemma::grl_meaning">wipe, rub smooth</ref>
-          <ref type="greek_lemma::grl_pos">Verb</ref>
+          <ref type="greek_lemma::grl_pos">verb</ref>
           <ref type="greek_lemma::grl_ref">LSJ 2019a</ref>
         </etym>
         <sense xml:id="CS14001">
@@ -311449,7 +311460,7 @@
           <ref type="greek_lemma::grl_ID">6521</ref>
           <ref type="greek_lemma::grl_lemma">σαρκοκόλλα</ref>
           <ref type="greek_lemma::grl_meaning">gum of a kind of the persian Astragulus (Astragulus faciculifolius)</ref>
-          <ref type="greek_lemma::grl_pos">Noun</ref>
+          <ref type="greek_lemma::grl_pos">noun</ref>
           <ref type="greek_lemma::grl_ref">Sophocles 979; Till 1951a, 92</ref>
         </etym>
         <sense xml:id="CS14029">
@@ -311733,7 +311744,7 @@
           <ref type="greek_lemma::grl_ID">6534</ref>
           <ref type="greek_lemma::grl_lemma">σάμψουχον</ref>
           <ref type="greek_lemma::grl_meaning">marjoram, Origanum majorana</ref>
-          <ref type="greek_lemma::grl_pos">Noun</ref>
+          <ref type="greek_lemma::grl_pos">noun</ref>
           <ref type="greek_lemma::grl_ref">LSJ 1582b</ref>
         </etym>
         <sense xml:id="CS14043">
@@ -312114,7 +312125,7 @@
           <ref type="greek_lemma::grl_ID">6521</ref>
           <ref type="greek_lemma::grl_lemma">σαρκοκόλλα</ref>
           <ref type="greek_lemma::grl_meaning">gum of a kind of the persian Astragulus (Astragulus faciculifolius)</ref>
-          <ref type="greek_lemma::grl_pos">Noun</ref>
+          <ref type="greek_lemma::grl_pos">noun</ref>
           <ref type="greek_lemma::grl_ref">Sophocles 979; Till 1951a, 92</ref>
         </etym>
         <sense xml:id="CS14058">
@@ -333403,7 +333414,7 @@
           <ref type="greek_lemma::grl_ID">2827</ref>
           <ref type="greek_lemma::grl_lemma">Χαναναῖος</ref>
           <ref type="greek_lemma::grl_meaning">Canaanite</ref>
-          <ref type="greek_lemma::grl_pos">Adjective</ref>
+          <ref type="greek_lemma::grl_pos">adjective</ref>
           <ref type="greek_lemma::grl_ref">LSJ 1976a; Muraoka 2009, 728a</ref>
         </etym>
         <sense xml:id="CS15123">
@@ -341874,7 +341885,7 @@
           <ref type="greek_lemma::grl_ID">6536</ref>
           <ref type="greek_lemma::grl_lemma">ἦτρον</ref>
           <ref type="greek_lemma::grl_meaning">abdomen, esp. the lower part of it</ref>
-          <ref type="greek_lemma::grl_pos">Noun</ref>
+          <ref type="greek_lemma::grl_pos">noun</ref>
           <ref type="greek_lemma::grl_ref">LSJ 780a</ref>
         </etym>
         <sense xml:id="CS15565">
@@ -342008,7 +342019,7 @@
           <ref type="greek_lemma::grl_ID">6526</ref>
           <ref type="greek_lemma::grl_lemma">ἱερατικός</ref>
           <ref type="greek_lemma::grl_meaning">priestly, sacerdotal; hieratic, sacred</ref>
-          <ref type="greek_lemma::grl_pos">Adjective</ref>
+          <ref type="greek_lemma::grl_pos">adjective</ref>
           <ref type="greek_lemma::grl_ref">LSJ 821a; Sophocles 593b</ref>
         </etym>
         <sense xml:id="CS15571">
@@ -347018,7 +347029,7 @@
       </entry>
       <entry xml:id="C11233">
         <form type="lemma" xml:id="CF31231">
-          <orth>ϩⲩⲡⲟⲕⲉιⲙⲉⲛⲟⲥ</orth>
+          <orth>ϩⲩⲡⲟⲕⲉⲓⲙⲉⲛⲟⲥ</orth>
           <usg type="geo">S</usg>
         </form>
         <form xml:id="CF31232">
