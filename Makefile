@@ -185,10 +185,6 @@ kellia: FORCE
 	# Generate the KELLIA lexicon artefacts.
 	./dictionary/kellia_uni_goettingen_de/main.py
 
-kellia_analysis: FORCE
-	# Generate an analysis of the structure of the TLA (KELLIA) dataset.
-	./dictionary/kellia_uni_goettingen_de/analysis.py
-
 ########## DAWOUD ##########
 dawoud_sentinels: FORCE
 	# Download a new version of Dawoud's sentinels sheet.

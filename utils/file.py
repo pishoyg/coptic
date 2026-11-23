@@ -127,18 +127,6 @@ def json_dumps(j: object, **kwargs: typing.Any) -> str:
     )
 
 
-def yaml_dump_all(y: abc.Iterable[typing.Any]) -> str:
-    return yaml.dump_all(
-        y,
-        Dumper=yaml.SafeDumper,
-        sort_keys=False,
-        allow_unicode=True,
-        width=120,
-        default_flow_style=False,
-        default_style=None,  # Avoid printing quotes.
-    )
-
-
 def read_tsv(tsv: str | io.StringIO | pathlib.Path, **kwargs) -> pd.DataFrame:
     return pd.read_csv(
         tsv,
