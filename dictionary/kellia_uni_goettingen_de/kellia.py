@@ -26,14 +26,6 @@ There are artifacts that we chose to ignore in our own pipeline:
 
 # TODO: (#525) Consider using the same HTML structure as Crum.
 
-# TODO: (#577) Rewrite this file to align with our technical standards.
-# - One thing to do is to introduce objects that represent XML entities, instead
-#   of using raw ET.Element objects throughout the program.
-
-# NOTE: As of the time of writing, the truth value of an ET.Element object
-# depends on the number of children. Instead of directly evaluating the truth
-# value of an `ET.Element | None`, use `is not None`.
-
 # NOTE: Our HTML uses classes rather than IDs, because Crum embeds KELLIA
 # entries in its pages, and several entries on one page would have the same
 # IDs.
@@ -44,19 +36,15 @@ import os
 import pathlib
 import re
 import typing
-import xml.etree.ElementTree as ET
-from collections import OrderedDict, abc, defaultdict
+from collections import abc, defaultdict
 
 import pandas as pd
 
 from dictionary import cls as dict_cls
-from dictionary.kellia_uni_goettingen_de import cls, sources, trie
+from dictionary.kellia_uni_goettingen_de import cls, sources, tei, trie
 from flashcards import deck
 from utils import ensure, file, gcp, javascript, log, page, paths, text
 from xooxle import xooxle
-
-XML_NS: str = "{http://www.w3.org/XML/1998/namespace}"
-TEI_NS: str = "{http://www.tei-c.org/ns/1.0}"
 
 _SCRIPT_DIR: pathlib.Path = pathlib.Path(__file__).parent
 # COMPREHENSIVE is the path to the dataset that contains both Greek and Egyptian
@@ -135,14 +123,6 @@ def relpath(dst: str | pathlib.Path) -> str:
     return os.path.relpath(dst, paths.LEXICON_DIR)
 
 
-def _is_greek(entry: ET.Element) -> bool:
-    assert entry.tag == TEI_NS + "entry"
-    return any(
-        bibl.text and bibl.text.strip() == "DDGLC"
-        for bibl in entry.iter(TEI_NS + "bibl")
-    )
-
-
 def _clean(txt: str) -> str:
     return "".join(c for c in txt if c in _CLEAN)
 
@@ -187,31 +167,6 @@ class Form:
         yield "</tr>"
 
 
-def _text(tag: ET.Element, strict: bool = True) -> str:
-    """Assert that the tag is childless, and return its text.
-
-    A given tag can either have text or children, but not both.
-    Normally, we also verify the existence of text, unless `strict` is set to
-    `False`.
-
-    Args:
-        tag: A tag.
-        strict: If true, assert the existence of text.
-
-    Returns:
-        Tag text.
-    """
-
-    ensure.ensure(len(tag) == 0, "element", tag, "has children!")
-
-    txt: str = tag.text or ""
-    txt = " ".join(txt.split())
-    if strict:
-        ensure.ensure(txt, "element", tag, "has no text!")
-
-    return txt
-
-
 class Orthography:
     """Orthography stores the word forms."""
 
@@ -240,75 +195,47 @@ class Orthography:
 class Etymology:
     """Etymology represents the etymology of a word."""
 
-    def __init__(self, entry: ET.Element) -> None:
-        self._greek_id: str | None = None
+    def __init__(self, entry: tei.Entry) -> None:
         self.amir: str = " ".join(filter(None, self._amir(entry)))
 
-    def _amir(self, entry: ET.Element) -> abc.Generator[str]:
-        greek_dict: OrderedDict[str, str | None] = OrderedDict()
-        for child in entry.find(TEI_NS + "etym") or []:
+    def _amir(self, entry: tei.Entry) -> abc.Generator[str]:
+        for child in entry.etym.children if entry.etym is not None else []:
+            match child:
+                case tei.Note():
+                    yield child.text
+                case tei.Xr():
+                    for ref in child.refs:
+                        yield f"{child.type}. {ref.target}# {ref.text}"
+                case tei.EtymRef() if child.wcn:
+                    yield f"{child.type}: {child.target}"
+                case tei.EtymRef():
+                    # The Greek lemma is rendered below.
+                    # TODO: (#51) Handle the remaining references.
+                    pass
+                case _:
+                    typing.assert_never(child)
 
-            if child.tag == TEI_NS + "note":
-                yield _text(child)
-                continue
+        lemma: tei.GreekLemma | None = (
+            entry.etym.greek_lemma if entry.etym is not None else None
+        )
+        if lemma is not None:
+            # TODO: (#51) Omit the meaning and the reference when they're
+            # missing, rather than rendering an empty `<i></i>.` and `()`.
+            yield " ".join(
+                [
+                    '<span style="color:darkred">cf. Gr. (DDGLC lemma ID'
+                    f" {lemma.lemma_id})</span> {lemma.lemma}",
+                    f"<i>{lemma.meaning or ""}</i>.",
+                    f'<span style="color:grey">{lemma.pos}</span>',
+                    f'<span style="color:grey">({lemma.ref or ""})</span>',
+                ],
+            )
 
-            if child.tag == TEI_NS + "xr":
-                for ref in child:
-                    # pylint: disable-next=line-too-long
-                    yield f"{child.attrib["type"]}. {ref.attrib["target"]}# {_text(ref)}"
-                continue
-
-            assert child.tag == TEI_NS + "ref"
-
-            if "type" in child.attrib and "target" in child.attrib:
-                yield f"{child.attrib["type"]}: {child.attrib["target"]}"
-                continue
-
-            if "targetLang" in child.attrib:
-                yield f"{child.attrib["targetLang"]}: {_text(child)}"
-                continue
-
-            if "greek" in child.attrib.get("type", ""):
-                greek_dict[child.attrib["type"]] = _text(child, False)
-                continue
-
-            # TODO: (#51) Handle remaining children.
-
-        greek_parts: list[str] = []
-        for key, val in sorted(greek_dict.items()):
-            if val is None:
-                greek_parts = []
-                break
-            if "grl_ID" in key:
-                self._greek_id = val
-            if "grl_lemma" in key:
-                part = '<span style="color:darkred">cf. Gr.'
-                if self._greek_id:
-                    part += " (DDGLC lemma ID " + self._greek_id + ")"
-                part += "</span> " + val
-                greek_parts.append(part)
-                continue
-            if "meaning" in key:
-                greek_parts.append("<i>" + val + "</i>.")
-                continue
-            if "_pos" in key and len(val) > 0:
-                greek_parts.append(
-                    '<span style="color:grey">' + val + "</span>",
-                )
-                continue
-            if "grl_ref" in key:
-                greek_parts.append(
-                    '<span style="color:grey">(' + val + ")</span>",
-                )
-                continue
-        yield " ".join(greek_parts)
-
-        for xr in entry.iterfind(TEI_NS + "xr"):
-            for ref in xr:
-                ref_target: str = _clean(ref.attrib["target"])
+        for xr in entry.xrs:
+            for ref in xr.refs:
+                ref_target: str = _clean(ref.target)
                 assert ref_target
-                # pylint: disable-next=line-too-long
-                yield f"{xr.attrib["type"]}. #{ref_target}# {_text(ref)}"
+                yield f"{xr.type}. #{ref_target}# {ref.text}"
 
     def process(self) -> str:
         etym: str = "".join(self.amir)
@@ -417,23 +344,7 @@ class Lang:
     def _last_sense(self) -> Sense:
         return self.senses[-1]
 
-    def add(
-        self,
-        name: _SenseChild,
-        value: str | ET.Element,
-        label: str = "",
-    ) -> None:
-        if name == "xr" and isinstance(value, ET.Element):
-            for ref in value:
-                self._last_sense.add(
-                    "xr",
-                    # pylint: disable-next=line-too-long
-                    f"{value.tag[29:]}. {ref.attrib["target"]}# {_text(ref)}",
-                )
-            return
-
-        if isinstance(value, ET.Element):
-            value = _text(value)
+    def add(self, name: _SenseChild, value: str, label: str = "") -> None:
         self._last_sense.add(name, value, label)
 
     def table(self) -> str:
@@ -520,7 +431,7 @@ def _tree_aux(
         yield "</li>"
 
 
-def _form_sort_key(form: ET.Element) -> tuple[str, str]:
+def _form_sort_key(form: tei.Form) -> tuple[str, str]:
     # TODO: (#51) You could do a lot better than this!
     # Try to mimic Crum's sorting behavior. Verbs should be sorted by case
     # (infinitive, prenominal, pronominal, then qualitative), singular nouns
@@ -539,7 +450,7 @@ def _form_sort_key(form: ET.Element) -> tuple[str, str]:
         # precede prenominal forms, so we change the prefix of the latter from
         # "⸗" to "--".
         # The prefix of the former is simply "-".
-        _orth(form).replace("⸗", "--"),
+        form.orth.text.replace("⸗", "--"),
         # Secondly, we sort by dialect.
         geo,
     )
@@ -551,7 +462,7 @@ class Word:
     def __init__(
         self,
         entry_xml_id: str,
-        lemma_form_id: str | None,
+        lemma_form_id: str,
         orthstring: Orthography,
         pos_string: str,
         langs: dict[str, Lang],
@@ -559,7 +470,7 @@ class Word:
         is_greek: bool,
     ) -> None:
         self.entry_xml_id: str = entry_xml_id
-        self.lemma_form_id: str | None = lemma_form_id
+        self.lemma_form_id: str = lemma_form_id
         self.orthstring: Orthography = orthstring
         self.pos_string: str = pos_string
         self.langs: dict[str, Lang] = langs
@@ -622,80 +533,37 @@ class Word:
         return any(map(self.has_dialect, geos))
 
 
-def _geo(form: ET.Element) -> str:
-    geo: str
-    usgs: list[ET.Element] = form.findall(TEI_NS + "usg")
-    if usgs:
-        assert len(usgs) == 1
-        assert usgs[0].attrib["type"] == "geo"
-        geo = _text(usgs[0])
-    else:
-        geo = DEFAULT_GEO
-    del usgs
-
+def _geo(form: tei.Form) -> str:
+    geo: str = form.usg.text if form.usg is not None else DEFAULT_GEO
     geo = _GEO_MAPPING.get(geo, geo)
-    ensure.ensure(geo in GEOS, "unknown dialect:", geo)
+    assert geo in GEOS, geo
     return geo
 
 
-def deprecated(element: ET.Element) -> bool:
-    return "deprecated" in element.attrib.get("change", "")
-
-
-def _is_lemma(form: ET.Element) -> bool:
-    return not deprecated(form) and form.attrib["type"] == "lemma"
-
-
-def _orth(lemma: ET.Element) -> str:
-    orths: list[ET.Element] = lemma.findall(TEI_NS + "orth")
-    assert len(orths) == 1
-    return _text(orths[0])
-
-
-def _process_entry(entry: ET.Element) -> Word:
-
-    entry_xml_id: str = entry.attrib[XML_NS + "id"]
-
-    forms: list[ET.Element] = entry.findall(TEI_NS + "form")
-    forms = [f for f in forms if not deprecated(f)]
-
-    lemma: ET.Element | None = None
-    try:
-        lemma = next(filter(_is_lemma, forms))
-    except StopIteration:
-        log.error("No lemma found for", entry_xml_id)
-
-    forms = sorted(forms, key=_form_sort_key)
-    if lemma is not None:
-        lemma_orth: str = _orth(lemma)
-        forms = sorted(
-            forms,
-            key=lambda form: any(
-                _text(orth) == lemma_orth
-                for orth in form.iterfind(TEI_NS + "orth")
-            ),
-            reverse=True,
-        )
+def _process_entry(entry: tei.Entry) -> Word:
+    lemma: tei.Form = entry.lemma
+    forms: list[tei.Form] = sorted(
+        (f for f in entry.forms if not f.deprecated),
+        key=_form_sort_key,
+    )
+    forms = sorted(
+        forms,
+        key=lambda form: form.orth.text == lemma.orth.text,
+        reverse=True,
+    )
 
     orthography: Orthography = Orthography()
 
     for form in forms:
-        if (
-            lemma is not None
-            and form.attrib[XML_NS + "id"] == lemma.attrib[XML_NS + "id"]
-        ):
+        if form is lemma:
             continue
 
-        gram_grp: ET.Element | None = form.find(TEI_NS + "gramGrp")
-        if gram_grp is None:
-            gram_grp = entry.find(TEI_NS + "gramGrp")
-        assert gram_grp
-
+        gram_grp: tei.GramGrp = entry.grammar(form)
         orthography.add(
-            " ".join(map(_text, gram_grp)),
-            _orth(form),
+            " ".join(child.text for child in gram_grp.children),
+            form.orth.text,
             _geo(form),
-            form.attrib[XML_NS + "id"],
+            form.xml_id,
         )
 
     langs: dict[str, Lang] = {
@@ -704,63 +572,48 @@ def _process_entry(entry: ET.Element) -> Word:
         "fr": Lang("fr"),
     }
 
-    for sense_n, sense in enumerate(entry.iterfind(TEI_NS + "sense"), 1):
-        sense_id: str = sense.attrib[XML_NS + "id"]
+    for sense_n, sense in enumerate(entry.senses, 1):
         for lang in langs.values():
-            lang.start_sense(sense_n, sense_id)
+            lang.start_sense(sense_n, sense.xml_id)
 
-        for child in sense:
-            if child.tag == TEI_NS + "ref":
-                for lang in langs.values():
-                    lang.add("ref", child)
-                continue
-
-            if child.tag == TEI_NS + "xr":
-                for lang in langs.values():
-                    lang.add("xr", child)
-                continue
-
-            if child.tag == TEI_NS + "note":
-                continue
-
-            assert child.tag == TEI_NS + "cit"
-            assert child.attrib["type"] in ["translation", "example"]
-
-            bibl: ET.Element | None = child.find(TEI_NS + "bibl")
-            if bibl is not None:
-                for lang in langs.values():
-                    lang.add("bibl", bibl)
-            del bibl
-
-            language: str | None
-            for quote in child.iterfind(TEI_NS + "quote"):
-                language = quote.get(XML_NS + "lang")
-                if not language:
-                    # TODO: (#51) Incorporate quotes with an unknown language.
-                    continue
-                langs[language].add("quote", _text(quote))
-
-            for definition in child.iterfind(TEI_NS + "def"):
-                langs[definition.attrib[XML_NS + "lang"]].add(
-                    "definition",
-                    definition,
-                )
-
-            # TODO: (#51) Handle other children of <cit>
+        for child in sense.children:
+            match child:
+                case tei.SenseRef():
+                    for lang in langs.values():
+                        lang.add("ref", child.text)
+                case tei.Xr():
+                    for ref in child.refs:
+                        # NOTE: Unlike etymologies, this prints the tag name
+                        # (`xr`) rather than the type (such as `cf`).
+                        for lang in langs.values():
+                            lang.add("xr", f"xr. {ref.target}# {ref.text}")
+                case tei.Note():
+                    pass
+                case tei.Cit() if child.type == "example":
+                    # TODO: (#51) Incorporate examples.
+                    pass
+                case tei.Cit():
+                    for lang in langs.values():
+                        lang.add("bibl", child.source.text)
+                    for language, quote in child.quotes_by_language.items():
+                        langs[language].add("quote", quote)
+                    for definition in child.definitions:
+                        langs[definition.lang].add(
+                            "definition",
+                            definition.text,
+                        )
+                    # TODO: (#51) Handle the notes of <cit>.
+                case _:
+                    typing.assert_never(child)
 
     # POS -- a single Scriptorium POS tag for each entry
     pos_list: list[str] = []
-    for gramgrp in entry.iter(TEI_NS + "gramGrp"):
-        pos = gramgrp.find(TEI_NS + "pos")
-        if pos is not None:
-            pos_text = _text(pos)
-        else:
-            pos_text = "None"
-        subc = gramgrp.find(TEI_NS + "subc")
-        if subc is not None:
-            subc_text = _text(subc)
-        else:
-            subc_text = "None"
+    # This includes the grammatical groups of deprecated forms.
+    for group in [*(f.gram_grp for f in entry.forms), entry.gram_grp]:
+        if group is None:
+            continue
+        pos_text: str = group.pos.text if group.pos is not None else "None"
+        subc_text: str = group.subcs[0].text if group.subcs else "None"
         new_pos: str = _pos_map(pos_text, subc_text, orthography)
         if new_pos not in pos_list:
             pos_list.append(new_pos)
@@ -769,15 +622,15 @@ def _process_entry(entry: ET.Element) -> Word:
     pos_list = pos_list or ["NULL"]
 
     return Word(
-        entry_xml_id,
-        lemma.attrib[XML_NS + "id"] if lemma else None,
+        entry.xml_id,
+        lemma.xml_id,
         orthography,
         # On the rare occasion pos_list has len > 1 at this point, the first one
         # is the most valid.
         pos_list[0],
         langs,
         Etymology(entry),
-        _is_greek(entry),
+        entry.ddglc,
     )
 
 
@@ -1004,33 +857,16 @@ def _sahidic_supplemental() -> abc.Mapping[str, abc.Set[str]]:
     return supp
 
 
-def body_element() -> ET.Element:
-    txt: ET.Element | None = (
-        ET.parse(COMPREHENSIVE).getroot().find(TEI_NS + "text")
-    )
-    assert txt
-    body: ET.Element[str] | None = txt.find(TEI_NS + "body")
-    assert body
-
-    return body
-
-
 def _words() -> abc.Generator[Word]:
-    """Generate words from the given XML file.
+    """Generate words from the dataset.
 
     Yields:
         Word objects representing entries in the dataset.
     """
-    for child in body_element():
-        # Every child is either a super entry or an entry.
-        entries: ET.Element | list[ET.Element] = (
-            child if child.tag == TEI_NS + "superEntry" else [child]
-        )
-        for entry in entries:
-            assert entry.tag == TEI_NS + "entry"
-            if deprecated(entry):
-                continue
-            yield _process_entry(entry)
+    for entry in tei.parse(COMPREHENSIVE).iter_entries():
+        if entry.deprecated:
+            continue
+        yield _process_entry(entry)
 
 
 # NOTE: Supplemental forms have been, well, problematic! They seem to be poorly
