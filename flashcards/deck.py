@@ -59,7 +59,7 @@ from collections import abc
 import genanki  # type: ignore[import-untyped]
 
 from flashcards import cls, ids
-from utils import ensure, file, page, paths, system
+from utils import ensure, file, javascript, page, paths, system
 
 IMG_SRC_FMT: re.Pattern[str] = re.compile(r'<img src="([^"]+)"')
 FONT_SRC_RE: re.Pattern[str] = re.compile(r"src: url\('([^']*)'\)")
@@ -303,6 +303,7 @@ class Deck:
         js_path: str = ensure.singleton(note.js_path for note in self.notes)
         js_start: str = ensure.singleton(note.js_start for note in self.notes)
 
+        yield javascript.CARD_JS
         yield js_start
 
         if not js_path:
@@ -316,7 +317,7 @@ class Deck:
     def anki(self) -> tuple[genanki.Deck, abc.Iterable[MediaFile]]:
         # Anki can't pick up the JavaScript. It must be inserted into the
         # template.
-        javascript = "".join(self._anki_js_aux())
+        script = "".join(self._anki_js_aux())
         model = genanki.Model(
             model_id=self.deck_id,
             name=self.name,
@@ -331,14 +332,14 @@ class Deck:
                     "qfmt": '<div class="'
                     + cls.FRONT
                     + '"> {{Front}} </div>'
-                    + f'<script type="text/javascript">{javascript}</script>',
+                    + f'<script type="text/javascript">{script}</script>',
                     "afmt": '<div class="'
                     + cls.FRONT
                     + '"> {{Front}} </div>'
                     + '<div class="'
                     + cls.BACK
                     + '"> {{Back}} </div>'
-                    + f'<script type="text/javascript">{javascript}</script>',
+                    + f'<script type="text/javascript">{script}</script>',
                 },
             ],
             css="".join(self._anki_css()),
