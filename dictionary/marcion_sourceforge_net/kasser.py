@@ -30,7 +30,7 @@ RAW_RE: regex.Pattern[str] = regex.compile(
             # TODO: (#786) Mathematical angle brackets are used by the
             # materialization. If Kasser were to get materialized, we might want
             # to change the materializer's notation to avoid confusion.
-            r"[\p{Latin}=^0-9 *⟨⟩!–'(),\-./:;?\[\]_~«»\\°&—±]",
+            r"[\p{Latin}=^0-9 *⟨⟩!–'(),\-./:;?\[\]_~«»\\°&—±“”]",
         ),
     ),
 )
@@ -88,9 +88,13 @@ _ALPHABETS: dict[Language, tuple[str, ...]] = {
         "\ufe26",  # Conjoining macron, continuing it: ⲏ︤ⲗ︦ⲉ︦ⲙ︦ⲁ︦ⲥ︥.
         "\u0308",  # Diaeresis, over ⲓ̈.
         "\u0323",  # Dot below, marking an uncertain letter: ⲗⲁⲕⲟ̣.ⲧ.
+        # Modifier letter prime, the numeral sign: ⲅʹ. It is what NFC makes of
+        # U+0374 Greek numeral sign.
+        "ʹ",
         "ⲁ-ⲱ",  # The Coptic letters,
         "ϣ-ϯ",  # those of them borrowed from Demotic,
         "ⳉ",  # Akhmimic khei,
+        "ⳃ",  # crossed shei, also Akhmimic: ⳃⲱⲡⲉ,
         "ⳤ",  # the kai symbol,
         "ⲹ",  # and the letters of dialect P: kapa,
         "ⲻ",  # ni,
@@ -114,12 +118,11 @@ _ALPHABETS: dict[Language, tuple[str, ...]] = {
         # NOTE: Kasser also writes `⟨sim.⟩`, which "indique qu'une partie du
         # mot a été omise (ou redoublée vraisemblablement par haplographie (ou
         # dittographie), suivant ou précédant un groupe de lettres similaires"
-        # (Sigles et Abréviations). We have chosen to keep `⟨sim.⟩`, along with
-        # a hyphen that follows it, out of the Coptic word: `⟨sim.⟩[[ⲓⲛⲉ]]`,
-        # `[[ⲕⲧ]]⟨sim.⟩-`.
-        # TODO: (#786) Revisit this decision. `⟨sim.⟩` marks an omission or a
-        # repetition within the word, so it arguably belongs to the word, and
-        # the hyphen that follows it certainly does.
+        # (Sigles et Abréviations). As it marks an omission or a repetition
+        # within the word, it belongs to the word, and so does a hyphen that
+        # follows it: `[[⟨sim.⟩ⲓⲛⲉ]]`, `[[ⲕⲧ⟨sim.⟩-]]`, `[[ⲧ⟨ⲛ sim.⟩]]`. It
+        # may even stand for the whole word: `[[⟨sim.⟩]]`. `Entry` enforces
+        # this, and `Languages` exempts the Latin `sim.` from validation.
         "⟨",
         "⟩",
         "\\-",
@@ -131,17 +134,36 @@ _ALPHABETS: dict[Language, tuple[str, ...]] = {
 }
 
 
+# The Latin `sim.`, within the angle brackets of a Coptic word:
+# `ⲧ⟨ⲛ sim.⟩`, `ⲟⲩⲱϣ⟨sim. ⲉϥ...⟩`. See the NOTE on `⟨sim.⟩` in `_ALPHABETS`.
+_SIM_RE: regex.Pattern[str] = regex.compile(
+    r"(?<=⟨[^⟨⟩]*)\bsim\.(?=[^⟨⟩]*⟩)",
+)
+
+
 class Languages(randy.Languages[Language]):
     """The languages that the bracketed text of a transcription may be in."""
 
     @typing.override
+    def identify(self, text: str) -> Language | None:
+        # A word that `⟨sim.⟩` stands for in its entirety has no letter to
+        # identify it by. Only Coptic words have `⟨sim.⟩`.
+        language: Language | None = super().identify(text)
+        if language is None and _SIM_RE.search(text):
+            return "COPTIC"
+        return language
+
+    @typing.override
     def normalize_for_validation(self, language: Language, text: str) -> str:
         text = super().normalize_for_validation(language, text)
-        # An asterisk marks a Coptic form as a reconstruction. It sits inside
-        # the brackets, at the very beginning, and is substituted later.
-        if language == "COPTIC":
-            text = text.removeprefix("*")
-        return text
+        if language != "COPTIC":
+            return text
+        # An asterisk usually marks a Coptic form as a reconstruction, in which
+        # case it opens the brackets. Kasser also prints it within a word or a
+        # quotation: ⲥⲁⲙⲏ*ⲧ, ⲧⲉϣⲗⲓ*[...]. It is substituted later.
+        text = text.replace("*", "")
+        # `sim.` is Latin, and stays in the text unvalidated.
+        return _SIM_RE.sub("", text)
 
 
 _LANGUAGES: Languages = Languages(
@@ -188,6 +210,7 @@ _SUPERSCRIPTS: list[str] = [
     "h",
     "m",
     "o",
+    "p",
     "s",
     "x",
     "sx",
@@ -202,7 +225,10 @@ _SUPERSCRIPTS: list[str] = [
 _SUBSCRIPTS: list[str] = [
     "o",
     "vl",
+    # "vg" occurs once, as a typo for "vl" (vulgaire).
+    "vg",
     "vl?",
+    "(?)vl",
     "o·vl",
     "(h)",
     "(hl)",
@@ -259,7 +285,7 @@ def replace_subscript(match: regex.Match[str]) -> str:
     return f"<sub>{mark}</sub>"
 
 
-_ITALIC_RE: regex.Pattern[str] = regex.compile(r"[\p{Latin} .',]+")
+_ITALIC_RE: regex.Pattern[str] = regex.compile(r"[\p{Latin} .',?]+")
 # A gloss may contain italics, and Greek words in double square brackets, which
 # are substituted (and validated) later: «... des deux cents [[κόλλαθον]]».
 # Only Greek is allowed, because bracketed Coptic marks a quotation:
@@ -269,7 +295,7 @@ _ITALIC_RE: regex.Pattern[str] = regex.compile(r"[\p{Latin} .',]+")
 # only occurs once, in a gloss that Kasser leaves open without an ellipsis,
 # which we couldn't recognize anyway. See `replace_unclosed`.
 _GLOSS_RE: regex.Pattern[str] = regex.compile(
-    r"(?:[\p{Latin} ',\-.?!()_:]|\[\[[\p{Greek}\p{M} .]+\]\])+",
+    r"(?:[\p{Latin} ',\-.?!()_:;“”]|\[\[[\p{Greek}\p{M} .]+\]\])+",
 )
 
 
@@ -441,6 +467,8 @@ class _MorphologiquesColumn(randy.Column):
     LAST = 66
 
 
+_BRACKETED_RE: regex.Pattern[str] = regex.compile(randy.bracketed(".*?"))
+
 COLUMN: dict[Book, type[randy.Column]] = {
     Book.COMPLEMENTS: _ComplementsColumn,
     Book.MORPHOLOGIQUES: _MorphologiquesColumn,
@@ -475,6 +503,12 @@ class Entry(randy.Entry[randy.Column]):
             "  " not in self.entry,
             self,
             "has a double space",
+        )
+        # See the NOTE on `⟨sim.⟩` in `_ALPHABETS`.
+        ensure.ensure(
+            "sim." not in _BRACKETED_RE.sub("", self.entry),
+            self,
+            "has a `sim.` outside double brackets",
         )
 
     @typing.override
