@@ -250,28 +250,38 @@ export function focus(id: string): void {
 }
 
 /**
+ * Browsers strip text fragments (`#:~:text=`) from `location.href`.
+ * The Navigation API's current entry keeps them on Chromium and Firefox, and
+ * tracks later same-document navigations and `history.replaceState`.
+ * The Navigation Timing entry is a fallback for browsers without the Navigation
+ * API. It keeps text fragments on Chromium only, and only those of the URL that
+ * loaded the page. WebKit hides text fragments from all of them.
  *
+ * @returns The URL of the current page, with its text fragment if known.
+ */
+function urlWithDirective(): string {
+  // The DOM typings declare `navigation` unconditionally, but some browsers
+  // lack it.
+  const nav: Navigation | undefined = (window as { navigation?: Navigation })
+    .navigation;
+  return (
+    nav?.currentEntry?.url ??
+    performance.getEntriesByType('navigation')[0]?.name ??
+    window.location.href
+  );
+}
+
+/**
+ * Remove the URL fragment, be it an anchor (hash) or a text fragment.
  */
 export function removeFragment(): void {
-  // Remove the URL fragment.
-  // NOTE: We only reload when we actually detect an anchor (hash) or text
-  // fragment in order to minimize disruption. Reloading the page causes a
-  // small jitter.
-  // NOTE: `url.hash` doesn't include text fragments (`#:~:text=`),
-  // which is why we need to use `performance.getEntriesByType('navigation')`.
-  // However, the latter doesn't always work, for some reason. In our
-  // experience, it can retrieve the text fragment once, but if you reset and
-  // then add a text fragment manually, it doesn't recognize it! This is not a
-  // huge issue right now, so we aren't prioritizing fixing it!
-
-  const url = new URL(window.location.href);
-  if (
-    !url.hash &&
-    !performance.getEntriesByType('navigation')[0]?.name.includes('#')
-  ) {
+  // NOTE: We only reload when we actually detect a fragment in order to
+  // minimize disruption. Reloading the page causes a small jitter.
+  if (!urlWithDirective().includes('#')) {
     return;
   }
 
+  const url = new URL(window.location.href);
   url.hash = '';
   window.history.replaceState('', '', url.toString());
   // Reload to get rid of the highlighting caused by the hash / fragment,
@@ -309,21 +319,16 @@ function percentEncode(c: string): string {
  * @returns The URL, with the Text Fragment (if any) encoded.
  */
 export function urlWithFragment(): string {
-  const href: string = window.location.href;
-
-  let [baseURL, frag]: string[] = href.split('#:~:text=', 2);
-  if (baseURL === undefined || frag === undefined) {
-    [baseURL, frag] =
-      performance
-        .getEntriesByType('navigation')[0]
-        ?.name.split('#:~:text=', 2) ?? [];
-  }
+  const [baseURL, frag]: (string | undefined)[] = urlWithDirective().split(
+    '#:~:text=',
+    2
+  );
   if (!baseURL || !frag) {
-    return href;
+    return window.location.href;
   }
 
-  frag = frag.replace(FRAGMENT_UNSAFE_RE, percentEncode);
-  return `${baseURL}#:~:text=${frag}`;
+  const encoded: string = frag.replace(FRAGMENT_UNSAFE_RE, percentEncode);
+  return `${baseURL}#:~:text=${encoded}`;
 }
 
 /**

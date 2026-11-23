@@ -92,3 +92,23 @@ PAGES_TO_TEST.forEach((path: string): void => {
     }
   );
 });
+
+// Reset (`r`) reloads the page without its text fragment, to clear the
+// highlighting. Browsers hide text fragments from `location.href`, so this
+// relies on detecting them otherwise. A second, manually entered text fragment
+// must also be detected, which the Navigation Timing entry alone used to miss.
+play.test(
+  'reset removes text fragments',
+  async ({ page }: { page: play.Page }): Promise<void> => {
+    const entry = (): Promise<string | null> =>
+      page.evaluate((): string | null => navigation.currentEntry?.url ?? null);
+    const note: string = paths.crum('1');
+
+    for (const text of ['a', 'the']) {
+      await page.goto(`${note}#:~:text=${text}`);
+      play.expect(await entry()).toContain(`#:~:text=${text}`);
+      await Promise.all([page.waitForEvent('load'), page.keyboard.press('r')]);
+      play.expect(await entry()).not.toContain('#');
+    }
+  }
+);
