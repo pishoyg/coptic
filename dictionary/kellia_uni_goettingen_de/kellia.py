@@ -227,7 +227,7 @@ class Orthography:
                 yield f'<tr><td class="{dict_cls.PART_OF_SPEECH}">'
                 yield f"({gram_grp})"
                 yield "</td></tr>"
-            # TODO: (#51) Consider grouping the forms more intelligently, like
+            # TODO: (#0) Consider grouping the forms more intelligently, like
             # Crum does. Forms that share the same set of dialects could share
             # a line, separated by commas, and followed by their dialects only
             # once (such as `ⲁⲗ, ⲁⲁⲗ SA`). A form's remarks would still need
@@ -521,7 +521,7 @@ def _xr(typ: str, ref: tei.XrRef) -> str:
 
 
 def _form_sort_key(form: tei.Form) -> tuple[str, str]:
-    # TODO: (#51) You could do a lot better than this!
+    # TODO: (#0) You could do a lot better than this!
     # Try to mimic Crum's sorting behavior. Verbs should be sorted by case
     # (infinitive, prenominal, pronominal, then qualitative), singular nouns
     # should precede plural nouns, ...

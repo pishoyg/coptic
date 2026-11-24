@@ -126,9 +126,12 @@ function handleCrossReferences(root: HTMLElement): void {
   root
     .querySelectorAll<HTMLElement>(css.c(cls.XR_TARGET))
     .forEach((el: HTMLElement): void => {
-      // TODO: (#51) Link cross-references to ⲡⲓⲖⲉⲝⲓⲕⲟⲛ rather than CDO, so
-      // users can look the words up on our website, and go on to CDO from
-      // there.
+      // TODO: (#0) Consider linking cross-references to ⲡⲓⲖⲉⲝⲓⲕⲟⲛ rather than
+      // CDO, so users can look the words up on our website, and go on to CDO
+      // from there.
+      // P.S. The upcoming version of the Comprehensive Coptic Lexicon (#305)
+      // has the cross references with IDs, which we can use to construct direct
+      // URL without executing a search.
       html.linkify(el, paths.cdo(el.textContent));
     });
 }
