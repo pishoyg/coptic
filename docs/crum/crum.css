@@ -105,7 +105,10 @@ figcaption {
   }
 }
 
-.reference {
+/* A KELLIA source (a citation of a work) is akin to a Crum reference, so it
+ * shares its colors. */
+.reference,
+.source {
   color: var(--reference);
 
   &:hover,

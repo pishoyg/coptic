@@ -19,6 +19,10 @@ export const ANTECEDENT = 'antecedent';
 export const ARABIC = 'arabic';
 export const ARAMAIC = 'aramaic';
 /**
+ * BIBL is the class of the bibliography of a KELLIA sense.
+ */
+export const BIBL = 'bibl';
+/**
  * BIBLE represents a Biblical reference in the Crum Wiki.
  */
 export const BIBLE = 'bible';
@@ -47,6 +51,10 @@ export const DIALECT = 'dialect';
 export const DRV_KEY = 'drv-key';
 export const DRV_LINK = 'drv-link';
 export const ENTRY = 'entry';
+/**
+ * ETYM is the class of the etymology of a KELLIA word.
+ */
+export const ETYM = 'etym';
 export const EXPLAIN_CHECKBOX = 'explain-checkbox';
 export const EXPLANATORY = 'explanatory';
 export const EXPLANATORY_KEY = 'explanatory-key';
@@ -106,6 +114,11 @@ export const SISTERS_TABLE = 'sisters-table';
 export const SISTER_INDEX = 'sister-index';
 export const SISTER_KEY = 'sister-key';
 export const SISTER_VIEW = 'sister-view';
+/**
+ * SOURCE is the class of a KELLIA citation: the abbreviation of a cited work,
+ * and the locations cited.
+ */
+export const SOURCE = 'source';
 export const SPELLING = 'spelling';
 /**
  * STACK renders two Coptic letters one above the other, as a ligature Crum

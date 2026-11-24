@@ -41,7 +41,7 @@ from collections import abc, defaultdict
 import pandas as pd
 
 from dictionary import cls as dict_cls
-from dictionary.kellia_uni_goettingen_de import cls, sources, tei, trie
+from dictionary.kellia_uni_goettingen_de import cls, tei, trie
 from flashcards import deck
 from utils import ensure, file, gcp, javascript, log, page, paths
 from xooxle import xooxle
@@ -247,7 +247,6 @@ class Etymology:
             word = re.sub(r"\(", r"\(", word)
             word = re.sub(r"\)", r"\)", word)
             etym = re.sub(r"#" + word + "#", link, etym)
-        etym = _gloss_bibl(etym)
         return f'<span class="{cls.ETYM}">{etym}</span>' if etym else ""
 
 
@@ -359,22 +358,6 @@ class Lang:
         for sense in self.senses:
             yield sense.tr()
         yield "</table>"
-
-
-def _gloss_bibl(ref_bibl: str) -> str:
-    """Adds tooltips to lexical resource names.
-
-    Args:
-        ref_bibl: Bibliography, containing abbreviations of books. Hints will be
-            added to each abbreviation, showing the full title.
-
-    Returns:
-        The HTML of the bibliography, with hints added.
-
-    """
-    for regex, repl in sources.SOURCES:
-        ref_bibl = regex.sub(repl, ref_bibl)
-    return ref_bibl
 
 
 def _tree_aux(

@@ -477,6 +477,36 @@ function* linkifyWalk(root: Node, exclude?: string): Generator<Text> {
 }
 
 /**
+ * Replace the pieces of text under the given root that match the given regex.
+ *
+ * You can exclude certain subtrees of the given tree by providing a list of
+ * classes which should be excluded. This excludes entire subtrees, not just
+ * individual elements.
+ *
+ * NOTE: The regex must not be global, because `replaceNode` reuses it on the
+ * remainder of each piece of text.
+ *
+ * @param root - The root node to search within.
+ * @param regex - The regular expression to search for.
+ * @param replaceMatch - A callback function that takes the match and returns an
+ * array of Nodes or strings to replace it with, or `undefined` to leave the
+ * match as it is.
+ * @param excludedClasses - A list of CSS classes for subtrees to exclude.
+ */
+export function replaceText(
+  root: Node,
+  regex: RegExp,
+  replaceMatch: (match: RegExpExecArray) => (Node | string)[] | undefined,
+  excludedClasses: string[] = []
+): void {
+  Array.from(linkifyWalk(root, css.disjunction(...excludedClasses))).forEach(
+    (node: Text): void => {
+      replaceNode(node, regex, replaceMatch);
+    }
+  );
+}
+
+/**
  * Search for all pieces of text under the given root that match the given
  * regex. For each match, use the provided method to construct a URL, and insert
  * a link in that piece of text.
@@ -498,25 +528,22 @@ export function linkifyText(
   classes: string[] = [],
   excludedClasses: string[] = []
 ): void {
-  Array.from(linkifyWalk(root, css.disjunction(...excludedClasses))).forEach(
-    (node: Text): void => {
-      replaceNode(
-        node,
-        regex,
-        (match: RegExpExecArray): (Node | string)[] | undefined => {
-          const targetUrl: string | null = url(match);
-          if (!targetUrl) {
-            // This text doesn't have a URL. No replacements needed!
-            return undefined;
-          }
+  replaceText(
+    root,
+    regex,
+    (match: RegExpExecArray): (Node | string)[] | undefined => {
+      const targetUrl: string | null = url(match);
+      if (!targetUrl) {
+        // This text doesn't have a URL. No replacements needed!
+        return undefined;
+      }
 
-          // Create a link.
-          const a = anchor(targetUrl, match[0]);
-          a.classList.add(...classes);
-          return [a];
-        }
-      );
-    }
+      // Create a link.
+      const a = anchor(targetUrl, match[0]);
+      a.classList.add(...classes);
+      return [a];
+    },
+    excludedClasses
   );
 }
 

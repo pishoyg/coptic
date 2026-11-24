@@ -215,6 +215,9 @@ GreekPartOfSpeech = typing.Literal[
     "verb",
 ]
 # BiblSource lists the works that translations cite, besides the DDGLC.
+# NOTE: The frontend explains these abbreviations in tooltips, using the list
+# of works in `docs/crum/kellia.ts`. Every source here must have an entry
+# there, under the same abbreviation. Keep the two lists aligned.
 BiblSource = typing.Literal[
     "CD",
     "CDC",
