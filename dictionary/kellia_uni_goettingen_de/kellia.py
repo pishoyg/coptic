@@ -534,6 +534,9 @@ def _geo(form: tei.Form) -> str:
 
 
 def _process_entry(entry: tei.Entry) -> Word:
+    # TODO: (#51) Mark loanwords. The entry type `foreign` marks the non-Greek
+    # ones (such as `ⲥⲓⲣ`, butter).
+    # TODO: (#51) Render the note of the entry (such as `Lesung unsicher`).
     lemma: tei.Form = entry.lemma
     forms: list[tei.Form] = sorted(
         (f for f in entry.forms if not f.deprecated),
@@ -548,9 +551,17 @@ def _process_entry(entry: tei.Entry) -> Word:
     orthography: Orthography = Orthography()
 
     for form in forms:
+        # TODO: (#51) Render the lemma. We skip it, assuming that another form
+        # repeats it, but no form does in a few dozen entries. Some lemmas are
+        # merely normalized spellings (`ⲙⲉϩⲧⲟⲟⲧ⸗` of `ⲙⲉϩ ⲧⲟⲟⲧ⸗`), which still
+        # helps search. Others are forms of their own, which we lose entirely,
+        # along with their grammar (such as the prenominal `ϩⲁⲧⲛ-`, of which
+        # only the pronominal `ϩⲁⲧⲟⲟⲧ⸗` shows).
         if form is lemma:
             continue
 
+        # TODO: (#51) Render the note of the form. Some explain when the form
+        # is used (such as `ⲁⲑ-`, `vor Liquiden`), or how Greek renders a name.
         gram_grp: tei.GramGrp = entry.grammar(form)
         orthography.add(
             " ".join(child.text for child in gram_grp.children),
@@ -579,9 +590,12 @@ def _process_entry(entry: tei.Entry) -> Word:
                         for lang in langs.values():
                             lang.add("xr", _xr(child.type, ref))
                 case tei.Note():
+                    # TODO: (#51) Render the notes of senses.
                     pass
                 case tei.Cit() if child.type == "example":
-                    # TODO: (#51) Incorporate examples.
+                    # TODO: (#51) Incorporate examples. They are few, and
+                    # mostly compounds or set phrases, without a translation
+                    # (such as `ⲁⲗⲙⲡⲉ`, hailstone, under `ⲁⲗ`, pebble).
                     pass
                 case tei.Cit():
                     for lang in langs.values():
@@ -599,6 +613,8 @@ def _process_entry(entry: tei.Entry) -> Word:
                     typing.assert_never(child)
 
     # POS -- a single Scriptorium POS tag for each entry
+    # TODO: (#0) Drop the POS tag, along with `_pos_map`. We never render it,
+    # and the grammar of each form already shows its part of speech.
     pos_list: list[str] = []
     # This includes the grammatical groups of deprecated forms.
     for group in [*(f.gram_grp for f in entry.forms), entry.gram_grp]:
