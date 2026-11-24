@@ -134,9 +134,6 @@ def _verify_resource_urls() -> None:
         _verify_url(url)
 
 
-_verify_resource_urls()
-
-
 # Single-letter key per language, used as the column header in the search
 # results table. Ideally, you should keep in sync with the dialect keys in the
 # TypeScript. The keys are fairly static, so this will likely never change.
@@ -146,11 +143,23 @@ def _key(lang: Language) -> str:
 
 ensure.unique(map(_key, _LANGUAGES))
 
-# _VERSE_NUMBER matches verse numbers within verse text.
-_VERSE_NUMBER: regex.Pattern[str] = regex.compile(
-    # pylint: disable-next=line-too-long
-    r"(?<!\w)\((?:(?:[BE]|\d+):)?(?:[0-9]|[\p{Script=Coptic}\p{Mark}])+[a-z]?\)(?!\w)",
-)
+
+def _number_re(numeral: str) -> regex.Pattern[str]:
+    return regex.compile(
+        rf"(?<!\w)\((?:(?:[BE]|[0-9]+):)?(?:{numeral})[a-z]?\)(?!\w)",
+    )
+
+
+# _NUMBER matches verse numbers within verse text, such as `(12)`, `(ⲓ︦ⲃ︦)`,
+# `(22a)`, `(30:1)`, or `(B:ⲁ︦)`. English and Greek use Arabic numerals. The
+# Coptic dialects use Coptic numerals, plus Arabic ones for alternative
+# numberings.
+_ARABIC: str = "[0-9]+"
+_COPTIC: str = rf"[\p{{Script=Coptic}}\p{{Mark}}]+|{_ARABIC}"
+_NUMBER: dict[Language, regex.Pattern[str]] = {
+    lang: _number_re(_ARABIC if lang in ["English", "Greek"] else _COPTIC)
+    for lang in _LANGUAGES
+}
 
 # The `verseNumber` field generally has the format:
 #   "${BOOK} ${CHAPTER}:${VERSE}".
@@ -231,6 +240,11 @@ _NORMALIZATION: dict[Language, dict[str, str]] = {
 # Recolored words in a verse are only allowed to use these colors. Keep this
 # mapping in sync with the classes used in the CSS.
 _COLOR_CLASSES: dict[str, str | None] = {
+    # Black is only used in Psalms, mostly for psalm titles, and for the bare
+    # (unparenthesized) stanza numerals of Psalm 118. We leave those words
+    # uncolored, so they take the regular text color, which also keeps them
+    # readable in dark mode. They contain no parenthesized numbers, so they
+    # don't hide any verse numbers either.
     "#000000": None,
     "#05537d": cls.BLUE,
     "#812d2d": cls.RED,
@@ -369,11 +383,11 @@ class Verse:
         # NOTE: Normalization must take place after recoloring, because
         # recoloring uses the original text.
         self.recolored: dict[Language, str] = {
-            lang: _normalize(lang, self._recolor(data[lang], data))
+            lang: _normalize(lang, self._recolor(lang, data))
             for lang in _LANGUAGES
         }
         unnumbered: dict[Language, str] = {
-            lang: _normalize(lang, _VERSE_NUMBER.sub("", data[lang]).strip())
+            lang: _normalize(lang, _NUMBER[lang].sub("", data[lang]).strip())
             for lang in _LANGUAGES
         }
         self._validate_character_set(unnumbered)
@@ -406,7 +420,7 @@ class Verse:
                     # NOTE: We intentionally use `match` instead of `search` to
                     # only ban numbers at the start of a verse, but allow
                     # numbers mid-verse.
-                    not _VERSE_NUMBER.match(data[lang]),
+                    not _NUMBER[lang].match(data[lang]),
                     self,
                     "has no valid verse number, but has numbers in text!",
                 )
@@ -452,27 +466,34 @@ class Verse:
     def has(self, lang: Language) -> bool:
         return self._has[lang]
 
+    # _recolor_aux colors the words in the given language's text. Colored words
+    # are expected to be verse numbers, and verse numbers are expected to be
+    # colored.
     def _recolor_aux(
         self,
-        v: str,
+        lang: Language,
         verse: schema.Verse,
     ) -> abc.Generator[str]:
-        v = html.escape(v)
+        v: str = html.escape(verse[lang])
+        number: regex.Pattern[str] = _NUMBER[lang]
 
-        colored_words: dict[str, str] = (
-            {
-                # We intentionally ignore the dark mode color. As of
-                # the time of writing, we don't support dark mode.
-                d["word"]: d["light"]
-                for d in verse["coloredWords"]
-                if d["word"]
-            }
-            if "coloredWords" in verse
-            else {}
-        )
+        def plain(text: str) -> str:
+            if number.search(text):
+                # TODO: (#131) Some numbers are missing from `coloredWords`. Fix
+                # them at the source, then report uncolored numbers here.
+                pass
+            return text
+
+        colored_words: dict[str, str] = {
+            # The "dark" value is unused. The "light" value suffices to
+            # identify the color.
+            d["word"]: d["light"]
+            for d in verse.get("coloredWords", [])
+            if d["word"]
+        }
 
         if not colored_words:
-            yield v
+            yield plain(v)
             return
 
         # Longest words first so the regex engine prefers them at each
@@ -485,15 +506,23 @@ class Verse:
         )
         last: int = 0
         for m in pattern.finditer(v):
-            yield v[last : m.start()]
+            yield plain(v[last : m.start()])
             last = m.end()
             txt: str = m.group()
             class_: str | None = _COLOR_CLASSES[colored_words[txt]]
-            yield f'<span class="{class_}">{txt}</span>' if class_ else txt
-        yield v[last:]
+            if not class_:
+                yield plain(txt)
+                continue
+            if not number.fullmatch(_normalize(lang, txt)):
+                # TODO: (#131) Some colored words are whole sentences (mostly
+                # Sahidic), dashes, or unparenthesized numbers. Fix them at the
+                # source, then report colored non-numbers here.
+                pass
+            yield f'<span class="{class_}">{txt}</span>'
+        yield plain(v[last:])
 
-    def _recolor(self, v: str, verse: schema.Verse) -> str:
-        return "".join(self._recolor_aux(v, verse))
+    def _recolor(self, lang: Language, verse: schema.Verse) -> str:
+        return "".join(self._recolor_aux(lang, verse))
 
     @typing.override
     def __str__(self) -> str:
@@ -1592,6 +1621,8 @@ def _build_xooxle(bible: Bible, table_builder: TableBuilder) -> None:
 def main():
     args: argparse.Namespace = parser.parse_args()
     Verse.fast = args.fast
+
+    _verify_resource_urls()
 
     bible: Bible = Bible()
 
