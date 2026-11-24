@@ -1415,7 +1415,7 @@ _CRUM_RETAIN_CLASSES: set[str] = {
     dict_cls.TYPE,
     cls.ROMAN,
     cls.HEADING,
-    cls.GREEK,
+    dict_cls.GREEK,
 } | set(constants.DIALECTS)
 
 _CRUM_RETAIN_ELEMENTS_FOR_CLASSES = {cls.COMMA}
@@ -1455,7 +1455,7 @@ XOOXLE: xooxle.Xooxle = xooxle.Xooxle(
                 cls.HEADWORD,
                 cls.BULLET,
                 cls.COPTIC,
-                cls.GREEK,
+                dict_cls.GREEK,
                 cls.ARABIC,
                 cls.AMHARIC,
                 cls.HEBREW,
@@ -1497,7 +1497,7 @@ XOOXLE: xooxle.Xooxle = xooxle.Xooxle(
                 *kasser.Book,
                 dict_cls.DIALECT,
                 cls.COPTIC,
-                cls.GREEK,
+                dict_cls.GREEK,
                 dict_cls.GLOSS,
                 cls.HANGING,
                 cls.ADDENDUM,

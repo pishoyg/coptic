@@ -39,6 +39,7 @@ import typing
 from collections import abc, defaultdict
 
 import pandas as pd
+import regex
 
 from dictionary import cls as dict_cls
 from dictionary.kellia_uni_goettingen_de import cls, tei, trie
@@ -89,6 +90,13 @@ _ROW_CLASS: dict[_SenseChild, str] = {
 # them with a semicolon, and so does the Xooxle index, which displays them on a
 # single line. Cards hide the delimiter, and stack the citations instead.
 _CITATION_DELIMITER: str = f'<span class="{cls.DELIMITER}">; </span>'
+# _GREEK_WORD_RE matches a Greek word. A word may contain optional letters in
+# parentheses (`βησ(σ)ίον`), end with an elision mark (`ἀλλ'`), and start or
+# end with a hyphen if it's only part of a word (`ἀν-`, `-ἔρχεσθαι`).
+_GREEK_WORD_RE: regex.Pattern[str] = regex.compile(
+    r"-?\p{Greek}[\p{Greek}\p{M}]*"
+    r"(?:\([\p{Greek}\p{M}]+\)[\p{Greek}\p{M}]*)*'?-?",
+)
 FORM_RE: re.Pattern[str] = re.compile(r"[Ⲁ-ⲱϢ-ϯⳈⳉ]+[†⸗\-]?")
 PURE_COPTIC_RE: re.Pattern[str] = re.compile("[Ⲁ-ⲱϢ-ϯⳈⳉ]+")
 
@@ -235,7 +243,7 @@ class Etymology:
             # send the reader elsewhere.
             # The meaning and the reference are optional. The meaning is styled
             # like a gloss, and the part of speech like the grammar of a form.
-            parts: list[str] = [lemma.lemma]
+            parts: list[str] = [_greek(lemma.lemma)]
             if lemma.meaning is not None:
                 parts.append(
                     f'<span class="{dict_cls.GLOSS}">{lemma.meaning}</span>',
@@ -400,6 +408,25 @@ def _tree_aux(
             yield from _tree_aux(list(node.children.values()), False)
             yield "</ul>"
         yield "</li>"
+
+
+def _greek(text: str) -> str:
+    """Mark the Greek words in a text.
+
+    We mark each word, rather than the whole text, because the text may also
+    hold German or Latin notes (`βᾶρις (ägyptisches Lehnwort)`), and because the
+    frontend looks up the words one by one.
+
+    Args:
+        text: A text holding Greek words.
+
+    Returns:
+        The HTML of the text.
+    """
+    return _GREEK_WORD_RE.sub(
+        lambda m: f'<span class="{dict_cls.GREEK}">{m.group()}</span>',
+        text,
+    )
 
 
 def _xr(typ: str, ref: tei.XrRef) -> str:
@@ -581,7 +608,7 @@ def _process_entry(entry: tei.Entry) -> Word:
                     pass
                 case tei.SenseRef():
                     for lang in langs.values():
-                        lang.add("ref", child.text)
+                        lang.add("ref", _greek(child.text))
                 case tei.Xr():
                     for ref in child.refs:
                         for lang in langs.values():
@@ -915,6 +942,7 @@ _KELLIA_RETAIN_CLASSES = {
     cls.REF,
     cls.XR,
     cls.XR_TARGET,
+    dict_cls.GREEK,
 } | set(GEOS)
 
 
@@ -967,6 +995,7 @@ XOOXLE: xooxle.Xooxle = xooxle.Xooxle(
                 cls.ETYM_NOTE,
                 cls.GREEK_REF,
                 cls.XR_TARGET,
+                dict_cls.GREEK,
                 dict_cls.GLOSS,
                 cls.GRAM_GRP,
                 dict_cls.TYPE,

@@ -5,6 +5,7 @@ import re
 
 import regex
 
+from dictionary import cls as dict_cls
 from dictionary.marcion_sourceforge_net import cls, lexical
 from morphology import inflect
 from utils import page, paths
@@ -351,7 +352,7 @@ ENGLISH_PROCESSING: list[
         rf'<span class="{cls.HEADING}">\1</span>',
     ),
     ("\n", page.LINE_BREAK),
-    (GREEK_WORD_RE, rf'<span class="{cls.GREEK}">\1</span>'),
+    (GREEK_WORD_RE, rf'<span class="{dict_cls.GREEK}">\1</span>'),
 ]
 
 QUALITY: list[str] = [

@@ -170,7 +170,7 @@ _LANGUAGES: Languages = Languages(
     typing.get_args(Language),
     _ALPHABETS,
     {
-        "GREEK": cls.GREEK,
+        "GREEK": dict_cls.GREEK,
         "COPTIC": cls.COPTIC,
     },
 )
