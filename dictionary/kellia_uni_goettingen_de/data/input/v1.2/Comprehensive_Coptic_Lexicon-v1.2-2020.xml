@@ -2645,7 +2645,8 @@
             <quote xml:lang="de">letzter Tag des Monats</quote>
             <quote xml:lang="en">last day of month</quote>
             <quote xml:lang="fr">dernier jour du mois</quote>
-            <bibl>CD 5b; CED 4; KoptHWb 4, 485; DELC 8; 3b</bibl>
+            <!-- NOTE: Guessed `ChLCS` as the source of the orphaned page `3b`, since ChLCS is cited last, and its pages track Crum's. -->
+            <bibl>CD 5b; CED 4; KoptHWb 4, 485; DELC 8; ChLCS 3b</bibl>
           </cit>
         </sense>
       </entry>
@@ -5464,7 +5465,7 @@
               <def xml:lang="de">Präfix zur Bildung von Kollektiva von Zahlwörtern</def>
               <def xml:lang="en">prefix in collective numerals</def>
               <def xml:lang="fr">préfixe formant de collectifs de numérals</def>
-              <bibl>CD10b; CED 8; KoptHWb 7; DELC 12; ChLCS 4a</bibl>
+              <bibl>CD 10b; CED 8; KoptHWb 7; DELC 12; ChLCS 4a</bibl>
             </cit>
           </sense>
         </entry>
@@ -10155,7 +10156,7 @@
             <quote xml:lang="de">Sprache, Mundart, Dialekt</quote>
             <quote xml:lang="en">language, speech, dialect</quote>
             <quote xml:lang="fr">langue, langage, dialecte</quote>
-            <bibl>CD 18a; CED 13, KoptHWb 13, 489; DELC 17; ChLCS 5b</bibl>
+            <bibl>CD 18a; CED 13; KoptHWb 13, 489; DELC 17; ChLCS 5b</bibl>
           </cit>
         </sense>
       </entry>
@@ -10348,7 +10349,7 @@
             <quote xml:lang="de">Spaten, Hacke (?)</quote>
             <quote xml:lang="en">spade (?)</quote>
             <quote xml:lang="fr">bêche (?)</quote>
-            <bibl>CD 18b; Kasser CDC 4a; KoptHWb 3, 489; ChLCS 5b</bibl>
+            <bibl>CD 18b; CDC 4a; KoptHWb 3, 489; ChLCS 5b</bibl>
           </cit>
         </sense>
       </entry>
@@ -10784,7 +10785,7 @@
             <quote xml:lang="de">oder</quote>
             <quote xml:lang="en">or</quote>
             <quote xml:lang="fr">ou</quote>
-            <bibl>Kasser CDC 5a; KoptHWb 490</bibl>
+            <bibl>CDC 5a; KoptHWb 490</bibl>
           </cit>
         </sense>
       </entry>
@@ -11179,7 +11180,7 @@
             <quote xml:lang="de">Gesellschaft, Gemeinschaft</quote>
             <quote xml:lang="en">collection, company of persons</quote>
             <quote xml:lang="fr">communauté, compagnie, société</quote>
-            <bibl>CD 21b; Kasser CDC 5a; KoptHWb 490; DELC 19; ChLCS 6a</bibl>
+            <bibl>CD 21b; CDC 5a; KoptHWb 490; DELC 19; ChLCS 6a</bibl>
           </cit>
         </sense>
         <sense xml:id="CS279">
@@ -11406,7 +11407,7 @@
               <quote xml:lang="de">irgendeine/r, etwas</quote>
               <quote xml:lang="en">a certain, whatever</quote>
               <quote xml:lang="fr">un/e certain/e, quelqu'un</quote>
-              <bibl>CD 22α; KoptHWb 15; DELC 20; ChLCS 6a; ChLCS 6a</bibl>
+              <bibl>CD 22a; KoptHWb 15; DELC 20; ChLCS 6a</bibl>
             </cit>
           </sense>
         </entry>
@@ -11441,7 +11442,7 @@
               <quote xml:lang="de">Ofen, Herd</quote>
               <quote xml:lang="en">furnace, oven</quote>
               <quote xml:lang="fr">fourneau, four</quote>
-              <bibl>CD 22α; KoptHWb 15, 490; DELC 20; ChLCS 6a</bibl>
+              <bibl>CD 22a; KoptHWb 15, 490; DELC 20; ChLCS 6a</bibl>
             </cit>
           </sense>
         </entry>
@@ -11468,7 +11469,7 @@
             <quote xml:lang="de">Bedeutung unbekannt</quote>
             <quote xml:lang="en">meaning unknown</quote>
             <quote xml:lang="fr">sens inconnu</quote>
-            <bibl>CD 23α</bibl>
+            <bibl>CD 23a</bibl>
           </cit>
         </sense>
       </entry>
@@ -11508,7 +11509,7 @@
             <quote xml:lang="de">Beschwörer</quote>
             <quote xml:lang="en">enchanter</quote>
             <quote xml:lang="fr">magicien, exorciste</quote>
-            <bibl>CD 23α; CED 15-16; KoptHWb 15; DELC 20</bibl>
+            <bibl>CD 23a; CED 15-16; KoptHWb 15; DELC 20</bibl>
           </cit>
         </sense>
       </entry>
@@ -17179,7 +17180,7 @@
               <quote xml:lang="de">Diener, (Haus)sklave</quote>
               <quote xml:lang="en">servant, slave</quote>
               <quote xml:lang="fr">serviteur, esclave</quote>
-              <bibl>CD 30a; CED 21; KoptHWB 22, 493; DELC 26-27; ChLCS 7b</bibl>
+              <bibl>CD 30a; CED 21; KoptHWb 22, 493; DELC 26-27; ChLCS 7b</bibl>
             </cit>
           </sense>
         </entry>
@@ -17209,7 +17210,7 @@
               <quote xml:lang="de">dienen, arbeiten</quote>
               <quote xml:lang="en">serve, labour</quote>
               <quote xml:lang="fr">servir, travailler</quote>
-              <bibl>CD 30ab; CED 21; KoptHWB 22</bibl>
+              <bibl>CD 30ab; CED 21; KoptHWb 22</bibl>
             </cit>
           </sense>
         </entry>
@@ -17239,7 +17240,7 @@
               <quote xml:lang="de">versklaven</quote>
               <quote xml:lang="en">enslave</quote>
               <quote xml:lang="fr">esclavager</quote>
-              <bibl>CD 30b; KoptHWB 22</bibl>
+              <bibl>CD 30b; KoptHWb 22</bibl>
             </cit>
           </sense>
         </entry>
@@ -17296,7 +17297,7 @@
               <quote xml:lang="de">gerben</quote>
               <quote xml:lang="en">tan</quote>
               <quote xml:lang="fr">tanner</quote>
-              <bibl>CD 31a; CED 22; KoptHWB 22; DELC 27</bibl>
+              <bibl>CD 31a; CED 22; KoptHWb 22; DELC 27</bibl>
             </cit>
           </sense>
         </entry>
@@ -17338,7 +17339,7 @@
               <quote xml:lang="de">gerber</quote>
               <quote xml:lang="en">tanner</quote>
               <quote xml:lang="fr">tanneur</quote>
-              <bibl>CD 31a; CED 22; KoptHWB 22; DELC 27</bibl>
+              <bibl>CD 31a; CED 22; KoptHWb 22; DELC 27</bibl>
             </cit>
           </sense>
         </entry>
@@ -17399,7 +17400,7 @@
             <quote xml:lang="de">Dienerin, (Haus)sklavin</quote>
             <quote xml:lang="en">(female) servant, slave</quote>
             <quote xml:lang="fr">servante, esclave</quote>
-            <bibl>CD 30a; CED 21; KoptHWB 22; DELC 27</bibl>
+            <bibl>CD 30a; CED 21; KoptHWb 22; DELC 27</bibl>
           </cit>
         </sense>
       </entry>
@@ -17537,7 +17538,7 @@
               <quote xml:lang="de">Auge</quote>
               <quote xml:lang="en">eye</quote>
               <quote xml:lang="fr">oeil</quote>
-              <bibl>CD 31b; CED 22; KoptHWB 22, 493; DELC 27; ChLCS 7b</bibl>
+              <bibl>CD 31b; CED 22; KoptHWb 22, 493; DELC 27; ChLCS 7b</bibl>
             </cit>
           </sense>
         </entry>
@@ -17565,7 +17566,7 @@
               <quote xml:lang="de">unverschämt</quote>
               <quote xml:lang="en">impertinent</quote>
               <quote xml:lang="fr">effronté, impudent</quote>
-              <bibl>CD 32a; KoptHWB 22; ChLCS 7b</bibl>
+              <bibl>CD 32a; KoptHWb 22; ChLCS 7b</bibl>
             </cit>
           </sense>
         </entry>
@@ -17880,7 +17881,7 @@
               <quote xml:lang="de">lösen, los-/aufbinden [Ketten, Stricke etc.]</quote>
               <quote xml:lang="en">loosen, untie [of chains, cords etc.]</quote>
               <quote xml:lang="fr">délier, défaire, détacher [chaînes, cordes, liens etc.]</quote>
-              <bibl>CD 32a; CED 22; KoptHWB 22-23; DELC 27; ChLCS 8a</bibl>
+              <bibl>CD 32a; CED 22; KoptHWb 22-23; DELC 27; ChLCS 8a</bibl>
             </cit>
           </sense>
           <sense xml:id="CS453">
@@ -17888,7 +17889,7 @@
               <quote xml:lang="de">schmelzen</quote>
               <quote xml:lang="en">melt</quote>
               <quote xml:lang="fr">fondre</quote>
-              <bibl>CD 32a; KoptHWB 22; DELC 27; ChLCS 8a</bibl>
+              <bibl>CD 32a; KoptHWb 22; DELC 27; ChLCS 8a</bibl>
             </cit>
           </sense>
           <sense xml:id="CS454">
@@ -17999,7 +18000,7 @@
               <quote xml:lang="de">lösend, schmelzend</quote>
               <quote xml:lang="en">loosened, melting</quote>
               <quote xml:lang="fr">desserré, fondant</quote>
-              <bibl>CD 32a; CED 22; KoptHWB 22-23; DELC 27; ChLCS 8a</bibl>
+              <bibl>CD 32a; CED 22; KoptHWb 22-23; DELC 27; ChLCS 8a</bibl>
             </cit>
           </sense>
         </entry>
@@ -18636,7 +18637,7 @@
               <quote xml:lang="de">hinaus, heraus, (von) . . . weg</quote>
               <quote xml:lang="en">out, forth, outward</quote>
               <quote xml:lang="fr">dehors, au dehors, au loin</quote>
-              <bibl>CD 34ab; KoptHwb 23; ChLCS 8a</bibl>
+              <bibl>CD 34ab; KoptHWb 23; ChLCS 8a</bibl>
             </cit>
           </sense>
         </entry>
@@ -19645,7 +19646,7 @@
             <quote xml:lang="de">umgestürzet werden; durchlöchert werden</quote>
             <quote xml:lang="en">be overturned; be hollowed, perforated</quote>
             <quote xml:lang="fr">être retourné; être creusé, perforé</quote>
-            <bibl>CD 37b; KoptHWb23; ChLCS 8b</bibl>
+            <bibl>CD 37b; KoptHWb 23; ChLCS 8b</bibl>
           </cit>
         </sense>
         <sense xml:id="CS535">
@@ -19653,7 +19654,7 @@
             <quote xml:lang="de">zu Grunde richten, zerstückeln, berauben</quote>
             <quote xml:lang="en">undo, take to pieces, divest</quote>
             <quote xml:lang="fr">défaire, mettre en pieces, dépouiller</quote>
-            <bibl>CD 37b; KoptHWb23; ChLCS 8b</bibl>
+            <bibl>CD 37b; KoptHWb 23; ChLCS 8b</bibl>
           </cit>
         </sense>
       </entry>
@@ -19682,7 +19683,7 @@
             <quote xml:lang="de">eindringen, ergründen</quote>
             <quote xml:lang="en">penetrate into, unearth</quote>
             <quote xml:lang="fr">pénétrer dans, s'infiltrer, approfondir</quote>
-            <bibl>KoptHWb23; ChLCS 8b</bibl>
+            <bibl>KoptHWb 23; ChLCS 8b</bibl>
           </cit>
         </sense>
       </entry>
@@ -22580,7 +22581,7 @@
               <quote xml:lang="de">Messing, Bronze</quote>
               <quote xml:lang="en">brass, bronze</quote>
               <quote xml:lang="fr">bronze, laiton</quote>
-              <bibl>CD 43b-44a; CED 26; KoptHWb 27, 495; DELC 30-31, ChLCS 9b</bibl>
+              <bibl>CD 43b-44a; CED 26; KoptHWb 27, 495; DELC 30-31; ChLCS 9b</bibl>
             </cit>
           </sense>
         </entry>
@@ -26198,7 +26199,7 @@
               <quote xml:lang="de">wenn [Verbalpräfix des Konditionalis]</quote>
               <quote xml:lang="en">if [verbal prefix of the conditional]</quote>
               <quote xml:lang="fr">si, quand [préfixe verbal du conditionnel]</quote>
-              <bibl>CD 52b, ChLCS 10b</bibl>
+              <bibl>CD 52b; ChLCS 10b</bibl>
             </cit>
           </sense>
         </entry>
@@ -28950,7 +28951,7 @@
             <quote xml:lang="de">(Tür-)Riegel (?)</quote>
             <quote xml:lang="en">part of fastening of door</quote>
             <quote xml:lang="fr">nom d'une fermeture de la porte</quote>
-            <bibl>CD 57b; CED 36; KoptHWB 38; DELC 44; ChLCS 11b</bibl>
+            <bibl>CD 57b; CED 36; KoptHWb 38; DELC 44; ChLCS 11b</bibl>
           </cit>
         </sense>
       </entry>
@@ -28982,7 +28983,7 @@
             <quote xml:lang="de">Name des 11. Monats</quote>
             <quote xml:lang="en">name of 11th month</quote>
             <quote xml:lang="fr">11e mois de l'année Copte</quote>
-            <bibl>CD 57b; CED 37; KoptHWB 38; DELC 45; ChLCS 11b</bibl>
+            <bibl>CD 57b; CED 37; KoptHWb 38; DELC 45; ChLCS 11b</bibl>
           </cit>
         </sense>
       </entry>
@@ -29020,7 +29021,7 @@
               <quote xml:lang="de">Nichtigkeit(en), Täuschung, Leere</quote>
               <quote xml:lang="en">vanities</quote>
               <quote xml:lang="fr">vanités, futilités</quote>
-              <bibl>CD 57b, 63a; CED 37, 40; KoptHWB 38, 499; DELC 45; ChLCS 11b</bibl>
+              <bibl>CD 57b, 63a; CED 37, 40; KoptHWb 38, 499; DELC 45; ChLCS 11b</bibl>
             </cit>
           </sense>
         </entry>
@@ -29053,7 +29054,7 @@
               <quote xml:lang="de">falsch, eitel, nichtig, leer</quote>
               <quote xml:lang="en">vain, empty</quote>
               <quote xml:lang="fr">faux, vain, vide</quote>
-              <bibl>CD 57b, 63a; KoptHWB 38; DELC 45; ChLCS 11b</bibl>
+              <bibl>CD 57b, 63a; KoptHWb 38; DELC 45; ChLCS 11b</bibl>
             </cit>
           </sense>
         </entry>
@@ -29086,7 +29087,7 @@
               <quote xml:lang="de">vergeblich</quote>
               <quote xml:lang="en">in vain, vainly</quote>
               <quote xml:lang="fr">en vain</quote>
-              <bibl>CD 57b, 63a; KoptHWB 38; DELC 45; ChLCS 11b</bibl>
+              <bibl>CD 57b, 63a; KoptHWb 38; DELC 45; ChLCS 11b</bibl>
             </cit>
           </sense>
         </entry>
@@ -29262,7 +29263,7 @@
             <quote xml:lang="de">Brot</quote>
             <quote xml:lang="en">bread</quote>
             <quote xml:lang="fr">pain</quote>
-            <bibl>CD XVII a; KoptHWb 39; DELC 46</bibl>
+            <bibl>CD XVIIa; KoptHWb 39; DELC 46</bibl>
           </cit>
         </sense>
       </entry>
@@ -29292,7 +29293,7 @@
             <quote xml:lang="de">Papyrus</quote>
             <quote xml:lang="en">papyrus</quote>
             <quote xml:lang="fr">papyrus</quote>
-            <bibl>CD 58a, XVII a; CED 37; KoptHWb 500</bibl>
+            <bibl>CD 58a, XVIIa; CED 37; KoptHWb 500</bibl>
           </cit>
         </sense>
       </entry>
@@ -30942,7 +30943,7 @@
             <quote xml:lang="de">Lumpen (?)</quote>
             <quote xml:lang="en">waste, refuse</quote>
             <quote xml:lang="fr">étoupe (?)</quote>
-            <bibl>CDC 11b; CED 39; KoptHWB 501; DELC 48</bibl>
+            <bibl>CDC 11b; CED 39; KoptHWb 501; DELC 48</bibl>
           </cit>
         </sense>
       </entry>
@@ -48485,7 +48486,7 @@
               <quote xml:lang="de">Wende, Kreis, Umgebung</quote>
               <quote xml:lang="en">turning round, circuit, surroundings</quote>
               <quote xml:lang="fr">tournant, circuit, alentours</quote>
-              <bibl>CD 126a, KoptHWb 72</bibl>
+              <bibl>CD 126a; KoptHWb 72</bibl>
             </cit>
           </sense>
           <sense xml:id="CS1667">
@@ -48501,7 +48502,7 @@
               <quote xml:lang="de">Suche, Erkundigung, Untersuchung, Befragung</quote>
               <quote xml:lang="en">seeking, inquiry</quote>
               <quote xml:lang="fr">recherche, enquête</quote>
-              <bibl>CD 126a, KoptHWb 72</bibl>
+              <bibl>CD 126a; KoptHWb 72</bibl>
             </cit>
           </sense>
         </entry>
@@ -51123,7 +51124,7 @@
               <quote xml:lang="de">Neid, Verleumdung</quote>
               <quote xml:lang="en">envy, slander</quote>
               <quote xml:lang="fr">envie</quote>
-              <bibl>CD 134b, KoptHWb 74; ChLCS 20b</bibl>
+              <bibl>CD 134b; KoptHWb 74; ChLCS 20b</bibl>
             </cit>
           </sense>
         </entry>
@@ -55279,7 +55280,7 @@
               <quote xml:lang="de">verwundet sein</quote>
               <quote xml:lang="en">be wounded</quote>
               <quote xml:lang="fr">être blessé</quote>
-              <bibl>CD 145b0</bibl>
+              <bibl>CD 145b</bibl>
             </cit>
           </sense>
         </entry>
@@ -55869,7 +55870,7 @@
             <quote xml:lang="de">Heuchler</quote>
             <quote xml:lang="en">hypocrites</quote>
             <quote xml:lang="fr">hypocrites</quote>
-            <bibl>CD 148a; KoptHWb 81;</bibl>
+            <bibl>CD 148a; KoptHWb 81</bibl>
           </cit>
         </sense>
       </entry>
@@ -60637,7 +60638,7 @@
             <quote xml:lang="de">Erlaubnis</quote>
             <quote xml:lang="en">permission</quote>
             <quote xml:lang="fr">permission</quote>
-            <bibl>CD 169a; KoptHWb 93; CHLCS 25b</bibl>
+            <bibl>CD 169a; KoptHWb 93; ChLCS 25b</bibl>
           </cit>
         </sense>
       </entry>
@@ -64357,7 +64358,8 @@
               <quote xml:lang="de">Vermehrung (von Geld), Wucher, Zinsen</quote>
               <quote xml:lang="en">offspring (of money), usury, interest</quote>
               <quote xml:lang="fr">intérêt d'argent, usure</quote>
-              <bibl>CD 186a; KoptHWb 101; DELC ChLCS 28a</bibl>
+              <!-- NOTE: Dropped `DELC` from `DELC ChLCS 28a`, since it had no page. -->
+              <bibl>CD 186a; KoptHWb 101; ChLCS 28a</bibl>
             </cit>
           </sense>
         </entry>
@@ -74387,7 +74389,7 @@
               <quote xml:lang="de">ehebrechen</quote>
               <quote xml:lang="en">commit adultery</quote>
               <quote xml:lang="fr">commettre l'adultère</quote>
-              <bibl>CD 222b-223a; KoptHWb120; ChLCS 32a</bibl>
+              <bibl>CD 222b-223a; KoptHWb 120; ChLCS 32a</bibl>
             </cit>
           </sense>
         </entry>
@@ -74488,7 +74490,7 @@
               <quote xml:lang="de">kreißen, in den Wehen liegen</quote>
               <quote xml:lang="en">be in travail</quote>
               <quote xml:lang="fr">être en travail</quote>
-              <bibl>CD 223a; KoptHWb121; ChLCS 32a</bibl>
+              <bibl>CD 223a; KoptHWb 121; ChLCS 32a</bibl>
             </cit>
           </sense>
         </entry>
@@ -75743,7 +75745,7 @@
             <quote xml:lang="de">nichts</quote>
             <quote xml:lang="en">nothing</quote>
             <quote xml:lang="fr">rien</quote>
-            <bibl>CD 227b; CCD 37b; KoptHWb 123; DELC 143</bibl>
+            <bibl>CD 227b; CDC 37b; KoptHWb 123; DELC 143</bibl>
           </cit>
         </sense>
       </entry>
@@ -106601,7 +106603,7 @@
             <quote xml:lang="de">(Segel) aufziehen</quote>
             <quote xml:lang="en">lift up</quote>
             <quote xml:lang="fr">mettre au vent les voiles</quote>
-            <bibl>(CD 358a, unter ⲥⲱⲥ); CED 163 (unter ⲥⲁⲥⲉ) KoptHWb 197, 540; DELC 197</bibl>
+            <bibl>(CD 358a, unter ⲥⲱⲥ); CED 163 (unter ⲥⲁⲥⲉ); KoptHWb 197, 540; DELC 197</bibl>
           </cit>
         </sense>
       </entry>
@@ -113002,7 +113004,7 @@
             <quote xml:lang="de">du, dich, dein [feminin]</quote>
             <quote xml:lang="en">you, your(s) [feminine]</quote>
             <quote xml:lang="fr">vous, votre, vôtre [féminin]</quote>
-            <bibl>LCG 68, Till D 26</bibl>
+            <bibl>LCG 68; Till D 26</bibl>
           </cit>
         </sense>
       </entry>
@@ -113424,7 +113426,7 @@
               <quote xml:lang="de">übergeben, beauftragen, anvertrauen</quote>
               <quote xml:lang="en">give into hands, command, entrust</quote>
               <quote xml:lang="fr">remettre, charger, confier</quote>
-              <bibl>CD 393b, KoptHWb 219; ChLCS 55a</bibl>
+              <bibl>CD 393b; KoptHWb 219; ChLCS 55a</bibl>
             </cit>
           </sense>
         </entry>
@@ -116831,7 +116833,7 @@
               <quote xml:lang="de">Respekt bekommen, ein Geschenk bekommen</quote>
               <quote xml:lang="en">receive an honour, receive a gift</quote>
               <quote xml:lang="fr">recevoir un honneur, recevoir un cadeau</quote>
-              <bibl>CD 391b, ChLCS 56b</bibl>
+              <bibl>CD 391b; ChLCS 56b</bibl>
             </cit>
           </sense>
         </entry>
@@ -121984,7 +121986,7 @@
               <quote xml:lang="de">senden, schicken</quote>
               <quote xml:lang="en">send</quote>
               <quote xml:lang="fr">envoyer</quote>
-              <bibl>CD 419b-420a; CD 65b-66a; CED 190; KoptHWb 237; DELC 217b; ChLCS 59a</bibl>
+              <bibl>CD 419b-420a, 65b-66a; CED 190; KoptHWb 237; DELC 217b; ChLCS 59a</bibl>
             </cit>
           </sense>
         </entry>
@@ -127815,7 +127817,7 @@
               <quote xml:lang="de">strahlen, scheinen</quote>
               <quote xml:lang="en">shine</quote>
               <quote xml:lang="fr">briller</quote>
-              <bibl>CD 439a; CD 68b; KoptHWb 248; ChLCS 62a</bibl>
+              <bibl>CD 439a, 68b; KoptHWb 248; ChLCS 62a</bibl>
             </cit>
           </sense>
         </entry>
@@ -128886,7 +128888,7 @@
               <quote xml:lang="de">unbeschreiblich, unerklärlich</quote>
               <quote xml:lang="en">indescribable, inexplicable</quote>
               <quote xml:lang="fr">indescriptible, inexplicable</quote>
-              <bibl>CD 443b︤; CDC 69a</bibl>
+              <bibl>CD 443b; CDC 69a</bibl>
             </cit>
           </sense>
         </entry>
@@ -135758,7 +135760,7 @@
             <quote xml:lang="de">allein, eigen, selbst</quote>
             <quote xml:lang="en">alone, self</quote>
             <quote xml:lang="fr">seul, isolé, même</quote>
-            <bibl>CD 470ab; CDC 73a; CED209; KoptHWb 265; DELC 229b-230a; ChLCS 66a</bibl>
+            <bibl>CD 470ab; CDC 73a; CED 209; KoptHWb 265; DELC 229b-230a; ChLCS 66a</bibl>
           </cit>
         </sense>
       </entry>
@@ -135780,7 +135782,7 @@
               <quote xml:lang="de">fern sein, (sich) entfernen</quote>
               <quote xml:lang="en">be distant</quote>
               <quote xml:lang="fr">s'éloigner, être éloigné</quote>
-              <bibl>CD 470b-471b; CDC 73ab; CED209; KoptHWb 266; DELC 229b-230a; ChLCS 66a</bibl>
+              <bibl>CD 470b-471b; CDC 73ab; CED 209; KoptHWb 266; DELC 229b-230a; ChLCS 66a</bibl>
             </cit>
           </sense>
         </entry>
@@ -164215,7 +164217,8 @@
               <quote xml:lang="de">Schlachtopfer</quote>
               <quote xml:lang="en">thing cut (sacrifice)</quote>
               <quote xml:lang="fr">sacrifice</quote>
-              <bibl>CD 592avi; KoptHWb 330; ChLCS 82a</bibl>
+              <!-- NOTE: Guessed `CD 592a` for `CD 592avi`, dropping the suffix `vi`. -->
+              <bibl>CD 592a; KoptHWb 330; ChLCS 82a</bibl>
             </cit>
           </sense>
           <sense xml:id="CS6778">
@@ -168038,7 +168041,7 @@
             <quote xml:lang="de">er, sein, ihn</quote>
             <quote xml:lang="en">he, his, him</quote>
             <quote xml:lang="fr">lui, son</quote>
-            <bibl>CED 265; KoptHWb 344; DELC 279a;</bibl>
+            <bibl>CED 265; KoptHWb 344; DELC 279a</bibl>
           </cit>
         </sense>
       </entry>
@@ -177204,7 +177207,8 @@
               <quote xml:lang="de">geldgierig, geizig</quote>
               <quote xml:lang="en">money-loving, greedy, stingy</quote>
               <quote xml:lang="fr">avare, cupide</quote>
-              <bibl>CD 678b; KoptHWb 372; DELC 302a-b; 91a</bibl>
+              <!-- NOTE: Guessed `ChLCS` as the source of the orphaned page `91a`, since ChLCS is cited last, and its pages track Crum's. -->
+              <bibl>CD 678b; KoptHWb 372; DELC 302a-b; ChLCS 91a</bibl>
             </cit>
           </sense>
         </entry>
@@ -179104,7 +179108,7 @@
             <quote xml:lang="de">Inder</quote>
             <quote xml:lang="en">Hindu, Indian</quote>
             <quote xml:lang="fr">hindou, indien</quote>
-            <bibl>CD 692a-b; CED 289; KoptHWb 379; DELC 305b;</bibl>
+            <bibl>CD 692a-b; CED 289; KoptHWb 379; DELC 305b</bibl>
           </cit>
         </sense>
       </entry>
@@ -190747,7 +190751,7 @@
             <quote xml:lang="de">Grube, Schacht (?)</quote>
             <quote xml:lang="en">deep pit (?)</quote>
             <quote xml:lang="fr">fosse, puits (?)</quote>
-            <bibl>CD 770a; CED 314; KoptHWb 421, 572; DELC 326, ChLCS 102a</bibl>
+            <bibl>CD 770a; CED 314; KoptHWb 421, 572; DELC 326; ChLCS 102a</bibl>
           </cit>
         </sense>
         <sense xml:id="CS7957">
@@ -190755,7 +190759,7 @@
             <quote xml:lang="de">Behälter, Gefäß (?)</quote>
             <quote xml:lang="en">vessel (?)</quote>
             <quote xml:lang="fr">récipient (?)</quote>
-            <bibl>CD 770a; CED 314; KoptHWb 421, 572; DELC 326b, ChLCS 102a</bibl>
+            <bibl>CD 770a; CED 314; KoptHWb 421, 572; DELC 326b; ChLCS 102a</bibl>
           </cit>
         </sense>
       </entry>
@@ -192128,7 +192132,7 @@
               <quote xml:lang="de">Faulenzer, Zauderer</quote>
               <quote xml:lang="en">sluggard, delayer</quote>
               <quote xml:lang="fr">paresseux, fainéant</quote>
-              <bibl>CD 776b; KoptHWb 427, DELC 328b-329a</bibl>
+              <bibl>CD 776b; KoptHWb 427; DELC 328b-329a</bibl>
             </cit>
           </sense>
         </entry>
@@ -193311,7 +193315,7 @@
               <quote xml:lang="de">Salzlake</quote>
               <quote xml:lang="en">brine</quote>
               <quote xml:lang="fr">saumure</quote>
-              <bibl>CD 780b-781a, CED 318; KoptHWb 432; DELC 331a; ChLCS 103b</bibl>
+              <bibl>CD 780b-781a; CED 318; KoptHWb 432; DELC 331a; ChLCS 103b</bibl>
             </cit>
           </sense>
           <sense xml:id="CS8079">
@@ -193319,7 +193323,7 @@
               <quote xml:lang="de">Pökelfisch</quote>
               <quote xml:lang="en">small salted fish</quote>
               <quote xml:lang="fr">petits poissons conservés en saumure</quote>
-              <bibl>CD 780b-781a, CED 318; KoptHWb 432; DELC 331a; ChLCS 103b</bibl>
+              <bibl>CD 780b-781a; CED 318; KoptHWb 432; DELC 331a; ChLCS 103b</bibl>
             </cit>
           </sense>
         </entry>
@@ -193341,7 +193345,7 @@
               <quote xml:lang="de">Salzpaste (als Seife)</quote>
               <quote xml:lang="en">lotion, paste of salt (as soap)</quote>
               <quote xml:lang="fr">morceaux de sel (en tant que savon)</quote>
-              <bibl>CD 781a, CED 318; KoptHWb 432; ChLCS 103b</bibl>
+              <bibl>CD 781a; CED 318; KoptHWb 432; ChLCS 103b</bibl>
             </cit>
           </sense>
         </entry>
@@ -195684,7 +195688,7 @@
             <quote xml:lang="de">Zuflucht suchen (?)</quote>
             <quote xml:lang="en">seek refuge (?)</quote>
             <quote xml:lang="fr">chercher refuge (?)</quote>
-            <bibl>CD 791b; KoptHWb 436, ChLCS 104b</bibl>
+            <bibl>CD 791b; KoptHWb 436; ChLCS 104b</bibl>
           </cit>
         </sense>
       </entry>
@@ -196869,7 +196873,7 @@
               <quote xml:lang="de">Leidenschaft, Inbrunst</quote>
               <quote xml:lang="en">desire, emotion, passion</quote>
               <quote xml:lang="fr">passion</quote>
-              <bibl>CD 796a; KoptHWb 439</bibl>
+              <bibl>CD 796a; KoptHWb 439</bibl>
             </cit>
           </sense>
           <sense xml:id="CS8255">
@@ -196902,7 +196906,7 @@
               <quote xml:lang="de">eifrig, bestrebt</quote>
               <quote xml:lang="en">zaelous</quote>
               <quote xml:lang="fr">zélé, empressé</quote>
-              <bibl>CD 796a; KoptHWb 439</bibl>
+              <bibl>CD 796a; KoptHWb 439</bibl>
             </cit>
           </sense>
         </entry>
@@ -196924,7 +196928,7 @@
             <quote xml:lang="de">wertvoll, kostbar, selten sein</quote>
             <quote xml:lang="en">be costly, rare</quote>
             <quote xml:lang="fr">être précieux, rare</quote>
-            <bibl>CD 796a; KoptHWb 439; ChLCS 105a</bibl>
+            <bibl>CD 796a; KoptHWb 439; ChLCS 105a</bibl>
           </cit>
         </sense>
         <sense xml:id="CS8258">
@@ -196932,7 +196936,7 @@
             <quote xml:lang="de">schätzen</quote>
             <quote xml:lang="en">value</quote>
             <quote xml:lang="fr">apprécier</quote>
-            <bibl>CD 796a; KoptHWb 439; ChLCS 105a</bibl>
+            <bibl>CD 796a; KoptHWb 439; ChLCS 105a</bibl>
           </cit>
         </sense>
       </entry>
@@ -196954,7 +196958,7 @@
             <quote xml:lang="de">Bockshornklee</quote>
             <quote xml:lang="en">fenugreek</quote>
             <quote xml:lang="fr">fenugrec</quote>
-            <bibl>CD 796b; KoptHWb 439</bibl>
+            <bibl>CD 796b; KoptHWb 439</bibl>
           </cit>
         </sense>
       </entry>
@@ -197271,7 +197275,7 @@
               <quote xml:lang="de">unantastbar</quote>
               <quote xml:lang="en">untouchable</quote>
               <quote xml:lang="fr">intangible</quote>
-              <bibl>CD 797a;</bibl>
+              <bibl>CD 797a</bibl>
             </cit>
           </sense>
         </entry>
@@ -197793,7 +197797,7 @@
               <quote xml:lang="de">Kopf, Haupt</quote>
               <quote xml:lang="en">head, capital</quote>
               <quote xml:lang="fr">tête</quote>
-              <bibl>CD 756ab, 799a; CED 310; 323; KoptHWb 442; DELC 334ab; ChLCS 105b</bibl>
+              <bibl>CD 756ab, 799a; CED 310, 323; KoptHWb 442; DELC 334ab; ChLCS 105b</bibl>
             </cit>
           </sense>
           <sense xml:id="CS8304">
@@ -198266,7 +198270,7 @@
               <quote xml:lang="de">Nadel (?)</quote>
               <quote xml:lang="en">needle (?)</quote>
               <quote xml:lang="fr">aiguille (?)</quote>
-              <bibl>CD 799a; KoptHWb 443 Anm. 4</bibl>
+              <bibl>CD 799a; KoptHWb 443, Anm. 4</bibl>
             </cit>
           </sense>
         </entry>
@@ -199274,7 +199278,7 @@
               <quote xml:lang="de">bleiben, verweilen</quote>
               <quote xml:lang="en">remain</quote>
               <quote xml:lang="fr">rester, demeurer</quote>
-              <bibl>CD 803a-804b; KoptHWb 445; DELC 335ab; CHLCS 106a</bibl>
+              <bibl>CD 803a-804b; KoptHWb 445; DELC 335ab; ChLCS 106a</bibl>
             </cit>
           </sense>
           <sense xml:id="CS8377">
@@ -199323,7 +199327,7 @@
               <quote xml:lang="de">warten auf</quote>
               <quote xml:lang="en">wait for</quote>
               <quote xml:lang="fr">attendre</quote>
-              <bibl>CD 803b; KoptHWb 445; CHLCS 106a</bibl>
+              <bibl>CD 803b; KoptHWb 445; ChLCS 106a</bibl>
             </cit>
           </sense>
         </entry>
@@ -199345,7 +199349,7 @@
               <quote xml:lang="de">Schweigen</quote>
               <quote xml:lang="en">silence</quote>
               <quote xml:lang="fr">silence, mutisme</quote>
-              <bibl>CD 804b; KoptHWb 445; CHLCS 106a</bibl>
+              <bibl>CD 804b; KoptHWb 445; ChLCS 106a</bibl>
             </cit>
           </sense>
         </entry>
@@ -199648,7 +199652,7 @@
               <quote xml:lang="de">verzagt sein</quote>
               <quote xml:lang="en">to lose heart</quote>
               <quote xml:lang="fr">être effayé</quote>
-              <bibl>CD 805b; KoptHWb 446 Anm. 5; ChLCS 106a</bibl>
+              <bibl>CD 805b; KoptHWb 446, Anm. 5; ChLCS 106a</bibl>
             </cit>
           </sense>
         </entry>
@@ -199848,7 +199852,7 @@
             <quote xml:lang="de">Kichererbse</quote>
             <quote xml:lang="en">chick-pea</quote>
             <quote xml:lang="fr">pois chiche</quote>
-            <bibl>CD 806a; KoptHWb 447; DELC 336a; ChLCS 106a</bibl>
+            <bibl>CD 806a; KoptHWb 447; DELC 336a; ChLCS 106a</bibl>
           </cit>
         </sense>
       </entry>
@@ -199871,7 +199875,7 @@
               <quote xml:lang="de">Stücke, Splitter (von Holz)</quote>
               <quote xml:lang="en">fragments, pieces (of wood)</quote>
               <quote xml:lang="fr">morceaux, fragments (de bois)</quote>
-              <bibl>CD 806a; CED 325-326; KoptHWb 447; DELC 336a; ChLCS 106a</bibl>
+              <bibl>CD 806a; CED 325-326; KoptHWb 447; DELC 336a; ChLCS 106a</bibl>
             </cit>
           </sense>
         </entry>
@@ -200286,7 +200290,7 @@
               <quote xml:lang="de">Lügner</quote>
               <quote xml:lang="en">liar</quote>
               <quote xml:lang="fr">menteur</quote>
-              <bibl>CD 806b, ChLCS 106b</bibl>
+              <bibl>CD 806b; ChLCS 106b</bibl>
             </cit>
           </sense>
         </entry>
@@ -201110,7 +201114,7 @@
               <quote xml:lang="de">umhüllen, einwickeln, bekleiden, bedecken</quote>
               <quote xml:lang="en">swathe, clothe, cover</quote>
               <quote xml:lang="fr">envelopper, vêtir, couvrir</quote>
-              <bibl>CD 809ab; CED 327; KoptHWb 450-451; DELC337b; ChLCS 107a</bibl>
+              <bibl>CD 809ab; CED 327; KoptHWb 450-451; DELC 337b; ChLCS 107a</bibl>
             </cit>
           </sense>
         </entry>
@@ -201131,7 +201135,7 @@
               <quote xml:lang="de">Bekleidung, Mantel</quote>
               <quote xml:lang="en">covering, cloak</quote>
               <quote xml:lang="fr">vêtement, manteau</quote>
-              <bibl>CD 809b; KoptHWb 450; DELC337b; ChLCS 107a</bibl>
+              <bibl>CD 809b; KoptHWb 450; DELC 337b; ChLCS 107a</bibl>
             </cit>
           </sense>
         </entry>
@@ -204650,7 +204654,7 @@
             <quote xml:lang="de">erblinden</quote>
             <quote xml:lang="en">go blind, become blind</quote>
             <quote xml:lang="fr">devenir aveugle</quote>
-            <bibl>CD 821a; CED 332; KoprHWb 458; DELC 342a</bibl>
+            <bibl>CD 821a; CED 332; KoptHWb 458; DELC 342a</bibl>
           </cit>
         </sense>
       </entry>
@@ -205199,7 +205203,7 @@
               <quote xml:lang="de">Unterdrücker</quote>
               <quote xml:lang="en">oppressor</quote>
               <quote xml:lang="fr">oppresseur</quote>
-              <bibl>CD 822b; ChlCS 108b</bibl>
+              <bibl>CD 822b; ChLCS 108b</bibl>
             </cit>
           </sense>
         </entry>
@@ -205230,7 +205234,7 @@
               <quote xml:lang="de">Ungerechtigkeit, Unterdrückung</quote>
               <quote xml:lang="en">injustice, oppression</quote>
               <quote xml:lang="fr">injustice, oppression</quote>
-              <bibl>CD 822b; ChlCS 108b</bibl>
+              <bibl>CD 822b; ChLCS 108b</bibl>
             </cit>
           </sense>
         </entry>
@@ -208634,7 +208638,7 @@
             <quote xml:lang="de">diskreditiert, verurteilt sein (?)</quote>
             <quote xml:lang="en">be disgraced, condemned (?)</quote>
             <quote xml:lang="fr">être déshonoré, condamnné (?)</quote>
-            <bibl>CED 832b; CED 338; KoptHWB 448</bibl>
+            <bibl>CD 832b; CED 338; KoptHWb 448</bibl>
           </cit>
         </sense>
       </entry>
