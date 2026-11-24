@@ -290,9 +290,7 @@ class Sense:
         yield "<tbody>"
         yield "<tr>"
         yield f'<td class="{dict_cls.MEANING}">'
-        yield page.LINE_BREAK.join(
-            map(self.format, self.subset("quote", "definition")),
-        )
+        yield self._explanation()
         yield "</td>"
         yield f'<td class="{cls.BIBL}">'
         yield _CITATION_DELIMITER.join(map(self.format, self.subset("bibl")))
@@ -306,6 +304,26 @@ class Sense:
             yield "</td>"
             yield "</tr>"
         yield "</tbody>"
+
+    def _explanation(self) -> str:
+        """Render the explanation of the sense, one line per language.
+
+        The explanation in a language starts with a row that bears the label of
+        the language (see `explain`). Its definitions follow its quotes on the
+        same line, in parentheses, like a note that follows a gloss.
+
+        Returns:
+            The HTML of the explanation.
+        """
+        lines: list[list[str]] = []
+        for row in self.subset("quote", "definition"):
+            name, _, label = row
+            if label or not lines:
+                lines.append([])
+            line: list[str] = lines[-1]
+            html: str = self.format(row)
+            line.append(f"({html})" if line and name == "definition" else html)
+        return page.LINE_BREAK.join(" ".join(line) for line in lines)
 
     def subset(self, *names: _SenseChild) -> list[_Row]:
         assert all(n in _SENSE_CHILDREN for n in names), names
