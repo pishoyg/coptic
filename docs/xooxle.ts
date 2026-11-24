@@ -1049,6 +1049,8 @@ class FieldSearchResult extends AggregateResult {
     //   their number exceeds the limit, because we need to show all matches.
     //   We always show the first result, because its content is usually
     //   important.
+    //   Notice that, in such a case, we might end up with fewer units in the
+    //   output than the given limit.
     this.results = !results.some((r) => r.match)
       ? results.slice(0, unitsLimit)
       : results.length <= unitsLimit
