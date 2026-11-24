@@ -346,6 +346,17 @@ class KELLIASearchResult extends SearchResult {
   public override enrich(row: HTMLTableRowElement): void {
     kellia.handle(row, SearchResult.highlighter);
   }
+
+  /**
+   * Each sense of a KELLIA word is a unit of its own, so the senses get
+   * separated by rules. But we always show all of them, because a cropped
+   * result would misrepresent the meaning of the word.
+   *
+   * @returns The maximum number of units to display in a field.
+   */
+  protected override unitsLimit(): number {
+    return Infinity;
+  }
 }
 
 interface Xooxle {

@@ -762,6 +762,25 @@ ul.kellia-senses,
   padding-left: 1.5em;
 }
 
+/* A card separates its senses with rules that taper off, like the search
+ * results do. A rule runs solid under the meaning column, and fades out under
+ * the bibliography column. */
+.kellia-senses tbody + tbody > tr:first-child > td {
+  padding-top: 16px;
+}
+
+/* The rule is drawn 8px into the padding, to leave the same space on both of
+ * its sides. */
+.kellia-senses tbody + tbody > tr:first-child > .meaning {
+  background: linear-gradient(var(--border), var(--border)) 0 8px / 100% 1px
+    no-repeat;
+}
+
+.kellia-senses tbody + tbody > tr:first-child > .bibl {
+  background: linear-gradient(to right, var(--border), transparent) 0 8px / 100%
+    1px no-repeat;
+}
+
 /* A card stacks the citations of a sense in their own column. The index drops
  * the `kellia-senses` class, so it displays them on one line, delimited by
  * semicolons. */

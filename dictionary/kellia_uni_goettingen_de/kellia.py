@@ -271,10 +271,11 @@ class Sense:
             return f'<span class="{cls.CITATION}">{value}</span>'
         return f'{label}<span class="{_ROW_CLASS[name]}">{value}</span>'
 
-    def tr(self) -> str:
-        return "".join(self._tr_aux())
+    def tbody(self) -> str:
+        return "".join(self._tbody_aux())
 
-    def _tr_aux(self) -> abc.Generator[str]:
+    def _tbody_aux(self) -> abc.Generator[str]:
+        yield "<tbody>"
         yield "<tr>"
         yield f'<td class="{dict_cls.MEANING}">'
         yield page.LINE_BREAK.join(
@@ -292,6 +293,7 @@ class Sense:
             yield page.LINE_BREAK.join(map(self.format, ref_xr))
             yield "</td>"
             yield "</tr>"
+        yield "</tbody>"
 
     def subset(self, *names: _SenseChild) -> list[_Row]:
         assert all(n in _SENSE_CHILDREN for n in names), names
@@ -352,7 +354,7 @@ class Lang:
         yield "<col>"
         yield "</colgroup>"
         for sense in self.senses:
-            yield sense.tr()
+            yield sense.tbody()
         yield "</table>"
 
 
@@ -943,6 +945,10 @@ XOOXLE: xooxle.Xooxle = xooxle.Xooxle(
             # their classes, which style them, and let the frontend explain
             # the cited works.
             block_classes={cls.BIBL},
+            # Each sense of an Egyptian word is a unit, so the frontend
+            # separates the senses with rules. A Greek tree has no row groups,
+            # so it remains a single unit.
+            unit_tags={"tbody"},
         ),
         xooxle.Capture(
             "TEXT",
