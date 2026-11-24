@@ -132,18 +132,23 @@ figcaption {
   font-size: 18px;
 }
 
+/* The rules target the cells of a sister row, but not those of the tables
+ * nested in them, such as the forms and senses of a KELLIA sister.
+ * The cells align to the top, so the forms remain in sight when the meaning
+ * runs long. */
 .sister {
-  & td {
+  & > td {
     padding: 8px 12px;
+    vertical-align: top;
   }
 
-  & td:not(:first-child) {
+  & > td:not(:first-child) {
     border-left: 1px solid var(--border);
   }
 }
 
 .sister:not(:first-child) {
-  & td {
+  & > td {
     border-top: 1px solid var(--border);
   }
 }
@@ -719,24 +724,20 @@ body.dev {
 /* NOTE: Many KELLIA rules are shared with Crum. Only a handful are unique to
  * KELLIA, and those are expected to diminish as we polish our KELLIA module. */
 
-.orth {
-  width: 50%;
+.remark {
+  color: var(--text-muted);
 }
-
-.geo {
-  width: 10%;
-  text-align: center;
-}
-
-/* stylelint-disable selector-class-pattern */
-
-.gram_grp {
-  font-style: italic;
-}
-
-/* stylelint-enable selector-class-pattern */
 
 /* stylelint-disable no-descending-specificity */
+
+/* A card separates the grammatical types of the forms with rules that taper
+ * off, like the search results do. The rule is drawn 8px into the padding, to
+ * leave the same space on both of its sides. */
+.orths tbody + tbody > tr:first-child > td {
+  padding-top: 16px;
+  background: linear-gradient(to right, var(--border) 60%, transparent) 0 8px /
+    100% 1px no-repeat;
+}
 
 .bibl {
   color: var(--text-muted);
@@ -805,16 +806,15 @@ ul.kellia-senses,
 /* Italic glyphs overhang their box; lifting italicized text onto its own
  * stacking context keeps the overhang from being concealed by an adjacent
  * element's background (e.g. `.match`, `::target-text`). */
-/* stylelint-disable selector-class-pattern, no-descending-specificity */
+/* stylelint-disable no-descending-specificity */
 i,
 .roman,
-.gram_grp,
 .gloss,
 .demotic {
   position: relative;
   z-index: 1;
 }
-/* stylelint-enable selector-class-pattern, no-descending-specificity */
+/* stylelint-enable no-descending-specificity */
 
 @font-face {
   font-family: old-coptic;

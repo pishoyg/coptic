@@ -125,10 +125,6 @@ SAHIDIC_SUPPLEMENTAL: pathlib.Path = (
     _SCRIPT_DIR / "data" / "raw" / "inflections.tab"
 )
 
-# FROM_COPTIC_SCRIPTORIUM is the ID we use for supplemental forms retrieved from
-# Coptic Scriptorium, and which are unavailable in the TLA.
-FROM_COPTIC_SCRIPTORIUM: str = "from CS"
-
 _GEO_MAPPING: dict[str, str] = {
     "?": "U",
     "Ak": "O",
@@ -143,43 +139,27 @@ def relpath(dst: str | pathlib.Path) -> str:
 
 
 class Form:
-    """Form represents a single word form."""
+    """Form represents a single word form.
+
+    We omit the ID of the form, which is internal to the dataset, and which we
+    have no use for.
+    """
 
     def __init__(
         self,
-        gram_grp: str | None,
+        gram_grp: str,
         orth: str,
         geo: str,
-        form_id: str,
+        remarks: tuple[str, ...],
     ) -> None:
-        self.gram_grp: str | None = gram_grp
+        self.gram_grp: str = gram_grp
         self.orth: str = orth
         self.geo: str = geo
-        self.form_id: str = form_id
+        self.remarks: tuple[str, ...] = remarks
 
-    def _td(self, txt: str, *classes: str) -> str:
-        return f'<td class="{" ".join([*classes, self.geo])}">{txt}</td>'
 
-    def tr_aux(self) -> abc.Generator[str]:
-        """Construct a <tr> element for this form.
-
-        Yields:
-            A string representing the HTML of a <tr> element.
-        """
-        yield f'<tr class="{dict_cls.WORD} {self.geo}">'
-        # We separate the nonempty cells with spaces, so they remain separated
-        # when the table gets flattened into text (as is the case in Xooxle).
-        separate: bool = False
-        for txt, classes in [
-            (self.orth, [cls.ORTH, dict_cls.SPELLING]),
-            (self.geo, [cls.GEO, dict_cls.DIALECT]),
-            (self.gram_grp or "", [cls.GRAM_GRP, dict_cls.TYPE]),
-        ]:
-            if separate and txt:
-                yield " "
-            separate = separate or bool(txt)
-            yield self._td(txt, *classes)
-        yield "</tr>"
+def _span(content: str, *classes: str) -> str:
+    return f'<span class="{" ".join(classes)}">{content}</span>'
 
 
 class Orthography:
@@ -188,8 +168,14 @@ class Orthography:
     def __init__(self) -> None:
         self.forms: list[Form] = []
 
-    def add(self, gram_grp: str, orth: str, geo: str, form_id: str) -> None:
-        self.forms.append(Form(gram_grp, orth, geo, form_id))
+    def add(
+        self,
+        gram_grp: str,
+        orth: str,
+        geo: str,
+        remarks: tuple[str, ...] = (),
+    ) -> None:
+        self.forms.append(Form(gram_grp, orth, geo, remarks))
 
     def has(self, orth: str) -> bool:
         return any(f.orth == orth for f in self.forms)
@@ -197,14 +183,91 @@ class Orthography:
     def has_dialect(self, geo: str) -> bool:
         return any(f.geo == geo for f in self.forms)
 
+    def _groups(
+        self,
+    ) -> dict[str, dict[tuple[str, tuple[str, ...]], list[str]]]:
+        """Group the forms by grammatical type, and the dialects by form.
+
+        Returns:
+            The dialects of each form and its remarks, by grammatical type.
+            Types and forms retain the order of their first occurrence.
+            Dialects follow the order of `GEOS`, which is Crum's.
+        """
+        groups: dict[str, dict[tuple[str, tuple[str, ...]], set[str]]] = {}
+        for form in self.forms:
+            groups.setdefault(form.gram_grp, {}).setdefault(
+                (form.orth, form.remarks),
+                set(),
+            ).add(form.geo)
+        return {
+            gram_grp: {
+                form: sorted(geos, key=GEOS.index)
+                for form, geos in forms.items()
+            }
+            for gram_grp, forms in groups.items()
+        }
+
     def table_aux(self) -> abc.Generator[str]:
+        """Construct a table of the forms, grouped by grammatical type.
+
+        Each type gets a row group, which Xooxle treats as a unit. The type
+        occupies the first row, unless it's empty, and each of its forms
+        occupies a row of its own, followed by the concatenated sigla of its
+        dialects, like in Crum, and by its remarks.
+
+        Yields:
+            The HTML of the table.
+        """
         yield f'<table class="{cls.ORTHS}">'
-        for line in self.forms:
-            yield from line.tr_aux()
+        for gram_grp, forms in self._groups().items():
+            yield "<tbody>"
+            if gram_grp:
+                # Like in Crum, the type is parenthesized, and carries no
+                # dialects.
+                yield f'<tr><td class="{dict_cls.PART_OF_SPEECH}">'
+                yield f"({gram_grp})"
+                yield "</td></tr>"
+            # TODO: (#51) Consider grouping the forms more intelligently, like
+            # Crum does. Forms that share the same set of dialects could share
+            # a line, separated by commas, and followed by their dialects only
+            # once (such as `ⲁⲗ, ⲁⲁⲗ SA`). A form's remarks would still need
+            # to stay next to it.
+            for (orth, remarks), geos in forms.items():
+                # The highlighter dims the children of a `word` that belong to
+                # none of the active dialects, so each child carries the
+                # classes of its dialects. See `docs/crum/highlight.ts`.
+                yield "<tr>"
+                yield f'<td class="{" ".join([dict_cls.WORD, *geos])}">'
+                yield _span(orth, dict_cls.SPELLING, *geos)
+                yield " "
+                yield "".join(
+                    _span(geo, dict_cls.DIALECT, geo) for geo in geos
+                )
+                for remark in remarks:
+                    yield " "
+                    yield _span(remark, cls.REMARK, *geos)
+                yield "</td>"
+                yield "</tr>"
+            yield "</tbody>"
         yield "</table>"
 
     def table(self) -> str:
         return "".join(self.table_aux())
+
+
+def _remark(note: tei.Note) -> str:
+    """Render a note of a grammatical group as a remark on a form.
+
+    Args:
+        note: The note.
+
+    Returns:
+        The text of the note, parenthesized, unless it already is.
+    """
+    text: str = note.text
+    if text.startswith("(") and text.endswith(")"):
+        return text
+    return f"({text})"
 
 
 class Etymology:
@@ -242,7 +305,7 @@ class Etymology:
             # the DDGLC, and our site strives to be self-sufficient rather than
             # send the reader elsewhere.
             # The meaning and the reference are optional. The meaning is styled
-            # like a gloss, and the part of speech like the grammar of a form.
+            # like a gloss, and the part of speech like an inlined type.
             parts: list[str] = [_greek(lemma.lemma)]
             if lemma.meaning is not None:
                 parts.append(
@@ -258,11 +321,6 @@ class Etymology:
         for xr in entry.xrs:
             for ref in xr.refs:
                 yield _xr(xr.type, ref)
-
-    def process(self) -> str:
-        if not self.amir:
-            return ""
-        return f'<span class="{cls.ETYM}">{self.amir}</span>'
 
 
 class Sense:
@@ -415,9 +473,7 @@ def _tree_aux(
         if top:
             parts.append(f'<span class="{dict_cls.GLOSS}">{labels[0]}</span>')
             labels = labels[1:]
-        parts.extend(
-            f'<span class="{cls.CHILD}">({label})</span>' for label in labels
-        )
+        parts.extend(f"({label})" for label in labels)
         yield "<li>"
         yield " ".join(parts)
         if node.children:
@@ -490,19 +546,22 @@ def _form_sort_key(form: tei.Form) -> tuple[str, str]:
 
 
 class Word:
-    """Word represents a word in the KELLIA dictionary."""
+    """Word represents a word in the KELLIA dictionary.
+
+    We omit the ID of the lemma form, which is internal to the dataset, and
+    which we have no use for. The ID of the entry is the key of the word, and
+    links it to Coptic Dictionary Online.
+    """
 
     def __init__(
         self,
         entry_xml_id: str,
-        lemma_form_id: str,
         orthstring: Orthography,
         langs: dict[str, Lang],
         etym_string: Etymology,
         is_greek: bool,
     ) -> None:
         self.entry_xml_id: str = entry_xml_id
-        self.lemma_form_id: str = lemma_form_id
         self.orthstring: Orthography = orthstring
         self.langs: dict[str, Lang] = langs
         self.etym_string: Etymology = etym_string
@@ -595,14 +654,23 @@ def _process_entry(entry: tei.Entry) -> Word:
         if form is lemma:
             continue
 
-        # TODO: (#51) Render the note of the form. Some explain when the form
-        # is used (such as `ⲁⲑ-`, `vor Liquiden`), or how Greek renders a name.
+        # TODO: (#51) Render the note of the form as a remark, like the notes
+        # of its grammatical group. Some explain when the form is used (such
+        # as `ⲁⲑ-`, `vor Liquiden`), or how Greek renders a name.
+
+        # The notes of the grammatical group are remarks on the form, rather
+        # than part of its type. Forms of the same type thus share a group,
+        # though each repeats the remarks that it shares with others.
         gram_grp: tei.GramGrp = entry.grammar(form)
         orthography.add(
-            " ".join(child.text for child in gram_grp.children),
+            " ".join(
+                child.text
+                for child in gram_grp.children
+                if not isinstance(child, tei.Note)
+            ),
             form.orth.text,
             _geo(form),
-            form.xml_id,
+            tuple(map(_remark, gram_grp.notes)),
         )
 
     langs: dict[str, Lang] = {
@@ -656,7 +724,6 @@ def _process_entry(entry: tei.Entry) -> Word:
 
     return Word(
         entry.xml_id,
-        lemma.xml_id,
         orthography,
         langs,
         Etymology(entry),
@@ -834,7 +901,7 @@ def _augmented_words() -> abc.Generator[Word]:
             if word.orthstring.has(orth):
                 # The word already has this orth.
                 continue
-            word.orthstring.add("", orth, "S", FROM_COPTIC_SCRIPTORIUM)
+            word.orthstring.add("", orth, "S")
         # TODO: (#305) We don't sort Bohairic forms because they already have
         # some order that would be corrupted if we were to reorder them below.
         # The lists retrieved have lamma forms first. We should order them by
@@ -848,7 +915,7 @@ def _augmented_words() -> abc.Generator[Word]:
             yield word
             continue
         for orth in b:
-            word.orthstring.add("", orth, "B", FROM_COPTIC_SCRIPTORIUM)
+            word.orthstring.add("", orth, "B")
         yield word
 
     # Verify that all Sahidic supplemental entries have been consumed.
@@ -925,7 +992,7 @@ def notes_aux(
         front: str = word.orthstring.table()
         back: str = _join(
             word.senses_html(),
-            word.etym_string.process(),
+            word.etym_string.amir,
             page.HORIZONTAL_RULE,
             "<footer>",
             "Coptic Dictionary Online: ",
@@ -951,10 +1018,9 @@ _KELLIA_RETAIN_CLASSES = {
     dict_cls.WORD,
     dict_cls.SPELLING,
     dict_cls.DIALECT,
-    dict_cls.TYPE,
+    dict_cls.PART_OF_SPEECH,
     cls.LANG,
-    cls.GEO,
-    cls.GRAM_GRP,
+    cls.REMARK,
     dict_cls.GLOSS,
     cls.BIBL,
     cls.REF,
@@ -974,6 +1040,9 @@ XOOXLE: xooxle.Xooxle = xooxle.Xooxle(
             "ORTHS",
             xooxle.Selector({"class_": cls.ORTHS}),
             retain_classes=_KELLIA_RETAIN_CLASSES,
+            # Each grammatical type, along with its forms, is a unit, so the
+            # frontend separates the types with rules.
+            unit_tags={"tbody"},
         ),
         xooxle.Capture(
             "SENSES",
@@ -1015,7 +1084,6 @@ XOOXLE: xooxle.Xooxle = xooxle.Xooxle(
                 cls.XR_TARGET,
                 dict_cls.GREEK,
                 dict_cls.GLOSS,
-                cls.GRAM_GRP,
                 dict_cls.TYPE,
             },
         ),

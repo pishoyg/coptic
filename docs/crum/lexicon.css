@@ -26,8 +26,9 @@
   font-size: smaller;
 }
 
-/* Rules separate the senses in KELLIA's search results. They taper off, so
- * they divide the senses without boxing them in. */
+/* Rules separate the senses, and the grammatical types of the forms, in
+ * KELLIA's search results. They taper off, so they divide them without boxing
+ * them in. */
 #kellia .match-separator {
   width: 100%;
   height: 1px;
