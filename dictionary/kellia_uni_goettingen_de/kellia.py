@@ -1033,6 +1033,7 @@ _KELLIA_RETAIN_CLASSES = {
 XOOXLE: xooxle.Xooxle = xooxle.Xooxle(
     source=((note.key, note.html) for note in notes_aux()),
     extract=[
+        xooxle.Selector({"name": "title"}),
         xooxle.Selector({"name": "footer"}, force=False),
     ],
     captures=[

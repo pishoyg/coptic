@@ -35,6 +35,13 @@ HTML Reduction:
     our output might appear compressed, or might lack newlines.
     See below for more details about the reduction logic.
 
+Coverage:
+
+    Each piece of text in a document must either be extracted (discarded), or
+    captured into a field. Leftover text is an error, so that content never
+    goes missing from the index unnoticed. Whitespace, comments, scripts,
+    stylesheets, and the doctype don't count as text.
+
 Metadata:
 
     See Xooxle documentation for the metadata documentation, and more
@@ -510,6 +517,8 @@ class Xooxle:
             extract: List of selectors of elements to remove from the soup
                 during preprocessing.
             captures: List of selectors of elements to capture in the output.
+                Together, the extracted and captured elements must cover all
+                the text in each document.
             output: Path to the output JSON file.
             layers: A grouping of the capture names into layers. If not
                 provided, will default to a single layer containing all
@@ -589,6 +598,18 @@ class Xooxle:
         data: dict[str, Field] = {
             cap.name: self.field(cap.excise(entry)) for cap in self._captures
         }
+        # Every piece of text must either be extracted or captured into a
+        # field. Text that is neither would silently go missing from the index.
+        # NOTE: `strings` skips scripts, stylesheets, and the doctype, which
+        # aren't text.
+        leftovers: list[str] = [s for s in entry.strings if not s.isspace()]
+        ensure.ensure(
+            not leftovers,
+            key,
+            "has text that was neither extracted nor captured:",
+            leftovers,
+        )
+        del leftovers
         data = {k: v for k, v in data.items() if v}
         if not data:
             return None
