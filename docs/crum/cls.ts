@@ -52,9 +52,9 @@ export const DRV_KEY = 'drv-key';
 export const DRV_LINK = 'drv-link';
 export const ENTRY = 'entry';
 /**
- * ETYM is the class of the etymology of a KELLIA word.
+ * ETYM_NOTE is the class of a note in the etymology of a KELLIA word.
  */
-export const ETYM = 'etym';
+export const ETYM_NOTE = 'etym-note';
 export const EXPLAIN_CHECKBOX = 'explain-checkbox';
 export const EXPLANATORY = 'explanatory';
 export const EXPLANATORY_KEY = 'explanatory-key';
@@ -94,6 +94,11 @@ export const MARK = 'mark';
  */
 export const ROMAN = 'roman';
 export const GREEK = 'greek';
+/**
+ * GREEK_REF is the class of the citations of the lexicons that list the Greek
+ * lemma of a KELLIA loanword.
+ */
+export const GREEK_REF = 'greek-ref';
 export const MANUAL = 'manual';
 export const MEANING = 'meaning';
 export const NAG_HAMMADI = 'nag-hammadi';

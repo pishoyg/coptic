@@ -203,7 +203,7 @@ class Etymology:
         for child in entry.etym.children if entry.etym is not None else []:
             match child:
                 case tei.Note():
-                    yield child.text
+                    yield f'<span class="{cls.ETYM_NOTE}">{child.text}</span>'
                 case tei.Xr():
                     for ref in child.refs:
                         yield _xr(child.type, ref)
@@ -230,7 +230,8 @@ class Etymology:
                     f" {lemma.lemma_id})</span> {lemma.lemma}",
                     f"<i>{lemma.meaning or ""}</i>.",
                     f'<span style="color:grey">{lemma.pos}</span>',
-                    f'<span style="color:grey">({lemma.ref or ""})</span>',
+                    f'<span class="{cls.GREEK_REF}" style="color:grey">'
+                    f'({lemma.ref or ""})</span>',
                 ],
             )
 
@@ -1081,10 +1082,10 @@ XOOXLE: xooxle.Xooxle = xooxle.Xooxle(
             xooxle.Selector(
                 {"name": "body"},
             ),
-            # The etymology retains its class, so the frontend can explain the
-            # works that it cites. Cross-references retain theirs, so the
-            # frontend can link them.
-            retain_classes={cls.ETYM, cls.XR_TARGET},
+            # The notes and the Greek references retain their classes, so the
+            # frontend can explain the works that they cite. Cross-references
+            # retain theirs, so the frontend can link them.
+            retain_classes={cls.ETYM_NOTE, cls.GREEK_REF, cls.XR_TARGET},
         ),
     ],
     output=os.path.join(paths.LEXICON_DIR, "kellia.json"),

@@ -7,8 +7,12 @@ CITATION: str = "citation"
 # DELIMITER separates the citations in the bibliography of a sense.
 DELIMITER: str = "delimiter"
 ETYM: str = "etym"
+# ETYM_NOTE is a note in an etymology.
+ETYM_NOTE: str = "etym-note"
 GEO: str = "geo"
 GRAM_GRP: str = "gram_grp"
+# GREEK_REF cites the lexicons that list the Greek lemma of a loanword.
+GREEK_REF: str = "greek-ref"
 LANG: str = "lang"
 ORTH: str = "orth"
 ORTHS: str = "orths"

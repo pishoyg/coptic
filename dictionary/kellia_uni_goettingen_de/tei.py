@@ -215,9 +215,10 @@ GreekPartOfSpeech = typing.Literal[
     "verb",
 ]
 # BiblSource lists the works that translations cite, besides the DDGLC.
-# NOTE: The frontend explains these abbreviations in tooltips, using the list
-# of works in `docs/crum/kellia.ts`. Every source here must have an entry
-# there, under the same abbreviation. Keep the two lists aligned.
+# NOTE: The frontend recognizes citations, and explains the abbreviations of
+# their sources in tooltips, using the list of works in `docs/crum/kellia.ts`.
+# Every source here, or in `EtymSource`, must have an entry there, under the
+# same abbreviation. Keep the lists aligned.
 BiblSource = typing.Literal[
     "CD",
     "CDC",
@@ -230,6 +231,29 @@ BiblSource = typing.Literal[
     "Osing, Pap. Ox.",
     "Till D",
     "WbGWKDT",
+]
+# EtymSource lists the works that etymologies cite, besides those in
+# `BiblSource`. They are mostly Greek lexicons, cited by Greek lemmas.
+EtymSource = typing.Literal[
+    "BDAG",
+    "Bauer",
+    "Daris 1991",
+    "Denniston 1959",
+    "Hatch/Redpath 1906",
+    "Kontopoulos",
+    "LBG",
+    "LSJ",
+    "LSJ Suppl.",
+    "Lampe",
+    "Muraoka 2009",
+    "Passow",
+    "Preisigke",
+    "Preisigke Fwb",
+    "Sophocles",
+    "T. S. Richter 2014b",
+    "TLG",
+    "Till 1951a",
+    "du Cange",
 ]
 
 # Patterns.
@@ -338,6 +362,66 @@ _BIBL: str = rf"DDGLC|Jer \d+,\d+|{_ITEM}(?:; {_ITEM})*"
 # _CITATION_SOURCE extracts the source of a citation.
 _SOURCE: str = "|".join(map(re.escape, _LOCATIONS))
 _CITATION_SOURCE: re.Pattern[str] = re.compile(rf"\(?({_SOURCE}) ")
+# _ETYM_LOCATIONS maps a source that etymologies cite to the pattern of its
+# locations, including the separator that precedes them. Some sources, mostly
+# those whose abbreviation ends with a year, separate their locations with a
+# comma (Denniston, with a colon).
+# NOTE: The frontend must recognize every location that this grammar, or the
+# grammar of `_LOCATIONS`, admits. See `SOURCE_RE` in `docs/crum/kellia.ts`.
+_ETYM_LOCATIONS: dict[EtymSource, str] = {
+    "BDAG": " " + _locations(rf"\d+{_COLUMNS}"),
+    "Bauer": " " + _locations(r"\d+"),
+    "Daris 1991": ", " + _locations(r"\d+"),
+    "Denniston 1959": ": " + _locations(r"\d+"),
+    # Hatch and Redpath print three columns on a page.
+    "Hatch/Redpath 1906": ", " + _locations(r"\d+[abc]?"),
+    "Kontopoulos": " " + _locations(r"\d+B"),
+    # `xxx` and `???` stand in for a page that the citation fails to give.
+    "LBG": rf" (?:{_locations(rf'\d+{_COLUMNS}')}|xxx|\?\?\?)",
+    # `ff.` extends a location to the following pages.
+    "LSJ": " " + _locations(rf"\d+{_COLUMNS}(?:ff\.)?"),
+    "LSJ Suppl.": " " + _locations(rf"\d+{_COLUMNS}"),
+    # `f.` extends a location to the following page.
+    "Lampe": " " + _locations(rf"\d+{_COLUMNS}(?:f\.)?"),
+    "Muraoka 2009": ", " + _locations(rf"\d+{_COLUMNS}"),
+    # Passow and Preisigke come in volumes.
+    "Passow": " " + _locations(rf"\d:\d+{_COLUMNS}"),
+    "Preisigke": " " + _locations(rf"\d:\d+{_COLUMNS}"),
+    "Preisigke Fwb": ", " + _locations(r"\d+"),
+    "Sophocles": " " + _locations(rf"\d+{_COLUMNS}"),
+    "T. S. Richter 2014b": ", " + _locations(r"\d+"),
+    # TLG is cited without locations.
+    "TLG": "",
+    "Till 1951a": ", " + _locations(r"\d+"),
+    "du Cange": " " + _locations(rf"\d+{_COLUMNS}"),
+}
+assert _ETYM_LOCATIONS.keys() == set(typing.get_args(EtymSource))
+# _ETYM_CITATION matches a citation in an etymology: a source, followed by its
+# locations, if any. Etymologies cite sources in free text, so we can't parse
+# them as strictly as the bibliography.
+assert not set(typing.get_args(BiblSource)) & set(
+    typing.get_args(EtymSource),
+)
+# _CITED maps every source that an etymology may cite to the pattern of its
+# locations, including the separator that precedes them.
+_CITED: dict[BiblSource | EtymSource, str] = {
+    source: f" {locations}" for source, locations in _LOCATIONS.items()
+}
+_CITED.update(_ETYM_LOCATIONS.items())
+_ETYM_CITATION: re.Pattern[str] = re.compile(
+    r"(?<!\w)(?:"
+    + "|".join(
+        rf"{re.escape(source)}(?:{_CITED[source]})?"
+        # Longer abbreviations come first, so that `LSJ Suppl.` beats `LSJ`.
+        for source in sorted(_CITED, key=len, reverse=True)
+    )
+    + r")(?!\w)",
+)
+# _DANGLING matches text that looks like more locations of the citation that
+# precedes it, such as ` b` in `LSJ 174 b`. The frontend would leave such text
+# out of the citation. A citation never ends before a word character, so that
+# case needs no check.
+_DANGLING: re.Pattern[str] = re.compile(r"[ ,;:]*\d| [abc](?!\w)")
 # _WCN_TARGET maps a WCN reference type to the pattern of its target.
 _WCN_TARGET: dict[str, re.Pattern[str]] = {
     "WCNae": re.compile(r"#\d+"),
@@ -1096,6 +1180,19 @@ class Etym(Element[EtymRef | Xr | Note]):
             "has an incomplete Greek lemma",
             fields,
         )
+        texts: list[str] = [note.text for note in self.notes]
+        texts.extend(
+            ref.text
+            for ref in self.refs
+            if ref.type == "greek_lemma::grl_ref" and ref.text is not None
+        )
+        for text in texts:
+            for citation in _ETYM_CITATION.finditer(text):
+                self._ensure(
+                    not _DANGLING.match(text, citation.end()),
+                    "has a malformed citation in",
+                    repr(text),
+                )
 
 
 class Entry(Element[Form | GramGrp | Etym | Xr | Sense | Note]):

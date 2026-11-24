@@ -11,12 +11,11 @@ import * as cls from './cls.js';
 // The list comes from the bibliography in the header of the TEI XML of the
 // Comprehensive Coptic Lexicon.
 //
-// NOTE: `BiblSource` in `dictionary/kellia_uni_goettingen_de/tei.py` lists the
-// works that translations cite, and the pipeline validates the citations
-// against it. Every one of them must have an entry here, under the same
-// abbreviation, or its citations will lack a hint. Keep the two lists aligned.
-// The remaining entries are works that etymologies cite. Etymologies are free
-// text, so the pipeline doesn't enumerate their sources.
+// NOTE: `BiblSource` and `EtymSource` in
+// `dictionary/kellia_uni_goettingen_de/tei.py` list the works that translations
+// and etymologies cite, and the pipeline validates the citations against them.
+// Every one of them must have an entry here, under the same abbreviation, or
+// its citations will lack a hint. Keep the lists aligned.
 const SOURCES: Record<string, string> = {
   CD: 'W.E. Crum, A Coptic Dictionary, Oxford: Clarendon Press, 1939',
   CDC: "R. Kasser, Compléments au dictionnaire copte de Crum, Kairo: Inst. Français d'Archéologie Orientale, 1964",
@@ -72,15 +71,24 @@ const SOURCES: Record<string, string> = {
   TLG: 'L. Berkowitz, K.A. Squitier, Thesaurus Linguae Graecae (Canon of Greek Authors and Works), New York/Oxford: University Press, 1990',
 };
 
-// COLUMN is the column of a page, if the source has columns.
-const COLUMN = '(?:a-b|ab|a|b|B)?';
+// The grammar below recognizes every location that the pipeline admits. See
+// `_LOCATIONS` and `_ETYM_LOCATIONS` in
+// `dictionary/kellia_uni_goettingen_de/tei.py`, and keep them aligned.
+//
+// COLUMN is the column of a page, if the source has columns. Hatch and Redpath
+// print three columns on a page, and Kontopoulos is cited with a `B`.
+const COLUMN = '(?:a-b|ab|a|b|c|B)?';
 // PAGE is a page number, or one of the Roman numerals that number Crum's
-// addenda (XV to XXIV), followed by its column. It may extend to a range, or,
-// with `f` or `ff`, to the following pages.
-const PAGE = String.raw`(?:\d+|X[IVX]*)${COLUMN}(?:-\d+${COLUMN})?(?:ff?)?`;
-// LOCATION is a page, optionally preceded by a section sign, and by a volume
-// (such as `2:` in `Preisigke 2:190`, or `I ` in `ONB I 23`).
-const LOCATION = String.raw`(?:§§? ?)?(?:\d+:|[IVX]+ )?${PAGE}`;
+// addenda (XV to XXIV), followed by its column. It may extend, with `f` or
+// `ff`, to the following pages.
+const PAGE = String.raw`(?:\d+|X[IVX]*)${COLUMN}(?:ff?\.?)?`;
+// ANNOTATION is the headword that a source lists the word under, a quoted
+// note, or a footnote, as in `ChLCS 71b (s. v. ⲱⲃ)` or `KoptHWb 456, Anm. 7`.
+const ANNOTATION = String.raw`(?: \((?:s\. v\.|unter) [Ϣ-ϯϗⲀ-⳪]+\)| \("[^";]+"\)|, Anm\. \d+)`;
+// LOCATION is a page, or a range of pages, optionally preceded by a section
+// sign and by a volume (such as `2:` in `Preisigke 2:190`, or `I ` in
+// `ONB I 23`), and optionally annotated.
+const LOCATION = String.raw`(?:§§? ?)?(?:\d+:|[IVX]+ )?${PAGE}(?:-${PAGE})?${ANNOTATION}?`;
 // PLACEHOLDER stands in for a location that a citation fails to give, as in
 // `LBG xxx` or `LBG ???`.
 const PLACEHOLDER = String.raw`xxx|\?\?\?`;
@@ -126,14 +134,19 @@ function handleCrossReferences(root: HTMLElement): void {
 }
 
 /**
- * Wrap the citations in the bibliography and the etymology, and explain the
- * abbreviations of the cited works in tooltips.
+ * Wrap the citations in the bibliography, and in the notes and Greek references
+ * of the etymology, and explain the abbreviations of the cited works in
+ * tooltips.
+ *
+ * We only search the text whose citations the pipeline validates. The rest of
+ * the etymology is free text, where an abbreviation could be a word of its own
+ * (`Bauer` is German for `farmer`).
  *
  * @param root
  */
 function handleSources(root: HTMLElement): void {
   root
-    .querySelectorAll(css.disjunction(cls.BIBL, cls.ETYM))
+    .querySelectorAll(css.disjunction(cls.BIBL, cls.ETYM_NOTE, cls.GREEK_REF))
     .forEach((el: Element): void => {
       html.replaceText(
         el,
