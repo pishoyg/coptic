@@ -1,11 +1,17 @@
 """This package defines bibliography sources."""
 
 import re
+import typing
 
-from dictionary.kellia_uni_goettingen_de import cls
+from dictionary.kellia_uni_goettingen_de import cls, tei
 
 # pylint: disable=line-too-long
 _SOURCES: list[tuple[str, str]] = [
+    (
+        # The lookahead keeps the pattern from matching `CDC`.
+        r"CD(?= )",
+        r"W.E. Crum, A Coptic Dictionary, Oxford: Clarendon Press, 1939",
+    ),
     (
         r"(Kasser )?CDC",
         r"R. Kasser, Compléments au dictionnaire copte de Crum, Kairo: Inst. Français d'Archéologie Orientale, 1964",
@@ -125,3 +131,9 @@ SOURCES: list[tuple[re.Pattern[str], str]] = [
     )
     for regex, repl in _SOURCES
 ]
+
+# Verify that every source that translations cite has a hint.
+assert all(
+    any(regex.fullmatch(f"{source} 1") for regex, _ in SOURCES)
+    for source in typing.get_args(tei.BiblSource)
+)

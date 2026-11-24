@@ -43,7 +43,7 @@ import pandas as pd
 from dictionary import cls as dict_cls
 from dictionary.kellia_uni_goettingen_de import cls, sources, tei, trie
 from flashcards import deck
-from utils import ensure, file, gcp, javascript, log, page, paths, text
+from utils import ensure, file, gcp, javascript, log, page, paths
 from xooxle import xooxle
 
 _SCRIPT_DIR: pathlib.Path = pathlib.Path(__file__).parent
@@ -268,7 +268,7 @@ class Sense:
         name, value, label = row
         if name == "bibl":
             assert not label
-            return page.LINE_BREAK.join(text.ssplit(value, "; "))
+            return value
         klass: str = dict_cls.GLOSS if name == "quote" else name
         return f'{label}<span class="{klass}">{value}</span>'
 
@@ -594,7 +594,8 @@ def _process_entry(entry: tei.Entry) -> Word:
                     pass
                 case tei.Cit():
                     for lang in langs.values():
-                        lang.add("bibl", child.source.text)
+                        for citation in child.source.citations:
+                            lang.add("bibl", citation)
                     for language, quote in child.quotes_by_language.items():
                         langs[language].add("quote", quote)
                     for definition in child.definitions:

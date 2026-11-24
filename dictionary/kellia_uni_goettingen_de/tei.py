@@ -214,6 +214,20 @@ GreekPartOfSpeech = typing.Literal[
     "pronoun",
     "verb",
 ]
+# BiblSource lists the works that translations cite, besides the DDGLC.
+BiblSource = typing.Literal[
+    "CD",
+    "CDC",
+    "CED",
+    "ChLCS",
+    "DELC",
+    "KoptHWb",
+    "LCG",
+    "ONB",
+    "Osing, Pap. Ox.",
+    "Till D",
+    "WbGWKDT",
+]
 
 # Patterns.
 # _COPTIC_LETTERS holds the Coptic letters of the Greek and Coptic block, the
@@ -247,6 +261,80 @@ _COPTIC_TEXT: str = (
 )
 _NUMBER: re.Pattern[str] = re.compile(r"\d+")
 _FORM_ID: str = r"CF\d+"
+
+# Bibliography.
+# A citation gives a source, followed by a list of locations. A location is a
+# page, or a range of pages, optionally annotated with the headword that the
+# source lists the word under (`s. v.` or `unter`), with a quoted note, or
+# with a footnote (`Anm.`).
+_HEADWORD: str = f"[{_COPTIC_LETTERS}]+"
+# A quoted note can't contain the separator of citations.
+_ANNOTATION: str = (
+    "(?:"
+    + "|".join(
+        [
+            rf" \((?:s\. v\.|unter) {_HEADWORD}\)",
+            r' \("[^";]+"\)',
+            r", Anm\. \d+",
+        ],
+    )
+    + ")"
+)
+
+
+def _locations(page: str, prefix: str = "") -> str:
+    location: str = rf"{page}(?:-{page})?{_ANNOTATION}?"
+    return rf"{prefix}{location}(?:, {location})*"
+
+
+# Crum's addenda occupy pages XV to XXIV.
+_CRUM_ADDENDA: str = "|".join(
+    [
+        "XV",
+        "XVI",
+        "XVII",
+        "XVIII",
+        "XIX",
+        "XX",
+        "XXI",
+        "XXII",
+        "XXIII",
+        "XXIV",
+    ],
+)
+# A page of a dictionary ends with its columns: `a`, `b`, `ab`, or `a-b`.
+_COLUMNS: str = r"(?:a-b|ab|a|b)?"
+_SECTIONS: str = r"(?:§§? )?"
+# _LOCATIONS maps a source to the pattern of its locations.
+_LOCATIONS: dict[BiblSource, str] = {
+    "CD": _locations(rf"(?:\d+|{_CRUM_ADDENDA}){_COLUMNS}"),
+    "CDC": _locations(rf"\d+{_COLUMNS}"),
+    "CED": _locations(r"\d+"),
+    "ChLCS": _locations(rf"\d+{_COLUMNS}"),
+    "DELC": _locations(rf"\d+{_COLUMNS}"),
+    # `f` extends a location to the following page.
+    "KoptHWb": _locations(r"\d+f?"),
+    "LCG": _locations(r"\d+", _SECTIONS),
+    # ONB comes in volumes.
+    "ONB": _locations(r"\d+", r"(?:[IVX]+ )?"),
+    "Osing, Pap. Ox.": _locations(r"\d+"),
+    "Till D": _locations(r"\d+", _SECTIONS),
+    "WbGWKDT": _locations(r"\d+"),
+}
+assert _LOCATIONS.keys() == set(typing.get_args(BiblSource))
+_CITATION: str = "|".join(
+    f"{re.escape(source)} {locations}"
+    for source, locations in _LOCATIONS.items()
+)
+# A citation may be parenthesized, optionally followed by the headword that
+# the source lists the word under.
+_ITEM: str = rf"(?:{_CITATION}|\((?:{_CITATION})(?:, unter {_HEADWORD})?\))"
+# A translation either comes from the DDGLC, cites a list of sources, or, in a
+# single case, cites the Book of Jeremiah by chapter and verse.
+_BIBL: str = rf"DDGLC|Jer \d+,\d+|{_ITEM}(?:; {_ITEM})*"
+# _CITATION_SOURCE extracts the source of a citation.
+_SOURCE: str = "|".join(map(re.escape, _LOCATIONS))
+_CITATION_SOURCE: re.Pattern[str] = re.compile(rf"\(?({_SOURCE}) ")
 # _WCN_TARGET maps a WCN reference type to the pattern of its target.
 _WCN_TARGET: dict[str, re.Pattern[str]] = {
     "WCNae": re.compile(r"#\d+"),
@@ -745,13 +833,23 @@ class Def(Element[typing.Never]):
 
 
 class Bibl(Element[typing.Never]):
-    """Bibl is the source of a translation."""
+    """Bibl is the source of a translation: the DDGLC, or citations."""
 
     TAG = "bibl"
-    # TODO: (#577) Validate the source citations, once their malformed
-    # abbreviations (such as `KoptHWB`, `CHLCS`, `KoptHWb23`, `DELC ChLCS`),
-    # and stray fragments (such as `(CD`, `91a`, `Jer`) are fixed in the data.
-    text: typing.Annotated[str, Text()]
+    text: typing.Annotated[str, Text(_BIBL)]
+
+    @property
+    def citations(self) -> list[str]:
+        return self.text.split("; ")
+
+    @typing.override
+    def _validate(self) -> None:
+        sources: list[str] = [
+            m.group(1)
+            for m in map(_CITATION_SOURCE.match, self.citations)
+            if m is not None
+        ]
+        self._ensure(_distinct(sources), "cites a source more than once")
 
 
 class Cit(Element[Quote | Def | Bibl | Note]):
