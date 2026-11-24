@@ -57,6 +57,34 @@
   #w-e-crum {
     display: none;
   }
+
+  /* Tooltip parents don't wrap (see `tooltip.css`). In KELLIA's text column,
+   * they are citations, which would otherwise make it the widest of the four,
+   * so we let them wrap. */
+  /* stylelint-disable-next-line selector-class-pattern */
+  #kellia .TEXT .tipper {
+    white-space: normal;
+  }
+
+  /* Greek senses take less indentation, so deep nodes still fit. The bullets
+   * replace the default ones (disc, circle, then square), which are followed by
+   * a wide gap, with the same symbols followed by a thin space. That way, the
+   * top-level bullets fit in a narrower indentation.
+   * NOTE: We set `list-style-type` rather than the `content` of `::marker`,
+   * which Safari ignores. */
+  #kellia ul {
+    padding-left: 0.4em;
+    list-style-type: '\2022\2009';
+  }
+
+  #kellia ul ul {
+    padding-left: 0.25em;
+    list-style-type: '\25E6\2009';
+  }
+
+  #kellia ul ul ul {
+    list-style-type: '\25AA\2009';
+  }
 }
 
 /* Mode-conditional visibility.
