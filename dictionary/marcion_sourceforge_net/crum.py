@@ -658,7 +658,7 @@ class Root(Row):
                     f'class="{dict_cls.MEANING}">'
                 )
                 if d.type_name not in ["-", "HEADER"]:
-                    yield f'<span class="{cls.PART_OF_SPEECH}">'
+                    yield f'<span class="{dict_cls.PART_OF_SPEECH}">'
                     yield "(<b>"
                     yield d.type_name
                     yield "</b>)"
@@ -763,7 +763,7 @@ class Root(Row):
         )
         yield (
             f'<span id="{ids.ROOT_PART_OF_SPEECH}" '
-            f'class="{cls.PART_OF_SPEECH}">'
+            f'class="{dict_cls.PART_OF_SPEECH}">'
         )
         yield "(<b>"
         yield self.type_name
@@ -1527,7 +1527,7 @@ XOOXLE: xooxle.Xooxle = xooxle.Xooxle(
             xooxle.Selector(
                 {"name": "body"},
             ),
-            retain_classes=_CRUM_RETAIN_CLASSES | {cls.PART_OF_SPEECH},
+            retain_classes=_CRUM_RETAIN_CLASSES | {dict_cls.PART_OF_SPEECH},
             retain_attributes={"href", "target"},
             retain_tags=xooxle.RETAIN_TAGS_DEFAULT | {"a"},
             retain_elements_for_classes=_CRUM_RETAIN_ELEMENTS_FOR_CLASSES,
@@ -1542,7 +1542,7 @@ XOOXLE: xooxle.Xooxle = xooxle.Xooxle(
             # tag.
             # TODO: (#398) Handle this in a cleaner manner. The root and
             # derivations HTML should be uniform.
-            block_classes={cls.PART_OF_SPEECH},
+            block_classes={dict_cls.PART_OF_SPEECH},
         ),
     ],
     layers=[["MARCION", "MEANING", "APPENDIX"], ["WIKI"], ["KASSER"]],
