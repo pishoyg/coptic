@@ -230,18 +230,22 @@ class Etymology:
             entry.etym.greek_lemma if entry.etym is not None else None
         )
         if lemma is not None:
-            # TODO: (#51) Omit the meaning and the reference when they're
-            # missing, rather than rendering an empty `<i></i>.` and `()`.
-            yield " ".join(
-                [
-                    '<span style="color:darkred">cf. Gr. (DDGLC lemma ID'
-                    f" {lemma.lemma_id})</span> {lemma.lemma}",
-                    f"<i>{lemma.meaning or ""}</i>.",
-                    f'<span style="color:grey">{lemma.pos}</span>',
-                    f'<span class="{cls.GREEK_REF}" style="color:grey">'
-                    f'({lemma.ref or ""})</span>',
-                ],
-            )
+            # We omit the DDGLC ID of the lemma. It could only serve to link to
+            # the DDGLC, and our site strives to be self-sufficient rather than
+            # send the reader elsewhere.
+            # The meaning and the reference are optional. The meaning is styled
+            # like a gloss, and the part of speech like the grammar of a form.
+            parts: list[str] = [lemma.lemma]
+            if lemma.meaning is not None:
+                parts.append(
+                    f'<span class="{dict_cls.GLOSS}">{lemma.meaning}</span>',
+                )
+            parts.append(f'<span class="{dict_cls.TYPE}">{lemma.pos}</span>')
+            if lemma.ref is not None:
+                parts.append(
+                    f'<span class="{cls.GREEK_REF}">({lemma.ref})</span>',
+                )
+            yield " ".join(parts)
 
         for xr in entry.xrs:
             for ref in xr.refs:
@@ -957,8 +961,16 @@ XOOXLE: xooxle.Xooxle = xooxle.Xooxle(
             ),
             # The notes and the Greek references retain their classes, so the
             # frontend can explain the works that they cite. Cross-references
-            # retain theirs, so the frontend can link them.
-            retain_classes={cls.ETYM_NOTE, cls.GREEK_REF, cls.XR_TARGET},
+            # retain theirs, so the frontend can link them. The meaning and the
+            # part of speech of a Greek lemma retain theirs, which style them.
+            retain_classes={
+                cls.ETYM_NOTE,
+                cls.GREEK_REF,
+                cls.XR_TARGET,
+                dict_cls.GLOSS,
+                cls.GRAM_GRP,
+                dict_cls.TYPE,
+            },
         ),
     ],
     output=os.path.join(paths.LEXICON_DIR, "kellia.json"),

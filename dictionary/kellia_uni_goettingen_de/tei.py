@@ -1126,7 +1126,6 @@ class EtymRef(Element[typing.Never]):
 class GreekLemma:
     """GreekLemma is the DDGLC lemma that a Greek loanword derives from."""
 
-    lemma_id: str
     lemma: str
     meaning: str | None
     pos: GreekPartOfSpeech
@@ -1160,12 +1159,10 @@ class Etym(Element[EtymRef | Xr | Note]):
         fields: dict[str, str | None] = dict(self._greek_lemma_fields)
         if not fields:
             return None
-        lemma_id: str | None = fields["greek_lemma::grl_ID"]
         lemma: str | None = fields["greek_lemma::grl_lemma"]
         pos: str | None = fields["greek_lemma::grl_pos"]
-        assert lemma_id is not None and lemma is not None and pos in _GREEK_POS
+        assert lemma is not None and pos in _GREEK_POS
         return GreekLemma(
-            lemma_id,
             lemma,
             fields["greek_lemma::grl_meaning"],
             typing.cast(GreekPartOfSpeech, pos),
