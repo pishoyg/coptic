@@ -4,6 +4,8 @@ BIBL: str = "bibl"
 CHILD: str = "child"
 # CITATION is a citation in the bibliography of a sense.
 CITATION: str = "citation"
+# DEFINITION is a definition of a sense, as opposed to a translation.
+DEFINITION: str = "definition"
 # DELIMITER separates the citations in the bibliography of a sense.
 DELIMITER: str = "delimiter"
 ETYM: str = "etym"
@@ -16,6 +18,7 @@ GREEK_REF: str = "greek-ref"
 LANG: str = "lang"
 ORTH: str = "orth"
 ORTHS: str = "orths"
+# REF lists the Greek equivalents of an Egyptian sense.
 REF: str = "ref"
 REF_XR: str = "ref_xr"
 # SENSES is prefixed, because Crum uses `senses` for something else.

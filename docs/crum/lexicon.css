@@ -20,12 +20,9 @@
 
 /* In KELLIA's search results, a sense ends with its bibliography, followed by
  * its references and cross-references. They are secondary to the glosses, so
- * they are set smaller, which also makes the senses easier to tell apart. The
- * reference of a Greek sense is a mere ID, so it's set smaller as well, like in
- * a card. */
+ * they are set smaller, which also makes the senses easier to tell apart. */
 #kellia .bibl,
-#kellia .xr,
-#kellia li > .ref {
+#kellia .xr {
   font-size: smaller;
 }
 

@@ -77,6 +77,14 @@ _SENSE_CHILDREN: list[_SenseChild] = [
 # A sense row is a tuple of (name, value, label). The label is an optional
 # HTML prefix, such as a language label, rendered before the value.
 _Row = tuple[_SenseChild, str, str]
+# _ROW_CLASS is the class of the span holding the value of a sense row. A
+# bibliography row is split into citations instead, so it has no entry.
+_ROW_CLASS: dict[_SenseChild, str] = {
+    "quote": dict_cls.GLOSS,
+    "definition": cls.DEFINITION,
+    "ref": cls.REF,
+    "xr": cls.XR,
+}
 # _CITATION_DELIMITER separates the citations of a sense. The source delimits
 # them with a semicolon, and so does the Xooxle index, which displays them on a
 # single line. Cards hide the delimiter, and stack the citations instead.
@@ -248,9 +256,7 @@ class Etymology:
 class Sense:
     """_Sense represents a meaning of a word."""
 
-    def __init__(self, sense_n: int, sense_id: str) -> None:
-        self._sense_n: int = sense_n
-        self._sense_id: str = sense_id
+    def __init__(self) -> None:
         self._content: list[_Row] = []
 
     def add(self, name: _SenseChild, value: str, label: str = "") -> None:
@@ -263,17 +269,12 @@ class Sense:
         if name == "bibl":
             assert not label
             return f'<span class="{cls.CITATION}">{value}</span>'
-        klass: str = dict_cls.GLOSS if name == "quote" else name
-        return f'{label}<span class="{klass}">{value}</span>'
-
-    def identify(self) -> tuple[int, str]:
-        return (self._sense_n, self._sense_id)
+        return f'{label}<span class="{_ROW_CLASS[name]}">{value}</span>'
 
     def tr(self) -> str:
         return "".join(self._tr_aux())
 
     def _tr_aux(self) -> abc.Generator[str]:
-        yield f"<!--sense_number:{self._sense_n}, sense_id:{self._sense_id}-->"
         yield "<tr>"
         yield f'<td class="{dict_cls.MEANING}">'
         yield page.LINE_BREAK.join(
@@ -331,8 +332,8 @@ class Lang:
         self.name: typing.Literal["de", "en", "fr", "MERGED"] = name
         self.senses: list[Sense] = []
 
-    def start_sense(self, sense_n: int, sense_id: str) -> None:
-        self.senses.append(Sense(sense_n, sense_id))
+    def start_sense(self) -> None:
+        self.senses.append(Sense())
 
     @property
     def _last_sense(self) -> Sense:
@@ -357,14 +358,12 @@ class Lang:
 
 def _tree_aux(
     nodes: list[trie.Node],
-    senses: list[Sense],
     top: bool,
 ) -> abc.Generator[str]:
     """Render trie nodes as list items.
 
     Args:
         nodes: The nodes to render.
-        senses: The senses of the word. Nodes refer to them by index.
         top: Whether the nodes are top-level nodes. The first label of a
             top-level node is the head of its senses. All other labels are
             qualifiers, and get rendered as children, even when they are merged
@@ -389,21 +388,10 @@ def _tree_aux(
         )
         yield "<li>"
         yield " ".join(parts)
-        if node.senses:
-            # A node can terminate several senses, if they are identical.
-            terminated: list[Sense] = [senses[i] for i in node.senses]
-            for s in terminated:
-                sense_n, sense_id = s.identify()
-                yield f"<!--sense_number:{sense_n}, sense_id:{sense_id}-->"
-            # Separate the reference from the preceding text, so their words
-            # don't fuse when the tree gets flattened into text.
-            yield f' <span class="{cls.REF}">'
-            yield ", ".join(s.single("ref") for s in terminated)
-            yield "</span>"
         if node.children:
             # Likewise, separate a node from its children.
             yield " <ul>"
-            yield from _tree_aux(list(node.children.values()), senses, False)
+            yield from _tree_aux(list(node.children.values()), False)
             yield "</ul>"
         yield "</li>"
 
@@ -458,7 +446,6 @@ class Word:
         entry_xml_id: str,
         lemma_form_id: str,
         orthstring: Orthography,
-        pos_string: str,
         langs: dict[str, Lang],
         etym_string: Etymology,
         is_greek: bool,
@@ -466,7 +453,6 @@ class Word:
         self.entry_xml_id: str = entry_xml_id
         self.lemma_form_id: str = lemma_form_id
         self.orthstring: Orthography = orthstring
-        self.pos_string: str = pos_string
         self.langs: dict[str, Lang] = langs
         self.etym_string: Etymology = etym_string
         self.is_greek: bool = is_greek
@@ -476,8 +462,7 @@ class Word:
         de, en, fr = self.langs["de"], self.langs["en"], self.langs["fr"]
         assert len(de.senses) == len(en.senses) == len(fr.senses)
         for d, e, f in zip(de.senses, en.senses, fr.senses):
-            assert d.identify() == e.identify() == f.identify()
-            merged.start_sense(*d.identify())
+            merged.start_sense()
             for row in e.explain(f'<span class="{cls.LANG}">(En.)</span> '):
                 merged.add(*row)
             for row in d.explain(f'<span class="{cls.LANG}">(De.)</span> '):
@@ -498,8 +483,7 @@ class Word:
 
         DDGLC senses only have English translations, so we use no language
         labels. Each sense has a single translation, attributed to the DDGLC
-        (we omit the redundant attribution), and a single reference (a DDGLC
-        Coptic usage ID).
+        (we omit the redundant attribution).
 
         Yields:
             The HTML of the tree.
@@ -507,12 +491,11 @@ class Word:
         de, en, fr = self.langs["de"], self.langs["en"], self.langs["fr"]
         assert not any(s.explain() for s in [*de.senses, *fr.senses])
         senses: list[Sense] = en.senses
-        assert not any(s.subset("definition", "xr") for s in senses)
+        assert not any(s.subset("definition", "ref", "xr") for s in senses)
         assert all(s.single("bibl") == "DDGLC" for s in senses)
         yield f'<ul class="{cls.SENSES}">'
         yield from _tree_aux(
             trie.build([s.single("quote") for s in senses]),
-            senses,
             top=True,
         )
         yield "</ul>"
@@ -577,12 +560,19 @@ def _process_entry(entry: tei.Entry) -> Word:
         "fr": Lang("fr"),
     }
 
-    for sense_n, sense in enumerate(entry.senses, 1):
+    # We omit the ID of each sense, which is internal to the dataset, and its
+    # position, which the order of the senses already shows.
+    for sense in entry.senses:
         for lang in langs.values():
-            lang.start_sense(sense_n, sense.xml_id)
+            lang.start_sense()
 
         for child in sense.children:
             match child:
+                case tei.SenseRef() if child.type == "coptic_usage::cu_ID":
+                    # We omit the DDGLC usage IDs. They are bare numbers, which
+                    # we can't link to anything, so they would only clutter
+                    # the senses.
+                    pass
                 case tei.SenseRef():
                     for lang in langs.values():
                         lang.add("ref", child.text)
@@ -613,137 +603,14 @@ def _process_entry(entry: tei.Entry) -> Word:
                 case _:
                     typing.assert_never(child)
 
-    # POS -- a single Scriptorium POS tag for each entry
-    # TODO: (#0) Drop the POS tag, along with `_pos_map`. We never render it,
-    # and the grammar of each form already shows its part of speech.
-    pos_list: list[str] = []
-    # This includes the grammatical groups of deprecated forms.
-    for group in [*(f.gram_grp for f in entry.forms), entry.gram_grp]:
-        if group is None:
-            continue
-        pos_text: str = group.pos.text if group.pos is not None else "None"
-        subc_text: str = group.subcs[0].text if group.subcs else "None"
-        new_pos: str = _pos_map(pos_text, subc_text, orthography)
-        if new_pos not in pos_list:
-            pos_list.append(new_pos)
-    if len(pos_list) > 1:
-        pos_list = [p for p in pos_list if p not in ["NULL", "NONE", "?"]]
-    pos_list = pos_list or ["NULL"]
-
     return Word(
         entry.xml_id,
         lemma.xml_id,
         orthography,
-        # On the rare occasion pos_list has len > 1 at this point, the first one
-        # is the most valid.
-        pos_list[0],
         langs,
         Etymology(entry),
         entry.ddglc,
     )
-
-
-def _pos_map(pos: str, subc: str, orthography: Orthography) -> str:
-    """
-    Args:
-        pos: A grammatical position (in German).
-        subc: Some other grammatical annotation (I still need to learn more
-            about this).
-        orthography: The word orthography.
-
-    Returns:
-        The mapped position.
-    """
-
-    pos = pos.replace("?", "")
-    if (
-        pos == "Subst."
-        or pos == "Adj."
-        or pos == "Nominalpräfix"
-        or pos == "Adjektivpräfix"
-        or pos == "Kompositum"
-    ):
-        return "N"
-    if (
-        "Ausdruck der Nichtexistenz" in subc
-        or "Ausdruck des Nicht-Habens" in subc
-    ):
-        return "EXIST"
-    if pos == "Adv.":
-        return "ADV"
-    if pos == "Vb." or pos == "unpersönlicher Ausdruck":
-        if subc == "Qualitativ":
-            return "VSTAT"
-        if subc == "Suffixkonjugation":
-            return "VBD"
-        if subc == "Imperativ":
-            return "VIMP"
-        if orthography.has("ⲟⲩⲛ-") or orthography.has("ⲟⲩⲛⲧⲉ-"):
-            return "EXIST"
-        return "V"
-    if pos == "Präp.":
-        return "PREP"
-    if (
-        pos == "Zahlzeichen"
-        or pos == "Zahlwort"
-        or pos == "Präfix der Ordinalzahlen"
-    ):
-        return "NUM"
-    if (
-        pos == "Partikel"
-        or pos == "Interjektion"
-        or pos == "Partikel, enklitisch"
-    ):
-        return "PTC"
-    if (
-        pos == "Selbst. Pers. Pron."
-        or pos == "Suffixpronomen"
-        or pos == "Präfixpronomen (Präsens I)"
-    ):
-        return "PPER"
-    if pos == "Konj.":
-        return "CONJ"
-    if pos == "Dem. Pron.":
-        return "PDEM"
-    if pos == "bestimmter Artikel" or pos == "unbestimmter Artikel":
-        return "ART"
-    if pos == "Possessivartikel" or pos == "Possessivpräfix":
-        return "PPOS"
-    if pos == "Poss. Pron.":
-        return "PPERO"
-    if pos == "Interr. Pron.":
-        return "PINT"
-    if pos == "Verbalpräfix":
-        if subc == "Imperativpräfix ⲁ-" or subc == "Negierter Imperativ ⲙⲡⲣ-":
-            return "NEG"
-        if subc == "im negativen Bedingungssatz" or subc == "Perfekt II ⲉⲛⲧⲁ-":
-            return "NONE"
-        return "A"
-    if pos == "Pron.":
-        if subc == "None":
-            return "PPER"
-        if subc == "Indefinitpronomen" or subc == "Fragepronomen":
-            return "PINT"
-        if subc == "Reflexivpronomen":
-            return "PREP"
-    if pos == "Satzkonverter":
-        return "C"
-    if pos == "Präfix":
-        if orthography.has("ⲧⲁ-"):
-            return "PPOS"
-        if orthography.has("ⲧⲃⲁⲓ-"):
-            return "N"
-        if orthography.has("ⲧⲣⲉ-"):
-            return "A"
-    if pos == "None" or pos == "?":
-        if subc == "None":
-            return "NULL"
-        if subc == "Qualitativ":
-            return "VSTAT"
-    if orthography.has("ϭⲁⲛⲛⲁⲥ"):
-        return "NULL"
-
-    return "?"
 
 
 def snapshot() -> None:
