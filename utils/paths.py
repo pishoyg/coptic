@@ -130,7 +130,3 @@ CDO: str = "https://coptic-dictionary.org"
 
 def coptic_dictionary_online(key: str) -> str:
     return f"{CDO}/entry/{key}"
-
-
-def coptic_dictionary_online_query(query: str) -> str:
-    return f"{CDO}/?q={query}"

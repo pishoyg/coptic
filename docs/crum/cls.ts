@@ -137,3 +137,7 @@ export const TITLE = 'title';
 export const TYPE = 'type';
 export const WIKI = 'wiki';
 export const WORD = 'word';
+/**
+ * XR_TARGET is the word that a KELLIA cross-reference refers to.
+ */
+export const XR_TARGET = 'xr-target';

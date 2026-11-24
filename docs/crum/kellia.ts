@@ -2,6 +2,7 @@ import type * as high from './highlight.js';
 import * as crum from './crum.js';
 import * as css from '../css.js';
 import * as html from '../html.js';
+import * as paths from '../paths.js';
 import * as str from '../str.js';
 import * as tool from '../tooltip.js';
 import * as cls from './cls.js';
@@ -104,6 +105,24 @@ export function handle(root: HTMLElement, highlighter: high.Highlighter): void {
   crum.addGreekLookups(root);
   crum.handleDialect(root, highlighter);
   handleSources(root);
+  handleCrossReferences(root);
+}
+
+/**
+ * Link the words that cross-references refer to, to their entries on Coptic
+ * Dictionary Online.
+ *
+ * @param root
+ */
+function handleCrossReferences(root: HTMLElement): void {
+  root
+    .querySelectorAll<HTMLElement>(css.c(cls.XR_TARGET))
+    .forEach((el: HTMLElement): void => {
+      // TODO: (#51) Link cross-references to ⲡⲓⲖⲉⲝⲓⲕⲟⲛ rather than CDO, so
+      // users can look the words up on our website, and go on to CDO from
+      // there.
+      html.linkify(el, paths.cdo(el.textContent));
+    });
 }
 
 /**

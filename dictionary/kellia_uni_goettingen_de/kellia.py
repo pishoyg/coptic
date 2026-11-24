@@ -66,7 +66,6 @@ COMPREHENSIVE: pathlib.Path = (
 NUM_GREEK: int = 3208
 NUM_EGYPTIAN: int = 8055
 
-_CLEAN: set[str] = set("ⲁⲃⲅⲇⲉⲍⲏⲑⲓⲕⲗⲙⲛⲝⲟⲡⲣⲥⲧⲩⲫⲭⲯⲱϣϥⳉϧϩϫϭϯ ")
 _SenseChild = typing.Literal["quote", "definition", "bibl", "ref", "xr"]
 _SENSE_CHILDREN: list[_SenseChild] = [
     "quote",
@@ -78,6 +77,10 @@ _SENSE_CHILDREN: list[_SenseChild] = [
 # A sense row is a tuple of (name, value, label). The label is an optional
 # HTML prefix, such as a language label, rendered before the value.
 _Row = tuple[_SenseChild, str, str]
+# _CITATION_DELIMITER separates the citations of a sense. The source delimits
+# them with a semicolon, and so does the Xooxle index, which displays them on a
+# single line. Cards hide the delimiter, and stack the citations instead.
+_CITATION_DELIMITER: str = f'<span class="{cls.DELIMITER}">; </span>'
 FORM_RE: re.Pattern[str] = re.compile(r"[Ⲁ-ⲱϢ-ϯⳈⳉ]+[†⸗\-]?")
 PURE_COPTIC_RE: re.Pattern[str] = re.compile("[Ⲁ-ⲱϢ-ϯⳈⳉ]+")
 
@@ -121,10 +124,6 @@ GEOS: list[str] = ["S", "A", "L", "B", "F", "M", "O", "P", "V", "W", "U"]
 
 def relpath(dst: str | pathlib.Path) -> str:
     return os.path.relpath(dst, paths.LEXICON_DIR)
-
-
-def _clean(txt: str) -> str:
-    return "".join(c for c in txt if c in _CLEAN)
 
 
 class Form:
@@ -196,7 +195,9 @@ class Etymology:
     """Etymology represents the etymology of a word."""
 
     def __init__(self, entry: tei.Entry) -> None:
-        self.amir: str = " ".join(filter(None, self._amir(entry)))
+        # Each note, reference, cross-reference, and Greek lemma occupies a
+        # line of its own.
+        self.amir: str = page.LINE_BREAK.join(filter(None, self._amir(entry)))
 
     def _amir(self, entry: tei.Entry) -> abc.Generator[str]:
         for child in entry.etym.children if entry.etym is not None else []:
@@ -205,9 +206,11 @@ class Etymology:
                     yield child.text
                 case tei.Xr():
                     for ref in child.refs:
-                        yield f"{child.type}. {ref.target}# {ref.text}"
+                        yield _xr(child.type, ref)
                 case tei.EtymRef() if child.wcn:
-                    yield f"{child.type}: {child.target}"
+                    assert child.target is not None
+                    # The target is the WCN ID, prefixed with `#`.
+                    yield f"{child.type}: {child.target.removeprefix("#")}"
                 case tei.EtymRef():
                     # The Greek lemma is rendered below.
                     # TODO: (#51) Handle the remaining references.
@@ -233,21 +236,12 @@ class Etymology:
 
         for xr in entry.xrs:
             for ref in xr.refs:
-                ref_target: str = _clean(ref.target)
-                assert ref_target
-                yield f"{xr.type}. #{ref_target}# {ref.text}"
+                yield _xr(xr.type, ref)
 
     def process(self) -> str:
-        etym: str = "".join(self.amir)
-        xrs: list[str] = re.findall(r" #(.*?)#", etym)
-        for xr in xrs:
-            word = xr
-            href: str = paths.coptic_dictionary_online_query(word)
-            link: str = f'<a href="{href}">{word}</a>'
-            word = re.sub(r"\(", r"\(", word)
-            word = re.sub(r"\)", r"\)", word)
-            etym = re.sub(r"#" + word + "#", link, etym)
-        return f'<span class="{cls.ETYM}">{etym}</span>' if etym else ""
+        if not self.amir:
+            return ""
+        return f'<span class="{cls.ETYM}">{self.amir}</span>'
 
 
 class Sense:
@@ -267,7 +261,7 @@ class Sense:
         name, value, label = row
         if name == "bibl":
             assert not label
-            return value
+            return f'<span class="{cls.CITATION}">{value}</span>'
         klass: str = dict_cls.GLOSS if name == "quote" else name
         return f'{label}<span class="{klass}">{value}</span>'
 
@@ -286,7 +280,7 @@ class Sense:
         )
         yield "</td>"
         yield f'<td class="{cls.BIBL}">'
-        yield page.LINE_BREAK.join(map(self.format, self.subset("bibl")))
+        yield _CITATION_DELIMITER.join(map(self.format, self.subset("bibl")))
         yield "</td>"
         yield "</tr>"
         ref_xr = self.subset("ref", "xr")
@@ -400,10 +394,9 @@ def _tree_aux(
             for s in terminated:
                 sense_n, sense_id = s.identify()
                 yield f"<!--sense_number:{sense_n}, sense_id:{sense_id}-->"
-            # The reference is separated from the preceding text by a CSS
-            # margin rather than a space, so no trailing space is left behind
-            # when Xooxle extracts it.
-            yield f'<span class="{cls.REF}">'
+            # Separate the reference from the preceding text, so their words
+            # don't fuse when the tree gets flattened into text.
+            yield f' <span class="{cls.REF}">'
             yield ", ".join(s.single("ref") for s in terminated)
             yield "</span>"
         if node.children:
@@ -412,6 +405,23 @@ def _tree_aux(
             yield from _tree_aux(list(node.children.values()), senses, False)
             yield "</ul>"
         yield "</li>"
+
+
+def _xr(typ: str, ref: tei.XrRef) -> str:
+    """Render a cross-reference, in a sense or an etymology.
+
+    Args:
+        typ: The type of the cross-reference, such as `cf` or `syn`.
+        ref: The target of the cross-reference.
+
+    Returns:
+        The HTML of the cross-reference.
+    """
+    # The target is the word, prefixed with `#`. The frontend adds lookup
+    # hyperlinks for the word. Adding the link there, rather than here, keeps
+    # the HTML and the Xooxle index smaller.
+    word: str = ref.target.removeprefix("#")
+    return f'{typ}. <span class="{cls.XR_TARGET}">{word}</span> {ref.text}'
 
 
 def _form_sort_key(form: tei.Form) -> tuple[str, str]:
@@ -566,10 +576,8 @@ def _process_entry(entry: tei.Entry) -> Word:
                         lang.add("ref", child.text)
                 case tei.Xr():
                     for ref in child.refs:
-                        # NOTE: Unlike etymologies, this prints the tag name
-                        # (`xr`) rather than the type (such as `cf`).
                         for lang in langs.values():
-                            lang.add("xr", f"xr. {ref.target}# {ref.text}")
+                            lang.add("xr", _xr(child.type, ref))
                 case tei.Note():
                     pass
                 case tei.Cit() if child.type == "example":
@@ -1013,6 +1021,10 @@ _KELLIA_RETAIN_CLASSES = {
     cls.GEO,
     cls.GRAM_GRP,
     dict_cls.GLOSS,
+    cls.BIBL,
+    cls.REF,
+    cls.XR,
+    cls.XR_TARGET,
 } | set(GEOS)
 
 
@@ -1020,9 +1032,6 @@ XOOXLE: xooxle.Xooxle = xooxle.Xooxle(
     source=((note.key, note.html) for note in notes_aux()),
     extract=[
         xooxle.Selector({"name": "footer"}, force=False),
-        xooxle.Selector({"class_": cls.BIBL}, force=False),
-        xooxle.Selector({"class_": cls.REF_XR}, force=False),
-        xooxle.Selector({"class_": cls.REF}, force=False),
     ],
     captures=[
         xooxle.Capture(
@@ -1045,12 +1054,21 @@ XOOXLE: xooxle.Xooxle = xooxle.Xooxle(
             # To keep words from fusing, the tree separates its nodes with
             # spaces (see `_tree_aux`).
             retain_tags=xooxle.RETAIN_TAGS_DEFAULT | {"ul", "li"},
+            # A sense ends with its bibliography, followed by its references
+            # and cross-references, each on a line of its own. They retain
+            # their classes, which style them, and let the frontend explain
+            # the cited works.
+            block_classes={cls.BIBL},
         ),
         xooxle.Capture(
             "TEXT",
             xooxle.Selector(
                 {"name": "body"},
             ),
+            # The etymology retains its class, so the frontend can explain the
+            # works that it cites. Cross-references retain theirs, so the
+            # frontend can link them.
+            retain_classes={cls.ETYM, cls.XR_TARGET},
         ),
     ],
     output=os.path.join(paths.LEXICON_DIR, "kellia.json"),

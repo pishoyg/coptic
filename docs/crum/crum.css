@@ -762,9 +762,20 @@ ul.kellia-senses,
   padding-left: 1.5em;
 }
 
-.kellia-senses li .ref {
-  margin-left: 0.5em;
+/* A Greek sense ends with a reference, which is a mere ID. */
+.kellia-senses li > .ref {
   font-size: smaller;
+}
+
+/* A card stacks the citations of a sense in their own column. The index drops
+ * the `kellia-senses` class, so it displays them on one line, delimited by
+ * semicolons. */
+.kellia-senses .citation {
+  display: block;
+}
+
+.kellia-senses .delimiter {
+  display: none;
 }
 
 /* stylelint-enable no-descending-specificity */
