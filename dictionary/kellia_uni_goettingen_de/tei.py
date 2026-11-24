@@ -46,6 +46,8 @@ import typing
 import xml.etree.ElementTree as ET
 from collections import abc
 
+import regex
+
 from utils import ensure
 
 _XML_NS: str = "{http://www.w3.org/XML/1998/namespace}"
@@ -287,6 +289,18 @@ _COPTIC_TEXT: str = (
     f"(?=.*[{_COPTIC_LETTERS}])[{_COPTIC_LETTERS}{_COPTIC_MARKS}]+"
 )
 _NUMBER: re.Pattern[str] = re.compile(r"\d+")
+# _GREEK_LEMMA_WORD is a word of a Greek lemma. It may contain optional letters
+# in parentheses (`Ἀχιλ(λ)ῆον`).
+_GREEK_LEMMA_WORD: str = (
+    r"\p{Greek}[\p{Greek}\p{M}]*(?:\([\p{Greek}\p{M}]+\)[\p{Greek}\p{M}]*)*"
+)
+# _GREEK_LEMMA is a Greek lemma. Its words are separated by spaces, or by
+# slashes between alternative spellings (`εὖγε / εὖ γε`). A homonym number
+# (`κοῦφος (II)`) or a question mark (`σεβιστη (?)`) may follow.
+_GREEK_LEMMA: regex.Pattern[str] = regex.compile(
+    rf"{_GREEK_LEMMA_WORD}(?:(?: | / ){_GREEK_LEMMA_WORD})*"
+    r"(?: \((?:I|II|\?)\))?",
+)
 _FORM_ID: str = r"CF\d+"
 
 # Bibliography.
@@ -1112,6 +1126,12 @@ class EtymRef(Element[typing.Never]):
             self._ensure(
                 _NUMBER.fullmatch(self.text or ""),
                 "has a malformed Greek lemma ID",
+                repr(self.text),
+            )
+        if self.type == "greek_lemma::grl_lemma":
+            self._ensure(
+                _GREEK_LEMMA.fullmatch(self.text or ""),
+                "has a malformed Greek lemma",
                 repr(self.text),
             )
         if self.type == "greek_lemma::grl_pos":
