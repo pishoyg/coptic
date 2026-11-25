@@ -247,21 +247,31 @@ const SOURCES: Record<string, Source> = {
   LSJ: {
     title:
       'H.G. Liddell, R. Scott, H.S. Jones, A Greek-English lexicon, Oxford: Clarendon Press, 1968',
-    // The scan gives some pages of the lexicon the numbers of pages of the
-    // supplement, so we land on images by their indices. The index of the
-    // image of a page is its number plus 51, as on the pages that the scan
-    // numbers right (131-133 and 173-2056).
+    // KELLIA cites the 1968 printing, which binds the lexicon of the ninth
+    // edition (1925-1940), reprinted with its pages, with a new supplement.
+    // The Internet Archive only lends its copies of the 1968 printing, so we
+    // link to the Wellcome Library's set instead, which is free to read. The
+    // set scans the lexicon of the 1940 printing in two volumes, and the
+    // supplement of 1968 as a third item (see `LSJ Suppl.`), so the lexicon
+    // and the supplement link to different items. The first volume ends on
+    // page 1020. The index of the image of a page is its number plus 53 in the
+    // first volume, and its number minus 1013 in the second.
     locate: ({ page }: Location): string => {
-      const offset = 51;
-      return archive('greekenglishlexi0000lidd_y0v2', Number(page) + offset);
+      const number = Number(page);
+      const lastPageOfFirstVolume = 1020;
+      const firstVolumeOffset = 53;
+      const secondVolumeOffset = -1013;
+      return number <= lastPageOfFirstVolume
+        ? archive('b31364949_0001', number + firstVolumeOffset)
+        : archive('b31364949_0002', number + secondVolumeOffset);
     },
   },
   'LSJ Suppl.': {
     title:
       'H.G. Liddell, R. Scott, H.S. Jones, E.A. Barber, A Greek-English lexicon/Supplement, Oxford: Clarendon Press, 1968',
-    // The supplement is bound with the lexicon. The scan numbers its pages
-    // inconsistently, so we land on the work.
-    url: archive('greekenglishlexi0000lidd_y0v2'),
+    // The supplement is the third item of the Wellcome Library's set (see
+    // `LSJ`), which maps its pages to the printed numbers.
+    locate: ({ page }: Location): string => archive('b31364949_0003', page),
   },
   'Muraoka 2009': {
     title:

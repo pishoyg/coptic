@@ -53,9 +53,24 @@ const CASES: Case[] = [
     href: 'https://archive.org/details/wrterbuchdergrie0000prei_y4l3/page/n247/mode/1up',
   },
   {
+    query: 'LSJ 2a',
+    citation: 'LSJ 2a',
+    href: 'https://archive.org/details/b31364949_0001/page/n55/mode/1up',
+  },
+  {
     query: 'σπεκουλάτωρ',
     citation: 'LSJ 1626a',
-    href: 'https://archive.org/details/greekenglishlexi0000lidd_y0v2/page/n1677/mode/1up',
+    href: 'https://archive.org/details/b31364949_0002/page/n613/mode/1up',
+  },
+  {
+    query: 'LSJ Suppl. 86',
+    citation: 'LSJ Suppl. 86',
+    href: 'https://archive.org/details/b31364949_0003/page/86/mode/1up',
+  },
+  {
+    query: 'LSJ Suppl. 146a',
+    citation: 'LSJ Suppl. 146a',
+    href: 'https://archive.org/details/b31364949_0003/page/146/mode/1up',
   },
   {
     query: 'father (here as title), abbot',
