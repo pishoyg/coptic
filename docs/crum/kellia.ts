@@ -94,7 +94,7 @@ function columns(column: string, runs: Run[]): string {
 // Comprehensive Coptic Lexicon.
 //
 // We only link to copies on the Internet Archive that it scanned itself, or
-// that come from libraries. Most of them are in its lending library, so users
+// that come from libraries. Some of them are in its lending library, so users
 // must borrow them to read them, and a link to a page only lands on the page
 // while the user has the copy on loan. Works that are out of copyright are
 // free to read. We land on the page cited wherever we can: through the page
@@ -108,6 +108,14 @@ function columns(column: string, runs: Run[]): string {
 // TODO: (#0) Expand the links as more works become available online. As of
 // the time of writing, 3,327 of the 31,223 citations in the data (10.7%) have
 // no link, 3,224 of them to DELC.
+//
+// TODO: (#0) Replace the copies in the lending library with ones that are
+// free to read, wherever we can find them. Unless the user has borrowed a copy
+// very recently, opening a link to it almost always asks them to borrow it, and
+// once they do, the page that the link named is gone, and they land on the
+// first page. This defeats the purpose of the precise links that we construct,
+// besides the obvious drawbacks of having to borrow a copy at all. So, we
+// should strongly prefer copies that aren't in the lending library.
 //
 // NOTE: `BiblSource` and `EtymSource` in
 // `dictionary/kellia_uni_goettingen_de/tei.py` list the works that translations
