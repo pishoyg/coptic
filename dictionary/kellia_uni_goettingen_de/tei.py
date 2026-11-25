@@ -775,6 +775,20 @@ class Element[C]:
     def _ensure(self, cond: object, *message: object) -> None:
         ensure.ensure(cond, self.path, *message)
 
+    def _check_citations(self, texts: abc.Iterable[str]) -> None:
+        """Check the citations in free text that the frontend explains.
+
+        Args:
+            texts: The text.
+        """
+        for text in texts:
+            for citation in _ETYM_CITATION.finditer(text):
+                self._ensure(
+                    not _DANGLING.match(text, citation.end()),
+                    "has a malformed citation in",
+                    repr(text),
+                )
+
     @typing.override
     def __repr__(self) -> str:
         return f"<{type(self).__name__} {self.path}>"
@@ -1101,6 +1115,10 @@ class EtymRef(Element[typing.Never]):
     def wcn(self) -> bool:
         return self.type in _WCN_TARGET
 
+    @property
+    def greek_word(self) -> bool:
+        return self.type == "Greek" or self.lang == "grc"
+
     @typing.override
     def _validate(self) -> None:
         self._ensure(
@@ -1203,13 +1221,7 @@ class Etym(Element[EtymRef | Xr | Note]):
             for ref in self.refs
             if ref.type == "greek_lemma::grl_ref" and ref.text is not None
         )
-        for text in texts:
-            for citation in _ETYM_CITATION.finditer(text):
-                self._ensure(
-                    not _DANGLING.match(text, citation.end()),
-                    "has a malformed citation in",
-                    repr(text),
-                )
+        self._check_citations(texts)
 
 
 class Entry(Element[Form | GramGrp | Etym | Xr | Sense | Note]):
@@ -1313,6 +1325,11 @@ class Entry(Element[Form | GramGrp | Etym | Xr | Sense | Note]):
             self.ddglc
             == (self.etym is not None and self.etym.greek_lemma is not None),
             "must have a Greek lemma if, and only if, it's a DDGLC entry",
+        )
+        # The note is rendered along with the etymology (see
+        # `kellia.Etymology`), whose citations the frontend explains.
+        self._check_citations(
+            [self.note.text] if self.note is not None else [],
         )
 
 

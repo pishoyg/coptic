@@ -270,8 +270,21 @@ def _remark(note: tei.Note) -> str:
     return f"({text})"
 
 
+def _etym_note(note: tei.Note) -> str:
+    return f'<span class="{cls.ETYM_NOTE}">{_greek(note.text)}</span>'
+
+
 class Etymology:
-    """Etymology represents the etymology of a word."""
+    """Etymology represents the etymology of a word.
+
+    It also holds the note of the entry. The schema doesn't restrict the
+    purpose of that note, but four of the five live entries that have one use
+    it for etymology (such as `vgl. gr. μῶμος, σπίλος, ῥύπος`), while the fifth
+    says `Lesung unsicher`. (A sixth, deprecated entry explains its
+    deprecation.) If future versions of the dataset use the note for
+    something else, it would no longer belong in the etymology, nor would the
+    `etym-note` class describe it correctly.
+    """
 
     def __init__(self, entry: tei.Entry) -> None:
         # Each note, reference, cross-reference, and Greek lemma occupies a
@@ -282,7 +295,7 @@ class Etymology:
         for child in entry.etym.children if entry.etym is not None else []:
             match child:
                 case tei.Note():
-                    yield f'<span class="{cls.ETYM_NOTE}">{child.text}</span>'
+                    yield _etym_note(child)
                 case tei.Xr():
                     for ref in child.refs:
                         yield _xr(child.type, ref)
@@ -290,10 +303,15 @@ class Etymology:
                     assert child.target is not None
                     # The target is the WCN ID, prefixed with `#`.
                     yield f"{child.type}: {child.target.removeprefix("#")}"
+                case tei.EtymRef() if child.greek_word:
+                    # This is the Greek word that a loanword derives from, or
+                    # that it's compared to. DDGLC entries give theirs as a
+                    # Greek lemma instead (see below).
+                    assert child.text is not None
+                    yield _greek(child.text)
                 case tei.EtymRef():
-                    # The Greek lemma is rendered below.
-                    # TODO: (#51) Handle the remaining references.
-                    pass
+                    # This is a field of the Greek lemma, rendered below.
+                    assert child.type in typing.get_args(tei.GreekLemmaField)
                 case _:
                     typing.assert_never(child)
 
@@ -321,6 +339,11 @@ class Etymology:
         for xr in entry.xrs:
             for ref in xr.refs:
                 yield _xr(xr.type, ref)
+
+        if entry.note is not None:
+            # See the class docstring for why the note of the entry is
+            # rendered here.
+            yield _etym_note(entry.note)
 
 
 class Sense:
@@ -628,9 +651,6 @@ def _geo(form: tei.Form) -> str:
 
 
 def _process_entry(entry: tei.Entry) -> Word:
-    # TODO: (#51) Mark loanwords. The entry type `foreign` marks the non-Greek
-    # ones (such as `ⲥⲓⲣ`, butter).
-    # TODO: (#51) Render the note of the entry (such as `Lesung unsicher`).
     lemma: tei.Form = entry.lemma
     forms: list[tei.Form] = sorted(
         (f for f in entry.forms if not f.deprecated),
