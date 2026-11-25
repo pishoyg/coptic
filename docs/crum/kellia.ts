@@ -145,6 +145,10 @@ const SOURCES: Record<string, Source> = {
   ChLCS: {
     title:
       'P. Cherix, Lexique Copte (dialecte sahidique), Copticherix, 2006-2018',
+    // TODO: (#0) Land on the page cited. Browsers' PDF viewers accept
+    // `#page=N`, but KELLIA cites the 2018 edition, while Cherix only
+    // publishes the latest one online, from 2023, whose pages don't align with
+    // those of the 2018 edition.
     url: 'https://de.cdn-website.com/3e823bf7e8654767a06a86d670bf72af/files/uploaded/Cherix-Lexicopte23.pdf',
     // Cherix also publishes a Greek lexicon, which KELLIA doesn't cite:
     // https://de.cdn-website.com/3e823bf7e8654767a06a86d670bf72af/files/uploaded/Cherix-Lexigrec22.pdf
@@ -214,6 +218,10 @@ const SOURCES: Record<string, Source> = {
   'Hatch/Redpath 1906': {
     title:
       'E. Hatch, H.A. Redpath, A concordance to the Septuagint and the other Greek versions of the Old Testament (including the apocryphal books), Supplement, Graz: Akademische Druck- und Verlagsanstalt, 1906',
+    // TODO: (#0) Land on the page cited. The scan doesn't map its pages, and
+    // the offset of an image from its page changes between the parts of the
+    // supplement, so we would have to measure the offset of each part. With
+    // four citations, it isn't worth it yet.
     url: archive('aconcordancetos00redpgoog'),
   },
   Kontopoulos: {
@@ -223,7 +231,10 @@ const SOURCES: Record<string, Source> = {
     // After that, the scan drifts, so we land on the work.
     // TODO: (#0) The two citations of Kontopoulos don't align with this copy:
     // the word that `Kontopoulos 120B` cites occurs on page 109, and that of
-    // `Kontopoulos 25B` on page 22.
+    // `Kontopoulos 25B` on page 22. The other copy of 1868 on the Internet
+    // Archive has the same pages, and the edition of 1889 doesn't align
+    // either. We haven't checked the Neon Lexikon of 1880
+    // (`neonlexikonhell00kontgoog`). With two citations, it isn't worth it yet.
     locate: ({ page }: Location): string => {
       const lastPage = 348;
       const offset = 12;
@@ -242,6 +253,8 @@ const SOURCES: Record<string, Source> = {
     title:
       'E. Trapp, Lexikon zur byzantinischen Gräzität, besonderes des 9.-12. Jahrhunderts, Philosophisch-historische Klasse, Denkschriften (Veröffentlichungen der Kommission für Byzantinistik 238; VI/1-4) , Wien: Österreichische Akademie der Wissenschaften, 2001',
     // The TLG hosts the lexicon, behind a free registration.
+    // TODO: (#0) Sign in, and find out whether the lexicon has a URL for each
+    // word. If so, link to the word that the citation's entry lists in Greek.
     url: 'https://stephanus.tlg.uci.edu/lbg/',
   },
   LSJ: {
