@@ -185,6 +185,10 @@ kellia: FORCE
 	# Generate the KELLIA lexicon artefacts.
 	./dictionary/kellia_uni_goettingen_de/main.py
 
+cdo: FORCE
+	# Download the entries of the Coptic Dictionary Online.
+	./dictionary/kellia_uni_goettingen_de/cdo.py
+
 ########## DAWOUD ##########
 dawoud_sentinels: FORCE
 	# Download a new version of Dawoud's sentinels sheet.
