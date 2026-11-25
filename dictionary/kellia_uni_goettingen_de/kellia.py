@@ -256,18 +256,18 @@ class Orthography:
 
 
 def _remark(note: tei.Note) -> str:
-    """Render a note of a grammatical group as a remark on a form.
+    """Render a note of a form, or of its grammatical group, as a remark.
 
     Args:
         note: The note.
 
     Returns:
-        The text of the note, parenthesized, unless it already is.
+        The HTML of the note, parenthesized, unless it already is.
     """
     text: str = note.text
-    if text.startswith("(") and text.endswith(")"):
-        return text
-    return f"({text})"
+    if not (text.startswith("(") and text.endswith(")")):
+        text = f"({text})"
+    return _greek(text)
 
 
 def _etym_note(note: tei.Note) -> str:
@@ -670,18 +670,20 @@ def _process_entry(entry: tei.Entry) -> Word:
         # merely normalized spellings (`ⲙⲉϩⲧⲟⲟⲧ⸗` of `ⲙⲉϩ ⲧⲟⲟⲧ⸗`), which still
         # helps search. Others are forms of their own, which we lose entirely,
         # along with their grammar (such as the prenominal `ϩⲁⲧⲛ-`, of which
-        # only the pronominal `ϩⲁⲧⲟⲟⲧ⸗` shows).
+        # only the pronominal `ϩⲁⲧⲟⲟⲧ⸗` shows). The note of a lemma is lost
+        # as well (such as `(once)`), unless another form repeats it too.
         if form is lemma:
             continue
-
-        # TODO: (#51) Render the note of the form as a remark, like the notes
-        # of its grammatical group. Some explain when the form is used (such
-        # as `ⲁⲑ-`, `vor Liquiden`), or how Greek renders a name.
 
         # The notes of the grammatical group are remarks on the form, rather
         # than part of its type. Forms of the same type thus share a group,
         # though each repeats the remarks that it shares with others.
+        # The note of the form itself follows them. Some explain when the form
+        # is used (such as `ⲁⲑ-`, `vor Liquiden`), or how Greek renders a name.
         gram_grp: tei.GramGrp = entry.grammar(form)
+        notes: list[tei.Note] = gram_grp.notes.copy()
+        if form.note is not None:
+            notes.append(form.note)
         orthography.add(
             " ".join(
                 child.text
@@ -690,7 +692,7 @@ def _process_entry(entry: tei.Entry) -> Word:
             ),
             form.orth.text,
             _geo(form),
-            tuple(map(_remark, gram_grp.notes)),
+            tuple(map(_remark, notes)),
         )
 
     langs: dict[str, Lang] = {
