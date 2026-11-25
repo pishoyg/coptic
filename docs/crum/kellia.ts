@@ -221,6 +221,9 @@ const SOURCES: Record<string, Source> = {
       'N. Kontopoulos, A Lexicon of Modern Greek-English and English-Modern Greek, Smyrna/London: B. Tatikidos, Trübner & Co., 1868',
     // The index of the image of a page is its number plus 12, up to page 348.
     // After that, the scan drifts, so we land on the work.
+    // TODO: (#0) The two citations of Kontopoulos don't align with this copy:
+    // the word that `Kontopoulos 120B` cites occurs on page 109, and that of
+    // `Kontopoulos 25B` on page 22.
     locate: ({ page }: Location): string => {
       const lastPage = 348;
       const offset = 12;
